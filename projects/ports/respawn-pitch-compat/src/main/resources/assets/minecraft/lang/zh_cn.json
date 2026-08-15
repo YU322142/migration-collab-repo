@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "已将%7$s的出生点设为%6$s中的%1$s, %2$s, %3$s [%4$s, %5$s]",
+  "commands.spawnpoint.success.multiple.new": "已将%7$s名玩家的出生点设为%6$s中的%1$s, %2$s, %3$s [%4$s, %5$s]"
+}

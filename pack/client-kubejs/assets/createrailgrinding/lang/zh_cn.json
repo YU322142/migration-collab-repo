@@ -1,0 +1,46 @@
+{
+    "createrailgrinding.dismount_prompt": "按 %1$s 下车",
+    "createrailgrinding.catch_prompt": "按住 %1$s 抓握铁轨",
+    "key.categories.createrailgrinding": "研磨滑行",
+    "key.createrailgrinding.catch": "抓握铁轨",
+    "key.createrailgrinding.grind_jump": "跳离铁轨",
+    "key.createrailgrinding.grind_crouch": "蹲下（铁轨上加速）",
+    "effect.createrailgrinding.railgrindboost": "音速之风",
+    "effect.createrailgrinding.railgrindboost.description": "一种激励人心的甜食，能 _提升_ 你的 _铁轨滑行技巧。_",
+    "effect.createrailgrinding.railgrindboost.condition": "食用时",
+    "effect.createrailgrinding.railgrindboost.behaviour": "给予 _音速_ _之风_，在 _铁轨滑行_ 时提升 _速度_、_加速度_ 和 _跳跃力量_。",
+
+    "item.createrailgrinding.diving_boots.tooltip.condition1": "靠近铁轨时",
+    "item.createrailgrinding.diving_boots.tooltip.behaviour1": "赋予在 _火车轨道_ 的铁轨上 _滑行_ 的能力。空手对 _火车轨道_ _右键交互_，或在靠近 _火车轨道_ 时按住 _%1$s_。",
+    "item.createrailgrinding.diving_boots.tooltip.condition2": "在铁轨上滑行时",
+    "item.createrailgrinding.diving_boots.tooltip.behaviour2": "按住 _%1$s_ 加速。按住 _%2$s_ 跳离铁轨。_右键交互_ _火车轨道_ 以停止。",
+
+    "enchantment.createrailgrinding.railgrind_enchantment": "铁轨骑手",
+    "enchantment.createrailgrinding.railgrind_enchantment.desc": "允许你在火车轨道上进行铁轨滑行",
+
+    "advancement.createrailgrinding.railgrind_advancement": "极限齿轮",
+    "advancement.createrailgrinding.railgrind_advancement.desc": "使用潜水靴或铁轨骑手附魔在火车轨道的铁轨上滑行",
+
+    "advancement.createrailgrinding.railgrind_effect_advancement": "音速爆破",
+    "advancement.createrailgrinding.railgrind_effect_advancement.desc": "通过食用巧克力来增强你的铁轨滑行",
+
+    "advancement.createrailgrinding.custom_boots_advancement": "以音速滚动",
+    "advancement.createrailgrinding.custom_boots_advancement.desc": "获得具有特殊极速者外观的铁轨滑行靴",
+
+    "advancement.createrailgrinding.falldamage_negate_advancement": "廉价飞行体验",
+    "advancement.createrailgrinding.falldamage_negate_advancement.desc": "通过抓握铁轨从致命坠落中自救",
+
+    "subtitles.createrailgrinding.grind_collide": "哐当",
+    "subtitles.createrailgrinding.grind_slow_loop": "滑动",
+    "subtitles.createrailgrinding.grind_fast_loop": "研磨",
+
+    "createrailgrinding.ponder.rail_grinding_intro.header": "铁轨滑行",
+    "createrailgrinding.ponder.rail_grinding_intro.text_1": "潜水靴是合适的滑行鞋，可用于铁轨滑行",
+    "createrailgrinding.ponder.rail_grinding_intro.text_2": "空手右键点击火车轨道开始铁轨滑行",
+    "createrailgrinding.ponder.rail_grinding_intro.text_3": "空手右键点击火车轨道停止铁轨滑行",
+    "createrailgrinding.ponder.rail_grinding_intro.text_4": "按住 %1$s 抓握铁轨",
+    "createrailgrinding.ponder.rail_grinding_intro.text_5": "按住 %1$s 加速",
+    "createrailgrinding.ponder.rail_grinding_intro.text_6": "按住 %1$s 跳离铁轨",
+    "createrailgrinding.ponder.rail_grinding_intro.text_7": "按住 %1$s 会自动让你锁定附近的铁轨",
+    "createrailgrinding.ponder.rail_grinding_intro.text_8": "抓握铁轨时，摔落伤害被抵消并保持动量"
+}

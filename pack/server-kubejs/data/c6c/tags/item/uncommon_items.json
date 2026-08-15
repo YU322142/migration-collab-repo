@@ -1,0 +1,27 @@
+{
+  "values": [
+    "kubejs:chlorophyte_ingot",
+    "l2hostility:speedy",
+    "l2hostility:protection",
+    "l2hostility:fiery",
+    "l2hostility:regenerate",
+    "l2hostility:shulker",
+    "l2hostility:counter_strike",
+    "l2hostility:gravity",
+    "l2hostility:moonwalk",
+    "l2hostility:soul_burner",
+    "l2hostility:nausea",
+    "l2hostility:blindness",
+    "l2hostility:levitation",
+    "l2hostility:wither",
+    "l2hostility:poison",
+    "l2hostility:slowness",
+    "l2hostility:weakness",
+    "l2hostility:arena",
+    "l2hostility:freezing",
+    "l2hostility:cursed",
+    "l2hostility:tank",
+    "advancednetherite:netherite_gold_ingot",
+    "advancednetherite:netherite_gold_block"
+  ]
+}

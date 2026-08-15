@@ -1,0 +1,59 @@
+{
+  "replace": false,
+  "trades": [
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 16,
+      "offer_item": {
+        "count": 1,
+        "id": "minecraft:emerald"
+      },
+      "payment_item": {
+        "count": 8,
+        "id": "minecraft:carrot"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 32,
+      "offer_item": {
+        "count": 4,
+        "id": "minecraft:glowstone_dust"
+      },
+      "payment_item": {
+        "count": 1,
+        "id": "minecraft:glowstone"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 64,
+      "offer_item": {
+        "count": 1,
+        "id": "minecraft:emerald"
+      },
+      "payment_item": {
+        "count": {
+          "max": 64,
+          "min": 48
+        },
+        "id": "minecraft:netherrack"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "offer_item": {
+        "count": 2,
+        "id": "minecraft:nether_wart"
+      },
+      "payment_item": {
+        "count": 1,
+        "id": "minecraft:emerald"
+      }
+    }
+  ]
+}

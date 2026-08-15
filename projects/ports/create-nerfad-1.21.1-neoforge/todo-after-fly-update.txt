@@ -1,0 +1,21 @@
+
+Fly 6.0.9 build-3
+
+Compacting:
+
+Crimsite (as a starter for redstone) done
+Diamond (from coal blocks) done
+
+Crushing:
+
+Glowstone was ok
+
+Haunting:
+
+Coal (charcoal to coal give coalblocks for diamond recipe) was ok
+
+Mixing:
+
+Obsidian (for wither cage, tools & armor) done
+Tuff (for crushing: iron, copper, gold, zinc) done
+

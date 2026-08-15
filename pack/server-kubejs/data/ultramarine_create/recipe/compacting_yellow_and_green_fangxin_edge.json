@@ -1,0 +1,30 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "c:dyes/yellow"
+    },
+    {
+      "tag": "c:dyes/green"
+    },
+    {
+      "tag": "c:dyes/blue"
+    },
+    {
+      "item": "ultramarine:fangxin_edge_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:yellow_and_green_fangxin_edge"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:fangxin_edge_template"
+    }
+  ]
+}

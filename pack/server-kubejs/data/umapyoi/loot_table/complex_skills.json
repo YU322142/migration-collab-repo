@@ -1,0 +1,99 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 0.0,
+        "max": 1.0
+      },
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:heart_and_soul"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:cooldown"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:big_eater"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:steel_will"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:adv_low_health_buff"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:adv_low_health_heal"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "values": {
+    "kaleidoscope_tavern:gold_grape": {
+      "can_villager_compost": true,
+      "chance": 0.5
+    },
+    "kaleidoscope_tavern:grape": {
+      "can_villager_compost": true,
+      "chance": 0.5
+    },
+    "kaleidoscope_tavern:grapevine": {
+      "can_villager_compost": true,
+      "chance": 0.25
+    },
+    "kaleidoscope_tavern:green_grape": {
+      "can_villager_compost": true,
+      "chance": 0.5
+    },
+    "kaleidoscope_tavern:ice_grape": {
+      "can_villager_compost": true,
+      "chance": 0.5
+    }
+  }
+}

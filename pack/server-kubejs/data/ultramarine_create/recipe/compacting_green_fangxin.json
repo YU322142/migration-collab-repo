@@ -1,0 +1,27 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "c:dyes/green"
+    },
+    {
+      "tag": "c:dyes/green"
+    },
+    {
+      "item": "ultramarine:fangxin_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:green_fangxin"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:fangxin_template"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Se ha cambiado el punto de aparición a %s, %s, %s [%s, %s] en %s para %s",
+  "commands.spawnpoint.success.multiple.new": "Se ha cambiado el punto de aparición a %s, %s, %s [%s, %s] en %s para %s jugadores"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "hotbath:foot_health",
+  "display": {
+    "icon": {
+      "id": "hotbath:hot_water_bucket"
+    },
+    "title": {
+      "translate": "hotbath.advancement.foot_health"
+    },
+    "description": {
+      "translate": "hotbath.advancement.foot_health.desc"
+    },
+    "background": "minecraft:textures/block/stone.png",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "hotbath:hot_bath",
+  "criteria": {
+    "code_triggered": {
+      "trigger": "hotbath:foot_health"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

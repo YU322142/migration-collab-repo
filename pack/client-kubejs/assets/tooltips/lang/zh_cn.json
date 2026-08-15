@@ -1,0 +1,39 @@
+{
+	"kubejs.tooltips.ruby_loot":"掉落自劫掠兽",
+    "kubejs.tooltips.sapphire_loot":"极低概率掉落自骷髅",
+    "kubejs.tooltips.topaz_loot":"低概率掉落自尸壳",
+    "kubejs.tooltips.moonstone_loot":"低概率掉落自流浪者",
+    "kubejs.tooltips.peridot_loot":"掉落自僵尸村民",
+    "kubejs.tooltips.onyx_loot":"极低概率掉落自蜘蛛",
+    "kubejs.tooltips.garnet_loot":"极低概率掉落自岩浆怪",
+    "kubejs.tooltips.empty_smart_slab":"可用于封印自己的女仆或无主的女仆",
+    "kubejs.tooltips.smart_slab":"可以通过玩偶抽奖机与奖券抽取获得",
+
+    "kubejs.tooltips.smart_slab_maid_could_exchange_notice1": "这个女仆还没有找到主人",
+    "kubejs.tooltips.smart_slab_maid_could_exchange_notice2": "可以与好友交换无主的女仆的魂符",
+
+    "kubejs.tooltips.hot_water_bucket": "与水一样，是无限流体",
+
+    "kubejs.tooltips.potato_cannon":"可作为土豆加农炮的子弹",
+    "kubejs.tooltips.potato_cannon_osusume":"有一股强劲的能量",
+
+    "kubejs.tooltips.mithril": "来自死者之王",
+    "kubejs.tooltips.not_implemented": "尚未实装",
+    "kubejs.tooltips.need_archaeology": "通过考古获得",
+    "kubejs.tooltips.banned": "已被禁用",
+    "kubejs.tooltips.abyssal_ticket": "在炽魂符文附近使用",
+
+    "kubejs.tooltips.once_use": "一次性物品",
+    "kubejs.tooltips.timeless_slurry": "永恒浆液可以用于直接升级下界合金装备至莱特兰装备。比传统的升级路线节约了大量下界合金。",
+    "kubejs.tooltips.irons_spellbooks_scroll": "蕴含魔法的卷轴，放入饰品栏中，攻击时自动释放",
+
+    "kubejs.tooltips.bhc_heart": "增加额外1点生命值上限。制作对应的心之容器，并放入心之项链中以获得效果。",
+
+    "kubejs.tooltips.need_abyssal": "来自深渊派对",
+    "kubejs.tooltips.oil_scanner": "沙漠与深海蕴含大量油藏。",
+    "kubejs.tooltips.oil_scanner2": "平原草甸与山脉则不会蕴含油藏。",
+    "kubejs.tooltips.oil_scanner3": "其它群系偶尔会蕴含少量油藏。",
+
+    "kubejs.tooltips.phantom_chain": "因与超长锁链冲突，本整合包无法使用",
+	"kubejs.tooltips.end":"-------------------------"
+}

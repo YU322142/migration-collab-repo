@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-08-14",
+  "scope": {
+    "minecraft": "1.21.1",
+    "loader": "NeoForge",
+    "mod_id": "create_enchantment_industry",
+    "read_only": true,
+    "minecraft_started": false,
+    "worlds_modified": false,
+    "jars_modified": false
+  },
+  "inputs": {
+    "2.4.2": {
+      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\create-enchantment-industry-2.4.2.jar",
+      "size_bytes": 1283517,
+      "sha256": "81F192BB53888E01F87A82EAAC2F261C93715F2221DBCF5D8A8D414F912F75EF",
+      "zip_file_entries": 735
+    },
+    "2.5.1": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-attempt2-compat-backup-20260814\\runtime\\create-enchantment-industry-2.5.1.jar",
+      "size_bytes": 1573096,
+      "sha256": "0D27024C0F8E94261689EB198D96003BA5A1697D4478B41E298BCA707CEAE988",
+      "zip_file_entries": 846
+    }
+  },
+  "archive_diff": {
+    "added": 115,
+    "removed": 4,
+    "common_changed": 107,
+    "common_identical": 624,
+    "added_classes": 96,
+    "added_assets": 9,
+    "added_data": 10,
+    "removed_assets": 0,
+    "removed_data": 0,
+    "duplicate_entries": 0,
+    "json_parse_errors": 0
+  },
+  "verdicts": {
+    "2.4.2_to_2.5.1": {
+      "verdict": "GO",
+      "basis": "No old registry ID was removed or renamed; explicit Forger legacy Mode fallback exists."
+    },
+    "generic_2.5.1_to_official_2.4.2": {
+      "verdict": "NO_GO",
+      "basis": "New registry IDs, data components and nonzero Forger Operation cannot be read losslessly by official 2.4.2."
+    },
+    "scanned_handoff_attempt2_to_2.4.2_cei_data_only": {
+      "verdict": "CONDITIONAL_GO",
+      "basis": "No new IDs/components were found; both Forger instances have Operation=0 and Size=6."
+    },
+    "backport_from_9317ba9": {
+      "verdict": "GO",
+      "feasibility": "high"
+    },
+    "f1c38_with_sable_1.2.2_and_other_2.5.1_dependencies": {
+      "verdict": "GO_PENDING_BUILD_AND_STARTUP_TEST",
+      "basis": "Sable and Sable-Apotheosis integration bytecode is unchanged and has no detected Sable 2.0.3-only link."
+    },
+    "f1c38_with_full_2.4.2_era_dependency_stack_without_reverts": {
+      "verdict": "NO_GO",
+      "basis": "Apotheosis 8.7 constants/resources and CDP 1.11.3 resource spelling must be reverted; metadata alone is insufficient."
+    }
+  },
+  "registry": {
+    "old_ids_removed_or_renamed": [],
+    "new": {
+      "block": [
+        "create_enchantment_industry:blaze_composer"
+      ],
+      "block_item": [
+        "create_enchantment_industry:blaze_composer"
+      ],
+      "block_entity": [
+        "create_enchantment_industry:blaze_composer"
+      ],
+      "item": [
+        "create_enchantment_industry:incomplete_brass_affix_template",
+        "create_enchantment_industry:incomplete_crystal_affix_template",
+        "create_enchantment_industry:incomplete_apotheotic_affix_template"
+      ],
+      "data_component_type": [
+        "create_enchantment_industry:affix_template",
+        "create_enchantment_industry:overlimit_affixes"
+      ],
+      "custom_stat": [
+        "create_enchantment_industry:compose_affix"
+      ],
+      "creative_mode_tab": [
+        "create_enchantment_industry:apotheotic"
+      ],
+      "arm_interaction_point": [
+        "blaze_composer"
+      ],
+      "data_map": [
+        "enchantment_processing/rules"
+      ],
+      "custom_registry_key": [
+        "create_enchantment_industry:printing_behaviour"
+      ],
+      "printing_behaviour_providers": [
+        "package_address",
+        "package_pattern",
+        "copy",
+        "custom_name",
+        "enchanted_book",
+        "written_book",
+        "banner_pattern"
+      ]
+    },
+    "entity_type_changes": [],
+    "menu_type_changes": [],
+    "fluid_id_changes": [],
+    "recipe_type_or_serializer_id_changes": []
+  },
+  "persistence": {
+    "new_components": {
+      "create_enchantment_industry:affix_template": {
+        "codec_fields": [
+          "rarity",
+          "entries"
+        ],
+        "entry_fields": [
+          "affix",
+          "level",
+          "source_categories",
+          "transcendent"
+        ]
+      },
+      "create_enchantment_industry:overlimit_affixes": {
+        "codec_fields": [
+          "levels"
+        ],
+        "downgrade_loss_risk": true
+      }
+    },
+    "ender_woven_bag_stored_entities": "byte_identical",
+    "forger": {
+      "2.4.2_inventory_keys": [
+        "Cost",
+        "Mode",
+        "Conflicting",
+        "OverCap"
+      ],
+      "2.5.1_inventory_keys": [
+        "Cost",
+        "Operation",
+        "Conflicting",
+        "OverCap"
+      ],
+      "2.5.1_block_entity_new_keys": [
+        "ForgingMode"
+      ],
+      "forward_legacy_fallback": true,
+      "reverse_nonzero_operation_safe": false,
+      "recommended_backport_write_keys": [
+        "Operation",
+        "Mode"
+      ]
+    },
+    "custom_datafixer_found": false,
+    "missing_mappings_or_remap_found": false
+  },
+  "actual_world_findings": {
+    "report_directory": "D:\\Trans\\migration-audit-work\\cei-world-data-compat-audit-20260814",
+    "new_registry_or_component_hits": [],
+    "forgers": [
+      {
+        "position": [
+          -176,
+          63,
+          -127
+        ],
+        "ForgingMode": 0,
+        "Inventory.Operation": 0,
+        "Inventory.Size": 6,
+        "official_2.4.2_result": "default Mode=0; safe for this exact value"
+      },
+      {
+        "position": [
+          27319,
+          72,
+          -12892
+        ],
+        "ForgingMode": 0,
+        "Inventory.Operation": 0,
+        "Inventory.Size": 6,
+        "official_2.4.2_result": "default Mode=0; safe for this exact value"
+      }
+    ],
+    "original_world_forger_size": 4,
+    "target_world_forger_size": 6,
+    "size_4_risk": "NeoForge ItemStackHandler deserializeNBT shrinks the internal list to NBT Size; CEI updateResult accesses internal slots 4 and 5.",
+    "size_6_recommendation": "preserve"
+  },
+  "mixins": {
+    "configs_removed": [],
+    "new": [
+      "FishingHookMixin",
+      "apotheosis.AffixHelperMixin"
+    ],
+    "required": true,
+    "default_require": 1,
+    "dependency_abi_mismatch_can_crash": true
+  },
+  "official_dependency_floors": {
+    "2.4.2": {
+      "neoforge": "21.1.0",
+      "create_dragons_plus": "1.11.1",
+      "apothic_enchanting": "1.5.3",
+      "apotheosis": "8.5.4",
+      "apothic_spawners": "1.3.4",
+      "sable": "1.2.2"
+    },
+    "2.5.1": {
+      "neoforge": "21.1.228",
+      "create_dragons_plus": "1.11.3",
+      "apothic_enchanting": "1.6.0",
+      "apotheosis": "8.7.0",
+      "apothic_spawners": "1.4.0",
+      "sable": "2.0.3"
+    }
+  },
+  "source_baselines": {
+    "official_branch": "1.21.1/6.0.0-dev",
+    "official_2.4.2": "56d1d50a282f015a322769f98353d0d7b1d88b87",
+    "first_blaze_composer": "c7822dcd776e81765a16b825943bca416c397ab5",
+    "recommended_old_dependency_full_feature": "9317ba99d4647892873d9d56678a1b448b7959b4",
+    "official_2.5.0": "37ec6810531895292d51d878ef8e7f7e8f83e992",
+    "supplied_2.5.1_source_match": "f1c38e07d1934ffb8020ac898c9ffe9a88d5dd46",
+    "official_tags_found": []
+  },
+  "f1c38_old_stack_required_changes": {
+    "source_or_build": [
+      "gradle.properties",
+      "src/integration/apotheosis/java/plus/dragons/createenchantmentindustry/integration/apotheosis/common/registry/CEIAXItems.java",
+      "src/integration/apotheosis/java/plus/dragons/createenchantmentindustry/integration/apotheosis/data/CEIAXRecipeProvider.java",
+      "src/integration/apotheosis/java/plus/dragons/createenchantmentindustry/integration/apotheosis/client/ponder/CEIAXPonderScenes.java",
+      "src/main/java/plus/dragons/createenchantmentindustry/common/registry/CEIDataMaps.java",
+      "src/main/java/plus/dragons/createenchantmentindustry/config/CEIEnchantmentsConfig.java"
+    ],
+    "generated_resources": [
+      "src/generated/resources/data/create_enchantment_industry/advancement/assembly_aesthetics.json",
+      "src/generated/resources/data/create_enchantment_industry/recipe/crafting/affix_augmentor.json",
+      "src/generated/resources/data/create_enchantment_industry/recipe/mixing/dissolve_common_material.json",
+      "src/generated/resources/data/create_enchantment_industry/recipe/mixing/dissolve_uncommon_material.json",
+      "src/generated/resources/data/create_enchantment_industry/recipe/mixing/dissolve_rare_material.json",
+      "src/generated/resources/data/create_enchantment_industry/recipe/mixing/dissolve_epic_material.json",
+      "src/generated/resources/data/create_enchantment_industry/recipe/mixing/dissolve_mythic_material.json",
+      "src/generated/resources/data/create_enchantment_industry/recipe/sequenced_assembly/brass_affix_template.json",
+      "src/generated/resources/data/create_enchantment_industry/recipe/sequenced_assembly/apotheotic_affix_template.json",
+      "src/generated/resources/data/create_enchantment_industry/tags/item/blaze_composer/super_activators.json"
+    ],
+    "old_apotheosis_items": [
+      "common_material",
+      "uncommon_material",
+      "rare_material",
+      "epic_material",
+      "mythic_material"
+    ],
+    "exclude_or_revert": [
+      "Apotheosis 8.7-only item constants and resource IDs",
+      "CDP 1.11.3 rare_marble_gate_package spelling when running CDP 1.11.2b",
+      "Sable >=2.0.3 hard floor",
+      "NeoForge >=21.1.228 hard floor if old-stack build is required",
+      "Apothic Spawners >=1.4.0 hard floor if old-stack build is required"
+    ]
+  },
+  "recommended_release": {
+    "version": "2.4.2-cei251-backport.1",
+    "jar_name": "create-enchantment-industry-2.4.2-cei251-backport.1.jar",
+    "keep_mod_id": "create_enchantment_industry",
+    "keep_namespace_and_registry_ids": true,
+    "pretend_official_version": false,
+    "preserve_license": true
+  },
+  "build": {
+    "jdk": 21,
+    "gradle_wrapper": "9.5.0",
+    "neoforge_moddev": "2.0.141",
+    "command": ".\\gradlew.bat build",
+    "datagen_command": ".\\gradlew.bat runData",
+    "output": "build\\libs",
+    "isolated_worktree_required": true,
+    "reason": "build depends on spotlessApply and can modify source formatting",
+    "low_memory_options": [
+      "--no-daemon",
+      "--max-workers=2",
+      "-Dorg.gradle.jvmargs=-Xmx1536m"
+    ],
+    "recommended_gradle_user_home": "D:\\Trans\\migration-audit-work\\gradle-cache-cei-backport-20260814"
+  },
+  "evidence_directories": {
+    "jar_audit": "D:\\Trans\\migration-audit-work\\cei-2.4.2-vs-2.5.1-save-compat-audit-20260814",
+    "world_audit": "D:\\Trans\\migration-audit-work\\cei-world-data-compat-audit-20260814",
+    "source_audit": "D:\\Trans\\migration-audit-work\\cei-official-source-audit-20260814",
+    "dependency_api_audit": "D:\\Trans\\migration-audit-work\\cei-dependency-api-audit-20260814"
+  }
+}

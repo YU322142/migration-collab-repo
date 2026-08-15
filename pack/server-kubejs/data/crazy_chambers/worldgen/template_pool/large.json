@@ -1,0 +1,79 @@
+{
+  "name": "crazy_chambers:large",
+  "fallback": "crazy_chambers:end",
+  "elements": [
+	
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:large/webs",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:large/water",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:large/steps",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:large/snow",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:large/parkour",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:large/obstacles",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:large/lava",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:large/enclosed",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

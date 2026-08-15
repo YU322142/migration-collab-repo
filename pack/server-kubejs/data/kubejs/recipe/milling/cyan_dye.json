@@ -1,0 +1,21 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    }
+  ],
+  "type": "create:milling",
+  "ingredients": [
+    {
+      "item": "minecraft:prismarine_shard"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:cyan_dye",
+      "count": 3
+    }
+  ],
+  "processing_time": 50
+}

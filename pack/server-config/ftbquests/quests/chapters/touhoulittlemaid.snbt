@@ -1,0 +1,531 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "touhoulittlemaid"
+	group: ""
+	icon: {
+		id: "touhou_little_maid:hakurei_gohei"
+	}
+	id: "30CF816281C9CC36"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["31C9A5F8EA6311DB"]
+			id: "7D783507714BF010"
+			shape: "hexagon"
+			size: 2.0d
+			tasks: [{
+				advancement: "touhou_little_maid:base/build_altar"
+				criterion: ""
+				id: "2B24E077A2FB609D"
+				type: "advancement"
+			}]
+			x: -5.5d
+			y: -2.5d
+		}
+		{
+			id: "31C9A5F8EA6311DB"
+			tasks: [{
+				id: "5374705A13B1FAE6"
+				item: { count: 1, id: "touhou_little_maid:hakurei_gohei" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["3757232086E0EE92"]
+			id: "5A08FB84A0DB0D6F"
+			tasks: [
+				{
+					id: "7D61AFB18C043761"
+					item: { count: 1, id: "minecraft:clay" }
+					type: "item"
+				}
+				{
+					id: "1B60F61BFA96CC5C"
+					item: { count: 1, id: "touhou_little_maid:photo" }
+					type: "item"
+				}
+				{
+					id: "61998FCB3D6C501D"
+					item: { count: 1, id: "touhou_little_maid:chisel" }
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: -2.0d
+		}
+		{
+			id: "123CBEB9E022BBDE"
+			tasks: [{
+				id: "70EE10B42F8E3C82"
+				item: { count: 1, id: "touhou_little_maid:maid_backpack_small" }
+				type: "item"
+			}]
+			x: -5.5d
+			y: 0.0d
+		}
+		{
+			id: "606D84219F562F9B"
+			tasks: [{
+				id: "2774BAD186C96799"
+				item: { count: 1, id: "touhou_little_maid:maid_backpack_middle" }
+				type: "item"
+			}]
+			x: -5.5d
+			y: 1.0d
+		}
+		{
+			id: "369B15EBD56AD3A7"
+			tasks: [{
+				id: "31D53D06DFFEDF2A"
+				item: { count: 1, id: "touhou_little_maid:maid_backpack_big" }
+				type: "item"
+			}]
+			x: -5.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["606D84219F562F9B"]
+			id: "15BD469A551199FA"
+			tasks: [{
+				id: "02E76288E343BAC1"
+				item: { count: 1, id: "touhou_little_maid:crafting_table_backpack" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["606D84219F562F9B"]
+			id: "65972D9D02F9A929"
+			tasks: [{
+				id: "7E360ECCFB2E985A"
+				item: { count: 1, id: "touhou_little_maid:ender_chest_backpack" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["606D84219F562F9B"]
+			id: "0534F9C89E0B1AC7"
+			tasks: [{
+				id: "0DD6C6D8051343E9"
+				item: { count: 1, id: "touhou_little_maid:furnace_backpack" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 0.5d
+		}
+		{
+			dependencies: ["606D84219F562F9B"]
+			id: "7C2595D8C9F7EB86"
+			tasks: [{
+				id: "575E6A3B866EFC22"
+				item: { count: 1, id: "touhou_little_maid:tank_backpack" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["393BC62337154523"]
+			hide_dependency_lines: true
+			id: "0CFC6FB53E77525D"
+			tasks: [{
+				id: "7B3956FB7ADDA0C6"
+				item: { count: 1, id: "touhou_little_maid:trumpet" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["393BC62337154523"]
+			hide_dependency_lines: true
+			id: "67137CE3FF67FDE8"
+			tasks: [{
+				id: "4007759D28C0AB68"
+				item: { count: 1, id: "touhou_little_maid:red_fox_scroll" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["393BC62337154523"]
+			hide_dependency_lines: true
+			id: "13CE8B3DD90C0AF5"
+			tasks: [{
+				id: "235787BF0918B42C"
+				item: { count: 1, id: "touhou_little_maid:white_fox_scroll" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["393BC62337154523"]
+			hide_dependency_lines: true
+			id: "34E0BF63CA02A655"
+			tasks: [{
+				id: "17115EF6289011F5"
+				item: { count: 1, id: "touhou_little_maid:servant_bell" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1BF76A392F088C0F"]
+			id: "12B64209DE8E0B9D"
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				id: "29FCC7B71CC4F865"
+				item: { count: 1, id: "touhou_little_maid:gomoku" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["1BF76A392F088C0F"]
+			id: "3065F199A176DC3C"
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				id: "35E68B6581566700"
+				item: { count: 1, id: "touhou_little_maid:cchess" }
+				type: "item"
+			}]
+			x: 4.25d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1BF76A392F088C0F"]
+			id: "71CCEE178C625FCC"
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				id: "26A41CBC6D5163EE"
+				item: { count: 1, id: "touhou_little_maid:wchess" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: -2.25d
+		}
+		{
+			dependencies: ["7192F2BBB3025672"]
+			hide_dependency_lines: true
+			id: "6E62E6DEEEFCF828"
+			tasks: [{
+				id: "34BEF84260839586"
+				item: { count: 1, id: "touhou_little_maid:maid_bed" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["7192F2BBB3025672"]
+			hide_dependency_lines: true
+			id: "2E0C62C0FC5509CA"
+			tasks: [{
+				id: "37A88F345128F786"
+				item: { count: 1, id: "touhou_little_maid:keyboard" }
+				type: "item"
+			}]
+			x: 5.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["7192F2BBB3025672"]
+			hide_dependency_lines: true
+			id: "7ED0CB6C9DF4F5D5"
+			tasks: [{
+				id: "526AB86282A8C422"
+				item: { count: 1, id: "touhou_little_maid:bookshelf" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["7192F2BBB3025672"]
+			hide_dependency_lines: true
+			id: "3ADD1020242EC6C0"
+			tasks: [{
+				id: "4873CB5D3E0F5A60"
+				item: { count: 1, id: "touhou_little_maid:computer" }
+				type: "item"
+			}]
+			x: 7.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3757232086E0EE92"]
+			id: "568DB1FCA0026DB0"
+			tasks: [
+				{
+					id: "4366C9C9F10FB5A2"
+					item: { count: 1, id: "touhou_little_maid:camera" }
+					type: "item"
+				}
+				{
+					id: "6CCD176F9B74E2D3"
+					item: { count: 1, id: "touhou_little_maid:photo" }
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7192F2BBB3025672"]
+			hide_dependency_lines: true
+			id: "3185C4E7DE13B57C"
+			tasks: [{
+				id: "61C7DD9035FA9D18"
+				item: { count: 1, id: "touhou_little_maid:picnic_basket" }
+				type: "item"
+			}]
+			x: 9.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["3757232086E0EE92"]
+			id: "488961A673AFA318"
+			tasks: [{
+				id: "6DE4ECA45D6E245C"
+				item: { count: 1, id: "touhou_little_maid:shrine" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3757232086E0EE92"]
+			id: "1F9ECBA41B28B498"
+			tasks: [{
+				id: "68ADE7107EB36FB4"
+				item: { components: { "touhou_little_maid:recipe_id": "reborn_maid" }, count: 1, id: "touhou_little_maid:entity_placeholder" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: -2.0d
+		}
+		{
+			hide_dependency_lines: true
+			id: "6FF2FBFB5A8D4C13"
+			tasks: [{
+				id: "5D7453F46913E026"
+				item: { count: 1, id: "touhou_little_maid:broom" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["393BC62337154523"]
+			hide_dependency_lines: true
+			id: "5615365264699A1B"
+			tasks: [{
+				id: "6FCF7EC7EC75B539"
+				item: { count: 1, id: "touhou_little_maid:entity_id_copy" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["393BC62337154523"]
+			hide_dependency_lines: true
+			id: "3BD07324A5864C73"
+			tasks: [{
+				id: "0F99CF2A3460EB30"
+				item: { count: 1, id: "touhou_little_maid:kappa_compass" }
+				type: "item"
+			}]
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			id: "1BF76A392F088C0F"
+			shape: "diamond"
+			size: 1.5d
+			tasks: [{
+				id: "0EC1C934EE7E9C9C"
+				type: "checkmark"
+			}]
+			x: 4.25d
+			y: -3.0d
+		}
+		{
+			id: "3757232086E0EE92"
+			tasks: [{
+				id: "49D91506FB3FF564"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: -3.0d
+		}
+		{
+			id: "393BC62337154523"
+			tasks: [{
+				id: "49FE4F7B204197F0"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			id: "7192F2BBB3025672"
+			tasks: [{
+				id: "731A8373E429DB6E"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			id: "639AE612BBE4F363"
+			shape: "heart"
+			size: 3.0d
+			tasks: [{
+				advancement: "c6c:root"
+				criterion: ""
+				id: "5687B33A0B865DEB"
+				type: "advancement"
+			}]
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"639AE612BBE4F363"
+				"1BBF920628E5D7D8"
+			]
+			id: "1171B51ED997D998"
+			tasks: [{
+				advancement: "c6c:collector_novice"
+				criterion: ""
+				id: "5A00048E24AA6DB6"
+				type: "advancement"
+			}]
+			x: -0.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["1171B51ED997D998"]
+			id: "2B4E14697A217391"
+			tasks: [{
+				advancement: "c6c:collector_expert"
+				criterion: ""
+				id: "5D1AF8F24D60FD29"
+				type: "advancement"
+			}]
+			x: -0.5d
+			y: 5.5d
+		}
+		{
+			dependencies: ["2B4E14697A217391"]
+			id: "420F2FE9D30CFFC3"
+			tasks: [{
+				advancement: "c6c:collector_master"
+				criterion: ""
+				id: "5D1F9FC4CD002A89"
+				type: "advancement"
+			}]
+			x: -0.5d
+			y: 7.0d
+		}
+		{
+			id: "0878F69BAFB5F301"
+			tasks: [{
+				advancement: "c6c:zhiban_holic"
+				criterion: ""
+				id: "5149E9291655478E"
+				type: "advancement"
+			}]
+			x: -2.5d
+			y: 5.5d
+		}
+		{
+			id: "295B71FE3F4848D6"
+			tasks: [{
+				advancement: "c6c:wine_fox_holic"
+				criterion: ""
+				id: "76053D9D07A0A297"
+				type: "advancement"
+			}]
+			x: 1.5d
+			y: 5.5d
+		}
+		{
+			id: "7F438F9D2D109C6F"
+			tasks: [{
+				advancement: "c6c:phantom_garden"
+				criterion: ""
+				id: "76447D409A2CA01A"
+				type: "advancement"
+			}]
+			x: -2.5d
+			y: 7.0d
+		}
+		{
+			id: "7E8FD764CCC38327"
+			tasks: [{
+				advancement: "c6c:fairy_alliance"
+				criterion: ""
+				id: "2105BAB5A06183DE"
+				type: "advancement"
+			}]
+			x: 1.5d
+			y: 7.0d
+		}
+		{
+			id: "1BBF920628E5D7D8"
+			rewards: [{
+				count: 5
+				id: "38C195F5DF5932D7"
+				item: {
+					count: 1
+					id: "kubejs:ticket"
+				}
+				type: "item"
+			}]
+			shape: "heart"
+			size: 3.0d
+			tasks: [{
+				id: "2779D7FE4117C815"
+				item: { count: 1, id: "kaleidoscope_doll:doll_machine" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.5d
+		}
+		{
+			id: "534C36E4439EB3C7"
+			rewards: [{
+				id: "717CB19129C70B71"
+				item: {
+					count: 1
+					id: "minecraft:netherite_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				advancement: "touhou_little_maid:favorability/win_cchess"
+				criterion: ""
+				id: "7141EE52623B308F"
+				type: "advancement"
+			}]
+			x: 4.0d
+			y: 2.0d
+		}
+	]
+}

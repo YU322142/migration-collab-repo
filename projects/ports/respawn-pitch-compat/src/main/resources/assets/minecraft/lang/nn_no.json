@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Sette byrjestaden til %s, %s, %s [%s, %s] i %s for %s",
+  "commands.spawnpoint.success.multiple.new": "Sette byrjestaden til %s, %s, %s [%s, %s] i %s for %s spelarar"
+}

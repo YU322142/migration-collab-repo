@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Spawn puntua ezarri da %s, %s, %s [%s, %s] %s-en %s jokalariarentzat",
+  "commands.spawnpoint.success.multiple.new": "Spawn puntua ezarri da %s, %s, %s [%s, %s] %s-en %s jokalarientzat"
+}

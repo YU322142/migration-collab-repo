@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Зададена начална точка на %s,%s,%s [%s,%s] в %s за %s",
+  "commands.spawnpoint.success.multiple.new": "Задаена начална точка на %s,%s,%s [%s,%s] в%s за%s играча"
+}

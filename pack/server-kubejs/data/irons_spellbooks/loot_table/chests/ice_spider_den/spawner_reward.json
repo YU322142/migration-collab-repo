@@ -1,0 +1,52 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 9
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "irons_jewelry:sapphire"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 9
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "irons_jewelry:moonstone"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:scroll",
+          "functions": [
+            {
+              "function": "irons_spellbooks:randomize_spell",
+              "quality": {
+                "min": 0.0,
+                "max": 0.2
+              },
+              "spell_filter": {
+                "school": "irons_spellbooks:ice"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

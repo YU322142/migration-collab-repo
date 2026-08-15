@@ -1,0 +1,37 @@
+{
+  "descriptionId": "material.irons_jewelry.witherite",
+  "ingredient": {
+    "item": "cataclysm:witherite_ingot"
+  },
+  "materialType": [
+    "metal"
+  ],
+  "paletteLocation": "irons_jewelry:palettes/witherite",
+  "quality": 1.7,
+  "bonusParameters": {
+    "irons_jewelry:attribute": {
+      "attribute": "apothic_attributes:crit_chance",
+      "amount": 0.02,
+      "operation": "add_value"
+    },
+    "irons_jewelry:positive_effect": {
+      "effect": "minecraft:fire_resistance"
+    },
+    "irons_jewelry:negative_effect": {
+      "effect": "cataclysm:curse_of_desert"
+    },
+    "irons_jewelry:action": {
+      "targetSelf": true,
+      "action": {
+        "type": "irons_jewelry:apply_effect",
+        "duration": 200,
+        "amplifier": {
+          "base": 0,
+          "scalar": 1,
+          "max": 2
+        },
+        "effect": "minecraft:fire_resistance"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:stripped_dark_oak_log"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:dark_oak_rafter_end"
+    }
+  ]
+}

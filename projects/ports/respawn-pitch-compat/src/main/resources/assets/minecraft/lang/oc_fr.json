@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Lo ponch d'aparicion es estat definit en %s, %s, %s [%s, %s] dins la dimension %s per %s",
+  "commands.spawnpoint.success.multiple.new": "Lo ponch d'aparicion es estat definit en %s, %s, %s [%s, %s] dins la dimension %s per %s jogaires"
+}

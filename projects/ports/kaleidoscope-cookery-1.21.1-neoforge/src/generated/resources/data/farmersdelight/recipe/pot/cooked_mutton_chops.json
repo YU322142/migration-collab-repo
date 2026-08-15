@@ -1,0 +1,19 @@
+{
+    "type":  "kaleidoscope_cookery:pot",
+    "ingredients":  [
+                        {
+                            "item":  "farmersdelight:mutton_chops"
+                        }
+                    ],
+    "result":  {
+                   "id":  "farmersdelight:cooked_mutton_chops"
+               },
+    "stir_fry_count":  3,
+    "time":  200,
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "farmersdelight"
+                                }
+                            ]
+}

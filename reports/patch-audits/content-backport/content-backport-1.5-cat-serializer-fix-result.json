@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "date": "2026-08-14",
+  "timezone": "Asia/Shanghai",
+  "status": "STATIC_FIX_READY_FOR_DISPOSABLE_STARTUP_GATE_NOT_RUNTIME_PROVEN",
+  "constraints": {
+    "minecraft_started": false,
+    "runtime_modified": false,
+    "client_modified": false,
+    "source_staging_modified": false,
+    "config_or_ports_modified": false
+  },
+  "input": {
+    "path": "D:\\Trans\\migration-audit-work\\mod-candidates\\backport-1.5.jar",
+    "bytes": 15301451,
+    "sha256": "167534C66D5E6C09DCB01152EBD37D18CED5CF6278A9228C094F937886133AF5"
+  },
+  "output": {
+    "path": "D:\\Trans\\migration-audit-work\\content-backport-1.5-cat-serializer-fix-artifacts-20260814\\backport-1.5-cat-serializer-fix.1.jar",
+    "bytes": 15336561,
+    "sha256": "34291AF9D81B6AEE0780F5F511B2A9594664F36906AED40687DF1C7009E68B1D",
+    "mod_id": "backport",
+    "metadata_version": "1.5",
+    "side": "BOTH"
+  },
+  "source_project": "D:\\Trans\\migration-audit-work\\content-backport-1.5-cat-serializer-fix-source-20260814",
+  "changed_entries": [
+    "com/juanmuscaria/backport/world/entity/animal/BackportedEntityDataSerializers.class",
+    "com/juanmuscaria/backport/mixin/common/CatSoundVariantBackport$CatMixin.class",
+    "com/juanmuscaria/backport/mixin/common/ChickenVariantBackport$ChickenMixin.class",
+    "com/juanmuscaria/backport/mixin/common/CowVariantBackport$CowMixin.class",
+    "com/juanmuscaria/backport/mixin/common/PigVariantBackport$PigMixin.class",
+    "com/juanmuscaria/backport/mixin/common/WolfSoundVariantBackport$WolfMixin.class"
+  ],
+  "verification": {
+    "clean_check_builds": 2,
+    "build_1_sha256": "34291AF9D81B6AEE0780F5F511B2A9594664F36906AED40687DF1C7009E68B1D",
+    "build_2_sha256": "34291AF9D81B6AEE0780F5F511B2A9594664F36906AED40687DF1C7009E68B1D",
+    "reproducible": true,
+    "junit_tests_passed": 2,
+    "junit_tests_total": 2,
+    "original_unsafe_animal_serializer_sites": 8,
+    "patched_unsafe_animal_serializer_sites": 0,
+    "patched_eager_serializer_sites": 8,
+    "asm_bytecode_analysis": "PASS",
+    "zip_crc_and_entry_contract": "PASS",
+    "unrelated_entries_byte_identical": true,
+    "cat_sound_variant_json_preserved": 2,
+    "cat_sound_ogg_preserved": 21
+  },
+  "remaining_static_deferred_holder_classes": [
+    {
+      "class": "com.juanmuscaria.backport.world.level.block.EyeblossomBlock$Type",
+      "reads": 4,
+      "registry_kind": "sound_event",
+      "disposition": "UNCHANGED_OUTSIDE_CURRENT_PRE_REGISTRATION_TRIGGER; VERIFY_IN_STARTUP_GATE"
+    },
+    {
+      "class": "com.juanmuscaria.backport.world.entity.animal.happyghast.HappyGhast",
+      "reads": 1,
+      "registry_kind": "sensor_type",
+      "disposition": "UNCHANGED_OUTSIDE_CURRENT_PRE_REGISTRATION_TRIGGER; VERIFY_IN_STARTUP_GATE"
+    }
+  ]
+}

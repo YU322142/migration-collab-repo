@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Establecióse'l puntu d'apaición en %s, %s, %s [%s, %s] en %s para %s",
+  "commands.spawnpoint.success.multiple.new": "Establecióse'l puntu d'apaición en %s, %s, %s [%s, %s] en %s para %s xugadores"
+}

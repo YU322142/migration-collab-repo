@@ -1,0 +1,42 @@
+{
+    "tree":  "data",
+    "count_242":  147,
+    "count_251":  157,
+    "only_242":  [
+
+                 ],
+    "only_251":  [
+                     "create_enchantment_industry\\advancement\\recipes\\misc\\smithing\\blaze_composer.json",
+                     "create_enchantment_industry\\data_maps\\enchantment\\enchantment_processing\\rules.json",
+                     "create_enchantment_industry\\loot_table\\blocks\\blaze_composer.json",
+                     "create_enchantment_industry\\recipe\\sequenced_assembly\\apotheotic_affix_template.json",
+                     "create_enchantment_industry\\recipe\\sequenced_assembly\\brass_affix_template.json",
+                     "create_enchantment_industry\\recipe\\sequenced_assembly\\crystal_affix_template.json",
+                     "create_enchantment_industry\\recipe\\smithing\\blaze_composer.json",
+                     "create_enchantment_industry\\tags\\enchantment\\blaze_enchanter\\penalty_curses.json",
+                     "create_enchantment_industry\\tags\\enchantment\\blaze_enchanter\\penalty_curses_deny.json",
+                     "create_enchantment_industry\\tags\\item\\blaze_composer\\super_activators.json"
+                 ],
+    "common_same":  128,
+    "common_changed":  [
+                           "c\\tags\\block\\lightning_rods.json",
+                           "c\\tags\\point_of_interest_type\\lightning_rods.json",
+                           "create\\tags\\block\\fan_processing_catalysts\\smoking.json",
+                           "create\\tags\\block\\fan_transparent.json",
+                           "create_enchantment_industry\\advancement\\assembly_aesthetics.json",
+                           "create_enchantment_industry\\data_maps\\enchantment\\super_enchanting\\custom_level_extension.json",
+                           "create_enchantment_industry\\loot_table\\blocks\\affix_augmentor.json",
+                           "create_enchantment_industry\\loot_table\\blocks\\brass_bookshelf.json",
+                           "create_enchantment_industry\\loot_table\\blocks\\creative_bookshelf.json",
+                           "create_enchantment_industry\\loot_table\\blocks\\ender_woven_bag.json",
+                           "create_enchantment_industry\\loot_table\\blocks\\gem_cutter.json",
+                           "create_enchantment_industry\\loot_table\\blocks\\infuser.json",
+                           "create_enchantment_industry\\recipe\\crafting\\affix_augmentor.json",
+                           "create_enchantment_industry\\recipe\\mixing\\dissolve_common_material.json",
+                           "create_enchantment_industry\\recipe\\mixing\\dissolve_epic_material.json",
+                           "create_enchantment_industry\\recipe\\mixing\\dissolve_mythic_material.json",
+                           "create_enchantment_industry\\recipe\\mixing\\dissolve_rare_material.json",
+                           "create_enchantment_industry\\recipe\\mixing\\dissolve_uncommon_material.json",
+                           "minecraft\\tags\\block\\mineable\\pickaxe.json"
+                       ]
+}

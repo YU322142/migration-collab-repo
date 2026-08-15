@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "%7$s-ի համար %6$s-ում աշխարհի ծնման կետը սահմանվել է %1$s,%2$s,%3$s [%4$s, %5$s]",
+  "commands.spawnpoint.success.multiple.new": "%7$s խաղացողի համար %6$s-ում աշխարհի ծնման կետը սահմանվել է %1$s,%2$s,%3$s [%4$s, %5$s]"
+}

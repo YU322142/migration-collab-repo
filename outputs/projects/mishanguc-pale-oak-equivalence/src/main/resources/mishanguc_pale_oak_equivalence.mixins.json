@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "pers.solid.mishang.uc.migration.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockEntityTypeAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,54 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.95'
+}
+
+group = mod_group_id
+version = mod_version
+
+base {
+    archivesName = 'mishanguc-pale-oak-equivalence-backport'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    compileOnly files(
+            'D:/Trans/migration-audit-work/fullstack-create-6.0.10-smoke1/.cache/connector/mishanguc-1.6.1-1.21.1_mapped_moj_1.21.1.jar',
+            'D:/Trans/migration-audit-work/fullstack-create-6.0.10-smoke1/mods/backport-1.5.jar'
+    )
+    // Connector's mapped Mishang classes retain this Fabric API type in their
+    // class hierarchy. The runtime already supplies it through Forgified Fabric API.
+    compileOnly fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+tasks.withType(ProcessResources).configureEach {
+    def replacements = [
+            minecraft_version_range: minecraft_version_range,
+            neo_version_range      : neo_version_range,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_description        : mod_description
+    ]
+    inputs.properties replacements
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand replacements
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

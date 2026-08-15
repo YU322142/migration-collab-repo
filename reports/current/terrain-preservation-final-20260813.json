@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-13T09:37:43+00:00",
+  "status": "READY_FOR_ISOLATED_RUNTIME_VALIDATION",
+  "production_release_status": "BLOCKED_FAIL_CLOSED",
+  "operation": "terrain-preservation-final-decision",
+  "decision": {
+    "selected_strategy": "SPLIT_DIMENSION_ZERO_OVERWRITE",
+    "overworld": "Keep Minecraft 1.21.1 vanilla-compatible 384-height terrain geometry.",
+    "frontier": "Keep Mechanomania/Tectonic 544-height world generation in mechanomania_frontier:frontier.",
+    "same_dimension_tectonic_switch": "REJECTED",
+    "reason": "The complete old-world frontier lacks blending_data and the generator heights differ by 160 blocks."
+  },
+  "authoritative_world": "D:\\Trans\\migration-handoff-20260812\\02-latest\\converted-staging\\world",
+  "evidence": {
+    "existing_terrain_chunks": 927157,
+    "terrain_region_files": 1280,
+    "frontier_edges": 21018,
+    "existing_boundary_chunks": 18120,
+    "adjacent_ungenerated_chunks": 18190,
+    "blending_checked_chunks": 18120,
+    "blending_missing_chunks": 18120,
+    "blending_required_marker": {
+      "min_section": -4,
+      "max_section": 20
+    },
+    "vanilla_height": 384,
+    "tectonic_height": 544,
+    "height_delta": 160,
+    "protected_center": {
+      "x": 10192,
+      "z": -1574,
+      "chunk_x": 637,
+      "chunk_z": -99
+    },
+    "protected_core_radius": 1000,
+    "protected_freeze_radius": 1536,
+    "protected_freeze_chunks": 28950,
+    "protected_existing_chunks": 0
+  },
+  "immutable_policy": {
+    "existing_region_entities_poi": "No existing file or occupied chunk may be overwritten, regenerated, or deleted.",
+    "level_dat": "Do not replace or rebuild the authoritative level.dat.",
+    "production_configuration": "Do not modify server.properties, ports, RCON, or query settings.",
+    "protected_zone": "Only import vanilla-compatible pre-generated chunks into slots proven empty immediately before import."
+  },
+  "overworld_policy": {
+    "dimension": "minecraft:overworld",
+    "dimension_type_height": 384,
+    "noise_height": 384,
+    "geometry": "Minecraft 1.21.1 vanilla-compatible noise and density closure",
+    "existing_chunks": "immutable",
+    "new_chunks": "384-height vanilla-compatible geometry",
+    "decoration_caveat": "Mechanomania global biome feature and structure injections remain enabled; new chunks are not promised byte-identical vanilla decoration."
+  },
+  "frontier_policy": {
+    "dimension": "mechanomania_frontier:frontier",
+    "dimension_type": "mechanomania_frontier:frontier",
+    "noise_settings": "mechanomania_frontier:tectonic",
+    "dimension_type_height": 544,
+    "noise_height": 544,
+    "temporary_access_command": "/execute in mechanomania_frontier:frontier run tp @s 0 160 0",
+    "public_access_requirement": "Add a guarded portal or command with return-point and failure recovery before public release."
+  },
+  "frontier_datapack": {
+    "path": "outputs\\terrain-preservation-frontier-datapack-20260813",
+    "manifest": "outputs\\terrain-preservation-frontier-datapack-20260813\\FRONTIER-MANIFEST.json",
+    "tree_sha256": "B45C9E9940ABECFB3EC2FF094AE2AF1532EF673E02EA3F346FEB259D64A7CF2D",
+    "file_count_excluding_manifest": 208,
+    "vanilla_closure_resource_count": 61,
+    "tectonic_closure_resource_count": 139,
+    "tectonic_closure_source_key_count": 131,
+    "frontier_biome_parameter_entries": 7593,
+    "frontier_unique_biomes": 53
+  },
+  "source_locks": {
+    "frontier_audit": {
+      "path": "outputs\\existing-terrain-frontier-audit-20260813.json",
+      "sha256": "4AB0478350834B6AE6797662FEC091B1848190FF5E23AB61BC31B34A75DD30B0"
+    },
+    "blending_audit": {
+      "path": "outputs\\existing-terrain-frontier-blending-audit-20260813.json",
+      "sha256": "01F1FDA9C743A75498EE74335A6E89269D658A70004C95BB8AC2EEE25FF39D7E"
+    },
+    "vanilla_plan": {
+      "path": "outputs\\vanilla-terrain-protection-plan-20260813.json",
+      "sha256": "187BEB1CEAC560A9A44B1277C62B56FD5BBEEA73A8ED48C26E5936E06F0D467C"
+    },
+    "vanilla_client_jar": {
+      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\libraries\\com\\mojang\\minecraft\\1.21.1\\minecraft-1.21.1-client.jar",
+      "sha256": "499F6897D1837516680F3114072D8106E11C9ADCD933FE5CF051B551089B0C99"
+    },
+    "mechanomania_dimension": {
+      "path": "D:\\Trans\\migration-audit-work\\integration-pack-audit-20260813\\overrides\\kubejs\\data\\minecraft\\dimension\\overworld.json",
+      "sha256": "E7C7748FE2D626D0E6073B518EC9848A0B2128A1EE807BA96A989DD1E6D1FC9C"
+    },
+    "mechanomania_dimension_type": {
+      "path": "D:\\Trans\\migration-audit-work\\integration-pack-audit-20260813\\overrides\\kubejs\\data\\minecraft\\dimension_type\\overworld.json",
+      "sha256": "F037D47507D099F2BC74D1D6093E3D580EE8E62312AD15F41B46DF4EA801A817"
+    },
+    "mechanomania_noise_settings": {
+      "path": "D:\\Trans\\migration-audit-work\\integration-pack-audit-20260813\\overrides\\kubejs\\data\\minecraft\\worldgen\\noise_settings\\overworld.json",
+      "sha256": "5EAADC06F3BF2C35C85D753A2D1632ACE4A2348180F0BD02C973D3574E33AB85"
+    }
+  },
+  "release_gates": {
+    "static": {
+      "status": "PASS",
+      "checks": [
+        "authoritative terrain/frontier counts locked",
+        "all frontier blending markers audited and absent",
+        "vanilla and Tectonic heights independently verified",
+        "namespace-isolated frontier datapack built"
+      ]
+    },
+    "isolated_runtime": {
+      "status": "PENDING",
+      "java_started_this_operation": false
+    },
+    "production": {
+      "status": "BLOCKED",
+      "rule": "Runtime registry, generation, client, immutable-world and configuration gates must all pass."
+    }
+  },
+  "blockers": [
+    "No isolated NeoForge registry load has yet proven datapack/KubeJS priority and codec resolution.",
+    "No test chunks have yet proven Overworld resolves to 384 and frontier resolves to 544 at runtime.",
+    "No guarded public entry/return mechanism for the frontier dimension has yet been implemented and tested.",
+    "No two-client, death, relog, structure, task, recipe, block-entity and rollback smoke test has yet passed.",
+    "The requested x=10192,z=-1574 vanilla freeze remains ungenerated; its separate empty-slot/import gates still apply."
+  ],
+  "non_actions": {
+    "java_started": false,
+    "world_modified": false,
+    "level_dat_modified": false,
+    "production_configuration_modified": false
+  }
+}

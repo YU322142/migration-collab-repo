@@ -1,0 +1,30 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "alloysmelter"
+	group: "08701E4938C3D337"
+	icon: {
+		id: "alloy_smelter:forge_controller_tier1"
+	}
+	id: "1505E388615EF814"
+	images: [{
+		height: 9.91d
+		image: "ftbquests:textures/alloy_smelter.png"
+		rotation: 0.0d
+		width: 23.53d
+		x: 0.0d
+		y: 0.5d
+	}]
+	order_index: 2
+	quest_links: [ ]
+	quests: [{
+		id: "393188CC2575E3CF"
+		tasks: [{
+			id: "339CBF95DB0D43AD"
+			item: { count: 1, id: "alloy_smelter:forge_controller_tier1" }
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+}

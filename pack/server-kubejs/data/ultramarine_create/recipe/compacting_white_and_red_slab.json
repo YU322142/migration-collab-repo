@@ -1,0 +1,33 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "item": "ultramarine:white_dye_powder"
+    },
+    {
+      "tag": "c:dyes/red"
+    },
+    {
+      "tag": "c:dyes/red"
+    },
+    {
+      "item": "ultramarine:white_dye_powder"
+    },
+    {
+      "item": "ultramarine:architrave_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:white_and_red_slab"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:architrave_template"
+    }
+  ]
+}

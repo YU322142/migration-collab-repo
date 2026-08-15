@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Pro hráče %7$s byl na souřadnicích %1$s, %2$s, %3$s [%4$s, %5$s] v dimenzi %6$s nastaven výchozí bod",
+  "commands.spawnpoint.success.multiple.new": "Výchozí bod v dimenzi %6$s byl nastaven na %1$s, %2$s, %3$s [%4$s,%5$s] pro %7$s hráčů"
+}

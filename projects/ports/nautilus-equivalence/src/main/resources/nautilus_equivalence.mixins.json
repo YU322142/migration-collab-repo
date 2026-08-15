@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.blackgear.vanillabackport.core.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "common.DrownedMixin",
+    "common.access.ParrotAccessor",
+    "common.access.ServerPlayerAccessor",
+    "common.mob_effects.MobEffectUtilMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

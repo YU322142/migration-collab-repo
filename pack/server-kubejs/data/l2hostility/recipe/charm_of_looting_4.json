@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "l2complements:blackstone_core"
+    },
+    "D": {
+      "item": "l2complements:force_field"
+    },
+    "I": {
+      "item": "l2hostility:miracle_ingot"
+    },
+    "N": {
+      "item": "advancednetherite:netherite_emerald_ingot"
+    }
+  },
+  "pattern": [
+    "NA ",
+    "DID",
+    " AN"
+  ],
+  "result": {
+    "count": 1,
+    "id": "l2hostility:charm_of_looting_4"
+  }
+}

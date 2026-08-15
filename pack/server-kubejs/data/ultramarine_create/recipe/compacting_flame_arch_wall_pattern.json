@@ -1,0 +1,33 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "ultramarine:polished_planks"
+    },
+    {
+      "tag": "c:dyes/orange"
+    },
+    {
+      "item": "ultramarine:white_dye_powder"
+    },
+    {
+      "item": "ultramarine:blue_dye_powder"
+    },
+    {
+      "item": "ultramarine:green_dye_powder"
+    },
+    {
+      "item": "ultramarine:caihua_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:flame_arch_wall_pattern"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:caihua_template"
+    }
+  ]
+}

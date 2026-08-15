@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "ingredients": [
+    {
+      "item": "create:propeller"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 300,
+      "fluid": "createdieselgenerators:gasoline"
+    }
+  ],
+  "results": [
+    {
+      "id": "createdieselgenerators:engine_turbocharger"
+    }
+  ]
+}

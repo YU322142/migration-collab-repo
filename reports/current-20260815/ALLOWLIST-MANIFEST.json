@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "name": "PROTECTED-TERRAIN-OTA-OPERATOR-RUNBOOK-20260815.md",
+      "bytes": 5669,
+      "sha256": "7F758BB1F9AAED81CF189E8EE731CFC884345FEB11F97DE74CC277FC44578756"
+    },
+    {
+      "name": "MASTER-TERRAIN-BIOME-OTA-RUNBOOK-20260815.md",
+      "bytes": 19328,
+      "sha256": "C445AA141130AD19701F478F72F2025389FA4E5B9D8C068E0935033E5BBDE758"
+    },
+    {
+      "name": "TERRAIN-OTA-COLLAB-HANDOFF-20260815.md",
+      "bytes": 6471,
+      "sha256": "3FCBFEBFA9416C260791839A19286B5111873081BC74D5FC2EC02B2DEB40EFEA"
+    },
+    {
+      "name": "WORLDGEN-HEIGHT-544-AND-FRONTIER-APPENDIX-20260815.md",
+      "bytes": 8230,
+      "sha256": "B384041D31A6578F3EF5C0F1F490E4D23BE1523C89FC17082A6F296FC3CDA204"
+    },
+    {
+      "name": "terrain-biome-safe-ota-design-20260815.md",
+      "bytes": 11739,
+      "sha256": "4A45A32909E28FAEE4A931CD8E5B300F1AC7D36C4C3E4C5E74F87D8899ADCA00"
+    },
+    {
+      "name": "protected-zone-terrain-ota-tool-20260815.md",
+      "bytes": 5343,
+      "sha256": "B5A26C86C334CD75A6E6AB0EA5309D2DAFD9173314BBED42128715F1996DDC56"
+    },
+    {
+      "name": "protected-zone-entity-relocation-ota-20260815.md",
+      "bytes": 4055,
+      "sha256": "B917FA95A3CA7B3A6A67B86642D77715DD146737C6567C64FCF79A2C169079AA"
+    },
+    {
+      "name": "heightmap-384-to-544-compat-audit-20260815.md",
+      "bytes": 2395,
+      "sha256": "07E54E9984C32E9263D8F52CAE7CA9D0612AB520178E3BF5CF4E2B6653223C34"
+    },
+    {
+      "name": "mineastr-readonly-audit-20260815.md",
+      "bytes": 6646,
+      "sha256": "31FAA4F0BFF15EA2BD3D27F5E25EB18C47A4ED8C90F10E3405D6ACBD14459360"
+    },
+    {
+      "name": "protected-terrain-ota-latest-c-lock-20260815.json",
+      "bytes": 3979,
+      "sha256": "376A47011A515134C10130ADADFF3D6F294081E7450D4225ACE9F30A60212C39"
+    },
+    {
+      "name": "terrain-biome-ota-current-state-20260815.json",
+      "bytes": 12396,
+      "sha256": "804841B0BCB0954BBEC372D5D098ECC54FBDA70EE1AD9F0A97409906566E429E"
+    },
+    {
+      "name": "mechanomania-latest-c-ota-candidate-manifest-20260815.json",
+      "bytes": 4021,
+      "sha256": "27CC7D61016F2974490751A4AC45110DD089643E7A4D13B33A4D02E9680ACDD7"
+    }
+  ]
+}

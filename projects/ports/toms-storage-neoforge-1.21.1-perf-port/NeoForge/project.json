@@ -1,0 +1,40 @@
+{
+  "type": "neoforge",
+  "name": "toms_storage-1.21",
+  "mcVer": "1.21",
+  "verId": "1.21",
+  "display": "[NeoForge] Tom's Storage 1.21",
+  "onGit": true,
+  "subver": [
+	"1.21",
+    "1.21.1"
+  ],
+  "versionType": "release",
+  "j21": true,
+  "depProjects": [
+    {
+      "slug": "jei",
+      "type": "optionalDependency"
+    },
+    {
+      "slug": "roughly-enough-items",
+      "type": "optionalDependency"
+    },
+    {
+      "slug": "emi",
+      "type": "optionalDependency"
+    },
+    {
+      "slug": "polymorph",
+      "type": "optionalDependency"
+    },
+    {
+      "slug": "curios",
+      "type": "optionalDependency"
+    },
+	{
+	  "slug": "sophisticated-storage",
+	  "type": "optionalDependency"
+	}
+  ]
+}

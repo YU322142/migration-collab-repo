@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Ustawiono punkt odradzania na %s, %s, %s [%s, %s] w %s dla %s",
+  "commands.spawnpoint.success.multiple.new": "Ustawiono punkt odradzania na %s, %s, %s [%s, %s] w %s dla %s graczy"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:planks"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:tall_wooden_queti_edge"
+    }
+  ]
+}

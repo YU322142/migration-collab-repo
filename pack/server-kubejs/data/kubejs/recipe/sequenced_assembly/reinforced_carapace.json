@@ -1,0 +1,75 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "minecraft:iron_chestplate"
+  },
+  "loops": 3,
+  "results": [
+    {
+      "id": "c6c:reinforced_carapace"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:cutting",
+      "ingredients": [
+        {
+          "item": "minecraft:iron_chestplate"
+        }
+      ],
+      "results": [
+        {
+          "id": "minecraft:iron_chestplate"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:iron_chestplate"
+        },
+        {
+          "item": "create:sturdy_sheet"
+        }
+      ],
+      "results": [
+        {
+          "id": "minecraft:iron_chestplate"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:iron_chestplate"
+        },
+        {
+          "item": "l2complements:shulkerate_ingot"
+        }
+      ],
+      "results": [
+        {
+          "id": "minecraft:iron_chestplate"
+        }
+      ]
+    },
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "minecraft:iron_chestplate"
+        }
+      ],
+      "results": [
+        {
+          "id": "minecraft:iron_chestplate"
+        }
+      ]
+    }
+  ],
+  "transitional_item": {
+    "id": "minecraft:iron_chestplate"
+  }
+}

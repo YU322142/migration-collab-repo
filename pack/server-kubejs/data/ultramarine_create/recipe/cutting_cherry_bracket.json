@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:cherry_logs"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:cherry_bracket"
+    }
+  ]
+}

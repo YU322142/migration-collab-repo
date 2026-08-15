@@ -1,0 +1,237 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "endersculk"
+	group: "6B9D1AFD3E45FF4E"
+	icon: {
+		id: "minecraft:sculk_catalyst"
+	}
+	id: "7519FE5CE0D0A541"
+	images: [{
+		height: 10.24d
+		image: "ftbquests:textures/end_deep_dark.png"
+		rotation: 0.0d
+		width: 20.36d
+		x: 0.0d
+		y: 2.0d
+	}]
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			id: "74C40A81C9605AC0"
+			tasks: [{
+				id: "4A021CCA252DCB4E"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["74C40A81C9605AC0"]
+			id: "7395FC5FE0EEFDA2"
+			tasks: [{
+				id: "73AC52E45C15E128"
+				item: { count: 1, id: "l2complements:warden_bone_shard" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["74C40A81C9605AC0"]
+			id: "3454BE7CF82A56B4"
+			tasks: [{
+				id: "2797F4E9C8FF52F0"
+				item: { count: 1, id: "irons_spellbooks:mithril_ingot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["74C40A81C9605AC0"]
+			id: "52A28F0788814240"
+			tasks: [{
+				id: "702EF0C5C7534BD7"
+				item: { count: 1, id: "irons_spellbooks:chained_book" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7395FC5FE0EEFDA2"]
+			id: "28AF77CA41C26AFE"
+			tasks: [{
+				id: "16ADAC3DA49C677E"
+				item: { components: { "minecraft:stored_enchantments": { levels: { "l2complements:hardened": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
+				match_components: "fuzzy"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7395FC5FE0EEFDA2"]
+			id: "1E37F262F1F55B4F"
+			tasks: [{
+				id: "015A46F09B39776B"
+				item: { count: 1, id: "l2complements:sculkium_ingot" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["52A28F0788814240"]
+			id: "53C14996CDBA5DC2"
+			tasks: [{
+				icon: {
+					id: "irons_spellbooks:brazier_soul"
+				}
+				id: "3B52B4A3E16E0963"
+				observe_type: 0
+				timer: 0L
+				to_observe: "irons_spellbooks:brazier_soul"
+				type: "observation"
+			}]
+			x: 3.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["45327BA92ABD2043"]
+			id: "1DE888EE22633AA0"
+			tasks: [{
+				id: "0A1ABC4F47062228"
+				item: { count: 1, id: "irons_spellbooks:portal_frame" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["45327BA92ABD2043"]
+			id: "68F6D66DDCCEDF97"
+			tasks: [{
+				id: "016D7FCB4B39F222"
+				item: { components: { "irons_spellbooks:spell_container": { data: [{ id: "irons_spellbooks:portal", index: 0, level: 1, locked: 1b }], maxSpells: 1, mustEquip: 0b, spellWheel: 1b } }, count: 1, id: "irons_spellbooks:hither_thither_wand" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["3454BE7CF82A56B4"]
+			id: "35BFF10E665799C5"
+			tasks: [{
+				id: "4276F2767A82F48E"
+				item: { components: { "minecraft:potion_contents": { potion: "apothic_attributes:long_flying" } }, count: 1, id: "minecraft:potion" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["3454BE7CF82A56B4"]
+			id: "6B453132CFF68D96"
+			tasks: [{
+				id: "53704490648DA6DF"
+				item: { count: 1, id: "irons_spellbooks:cinderous_soulcaller" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["6B453132CFF68D96"]
+			id: "55A6F9F0BC4D0096"
+			tasks: [{
+				entity: "irons_spellbooks:fire_boss"
+				icon: {
+					components: {
+						"irons_spellbooks:spell_container": {
+							data: [{
+								id: "irons_spellbooks:raise_hell"
+								index: 0
+								level: 3
+								locked: 1b
+							}]
+							maxSpells: 1
+							mustEquip: 0b
+							spellWheel: 1b
+						}
+					}
+					id: "irons_spellbooks:hellrazor"
+				}
+				id: "023CD7041777FEEF"
+				type: "kill"
+				value: 1L
+			}]
+			x: -0.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["55A6F9F0BC4D0096"]
+			id: "45327BA92ABD2043"
+			tasks: [{
+				id: "405700C66871059B"
+				item: { count: 1, id: "irons_spellbooks:pyrium_ingot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["35BFF10E665799C5"]
+			id: "473CA38006F3C4A4"
+			tasks: [{
+				id: "555D385EA0EC1E3A"
+				item: { components: { "minecraft:potion_contents": { potion: "apothic_attributes:extra_long_flying" } }, count: 1, id: "minecraft:potion" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 6.0d
+		}
+		{
+			icon: {
+				id: "minecraft:netherite_ingot"
+			}
+			id: "74F2404B036CB503"
+			rewards: [{
+				id: "4F1DB094C485771E"
+				item: {
+					count: 1
+					id: "minecraft:netherite_ingot"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "21C01828F521B5E6"
+				structure: "minecraft:ancient_city"
+				type: "structure"
+			}]
+			x: -3.5d
+			y: 6.0d
+		}
+		{
+			dependencies: ["74F2404B036CB503"]
+			id: "3819174571B043A8"
+			rewards: [{
+				id: "36E8C82A8DBA3464"
+				item: {
+					count: 1
+					id: "irons_spellbooks:timeless_slurry"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "76358C4507BDA627"
+				item: { components: { "minecraft:stored_enchantments": { levels: { "l2complements:soul_bound": 1 } } }, count: 1, id: "minecraft:enchanted_book" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: 7.5d
+		}
+	]
+}

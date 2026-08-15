@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.bmt.happyghast_equivalence.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "HappyGhastMixin",
+    "ServerPlayerMixin",
+    "TemptGoalMixin",
+    "TemptingSensorMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

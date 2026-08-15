@@ -1,0 +1,104 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.95'
+}
+
+group = mod_group_id
+version = mod_version
+
+base {
+    archivesName = 'kaleidoscope-cookery-scarecrow-compat'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+def cookeryJar = file(project.cookery_jar)
+def sourceReferenceJar = file(project.source_reference_jar)
+
+dependencies {
+    compileOnly files(cookeryJar)
+    testImplementation sourceSets.main.output
+    testImplementation 'org.ow2.asm:asm:9.8'
+    testImplementation 'org.ow2.asm:asm-tree:9.8'
+}
+
+sourceSets {
+    test {
+        compileClasspath += sourceSets.main.compileClasspath
+        runtimeClasspath += sourceSets.main.compileClasspath
+    }
+}
+
+def sha256 = { File input ->
+    def digest = java.security.MessageDigest.getInstance('SHA-256')
+    input.withInputStream { stream ->
+        byte[] buffer = new byte[8192]
+        for (int read = stream.read(buffer); read >= 0; read = stream.read(buffer)) {
+            if (read > 0) digest.update(buffer, 0, read)
+        }
+    }
+    digest.digest().collect { String.format('%02X', it) }.join()
+}
+
+tasks.register('verifyInputs') {
+    doLast {
+        assert cookeryJar.isFile(): "Missing target Cookery JAR: ${cookeryJar}"
+        assert sha256(cookeryJar).equalsIgnoreCase(project.cookery_sha256):
+                "Cookery SHA-256 mismatch: ${sha256(cookeryJar)}"
+        assert sourceReferenceJar.isFile(): "Missing source Cookery reference JAR: ${sourceReferenceJar}"
+        assert sha256(sourceReferenceJar).equalsIgnoreCase(project.source_reference_sha256):
+                "Source reference SHA-256 mismatch: ${sha256(sourceReferenceJar)}"
+    }
+}
+
+def tomlProperties = [
+        'loader_version_range', 'mod_license', 'mod_id', 'mod_version',
+        'mod_name', 'mod_authors', 'mod_description', 'neo_version_range',
+        'minecraft_version_range', 'cookery_version_range'
+].collectEntries { key -> [key, project.property(key).toString()] }
+
+tasks.named('processResources') {
+    inputs.properties(tomlProperties)
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand(tomlProperties)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    dependsOn tasks.named('verifyInputs')
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('compatParityTest', JavaExec) {
+    group = 'verification'
+    description = 'Verifies source/target bytecode evidence and the compiled compatibility mixin.'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.migration.kaleidoscope_cookery_scarecrow_compat.ScarecrowCompatTest'
+    systemProperty 'targetCookeryJar', cookeryJar.absolutePath
+    systemProperty 'sourceReferenceJar', sourceReferenceJar.absolutePath
+}
+
+tasks.named('test') {
+    failOnNoDiscoveredTests = false
+}
+
+tasks.named('check') {
+    dependsOn tasks.named('compatParityTest')
+}
+
+tasks.named('jar') {
+    dependsOn tasks.named('verifyInputs')
+    archiveFileName = "kaleidoscope-cookery-scarecrow-compat-${project.mod_version}.jar"
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}

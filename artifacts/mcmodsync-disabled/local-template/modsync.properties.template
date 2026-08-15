@@ -1,0 +1,13 @@
+# NON-DEPLOYABLE TEMPLATE: the placeholder is intentionally not a valid URL.
+# Binding: candidate14-r3; derived catalog-version: candidate14-r3-20260812-66778b3f91842d0a.
+# Do not copy this file into Prism until a controlled immutable HTTPS origin is frozen.
+manifest=${CONTROLLED_HTTPS_MANIFEST_URL}/minecraft/1.21.1/neoforge/mods-v4.txt
+language=zh_cn
+syncResourcePacks=false
+syncServerList=false
+strict=true
+requireManifest=true
+connectTimeoutSeconds=15
+requestTimeoutSeconds=300
+fileOperationRetries=12
+maxFileBytes=67108864

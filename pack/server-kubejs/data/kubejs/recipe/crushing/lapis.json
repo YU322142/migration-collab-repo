@@ -1,0 +1,25 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "create_enchantment_industry:super_experience_block"
+    }
+  ],
+  "processing_time": 400,
+  "results": [
+    {
+      "id": "minecraft:lapis_lazuli",
+      "count": 4
+    },
+    {
+      "chance": 0.5,
+      "id": "minecraft:lapis_lazuli",
+      "count": 6
+    },
+    {
+      "chance": 0.25,
+      "id": "minecraft:lapis_lazuli",
+      "count": 8
+    }
+  ]
+}

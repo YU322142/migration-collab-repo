@@ -1,0 +1,531 @@
+{
+  "build_date": "2026-08-13",
+  "execution": {
+    "conversion_fingerprint_sha256": "81d2a55279ab700e419b1f61ed4b6802f0b7f6ab3a732a26e500cacf465259dc",
+    "disposable_audit_port": 12341,
+    "minecraft_launched": false,
+    "prism_instance_modified": false,
+    "production_proxy_or_firewall_modified": false,
+    "production_server_port": 25566,
+    "production_server_properties_modified": false,
+    "release_modified": false,
+    "resumable_atomic_region_writes": true,
+    "resume_identity_bound_inputs": {
+      "converter": {
+        "path": "<WORKSPACE>\\outputs\\tools\\convert_journeymap_to_xaero.py",
+        "sha256": "fd7139d233278e11e634e0ba17a2defbe34b71791143fb05cd5078b08abdd3e9"
+      },
+      "mapping": {
+        "path": "outputs\\tmp\\upstream-JMtoXaero\\JMtoXaero-main\\src\\main\\resources\\blockstateidtocolor.txt",
+        "sha256": "496d0266810283185d0e3501ab59612ba620e037c288132d2c5de61d738ebbec"
+      },
+      "pack_zip": {
+        "path": "<WORKSPACE>\\outputs\\Mechanomania-Ultimate-Aeronautics-1.1.11.2.zip",
+        "sha256": "2b9c39579ea82a3d9c8c1a22029c7379d1bd240a1f4a08abd70b03374e55617a"
+      },
+      "source_zip": {
+        "path": "D:\\Down\\journeymap_export_yu_2026-06-19_22.45.13 (1).zip",
+        "sha256": "7e2db146c0b44b4dfe5f1c2f5732791d55aa3ccfb039b027dcac2cacc268bba7"
+      },
+      "vanilla_states": {
+        "path": "D:\\Trans\\migration-audit-work\\xaero-javap-20260813\\vanilla_states.dat",
+        "sha256": "269ba27a3657e8c676d76fff54227dc0cec8bca1f994576c7ba2ce310cadd49d"
+      },
+      "xaero_minimap_jar": {
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\xaerominimap-neoforge-1.21.1-26.1.0.jar",
+        "sha256": "6bd6cbab01ff57b9ba2fbfee18f9605593101f15d80e8d19dc59c385d2535ccc"
+      },
+      "xaero_world_map_jar": {
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\xaeroworldmap-neoforge-1.21.1-1.41.2.jar",
+        "sha256": "36b163fe8be4c2e800668c49294473da61eb360d821db675a2a948f8cc7c3d2b"
+      }
+    },
+    "workers": 20
+  },
+  "format_evidence": {
+    "legacy_state_table_conflicting_duplicate_records": 0,
+    "legacy_state_table_duplicate_records": 25,
+    "legacy_state_table_duplicate_semantics": "last record wins for the same (block_id, legacy_state_index), matching Xaero World Map 1.41.2 OldFormatSupport.loadStates/putState",
+    "legacy_state_table_entries": 1656,
+    "legacy_state_table_records": 1681,
+    "legacy_waypoint_world_ids": {
+      "minecraft:overworld": "Multiplayer_play.example.invalid_null",
+      "minecraft:the_end": "Multiplayer_play.example.invalid_DIM1",
+      "minecraft:the_nether": "Multiplayer_play.example.invalid_DIM-1"
+    },
+    "mapping_sha256": "496d0266810283185d0e3501ab59612ba620e037c288132d2c5de61d738ebbec",
+    "native_minimap_dimension_dirs": {
+      "minecraft:overworld": "dim%0",
+      "minecraft:the_end": "dim%1",
+      "minecraft:the_nether": "dim%-1"
+    },
+    "palette_source_rows": 1586,
+    "palette_unique_colors": 334,
+    "server_level_id_is_ignored_for_import_visibility": true,
+    "vanilla_states_sha256": "269ba27a3657e8c676d76fff54227dc0cec8bca1f994576c7ba2ce310cadd49d",
+    "waypoint_name_escape_token": "\u00a7\u00a7",
+    "world_map_dimension_dirs": {
+      "minecraft:overworld": "null",
+      "minecraft:the_end": "DIM1",
+      "minecraft:the_nether": "DIM-1"
+    },
+    "world_map_multiworld_id": "mw$default",
+    "world_map_pixel_strategy": "explicit legacy block state for every pixel in non-empty 16x16 tiles",
+    "world_map_region_format": "v4, one region.xaero entry per deterministic ZIP",
+    "world_map_slot_is_explicitly_confirmed": true
+  },
+  "journeymap": {
+    "included_in_converter_output": false,
+    "must_be_excluded_from_final_selection": true,
+    "selected_in_pack_manifest": false,
+    "stale_pack_config_to_remove_when_merging": "overrides/config/journeymap-server.toml"
+  },
+  "known_losses_and_preservation": [
+    "\u5730\u56fe\u6765\u81ea JourneyMap day \u6805\u683c\uff0c\u4e0d\u542b\u539f\u59cb\u65b9\u5757\u8eab\u4efd\uff1b\u6bcf\u4e2a RGB \u88ab\u786e\u5b9a\u6027\u91cf\u5316\u5230 Xaero 1.41.2 \u53ef\u89e3\u6790\u7684\u6700\u8fd1\u65e7\u7248\u65b9\u5757\u72b6\u6001\u3002\u5b8c\u6574 RGB\u2192\u72b6\u6001 LUT \u5df2\u4fdd\u5b58\u5728 manifests/color-lut.bin.gz\u3002",
+    "\u5730\u56fe\u9ad8\u5ea6\u7edf\u4e00\u5199\u4e3a Y=64\u3001biome \u7edf\u4e00\u5199\u4e3a plains\uff1bNether \u4f7f\u7528\u6ee1\u5149\u7167\u3002\u6e90\u9ad8\u5ea6\u5207\u7247\u3001biome\u3001topo\u3001night\u3001JMD/JMM \u5747\u672a\u4f2a\u88c5\u5bfc\u5165\uff0c\u800c\u662f\u7531 source-inventory/reference-layers \u6e05\u5355\u548c\u539f ZIP/\u89e3\u538b\u6839\u4fdd\u7559\u3002",
+    "\u5168\u900f\u660e 16\u00d716 \u56fe\u5757\u4fdd\u6301 void\uff1b\u975e\u7a7a\u56fe\u5757\u5185\u90e8\u7684\u900f\u660e\u50cf\u7d20\u663e\u5f0f\u5199\u4e3a air\uff0c\u907f\u514d\u9ed1\u8272\u586b\u6d1e\u3002\u90e8\u5206\u900f\u660e\u50cf\u7d20\u7684 alpha \u65e0\u6cd5\u7531 Xaero v4 \u8868\u8fbe\uff0c\u5176 RGB \u4ecd\u53c2\u4e0e\u91cf\u5316\u5e76\u5728\u7edf\u8ba1\u4e2d\u5355\u5217\u3002",
+    "Waypoint \u5750\u6807\u3001\u540d\u79f0\u3001\u7ef4\u5ea6\u3001\u542f\u7528\u72b6\u6001\u4e0e\u5206\u7ec4\u2192set \u88ab\u8fc1\u79fb\uff1b\u989c\u8272\u7f29\u51cf\u4e3a Xaero 16 \u8272\u3002JourneyMap GUID\u3001\u539f\u8272\u3001\u56fe\u6807\u8d44\u6e90\u3001opacity\u3001group \u8bbe\u7f6e\u7b49\u5b8c\u6574\u4fdd\u5b58\u5728 waypoints-audit.json\u3002",
+    "JourneyMap death \u5206\u7ec4\u6620\u5c04\u4e3a Xaero OLD_DEATH\uff0c\u4fdd\u7559\u5386\u53f2\u6b7b\u4ea1\u70b9\u8bed\u4e49\u5e76\u964d\u4f4e\u88ab\u201c\u5230\u8fbe\u540e\u5220\u9664\u5f53\u524d\u6b7b\u4ea1\u70b9\u201d\u8bbe\u7f6e\u8bef\u5220\u7684\u98ce\u9669\u3002",
+    "\u4e3b staging \u4f7f\u7528\u539f\u751f Xaero waypoint \u6587\u4ef6\uff1balternatives/legacy-waypoint-import \u662f\u53ef\u56de\u9000\u7684\u4e00\u6b21\u6027\u5bfc\u5165\u65b9\u5f0f\uff0c\u4e8c\u8005\u4e0d\u5f97\u540c\u65f6\u5b89\u88c5\u3002",
+    "\u4e3a\u4fdd\u8bc1\u9996\u6b21\u8fde\u63a5\u5373\u53ef\u547d\u4e2d\u5df2\u8f6c\u6362\u7f13\u5b58\uff0c\u672c\u670d\u52a1\u5668\u4e13\u5c5e Xaero \u7f13\u5b58\u914d\u7f6e\u628a World Map \u548c Minimap \u7ed1\u5b9a\u5230 mw$default\uff0c\u5e76\u5ffd\u7565\u670d\u52a1\u7aef levelId\u3002\u6b64\u8bbe\u7f6e\u4e0d\u6539\u670d\u52a1\u7aef\uff0c\u4e5f\u4e0d\u662f\u5168\u5c40\u6a21\u7ec4\u9650\u5236\uff1b\u82e5\u4ee5\u540e\u9700\u8981\u6309 levelId \u5206\u9694\u591a\u4e2a\u540c\u7ef4\u5ea6\u4e16\u754c\uff0c\u5e94\u5148\u8fc1\u79fb\u7f13\u5b58\u76ee\u5f55\uff0c\u518d\u5728\u8be5\u670d\u52a1\u5668\u7684 Xaero \u914d\u7f6e\u4e2d\u91cd\u65b0\u542f\u7528 levelId\u3002",
+    "\u6240\u6709\u4e0d\u53ef\u539f\u751f\u8868\u8fbe\u7684\u4fe1\u606f\u4ecd\u53ef\u4ece\u539f\u59cb ZIP\u3001D \u76d8\u89e3\u538b\u5ba1\u8ba1\u6839\u53ca\u672c\u8f93\u51fa reference/manifests \u6062\u590d\uff1b\u8f6c\u6362\u672a\u6539\u52a8\u6e90\u6587\u4ef6\u3002"
+  ],
+  "reference_layers": {
+    "overworld": {
+      "-1": {
+        "bytes": 5170272,
+        "files": 93
+      },
+      "-10": {
+        "bytes": 10314,
+        "files": 1
+      },
+      "-14": {
+        "bytes": 10301,
+        "files": 1
+      },
+      "-19": {
+        "bytes": 10294,
+        "files": 1
+      },
+      "-2": {
+        "bytes": 3635076,
+        "files": 68
+      },
+      "-23": {
+        "bytes": 10294,
+        "files": 1
+      },
+      "-28": {
+        "bytes": 10294,
+        "files": 1
+      },
+      "-3": {
+        "bytes": 3558588,
+        "files": 78
+      },
+      "-33": {
+        "bytes": 10294,
+        "files": 1
+      },
+      "-38": {
+        "bytes": 10294,
+        "files": 1
+      },
+      "-4": {
+        "bytes": 2157603,
+        "files": 55
+      },
+      "-43": {
+        "bytes": 10294,
+        "files": 1
+      },
+      "-5": {
+        "bytes": 54450,
+        "files": 5
+      },
+      "-6": {
+        "bytes": 10259,
+        "files": 1
+      },
+      "0": {
+        "bytes": 4159522,
+        "files": 98
+      },
+      "1": {
+        "bytes": 3877928,
+        "files": 102
+      },
+      "10": {
+        "bytes": 364566,
+        "files": 5
+      },
+      "11": {
+        "bytes": 347184,
+        "files": 4
+      },
+      "12": {
+        "bytes": 399443,
+        "files": 6
+      },
+      "13": {
+        "bytes": 322124,
+        "files": 6
+      },
+      "14": {
+        "bytes": 366869,
+        "files": 20
+      },
+      "15": {
+        "bytes": 295936,
+        "files": 4
+      },
+      "16": {
+        "bytes": 294728,
+        "files": 4
+      },
+      "17": {
+        "bytes": 285695,
+        "files": 4
+      },
+      "2": {
+        "bytes": 4490914,
+        "files": 129
+      },
+      "3": {
+        "bytes": 12634283,
+        "files": 171
+      },
+      "4": {
+        "bytes": 11613897,
+        "files": 154
+      },
+      "5": {
+        "bytes": 4590017,
+        "files": 97
+      },
+      "6": {
+        "bytes": 2477311,
+        "files": 69
+      },
+      "7": {
+        "bytes": 1504420,
+        "files": 38
+      },
+      "8": {
+        "bytes": 835035,
+        "files": 25
+      },
+      "9": {
+        "bytes": 535778,
+        "files": 11
+      },
+      "biome": {
+        "bytes": 6500689,
+        "files": 453
+      },
+      "day": {
+        "bytes": 150505358,
+        "files": 467
+      },
+      "night": {
+        "bytes": 65220020,
+        "files": 467
+      },
+      "topo": {
+        "bytes": 17337183,
+        "files": 453
+      }
+    },
+    "the_end": {
+      "-1": {
+        "bytes": 93092,
+        "files": 8
+      },
+      "-11": {
+        "bytes": 41877,
+        "files": 4
+      },
+      "-13": {
+        "bytes": 20941,
+        "files": 2
+      },
+      "-16": {
+        "bytes": 20939,
+        "files": 2
+      },
+      "-17": {
+        "bytes": 20941,
+        "files": 2
+      },
+      "-2": {
+        "bytes": 62477,
+        "files": 6
+      },
+      "-22": {
+        "bytes": 20758,
+        "files": 2
+      },
+      "-3": {
+        "bytes": 20938,
+        "files": 2
+      },
+      "-4": {
+        "bytes": 20943,
+        "files": 2
+      },
+      "-5": {
+        "bytes": 20941,
+        "files": 2
+      },
+      "-7": {
+        "bytes": 41877,
+        "files": 4
+      },
+      "-9": {
+        "bytes": 20758,
+        "files": 2
+      },
+      "0": {
+        "bytes": 53495,
+        "files": 5
+      },
+      "1": {
+        "bytes": 99869,
+        "files": 8
+      },
+      "2": {
+        "bytes": 65844,
+        "files": 4
+      },
+      "3": {
+        "bytes": 208576,
+        "files": 6
+      },
+      "4": {
+        "bytes": 172508,
+        "files": 6
+      },
+      "5": {
+        "bytes": 166027,
+        "files": 6
+      },
+      "6": {
+        "bytes": 83898,
+        "files": 2
+      },
+      "7": {
+        "bytes": 82780,
+        "files": 2
+      },
+      "biome": {
+        "bytes": 555898,
+        "files": 52
+      },
+      "day": {
+        "bytes": 5140495,
+        "files": 65
+      },
+      "night": {
+        "bytes": 3018784,
+        "files": 51
+      },
+      "topo": {
+        "bytes": 1283044,
+        "files": 52
+      }
+    },
+    "the_nether": {
+      "0": {
+        "bytes": 63192,
+        "files": 5
+      },
+      "1": {
+        "bytes": 206781,
+        "files": 6
+      },
+      "2": {
+        "bytes": 1027072,
+        "files": 8
+      },
+      "3": {
+        "bytes": 1129465,
+        "files": 10
+      },
+      "4": {
+        "bytes": 1479071,
+        "files": 25
+      },
+      "5": {
+        "bytes": 996596,
+        "files": 9
+      },
+      "6": {
+        "bytes": 785245,
+        "files": 9
+      },
+      "7": {
+        "bytes": 323527,
+        "files": 9
+      },
+      "biome": {
+        "bytes": 304802,
+        "files": 28
+      },
+      "day": {
+        "bytes": 362065,
+        "files": 41
+      },
+      "topo": {
+        "bytes": 325510,
+        "files": 28
+      }
+    }
+  },
+  "schema": "journeymap-to-xaero/1",
+  "server": {
+    "address": "play.example.invalid",
+    "port": 12341,
+    "port_role": "disposable_conversion_audit_only",
+    "port_was_modified": false,
+    "production_config_touched": false,
+    "production_port": 25566,
+    "production_port_role": "production_server_unchanged",
+    "production_port_was_modified": false,
+    "xaero_root_id": "Multiplayer_play.example.invalid",
+    "xaero_root_id_excludes_port_by_mod_format": true
+  },
+  "source": {
+    "extracted_bytes": 321995990,
+    "extracted_file_count": 3571,
+    "extracted_reference_root": "D:\\Trans\\migration-audit-work\\journeymap-export-audit-20260813",
+    "source_was_modified": false,
+    "zip_bytes": 289575063,
+    "zip_path": "D:\\Down\\journeymap_export_yu_2026-06-19_22.45.13 (1).zip",
+    "zip_sha256": "7e2db146c0b44b4dfe5f1c2f5732791d55aa3ccfb039b027dcac2cacc268bba7",
+    "zip_to_extracted_binding": {
+      "all_sizes_and_crc32_match": true,
+      "extracted_file_entries": 3571,
+      "uncompressed_bytes": 321995990,
+      "zip_file_entries": 3571
+    }
+  },
+  "status": "STATIC_VALIDATION_PASSED",
+  "target": {
+    "loader": "NeoForge 21.1.233",
+    "minecraft": "1.21.1",
+    "pack": {
+      "bytes": 128989086,
+      "journeymap_manifest_rows": [],
+      "journeymap_mod_selected": false,
+      "minecraft": {
+        "modLoaders": [
+          {
+            "id": "neoforge-21.1.233",
+            "primary": true
+          }
+        ],
+        "recommendedRam": 8000,
+        "version": "1.21.1"
+      },
+      "name": "Mechanomania Ultimate Aeronautics",
+      "path": "<WORKSPACE>\\outputs\\Mechanomania-Ultimate-Aeronautics-1.1.11.2.zip",
+      "sha256": "2b9c39579ea82a3d9c8c1a22029c7379d1bd240a1f4a08abd70b03374e55617a",
+      "stale_journeymap_config_override_present": true,
+      "version": "1.0.1-ultimate",
+      "xaero_minimap_manifest_rows": [
+        {
+          "fileID": 8231212,
+          "isLocked": false,
+          "projectID": 263420,
+          "required": true
+        }
+      ],
+      "xaero_world_map_manifest_rows": [
+        {
+          "fileID": 8298694,
+          "isLocked": false,
+          "projectID": 317780,
+          "required": true
+        }
+      ]
+    },
+    "xaero_jar_static_format_audit": {
+      "embedded_vanilla_states_matches_reference": true,
+      "embedded_vanilla_states_sha256": "269ba27a3657e8c676d76fff54227dc0cec8bca1f994576c7ba2ce310cadd49d",
+      "minimap_audited_class_sha256": {
+        "xaero/hud/minimap/waypoint/io/WaypointIO.class": "2a72597ec680ae300c21d15637b6254a9719a524eef36ae7a9b0dda70db85e21",
+        "xaero/hud/minimap/world/container/config/io/RootConfigIO.class": "27b5e323b0a089ce6b75c69807ba8d3f18024a32dfc5bc175e59dfad77ed3d39",
+        "xaero/hud/minimap/world/io/MinimapWorldManagerIO.class": "90460697675ee9af99cfd00f492da1cb87d71296fb1e3eb7a604bc51e660a591",
+        "xaero/hud/minimap/world/state/MinimapWorldStateUpdater.class": "274dd402e2ad29767c6351f876b64f215058b23672e2e981d3631cde8f4a89dd"
+      },
+      "minimap_version": "26.1.0",
+      "waypoint_escape_token_utf8_hex": "c2a7c2a7",
+      "world_map_audited_class_sha256": {
+        "xaero/map/file/MapSaveLoad.class": "d4ae6e77d651d5653762cc14348a96e47cb70a3543981c072c11fb066c160ddf",
+        "xaero/map/file/OldFormatSupport.class": "3b49b98854fe52aa9e1ed222c167ba5fd02ab5806ec8f35cb5ce5f312fe6b5de",
+        "xaero/map/world/MapDimension.class": "8cef1aedda542e4852454cefaef0e5a77bfcce7ae01d36425ec10277e0956fb0",
+        "xaero/map/world/MapWorld.class": "473eae72e84a363c37804b72c245f6e0c729a2117f488a82610cbd1d8503d21f"
+      },
+      "world_map_default_multiworld_id": "mw$default",
+      "world_map_version": "1.41.2"
+    },
+    "xaero_minimap": "26.1.0",
+    "xaero_minimap_jar": {
+      "bytes": 2138254,
+      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\xaerominimap-neoforge-1.21.1-26.1.0.jar",
+      "sha256": "6bd6cbab01ff57b9ba2fbfee18f9605593101f15d80e8d19dc59c385d2535ccc"
+    },
+    "xaero_world_map": "1.41.2",
+    "xaero_world_map_jar": {
+      "bytes": 1387921,
+      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\xaeroworldmap-neoforge-1.21.1-1.41.2.jar",
+      "sha256": "36b163fe8be4c2e800668c49294473da61eb360d821db675a2a948f8cc7c3d2b"
+    }
+  },
+  "tiles": {
+    "dimension_counts": {
+      "overworld": 453,
+      "the_end": 51,
+      "the_nether": 27
+    },
+    "empty_map_tiles": 286112,
+    "explicit_air_pixels_in_nonempty_tiles": 15,
+    "nonempty_map_tiles": 257632,
+    "output_payload_bytes": 595022847,
+    "output_region_zips": 531,
+    "output_zip_bytes": 25147049,
+    "partial_alpha_pixels": 0,
+    "reference_png_files_not_imported": 2829,
+    "source_all_png_files": 3360,
+    "source_day_tiles": 531,
+    "validated_region_zips": 531
+  },
+  "visual_quantization": {
+    "exact_palette_pixel_count": 58246,
+    "exact_palette_pixel_ratio": 0.0008831334519780152,
+    "maximum_color_distance": 119.62441222426132,
+    "nontransparent_pixel_count": 65953792,
+    "source_unique_rgb_colors": 417912,
+    "weighted_mean_color_distance": 27.60646705079875,
+    "weighted_p95_color_distance": 47.02127178203499,
+    "weighted_rmse_color_distance": 30.552276811279437
+  },
+  "waypoints": {
+    "dimension_counts": {
+      "minecraft:overworld": 45,
+      "minecraft:the_end": 3,
+      "minecraft:the_nether": 2
+    },
+    "legacy_import_file": "alternatives/legacy-waypoint-import/config/xaerowaypoints.txt",
+    "native_files": {
+      "minecraft:overworld": "staging/xaero/minimap/Multiplayer_play.example.invalid/dim%0/mw$default.txt",
+      "minecraft:the_end": "staging/xaero/minimap/Multiplayer_play.example.invalid/dim%1/mw$default.txt",
+      "minecraft:the_nether": "staging/xaero/minimap/Multiplayer_play.example.invalid/dim%-1/mw$default.txt"
+    },
+    "native_world_node": "mw$default",
+    "output_waypoint_records": 50,
+    "source_group_count": 5,
+    "source_unique_waypoints": 50
+  }
+}

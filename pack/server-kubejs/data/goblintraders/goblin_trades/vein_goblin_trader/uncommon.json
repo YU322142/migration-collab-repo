@@ -1,0 +1,73 @@
+{
+  "replace": false,
+  "trades": [
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "offer_item": {
+        "count": 1,
+        "id": "minecraft:totem_of_undying"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:netherite_ingot"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 20,
+      "offer_item": {
+        "count": 5,
+        "id": "minecraft:netherite_scrap"
+      },
+      "payment_item": {
+        "count": 4,
+        "id": "minecraft:ancient_debris"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 128,
+      "offer_item": {
+        "count": 1,
+        "id": "minecraft:red_nether_bricks"
+      },
+      "payment_item": {
+        "count": 1,
+        "id": "minecraft:nether_wart"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:nether_brick"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 8,
+      "offer_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "payment_item": {
+        "count": 1,
+        "id": "minecraft:golden_carrot"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 3,
+      "max_trades": 32,
+      "offer_item": {
+        "count": 1,
+        "id": "minecraft:experience_bottle"
+      },
+      "payment_item": {
+        "count": 1,
+        "id": "minecraft:nether_quartz_ore"
+      }
+    }
+  ]
+}

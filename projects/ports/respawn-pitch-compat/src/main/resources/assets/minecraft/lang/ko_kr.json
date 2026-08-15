@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "%7$s의 스폰 지점을 %6$s의 %1$s, %2$s, %3$s [%4$s, %5$s](으)로 설정했습니다",
+  "commands.spawnpoint.success.multiple.new": "플레이어 %7$s명의 스폰 지점을 %6$s의 %1$s, %2$s, %3$s [%4$s, %5$s](으)로 설정했습니다"
+}

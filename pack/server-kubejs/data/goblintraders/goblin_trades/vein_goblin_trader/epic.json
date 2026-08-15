@@ -1,0 +1,269 @@
+{
+  "replace": false,
+  "trades": [
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 4,
+      "offer_item": {
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:slowness"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 4,
+      "offer_item": {
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_slowness"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 4,
+      "offer_item": {
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:harming"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 4,
+      "offer_item": {
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_harming"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 4,
+      "offer_item": {
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:poison"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 4,
+      "offer_item": {
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:long_poison"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 4,
+      "offer_item": {
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:strong_poison"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 4,
+      "offer_item": {
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:weakness"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 4,
+      "offer_item": {
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:wind_charged"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 4,
+      "offer_item": {
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:weaving"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 4,
+      "offer_item": {
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:oozing"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 50,
+      "max_trades": 4,
+      "offer_item": {
+        "components": {
+          "minecraft:potion_contents": {
+            "potion": "minecraft:infested"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "minecraft:emerald"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:glass_bottle"
+      }
+    }
+  ]
+}

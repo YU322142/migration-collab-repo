@@ -1,0 +1,11 @@
+enabled = false
+pause_all_tickets = false
+# Default: 48
+# Range: 16 ~ 2048
+ticket_group_size = 48
+# Default: 10
+# Range: 1 ~ 1200
+run_every = 10
+# Default: 5
+# Range: 1 ~ 12
+proximity_threshold = 5

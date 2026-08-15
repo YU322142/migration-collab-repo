@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "policy": "External only; verify path and SHA-256 before use. Do not commit artifact payloads.",
+  "artifacts": [
+    {
+      "name": "latest_server_input",
+      "path": "D:\\Down\\mechanomania-matched-runtime-attempt13-2.zip",
+      "sha256": "ECCD0C6D28A9444DBBCEB3AAEDBBB882E3EEF82B4DDD2547C729571F21891A92",
+      "status": "READ_ONLY_LATEST_TEST_INPUT"
+    },
+    {
+      "name": "protected_terrain_ota_bundle",
+      "path": "D:\\Trans\\migration-audit-work\\protected-terrain-ota-20260815\\bundle",
+      "manifest_sha256": "02EFC30B640FF1C54EF44D0AEC993825BF41803838AD62A07DC5694F3F4911FD",
+      "status": "CAS_ONLY"
+    },
+    {
+      "name": "protected_entity_ota_bundle",
+      "path": "D:\\Trans\\migration-audit-work\\protected-entity-ota-20260815\\bundle",
+      "manifest_sha256": "D5B64C32CE711B04A2D38E1BD6EF0023542939050E96E9B246957CAC0767CB1D",
+      "status": "DYNAMIC_VALIDATION_PENDING"
+    },
+    {
+      "name": "vanilla_reference_v",
+      "path": "D:\\Trans\\migration-audit-work\\vanilla-reference-v-20260815\\strict-reference-world\\vanilla-reference-v",
+      "manifest_sha256": "4BD4883295C8E0EFDF584A81AEB4FE19DAAA0EA0AE0B4B3BC3455E9768B2FCB1",
+      "status": "READ_ONLY_DONOR"
+    },
+    {
+      "name": "heightmap_384_to_544_compat",
+      "path": "D:\\Trans\\migration-audit-work\\heightmap-384-to-544-compat-20260815\\build-1\\heightmap-384-to-544-compat-1.0.0+neoforge.1.21.1.jar",
+      "sha256": "AD26B1F429F0E39FCD19D6EFD151DF93A62F3B0F7262312C7BA1D8340E13EFBF",
+      "status": "EXTERNAL_TEST_ARTIFACT_NOT_FOR_GIT"
+    },
+    {
+      "name": "mineastr_0_6_27",
+      "path": "D:\\Trans\\migration-audit-work\\mineastr-0.6.27-upgrade-20260815\\mineastr-neoforge-1.21.1-0.6.27.jar",
+      "sha256": "0C449AEE1BCB2A05F11C5A662C9F245FA9246514388CAE8E086C296D6643B574",
+      "status": "BOTH_SIDE_CANDIDATE"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+@ParametersAreNonnullByDefault
+@MethodsReturnNonnullByDefault
+@FieldsAreNonnullByDefault
+package plus.dragons.createenchantmentindustry.integration.apothic_enchanting.common.processing.infuser;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+import net.minecraft.FieldsAreNonnullByDefault;
+import net.minecraft.MethodsReturnNonnullByDefault;

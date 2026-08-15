@@ -1,0 +1,133 @@
+{
+  "name": "crazy_chambers:spawner/spawner",
+  "fallback": "minecraft:empty",
+  "elements": [
+    
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/skeleton",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/bogged",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/stray",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "crazy_chambers:spawner/breeze",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/spider",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "crazy_chambers:spawner/cave_spider",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/silverfish",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/slime",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/zombie",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "crazy_chambers:spawner/baby_zombie",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/husk",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 5,
+      "element": {
+        "location": "crazy_chambers:spawner/creeper",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "crazy_chambers:spawner/witch",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 2,
+      "element": {
+        "location": "crazy_chambers:spawner/iron_golem",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

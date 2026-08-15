@@ -1,0 +1,13 @@
+{
+  "type": "create_dragons_plus:ending",
+  "ingredients": [
+    {
+      "item": "create:brass_block"
+    }
+  ],
+  "results": [
+    {
+      "id": "ultramarine:bronze_ingot"
+    }
+  ]
+}

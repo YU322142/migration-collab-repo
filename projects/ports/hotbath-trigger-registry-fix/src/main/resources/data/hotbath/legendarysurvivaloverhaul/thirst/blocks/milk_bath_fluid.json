@@ -1,0 +1,14 @@
+[
+  {
+    "hydration": 3,
+    "saturation": 0.3,
+    "effects": [
+      {
+        "effect": "legendarysurvivaloverhaul:hot_drink",
+        "duration": 600,
+        "amplifier": 0,
+        "probability": 1.0
+      }
+    ]
+  }
+]

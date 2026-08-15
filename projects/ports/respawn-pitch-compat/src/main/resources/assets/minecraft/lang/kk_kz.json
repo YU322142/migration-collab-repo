@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "%7$s үшін %6$s тірілу нүктесі %1$s, %2$s, %3$s [%4$s, %5$s] нүктесіне орнатылды",
+  "commands.spawnpoint.success.multiple.new": "%7$s ойыншының %6$s тірілу нүктесі %1$s, %2$s, %3$s [%4$s, %5$s] нүктесіне орнатылды"
+}

@@ -1,0 +1,28 @@
+{
+    "type":  "kaleidoscope_cookery:pot",
+    "carrier":  {
+                    "item":  "minecraft:bread"
+                },
+    "ingredients":  [
+                        {
+                            "tag":  "c:raw_bacon"
+                        },
+                        {
+                            "tag":  "c:crops/cabbage"
+                        },
+                        {
+                            "tag":  "c:crops/tomato"
+                        }
+                    ],
+    "result":  {
+                   "id":  "farmersdelight:bacon_sandwich"
+               },
+    "stir_fry_count":  3,
+    "time":  200,
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "farmersdelight"
+                                }
+                            ]
+}

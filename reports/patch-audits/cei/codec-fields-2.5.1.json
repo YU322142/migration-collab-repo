@@ -1,0 +1,194 @@
+﻿[
+    {
+        "key":  "experience",
+        "file":  "common\\fluids\\experience\\ExperienceFuel.java"
+    },
+    {
+        "key":  "special",
+        "file":  "common\\fluids\\experience\\ExperienceFuel.java"
+    },
+    {
+        "key":  "using_convert_to",
+        "file":  "common\\fluids\\experience\\ExperienceFuel.java"
+    },
+    {
+        "key":  "capacity",
+        "file":  "common\\fluids\\lantern\\ExperienceLanternMountedStorage.java"
+    },
+    {
+        "key":  "fluid",
+        "file":  "common\\fluids\\lantern\\ExperienceLanternMountedStorage.java"
+    },
+    {
+        "key":  "sound",
+        "file":  "common\\fluids\\printer\\PrintingRecipeParams.java"
+    },
+    {
+        "key":  "level_extension",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "cost_multiplier",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "blaze_enchanter",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "blaze_forger",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "blaze_enchanter",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "blaze_forger",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "normal",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "super",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "merge",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "apply",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "extract",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "normal",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "super",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "direct",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "template",
+        "file":  "common\\processing\\EnchantmentProcessingRule.java"
+    },
+    {
+        "key":  "value",
+        "file":  "integration\\apotheosis\\common\\logistics\\attributes\\GemPurityAttributes.java"
+    },
+    {
+        "key":  "cost_multiplier",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\AffixComposingRule.java"
+    },
+    {
+        "key":  "augmenting_cost_multiplier",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\AffixComposingRule.java"
+    },
+    {
+        "key":  "max_level",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\AffixComposingRule.java"
+    },
+    {
+        "key":  "deny_extraction",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\AffixComposingRule.java"
+    },
+    {
+        "key":  "deny_applying",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\AffixComposingRule.java"
+    },
+    {
+        "key":  "deny_merge",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\AffixComposingRule.java"
+    },
+    {
+        "key":  "deny_augmenting",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\AffixComposingRule.java"
+    },
+    {
+        "key":  "deny_super",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\AffixComposingRule.java"
+    },
+    {
+        "key":  "levels",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\OverlimitAffixes.java"
+    },
+    {
+        "key":  "rarity",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\template\\AffixTemplateData.java"
+    },
+    {
+        "key":  "entries",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\template\\AffixTemplateData.java"
+    },
+    {
+        "key":  "affix",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\template\\AffixTemplateEntry.java"
+    },
+    {
+        "key":  "level",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\template\\AffixTemplateEntry.java"
+    },
+    {
+        "key":  "source_categories",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\template\\AffixTemplateEntry.java"
+    },
+    {
+        "key":  "transcendent",
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\blazeComposer\\template\\AffixTemplateEntry.java"
+    },
+    {
+        "key":  "stats",
+        "file":  "integration\\apothic_enchanting\\common\\processing\\infuser\\InfusingRecipeParams.java"
+    },
+    {
+        "key":  "eterna",
+        "file":  "integration\\apothic_enchanting\\common\\processing\\infuser\\InfusionStats.java"
+    },
+    {
+        "key":  "quanta",
+        "file":  "integration\\apothic_enchanting\\common\\processing\\infuser\\InfusionStats.java"
+    },
+    {
+        "key":  "arcana",
+        "file":  "integration\\apothic_enchanting\\common\\processing\\infuser\\InfusionStats.java"
+    },
+    {
+        "key":  "enchantment",
+        "file":  "integration\\jei\\category\\printing\\EnchantedBookPrintingRecipeJEI.java"
+    },
+    {
+        "key":  "level",
+        "file":  "integration\\jei\\category\\printing\\EnchantedBookPrintingRecipeJEI.java"
+    },
+    {
+        "key":  "recipe",
+        "file":  "integration\\jei\\category\\printing\\StandardPrintingRecipeJEI.java"
+    },
+    {
+        "key":  "id",
+        "file":  "util\\CEICodecs.java"
+    },
+    {
+        "key":  "level",
+        "file":  "util\\CEICodecs.java"
+    },
+    {
+        "key":  "level",
+        "file":  "util\\CEIIntIntPair.java"
+    },
+    {
+        "key":  "value",
+        "file":  "util\\CEIIntIntPair.java"
+    }
+]

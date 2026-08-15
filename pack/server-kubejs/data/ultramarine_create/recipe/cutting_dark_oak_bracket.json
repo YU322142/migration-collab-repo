@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:dark_oak_logs"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:dark_oak_bracket"
+    }
+  ]
+}

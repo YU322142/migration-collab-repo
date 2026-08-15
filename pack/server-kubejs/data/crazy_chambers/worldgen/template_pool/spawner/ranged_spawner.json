@@ -1,0 +1,43 @@
+{
+  "name": "crazy_chambers:spawner/ranged_spawner",
+  "fallback": "minecraft:empty",
+  "elements": [
+    
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/skeleton",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/bogged",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/stray",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 3,
+      "element": {
+        "location": "crazy_chambers:spawner/breeze",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Stel die aanvangspunt na %s, %s, %s [%s, %s] in %s vir %s",
+  "commands.spawnpoint.success.multiple.new": "Stel die spawnpunt na %s, %s, %s [%s, %s] in %s vir %s spelers"
+}

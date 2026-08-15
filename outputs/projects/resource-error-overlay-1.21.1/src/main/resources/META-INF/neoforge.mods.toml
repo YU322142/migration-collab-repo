@@ -1,0 +1,66 @@
+modLoader = "lowcodefml"
+loaderVersion = "[1,)"
+license = "MIT"
+
+[[mods]]
+modId = "migration_resource_overlay"
+version = "1.1.0+mc1.21.1"
+displayName = "Migration Resource Error Overlay"
+authors = "Migration compatibility build"
+description = '''Conditions optional integration resources and closes verified 1.21.1 client model gaps without changing gameplay state.'''
+
+[[dependencies.migration_resource_overlay]]
+modId = "neoforge"
+type = "required"
+versionRange = "[21.1,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.migration_resource_overlay]]
+modId = "minecraft"
+type = "required"
+versionRange = "[1.21.1,1.21.2)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.migration_resource_overlay]]
+modId = "create_dragons_plus"
+type = "optional"
+versionRange = "[1.11.4,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.migration_resource_overlay]]
+modId = "yuushya"
+type = "optional"
+versionRange = "[2.3.0,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.migration_resource_overlay]]
+modId = "kaleidoscope_nether"
+type = "optional"
+versionRange = "[1.1.2,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.migration_resource_overlay]]
+modId = "kaleidoscope_end"
+type = "optional"
+versionRange = "[1.0.14,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.migration_resource_overlay]]
+modId = "kaleidoscope_cookery"
+type = "optional"
+versionRange = "[1.4.1,)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.migration_resource_overlay]]
+modId = "kaleidoscope_nether_equivalence"
+type = "optional"
+versionRange = "[1.1.9-equivalence.3,)"
+ordering = "AFTER"
+side = "BOTH"

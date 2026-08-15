@@ -1,0 +1,439 @@
+{
+	consume_items: false
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "l2complements"
+	group: "6B9D1AFD3E45FF4E"
+	icon: {
+		id: "l2hostility:greed_of_nidhoggur"
+	}
+	id: "05D37BDE6DDB3CF4"
+	images: [
+		{
+			height: 5.0d
+			image: "l2hostility:item/curio/charm_of_looting_3"
+			order: 2
+			rotation: 0.0d
+			width: 5.0d
+			x: 5.0d
+			y: -2.0d
+		}
+		{
+			height: 5.0d
+			image: "l2hostility:item/curio/charm_of_looting_1"
+			rotation: 0.0d
+			width: 5.0d
+			x: 5.0d
+			y: 7.5d
+		}
+		{
+			height: 2.0d
+			image: "irons_spellbooks:textures/gui/spell_icons/sonic_boom.png"
+			rotation: 0.0d
+			width: 2.0d
+			x: -2.5d
+			y: 3.0d
+		}
+	]
+	order_index: 0
+	progression_mode: "flexible"
+	quest_links: [ ]
+	quests: [
+		{
+			id: "023C81F541EAFB0D"
+			tasks: [{
+				entity: "minecraft:ender_dragon"
+				icon: {
+					id: "minecraft:dragon_head"
+				}
+				id: "7446C95A003B6396"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0D70527CD0560FA3"]
+			id: "23C25A1C2A64D98A"
+			tasks: [{
+				id: "76A0C70388FD5954"
+				item: { count: 1, id: "alloy_smelter:forge_controller_tier3" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["023C81F541EAFB0D"]
+			id: "06486C7C061D349B"
+			tasks: [{
+				id: "4B501320CF48BF24"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["06486C7C061D349B"]
+			id: "0D70527CD0560FA3"
+			tasks: [{
+				id: "112CBA6D46832979"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["23C25A1C2A64D98A"]
+			id: "7190D0D53DB975B2"
+			tasks: [{
+				id: "3A9D318495BFF9AE"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 8.0d
+		}
+		{
+			id: "3B2925409D30740F"
+			tasks: [{
+				id: "7BF6E5797980DA15"
+				item: { count: 1, id: "l2complements:fragile_warp_stone" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 16.5d
+		}
+		{
+			id: "082F000A760BBEEA"
+			tasks: [{
+				id: "349F4C73ACF2E36A"
+				item: { count: 1, id: "l2complements:reinforced_warp_stone" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 18.0d
+		}
+		{
+			id: "2FC3D6B123402539"
+			tasks: [{
+				id: "0A25EDEE5DB52031"
+				item: { count: 1, id: "l2complements:totem_of_dream" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 19.5d
+		}
+		{
+			id: "1E4639421C98E614"
+			tasks: [{
+				id: "169FA8C43CA614C4"
+				item: { count: 1, id: "l2complements:eternal_totem_of_dream" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 21.0d
+		}
+		{
+			id: "5AD85A669E436FAD"
+			tasks: [{
+				id: "2E3F50844CEA3CF2"
+				item: { count: 1, id: "l2hostility:abrahadabra" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 23.0d
+		}
+		{
+			id: "76891449586A1B92"
+			tasks: [{
+				id: "499349D5E0E625B5"
+				item: { count: 1, id: "l2hostility:ring_of_life" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 16.5d
+		}
+		{
+			id: "2A9F05696ED062E8"
+			tasks: [{
+				id: "40108F812DBFC2E2"
+				item: { count: 1, id: "l2hostility:ring_of_reflection" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 18.0d
+		}
+		{
+			id: "7C6126EA8FA00EBD"
+			tasks: [{
+				id: "367B8569287AE008"
+				item: { count: 1, id: "l2hostility:ring_of_incarceration" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 19.5d
+		}
+		{
+			id: "2092AB903288FA6D"
+			tasks: [{
+				id: "09CDB2C8EBA6F56D"
+				item: { count: 1, id: "l2hostility:infinity_glove" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 16.5d
+		}
+		{
+			id: "71474FDD5898C92A"
+			tasks: [{
+				id: "1A66AE8328546AF5"
+				item: { count: 1, id: "l2hostility:platinum_star" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 21.0d
+		}
+		{
+			id: "135838784C4229A3"
+			tasks: [{
+				id: "291CE13459CA9930"
+				item: { count: 1, id: "l2hostility:oddeyes_glasses" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 18.0d
+		}
+		{
+			id: "59BA7FD87B152AA9"
+			tasks: [{
+				id: "3A33DAEF4B1DBD3C"
+				item: { count: 1, id: "l2hostility:pocket_of_restoration" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 19.5d
+		}
+		{
+			id: "26D1E4F720B4E9E7"
+			tasks: [{
+				id: "14D4CCE90D865B77"
+				item: { count: 1, id: "l2hostility:curse_of_lust" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 21.0d
+		}
+		{
+			id: "2A23216F2B485F41"
+			tasks: [{
+				id: "3E5C719DE046B8AC"
+				item: { count: 1, id: "l2hostility:curse_of_wrath" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 18.0d
+		}
+		{
+			id: "43806425DD3945A6"
+			tasks: [{
+				id: "4E1625DAD9E14AB1"
+				item: { count: 1, id: "l2hostility:curse_of_pride" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 19.5d
+		}
+		{
+			id: "19E1642A4F15E2A5"
+			tasks: [{
+				id: "2DFA9DAC657D1A95"
+				item: { count: 1, id: "l2hostility:ring_of_healing" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 21.0d
+		}
+		{
+			id: "365B75D45C80240E"
+			tasks: [{
+				id: "621D4A921CB5BB4D"
+				item: { count: 1, id: "l2hostility:ring_of_divinity" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 15.0d
+		}
+		{
+			icon: {
+				id: "minecraft:golden_sword"
+			}
+			id: "379E53FBABC20CC3"
+			rewards: [{
+				id: "3874A9BE14C99F3B"
+				item: {
+					count: 1
+					id: "minecraft:totem_of_undying"
+				}
+				type: "item"
+			}]
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "363CDD803D29E205"
+				item: { components: { "patchouli:book": "l2hostility:hostility_guide" }, count: 1, id: "patchouli:guide_book" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 10.0d
+		}
+		{
+			id: "7ADA92302AD2425C"
+			shape: "gear"
+			size: 1.5d
+			tasks: [{
+				id: "1CA86CE032C5D4D2"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			icon: {
+				id: "kaleidoscope_doll:doll_20"
+			}
+			id: "5C9F0C22F503C49A"
+			rewards: [{
+				id: "543631A41B955592"
+				item: {
+					count: 1
+					id: "c6c:totem_of_unlosing"
+				}
+				type: "item"
+			}]
+			size: 3.0d
+			tasks: [{
+				id: "49236DF31E525A8E"
+				type: "checkmark"
+			}]
+			x: -4.5d
+			y: 3.0d
+		}
+		{
+			id: "4E6B6B368A8A4EA6"
+			tasks: [
+				{
+					id: "0F07C600FE5B09D7"
+					item: { count: 1, id: "pandora:pandora_bracelet" }
+					type: "item"
+				}
+				{
+					id: "61BD00B7A16E70A6"
+					item: { count: 1, id: "l2hostility:charm_of_looting_1" }
+					type: "item"
+				}
+			]
+			x: -3.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["4E6B6B368A8A4EA6"]
+			id: "47FB48EA59526B9C"
+			rewards: [{
+				count: 3
+				id: "456935D201EF9929"
+				item: {
+					count: 1
+					id: "irons_jewelry:ruby"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "2C1684EF03A9CBE2"
+				item: { count: 1, id: "l2hostility:charm_of_looting_2" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["47FB48EA59526B9C"]
+			id: "3AB5BC196724B2D2"
+			rewards: [{
+				count: 3
+				id: "466AE0C46E51EFC3"
+				item: {
+					count: 1
+					id: "irons_jewelry:garnet"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "26341FB51A7430F0"
+				item: { count: 1, id: "l2hostility:charm_of_looting_3" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 12.5d
+		}
+		{
+			dependencies: ["3AB5BC196724B2D2"]
+			id: "26F6D8B4C81FA2B9"
+			rewards: [{
+				id: "11F4157709D283D2"
+				item: {
+					count: 1
+					id: "bhc:green_heart"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "32280E1E3E1DBA73"
+				item: { count: 1, id: "l2hostility:charm_of_looting_4" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 12.5d
+		}
+		{
+			id: "7E4B7805793F373D"
+			tasks: [{
+				id: "1DBE1CD1A98BEF02"
+				item: { count: 1, id: "c6c:malefic_pendant" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 16.5d
+		}
+		{
+			id: "6C9E38B4D3C08635"
+			tasks: [{
+				id: "4F47FCBD9D053C9A"
+				item: { count: 1, id: "c6c:ward_breaker" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 15.0d
+		}
+		{
+			id: "5EF532A4FF6C0C49"
+			tasks: [{
+				id: "0923202BC7EEA916"
+				item: { count: 1, id: "c6c:reinforced_carapace" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 15.0d
+		}
+		{
+			id: "7AAB15F1EBF4C59C"
+			tasks: [{
+				id: "32CE5B4B80E65ABE"
+				item: { count: 1, id: "c6c:momentum_boots" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 15.0d
+		}
+	]
+}

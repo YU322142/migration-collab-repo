@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "ultramarine:varnished_rosewood"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "ultramarine:large_rosewood_panel"
+    }
+  ]
+}

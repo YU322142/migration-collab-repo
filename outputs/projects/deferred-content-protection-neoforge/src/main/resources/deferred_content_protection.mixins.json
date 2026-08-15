@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.migration.deferred_content_protection.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractHorseMixin",
+    "AbstractContainerMenuMixin",
+    "EntityMixin",
+    "RecipeManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

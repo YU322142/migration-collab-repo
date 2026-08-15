@@ -1,0 +1,22 @@
+[
+    {
+        "config":  "create_enchantment_industry.mixins.json",
+        "section":  "mixins",
+        "only_242":  [
+
+                     ],
+        "only_251":  [
+                         "FishingHookMixin"
+                     ]
+    },
+    {
+        "config":  "create_enchantment_industry.apotheosis.mixins.json",
+        "section":  "mixins",
+        "only_242":  [
+
+                     ],
+        "only_251":  [
+                         "apotheosis.AffixHelperMixin"
+                     ]
+    }
+]

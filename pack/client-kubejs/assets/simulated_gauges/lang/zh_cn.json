@@ -1,0 +1,13 @@
+{
+"altitude_gauge.mode.height": "高度模式",
+"altitude_gauge.mode.pressure": "气压模式",
+"create.logistics.altitude_selection": "高度/气压切换选择",
+"create.logistics.vector_selection": "输出轴向选择",
+"item.simulated_gauges.altitude_gauge": "高度指示仪",
+"item.simulated_gauges.gimbal_gauge": "万向节指示仪",
+"item.simulated_gauges.velocity_gauge": "速度指示仪",
+"itemGroup.simulated_gauges": "模拟仪表组件",
+"vector_gauge.mode.x": "X轴方向",
+"vector_gauge.mode.y": "Y轴方向",
+"vector_gauge.mode.z": "Z轴方向"
+}

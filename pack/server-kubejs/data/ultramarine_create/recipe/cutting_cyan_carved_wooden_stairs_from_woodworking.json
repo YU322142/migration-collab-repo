@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "ultramarine:cyan_carved_wood"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:cyan_carved_wooden_stairs"
+    }
+  ]
+}

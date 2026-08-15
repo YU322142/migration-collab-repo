@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Titik penjelmaan ditetapkan kepada %s, %s, %s [%s, %s] di %s untuk %s",
+  "commands.spawnpoint.success.multiple.new": "Titik penjelmaan ditetapkan kepada %s, %s, %s [%s, %s] di %s untuk %s orang pemain"
+}

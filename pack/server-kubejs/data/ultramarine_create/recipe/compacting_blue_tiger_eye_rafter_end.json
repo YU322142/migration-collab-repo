@@ -1,0 +1,30 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "c:dyes/blue"
+    },
+    {
+      "tag": "c:dyes/blue"
+    },
+    {
+      "item": "ultramarine:gold_dye_powder"
+    },
+    {
+      "item": "ultramarine:rafter_end_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:blue_tiger_eye_rafter_end"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:rafter_end_template"
+    }
+  ]
+}

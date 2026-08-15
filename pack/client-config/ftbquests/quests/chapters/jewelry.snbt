@@ -1,0 +1,54 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "jewelry"
+	group: "08701E4938C3D337"
+	icon: {
+		id: "irons_jewelry:sapphire"
+	}
+	id: "1B463ED58F5BC382"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "2B88D9C4FF3F9C1E"
+			rewards: [{
+				id: "66CFAFFF2F08B18B"
+				item: {
+					count: 1
+					id: "irons_jewelry:jewelcrafting_guide"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "0AB49379CCD930F2"
+				item: { count: 1, id: "irons_jewelry:jewelcrafting_station" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "356B1B423D318A77"
+			tasks: [
+				{
+					id: "368C953315846C6A"
+					item: { components: { "irons_jewelry:stored_pattern": "irons_jewelry:superior_gemset_ring" }, count: 1, id: "irons_jewelry:recipe" }
+					type: "item"
+				}
+				{
+					id: "7B50F1C3C1910CE3"
+					item: { components: { "irons_jewelry:stored_pattern": "irons_jewelry:improved_gemset_ring" }, count: 1, id: "irons_jewelry:recipe" }
+					type: "item"
+				}
+				{
+					id: "1D4BC077D905B492"
+					item: { components: { "irons_jewelry:stored_pattern": "irons_jewelry:barbed_band" }, count: 1, id: "irons_jewelry:recipe" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 2.0d
+		}
+	]
+}

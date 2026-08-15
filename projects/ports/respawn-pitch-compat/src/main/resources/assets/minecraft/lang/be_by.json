@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Пункт адраджэння ўсталяваны на %s, %s, %s [%s, %s] у %s для %s",
+  "commands.spawnpoint.success.multiple.new": "Пункт адраджэння ўсталяваны на %s, %s, %s [%s, %s] у %s для %s гульцоў"
+}

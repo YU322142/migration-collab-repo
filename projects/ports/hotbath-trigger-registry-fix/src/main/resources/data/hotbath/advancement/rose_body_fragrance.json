@@ -1,0 +1,28 @@
+{
+  "id": "hotbath:rose_body_fragrance",
+  "display": {
+    "icon": {
+      "id": "hotbath:rose_bath_bucket"
+    },
+    "title": {
+      "translate": "hotbath.advancement.rose_body_fragrance"
+    },
+    "description": {
+      "translate": "hotbath.advancement.rose_body_fragrance.desc"
+    },
+    "background": "minecraft:textures/block/stone.png",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "hotbath:hot_bath",
+  "criteria": {
+    "code_triggered": {
+      "trigger": "hotbath:rose_body_fragrance"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

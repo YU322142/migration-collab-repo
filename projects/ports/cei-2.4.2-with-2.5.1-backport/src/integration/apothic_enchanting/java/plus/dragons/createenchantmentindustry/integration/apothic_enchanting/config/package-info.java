@@ -1,0 +1,6 @@
+@ParametersAreNonnullByDefault
+@MethodsReturnNonnullByDefault
+package plus.dragons.createenchantmentindustry.integration.apothic_enchanting.config;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+import net.minecraft.MethodsReturnNonnullByDefault;

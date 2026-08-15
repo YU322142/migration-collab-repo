@@ -1,0 +1,250 @@
+{
+  "composite_key_layout": {
+    "block_id": "key & 0xFFF",
+    "legacy_state_index": "(key >> 12) & 0xFFFFF"
+  },
+  "conflicting_duplicate_record_count": 0,
+  "duplicate_composite_state_id_count": 9,
+  "duplicate_composite_state_ids": [
+    132,
+    140,
+    4228,
+    16516,
+    20612,
+    32900,
+    36996,
+    41135,
+    49284
+  ],
+  "duplicate_record_count": 25,
+  "duplicate_semantics": "last record wins for the same (block_id, legacy_state_index), matching Xaero World Map 1.41.2 OldFormatSupport.loadStates/putState",
+  "overwrites_in_file_order": [
+    {
+      "block_id": 132,
+      "composite_state_id": 132,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:tripwire",
+      "record_index": 835,
+      "replacement_name": "minecraft:tripwire",
+      "same_nbt": true
+    },
+    {
+      "block_id": 132,
+      "composite_state_id": 4228,
+      "legacy_state_index": 1,
+      "prior_name": "minecraft:tripwire",
+      "record_index": 836,
+      "replacement_name": "minecraft:tripwire",
+      "same_nbt": true
+    },
+    {
+      "block_id": 132,
+      "composite_state_id": 16516,
+      "legacy_state_index": 4,
+      "prior_name": "minecraft:tripwire",
+      "record_index": 839,
+      "replacement_name": "minecraft:tripwire",
+      "same_nbt": true
+    },
+    {
+      "block_id": 132,
+      "composite_state_id": 20612,
+      "legacy_state_index": 5,
+      "prior_name": "minecraft:tripwire",
+      "record_index": 840,
+      "replacement_name": "minecraft:tripwire",
+      "same_nbt": true
+    },
+    {
+      "block_id": 132,
+      "composite_state_id": 32900,
+      "legacy_state_index": 8,
+      "prior_name": "minecraft:tripwire",
+      "record_index": 843,
+      "replacement_name": "minecraft:tripwire",
+      "same_nbt": true
+    },
+    {
+      "block_id": 132,
+      "composite_state_id": 36996,
+      "legacy_state_index": 9,
+      "prior_name": "minecraft:tripwire",
+      "record_index": 844,
+      "replacement_name": "minecraft:tripwire",
+      "same_nbt": true
+    },
+    {
+      "block_id": 132,
+      "composite_state_id": 49284,
+      "legacy_state_index": 12,
+      "prior_name": "minecraft:tripwire",
+      "record_index": 847,
+      "replacement_name": "minecraft:tripwire",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 889,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 890,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 891,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 892,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 893,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 894,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 895,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 896,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 897,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 898,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 899,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 900,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 901,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 902,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 140,
+      "composite_state_id": 140,
+      "legacy_state_index": 0,
+      "prior_name": "minecraft:potted_cactus",
+      "record_index": 903,
+      "replacement_name": "minecraft:potted_cactus",
+      "same_nbt": true
+    },
+    {
+      "block_id": 175,
+      "composite_state_id": 41135,
+      "legacy_state_index": 10,
+      "prior_name": "minecraft:peony",
+      "record_index": 1204,
+      "replacement_name": "minecraft:peony",
+      "same_nbt": true
+    },
+    {
+      "block_id": 175,
+      "composite_state_id": 41135,
+      "legacy_state_index": 10,
+      "prior_name": "minecraft:peony",
+      "record_index": 1205,
+      "replacement_name": "minecraft:peony",
+      "same_nbt": true
+    },
+    {
+      "block_id": 175,
+      "composite_state_id": 41135,
+      "legacy_state_index": 10,
+      "prior_name": "minecraft:peony",
+      "record_index": 1206,
+      "replacement_name": "minecraft:peony",
+      "same_nbt": true
+    }
+  ],
+  "record_count": 1681,
+  "unique_composite_state_ids": 1656
+}

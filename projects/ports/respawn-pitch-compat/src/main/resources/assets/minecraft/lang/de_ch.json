@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Iistigspunkt vo %7$s isch uf (%1$s, %2$s, %3$s) [%4$s, %5$s] in %6$s gsetzt worde",
+  "commands.spawnpoint.success.multiple.new": "Iistigspunkt vo %7$s Spieler isch uf (%1$s, %2$s, %3$s) [%4$s, %5$s] in %6$s gsetzt worde"
+}

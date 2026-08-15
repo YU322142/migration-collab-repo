@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "जन्म स्थान को %s, %s, %s [%s, %s] %s में %s के लिए लगा दिया",
+  "commands.spawnpoint.success.multiple.new": "जन्म स्थान को %s, %s, %s [%s, %s] %s में %s खिलाड़ियों के लिए लगा दिया"
+}

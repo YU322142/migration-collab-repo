@@ -1,0 +1,33 @@
+modLoader="javafml"
+loaderVersion="[61,)"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+displayURL="https://github.com/YuWan-030/TrueUUID"
+logoFile="trueuuid-banner.png"
+authors="${mod_authors}"
+description='''${mod_description}'''
+
+[[mixins]]
+config="trueuuid.mixins.json"
+
+[[dependencies.${mod_id}]]
+modId="forge"
+mandatory=true
+versionRange="${forge_version_range}"
+ordering="NONE"
+side="BOTH"
+
+# Built against 1.21.11 mappings/Forge 61 (ForgeGradle 7, Gradle 9.5), with the
+# 1.21.9+ record-era seams and the 1.21.11 ResourceLocation->Identifier rename.
+# Protocol 774 is unique to 1.21.11 (the final legacy-scheme release): single
+# patch permanently. See docs/architecture/target-matrix.md.
+[[dependencies.${mod_id}]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.21.11,1.21.12)"
+ordering="NONE"
+side="BOTH"

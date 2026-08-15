@@ -1,0 +1,402 @@
+{
+  "replace": false,
+  "trades": [
+    {
+      "type": "goblintraders:basic",
+      "experience": 300,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "minecraft:attribute_modifiers": {
+            "modifiers": [
+              {
+                "type": "minecraft:generic.attack_damage",
+                "amount": 4.0,
+                "id": "minecraft:base_attack_damage",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:generic.attack_speed",
+                "amount": -2.799999952316284,
+                "id": "minecraft:base_attack_speed",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:player.block_break_speed",
+                "amount": 1.0,
+                "id": "goblintraders:goblins_break_speed",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:player.block_interaction_range",
+                "amount": 2.0,
+                "id": "goblintraders:goblins_block_range",
+                "operation": "add_value",
+                "slot": "mainhand"
+              }
+            ]
+          },
+          "minecraft:lore": [
+            "{\"color\":\"green\",\"translate\":\"custom.goblintraders.tuned\"}",
+            "{\"color\":\"gray\",\"translate\":\"custom.goblintraders.lore\"}"
+          ],
+          "minecraft:max_damage": 15610,
+          "minecraft:rarity": "epic"
+        },
+        "count": 1,
+        "id": "minecraft:diamond_pickaxe"
+      },
+      "payment_item": {
+        "count": 16,
+        "id": "umapyoi:jewel"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:dragon_head"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 300,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "minecraft:attribute_modifiers": {
+            "modifiers": [
+              {
+                "type": "minecraft:generic.attack_damage",
+                "amount": 4.5,
+                "id": "minecraft:base_attack_damage",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:generic.attack_speed",
+                "amount": -3.0,
+                "id": "minecraft:base_attack_speed",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:player.block_break_speed",
+                "amount": 1.0,
+                "id": "goblintraders:goblins_break_speed",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:player.block_interaction_range",
+                "amount": 2.0,
+                "id": "goblintraders:goblins_block_range",
+                "operation": "add_value",
+                "slot": "mainhand"
+              }
+            ]
+          },
+          "minecraft:lore": [
+            "{\"color\":\"green\",\"translate\":\"custom.goblintraders.tuned\"}",
+            "{\"color\":\"gray\",\"translate\":\"custom.goblintraders.lore\"}"
+          ],
+          "minecraft:max_damage": 15610,
+          "minecraft:rarity": "epic"
+        },
+        "count": 1,
+        "id": "minecraft:diamond_shovel"
+      },
+      "payment_item": {
+        "count": 16,
+        "id": "umapyoi:jewel"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:dragon_head"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 300,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "minecraft:attribute_modifiers": {
+            "modifiers": [
+              {
+                "type": "minecraft:generic.attack_damage",
+                "amount": 8.0,
+                "id": "minecraft:base_attack_damage",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:generic.attack_speed",
+                "amount": -3.0,
+                "id": "minecraft:base_attack_speed",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:player.block_break_speed",
+                "amount": 1.0,
+                "id": "goblintraders:goblins_break_speed",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:generic.attack_damage",
+                "amount": 3.0,
+                "id": "goblintraders:goblins_damage",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:generic.attack_knockback",
+                "amount": 2.0,
+                "id": "goblintraders:goblins_knockback",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:player.block_interaction_range",
+                "amount": 2.0,
+                "id": "goblintraders:goblins_block_range",
+                "operation": "add_value",
+                "slot": "mainhand"
+              }
+            ]
+          },
+          "minecraft:lore": [
+            "{\"color\":\"green\",\"translate\":\"custom.goblintraders.tuned\"}",
+            "{\"color\":\"gray\",\"translate\":\"custom.goblintraders.lore\"}"
+          ],
+          "minecraft:max_damage": 15610,
+          "minecraft:rarity": "epic"
+        },
+        "count": 1,
+        "id": "minecraft:diamond_axe"
+      },
+      "payment_item": {
+        "count": 16,
+        "id": "umapyoi:jewel"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:dragon_head"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 300,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "minecraft:attribute_modifiers": {
+            "modifiers": [
+              {
+                "type": "minecraft:generic.attack_damage",
+                "amount": 0.0,
+                "id": "minecraft:base_attack_damage",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:generic.attack_speed",
+                "amount": 0.0,
+                "id": "minecraft:base_attack_speed",
+                "operation": "add_value",
+                "slot": "mainhand"
+              },
+              {
+                "type": "minecraft:player.block_interaction_range",
+                "amount": 2.0,
+                "id": "goblintraders:goblins_block_range",
+                "operation": "add_value",
+                "slot": "mainhand"
+              }
+            ]
+          },
+          "minecraft:lore": [
+            "{\"color\":\"green\",\"translate\":\"custom.goblintraders.tuned\"}",
+            "{\"color\":\"gray\",\"translate\":\"custom.goblintraders.lore\"}"
+          ],
+          "minecraft:max_damage": 15610,
+          "minecraft:rarity": "epic"
+        },
+        "count": 1,
+        "id": "minecraft:diamond_hoe"
+      },
+      "payment_item": {
+        "count": 16,
+        "id": "umapyoi:jewel"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:dragon_head"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 500,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "minecraft:lore": [
+            "{\"color\":\"green\",\"translate\":\"custom.goblintraders.tuned\"}",
+            "{\"color\":\"gray\",\"translate\":\"custom.goblintraders.lore\"}"
+          ],
+          "minecraft:max_damage": 4320,
+          "minecraft:rarity": "epic"
+        },
+        "count": 1,
+        "id": "minecraft:elytra"
+      },
+      "payment_item": {
+        "count": 1,
+        "id": "minecraft:elytra"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 36,
+          "min": 24
+        },
+        "id": "minecraft:emerald"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "potion_contents": {
+            "potion":"apothic_attributes:flying"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 16,
+        "id": "umapyoi:jewel"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:dragon_head"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "potion_contents": {
+            "potion":"apothic_attributes:long_flying"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 16,
+        "id": "umapyoi:jewel"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:dragon_head"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "potion_contents": {
+            "potion":"apothic_attributes:extra_long_flying"
+          }
+        },
+        "count": 1,
+        "id": "minecraft:potion"
+      },
+      "payment_item": {
+        "count": 16,
+        "id": "umapyoi:jewel"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:dragon_head"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "irons_spellbooks:mithril_scrap"
+      },
+      "payment_item": {
+        "count": 16,
+        "id": "umapyoi:jewel"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:dragon_head"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "irons_spellbooks:mithril_ingot"
+      },
+      "payment_item": {
+        "count": 16,
+        "id": "umapyoi:jewel"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:dragon_head"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "irons_spellbooks:cinderous_soulcaller"
+      },
+      "payment_item": {
+        "count": 16,
+        "id": "umapyoi:jewel"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:dragon_head"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "irons_spellbooks:pyrium_ingot"
+      },
+      "payment_item": {
+        "count": 32,
+        "id": "umapyoi:jewel"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "id": "minecraft:dragon_head"
+      }
+    }
+  ]
+}

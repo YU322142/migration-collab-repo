@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Gosodwyd man atgyfodi i %s, %s, %s [%s, %s] yn %s ar gyfer %s",
+  "commands.spawnpoint.success.multiple.new": "Gosodwyd man atgyfodi i %s, %s, %s [%s, %s] yn %s ar gyfer %s chwaraewr"
+}

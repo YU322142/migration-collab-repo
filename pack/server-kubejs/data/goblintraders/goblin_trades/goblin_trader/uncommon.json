@@ -1,0 +1,31 @@
+{
+  "replace": false,
+  "trades": [
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 8,
+      "offer_item": {
+        "count": 1,
+        "id": "umapyoi:jewel"
+      },
+      "payment_item": {
+        "count": 1,
+        "id": "umapyoi:blank_ticket"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 8,
+      "offer_item": {
+        "count": 1,
+        "id": "umapyoi:jewel"
+      },
+      "payment_item": {
+        "count": 2,
+        "id": "umapyoi:blank_ticket"
+      }
+    }
+  ]
+}

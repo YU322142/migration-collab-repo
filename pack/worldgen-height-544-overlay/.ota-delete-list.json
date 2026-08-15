@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "delete_only_after_preimage_sha256_match": [
+    {
+      "path": "kubejs/data/minecraft/worldgen/dimension_type/overworld.json",
+      "preimage_sha256": "F037D47507D099F2BC74D1D6093E3D580EE8E62312AD15F41B46DF4EA801A817",
+      "reason": "This is not a valid 1.21.1 dimension_type registry path. It is a stale 544-height duplicate that can mislead audits but does not raise the Overworld build limit."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:birch_logs"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:birch_bracket"
+    }
+  ]
+}

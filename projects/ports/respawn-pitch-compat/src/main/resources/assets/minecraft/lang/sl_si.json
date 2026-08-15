@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Nastavi točko ponovnega življenja na %s, %s, %s [%s, %s] v %s za %s",
+  "commands.spawnpoint.success.multiple.new": "Nastavi točko pojava na %s, %s, %s [%s, %s] v %s za %s igralci"
+}

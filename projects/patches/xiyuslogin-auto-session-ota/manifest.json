@@ -1,0 +1,25 @@
+{
+  "schema": "xiyuslogin-auto-session-package/v1",
+  "createdOn": "2026-08-15",
+  "scope": "server-config-only",
+  "desired": {
+    "enableIpSession": true,
+    "ipSessionDurationSeconds": 86400
+  },
+  "preservedTrueUuidGuards": {
+    "knownPremiumDenyOffline": true,
+    "allowOfflineForUnknownOnly": true,
+    "allowOfflineOnTimeout": false
+  },
+  "files": [
+    "README-zh-CN.md",
+    "desired/xiyuslogin-session-values.toml",
+    "tools/deploy_xiyuslogin_auto_session.ps1",
+    "tools/verify_xiyuslogin_auto_session.ps1"
+  ],
+  "limitations": [
+    "XiyusLogin 1.4-migration4 keeps IP sessions in memory only.",
+    "One manual /login is required after every server restart.",
+    "A TrueUUID premium callback integration is the recommended complete fix."
+  ]
+}

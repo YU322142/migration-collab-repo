@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Oanstiegspunkt fia %7$s is auf %1$s, %2$s, %3$s [%4$s, %5$s] in %6$s g'setzt worn",
+  "commands.spawnpoint.success.multiple.new": "Oanstiegspunkt fia %7$s Spieler is auf %1$s, %2$s, %3$s [%4$s, %5$s] in %6$s g'setzt worn"
+}

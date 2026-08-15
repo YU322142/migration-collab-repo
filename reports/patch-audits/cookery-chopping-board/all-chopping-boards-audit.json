@@ -1,0 +1,771 @@
+{
+  "schema": 1,
+  "status": "FAIL",
+  "world": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world",
+  "target_id": "kaleidoscope_cookery:chopping_board",
+  "workers": 12,
+  "region_files": 1981,
+  "chunks": 1382351,
+  "block_entities": 237399,
+  "match_count": 9,
+  "exact_empty_air_count": 9,
+  "air_nonempty_or_progress_count": 0,
+  "missing_model_count": 0,
+  "matches": [
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -423,
+        "x": -244,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -420,
+        "x": -244,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -427,
+        "x": -241,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -424,
+        "x": -241,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -421,
+        "x": -241,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 912,
+      "value": {
+        "CurrentCutStack": {},
+        "z": -63,
+        "x": -246,
+        "ResultItem": {},
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 64,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-7.-4.mca",
+      "slot": 88,
+      "value": {
+        "z": -2001,
+        "x": -3190,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 102,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.2.-10.mca",
+      "slot": 55,
+      "value": {
+        "CurrentCutStack": {},
+        "z": -5102,
+        "x": 1405,
+        "ResultItem": {},
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 67,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.53.-26.mca",
+      "slot": 876,
+      "value": {
+        "CurrentCutStack": {},
+        "z": -12875,
+        "x": 27332,
+        "ResultItem": {},
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 62,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0
+      }
+    }
+  ],
+  "exact_empty_air": [
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -423,
+        "x": -244,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -420,
+        "x": -244,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -427,
+        "x": -241,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -424,
+        "x": -241,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -421,
+        "x": -241,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 912,
+      "value": {
+        "CurrentCutStack": {},
+        "z": -63,
+        "x": -246,
+        "ResultItem": {},
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 64,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-7.-4.mca",
+      "slot": 88,
+      "value": {
+        "z": -2001,
+        "x": -3190,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 102,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.2.-10.mca",
+      "slot": 55,
+      "value": {
+        "CurrentCutStack": {},
+        "z": -5102,
+        "x": 1405,
+        "ResultItem": {},
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 67,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.53.-26.mca",
+      "slot": 876,
+      "value": {
+        "CurrentCutStack": {},
+        "z": -12875,
+        "x": 27332,
+        "ResultItem": {},
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 62,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0
+      }
+    }
+  ],
+  "air_nonempty_or_progress": [],
+  "missing_model": [],
+  "errors": [
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.-12.7.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.-13.7.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.-13.8.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.-7.-2.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.-8.-2.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.-9.-2.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.-9.1.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.1.-5.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.2.-5.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.3.-5.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.3.2.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.3.3.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.51.-22.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.51.-23.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.52.-27.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.53.-22.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.53.-23.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM-1\\region\\r.53.-27.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.-1.-6.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.-10.-11.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.-10.-3.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.-10.-8.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.-11.-6.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.-11.-8.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.-2.-7.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.-2.1.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.-4.15.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.-4.16.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.-6.-1.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.-9.-11.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.0.-6.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.11.-7.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.16.-15.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.19.-17.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.22.-16.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.22.-25.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.22.-26.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.8.-10.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\DIM1\\region\\r.8.-2.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-10.-12.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-11.-13.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-12.-1.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-12.-10.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-12.-2.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-12.-3.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-12.-4.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-12.-5.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-12.-6.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-12.5.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-12.6.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-13.-10.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-13.-2.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-13.-3.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-13.-5.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-13.-7.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-13.-8.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-13.12.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-13.13.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-13.14.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-13.5.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-14.-13.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-14.-15.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-14.-7.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-14.7.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-15.-10.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-15.-4.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-15.-9.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-15.7.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-16.-10.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-16.-14.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-16.1.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-16.2.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-16.3.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-16.7.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-18.-11.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-19.1.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-19.2.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-19.3.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-4.11.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.14.-6.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.21.-9.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.23.-18.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.23.-19.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.29.-20.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.3.-12.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.32.-21.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.35.-22.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.43.-25.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.44.-25.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.45.-22.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.57.-24.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.57.-27.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.6.-12.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.8.-12.mca",
+      "slot": null,
+      "error": "ValueError('truncated location table')"
+    }
+  ],
+  "failures": [
+    "region_parse_errors"
+  ]
+}

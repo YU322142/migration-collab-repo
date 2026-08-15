@@ -1,0 +1,216 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'idea'
+    id 'net.neoforged.moddev' version '2.0.141'
+}
+
+group = mod_group_id
+version = mod_version
+base {
+    archivesName = "kaleidoscopetavern"
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+    runs {
+        client {
+            client()
+            gameDirectory = project.file('run/client')
+            programArguments = [
+                    "--username", "tartaric_acid"
+            ]
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        server {
+            server()
+            gameDirectory = project.file('run/server')
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        gameTestServer {
+            type = "gameTestServer"
+            gameDirectory = project.file('run/gameTestServer')
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        data {
+            data()
+            gameDirectory = project.file('run/data')
+            programArguments.addAll '--mod', project.mod_id, '--all',
+                    '--output', file('src/generated/resources/').getAbsolutePath(),
+                    '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+
+        configureEach {
+            // +AllowEnhancedClassRedefinition 为 JetBrains Runtime 所需的参数
+            // JetBrains Runtime 是一个修改过的 JDK，支持热重载
+            // +IgnoreUnrecognizedVMOptions 用于忽略未知指令
+            // 否则没有安装 JetBrains Runtime 的用户运行时会报错
+            jvmArguments = [
+                    '-XX:+IgnoreUnrecognizedVMOptions',
+                    '-XX:+AllowEnhancedClassRedefinition'
+            ]
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            // 参考：https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        // 定义 mod <-> 源码的绑定关系，用于告知游戏每个 mod 对应哪些源码
+        // 单 mod 项目通常可省略，多 mod 项目应为每个 mod 单独定义
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+sourceSets.main.resources {
+    srcDir 'src/generated/resources'
+    exclude '.cache/**'
+}
+
+repositories {
+    maven { url = "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" }
+    maven { url = "https://maven.createmod.net" }
+    maven {
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+        content {
+            includeGroup "mezz.jei"
+        }
+    }
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+        content {
+            includeGroup "mezz.jei"
+        }
+    }
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        url "https://maven.latvian.dev/releases"
+        content {
+            includeGroup "dev.latvian.mods"
+            includeGroup "dev.latvian.apps"
+        }
+    }
+    maven {
+        url = "https://maven.architectury.dev"
+        content {
+            includeGroup "dev.architectury"
+        }
+    }
+    maven {
+        url 'https://jitpack.io'
+        content {
+            includeGroup "com.github.rtyley"
+        }
+    }
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
+}
+
+dependencies {
+    // JEI
+    compileOnly "mezz.jei:jei-1.21.1-neoforge-api:19.21.0.247"
+    runtimeOnly "mezz.jei:jei-1.21.1-neoforge:19.21.0.247"
+
+    // EMI
+    compileOnly "maven.modrinth:emi:1.1.22+1.21.1+neoforge"
+
+    // REI
+    compileOnly "maven.modrinth:cloth-config:15.0.140+neoforge"
+    compileOnly "maven.modrinth:architectury-api:13.0.8+neoforge"
+    compileOnly "maven.modrinth:rei:16.0.788+neoforge"
+
+    // Jade
+    implementation "maven.modrinth:jade:15.0.5+neoforge"
+
+    // KubeJS
+    // compileOnly "dev.latvian.mods:rhino:2101.2.7-build.72"
+    // compileOnly "dev.latvian.mods:kubejs-neoforge:2101.7.2-build.336"
+    // runtimeOnly "com.github.rtyley:animated-gif-lib-for-java:animated-gif-lib-1.7"
+    // runtimeOnly "curse.maven:probejs-585406:5820894"
+
+    runtimeOnly "maven.modrinth:nbtedit-reborn:5.2.11+mc1.21.1-neoforge"
+    runtimeOnly "maven.modrinth:kiwi:15.6.1+neoforge"
+
+    // Ponder
+    implementation "net.createmod.ponder:Ponder-NeoForge-1.21.1:1.0.56"
+    runtimeOnly "maven.modrinth:create:1.21.1-6.0.6"
+
+    runtimeOnly "maven.modrinth:carry-on:2.2.4-neoforge,1.21.1"
+
+    // 节气
+    // runtimeOnly "curse.maven:ecliptic-seasons-1118306:7041469"
+}
+
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            neo_version_range      : neo_version_range,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+            mod_authors            : mod_authors,
+            mod_description        : mod_description
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand replaceProperties
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+                "Implementation-Title"  : project.name,
+                "Implementation-Version": "${version}"
+        ])
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+java {
+    // 编译源码文件，方便发布 maven
+    withSourcesJar()
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}

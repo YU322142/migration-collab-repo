@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Itinakda ang punto ng litawan sa %s, %s, %s [%s, %s] sa %s para kay %s",
+  "commands.spawnpoint.success.multiple.new": "Itinakda ang punto ng litawan sa %s, %s, %s [%s, %s] sa %s para sa %s manlalaro"
+}

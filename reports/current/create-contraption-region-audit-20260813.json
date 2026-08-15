@@ -1,0 +1,1433 @@
+{
+  "category": "create_contraption_entity_regions_read_only_audit",
+  "status": "PASS",
+  "workers": 16,
+  "elapsed_seconds": 22.581,
+  "roots": [
+    {
+      "label": "source",
+      "world": "D:\\Trans\\migration-audit-work\\incoming-20260811-raw\\20260811\\world",
+      "regions": 1501,
+      "chunks": 73228,
+      "entities": 146278,
+      "contraptions": [
+        {
+          "region": "entities/r.-1.-1.mca",
+          "slot": 719,
+          "entity_index": 4,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            1549335999,
+            326585327,
+            -1403222912,
+            -2123104260
+          ],
+          "pos": [
+            -271.0,
+            75.0,
+            -158.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:bearing",
+          "actors": 0,
+          "actor_states": [],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.-1.-1.mca",
+          "slot": 723,
+          "entity_index": 0,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            -1576426769,
+            1536836547,
+            -1238525648,
+            1452927380
+          ],
+          "pos": [
+            -197.0,
+            64.0,
+            -152.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:bearing",
+          "actors": 6,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                -1,
+                0,
+                -4
+              ],
+              "state_index": 2,
+              "block": "create:deployer",
+              "facing": "west",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                -1,
+                0,
+                -5
+              ],
+              "state_index": 2,
+              "block": "create:deployer",
+              "facing": "west",
+              "issues": []
+            },
+            {
+              "actor_index": 2,
+              "local_pos": [
+                1,
+                0,
+                -5
+              ],
+              "state_index": 1,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 3,
+              "local_pos": [
+                0,
+                1,
+                -6
+              ],
+              "state_index": 4,
+              "block": "create:portable_storage_interface",
+              "facing": "north",
+              "issues": []
+            },
+            {
+              "actor_index": 4,
+              "local_pos": [
+                -1,
+                0,
+                -6
+              ],
+              "state_index": 2,
+              "block": "create:deployer",
+              "facing": "west",
+              "issues": []
+            },
+            {
+              "actor_index": 5,
+              "local_pos": [
+                1,
+                0,
+                -6
+              ],
+              "state_index": 1,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.-1.-1.mca",
+          "slot": 918,
+          "entity_index": 6,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            1373179648,
+            -415021071,
+            -1889771504,
+            -224500377
+          ],
+          "pos": [
+            -145.0,
+            67.0,
+            -50.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:elevator",
+          "actors": 6,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                0,
+                -2,
+                -2
+              ],
+              "state_index": 6,
+              "block": "create:andesite_door",
+              "facing": "south",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                0,
+                -2,
+                2
+              ],
+              "state_index": 3,
+              "block": "create:andesite_door",
+              "facing": "north",
+              "issues": []
+            },
+            {
+              "actor_index": 2,
+              "local_pos": [
+                0,
+                -3,
+                -2
+              ],
+              "state_index": 7,
+              "block": "create:andesite_door",
+              "facing": "south",
+              "issues": []
+            },
+            {
+              "actor_index": 3,
+              "local_pos": [
+                0,
+                -3,
+                2
+              ],
+              "state_index": 2,
+              "block": "create:andesite_door",
+              "facing": "north",
+              "issues": []
+            },
+            {
+              "actor_index": 4,
+              "local_pos": [
+                2,
+                -2,
+                2
+              ],
+              "state_index": 4,
+              "block": "create:redstone_contact",
+              "facing": "south",
+              "issues": []
+            },
+            {
+              "actor_index": 5,
+              "local_pos": [
+                1,
+                -3,
+                1
+              ],
+              "state_index": 5,
+              "block": "create:contraption_controls",
+              "facing": "north",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.-1.-1.mca",
+          "slot": 948,
+          "entity_index": 10,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            1696775686,
+            409226394,
+            -2140280287,
+            -406323748
+          ],
+          "pos": [
+            -191.0,
+            67.0,
+            -44.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:elevator",
+          "actors": 6,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                0,
+                -1,
+                1
+              ],
+              "state_index": 5,
+              "block": "create:brass_door",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                0,
+                -2,
+                1
+              ],
+              "state_index": 2,
+              "block": "create:brass_door",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 2,
+              "local_pos": [
+                1,
+                -2,
+                0
+              ],
+              "state_index": 7,
+              "block": "create:redstone_contact",
+              "facing": "north",
+              "issues": []
+            },
+            {
+              "actor_index": 3,
+              "local_pos": [
+                0,
+                -1,
+                2
+              ],
+              "state_index": 6,
+              "block": "create:brass_door",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 4,
+              "local_pos": [
+                0,
+                -2,
+                2
+              ],
+              "state_index": 3,
+              "block": "create:brass_door",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 5,
+              "local_pos": [
+                1,
+                -2,
+                2
+              ],
+              "state_index": 4,
+              "block": "create:contraption_controls",
+              "facing": "north",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.-1.0.mca",
+          "slot": 313,
+          "entity_index": 1,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            -1878788208,
+            -1780922735,
+            -1507993390,
+            299087512
+          ],
+          "pos": [
+            -111.0,
+            87.0,
+            151.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:elevator",
+          "actors": 2,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                0,
+                0,
+                0
+              ],
+              "state_index": 0,
+              "block": "create:redstone_contact",
+              "facing": "west",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                3,
+                0,
+                0
+              ],
+              "state_index": 2,
+              "block": "create:contraption_controls",
+              "facing": "west",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.53.-26.mca",
+          "slot": 621,
+          "entity_index": 0,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            -951817646,
+            -1398322189,
+            -1192339488,
+            936342091
+          ],
+          "pos": [
+            27359.0,
+            78.0,
+            -12998.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:bearing",
+          "actors": 3,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                5,
+                0,
+                -1
+              ],
+              "state_index": 3,
+              "block": "create:deployer",
+              "facing": "north",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                5,
+                0,
+                1
+              ],
+              "state_index": 1,
+              "block": "create:mechanical_saw",
+              "facing": "south",
+              "issues": []
+            },
+            {
+              "actor_index": 2,
+              "local_pos": [
+                6,
+                0,
+                1
+              ],
+              "state_index": 1,
+              "block": "create:mechanical_saw",
+              "facing": "south",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.53.-26.mca",
+          "slot": 653,
+          "entity_index": 3,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            35131425,
+            -1138080778,
+            -1297627352,
+            -819404879
+          ],
+          "pos": [
+            27358.0,
+            78.0,
+            -12981.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:bearing",
+          "actors": 3,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                -1,
+                0,
+                -5
+              ],
+              "state_index": 3,
+              "block": "create:deployer",
+              "facing": "west",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                1,
+                0,
+                -5
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 2,
+              "local_pos": [
+                1,
+                0,
+                -6
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.53.-26.mca",
+          "slot": 808,
+          "entity_index": 5,
+          "id": "create:gantry_contraption",
+          "uuid": [
+            -1356137611,
+            -1296873579,
+            -1501363450,
+            1368445383
+          ],
+          "pos": [
+            27276.25,
+            73.0,
+            -12901.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:gantry",
+          "actors": 10,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                0,
+                -1,
+                0
+              ],
+              "state_index": 6,
+              "block": "create:redstone_contact",
+              "facing": "down",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                1,
+                0,
+                1
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 2,
+              "local_pos": [
+                1,
+                0,
+                2
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 3,
+              "local_pos": [
+                1,
+                0,
+                3
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 4,
+              "local_pos": [
+                1,
+                0,
+                4
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 5,
+              "local_pos": [
+                1,
+                0,
+                5
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 6,
+              "local_pos": [
+                1,
+                0,
+                6
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 7,
+              "local_pos": [
+                1,
+                0,
+                7
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 8,
+              "local_pos": [
+                1,
+                0,
+                8
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 9,
+              "local_pos": [
+                0,
+                1,
+                8
+              ],
+              "state_index": 4,
+              "block": "create:portable_storage_interface",
+              "facing": "south",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.53.-26.mca",
+          "slot": 812,
+          "entity_index": 0,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            1510919688,
+            -1644935454,
+            -1331529636,
+            -1701208639
+          ],
+          "pos": [
+            27328.0,
+            76.0,
+            -12902.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:elevator",
+          "actors": 2,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                -3,
+                -5,
+                2
+              ],
+              "state_index": 5,
+              "block": "create:redstone_contact",
+              "facing": "west",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                -2,
+                -4,
+                0
+              ],
+              "state_index": 6,
+              "block": "create:contraption_controls",
+              "facing": "east",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        }
+      ],
+      "errors": [],
+      "counts": {
+        "contraptions": 9,
+        "carriage_contraptions": 0,
+        "controls_palette_entries": 0,
+        "controls_block_instances": 0,
+        "issue_rows": 0,
+        "actor_state_issues": 0,
+        "errors": 0
+      }
+    },
+    {
+      "label": "staging",
+      "world": "D:\\Trans\\migration-audit-work\\cutover-staging-incoming-20260811-candidate13-20260812\\world",
+      "regions": 1501,
+      "chunks": 73228,
+      "entities": 146278,
+      "contraptions": [
+        {
+          "region": "entities/r.-1.-1.mca",
+          "slot": 719,
+          "entity_index": 4,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            1549335999,
+            326585327,
+            -1403222912,
+            -2123104260
+          ],
+          "pos": [
+            -271.0,
+            75.0,
+            -158.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:bearing",
+          "actors": 0,
+          "actor_states": [],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.-1.-1.mca",
+          "slot": 723,
+          "entity_index": 0,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            -1576426769,
+            1536836547,
+            -1238525648,
+            1452927380
+          ],
+          "pos": [
+            -197.0,
+            64.0,
+            -152.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:bearing",
+          "actors": 6,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                -1,
+                0,
+                -4
+              ],
+              "state_index": 2,
+              "block": "create:deployer",
+              "facing": "west",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                -1,
+                0,
+                -5
+              ],
+              "state_index": 2,
+              "block": "create:deployer",
+              "facing": "west",
+              "issues": []
+            },
+            {
+              "actor_index": 2,
+              "local_pos": [
+                1,
+                0,
+                -5
+              ],
+              "state_index": 1,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 3,
+              "local_pos": [
+                0,
+                1,
+                -6
+              ],
+              "state_index": 4,
+              "block": "create:portable_storage_interface",
+              "facing": "north",
+              "issues": []
+            },
+            {
+              "actor_index": 4,
+              "local_pos": [
+                -1,
+                0,
+                -6
+              ],
+              "state_index": 2,
+              "block": "create:deployer",
+              "facing": "west",
+              "issues": []
+            },
+            {
+              "actor_index": 5,
+              "local_pos": [
+                1,
+                0,
+                -6
+              ],
+              "state_index": 1,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.-1.-1.mca",
+          "slot": 918,
+          "entity_index": 6,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            1373179648,
+            -415021071,
+            -1889771504,
+            -224500377
+          ],
+          "pos": [
+            -145.0,
+            67.0,
+            -50.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:elevator",
+          "actors": 6,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                0,
+                -2,
+                -2
+              ],
+              "state_index": 6,
+              "block": "create:andesite_door",
+              "facing": "south",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                0,
+                -2,
+                2
+              ],
+              "state_index": 3,
+              "block": "create:andesite_door",
+              "facing": "north",
+              "issues": []
+            },
+            {
+              "actor_index": 2,
+              "local_pos": [
+                0,
+                -3,
+                -2
+              ],
+              "state_index": 7,
+              "block": "create:andesite_door",
+              "facing": "south",
+              "issues": []
+            },
+            {
+              "actor_index": 3,
+              "local_pos": [
+                0,
+                -3,
+                2
+              ],
+              "state_index": 2,
+              "block": "create:andesite_door",
+              "facing": "north",
+              "issues": []
+            },
+            {
+              "actor_index": 4,
+              "local_pos": [
+                2,
+                -2,
+                2
+              ],
+              "state_index": 4,
+              "block": "create:redstone_contact",
+              "facing": "south",
+              "issues": []
+            },
+            {
+              "actor_index": 5,
+              "local_pos": [
+                1,
+                -3,
+                1
+              ],
+              "state_index": 5,
+              "block": "create:contraption_controls",
+              "facing": "north",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.-1.-1.mca",
+          "slot": 948,
+          "entity_index": 10,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            1696775686,
+            409226394,
+            -2140280287,
+            -406323748
+          ],
+          "pos": [
+            -191.0,
+            67.0,
+            -44.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:elevator",
+          "actors": 6,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                0,
+                -1,
+                1
+              ],
+              "state_index": 5,
+              "block": "create:brass_door",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                0,
+                -2,
+                1
+              ],
+              "state_index": 2,
+              "block": "create:brass_door",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 2,
+              "local_pos": [
+                1,
+                -2,
+                0
+              ],
+              "state_index": 7,
+              "block": "create:redstone_contact",
+              "facing": "north",
+              "issues": []
+            },
+            {
+              "actor_index": 3,
+              "local_pos": [
+                0,
+                -1,
+                2
+              ],
+              "state_index": 6,
+              "block": "create:brass_door",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 4,
+              "local_pos": [
+                0,
+                -2,
+                2
+              ],
+              "state_index": 3,
+              "block": "create:brass_door",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 5,
+              "local_pos": [
+                1,
+                -2,
+                2
+              ],
+              "state_index": 4,
+              "block": "create:contraption_controls",
+              "facing": "north",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.-1.0.mca",
+          "slot": 313,
+          "entity_index": 1,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            -1878788208,
+            -1780922735,
+            -1507993390,
+            299087512
+          ],
+          "pos": [
+            -111.0,
+            87.0,
+            151.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:elevator",
+          "actors": 2,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                0,
+                0,
+                0
+              ],
+              "state_index": 0,
+              "block": "create:redstone_contact",
+              "facing": "west",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                3,
+                0,
+                0
+              ],
+              "state_index": 2,
+              "block": "create:contraption_controls",
+              "facing": "west",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.53.-26.mca",
+          "slot": 621,
+          "entity_index": 0,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            -951817646,
+            -1398322189,
+            -1192339488,
+            936342091
+          ],
+          "pos": [
+            27359.0,
+            78.0,
+            -12998.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:bearing",
+          "actors": 3,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                5,
+                0,
+                -1
+              ],
+              "state_index": 3,
+              "block": "create:deployer",
+              "facing": "north",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                5,
+                0,
+                1
+              ],
+              "state_index": 1,
+              "block": "create:mechanical_saw",
+              "facing": "south",
+              "issues": []
+            },
+            {
+              "actor_index": 2,
+              "local_pos": [
+                6,
+                0,
+                1
+              ],
+              "state_index": 1,
+              "block": "create:mechanical_saw",
+              "facing": "south",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.53.-26.mca",
+          "slot": 653,
+          "entity_index": 3,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            35131425,
+            -1138080778,
+            -1297627352,
+            -819404879
+          ],
+          "pos": [
+            27358.0,
+            78.0,
+            -12981.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:bearing",
+          "actors": 3,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                -1,
+                0,
+                -5
+              ],
+              "state_index": 3,
+              "block": "create:deployer",
+              "facing": "west",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                1,
+                0,
+                -5
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 2,
+              "local_pos": [
+                1,
+                0,
+                -6
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.53.-26.mca",
+          "slot": 808,
+          "entity_index": 5,
+          "id": "create:gantry_contraption",
+          "uuid": [
+            -1356137611,
+            -1296873579,
+            -1501363450,
+            1368445383
+          ],
+          "pos": [
+            27276.25,
+            73.0,
+            -12901.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:gantry",
+          "actors": 10,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                0,
+                -1,
+                0
+              ],
+              "state_index": 6,
+              "block": "create:redstone_contact",
+              "facing": "down",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                1,
+                0,
+                1
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 2,
+              "local_pos": [
+                1,
+                0,
+                2
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 3,
+              "local_pos": [
+                1,
+                0,
+                3
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 4,
+              "local_pos": [
+                1,
+                0,
+                4
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 5,
+              "local_pos": [
+                1,
+                0,
+                5
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 6,
+              "local_pos": [
+                1,
+                0,
+                6
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 7,
+              "local_pos": [
+                1,
+                0,
+                7
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 8,
+              "local_pos": [
+                1,
+                0,
+                8
+              ],
+              "state_index": 2,
+              "block": "create:mechanical_saw",
+              "facing": "east",
+              "issues": []
+            },
+            {
+              "actor_index": 9,
+              "local_pos": [
+                0,
+                1,
+                8
+              ],
+              "state_index": 4,
+              "block": "create:portable_storage_interface",
+              "facing": "south",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        },
+        {
+          "region": "entities/r.53.-26.mca",
+          "slot": 812,
+          "entity_index": 0,
+          "id": "create:stationary_contraption",
+          "uuid": [
+            1510919688,
+            -1644935454,
+            -1331529636,
+            -1701208639
+          ],
+          "pos": [
+            27328.0,
+            76.0,
+            -12902.0
+          ],
+          "initial_orientation": null,
+          "assembly_direction": null,
+          "contraption_type": "create:elevator",
+          "actors": 2,
+          "actor_states": [
+            {
+              "actor_index": 0,
+              "local_pos": [
+                -3,
+                -5,
+                2
+              ],
+              "state_index": 5,
+              "block": "create:redstone_contact",
+              "facing": "west",
+              "issues": []
+            },
+            {
+              "actor_index": 1,
+              "local_pos": [
+                -2,
+                -4,
+                0
+              ],
+              "state_index": 6,
+              "block": "create:contraption_controls",
+              "facing": "east",
+              "issues": []
+            }
+          ],
+          "disabled_actors": 0,
+          "controls": [],
+          "issues": []
+        }
+      ],
+      "errors": [],
+      "counts": {
+        "contraptions": 9,
+        "carriage_contraptions": 0,
+        "controls_palette_entries": 0,
+        "controls_block_instances": 0,
+        "issue_rows": 0,
+        "actor_state_issues": 0,
+        "errors": 0
+      }
+    }
+  ],
+  "summary": {
+    "regions": 3002,
+    "chunks": 146456,
+    "entities": 292556,
+    "contraptions": 18,
+    "controls_block_instances": 0,
+    "issue_rows": 0,
+    "errors": 0
+  }
+}

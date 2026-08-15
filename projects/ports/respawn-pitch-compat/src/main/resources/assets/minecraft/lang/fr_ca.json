@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Le point de spawn a été défini aux coordonnées %s, %s, %s [%s, %s] dans la dimension \"%s\" pour %s",
+  "commands.spawnpoint.success.multiple.new": "Le point de spawn a été défini aux coordonnées %s, %s, %s [%s, %s] dans la dimension \"%s\" pour %s joueurs"
+}

@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Pika e ringjalljes është vendosur në %s, %s, %s [%s, %s] në %s për %s",
+  "commands.spawnpoint.success.multiple.new": "Pika e ringjalljes është vendosur në %s, %s, %s [%s, %s] në %s për %s lojtarë"
+}

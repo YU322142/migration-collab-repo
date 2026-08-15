@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Aistríodh ionad athghiniúna an domhain go dtí %s, %s, %s [%s, %s] in %s do %s",
+  "commands.spawnpoint.success.multiple.new": "Aistríodh ionad athghiniúna an domhain go dtí %s, %s, %s [%s, %s] in %s do %s imreoir"
+}

@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.migration.kaleidoscope_cookery_scarecrow_compat.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ScarecrowEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
+

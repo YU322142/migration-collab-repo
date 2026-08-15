@@ -1,0 +1,16 @@
+scoreboard objectives remove potted_farms_damage
+scoreboard objectives add potted_farms_damage dummy
+
+scoreboard players set potted_farms_gold potted_farms_damage 31
+scoreboard players set potted_farms_wood potted_farms_damage 58
+scoreboard players set potted_farms_stone potted_farms_damage 130
+scoreboard players set potted_farms_iron potted_farms_damage 249
+scoreboard players set potted_farms_diamond potted_farms_damage 1560
+scoreboard players set potted_farms_netherite potted_farms_damage 2030
+
+schedule function potted_farms:check_wood 30s replace
+schedule function potted_farms:check_stone 25s replace
+schedule function potted_farms:check_iron 20s replace
+schedule function potted_farms:check_diamond 15s replace
+schedule function potted_farms:check_netherite 10s replace
+schedule function potted_farms:check_gold 5s replace

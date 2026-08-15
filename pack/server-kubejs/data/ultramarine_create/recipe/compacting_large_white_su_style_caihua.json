@@ -1,0 +1,33 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "ultramarine:polished_planks"
+    },
+    {
+      "item": "ultramarine:yellow_dye_powder"
+    },
+    {
+      "item": "ultramarine:blue_dye_powder"
+    },
+    {
+      "tag": "c:dyes/white"
+    },
+    {
+      "tag": "c:dyes/white"
+    },
+    {
+      "item": "ultramarine:caihua_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:large_white_su_style_caihua"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:caihua_template"
+    }
+  ]
+}

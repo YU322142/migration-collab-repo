@@ -1,0 +1,1 @@
+{"schemaVersion":1,"id":"mr_potted_farms","version":"1.1.1","name":"Potted Farms","description":"Build potted farms that harvest trees and other growables.","authors":["Pepsied"],"contact":{"homepage":"https://modrinth.com/datapack/potted-farms"},"license":"MIT","icon":"potted-farms_pack.png","environment":"*","depends":{"fabric-resource-loader-v0":"*"}}

@@ -1,0 +1,1052 @@
+{
+  "schema": 1,
+  "status": "UNPUBLISHED_NONDEPLOYABLE_DRAFT",
+  "bundle_revision": "candidate14-r3",
+  "manifest_url": null,
+  "catalog_version": null,
+  "derived_catalog_version": "candidate14-r3-20260812-66778b3f91842d0a",
+  "resolved_entries": [
+    {
+      "file": "appleskin-neoforge-mc1.21-3.0.9.jar",
+      "bytes": 75804,
+      "sha256": "38B48DD6231341C9F964CE6E42C57EC866C6CC8F72BEC938390A59BAFB3922DF",
+      "md5": "db5fe7619d502cf5b9bc972a955cd3bc",
+      "mod_ids": [
+        "appleskin"
+      ],
+      "catalog_mod_id_hint": "appleskin",
+      "version_hint": "",
+      "display_name_hint": "AppleSkin",
+      "component": "appleskin-neoforge-mc1.21-3.0.9",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "recommended_but_locked_required_for_first_release",
+      "operational_note": "client food/HUD convenience"
+    },
+    {
+      "file": "architectury-13.0.11-neoforge.jar",
+      "bytes": 584734,
+      "sha256": "9CC92F2C09533FC5482C60F993BD891C655A0E32B637037CDCB7C2B23ADEDEEB",
+      "md5": "aefbea361809755c331126bcff6e6d3e",
+      "mod_ids": [
+        "architectury"
+      ],
+      "catalog_mod_id_hint": "architectury",
+      "version_hint": "13.0.11",
+      "display_name_hint": "Architectury",
+      "component": "Architectury",
+      "bundle_role": "support",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "backport-1.5.jar",
+      "bytes": 15301451,
+      "sha256": "167534C66D5E6C09DCB01152EBD37D18CED5CF6278A9228C094F937886133AF5",
+      "md5": "293e6e264354a2b383719146638b8d29",
+      "mod_ids": [
+        "backport"
+      ],
+      "catalog_mod_id_hint": "backport",
+      "version_hint": "1.5",
+      "display_name_hint": "Content Backport",
+      "component": "Content Backport",
+      "bundle_role": "support",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "barched-neoforge-0.0.12-migration.1-asm.jar",
+      "bytes": 1829478,
+      "sha256": "CD93249FA802559886BE89F359E69DAEF1F38919F4B376B88BA1E2CE78F1BD4B",
+      "md5": "6abad54dfbb3dd13f5516f7d2dcb5831",
+      "mod_ids": [
+        "barched"
+      ],
+      "catalog_mod_id_hint": "barched",
+      "version_hint": "0.0.12",
+      "display_name_hint": "Barched",
+      "component": "Barched",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "cc-tweaked-1.21.1-forge-1.120.0.jar",
+      "bytes": 3126946,
+      "sha256": "81A903710D109D129C249C105695A96F4BAD5E0ACF7068920FB191BA791C14CE",
+      "md5": "ae82127d8f0a8575875032f1da354561",
+      "mod_ids": [
+        "computercraft"
+      ],
+      "catalog_mod_id_hint": "computercraft",
+      "version_hint": "1.120.0",
+      "display_name_hint": "CC: Tweaked",
+      "component": "cc-tweaked-1.21.1-forge-1.120.0",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "cctweaked-startup-shutdown-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar",
+      "bytes": 3919,
+      "sha256": "6744626E2B43643E9F28C9159FABD7A6A53CDCDEB83AE8252C266F7E987F84F7",
+      "md5": "31a086161c0f054197078bb2a4d015c9",
+      "mod_ids": [
+        "cctweaked_startup_guard"
+      ],
+      "catalog_mod_id_hint": "cctweaked_startup_guard",
+      "version_hint": "1.0.0+neoforge.1.21.1-equivalence.1",
+      "display_name_hint": "CC Tweaked Startup and Shutdown Guard",
+      "component": "CC:Tweaked startup and shutdown guard",
+      "bundle_role": "compatibility_guard",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "chest-colorizer-1.6.1-equivalence.2+mc1.21.1-neoforge.jar",
+      "bytes": 150133,
+      "sha256": "9CEF2FAC6BD959202E37882B941EBC51A1ED7A4259441D3B41372971FD04F6D8",
+      "md5": "057836f554e603fa4c6f97fc4669056b",
+      "mod_ids": [
+        "colorizer"
+      ],
+      "catalog_mod_id_hint": "colorizer",
+      "version_hint": "1.6.1-equivalence.2+mc1.21.1",
+      "display_name_hint": "Chest Colorizer",
+      "component": "Chest Colorizer",
+      "bundle_role": "candidate",
+      "side": "client",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "recommended_but_locked_required_for_first_release",
+      "operational_note": "client chest-color display convenience"
+    },
+    {
+      "file": "cloth-config-15.0.140-neoforge.jar",
+      "bytes": 1163890,
+      "sha256": "65E722E0D98431A07C45F8BDD8D529A217CC8C175FDE1740248BD5C1B4F3C0D4",
+      "md5": "4c3757160403fcccb8ad468c2ea22862",
+      "mod_ids": [
+        "cloth_config"
+      ],
+      "catalog_mod_id_hint": "cloth_config",
+      "version_hint": "15.0.140",
+      "display_name_hint": "Cloth Config v15 API",
+      "component": "Cloth Config",
+      "bundle_role": "support",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "connector-2.0.0-beta.16+1.21.1-full.jar",
+      "bytes": 4533093,
+      "sha256": "ED805A4DF711ADA58ED66AC2F1A30233EEB4E83C364BC4F16CD77F89A5BC5628",
+      "md5": "d044303cec7ab551e41c09456e12f508",
+      "mod_ids": [],
+      "catalog_mod_id_hint": "",
+      "version_hint": "",
+      "display_name_hint": "connector-2.0.0-beta.16+1.21.1-full",
+      "component": "connector-2.0.0-beta.16+1.21.1-full",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "create-1.21.1-6.0.10.jar",
+      "bytes": 19123767,
+      "sha256": "EF87FE5709F1BA1F5B8BB20A2925B5AFB4669E178FD6D8BF10C167759EEFE37A",
+      "md5": "179189c52b45a469e683570be4e77188",
+      "mod_ids": [
+        "create"
+      ],
+      "catalog_mod_id_hint": "create",
+      "version_hint": "6.0.10",
+      "display_name_hint": "Create",
+      "component": "Create",
+      "bundle_role": "support",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "create-chute-unload-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar",
+      "bytes": 4018,
+      "sha256": "AC51AEFDDA8437D777B5C8B3E285E9036676D854F7958C6B882807C15BE0910A",
+      "md5": "b0060297b22c5b49cd6a3ed96758a7d6",
+      "mod_ids": [
+        "create_chute_unload_guard"
+      ],
+      "catalog_mod_id_hint": "create_chute_unload_guard",
+      "version_hint": "1.0.0+neoforge.1.21.1-equivalence.1",
+      "display_name_hint": "Create Chute Unload Guard",
+      "component": "Create chute unload guard",
+      "bundle_role": "compatibility_guard",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "create-dynamic-blocking-1.0.0+neoforge.1.21.1-equivalence.1.jar",
+      "bytes": 12258,
+      "sha256": "8BC10C4B4949ED701F131FF36CCCE64DA2A817C13DFDD3838CFAC7512836ACED",
+      "md5": "694c0fa94a39078ec75067864932db1f",
+      "mod_ids": [
+        "create_dynamic_blocking"
+      ],
+      "catalog_mod_id_hint": "create_dynamic_blocking",
+      "version_hint": "1.0.0+neoforge.1.21.1-equivalence.1",
+      "display_name_hint": "Create: Dynamic Blocking",
+      "component": "Create Dynamic Blocking",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "create-enchantment-industry-2.5.1.jar",
+      "bytes": 1573096,
+      "sha256": "0D27024C0F8E94261689EB198D96003BA5A1697D4478B41E298BCA707CEAE988",
+      "md5": "32296efe8fe8b3ff942c6f3b16dba642",
+      "mod_ids": [
+        "create_enchantment_industry"
+      ],
+      "catalog_mod_id_hint": "create_enchantment_industry",
+      "version_hint": "2.5.1",
+      "display_name_hint": "Create: Enchantment Industry",
+      "component": "create-enchantment-industry-2.5.1",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "create-nerfad-1.2.3-neoforge+mc1.21.1.jar",
+      "bytes": 13933,
+      "sha256": "3AA4E8FC9DB8BABE4C4487E94B88E182A59656DCA08BC3BDE0A1B46E53D20422",
+      "md5": "d1217a582c9642c5d02b8790755dbda3",
+      "mod_ids": [
+        "create_nerfad"
+      ],
+      "catalog_mod_id_hint": "create_nerfad",
+      "version_hint": "1.1.0",
+      "display_name_hint": "Create: Not Enough Recipes For A Dummy",
+      "component": "Create NERFAD",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "CreateCyberGoggles-1.21.1-8.3.6-NeoForge.jar",
+      "bytes": 672590,
+      "sha256": "F8295C0707B515A5840B5534086C5FFC7716FF332ECA5949B721452487D84614",
+      "md5": "2b25a50b10e0c3fae586e4dc330ad414",
+      "mod_ids": [
+        "create_cyber_goggles"
+      ],
+      "catalog_mod_id_hint": "create_cyber_goggles",
+      "version_hint": "8.3.6",
+      "display_name_hint": "Create: Cyber Goggles",
+      "component": "CreateCyberGoggles-1.21.1-8.3.6-NeoForge",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "CreateDragonsPlus-1.11.4.jar",
+      "bytes": 1029344,
+      "sha256": "80687F22DAA95FA6240631097688F1E0295A5D31473D9AA56A14D360D863E98B",
+      "md5": "e3b66c1ffa852fcf4297ad9fb423c39b",
+      "mod_ids": [
+        "create_dragons_plus"
+      ],
+      "catalog_mod_id_hint": "create_dragons_plus",
+      "version_hint": "1.11.4",
+      "display_name_hint": "Create: Dragons Plus",
+      "component": "CreateDragonsPlus-1.11.4",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "cyclopscore-1.21.1-neoforge-1.29.2.jar",
+      "bytes": 1161287,
+      "sha256": "C8A3FA04CD3C9E3EFB903C0A7C79E8F4FEC5CB6E30F5B858ABA9236ED59021A6",
+      "md5": "ede3aa664acb2c5f67e2a8aaec5f1b62",
+      "mod_ids": [
+        "cyclopscore"
+      ],
+      "catalog_mod_id_hint": "cyclopscore",
+      "version_hint": "1.29.2",
+      "display_name_hint": "Cyclops Core",
+      "component": "cyclopscore-1.21.1-neoforge-1.29.2",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "deferred-content-protection-1.0.0+neoforge.1.21.1-first-release.1.jar",
+      "bytes": 23338,
+      "sha256": "1C7C4B2A76978C563C18EE05ABA9292099E6B15BA920CF2699904068F0B1104B",
+      "md5": "a366b8da9ab0fb83e079c715f6ad8c0f",
+      "mod_ids": [
+        "deferred_content_protection"
+      ],
+      "catalog_mod_id_hint": "deferred_content_protection",
+      "version_hint": "1.0.0+neoforge.1.21.1-first-release.1",
+      "display_name_hint": "Deferred Content Protection",
+      "component": "deferred content protection",
+      "bundle_role": "candidate14_addition",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "fabric-language-kotlin-1.13.13+kotlin.2.4.10.jar",
+      "bytes": 8076363,
+      "sha256": "34CCDACF13BB9351FE43CE61912C2E09B72364E43E787D36BA3D2D04DEC75A52",
+      "md5": "b70470268be8c74a10e10b24a2bf7df6",
+      "mod_ids": [
+        "fabric-language-kotlin"
+      ],
+      "catalog_mod_id_hint": "fabric-language-kotlin",
+      "version_hint": "1.13.13+kotlin.2.4.10",
+      "display_name_hint": "Fabric Language Kotlin",
+      "component": "fabric-language-kotlin-1.13.13+kotlin.2.4.10",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "ferritecore-7.0.3-neoforge.jar",
+      "bytes": 121559,
+      "sha256": "D87EA28262715EBFF45B8A82D493E6B468E7A4521BC021DF5D88302196D030A8",
+      "md5": "e0374dac41d6c641903f9e241911e1d3",
+      "mod_ids": [
+        "ferritecore"
+      ],
+      "catalog_mod_id_hint": "ferritecore",
+      "version_hint": "7.0.3",
+      "display_name_hint": "Ferrite Core",
+      "component": "ferritecore-7.0.3-neoforge",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "recommended_but_locked_required_for_first_release",
+      "operational_note": "memory optimization"
+    },
+    {
+      "file": "ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar",
+      "bytes": 633065,
+      "sha256": "2E3A8F0E3BDA85A7D722720E7CE879CBD9D028D9395C6FC224D329B3C982D9B1",
+      "md5": "eba1a7f9d9976e983a2b9eb5e915e087",
+      "mod_ids": [
+        "forgeconfigapiport"
+      ],
+      "catalog_mod_id_hint": "forgeconfigapiport",
+      "version_hint": "21.1.6",
+      "display_name_hint": "Forge Config API Port",
+      "component": "ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "forgified-fabric-api-0.116.15+2.3.1+1.21.1.jar",
+      "bytes": 5590061,
+      "sha256": "B152376A89CF790CA7966DF220F3FA85FB8ECB603225A6A9BDB6684C94944F1E",
+      "md5": "6047fca6d016fcf8ab2812ddd96af61d",
+      "mod_ids": [
+        "fabric_api",
+        "forgified_fabric_api"
+      ],
+      "catalog_mod_id_hint": "fabric_api",
+      "version_hint": "",
+      "display_name_hint": "Forgified Fabric API",
+      "component": "forgified-fabric-api-0.116.15+2.3.1+1.21.1",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "ftb-library-neoforge-2101.1.34.jar",
+      "bytes": 1439001,
+      "sha256": "603E7C9FC8E7020642F2FF6D3A904EF5CB12F7CF8B683C5FF8B08F120D083CFF",
+      "md5": "f169932423af84b27e9526c1db2689fa",
+      "mod_ids": [
+        "ftblibrary"
+      ],
+      "catalog_mod_id_hint": "ftblibrary",
+      "version_hint": "2101.1.34",
+      "display_name_hint": "FTB Library",
+      "component": "ftb-library-neoforge-2101.1.34",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "ftb-ultimine-neoforge-2101.1.15.jar",
+      "bytes": 177109,
+      "sha256": "1393A85CEB6E4794450D5F06043E3A033278E31B86DE8E03950D8B87604B2213",
+      "md5": "93de42bb644fad478ede2cc67d4aac16",
+      "mod_ids": [
+        "ftbultimine"
+      ],
+      "catalog_mod_id_hint": "ftbultimine",
+      "version_hint": "2101.1.15",
+      "display_name_hint": "FTB Ultimine",
+      "component": "ftb-ultimine-neoforge-2101.1.15",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "recommended_but_locked_required_for_first_release",
+      "operational_note": "player convenience feature"
+    },
+    {
+      "file": "fzzy_config-0.7.6+1.21+neoforge.jar",
+      "bytes": 2369895,
+      "sha256": "4E5CC1438087B0BC0276969E88B9AD0BDF2BCC60D6CAF5FE79E18947D7A29050",
+      "md5": "cd0823556e6d24046bd0f4ba74cd4981",
+      "mod_ids": [
+        "fzzy_config"
+      ],
+      "catalog_mod_id_hint": "fzzy_config",
+      "version_hint": "0.7.6+1.21+neoforge",
+      "display_name_hint": "Fzzy Config",
+      "component": "fzzy_config-0.7.6+1.21+neoforge",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "happyghast-equivalence-1.0.0-equivalence.2+mc1.21.1.jar",
+      "bytes": 13270,
+      "sha256": "36C1CE14EE18B81C04654F1A6956F2257B7DEAC07746E960475AAF5C6F25A579",
+      "md5": "aa8a329ebbeb5dd6f0f95ab5f59925b0",
+      "mod_ids": [
+        "happyghast_equivalence"
+      ],
+      "catalog_mod_id_hint": "happyghast_equivalence",
+      "version_hint": "1.0.0-equivalence.2+mc1.21.1",
+      "display_name_hint": "Happy Ghast Equivalence",
+      "component": "Happy Ghast",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "immersive_paintings-neoforge-1.21.1-0.7.8-migration.1.jar",
+      "bytes": 5523583,
+      "sha256": "AF4D838434302FF65F676D3A4BE8682666E0CCF95392FCFFFBE33E00D79D8D86",
+      "md5": "4fb01e589786d663c520d79885cccbbd",
+      "mod_ids": [
+        "immersive_paintings"
+      ],
+      "catalog_mod_id_hint": "immersive_paintings",
+      "version_hint": "0.7.8",
+      "display_name_hint": "Immersive Paintings",
+      "component": "immersive_paintings-neoforge-1.21.1-0.7.8",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "Jade-1.21.1-NeoForge-15.10.6.jar",
+      "bytes": 726853,
+      "sha256": "276F1F65A20D04F536989C4F311949D770B52C440C23C2B904A08860F3C93810",
+      "md5": "67b89f182472859d1e478477716c9462",
+      "mod_ids": [
+        "jade"
+      ],
+      "catalog_mod_id_hint": "jade",
+      "version_hint": "",
+      "display_name_hint": "Jade",
+      "component": "Jade-1.21.1-NeoForge-15.10.6",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "recommended_but_locked_required_for_first_release",
+      "operational_note": "client information overlay"
+    },
+    {
+      "file": "jei-1.21.1-neoforge-19.43.0.393.jar",
+      "bytes": 1685121,
+      "sha256": "088C583065DB05ABEEDCA7868B619D22E204BCD73AAFE7736B9EB79BCBB67C8A",
+      "md5": "ff4901b8ddf3a4a0ae4e72c6aae2da5d",
+      "mod_ids": [
+        "jei"
+      ],
+      "catalog_mod_id_hint": "jei",
+      "version_hint": "19.43.0.393",
+      "display_name_hint": "Just Enough Items",
+      "component": "jei-1.21.1-neoforge-19.43.0.393",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "recommended_but_locked_required_for_first_release",
+      "operational_note": "client recipe viewer"
+    },
+    {
+      "file": "journeymap-neoforge-1.21.1-6.0.3.jar",
+      "bytes": 4156889,
+      "sha256": "D20006D674B577F352C813AC0864581597F38F03BDC8CBD4D1F2501CF95F3B0A",
+      "md5": "058b722b2d6ed5419f45bcce65ac1d51",
+      "mod_ids": [
+        "journeymap",
+        "journeymap-wrongloader"
+      ],
+      "catalog_mod_id_hint": "journeymap-wrongloader",
+      "version_hint": "not a fabric mod",
+      "display_name_hint": "Journeymap-NeoForge",
+      "component": "journeymap-neoforge-1.21.1-6.0.3",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "recommended_but_locked_required_for_first_release",
+      "operational_note": "client map interface"
+    },
+    {
+      "file": "kaleidoscope-cookery-scarecrow-compat-1.0.0+neoforge.1.21.1-candidate13.1.jar",
+      "bytes": 4453,
+      "sha256": "E06FCFEA1FF76FB22EAD50964C18F22657971E42B6E82F0A2FE844C2F048B463",
+      "md5": "e396bcde22a1f2b6b9a3b2e0bba3f765",
+      "mod_ids": [
+        "kaleidoscope_cookery_scarecrow_compat"
+      ],
+      "catalog_mod_id_hint": "kaleidoscope_cookery_scarecrow_compat",
+      "version_hint": "1.0.0+neoforge.1.21.1-candidate13.1",
+      "display_name_hint": "Kaleidoscope Cookery Scarecrow Legacy NBT Compatibility",
+      "component": "scarecrow legacy NBT compat",
+      "bundle_role": "candidate14_addition",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "kaleidoscope-nether-equivalence-backport-1.1.9-equivalence.3+mc1.21.1.jar",
+      "bytes": 26632,
+      "sha256": "AD022124989BA50FB1B95D58BA7AD2F9FC525A356108307EACE169F2850E2E34",
+      "md5": "02da657f10a3691d38800baa535b7ccd",
+      "mod_ids": [
+        "kaleidoscope_nether_equivalence"
+      ],
+      "catalog_mod_id_hint": "kaleidoscope_nether_equivalence",
+      "version_hint": "1.1.9-equivalence.3+mc1.21.1",
+      "display_name_hint": "Kaleidoscope Nether 1.21.11 Equivalence Backport",
+      "component": "Kaleidoscope Nether equivalence overlay",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "kaleidoscope_end-1.0.14-migration.7-neoforge+mc1.21.1.jar",
+      "bytes": 480536,
+      "sha256": "E03A7DBA3A67768C35F3CA1C0B47892CAF4A972F8362D27FF62675C7555A11BC",
+      "md5": "39229f02068762c1e26092d68ba5b751",
+      "mod_ids": [
+        "kaleidoscope_end"
+      ],
+      "catalog_mod_id_hint": "kaleidoscope_end",
+      "version_hint": "1.0.14-migration.7-neoforge+mc1.21.1",
+      "display_name_hint": "Kaleidoscope End",
+      "component": "Kaleidoscope End",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "kaleidoscope_nether-1.1.2-neoforge+mc1.21.1.jar",
+      "bytes": 1018826,
+      "sha256": "4698B09F9A3EDD84AB37A9506C3B88C7B59E947B21AE894C477998421335FFB6",
+      "md5": "0dc3631c02ec02673812651c43157328",
+      "mod_ids": [
+        "kaleidoscope_nether"
+      ],
+      "catalog_mod_id_hint": "kaleidoscope_nether",
+      "version_hint": "1.1.2-neoforge+mc1.21.1",
+      "display_name_hint": "Kaleidoscope Nether",
+      "component": "Kaleidoscope Nether base",
+      "bundle_role": "support",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
+      "bytes": 5574913,
+      "sha256": "A061FB1E953AD815144304F7567B30876DBBC07B8565069871771F0AAEB63D3F",
+      "md5": "e83a09214b5f548dc283a8acd4757a96",
+      "mod_ids": [
+        "kaleidoscope_cookery"
+      ],
+      "catalog_mod_id_hint": "kaleidoscope_cookery",
+      "version_hint": "1.4.1.7-migration.3-neoforge+mc1.21.1",
+      "display_name_hint": "Kaleidoscope Cookery",
+      "component": "Kaleidoscope Cookery",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "kaleidoscopetavern-1.2.0-neoforge+mc1.21.1.jar",
+      "bytes": 1838499,
+      "sha256": "90D08D87EA9FF6341EEB371CB95BD82CD613FBC34326BC8D1723F598CA9B957B",
+      "md5": "20e2852151e8020c313c16635da629f0",
+      "mod_ids": [
+        "kaleidoscope_tavern"
+      ],
+      "catalog_mod_id_hint": "kaleidoscope_tavern",
+      "version_hint": "1.2.0-neoforge+mc1.21.1",
+      "display_name_hint": "Kaleidoscope Tavern",
+      "component": "Kaleidoscope Tavern",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "kotlinforforge-5.12.0-all.jar",
+      "bytes": 7279264,
+      "sha256": "2785A4DD6DE5C6C56065FD8EB789C82771BD2EE773C30794C23160A3B2C39139",
+      "md5": "93ec434c7112952f0501211a992538b9",
+      "mod_ids": [],
+      "catalog_mod_id_hint": "",
+      "version_hint": "",
+      "display_name_hint": "kotlinforforge-5.12.0-all",
+      "component": "kotlinforforge-5.12.0-all",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "lithium-neoforge-0.15.4+mc1.21.1.jar",
+      "bytes": 774220,
+      "sha256": "488F33216030C1CB0BAA33E59DE3D657D08D5795A6C2080C8C8BBBC133FC8757",
+      "md5": "969860e6a6ebe4dc2e2154b56f05483e",
+      "mod_ids": [
+        "lithium"
+      ],
+      "catalog_mod_id_hint": "lithium",
+      "version_hint": "0.15.4+mc1.21.1",
+      "display_name_hint": "Lithium",
+      "component": "lithium-neoforge-0.15.4+mc1.21.1",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "recommended_but_locked_required_for_first_release",
+      "operational_note": "performance optimization"
+    },
+    {
+      "file": "MCModSync-1.9.1.jar",
+      "sha256": "2DD2BEC977B8669D0EF6C90FC54A06021DC0998E903B583517052B1B5CDA25AA",
+      "md5": "496dc7ba7cde3405d59b1e668a6a29f1",
+      "catalog_mod_id_hint": "mcmodsync",
+      "display_name_hint": "MCModSync",
+      "version_hint": "1.9.1"
+    },
+    {
+      "file": "migration-resource-overlay-1.2.0+mc1.21.1-candidate13.jar",
+      "bytes": 43980,
+      "sha256": "BCCB7D7CF8019D8895A081D563E578712D7CDF93DA0AD9EAFB31067439C62862",
+      "md5": "cbc019e7748e92c47825ad0e8d1d99de",
+      "mod_ids": [
+        "migration_resource_overlay"
+      ],
+      "catalog_mod_id_hint": "migration_resource_overlay",
+      "version_hint": "1.2.0+mc1.21.1-candidate13",
+      "display_name_hint": "Migration Resource Error Overlay",
+      "component": "Resource Error Overlay",
+      "bundle_role": "replacement",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "mineastr-0.6.25.jar",
+      "bytes": 258008,
+      "sha256": "0809500F1993861B1F217D6FED89B68E3094396E853B29E9CF9BDD0C9CE0B787",
+      "md5": "152f7e32383e8e130fdab715b88fd516",
+      "mod_ids": [
+        "mineastr"
+      ],
+      "catalog_mod_id_hint": "mineastr",
+      "version_hint": "0.6.25",
+      "display_name_hint": "MineAstr",
+      "component": "MineAstr",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "mishanguc-1.6.1-1.21.1-migration.1.jar",
+      "bytes": 6544920,
+      "sha256": "4FE5146CCC01DBB30BFD1D2FFE4CAEAF590E7F24F5D8159028E1865EAA8625DD",
+      "md5": "1356e6255ee99d54d96a622bcdd49364",
+      "mod_ids": [
+        "mishanguc"
+      ],
+      "catalog_mod_id_hint": "mishanguc",
+      "version_hint": "1.6.1",
+      "display_name_hint": "Mishang Urban Construction",
+      "component": "Mishang UC base migration.1",
+      "bundle_role": "support",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "mishanguc-pale-oak-equivalence-backport-1.6.3-beta.5-equivalence.1+mc1.21.1.jar",
+      "bytes": 130621,
+      "sha256": "1E378D0DD82F7858ECA36AE28FBB26B8A9A93B77DDA31EAD5A48BCEB043FF6C4",
+      "md5": "4170e1a157ac2ddeb2bad223d9c4047f",
+      "mod_ids": [
+        "mishanguc_pale_oak_equivalence"
+      ],
+      "catalog_mod_id_hint": "mishanguc_pale_oak_equivalence",
+      "version_hint": "1.6.3-beta.5-equivalence.1+mc1.21.1",
+      "display_name_hint": "Mishang UC Pale Oak Equivalence Backport",
+      "component": "Mishang UC Pale Oak overlay",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "nautilus-equivalence-0.1.0-equivalence.2+mc1.21.1.jar",
+      "bytes": 2108502,
+      "sha256": "01EBD831AC5D12D60965168EE10887FB9DE81CE660341F420D0C51E9A1E33415",
+      "md5": "fd90ffa6572b95b813eed348059a0312",
+      "mod_ids": [
+        "nautilus_equivalence"
+      ],
+      "catalog_mod_id_hint": "nautilus_equivalence",
+      "version_hint": "0.1.0-equivalence.2+mc1.21.1",
+      "display_name_hint": "Nautilus Equivalence",
+      "component": "Nautilus",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "noisium-neoforge-2.3.0+mc1.21-1.21.1.jar",
+      "bytes": 60296,
+      "sha256": "E95209D593BC00D7C5DE94F746FFD1DFBFA70AC8FBE938393EF930D00416109C",
+      "md5": "caaf072f2e2c6261b37b8359ef8631b1",
+      "mod_ids": [
+        "noisium"
+      ],
+      "catalog_mod_id_hint": "noisium",
+      "version_hint": "2.3.0+mc1.21-1.21.1",
+      "display_name_hint": "Noisium",
+      "component": "noisium-neoforge-2.3.0+mc1.21-1.21.1",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "recommended_but_locked_required_for_first_release",
+      "operational_note": "world-generation performance optimization"
+    },
+    {
+      "file": "potted-farms-1.1.1-equivalence3.jar",
+      "bytes": 679546,
+      "sha256": "3E58A5C5CF33DE59DA08B175867C482CAD6D0BEBFAF5B07F6D5653646D74BA41",
+      "md5": "40593f09b4d62d79d62c96881b2ba6a6",
+      "mod_ids": [
+        "mr_potted_farms"
+      ],
+      "catalog_mod_id_hint": "mr_potted_farms",
+      "version_hint": "1.1.1",
+      "display_name_hint": "Potted Farms",
+      "component": "Potted Farms",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "respawn-pitch-compat-1.0.0+mc1.21.1.jar",
+      "bytes": 49767,
+      "sha256": "FD71D70CEFAC0D4068DF854D856D612E1103AECD38C0321F195D729D4042A5A9",
+      "md5": "a1569de06e1086dfe79cbb1b2ad4b33e",
+      "mod_ids": [
+        "respawn_pitch_compat"
+      ],
+      "catalog_mod_id_hint": "respawn_pitch_compat",
+      "version_hint": "1.0.0+mc1.21.1",
+      "display_name_hint": "Respawn Pitch Compatibility",
+      "component": "Respawn Pitch",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "spark-1.10.124-neoforge.jar",
+      "bytes": 3642581,
+      "sha256": "647E8A81AFBE414DBA1DF4BA15FD06C5D32D4CB544E68828405E8E074C2E16DB",
+      "md5": "a61dd250e618f8fd62fc6b0943831c50",
+      "mod_ids": [
+        "spark"
+      ],
+      "catalog_mod_id_hint": "spark",
+      "version_hint": "1.10.124",
+      "display_name_hint": "spark",
+      "component": "spark-1.10.124-neoforge",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "recommended_but_locked_required_for_first_release",
+      "operational_note": "profiling and operations utility"
+    },
+    {
+      "file": "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+      "bytes": 207514,
+      "sha256": "D2BA7B839A2268E4E223457E813D11AA2476C3BF708A7BBA691D8FC851778A4B",
+      "md5": "0428149c5db7bad43d75e6f758f47678",
+      "mod_ids": [
+        "supermartijn642configlib"
+      ],
+      "catalog_mod_id_hint": "supermartijn642configlib",
+      "version_hint": "1.1.8",
+      "display_name_hint": "SuperMartijn642's Config Library",
+      "component": "supermartijn642configlib-1.1.8-neoforge-mc1.21",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "toms_storage-neoforge-1.21.1-2.4.1-perf5.2.jar",
+      "bytes": 929241,
+      "sha256": "29DB765C7EB8D91DBA017CB108D1B7619E845816FDFADBB0E64BF2CCFD6A801B",
+      "md5": "186e63c3b4a13f1ccb94039239f13d0f",
+      "mod_ids": [
+        "toms_storage"
+      ],
+      "catalog_mod_id_hint": "toms_storage",
+      "version_hint": "2.4.1-perf5.2",
+      "display_name_hint": "Tom's Simple Storage Mod - Unofficial Stability Fork",
+      "component": "Tom's Simple Storage",
+      "bundle_role": "candidate",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "voicechat-neoforge-1.21.1-2.6.21.jar",
+      "bytes": 4913870,
+      "sha256": "901C4917960CE975CECC9A39C15D32C22BEABC23ED3C36F0CE75DF5A6CDD9366",
+      "md5": "844544bf50ac62335a12283461e0a78c",
+      "mod_ids": [
+        "voicechat",
+        "voicechat_api"
+      ],
+      "catalog_mod_id_hint": "voicechat",
+      "version_hint": "1.21.1-2.6.21",
+      "display_name_hint": "Simple Voice Chat",
+      "component": "voicechat-neoforge-1.21.1-2.6.21",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "waypoint-fire-equivalence-0.1.1+mc1.21.1.jar",
+      "bytes": 44651,
+      "sha256": "86A85C0447315AC17D373E3708425CEB8450D9D0CB1FD9C7ABDC82CE8D8E5B92",
+      "md5": "9cb1b093496e35d294c739b79ddde31a",
+      "mod_ids": [
+        "waypoint_fire_equivalence"
+      ],
+      "catalog_mod_id_hint": "waypoint_fire_equivalence",
+      "version_hint": "0.1.1+mc1.21.1",
+      "display_name_hint": "Waypoint and Fire Rule Equivalence",
+      "component": "Waypoint Fire command-tree serialization fix",
+      "bundle_role": "replacement",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "WoolToString-NeoForge-1.21.1.jar",
+      "bytes": 31679,
+      "sha256": "8895A0CE6754C0B74527C356E1C93C0423DFD72FF7644BEB59F7BD3F02D46EF1",
+      "md5": "17e05940e5d39396ef106b8e882e32a4",
+      "mod_ids": [
+        "wool_to_string"
+      ],
+      "catalog_mod_id_hint": "wool_to_string",
+      "version_hint": "3.0.0",
+      "display_name_hint": "Wool To String",
+      "component": "WoolToString-NeoForge-1.21.1",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "xiyuslogin-1.4-migration4.jar",
+      "bytes": 170065,
+      "sha256": "703E01B84558EA9AFE28E82B0FB67C12DC09BA2936DE70939F52759C52D2E998",
+      "md5": "a0c916feecf47426e577eb69f07d40ba",
+      "mod_ids": [
+        "xiyuslogin"
+      ],
+      "catalog_mod_id_hint": "xiyuslogin",
+      "version_hint": "1.4-migration4",
+      "display_name_hint": "XiyusLogin",
+      "component": "XiyusLogin",
+      "bundle_role": "replacement",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    },
+    {
+      "file": "yuushya-1.21.0-neoforge-2.3.0.jar",
+      "bytes": 28197448,
+      "sha256": "C410C51E1ECDD9D3FF55EB34B84D71DA761A8990EC0993A766C9BA40E8C360E8",
+      "md5": "e9a8e2005bb8556b9b1dfb45d5f930ed",
+      "mod_ids": [
+        "yuushya"
+      ],
+      "catalog_mod_id_hint": "yuushya",
+      "version_hint": "2.3.0",
+      "display_name_hint": "Yuushya",
+      "component": "yuushya-1.21.0-neoforge-2.3.0",
+      "bundle_role": "baseline",
+      "side": "both",
+      "first_release_deployment": "required_exact_candidate14_r3",
+      "first_ota_kind": "required",
+      "operational_tier": "must",
+      "operational_note": "part of the locked first-release runtime or its dependency/data-safety closure"
+    }
+  ],
+  "unresolved_entries": [
+    {
+      "file": "MCModSync-Config.jar",
+      "mod_id": "mcmodsync_config",
+      "reason": "content and hashes depend on the not-yet-supplied production HTTPS manifest URL"
+    }
+  ],
+  "expected_final_entries": 56,
+  "first_catalog_kind": "required_for_every_entry"
+}

@@ -1,0 +1,37 @@
+{
+  "_comment": "Creative Tab Name",
+  "itemGroup.structurecompass": "结构指南针",
+
+  "_comment": "Screen",
+  "structurecompass.screen.selection.title": "选择结构",
+  "structurecompass.screen.selection.select": "选择",
+  "structurecompass.screen.selection.selected": "已选择结构，右键点击指南针以定位",
+  "structurecompass.screen.search": "搜索",
+  "structurecompass.screen.search.a_to_z": "A-Z",
+  "structurecompass.screen.search.z_to_a": "Z-A",
+
+  "_comment": "Item names",
+  "item.structurecompass.structure_compass": "结构指南针",
+
+  "_comment": "Messages",
+  "structurecompass.locate.invalid": "绑定的结构无效。请重新绑定",
+  "structurecompass.locate.fail": "附近未找到绑定的结构",
+  "structurecompass.locate.distance": "绑定的结构距离%s格",
+  "structurecompass.locate.toggled": "结构指南针HUD已%s",
+
+  "_comment": "tooltips",
+  "structurecompass.structure.locating": "正在尝试定位%s，请稍候……",
+  "structurecompass.structure.found": "已定位到%s，距离%s格，指南针正指向该结构",
+  "structurecompass.structure.found.tooltip": "已定位到%s，指南针正指向该结构",
+  "structurecompass.structure.failed": "在%s格半径内无法定位到%s。请进一步探索后重试",
+  "structurecompass.structure.failed.tooltip": "无法定位到%s，请稍后重试",
+  "structurecompass.structure.wrong_dimension.tooltip": "你不在%s所在的维度中",
+  "structurecompass.structure.unset.tooltip": "未设置结构，潜行右键点击以选择结构",
+
+  "_comment": "keybinds",
+  "category.structurecompass.main": "结构指南针",
+  "key.structurecompass.hide": "隐藏结构指南针HUD",
+
+  "_comment": "networking",
+  "structurecompass.networking.set_structure.failed": "设置结构失败：%s"
+}

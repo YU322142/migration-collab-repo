@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.crabmod.hotbath.audit.HotBathTriggerRegistrationContractTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-08-14T05:13:00" hostname="DESKTOP-E91SCDG" time="0.06">
+  <properties/>
+  <testcase name="everyZipEntryCanBeReadAndHasNoDuplicateName()" classname="com.crabmod.hotbath.audit.HotBathTriggerRegistrationContractTest" time="0.018"/>
+  <testcase name="advancementJsonStillTargetsTheSameFourTriggerIds()" classname="com.crabmod.hotbath.audit.HotBathTriggerRegistrationContractTest" time="0.004"/>
+  <testcase name="advancementRegistrationIsGuardedAndPreservesAllFourIds()" classname="com.crabmod.hotbath.audit.HotBathTriggerRegistrationContractTest" time="0.012"/>
+  <testcase name="jarKeepsGameplayResourcesAndAllClassNames()" classname="com.crabmod.hotbath.audit.HotBathTriggerRegistrationContractTest" time="0.019"/>
+  <testcase name="oneCompleteRegistryPassRegistersEachTriggerExactlyOnce()" classname="com.crabmod.hotbath.audit.HotBathTriggerRegistrationContractTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

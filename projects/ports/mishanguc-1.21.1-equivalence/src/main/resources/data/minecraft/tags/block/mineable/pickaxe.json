@@ -1,0 +1,26 @@
+{
+    "replace":  false,
+    "values":  [
+                   "mishanguc:pale_oak_wood_wall_sign",
+                   "mishanguc:stripped_pale_oak_wood_wall_sign",
+                   "mishanguc:pale_oak_wall_sign",
+                   "mishanguc:pale_oak_wood_hung_sign",
+                   "mishanguc:stripped_pale_oak_wood_hung_sign",
+                   "mishanguc:pale_oak_hung_sign",
+                   "mishanguc:pale_oak_hung_sign_bar",
+                   "mishanguc:stripped_pale_oak_hung_sign_bar",
+                   "mishanguc:pale_oak_wood_standing_sign",
+                   "mishanguc:stripped_pale_oak_wood_standing_sign",
+                   "mishanguc:pale_oak_standing_sign",
+                   "mishanguc:simple_pale_oak_handrail",
+                   "mishanguc:simple_pale_oak_handrail_central",
+                   "mishanguc:simple_pale_oak_handrail_corner",
+                   "mishanguc:simple_pale_oak_handrail_stair",
+                   "mishanguc:simple_pale_oak_handrail_outer",
+                   "mishanguc:simple_pale_oak_plank_handrail",
+                   "mishanguc:simple_pale_oak_plank_handrail_central",
+                   "mishanguc:simple_pale_oak_plank_handrail_corner",
+                   "mishanguc:simple_pale_oak_plank_handrail_stair",
+                   "mishanguc:simple_pale_oak_plank_handrail_outer"
+               ]
+}

@@ -1,0 +1,1356 @@
+{
+  "schema": 1,
+  "generated_at_utc": "2026-08-13T09:41:21+00:00",
+  "status": "PASS_STATIC_SIDE_CLASSIFICATION",
+  "scope": {
+    "target_mod_ids": [
+      "byepregen",
+      "efficient_hashing",
+      "fastrecipesearch",
+      "hoporp",
+      "jecharacters",
+      "mousetweaks",
+      "mr_dungeons_andtavernsancientcityoverhaul",
+      "mr_epic_structuresvillages",
+      "mr_lukis_crazychambers",
+      "rhino",
+      "yet_another_config_lib_v3"
+    ],
+    "method": "Local JAR metadata, CRC/SHA, mixin side lists, class-file constant pools, data/assets shape, and reverse dependencies.",
+    "java_or_minecraft_started": false,
+    "release_modified": false,
+    "world_modified": false,
+    "network_used": false
+  },
+  "policy": {
+    "unknown_is_release_blocker": true,
+    "static_classification_does_not_replace_runtime_smoke": true,
+    "pure_data_worldgen_goes_server_only": true,
+    "client_only_gui_mods_are_excluded_from_dedicated_server": true,
+    "both_means_ship_the_same_selected_sha_to_server_and_client": true
+  },
+  "upstream": {
+    "path": "<WORKSPACE>\\outputs\\mechanomania-mod-merge-audit-20260813.json",
+    "sha256": "0D8E800B08E4E61E18A5966FBF06B6E98E328B3CB8E2FFE04FC3FA63A03688B4",
+    "status": "PASS",
+    "pack_instance": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft"
+  },
+  "counts": {
+    "target_mod_ids": 11,
+    "both": 7,
+    "server_only": 1,
+    "client_only": 3,
+    "unknown_fail_closed": 0
+  },
+  "unresolved_mod_ids": [],
+  "classifications": [
+    {
+      "mod_id": "byepregen",
+      "candidate_files": [
+        "byepregen-1.0.0.jar",
+        "byepregen-1.0.7.jar"
+      ],
+      "selected_file": "byepregen-1.0.7.jar",
+      "excluded_candidate_files": [
+        "byepregen-1.0.0.jar"
+      ],
+      "classification": "BOTH",
+      "expected_classification": "BOTH",
+      "server_bundle": true,
+      "client_bundle": true,
+      "rationale": "Selected 1.0.7 has shared/server chunk-generation mixins and separately declared client resource/lighting mixins.",
+      "evidence_gate": "PASS",
+      "evidence_failures": [],
+      "reverse_dependencies": [],
+      "inspection": {
+        "file": "byepregen-1.0.7.jar",
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\byepregen-1.0.7.jar",
+        "bytes": 398774,
+        "sha256": "12C90DA5BA9163202169CF7FDA6E765C8FD5F1E1C5E97D4350DE34366FD62E6D",
+        "archive_crc": "PASS",
+        "entry_count": 222,
+        "class_count": 184,
+        "data_file_count": 0,
+        "asset_file_count": 0,
+        "pure_data_pack": false,
+        "metadata": {
+          "kind": "NEOFORGE_TOML",
+          "file": "META-INF/neoforge.mods.toml",
+          "mod_loader": "javafml",
+          "mod_ids": [
+            "byepregen"
+          ],
+          "dependencies": [
+            {
+              "owner": "byepregen",
+              "mod_id": "neoforge",
+              "type": "required",
+              "mandatory": null,
+              "side": "BOTH",
+              "version_range": "[21,)"
+            },
+            {
+              "owner": "byepregen",
+              "mod_id": "minecraft",
+              "type": "required",
+              "mandatory": null,
+              "side": "BOTH",
+              "version_range": "[1.21.1,1.22)"
+            },
+            {
+              "owner": "byepregen",
+              "mod_id": "noisiumed",
+              "type": "incompatible",
+              "mandatory": null,
+              "side": "BOTH",
+              "version_range": "[0.0.1,)"
+            },
+            {
+              "owner": "byepregen",
+              "mod_id": "noisium",
+              "type": "incompatible",
+              "mandatory": null,
+              "side": "BOTH",
+              "version_range": "[0.0.1,)"
+            },
+            {
+              "owner": "byepregen",
+              "mod_id": "antixray",
+              "type": "incompatible",
+              "mandatory": null,
+              "side": "BOTH",
+              "version_range": "[0.0.1,)"
+            }
+          ],
+          "fabric_environment": null,
+          "display_test": null
+        },
+        "mixins": {
+          "configs": [
+            {
+              "file": "byepregen.mixins.json",
+              "package": "com.moepus.byepregen.mixin",
+              "plugin": "com.moepus.byepregen.MixinPlugin",
+              "common": [
+                "AllOfPredicateMixin",
+                "AnyOfPredicateMixin",
+                "CarvingMaskAccessor",
+                "ChunkAccessArenaMixin",
+                "ChunkHolderAccessor",
+                "ChunkMapAccessor",
+                "ChunkSerializerArenaReadMixin",
+                "ChunkStatusPostProcessingPreNormMixin",
+                "LeavesBlockWorldgenTickMixin",
+                "LevelChunkArenaMixin",
+                "LevelChunkPostProcessMixin",
+                "LevelChunkSectionAccessor",
+                "LevelChunkSectionMixin",
+                "MatchingBlocksPredicateMixin",
+                "GlobalPaletteMixin",
+                "HashMapPaletteMixin",
+                "nbt.CompoundTagFastRuntimeMixin",
+                "nbt.CompoundTagLoadSizingMixin",
+                "PalettedContainerMixin",
+                "PalettedContainerNoLithiumMixin",
+                "LinearPaletteMixin",
+                "PlacedFeatureMixin",
+                "PlacementModifierMixin",
+                "SingleValuePaletteMixin",
+                "ServerChunkCacheTickChunksMixin",
+                "ServerLevelWeatherTickMixin",
+                "StateTestingPredicateMixin",
+                "WorldGenRegionSectionCacheMixin",
+                "accessor.ArchitecturyEventImplAccessor",
+                "accessor.BlendingDataAccessor",
+                "accessor.ChunkStorageAccessor",
+                "accessor.ClassInstanceMultiMapAccessor",
+                "accessor.EntitySectionAccessor",
+                "accessor.EntitySectionStorageAccessor",
+                "accessor.IOWorkerPendingStoreAccessor",
+                "accessor.NaturalSpawnerAccessor",
+                "accessor.NaturalSpawnerSpawnStateAccessor",
+                "accessor.PersistentEntitySectionManagerAccessor",
+                "accessor.RegionFileStorageAccessor",
+                "accessor.ServerLevelEntityManagerAccessor",
+                "accessor.ServerChunkCacheAccessor",
+                "accessor.StructurePieceSaveAccessor",
+                "accessor.CompoundTagAccessor",
+                "ServerChunkCacheGetChunkMixin",
+                "compat.C2MEHookCompatibilityMixin",
+                "compat.C2MEServerBlockTickingMixin",
+                "compat.FastNoiseFastBiomeGenMixin",
+                "compat.FastNoiseFastChunkSectionMixin",
+                "compat.LithiumHashPaletteMixin",
+                "compat.SableNaturalSpawnerMixin",
+                "compat.VoxyWorldConversionFactoryMixin",
+                "gcfree.ChunkMapGcFreeSaveMixin",
+                "gcfree.ChunkSerializerWorldgenStateMixin",
+                "gcfree.ChunkStorageRawMixin",
+                "gcfree.IOWorkerRawMixin",
+                "gcfree.LevelChunkWorldgenStateMixin",
+                "yalight.ChunkSerializerYALightMixin",
+                "yalight.ChunkAccessYALightDataMixin",
+                "yalight.LevelChunkYALightDataMixin",
+                "yalight.ImposterProtoChunkYALightDataMixin",
+                "yalight.EmptyLevelChunkYALightDataMixin",
+                "yalight.ChunkAccessYASkyLightSourcesMixin",
+                "yalight.ChunkSkyLightSourcesStorageMixin",
+                "yalight.ClientPacketListenerYALightMixin",
+                "yalight.ClientboundLightUpdatePacketDataYALightMixin",
+                "yalight.compat.SableServerLevelPlotYALightMixin",
+                "yalight.LevelLightEngineYAMixin",
+                "yalight.ThreadedLevelLightEngineYAMixin",
+                "yalight.WorldGenRegionYALightMixin",
+                "placement.CarvingMaskPlacementMixin",
+                "placement.CountOnEveryLayerPlacementMixin",
+                "placement.EnvironmentScanPlacementMixin",
+                "placement.FixedPlacementMixin",
+                "placement.HeightmapPlacementMixin",
+                "placement.HeightRangePlacementMixin",
+                "placement.InSquarePlacementMixin",
+                "placement.PlacementFilterMixin",
+                "placement.RandomOffsetPlacementMixin",
+                "placement.RepeatingPlacementMixin"
+              ],
+              "client": [
+                "client.gcfree.RegistryDataLoaderRetainedReaderMixin",
+                "yalight.LevelRendererYALightMixin"
+              ],
+              "server": [],
+              "parse_error": null
+            }
+          ],
+          "common_count": 79,
+          "client_count": 2,
+          "server_count": 0,
+          "parse_errors": []
+        },
+        "bytecode": {
+          "class_parse_errors": [],
+          "client_symbol_count": 4,
+          "client_symbols_sample": [
+            "net/minecraft/client/multiplayer/ClientChunkCache",
+            "net/minecraft/client/multiplayer/ClientLevel",
+            "net/minecraft/client/multiplayer/ClientPacketListener",
+            "net/minecraft/client/renderer/LevelRenderer"
+          ],
+          "server_symbol_count": 16,
+          "server_symbols_sample": [
+            "net/minecraft/server/MinecraftServer",
+            "net/minecraft/server/level/ChunkHolder",
+            "net/minecraft/server/level/ChunkLevel",
+            "net/minecraft/server/level/ChunkMap",
+            "net/minecraft/server/level/ChunkResult",
+            "net/minecraft/server/level/ChunkTaskPriorityQueueSorter",
+            "net/minecraft/server/level/ChunkTaskPriorityQueueSorter$Message",
+            "net/minecraft/server/level/DistanceManager",
+            "net/minecraft/server/level/GenerationChunkHolder",
+            "net/minecraft/server/level/ServerChunkCache",
+            "net/minecraft/server/level/ServerLevel",
+            "net/minecraft/server/level/ServerPlayer",
+            "net/minecraft/server/level/ThreadedLevelLightEngine",
+            "net/minecraft/server/level/ThreadedLevelLightEngine$TaskType",
+            "net/minecraft/server/level/TickingTracker",
+            "net/minecraft/server/level/WorldGenRegion"
+          ],
+          "shared_game_symbol_count": 186,
+          "shared_game_symbols_sample": [
+            "net/minecraft/core/BlockPos",
+            "net/minecraft/core/BlockPos$MutableBlockPos",
+            "net/minecraft/core/DefaultedRegistry",
+            "net/minecraft/core/Direction",
+            "net/minecraft/core/Holder",
+            "net/minecraft/core/Holder$Reference",
+            "net/minecraft/core/HolderLookup",
+            "net/minecraft/core/HolderLookup$Provider",
+            "net/minecraft/core/HolderSet",
+            "net/minecraft/core/IdMap",
+            "net/minecraft/core/IdMapper",
+            "net/minecraft/core/QuartPos",
+            "net/minecraft/core/Registry",
+            "net/minecraft/core/RegistryAccess",
+            "net/minecraft/core/RegistryAccess$Frozen",
+            "net/minecraft/core/SectionPos",
+            "net/minecraft/core/Vec3i",
+            "net/minecraft/core/registries/BuiltInRegistries",
+            "net/minecraft/core/registries/Registries",
+            "net/minecraft/network/FriendlyByteBuf",
+            "net/minecraft/network/VarInt",
+            "net/minecraft/network/protocol/game/ClientboundForgetLevelChunkPacket",
+            "net/minecraft/network/protocol/game/ClientboundLightUpdatePacketData",
+            "net/minecraft/resources/RegistryDataLoader",
+            "net/minecraft/resources/RegistryDataLoader$RegistryData",
+            "net/minecraft/resources/ResourceKey",
+            "net/minecraft/resources/ResourceLocation",
+            "net/minecraft/world/TickRateManager",
+            "net/minecraft/world/entity/Entity",
+            "net/minecraft/world/entity/EntityType",
+            "net/minecraft/world/entity/Mob",
+            "net/minecraft/world/entity/MobCategory",
+            "net/minecraft/world/entity/ai/village/poi/PoiManager",
+            "net/minecraft/world/entity/player/Player",
+            "net/minecraft/world/level/BlockAndTintGetter",
+            "net/minecraft/world/level/BlockGetter",
+            "net/minecraft/world/level/ChunkPos",
+            "net/minecraft/world/level/EmptyBlockGetter",
+            "net/minecraft/world/level/GameRules",
+            "net/minecraft/world/level/GameRules$Key"
+          ]
+        },
+        "data_files_sample": [],
+        "asset_files_sample": []
+      }
+    },
+    {
+      "mod_id": "efficient_hashing",
+      "candidate_files": [
+        "efficient_hashing-neoforge-1.0.0+1.21.1-mod.jar"
+      ],
+      "selected_file": "efficient_hashing-neoforge-1.0.0+1.21.1-mod.jar",
+      "excluded_candidate_files": [],
+      "classification": "BOTH",
+      "expected_classification": "BOTH",
+      "server_bundle": true,
+      "client_bundle": true,
+      "rationale": "The sole common mixin targets shared Vec3i/BlockPos hashing code used independently on client and server.",
+      "evidence_gate": "PASS",
+      "evidence_failures": [],
+      "reverse_dependencies": [],
+      "inspection": {
+        "file": "efficient_hashing-neoforge-1.0.0+1.21.1-mod.jar",
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\efficient_hashing-neoforge-1.0.0+1.21.1-mod.jar",
+        "bytes": 23822,
+        "sha256": "76BB1BD93E211CFFAC01F2879E2E6B54BEE2B5884BC06BEDF0C21D89107AF5AD",
+        "archive_crc": "PASS",
+        "entry_count": 20,
+        "class_count": 5,
+        "data_file_count": 0,
+        "asset_file_count": 1,
+        "pure_data_pack": false,
+        "metadata": {
+          "kind": "NEOFORGE_TOML",
+          "file": "META-INF/neoforge.mods.toml",
+          "mod_loader": "javafml",
+          "mod_ids": [
+            "efficient_hashing"
+          ],
+          "dependencies": [],
+          "fabric_environment": null,
+          "display_test": null
+        },
+        "mixins": {
+          "configs": [
+            {
+              "file": "efficient_hashing.mixins.json",
+              "package": "zank.mods.efficient_hashing.mixin",
+              "plugin": null,
+              "common": [
+                "MixinVec3i"
+              ],
+              "client": [],
+              "server": [],
+              "parse_error": null
+            }
+          ],
+          "common_count": 1,
+          "client_count": 0,
+          "server_count": 0,
+          "parse_errors": []
+        },
+        "bytecode": {
+          "class_parse_errors": [],
+          "client_symbol_count": 0,
+          "client_symbols_sample": [],
+          "server_symbol_count": 0,
+          "server_symbols_sample": [],
+          "shared_game_symbol_count": 1,
+          "shared_game_symbols_sample": [
+            "net/minecraft/core/Vec3i"
+          ]
+        },
+        "data_files_sample": [],
+        "asset_files_sample": [
+          "assets/efficient_hashing/icon.jpg"
+        ]
+      }
+    },
+    {
+      "mod_id": "fastrecipesearch",
+      "candidate_files": [
+        "fastrecipesearch-1.21.1-26.2-neoforge.jar"
+      ],
+      "selected_file": "fastrecipesearch-1.21.1-26.2-neoforge.jar",
+      "excluded_candidate_files": [],
+      "classification": "BOTH",
+      "expected_classification": "BOTH",
+      "server_bundle": true,
+      "client_bundle": true,
+      "rationale": "Recipe indexing/synchronization patches common/server resource handling and a separate client packet listener.",
+      "evidence_gate": "PASS",
+      "evidence_failures": [],
+      "reverse_dependencies": [],
+      "inspection": {
+        "file": "fastrecipesearch-1.21.1-26.2-neoforge.jar",
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\fastrecipesearch-1.21.1-26.2-neoforge.jar",
+        "bytes": 54702,
+        "sha256": "E5944B8159EA7AE45E01C0D3FCBD6F75154B75336A35F01D4AC52F9B22D6CA81",
+        "archive_crc": "PASS",
+        "entry_count": 24,
+        "class_count": 11,
+        "data_file_count": 0,
+        "asset_file_count": 0,
+        "pure_data_pack": false,
+        "metadata": {
+          "kind": "NEOFORGE_TOML",
+          "file": "META-INF/neoforge.mods.toml",
+          "mod_loader": "javafml",
+          "mod_ids": [
+            "fastrecipesearch"
+          ],
+          "dependencies": [],
+          "fabric_environment": null,
+          "display_test": null
+        },
+        "mixins": {
+          "configs": [
+            {
+              "file": "fastrecipesearch.mixins.json",
+              "package": "fast.fastrecipesearch.mixin",
+              "plugin": "fast.fastrecipesearch.Config",
+              "common": [
+                "sync.IngredientMixin",
+                "RecipeEntryMixin",
+                "ServerResourcesMixin"
+              ],
+              "client": [
+                "ClientPacketListenerMixin"
+              ],
+              "server": [],
+              "parse_error": null
+            }
+          ],
+          "common_count": 3,
+          "client_count": 1,
+          "server_count": 0,
+          "parse_errors": []
+        },
+        "bytecode": {
+          "class_parse_errors": [],
+          "client_symbol_count": 3,
+          "client_symbols_sample": [
+            "net/minecraft/client/Minecraft",
+            "net/minecraft/client/multiplayer/ClientPacketListener",
+            "net/minecraft/client/multiplayer/CommonListenerCookie"
+          ],
+          "server_symbol_count": 0,
+          "server_symbols_sample": [],
+          "shared_game_symbol_count": 38,
+          "shared_game_symbols_sample": [
+            "net/minecraft/commands/Commands",
+            "net/minecraft/commands/Commands$CommandSelection",
+            "net/minecraft/core/DefaultedRegistry",
+            "net/minecraft/core/Holder",
+            "net/minecraft/core/HolderLookup",
+            "net/minecraft/core/HolderLookup$Provider",
+            "net/minecraft/core/HolderSet",
+            "net/minecraft/core/HolderSet$Named",
+            "net/minecraft/core/NonNullList",
+            "net/minecraft/core/Registry",
+            "net/minecraft/core/RegistryAccess",
+            "net/minecraft/core/RegistryAccess$Frozen",
+            "net/minecraft/core/registries/BuiltInRegistries",
+            "net/minecraft/core/registries/Registries",
+            "net/minecraft/network/Connection",
+            "net/minecraft/network/FriendlyByteBuf",
+            "net/minecraft/network/RegistryFriendlyByteBuf",
+            "net/minecraft/network/codec/ByteBufCodecs",
+            "net/minecraft/network/codec/StreamCodec",
+            "net/minecraft/resources/ResourceKey",
+            "net/minecraft/resources/ResourceLocation",
+            "net/minecraft/world/flag/FeatureFlagSet",
+            "net/minecraft/world/item/Item",
+            "net/minecraft/world/item/ItemStack",
+            "net/minecraft/world/item/Items",
+            "net/minecraft/world/item/crafting/Ingredient",
+            "net/minecraft/world/item/crafting/Ingredient$ItemValue",
+            "net/minecraft/world/item/crafting/Ingredient$TagValue",
+            "net/minecraft/world/item/crafting/Ingredient$Value",
+            "net/minecraft/world/item/crafting/Recipe",
+            "net/minecraft/world/item/crafting/RecipeHolder",
+            "net/minecraft/world/item/crafting/RecipeInput",
+            "net/minecraft/world/item/crafting/RecipeManager",
+            "net/minecraft/world/item/crafting/RecipeType",
+            "net/minecraft/world/level/ItemLike",
+            "net/minecraft/world/level/Level",
+            "net/minecraft/world/level/block/Block",
+            "net/minecraft/world/level/block/entity/BlockEntity"
+          ]
+        },
+        "data_files_sample": [],
+        "asset_files_sample": []
+      }
+    },
+    {
+      "mod_id": "hoporp",
+      "candidate_files": [
+        "HopoBetterRuinedPortals-[1.21.1-1.21.3]-1.4.4b.jar"
+      ],
+      "selected_file": "HopoBetterRuinedPortals-[1.21.1-1.21.3]-1.4.4b.jar",
+      "excluded_candidate_files": [],
+      "classification": "SERVER_ONLY",
+      "expected_classification": "SERVER_ONLY",
+      "server_bundle": true,
+      "client_bundle": false,
+      "rationale": "Pure data/world-generation pack with explicit IGNORE_SERVER_VERSION: the server consumes the gameplay data and the client copy may be omitted.",
+      "evidence_gate": "PASS",
+      "evidence_failures": [],
+      "reverse_dependencies": [],
+      "inspection": {
+        "file": "HopoBetterRuinedPortals-[1.21.1-1.21.3]-1.4.4b.jar",
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\HopoBetterRuinedPortals-[1.21.1-1.21.3]-1.4.4b.jar",
+        "bytes": 460577,
+        "sha256": "C1E68C98EA538167CA7D4AC530C254E9D5DD400BEE408B0D72574B3C7F29E14B",
+        "archive_crc": "PASS",
+        "entry_count": 206,
+        "class_count": 0,
+        "data_file_count": 154,
+        "asset_file_count": 0,
+        "pure_data_pack": true,
+        "metadata": {
+          "kind": "NEOFORGE_TOML",
+          "file": "META-INF/neoforge.mods.toml",
+          "mod_loader": "lowcodefml",
+          "mod_ids": [
+            "hoporp"
+          ],
+          "dependencies": [],
+          "fabric_environment": "*",
+          "display_test": "IGNORE_SERVER_VERSION",
+          "fabric_id": "hopobetterruinedportal"
+        },
+        "mixins": {
+          "configs": [],
+          "common_count": 0,
+          "client_count": 0,
+          "server_count": 0,
+          "parse_errors": []
+        },
+        "bytecode": {
+          "class_parse_errors": [],
+          "client_symbol_count": 0,
+          "client_symbols_sample": [],
+          "server_symbol_count": 0,
+          "server_symbols_sample": [],
+          "shared_game_symbol_count": 0,
+          "shared_game_symbols_sample": []
+        },
+        "data_files_sample": [
+          "data/hopo/advancement/minecraft/adventure/locate_portal_ruined.json",
+          "data/hopo/loot_table/archaeology/ruins.json",
+          "data/hopo/loot_table/chests/portal/better_ruined_portal.json",
+          "data/hopo/loot_table/chests/portal/dripstone_portal.json",
+          "data/hopo/loot_table/chests/portal/lush_portal.json",
+          "data/hopo/loot_table/chests/portal/piglin_ruin.json",
+          "data/hopo/loot_table/chests/portal/ruined_portal_cool.json",
+          "data/hopo/loot_table/entities/piglins/piglin_ruin.json",
+          "data/hopo/structure/mobs/allays_3.nbt",
+          "data/hopo/structure/mobs/allays_6.nbt",
+          "data/hopo/structure/mobs/piglin_brutes.nbt",
+          "data/hopo/structure/mobs/piglin_crossbow.nbt",
+          "data/hopo/structure/mobs/piglin_sword.nbt",
+          "data/hopo/structure/mobs/zombified_piglin.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/1.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/10.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/11.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/12.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/13.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/14.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/15.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/16.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/17.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/18.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/19.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/2.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/20.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/21.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/22.nbt",
+          "data/hopo/structure/patch_netherrack/crimson/23.nbt"
+        ],
+        "asset_files_sample": []
+      }
+    },
+    {
+      "mod_id": "jecharacters",
+      "candidate_files": [
+        "jecharacters-1.21-neoforge-4.5.24.jar"
+      ],
+      "selected_file": "jecharacters-1.21-neoforge-4.5.24.jar",
+      "excluded_candidate_files": [],
+      "classification": "CLIENT_ONLY",
+      "expected_classification": "CLIENT_ONLY",
+      "server_bundle": false,
+      "client_bundle": true,
+      "rationale": "JEI/pinyin search integration hard-links client UI/search classes and has no server mixin or required server dependent.",
+      "evidence_gate": "PASS",
+      "evidence_failures": [],
+      "reverse_dependencies": [],
+      "inspection": {
+        "file": "jecharacters-1.21-neoforge-4.5.24.jar",
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\jecharacters-1.21-neoforge-4.5.24.jar",
+        "bytes": 243891,
+        "sha256": "F7F2B4D9EC81BAD95BECA92C56444F87AA4A993DA80AB8DA184670BA7F879E83",
+        "archive_crc": "PASS",
+        "entry_count": 47,
+        "class_count": 25,
+        "data_file_count": 0,
+        "asset_file_count": 3,
+        "pure_data_pack": false,
+        "metadata": {
+          "kind": "NEOFORGE_TOML",
+          "file": "META-INF/neoforge.mods.toml",
+          "mod_loader": "javafml",
+          "mod_ids": [
+            "jecharacters"
+          ],
+          "dependencies": [],
+          "fabric_environment": null,
+          "display_test": null
+        },
+        "mixins": {
+          "configs": [],
+          "common_count": 0,
+          "client_count": 0,
+          "server_count": 0,
+          "parse_errors": []
+        },
+        "bytecode": {
+          "class_parse_errors": [],
+          "client_symbol_count": 6,
+          "client_symbols_sample": [
+            "net/minecraft/client/Minecraft",
+            "net/minecraft/client/Options",
+            "net/minecraft/client/gui/Gui",
+            "net/minecraft/client/gui/components/ChatComponent",
+            "net/minecraft/client/searchtree/SuffixArray",
+            "net/neoforged/neoforge/client/event/RegisterClientCommandsEvent"
+          ],
+          "server_symbol_count": 0,
+          "server_symbols_sample": [],
+          "shared_game_symbol_count": 7,
+          "shared_game_symbols_sample": [
+            "net/minecraft/commands/SharedSuggestionProvider",
+            "net/minecraft/network/chat/Component",
+            "net/minecraft/network/chat/MutableComponent",
+            "net/minecraft/world/entity/Entity",
+            "net/minecraft/world/entity/player/Player",
+            "net/minecraft/world/level/Level",
+            "net/neoforged/neoforge/event/entity/EntityJoinLevelEvent"
+          ]
+        },
+        "data_files_sample": [],
+        "asset_files_sample": [
+          "assets/jecharacters/lang/en_us.json",
+          "assets/jecharacters/lang/zh_cn.json",
+          "assets/jecharacters/lang/zh_tw.json"
+        ]
+      }
+    },
+    {
+      "mod_id": "mousetweaks",
+      "candidate_files": [
+        "MouseTweaks-neoforge-mc1.21-2.26.1.jar"
+      ],
+      "selected_file": "MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+      "excluded_candidate_files": [],
+      "classification": "CLIENT_ONLY",
+      "expected_classification": "CLIENT_ONLY",
+      "server_bundle": false,
+      "client_bundle": true,
+      "rationale": "Inventory screen input behavior is implemented entirely through client classes and a client-only screen mixin.",
+      "evidence_gate": "PASS",
+      "evidence_failures": [],
+      "reverse_dependencies": [],
+      "inspection": {
+        "file": "MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+        "bytes": 73938,
+        "sha256": "68E6F4201C5DE97B77929A7215C9552495696CA6A3BF3AE4EACC34E135F6CC8B",
+        "archive_crc": "PASS",
+        "entry_count": 35,
+        "class_count": 22,
+        "data_file_count": 0,
+        "asset_file_count": 0,
+        "pure_data_pack": false,
+        "metadata": {
+          "kind": "NEOFORGE_TOML",
+          "file": "META-INF/neoforge.mods.toml",
+          "mod_loader": "javafml",
+          "mod_ids": [
+            "mousetweaks"
+          ],
+          "dependencies": [],
+          "fabric_environment": null,
+          "display_test": null
+        },
+        "mixins": {
+          "configs": [
+            {
+              "file": "mousetweaks-fabric.mixins.json",
+              "package": "yalter.mousetweaks.fabric.mixin",
+              "plugin": null,
+              "common": [],
+              "client": [
+                "MixinMouseHandler"
+              ],
+              "server": [],
+              "parse_error": null
+            },
+            {
+              "file": "mousetweaks.mixins.json",
+              "package": "yalter.mousetweaks.mixin",
+              "plugin": null,
+              "common": [],
+              "client": [
+                "AbstractContainerScreenAccessor"
+              ],
+              "server": [],
+              "parse_error": null
+            }
+          ],
+          "common_count": 0,
+          "client_count": 2,
+          "server_count": 0,
+          "parse_errors": []
+        },
+        "bytecode": {
+          "class_parse_errors": [],
+          "client_symbol_count": 27,
+          "client_symbols_sample": [
+            "com/mojang/blaze3d/platform/InputConstants",
+            "com/mojang/blaze3d/platform/Window",
+            "net/minecraft/client/Minecraft",
+            "net/minecraft/client/gui/Font",
+            "net/minecraft/client/gui/GuiGraphics",
+            "net/minecraft/client/gui/components/Button",
+            "net/minecraft/client/gui/components/Button$Builder",
+            "net/minecraft/client/gui/components/Button$OnPress",
+            "net/minecraft/client/gui/components/CycleButton",
+            "net/minecraft/client/gui/components/CycleButton$Builder",
+            "net/minecraft/client/gui/components/CycleButton$OnValueChange",
+            "net/minecraft/client/gui/components/events/GuiEventListener",
+            "net/minecraft/client/gui/screens/Screen",
+            "net/minecraft/client/gui/screens/inventory/AbstractContainerScreen",
+            "net/minecraft/client/gui/screens/inventory/CreativeModeInventoryScreen",
+            "net/minecraft/client/player/LocalPlayer",
+            "net/neoforged/neoforge/client/event/ScreenEvent",
+            "net/neoforged/neoforge/client/event/ScreenEvent$MouseButtonPressed",
+            "net/neoforged/neoforge/client/event/ScreenEvent$MouseButtonPressed$Pre",
+            "net/neoforged/neoforge/client/event/ScreenEvent$MouseButtonReleased",
+            "net/neoforged/neoforge/client/event/ScreenEvent$MouseButtonReleased$Pre",
+            "net/neoforged/neoforge/client/event/ScreenEvent$MouseDragged",
+            "net/neoforged/neoforge/client/event/ScreenEvent$MouseDragged$Pre",
+            "net/neoforged/neoforge/client/event/ScreenEvent$MouseScrolled",
+            "net/neoforged/neoforge/client/event/ScreenEvent$MouseScrolled$Post",
+            "net/neoforged/neoforge/client/gui/IConfigScreenFactory",
+            "org/lwjgl/glfw/GLFW"
+          ],
+          "server_symbol_count": 0,
+          "server_symbols_sample": [],
+          "shared_game_symbol_count": 15,
+          "shared_game_symbols_sample": [
+            "net/minecraft/core/NonNullList",
+            "net/minecraft/network/chat/CommonComponents",
+            "net/minecraft/network/chat/Component",
+            "net/minecraft/network/chat/MutableComponent",
+            "net/minecraft/world/Container",
+            "net/minecraft/world/entity/player/Inventory",
+            "net/minecraft/world/inventory/AbstractContainerMenu",
+            "net/minecraft/world/inventory/ClickType",
+            "net/minecraft/world/inventory/FurnaceResultSlot",
+            "net/minecraft/world/inventory/MerchantResultSlot",
+            "net/minecraft/world/inventory/ResultSlot",
+            "net/minecraft/world/inventory/Slot",
+            "net/minecraft/world/item/BundleItem",
+            "net/minecraft/world/item/Item",
+            "net/minecraft/world/item/ItemStack"
+          ]
+        },
+        "data_files_sample": [],
+        "asset_files_sample": []
+      }
+    },
+    {
+      "mod_id": "mr_dungeons_andtavernsancientcityoverhaul",
+      "candidate_files": [
+        "DnT-ancient-city-overhaul-v2 [NeoForge].jar"
+      ],
+      "selected_file": "DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+      "excluded_candidate_files": [],
+      "classification": "BOTH",
+      "expected_classification": "BOTH",
+      "server_bundle": true,
+      "client_bundle": true,
+      "rationale": "Pure server-consumed gameplay data, but its NeoForge wrapper has no explicit missing-client/display-test exemption. Fail-closed bundle placement is BOTH until a dedicated-server/client handshake proves client omission safe.",
+      "evidence_gate": "PASS",
+      "evidence_failures": [],
+      "reverse_dependencies": [],
+      "inspection": {
+        "file": "DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "bytes": 945778,
+        "sha256": "890882EC1239FFF1CD5CC5F1DA1FE4BE98A31E748D418220BEE5F2B9F3D8FD91",
+        "archive_crc": "PASS",
+        "entry_count": 197,
+        "class_count": 0,
+        "data_file_count": 164,
+        "asset_file_count": 0,
+        "pure_data_pack": true,
+        "metadata": {
+          "kind": "NEOFORGE_TOML",
+          "file": "META-INF/neoforge.mods.toml",
+          "mod_loader": "javafml",
+          "mod_ids": [
+            "mr_dungeons_andtavernsancientcityoverhaul"
+          ],
+          "dependencies": [],
+          "fabric_environment": null,
+          "display_test": null
+        },
+        "mixins": {
+          "configs": [],
+          "common_count": 0,
+          "client_count": 0,
+          "server_count": 0,
+          "parse_errors": []
+        },
+        "bytecode": {
+          "class_parse_errors": [],
+          "client_symbol_count": 0,
+          "client_symbols_sample": [],
+          "server_symbol_count": 0,
+          "server_symbols_sample": [],
+          "shared_game_symbol_count": 0,
+          "shared_game_symbols_sample": []
+        },
+        "data_files_sample": [
+          "data/minecraft/loot_table/archaelogy/ancient_city.json",
+          "data/minecraft/loot_table/chests/ancient_city_center.json",
+          "data/minecraft/loot_table/chests/illager_mansion/ancient_city_raid_chest.json",
+          "data/minecraft/loot_table/chests/illager_mansion/evoker_chest.json",
+          "data/minecraft/loot_table/chests/illager_mansion/generic.json",
+          "data/minecraft/loot_table/chests/illager_mansion/kitchen.json",
+          "data/minecraft/loot_table/chests/illager_mansion/library_chest.json",
+          "data/minecraft/loot_table/chests/illager_mansion/map_chest.json",
+          "data/minecraft/loot_table/chests/illager_mansion/pillager_chest.json",
+          "data/minecraft/loot_table/chests/illager_mansion/ravager_chest.json",
+          "data/minecraft/loot_table/chests/illager_mansion/secret_room.json",
+          "data/minecraft/loot_table/chests/illager_mansion/smithing_room.json",
+          "data/minecraft/loot_table/chests/illager_mansion/vindicator_chest.json",
+          "data/minecraft/loot_table/chests/illager_mansion/witch_chest.json",
+          "data/minecraft/loot_table/chests/illager_mansion/wool.json",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_connector.nbt",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_path_0.nbt",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_path_1.nbt",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_path_2.nbt",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_path_3.nbt",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_path_4.nbt",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_path_5.nbt",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_path_end.nbt",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_pillar_1.nbt",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_pillar_2.nbt",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_pillar_3.nbt",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_pillar_4.nbt",
+          "data/minecraft/structure/ancient_city/city/entrance/entrance_pillar_5.nbt",
+          "data/minecraft/structure/ancient_city/city_center/city_center_1.nbt",
+          "data/minecraft/structure/ancient_city/city_center/city_center_2.nbt"
+        ],
+        "asset_files_sample": []
+      }
+    },
+    {
+      "mod_id": "mr_epic_structuresvillages",
+      "candidate_files": [
+        "Epic Villages 1.3.0 (1.21+).jar"
+      ],
+      "selected_file": "Epic Villages 1.3.0 (1.21+).jar",
+      "excluded_candidate_files": [],
+      "classification": "BOTH",
+      "expected_classification": "BOTH",
+      "server_bundle": true,
+      "client_bundle": true,
+      "rationale": "Pure server-consumed gameplay data, but its NeoForge wrapper has no explicit missing-client/display-test exemption. Fail-closed bundle placement is BOTH until a dedicated-server/client handshake proves client omission safe.",
+      "evidence_gate": "PASS",
+      "evidence_failures": [],
+      "reverse_dependencies": [],
+      "inspection": {
+        "file": "Epic Villages 1.3.0 (1.21+).jar",
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\Epic Villages 1.3.0 (1.21+).jar",
+        "bytes": 3445547,
+        "sha256": "0A49C689131AFFE588F0EB168873169DED54AC9F10B337410969D836E3DA32EB",
+        "archive_crc": "PASS",
+        "entry_count": 192,
+        "class_count": 0,
+        "data_file_count": 161,
+        "asset_file_count": 0,
+        "pure_data_pack": true,
+        "metadata": {
+          "kind": "NEOFORGE_TOML",
+          "file": "META-INF/neoforge.mods.toml",
+          "mod_loader": "javafml",
+          "mod_ids": [
+            "mr_epic_structuresvillages"
+          ],
+          "dependencies": [],
+          "fabric_environment": "*",
+          "display_test": null,
+          "fabric_id": "mr_epic_structuresvillages"
+        },
+        "mixins": {
+          "configs": [],
+          "common_count": 0,
+          "client_count": 0,
+          "server_count": 0,
+          "parse_errors": []
+        },
+        "bytecode": {
+          "class_parse_errors": [],
+          "client_symbol_count": 0,
+          "client_symbols_sample": [],
+          "server_symbol_count": 0,
+          "server_symbols_sample": [],
+          "shared_game_symbol_count": 0,
+          "shared_game_symbols_sample": []
+        },
+        "data_files_sample": [
+          "data/minecraft/loot_table/chests/dye.json",
+          "data/minecraft/loot_table/chests/mineral.json",
+          "data/minecraft/loot_table/chests/random.json",
+          "data/minecraft/loot_table/chests/stone.json",
+          "data/minecraft/loot_table/chests/trash.json",
+          "data/minecraft/loot_table/chests/wood.json",
+          "data/minecraft/structure/village/plains/houses/plains_accessory_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_animal_pen_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_animal_pen_2.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_animal_pen_3.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_armorer_house_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_big_house_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_butcher_shop_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_butcher_shop_2.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_cartographer_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_fisher_cottage_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_fletcher_house_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_large_farm_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_large_house_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_library_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_library_2.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_masons_house_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_medium_house_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_medium_house_2.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_meeting_point_4.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_meeting_point_5.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_shepherds_house_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_small_farm_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_small_house_1.nbt",
+          "data/minecraft/structure/village/plains/houses/plains_small_house_2.nbt"
+        ],
+        "asset_files_sample": []
+      }
+    },
+    {
+      "mod_id": "mr_lukis_crazychambers",
+      "candidate_files": [
+        "lukis-crazy-chambers-1.0.2.jar"
+      ],
+      "selected_file": "lukis-crazy-chambers-1.0.2.jar",
+      "excluded_candidate_files": [],
+      "classification": "BOTH",
+      "expected_classification": "BOTH",
+      "server_bundle": true,
+      "client_bundle": true,
+      "rationale": "Pure server-consumed gameplay data, but its NeoForge wrapper has no explicit missing-client/display-test exemption. Fail-closed bundle placement is BOTH until a dedicated-server/client handshake proves client omission safe.",
+      "evidence_gate": "PASS",
+      "evidence_failures": [],
+      "reverse_dependencies": [],
+      "inspection": {
+        "file": "lukis-crazy-chambers-1.0.2.jar",
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\lukis-crazy-chambers-1.0.2.jar",
+        "bytes": 2177448,
+        "sha256": "59DDE0047528843664309B546A9FBD7AFA8A065472F6FEFD457FE6A40FAD23EF",
+        "archive_crc": "PASS",
+        "entry_count": 114,
+        "class_count": 0,
+        "data_file_count": 81,
+        "asset_file_count": 0,
+        "pure_data_pack": true,
+        "metadata": {
+          "kind": "NEOFORGE_TOML",
+          "file": "META-INF/neoforge.mods.toml",
+          "mod_loader": "javafml",
+          "mod_ids": [
+            "mr_lukis_crazychambers"
+          ],
+          "dependencies": [],
+          "fabric_environment": "*",
+          "display_test": null,
+          "fabric_id": "mr_lukis_crazychambers"
+        },
+        "mixins": {
+          "configs": [],
+          "common_count": 0,
+          "client_count": 0,
+          "server_count": 0,
+          "parse_errors": []
+        },
+        "bytecode": {
+          "class_parse_errors": [],
+          "client_symbol_count": 0,
+          "client_symbols_sample": [],
+          "server_symbol_count": 0,
+          "server_symbols_sample": [],
+          "shared_game_symbol_count": 0,
+          "shared_game_symbols_sample": []
+        },
+        "data_files_sample": [
+          "data/crazy_chambers/loot_table/boss_reward.json",
+          "data/crazy_chambers/loot_table/boss_reward_ominous.json",
+          "data/crazy_chambers/structure/atrium/oak_tree.nbt",
+          "data/crazy_chambers/structure/continued/boss/boss_1.nbt",
+          "data/crazy_chambers/structure/continued/medium/floors.nbt",
+          "data/crazy_chambers/structure/continued/medium/fountain.nbt",
+          "data/crazy_chambers/structure/continued/medium/lava.nbt",
+          "data/crazy_chambers/structure/continued/medium/obstacles.nbt",
+          "data/crazy_chambers/structure/continued/medium/pillar.nbt",
+          "data/crazy_chambers/structure/continued/medium/well.nbt",
+          "data/crazy_chambers/structure/continued/small/dungeon_1.nbt",
+          "data/crazy_chambers/structure/continued/small/dungeon_2.nbt",
+          "data/crazy_chambers/structure/continued/small/dungeon_3.nbt",
+          "data/crazy_chambers/structure/continued/small/dungeon_4.nbt",
+          "data/crazy_chambers/structure/continued/small/dungeon_5.nbt",
+          "data/crazy_chambers/structure/continued/small/ominous.nbt",
+          "data/crazy_chambers/structure/continued/small/rest.nbt",
+          "data/crazy_chambers/structure/continued/small/treasure.nbt",
+          "data/crazy_chambers/structure/continued/small/tree.nbt",
+          "data/crazy_chambers/structure/continued/small/treew.nbt",
+          "data/crazy_chambers/structure/continued/small/vault.nbt",
+          "data/crazy_chambers/structure/hallway/hallway_1.nbt",
+          "data/crazy_chambers/structure/large/arena.nbt",
+          "data/crazy_chambers/structure/large/cages.nbt",
+          "data/crazy_chambers/structure/large/cellar.nbt",
+          "data/crazy_chambers/structure/large/enclosed.nbt",
+          "data/crazy_chambers/structure/large/lava.nbt",
+          "data/crazy_chambers/structure/large/obstacles.nbt",
+          "data/crazy_chambers/structure/large/parkour.nbt",
+          "data/crazy_chambers/structure/large/snow.nbt"
+        ],
+        "asset_files_sample": []
+      }
+    },
+    {
+      "mod_id": "rhino",
+      "candidate_files": [
+        "rhino-2101.2.7-build.85.jar"
+      ],
+      "selected_file": "rhino-2101.2.7-build.85.jar",
+      "excluded_candidate_files": [],
+      "classification": "BOTH",
+      "expected_classification": "BOTH",
+      "server_bundle": true,
+      "client_bundle": true,
+      "rationale": "Rhino is the script runtime required by KubeJS on side BOTH; the library itself is side-neutral.",
+      "evidence_gate": "PASS",
+      "evidence_failures": [],
+      "reverse_dependencies": [
+        {
+          "dependent_file": "kubejs-neoforge-2101.7.2-build.368.jar",
+          "dependent_mod_ids": [
+            "kubejs"
+          ],
+          "type": "required",
+          "mandatory": null,
+          "side": "BOTH",
+          "version_range": "[2101.2.7-build.81,)"
+        }
+      ],
+      "inspection": {
+        "file": "rhino-2101.2.7-build.85.jar",
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\rhino-2101.2.7-build.85.jar",
+        "bytes": 882075,
+        "sha256": "95DF92CE578B2504CB16D8C9FC285303BF062EB15452246A18E57B7CF091C19A",
+        "archive_crc": "PASS",
+        "entry_count": 366,
+        "class_count": 346,
+        "data_file_count": 0,
+        "asset_file_count": 0,
+        "pure_data_pack": false,
+        "metadata": {
+          "kind": "NEOFORGE_TOML",
+          "file": "META-INF/neoforge.mods.toml",
+          "mod_loader": "lowcodefml",
+          "mod_ids": [
+            "rhino"
+          ],
+          "dependencies": [],
+          "fabric_environment": "*",
+          "display_test": null,
+          "fabric_id": "rhino"
+        },
+        "mixins": {
+          "configs": [],
+          "common_count": 0,
+          "client_count": 0,
+          "server_count": 0,
+          "parse_errors": []
+        },
+        "bytecode": {
+          "class_parse_errors": [],
+          "client_symbol_count": 0,
+          "client_symbols_sample": [],
+          "server_symbol_count": 0,
+          "server_symbols_sample": [],
+          "shared_game_symbol_count": 0,
+          "shared_game_symbols_sample": []
+        },
+        "data_files_sample": [],
+        "asset_files_sample": []
+      }
+    },
+    {
+      "mod_id": "yet_another_config_lib_v3",
+      "candidate_files": [
+        "yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar"
+      ],
+      "selected_file": "yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
+      "excluded_candidate_files": [],
+      "classification": "CLIENT_ONLY",
+      "expected_classification": "CLIENT_ONLY",
+      "server_bundle": false,
+      "client_bundle": true,
+      "rationale": "YACL supplies configuration GUI/API code; all declared mixins are client-only and its only required reverse dependency is client-scoped.",
+      "evidence_gate": "PASS",
+      "evidence_failures": [],
+      "reverse_dependencies": [
+        {
+          "dependent_file": "armoroftheages-neoforge-1.21.1-1.5.10.jar",
+          "dependent_mod_ids": [
+            "armoroftheages"
+          ],
+          "type": "required",
+          "mandatory": null,
+          "side": "CLIENT",
+          "version_range": "[3.0,)"
+        },
+        {
+          "dependent_file": "takesapillage-neoforge-1.0.12+mc1.21.1.jar",
+          "dependent_mod_ids": [
+            "takesapillage"
+          ],
+          "type": "optional",
+          "mandatory": null,
+          "side": "BOTH",
+          "version_range": "*"
+        }
+      ],
+      "inspection": {
+        "file": "yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
+        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
+        "bytes": 1111051,
+        "sha256": "673FECBFFAD26BB6D025FB5F60560CF6340E542BDF091D8D66074490515292F3",
+        "archive_crc": "PASS",
+        "entry_count": 442,
+        "class_count": 350,
+        "data_file_count": 0,
+        "asset_file_count": 29,
+        "pure_data_pack": false,
+        "metadata": {
+          "kind": "NEOFORGE_TOML",
+          "file": "META-INF/neoforge.mods.toml",
+          "mod_loader": "javafml",
+          "mod_ids": [
+            "yet_another_config_lib_v3"
+          ],
+          "dependencies": [],
+          "fabric_environment": null,
+          "display_test": null
+        },
+        "mixins": {
+          "configs": [
+            {
+              "file": "yacl-fabric.mixins.json",
+              "package": "dev.isxander.yacl3.mixin",
+              "plugin": null,
+              "common": [],
+              "client": [
+                "ContainerEventHandlerMixin"
+              ],
+              "server": [],
+              "parse_error": null
+            },
+            {
+              "file": "yacl.mixins.json",
+              "package": "dev.isxander.yacl3.mixin",
+              "plugin": null,
+              "common": [],
+              "client": [
+                "AbstractSelectionListAccessor",
+                "AbstractSelectionListMixin",
+                "MinecraftMixin",
+                "OptionInstanceAccessor",
+                "TabNavigationBarAccessor",
+                "GuiGraphicsMixin"
+              ],
+              "server": [],
+              "parse_error": null
+            }
+          ],
+          "common_count": 0,
+          "client_count": 7,
+          "server_count": 0,
+          "parse_errors": []
+        },
+        "bytecode": {
+          "class_parse_errors": [],
+          "client_symbol_count": 80,
+          "client_symbols_sample": [
+            "com/mojang/blaze3d/Blaze3D",
+            "com/mojang/blaze3d/platform/GlConst",
+            "com/mojang/blaze3d/platform/GlStateManager",
+            "com/mojang/blaze3d/platform/InputConstants",
+            "com/mojang/blaze3d/platform/NativeImage",
+            "com/mojang/blaze3d/platform/NativeImage$Format",
+            "com/mojang/blaze3d/systems/RenderSystem",
+            "com/mojang/blaze3d/vertex/DefaultVertexFormat",
+            "com/mojang/blaze3d/vertex/PoseStack",
+            "com/mojang/blaze3d/vertex/PoseStack$Pose",
+            "com/mojang/blaze3d/vertex/VertexConsumer",
+            "com/mojang/blaze3d/vertex/VertexFormat",
+            "com/mojang/blaze3d/vertex/VertexFormat$Mode",
+            "net/minecraft/client/KeyboardHandler",
+            "net/minecraft/client/Minecraft",
+            "net/minecraft/client/OptionInstance",
+            "net/minecraft/client/Options",
+            "net/minecraft/client/StringSplitter",
+            "net/minecraft/client/gui/ComponentPath",
+            "net/minecraft/client/gui/Font",
+            "net/minecraft/client/gui/GuiGraphics",
+            "net/minecraft/client/gui/components/AbstractSelectionList",
+            "net/minecraft/client/gui/components/AbstractSelectionList$Entry",
+            "net/minecraft/client/gui/components/AbstractWidget",
+            "net/minecraft/client/gui/components/Button",
+            "net/minecraft/client/gui/components/Button$Builder",
+            "net/minecraft/client/gui/components/Button$CreateNarration",
+            "net/minecraft/client/gui/components/Button$OnPress",
+            "net/minecraft/client/gui/components/ContainerObjectSelectionList",
+            "net/minecraft/client/gui/components/ContainerObjectSelectionList$Entry",
+            "net/minecraft/client/gui/components/EditBox",
+            "net/minecraft/client/gui/components/MultiLineLabel",
+            "net/minecraft/client/gui/components/Renderable",
+            "net/minecraft/client/gui/components/TabButton",
+            "net/minecraft/client/gui/components/Tooltip",
+            "net/minecraft/client/gui/components/WidgetSprites",
+            "net/minecraft/client/gui/components/events/ContainerEventHandler",
+            "net/minecraft/client/gui/components/events/GuiEventListener",
+            "net/minecraft/client/gui/components/tabs/Tab",
+            "net/minecraft/client/gui/components/tabs/TabManager"
+          ],
+          "server_symbol_count": 0,
+          "server_symbols_sample": [],
+          "shared_game_symbol_count": 23,
+          "shared_game_symbols_sample": [
+            "net/minecraft/core/DefaultedRegistry",
+            "net/minecraft/core/Holder",
+            "net/minecraft/core/Holder$Reference",
+            "net/minecraft/core/Registry",
+            "net/minecraft/core/registries/BuiltInRegistries",
+            "net/minecraft/network/chat/ClickEvent",
+            "net/minecraft/network/chat/CommonComponents",
+            "net/minecraft/network/chat/Component",
+            "net/minecraft/network/chat/ComponentContents",
+            "net/minecraft/network/chat/ComponentSerialization",
+            "net/minecraft/network/chat/FormattedText",
+            "net/minecraft/network/chat/HoverEvent",
+            "net/minecraft/network/chat/HoverEvent$Action",
+            "net/minecraft/network/chat/HoverEvent$EntityTooltipInfo",
+            "net/minecraft/network/chat/HoverEvent$ItemStackInfo",
+            "net/minecraft/network/chat/MutableComponent",
+            "net/minecraft/network/chat/Style",
+            "net/minecraft/network/chat/Style$Serializer",
+            "net/minecraft/resources/ResourceLocation",
+            "net/minecraft/world/item/Item",
+            "net/minecraft/world/item/ItemStack",
+            "net/minecraft/world/item/Items",
+            "net/minecraft/world/level/ItemLike"
+          ]
+        },
+        "data_files_sample": [],
+        "asset_files_sample": [
+          "assets/yet_another_config_lib_v3/lang/be_by.json",
+          "assets/yet_another_config_lib_v3/lang/de_at.json",
+          "assets/yet_another_config_lib_v3/lang/de_ch.json",
+          "assets/yet_another_config_lib_v3/lang/de_de.json",
+          "assets/yet_another_config_lib_v3/lang/el_gr.json",
+          "assets/yet_another_config_lib_v3/lang/en_us.json",
+          "assets/yet_another_config_lib_v3/lang/es_ar.json",
+          "assets/yet_another_config_lib_v3/lang/es_es.json",
+          "assets/yet_another_config_lib_v3/lang/et_ee.json",
+          "assets/yet_another_config_lib_v3/lang/fr_fr.json",
+          "assets/yet_another_config_lib_v3/lang/it_it.json",
+          "assets/yet_another_config_lib_v3/lang/ja_jp.json",
+          "assets/yet_another_config_lib_v3/lang/ms_my.json",
+          "assets/yet_another_config_lib_v3/lang/nl_nl.json",
+          "assets/yet_another_config_lib_v3/lang/pl_pl.json",
+          "assets/yet_another_config_lib_v3/lang/pt_br.json",
+          "assets/yet_another_config_lib_v3/lang/pt_pt.json",
+          "assets/yet_another_config_lib_v3/lang/ru_ru.json",
+          "assets/yet_another_config_lib_v3/lang/sl_si.json",
+          "assets/yet_another_config_lib_v3/lang/tt_ru.json"
+        ]
+      }
+    }
+  ],
+  "tools": [
+    {
+      "name": "generator",
+      "path": "<WORKSPACE>\\outputs\\tools\\audit_mechanomania_side_classification.py",
+      "exists": true,
+      "sha256": "AA7DA802A5368175222CC66236837D6ADA91915B050115AB0664C60DCEAFCB07"
+    },
+    {
+      "name": "validator",
+      "path": "<WORKSPACE>\\outputs\\tools\\validate_mechanomania_side_classification.py",
+      "exists": true,
+      "sha256": "42E2B057DBA903C2BCDC03447DFFAC804819022E942B3E6E12ECEF369160DEF6"
+    },
+    {
+      "name": "tests",
+      "path": "<WORKSPACE>\\outputs\\tools\\test_audit_mechanomania_side_classification.py",
+      "exists": true,
+      "sha256": "65361333C2E1B3FBCA61DCFC9E929F2743099BBB8764DE8CB7927D0AB53790F8"
+    }
+  ],
+  "integration_contract": {
+    "merge_matrix_action": "Replace provisional side placement for these 11 IDs with this report only after validator PASS.",
+    "runtime_gate_still_required": "Dedicated-server boot plus two real client joins remain required before production release.",
+    "server_mod_ids": [
+      "byepregen",
+      "efficient_hashing",
+      "fastrecipesearch",
+      "hoporp",
+      "mr_dungeons_andtavernsancientcityoverhaul",
+      "mr_epic_structuresvillages",
+      "mr_lukis_crazychambers",
+      "rhino"
+    ],
+    "client_mod_ids": [
+      "byepregen",
+      "efficient_hashing",
+      "fastrecipesearch",
+      "jecharacters",
+      "mousetweaks",
+      "mr_dungeons_andtavernsancientcityoverhaul",
+      "mr_epic_structuresvillages",
+      "mr_lukis_crazychambers",
+      "rhino",
+      "yet_another_config_lib_v3"
+    ]
+  }
+}

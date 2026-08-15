@@ -1,0 +1,16 @@
+{
+  "jars": [
+    {
+      "identifier": {
+        "group": "at.favre.lib",
+        "artifact": "bcrypt"
+      },
+      "version": {
+        "range": "[0.10.2,)",
+        "artifactVersion": "0.10.2"
+      },
+      "path": "META-INF/jarjar/bcrypt-0.10.2.jar",
+      "isObfuscated": false
+    }
+  ]
+}

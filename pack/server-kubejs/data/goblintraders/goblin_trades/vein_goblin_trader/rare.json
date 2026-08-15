@@ -1,0 +1,68 @@
+{
+  "replace": false,
+  "trades": [
+    {
+      "type": "goblintraders:basic",
+      "experience": 200,
+      "offer_item": {
+        "count": 1,
+        "id": "minecraft:wither_skeleton_skull"
+      },
+      "payment_item": {
+        "count": {
+          "max": 24,
+          "min": 8
+        },
+        "id": "minecraft:golden_carrot"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 100,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "minecraft:netherite_upgrade_smithing_template"
+      },
+      "payment_item": {
+        "count": {
+          "max": 9,
+          "min": 3
+        },
+        "id": "minecraft:diamond"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 100,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "minecraft:rib_armor_trim_smithing_template"
+      },
+      "payment_item": {
+        "count": {
+          "max": 32,
+          "min": 24
+        },
+        "id": "minecraft:emerald"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 100,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "minecraft:music_disc_pigstep"
+      },
+      "payment_item": {
+        "count": {
+          "max": 32,
+          "min": 24
+        },
+        "id": "minecraft:emerald"
+      }
+    }
+  ]
+}

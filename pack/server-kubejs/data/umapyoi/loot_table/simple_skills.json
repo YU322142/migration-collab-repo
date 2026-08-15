@@ -1,0 +1,128 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 0.0,
+        "max": 2.0
+      },
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:last_leg"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:deep_breaths"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:nutritional_supplements"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:serene"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:low_health_buff"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:low_health_heal"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        }
+        ,
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:mountain_climber"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:set_components",
+              "components": {
+                "umapyoi:data_location": {
+                  "name": "umapyoi:dig_speed"
+                }
+              }
+            }
+          ],
+          "name": "umapyoi:skill_book"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+﻿{
+    "type":  "create:compacting",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:iron_nugget"
+                        },
+                        {
+                            "item":  "minecraft:flint"
+                        },
+                        {
+                            "item":  "minecraft:gravel"
+                        },
+                        {
+                            "type":  "neoforge:single",
+                            "amount":  100,
+                            "fluid":  "minecraft:lava"
+                        }
+                    ],
+    "heat_requirement":  "heated",
+    "results":  [
+                    {
+                        "id":  "create:crimsite"
+                    }
+                ]
+}

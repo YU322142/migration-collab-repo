@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Bod zrodenia v dimenzii %6$s bol nastavený na %1$s, %2$s, %3$s [%4$s, %5$s] pre %7$s",
+  "commands.spawnpoint.success.multiple.new": "Bod zrodenia v dimenzii %6$s bol nastavený na %1$s, %2$s, %3$s [%4$s, %5$s] pre %7$s hráčov"
+}

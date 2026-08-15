@@ -1,0 +1,8 @@
+{
+  "mix_type": "potion",
+  "from": "minecraft:slow_falling",
+  "ingredient": {
+    "item": "irons_spellbooks:arcane_rune"
+  },
+  "to": "apothic_attributes:levitation"
+}

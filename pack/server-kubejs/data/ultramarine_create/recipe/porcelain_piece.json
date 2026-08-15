@@ -1,0 +1,12 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    { "item": "ultramarine:large_white_porcelain_vase" }
+  ],
+  "results": [
+    {
+      "count": 4,
+      "id": "ultramarine:porcelain_piece"
+    }
+  ]
+}

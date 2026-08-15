@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "ultramarine:red_and_cyan_carved_architrave"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "ultramarine:red_and_cyan_carved_architrave_slab"
+    }
+  ]
+}

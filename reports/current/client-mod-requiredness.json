@@ -1,0 +1,2276 @@
+{
+    "generatedAt":  "2026-08-14T23:30:00+08:00",
+    "policy":  "required means absence blocks startup/login/registry/authentication; recommended means absence does not prevent entering the server",
+    "source":  "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods",
+    "activeClient":  "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods",
+    "counts":  {
+                   "gameplayCatalog":  247,
+                   "required":  169,
+                   "recommended":  78,
+                   "uncertainDefaultRequired":  16,
+                   "bootstrapExcluded":  2
+               },
+    "uncertainItems":  [
+                           "create-dynamic-blocking-1.0.0+neoforge.1.21.1-equivalence.1.jar",
+                           "createultimine-1.21.1-neoforge-1.3.2.jar",
+                           "deferred-content-protection-1.0.0+neoforge.1.21.1-first-release.1.jar",
+                           "ftb-library-neoforge-2101.1.34.jar",
+                           "ftb-quests-neoforge-2101.1.21.jar",
+                           "ftb-teams-neoforge-2101.1.9.jar",
+                           "ftb-ultimine-neoforge-2101.1.15.jar",
+                           "ftb-xmod-compat-neoforge-21.1.7.jar",
+                           "ironssablecompat-1.0.4.jar",
+                           "kaleidoscope-cookery-scarecrow-compat-1.0.0+neoforge.1.21.1-candidate13.1.jar",
+                           "kubejs_curios_neoforge_1.21.1-1.0.4.jar",
+                           "kubejstweaks-1.0.6.jar",
+                           "lootjs-neoforge-1.21.1-3.7.0.jar",
+                           "showcaseitem-1.21.1-1.1.0.jar",
+                           "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+                           "waypoint-fire-equivalence-0.1.1+mc1.21.1.jar"
+                       ],
+    "bootstrapExcluded":  [
+                              {
+                                  "filename":  "MCModSync-1.9.2.jar",
+                                  "bytes":  248083,
+                                  "sha256":  "094bac82a226545a37371a997ea9b7a9121e11d42d4cfd733fdb36e55681a8bd",
+                                  "md5":  "97a36acc79e9946212947bcda825ca78",
+                                  "classification":  "bootstrap_excluded",
+                                  "enabled":  false,
+                                  "reason":  "Publisher bootstrap; excluded from gameplay catalog and not enabled by the catalog."
+                              },
+                              {
+                                  "filename":  "MCModSync-Config.jar",
+                                  "bytes":  1137,
+                                  "sha256":  "8fe87b233286ee596d942015197a4ea88ef74f1073d4cdaa17073bc0ead98226",
+                                  "md5":  "5b019a22819d4b19c9c19b4767104991",
+                                  "classification":  "bootstrap_excluded",
+                                  "enabled":  false,
+                                  "reason":  "Publisher bootstrap; excluded from gameplay catalog and not enabled by the catalog."
+                              }
+                          ],
+    "entries":  [
+                    {
+                        "filename":  "advancednetherite-neoforge-2.3.1-1.21.1.jar",
+                        "bytes":  520611,
+                        "sha256":  "ae0ec0a574d4ebd0644b37913c65a6f92ea20a0fe7e3d3799fd872cfe01a278a",
+                        "md5":  "ad1ff51f9ae302227b95d8d70be6a748",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "aeroworks-1.2.11.jar",
+                        "bytes":  278098,
+                        "sha256":  "198fdccc4f745455fa45f29c3cf594f0cdadbf64223eb01d792a3e894c806e78",
+                        "md5":  "40a6d5ca48f7b7b73e377d36af3d907f",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "alloy_smelter-neoforge-1.21.1-1.1.2.jar",
+                        "bytes":  122936,
+                        "sha256":  "12e024f0886647c37a0102ab766bc6028c1e05010221c3f8293e609420521542",
+                        "md5":  "0448369e0096254fb31db2d567d053e9",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "AlwaysEat-neoforge-1.0.0.jar",
+                        "bytes":  5036,
+                        "sha256":  "ed6b9bfedaddb5c15c592a83af9a4c76815d94fd70718718be1722a34e5f93ed",
+                        "md5":  "470b56b7b4878b9908a5ae7aecfb1279",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "ApothicAttributes-1.21.1-2.9.1.jar",
+                        "bytes":  314269,
+                        "sha256":  "6e3dd73d01c1784f4d1293126e3020470887456cd0d246a4c44a0fc1a244e381",
+                        "md5":  "a3eeb5df11aaf5d5a661c498f76b8133",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "appleskin-neoforge-mc1.21-3.0.9.jar",
+                        "bytes":  75804,
+                        "sha256":  "38b48dd6231341c9f964ce6e42c57ec866c6cc8f72bec938390a59bafb3922df",
+                        "md5":  "db5fe7619d502cf5b9bc972a955cd3bc",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "architectury-13.0.11-neoforge.jar",
+                        "bytes":  584734,
+                        "sha256":  "9cc92f2c09533fc5482c60f993bd891c655a0e32b637037cdcb7c2b23adedeeb",
+                        "md5":  "aefbea361809755c331126bcff6e6d3e",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "armoreddoggo-neoforge-1.21-0.3.0.jar",
+                        "bytes":  213785,
+                        "sha256":  "94f5084727b71ad1ebc649e5c85cf10a41522d2c5a1b7a97a6270f50ab78c3c4",
+                        "md5":  "b7f773a36feb420d2921245c7ec05b47",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "armoroftheages-neoforge-1.21.1-1.5.10.jar",
+                        "bytes":  554516,
+                        "sha256":  "0435f7cb0d07f6ed12d4b808163dd253541ec8e209a07001c43a1ee461cd7ad6",
+                        "md5":  "4ca7587e6dc4f263f93992d3bd812c8d",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "atlas_api-1.21.1-1.2.0.jar",
+                        "bytes":  28419,
+                        "sha256":  "42f213c8fc8db43e307dd5b0b726acb2b044548258bcac6c3f666a953688cc64",
+                        "md5":  "17a2fb94d99b3a59eae8b944bb5f7d6c",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "attributefix-neoforge-1.21.1-21.1.2.jar",
+                        "bytes":  19798,
+                        "sha256":  "63208be1b019bd5bbe95a0c98605e271f9e30113e75e64ee28cf79f75964a06f",
+                        "md5":  "59951f0c51accf352f00577023f0abaf",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "backport-1.5-cat-serializer-fix.1.jar",
+                        "bytes":  15336561,
+                        "sha256":  "34291af9d81b6aee0780f5f511b2a9594664f36906aed40687df1c7009e68b1d",
+                        "md5":  "cd4cc3002bcab0bf5d606352ff846399",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "balm-neoforge-1.21.1-21.0.54.jar",
+                        "bytes":  581424,
+                        "sha256":  "6366aa26cf338393fdeb6d52b8e6d22b5f61975989ea6ea391c76c51273be696",
+                        "md5":  "4867bc98cbf1bf0cc7f3fdbe3ad8b9ac",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "barbequesdelight-1.3.0.jar",
+                        "bytes":  847092,
+                        "sha256":  "fce559ad8c0964cf4e3bfd9fc03fc2ab87bebc31e446968c87d3876a86f23f7e",
+                        "md5":  "66dfe9fa636d93812b2297751ec1d736",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "barched-neoforge-0.0.12-migration.1-asm.jar",
+                        "bytes":  1829478,
+                        "sha256":  "cd93249fa802559886be89f359e69daef1f38919f4b376b88ba1e2ce78f1bd4b",
+                        "md5":  "6abad54dfbb3dd13f5516f7d2dcb5831",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "baubley-heart-canisters-1.21.1-1.2.3.jar",
+                        "bytes":  153222,
+                        "sha256":  "34c3aabb612531bf58c92d10528c65ead96d55de532454f39152cb784e03000c",
+                        "md5":  "4210edae10812a02aded3b874cac4104",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar",
+                        "bytes":  98641,
+                        "sha256":  "60b548bef04a2f0e1da686ee9035c2e3d4ed0459a17d7a4836fc26af6de6b60e",
+                        "md5":  "a18430f1f7ecf6dd1849a8f240f509af",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "biggerbetterendcities-1.21.1-1.0.0.jar",
+                        "bytes":  22857,
+                        "sha256":  "6ee234e4f0d69a98b81cad75ae0b87ea1344a73e644a39ca95f26d9e5f16e8d7",
+                        "md5":  "0b000743ced83d77c786129f76b7054d",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "biomespy-neoforge-1.21.1-1.3.3.jar",
+                        "bytes":  38355,
+                        "sha256":  "5cdf106229e3d6b368b80fcfb1048bc632565e5f94f21d08f5ce713992b27648",
+                        "md5":  "e3ac0c5d9759fd7729baecb2478b02d2",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "bits_n_bobs-0.0.44.jar",
+                        "bytes":  1613264,
+                        "sha256":  "6d8268d82cc6e38dd13f5247b28f37b7a35d66cb476c6e0632f4e9ba5570f5d8",
+                        "md5":  "33956528debb0db78f5410b9e2cbce57",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "bookshelf-neoforge-1.21.1-21.1.67.jar",
+                        "bytes":  332655,
+                        "sha256":  "933c016d71e19533dd2d0215717090f047251471fe2d11f61fdcec0b39bc28d8",
+                        "md5":  "c857bdefcaac1fc60ff49f10f6054fef",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "BrewinAndChewin-neoforge-4.5.0+1.21.1.jar",
+                        "bytes":  1575450,
+                        "sha256":  "9f6581823c2449dde4ac1e9b4f5a7cc226c42e058e656741ab392f714f443971",
+                        "md5":  "4548d2c0d5813e5a0acaf5c68a86ec6c",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "c2me-neoforge-mc1.21.1-0.4.0-alpha.0.113.jar",
+                        "bytes":  3653679,
+                        "sha256":  "d0798b7ef4e4ddff44ea61332d5464fcd27659af3e8c773c4d7ef2c4730e624f",
+                        "md5":  "dd5855da563fe21817b6de3ebe36513e",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "c6c-1.2.5.1-purified.jar",
+                        "bytes":  666910,
+                        "sha256":  "2666383e0e2c4c6f49494051fc2c3723d6b851dabd42d511f05712bad2a529c4",
+                        "md5":  "3bd2b0a6d4a76443da66cd1f326028eb",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "carryon-neoforge-1.21.1-2.2.2.11.jar",
+                        "bytes":  347647,
+                        "sha256":  "b18c734fb574c05c78dd33c4cd4c152e55efc8aecc0b6de876cc21be3c147f7f",
+                        "md5":  "f8438716763fe3865a833f8a9dcceb9e",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "cc_sable-neoforge-1.3.4.jar",
+                        "bytes":  43338,
+                        "sha256":  "7504abc1666a03e25ee2b8f99c352571b84edc5f85db24fa492d7b70d77adfeb",
+                        "md5":  "21ca77c3364bdf5a3a15ed5398476332",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "cc-tweaked-1.21.1-forge-1.120.0.jar",
+                        "bytes":  3126946,
+                        "sha256":  "81a903710d109d129c249c105695a96f4bad5e0acf7068920fb191ba791c14ce",
+                        "md5":  "ae82127d8f0a8575875032f1da354561",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "cctweaked-startup-shutdown-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar",
+                        "bytes":  3919,
+                        "sha256":  "6744626e2b43643e9f28c9159fabd7a6a53cdcdeb83ae8252c266f7e987f84f7",
+                        "md5":  "31a086161c0f054197078bb2a4d015c9",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "chefsdelight-1.0.5-neoforge-1.21.1.jar",
+                        "bytes":  95250,
+                        "sha256":  "9fd7920a4cced00443c107c1ac05002b35543734c76e05ef1d1ebf5f17ce99c8",
+                        "md5":  "a99fb108e22e0bd50dbf543309d29a95",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "chest-colorizer-1.6.1-equivalence.2+mc1.21.1-neoforge.jar",
+                        "bytes":  150133,
+                        "sha256":  "9cef2fac6bd959202e37882b941ebc51a1ed7a4259441d3b41372971fd04f6d8",
+                        "md5":  "057836f554e603fa4c6f97fc4669056b",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "clientsort-neoforge-2.2.2+1.21.1.jar",
+                        "bytes":  342154,
+                        "sha256":  "2844d0f7374ebfb0dd0782a675ef53311bb3cedacb1cf6258c35025eb809225f",
+                        "md5":  "5a55e75ade402919e04dbbe7b3ddb729",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "cloth-config-15.0.140-neoforge.jar",
+                        "bytes":  1163890,
+                        "sha256":  "65e722e0d98431a07c45f8bdd8d529a217cc8c175fde1740248bd5c1b4f3c0d4",
+                        "md5":  "4c3757160403fcccb8ad468c2ea22862",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "cmpackagecouriers-neoforge-2.3.0.jar",
+                        "bytes":  284554,
+                        "sha256":  "9f9658c5e2036cd3862e263a7b4c625291cc1e0479650bd657db7595807094a0",
+                        "md5":  "fa69f3b9894677897549fbfdba968596",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "colorfulhearts-neoforge-1.21.1-10.5.9.jar",
+                        "bytes":  156588,
+                        "sha256":  "332a7f3df1274cabeae05e9361c41561c42a670787adc7e4b6795961b4721401",
+                        "md5":  "19928b5c0725b89b285d8b4e1eec8943",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "colorwheel_patcher-neoforge-1.0.5+mc1.21.1.jar",
+                        "bytes":  210569,
+                        "sha256":  "2285a5154739d2e9889d979e3bdf54104b56d7966dac8d43367305e5aaedcce8",
+                        "md5":  "395253024ca2839433d824b9eb715ad4",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "colorwheel-neoforge-1.2.9+mc1.21.1.jar",
+                        "bytes":  398004,
+                        "sha256":  "9259e4adb5b091fe2bd60e57be7f0b2ec9872f1c97ff6d2ed3bb2a9a5ec6407f",
+                        "md5":  "5fb6fde45515060b695c245ecbf5f1ae",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "CombatNouveau-v21.1.1-1.21.1-NeoForge.jar",
+                        "bytes":  100340,
+                        "sha256":  "3abe94698b5ac3323370adada82995020a57fabfd2d009c4882835fed95a2a4d",
+                        "md5":  "4b5b464e37acb2f86e969f1121b36969",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "ConfiguredDefaults-v21.1.3-1.21.1-NeoForge.jar",
+                        "bytes":  43521,
+                        "sha256":  "48b97dada951826b4abf9b2dcab79c0e701bb2980c5bca4977bac7ca0c264ea7",
+                        "md5":  "512d6e79b39e980c320d197668a142cf",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "configured-neoforge-1.21.1-2.6.3.jar",
+                        "bytes":  428793,
+                        "sha256":  "421ffd2604b5487cbdb284d1eb5d1cb8a7d28f3ff84d5b4bda25e0a579282a15",
+                        "md5":  "6bc7aea6278cd85c5eb7beb7edbb555b",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "connector-2.0.0-beta.16+1.21.1-full.jar",
+                        "bytes":  4533093,
+                        "sha256":  "ed805a4df711ada58ed66ac2f1a30233eeb4e83c364bc4f16cd77f89a5bc5628",
+                        "md5":  "d044303cec7ab551e41c09456e12f508",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "ConstructionSticks-1.21.1-1.3.0.jar",
+                        "bytes":  262932,
+                        "sha256":  "c035e07b7178fefc12ca006255189a69c23608e7adb3e91a616fe26a4e1711c5",
+                        "md5":  "32422d7dbc89f476833bedda12e1ff42",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "constructionwand-kots-1.21.1-2.16.9.jar",
+                        "bytes":  202805,
+                        "sha256":  "cf6ed4cf33d7cd44e026c4e6d2d337d022db7050a861ee11cae92c6bb3507b8f",
+                        "md5":  "76862aba20adaaad7fdb03383b40660b",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "Controlling-neoforge-1.21.1-19.0.5.jar",
+                        "bytes":  77555,
+                        "sha256":  "cc525fb6b030d9e4d33176983f278919e17b33935e2ca568929bdfa98f2b44a0",
+                        "md5":  "7141c2d0bb774dc6e4481be32b685179",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "copycats-3.0.4+mc.1.21.1-neoforge.jar",
+                        "bytes":  1791747,
+                        "sha256":  "8480e2a62eaa625f75776831c1d8a9ef3d77d2d816fa2e67566c6ec25ba745d1",
+                        "md5":  "c9f1a4b031cdfab8ebfc06d81e891c43",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "cratedelight-25.09.22-1.21-neoforge.jar",
+                        "bytes":  166931,
+                        "sha256":  "10ad1481e3613c92e942230c998a4bbfbd316ecfa5cfdce53f89113ce6d2784b",
+                        "md5":  "94869d38883f5e92b9ed61cd7809ee34",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create_aeronautics_automated_logistics-0.4.2a.jar",
+                        "bytes":  805730,
+                        "sha256":  "fa8a2363f6da9674fae97aac1fff7002747e13ed921c1c7a3dcc763184402898",
+                        "md5":  "a661f5496ecc631fd33909dc41224c3f",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create_aeronautics_toolgun-0.2.0.jar",
+                        "bytes":  827443,
+                        "sha256":  "506a0db3f4f17f55ae32e09254ee7b201be784fca686cb749286b21ad024c995",
+                        "md5":  "c5318320770f510dc5a469ffbe1ee303",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create_avionics-neoforge-1.21.1-0.5.1.jar",
+                        "bytes":  151025,
+                        "sha256":  "0764b22558b639e675a12aee439b74f965277eac883a015c02191ce9e895cb95",
+                        "md5":  "c555269aa22cb98b2598d771196454e7",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create_compressed-2.2.0-neoforge-1.21.1.jar",
+                        "bytes":  158857,
+                        "sha256":  "b4ce8b8031ef9917835e71ee6bfe05dc8150ea27d78cd7c50f1873eb290a4880",
+                        "md5":  "f06f3148370c7d0947892a5dbeddb34c",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create_connected-1.3.2-mc1.21.1.jar",
+                        "bytes":  6773076,
+                        "sha256":  "1d58a593b4faa692dbd74c99c12a7fac3ac82828a86f5ca3fce5b15aa7c7859c",
+                        "md5":  "89779a5abd7296f1f201b20b51ca622b",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create_easy_structures-0.2a-neoforge-1.21.1.jar",
+                        "bytes":  469490,
+                        "sha256":  "8d5949114e9dd506c4a8598f789e63678fdf6b2b90f40a8e6ef2babc6f56029f",
+                        "md5":  "183f48dd9ec8a62cf2d2654172cceb05",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create_ez_stock_ticker-1.0.4.jar",
+                        "bytes":  715885,
+                        "sha256":  "e811f8b84608225e398b7fcc2e9ee8149aa71c2965fc760e101b9153ab611444",
+                        "md5":  "c2c33781bb51229aab2435afc1ae14f2",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create_hypertube-0.5.0-ALPHA-NEOFORGE.jar",
+                        "bytes":  499740,
+                        "sha256":  "fdcf86646a75465dfe711123e2d98c32d582f8a60d7819295315bbc066f8099e",
+                        "md5":  "f29bbd65a169507c9381dc557b689374",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create_mechanical_spawner-1.21.1-1.3.1-6.0.10.jar",
+                        "bytes":  1215658,
+                        "sha256":  "1733f4e1e0dc668a52da15ca1992a9f4f2508c5a8b709c33dd24b16d18708e7c",
+                        "md5":  "9b77e0d7d92faabc6f0b93cecd11f54e",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create_pattern_schematics-2.0.10.jar",
+                        "bytes":  221764,
+                        "sha256":  "d6525b9ab9914a194ca5aa00e6605f5977d8ac28722cdccce018da44f62bc5c5",
+                        "md5":  "ae96b6c00e6a87ffe6d5df48302690fd",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create_power_loader-2.0.5-mc1.21.1.jar",
+                        "bytes":  442369,
+                        "sha256":  "69fb0433dcba1597e7fbc06b2731ebd441f8ed99e20d8ec798d852d6865d1bd7",
+                        "md5":  "db072c13031f5144d140335206fdad89",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create_tweaked_controllers-1.21.1-1.2.7.jar",
+                        "bytes":  303343,
+                        "sha256":  "eda56263fabfcf4064dbaa8950a7f469775d4457dc807ee84ba29169690fda34",
+                        "md5":  "b7cfe34fa390acad58e8a42ce90718f8",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create-1.21.1-6.0.10.jar",
+                        "bytes":  19123767,
+                        "sha256":  "ef87fe5709f1ba1f5b8bb20a2925b5afb4669e178fd6d8bf10c167759eefe37a",
+                        "md5":  "179189c52b45a469e683570be4e77188",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "createadditionallogistics-1.21.1-1.4.5.jar",
+                        "bytes":  952653,
+                        "sha256":  "6c06ff35a0bf8f0714026547f6587dc3bdc80199023e48c9b03af2652bbc95c0",
+                        "md5":  "a81079838bdc32142bd9730f69881911",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create-aeronautics-bundled-1.21.1-1.2.1.1.jar",
+                        "bytes":  33058060,
+                        "sha256":  "c49ef881581e91f42d8f6ad1a7e8967eb0d92a7d7551c483b5cd765be90648d7",
+                        "md5":  "0c94f39cdfa717c929133250d6d4f544",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "createbetterfps-1.21.1-1.1.4.jar",
+                        "bytes":  26547,
+                        "sha256":  "f0080f5cb186bf9f785dc5510babab94d97adc7918952cff780d2c5fadf2ac9a",
+                        "md5":  "88827dcbad6f5bf8974c40e6fff77ed5",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "createbigcannons-5.11.5+mc.1.21.1.jar",
+                        "bytes":  3765142,
+                        "sha256":  "2c0576338ec400bef5ca373650e3e919eee602c002ce1b7b6eb0f69f3c67764a",
+                        "md5":  "09985e607d92012ff7c5d4a244d8f0f7",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create-carriage-orientation-guard-1.0.0+neoforge.1.21.1-p0.2.jar",
+                        "bytes":  6288,
+                        "sha256":  "805d6841bd30b514a059b21bee4b6c70e183cb379ca286032975dcb961d6d74e",
+                        "md5":  "b8732e23d91b5275f33bb4b2eb441296",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "create-central-kitchen-2.5.0.jar",
+                        "bytes":  375492,
+                        "sha256":  "ef581fb9e62ffda6bf5e1c6854847f5e53fe7dd43adb4c1a318426481468afec",
+                        "md5":  "66c68bcf22380798fb2f028ab2cc46ec",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create-chute-unload-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar",
+                        "bytes":  4018,
+                        "sha256":  "ac51aefdda8437d777b5c8b3e285e9036676d854f7958c6b882807c15be0910a",
+                        "md5":  "b0060297b22c5b49cd6a3ed96758a7d6",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "CreateCyberGoggles-1.21.1-8.3.6-NeoForge.jar",
+                        "bytes":  672590,
+                        "sha256":  "f8295c0707b515a5840b5534086c5ffc7716ff332eca5949b721452487d84614",
+                        "md5":  "2b25a50b10e0c3fae586e4dc330ad414",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "createdeco-2.1.3.jar",
+                        "bytes":  3323409,
+                        "sha256":  "508451f42357f3c61cb0a2fc1ae2db9465a6c7eb490d2effcaffbe465e0a1ca6",
+                        "md5":  "96161d3ab7335827560dd1d435ae3d06",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "createdieselgenerators-1.21.1-1.3.14.jar",
+                        "bytes":  3143118,
+                        "sha256":  "038d7f9173fe7f792b77054ab98e9543e04630825610a05b036329d30d02329c",
+                        "md5":  "5700362abe38d2e61a577b0da032cb69",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "CreateDragonsPlus-1.11.4.jar",
+                        "bytes":  1029344,
+                        "sha256":  "80687f22daa95fa6240631097688f1e0295a5d31473d9aa56a14d360d863e98b",
+                        "md5":  "e3b66c1ffa852fcf4297ad9fb423c39b",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create-dynamic-blocking-1.0.0+neoforge.1.21.1-equivalence.1.jar",
+                        "bytes":  12258,
+                        "sha256":  "8bc10c4b4949ed701f131ff36ccce64da2a817c13dfdd3838cfac7512836aced",
+                        "md5":  "694c0fa94a39078ec75067864932db1f",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "create-enchantment-industry-2.4.2-cei251-backport.1.jar",
+                        "bytes":  1575446,
+                        "sha256":  "5b2c3be95385dbf93000759db604ab4c71224d7455c437c1b4650d91fac669eb",
+                        "md5":  "8ced1e311dc725e47e8382f7bb64c238",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "CreateFastSchematicCannon-1.4.1-neoforge-1.21.1.jar",
+                        "bytes":  74294,
+                        "sha256":  "5dbc33a64c01e8fef09585fae9d09c9ae04b800e3c4315ace85901a68eb5fae3",
+                        "md5":  "29d403bf1114a346ce18dbdb3f179a66",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "creategearsandtavern-1.1.6.jar",
+                        "bytes":  724827,
+                        "sha256":  "cd58b8f99d6c8085a66b3ed17a6dc3f469a3c517d36a5c7571b83a76a0ffdcec",
+                        "md5":  "47ca24d08b322e73c53aaa795219aca9",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create-integrated-farming-1.2.6.jar",
+                        "bytes":  438847,
+                        "sha256":  "6eef62f0a46d68e0fec18ce23c14104a0608ff9c66939c59e88c606fa268dd40",
+                        "md5":  "8b4a246a8c0b0aaf8ee4d3016745c6a5",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "createliquidfuel-2.1.1-1.21.1.jar",
+                        "bytes":  18140,
+                        "sha256":  "ccd44b069962890352dfee442508880a37eecd3c5625d74d668dd6eb7d39ee3d",
+                        "md5":  "40493b83833af97c8d717084b61e7d62",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "create-nerfad-1.2.3-neoforge+mc1.21.1.jar",
+                        "bytes":  13933,
+                        "sha256":  "3aa4e8fc9db8babe4c4487e94b88e182a59656dca08bc3bde0a1b46e53d20422",
+                        "md5":  "d1217a582c9642c5d02b8790755dbda3",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "createoreexcavation-1.21-1.6.8.jar",
+                        "bytes":  476990,
+                        "sha256":  "d3a2e1a6e65de7e50ae9e279de399b6535da407abc8e6b4688a56f2e461aab99",
+                        "md5":  "3539ffec4607fea12bebc5aa843db283",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "createprism-1.2.2.jar",
+                        "bytes":  1287223,
+                        "sha256":  "3b9c80f8a0104a2cee1af2b0a17b5a500f5600c55bccc441a34063154587a8fa",
+                        "md5":  "14cceaaa0953aa2f78034e87c3a02813",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "createpropulsion-1.1.4.jar",
+                        "bytes":  1196735,
+                        "sha256":  "816329242ce595d0f8b8bd1a7ea00df48470d41f5b79240fab682bbfbe6f39a1",
+                        "md5":  "4d67f8a63e402dd31ef5e150faa83ec9",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "createrailgrinding-1.2.1.jar",
+                        "bytes":  877593,
+                        "sha256":  "3abcc381b044da297380cc2634dac4ddf4e9c30e24f60fcc751b26e0686b407c",
+                        "md5":  "bdac0d213d814ccedda84656d61afa09",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "createredstonelinkgui-1.21.1-1.3.0.jar",
+                        "bytes":  101655,
+                        "sha256":  "509a3e239e07a7b4b134d7b99baaf6f60f56c50bd3bb769554bd8cc0d40c2b56",
+                        "md5":  "5bc4c53643a347e50b5253c6b55da41a",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "createultimine-1.21.1-neoforge-1.3.2.jar",
+                        "bytes":  95195,
+                        "sha256":  "96feb5f37da16dd41e2f547576da72941c664aa5bae3a6618621404c783522fb",
+                        "md5":  "114ae1554cc5b027f8a4796848579d73",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "curios-neoforge-9.5.1+1.21.1.jar",
+                        "bytes":  410690,
+                        "sha256":  "a45df2125c26219974aba7507ffc9afe7b83acc941a386af3faacb1cc0056fde",
+                        "md5":  "e8f0a3574264bb202c153b90293dc84c",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "cyclopscore-1.21.1-neoforge-1.29.2.jar",
+                        "bytes":  1161287,
+                        "sha256":  "c8a3fa04cd3c9e3efb903c0a7c79e8f4fec5cb6e30f5b858aba9236ed59021a6",
+                        "md5":  "ede3aa664acb2c5f67e2a8aaec5f1b62",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "dawnoftimebuilder-neoforge-1.21.1-1.6.6.jar",
+                        "bytes":  3083725,
+                        "sha256":  "3b37504f81554f9965f1292005bd0da3bbdb09f367d1891a15c166ab0ba0e739",
+                        "md5":  "562f0c4b96c8ee97c242caef7567e884",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "deferred-content-protection-1.0.0+neoforge.1.21.1-first-release.1.jar",
+                        "bytes":  23338,
+                        "sha256":  "1c7c4b2a76978c563c18ee05aba9292099e6b15ba920cf2699904068f0b1104b",
+                        "md5":  "a366b8da9ab0fb83e079c715f6ad8c0f",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "deployer-0.1.2.jar",
+                        "bytes":  2010014,
+                        "sha256":  "a6fc332b19b38a37a67be8285e837ddd172f51f8026eacb6c4037a0eeb331b76",
+                        "md5":  "6f7adecaebca0ecd2b85446adea4016d",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "disconnect-packet-fix-neoforge-2.0.1.jar",
+                        "bytes":  8231,
+                        "sha256":  "6254f47c73249108706860505f8261b0273aafdc53fe8008aadfca162f0cfd3b",
+                        "md5":  "a03d8fe52660976d2885af738fc082b7",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "display_case-neoforge-1.21.1-1.2.jar",
+                        "bytes":  52914,
+                        "sha256":  "3782905033b366c6f7383ef11102f381d85b5fe306446ec86527f043a8774ed8",
+                        "md5":  "6ac4118dfc8f7cb46144956600ed3a9a",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "displaydelight-1.7.0.jar",
+                        "bytes":  1144367,
+                        "sha256":  "4a77575139aa2fd1e1887243461e4f5cf1a532ac0a3a4d3a80c469d07a6df55c",
+                        "md5":  "7e084605b80acc663ab0f2509222359c",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+                        "bytes":  945155,
+                        "sha256":  "a7d3abb6c39fb50c791d52e596c9d14c22d0287eaf6ba055a687c31c0a4c8a7e",
+                        "md5":  "1f6e33095f4b53735fba45a202d92bea",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "do_a_barrel_roll-neoforge-3.7.3+1.21.jar",
+                        "bytes":  465787,
+                        "sha256":  "e56395ebb26318c11f3a9474bba14518f17f4f2028683eb0aa9cdc7dacf124e2",
+                        "md5":  "92ad2f96176a94d07283b1bd0ec76d5e",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "drivebywire-0.2.9.jar",
+                        "bytes":  269068,
+                        "sha256":  "5f8eaa10a6d61aa7330ed997c4f812509c55f02f7213afbebde77c4af17c23c3",
+                        "md5":  "91299dd9abb32161f9d5c1e6c6ff23f2",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "efficient_hashing-neoforge-1.0.0+1.21.1-mod.jar",
+                        "bytes":  23822,
+                        "sha256":  "76bb1bd93e211cffac01f2879e2e6b54bee2b5884bc06bedf0c21d89107af5ad",
+                        "md5":  "02d0b40376b17a8ea04e0c011fbce558",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "electroenergetics-1.21.1-1.1.1.jar",
+                        "bytes":  4771388,
+                        "sha256":  "ea5df2c5100a4aa178bd0054779015d85c63da221a782915240656601b51aefd",
+                        "md5":  "a400544b9647e64a1359c742c3888795",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "enchdesc-neoforge-1.21.1-21.1.10.jar",
+                        "bytes":  82629,
+                        "sha256":  "9424c9aff4edf4d8730c931df4253138aeaee745ec839af7078d292bb4eeaa16",
+                        "md5":  "40e73c52fe6d63eafe099e3bb042ad8d",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "ends_delight-2.6.1+neoforge.1.21.1.jar",
+                        "bytes":  258124,
+                        "sha256":  "030593aa0957520b114c7ab36532cbf3c63c02d7d1bff86331b8bd9fc4145c4e",
+                        "md5":  "b6bcdd7a6fb58041d068a1f5752c4bbe",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "Epic Villages 1.3.0 (1.21+).jar",
+                        "bytes":  3445547,
+                        "sha256":  "0a49c689131affe588f0eb168873169ded54ac9f10b337410969d836e3da32eb",
+                        "md5":  "076a285432d8b451f93407ae89194da1",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "escalated-1.3.1-mc.1.21.1.jar",
+                        "bytes":  512511,
+                        "sha256":  "cf2de1ac5439e72a7020ba7ad42ea5b0e225b0fbaaa4ca941913e74c77ea582b",
+                        "md5":  "8b677397f54e68440e452c3953fd9697",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "exposure-neoforge-1.21.1-1.9.18.jar",
+                        "bytes":  2192415,
+                        "sha256":  "674c537a99f69b2bae53521c95dae59bc5f4eb2eb15418eec0ecbaf36b53d888",
+                        "md5":  "e927ea94d0dc436bd21dd86420eacc40",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "extra_gauges-2.1.2.jar",
+                        "bytes":  1055930,
+                        "sha256":  "590a00b64d6aa4d347e848fdcc4824740987695ac899754d57036d62bee5bd2d",
+                        "md5":  "5c384b50b9328e12e443b91c7218071e",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "fabric-language-kotlin-1.13.13+kotlin.2.4.10.jar",
+                        "bytes":  8076363,
+                        "sha256":  "34ccdacf13bb9351fe43ce61912c2e09b72364e43e787d36ba3d2d04dec75a52",
+                        "md5":  "b70470268be8c74a10e10b24a2bf7df6",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "FarmersDelight-1.21.1-1.3.2.jar",
+                        "bytes":  3163042,
+                        "sha256":  "8ff438d62e1fce61542945faae45975d823e04bd6e73a07a121ea05ce2f03de7",
+                        "md5":  "60186e1b39385ecae70ff2f194ef7c32",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "fastleafdecay-35.jar",
+                        "bytes":  9511,
+                        "sha256":  "0b90f259caef64c3aa09d05427859990a51adec072540a9c598370b86c966a98",
+                        "md5":  "97223075d6407a012024fd7e3c48e5e8",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "fastrecipesearch-1.21.1-26.2-neoforge.jar",
+                        "bytes":  54702,
+                        "sha256":  "e5944b8159ea7ae45e01c0d3fcbd6f75154b75336a35f01d4ac52f9b22d6ca81",
+                        "md5":  "55eb360c2b709b5fc88dde9ad66b04d3",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "fasttag-1.21.1-26.1-neoforge.jar",
+                        "bytes":  8970,
+                        "sha256":  "25c5ccb26f7666441a0d60b33ab88a97bfc7d0c5d858d951774308f0d44f706f",
+                        "md5":  "5a08b8144e7e574922b8cd3503c2274d",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "ferritecore-7.0.3-neoforge.jar",
+                        "bytes":  121559,
+                        "sha256":  "d87ea28262715ebff45b8a82d493e6b468e7a4521bc021df5d88302196d030a8",
+                        "md5":  "e0374dac41d6c641903f9e241911e1d3",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "flatbedrock-neoforge-87.0.0.jar",
+                        "bytes":  7728,
+                        "sha256":  "0a7dc68a9d0c943bc9451a7ee476cb7f17c5c2facd3c9af188d2d06ea6a7bbbf",
+                        "md5":  "d825e50c95fdbf0e03e38c1870da843a",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "flerovium-neoforge-1.21.1-1.1.1-all.jar",
+                        "bytes":  182475,
+                        "sha256":  "2ceac9a74e4f715e242ea710a7e5e226601efc0b00aae6ad0d55ccbd9fb6bc00",
+                        "md5":  "dd02cc5521ac70a99082491362a7e6a2",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "fluidlogistics-1.1.0.jar",
+                        "bytes":  1797788,
+                        "sha256":  "f7b4a86876b6cea65ec8a6d02511698ee3430d2d00d5833c3ae7cfaacc625755",
+                        "md5":  "448877708920ca43b1b613faa3299854",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar",
+                        "bytes":  633065,
+                        "sha256":  "2e3a8f0e3bda85a7d722720e7ce879cbd9d028d9395c6fc224d329b3c982d9b1",
+                        "md5":  "eba1a7f9d9976e983a2b9eb5e915e087",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "forgified-fabric-api-0.116.15+2.3.1+1.21.1.jar",
+                        "bytes":  5590061,
+                        "sha256":  "b152376a89cf790ca7966df220f3fa85fb8ecb603225a6a9bdb6684c94944f1e",
+                        "md5":  "6047fca6d016fcf8ab2812ddd96af61d",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "fragmentum-neoforge-1.21.1-2.1.1.jar",
+                        "bytes":  888074,
+                        "sha256":  "c554eda617578647b98e3849940f957cd67d501e8eaf1023fab4b739ee5e7090",
+                        "md5":  "01806c9d61343f5d87d126ea27c0aa29",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "framework-neoforge-1.21.1-0.13.10.jar",
+                        "bytes":  387332,
+                        "sha256":  "24cfe608bb62f4c46fde6ab75639a28d835458c8132d874ab5bb8cfe39c78b06",
+                        "md5":  "28043a3fde038f4c164ca465d89bb803",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "frequency-1.21.1-neoforge-0.1.5.jar",
+                        "bytes":  529246,
+                        "sha256":  "7ddd91917db166e3230e429cdb4c794c134c999f32348561f0aaf1dea76f0f54",
+                        "md5":  "3742a7213f55188079361972a4e7e500",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "ftb-library-neoforge-2101.1.34.jar",
+                        "bytes":  1439001,
+                        "sha256":  "603e7c9fc8e7020642f2ff6d3a904ef5cb12f7cf8b683c5ff8b08f120d083cff",
+                        "md5":  "f169932423af84b27e9526c1db2689fa",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "ftb-quests-neoforge-2101.1.21.jar",
+                        "bytes":  1440894,
+                        "sha256":  "8559d32d03be276b156f843c8d56539668545c379462e557a9642370662cc294",
+                        "md5":  "5d9364a68580af1c60ba885dd69d9d20",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "ftb-teams-neoforge-2101.1.9.jar",
+                        "bytes":  291847,
+                        "sha256":  "c0e4fcb2e349dd24dd3bddb1bcda6c61dad3c1db38e3bf1100e5da9c2753e571",
+                        "md5":  "7517a7d5f209c6d26596472a272c1f27",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "ftb-ultimine-neoforge-2101.1.15.jar",
+                        "bytes":  177109,
+                        "sha256":  "1393a85ceb6e4794450d5f06043e3a033278e31b86de8e03950d8b87604b2213",
+                        "md5":  "93de42bb644fad478ede2cc67d4aac16",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "ftb-xmod-compat-neoforge-21.1.7.jar",
+                        "bytes":  141226,
+                        "sha256":  "3d175d859068628024f18dab7f993e63b21d37cb767cbed850fd9ba63fbd0830",
+                        "md5":  "b4b738d6aac1e8a8a8891722120ef340",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "fusion-1.2.11b-neoforge-mc1.21.jar",
+                        "bytes":  532221,
+                        "sha256":  "626340f7a4ff1cf406d73da3d7e328c17818e8f41b983912333da47287143b56",
+                        "md5":  "f7e97bf76e6f6fdda1be32d1b009cc1e",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "fxntstorage-1.3.0+mc-1.21.1-neoforge.jar",
+                        "bytes":  1690112,
+                        "sha256":  "77bc10cba0602373da09de5884122b67e6116dc2db9e7ea9ed54aaac15148d50",
+                        "md5":  "94315fff7eedbace0ac84d4bca624d40",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "fzzy_config-0.7.6+1.21+neoforge.jar",
+                        "bytes":  2369895,
+                        "sha256":  "4e5cc1438087b0bc0276969e88b9ad0bdf2bcc60d6caf5fe79e18947d7a29050",
+                        "md5":  "cd0823556e6d24046bd0f4ba74cd4981",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "geckolib-neoforge-1.21.1-4.9.1.jar",
+                        "bytes":  630581,
+                        "sha256":  "38c73035d1e8c143610fa76550b0472ea46f8b75fcaf2a14574ebf47517b8d02",
+                        "md5":  "684d0f23e0bada770d39ae0d907d6015",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "goblintraders-neoforge-1.21.1-1.11.2.jar",
+                        "bytes":  462245,
+                        "sha256":  "523aebc80baab377072fe26c5ff9d1c3649764f185131e7849acd99833d406dd",
+                        "md5":  "ecbad97f19e2fe0782c7af96fbd0eec8",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "happyghast-equivalence-1.0.0-equivalence.2+mc1.21.1.jar",
+                        "bytes":  13270,
+                        "sha256":  "36c1ce14ee18b81c04654f1a6956f2257b7deac07746e960475aaf5c6f25a579",
+                        "md5":  "aa8a329ebbeb5dd6f0f95ab5f59925b0",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "hardcorerevival-neoforge-1.21.1-21.1.14.jar",
+                        "bytes":  242442,
+                        "sha256":  "8e1fe1c9358289a68b4e3d32bfec7ef9d074d96d0897bbd148e4cf86f93c7a3b",
+                        "md5":  "61fa58b58671393bdcd38462e92bf918",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "horseman-neoforge-1.21.1-1.5.9.jar",
+                        "bytes":  445058,
+                        "sha256":  "6ead0d129ee4a40acec31d569572ec18db3f08a15ce73df66ce7694e2b251266",
+                        "md5":  "c5c28282815ce0bb9df3e9b93f3e1744",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+                        "bytes":  712893,
+                        "sha256":  "1b53a2b7b2c6476bbad3ace344316da7abe62854967de322e9a25ca1d5c7681a",
+                        "md5":  "2761f0b9f743d3396f379d8f1b26869a",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "ImmediatelyFast-NeoForge-1.6.11+1.21.1.jar",
+                        "bytes":  361795,
+                        "sha256":  "336df12f099d1a441a3e06850bea86e9c2d0c8bc022d3d9a201870a201562a04",
+                        "md5":  "f432a12463accb05290ea7de52fccc43",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "immersive_paintings-neoforge-1.21.1-0.7.8-migration.1.jar",
+                        "bytes":  5523583,
+                        "sha256":  "af4d838434302ff65f676d3a4be8682666e0ccf95392fcfffbe33e00d79d8d86",
+                        "md5":  "4fb01e589786d663c520d79885cccbbd",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "iris-neoforge-1.8.13-snapshot+mc1.21.1-local.jar",
+                        "bytes":  2540682,
+                        "sha256":  "b90dbbe951f074df7a299d61f0aebe6a897924e56250e94c80231c6ae117b254",
+                        "md5":  "a0ad863c8c9e58770eb0c5516f5b8087",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "irons_jewelry-1.21.1-1.6.0.jar",
+                        "bytes":  710072,
+                        "sha256":  "6b3578dff5cd2389b397ea66b9f40fef7587e36b459ca8e5f8c715c7befd2388",
+                        "md5":  "40741e07cc5a0cff68ebfab9bd93ce95",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "irons_lib-1.21.1-1.0.2.jar",
+                        "bytes":  374610,
+                        "sha256":  "650900b0f6561a74d6e2129a9094fd0b8a9eea0a60d2a580261e0d4b25fcaf22",
+                        "md5":  "e721286ef6096e6789252c208c8d333e",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "irons_spellbooks-1.21.1-3.15.6.jar",
+                        "bytes":  13584342,
+                        "sha256":  "bd8235aef2f7f4827d8005e9700c1c04e5f3a84c50e0f92685674cac49e985db",
+                        "md5":  "e85c986ada93c16c1fc26aaad86475bd",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "ironssablecompat-1.0.4.jar",
+                        "bytes":  65043,
+                        "sha256":  "8bfae20bdd87c457ff6b0922cf97f690205f1828c4f942b1cd615bf762171edf",
+                        "md5":  "d98edc4a3e67e5042cbe4100716e3e6b",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "Jade-1.21.1-NeoForge-15.10.6.jar",
+                        "bytes":  726853,
+                        "sha256":  "276f1f65a20d04f536989c4f311949d770b52c440c23c2b904a08860f3c93810",
+                        "md5":  "67b89f182472859d1e478477716c9462",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "JadeAddons-1.21.1-NeoForge-6.1.0.jar",
+                        "bytes":  74419,
+                        "sha256":  "5f242668ad710092964d4d9afda8a94fa2401665ea13eea67d55d07e4dff8a64",
+                        "md5":  "81f8035bc735c75463add09f923ad372",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "jecharacters-1.21-neoforge-4.5.24.jar",
+                        "bytes":  243891,
+                        "sha256":  "f7f2b4d9ec81bad95beca92c56444f87aa4a993da80ab8da184670ba7f879e83",
+                        "md5":  "f7fdbbf09c1e405d018a9e8f85ff7467",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "jei-1.21.1-neoforge-19.43.0.393.jar",
+                        "bytes":  1685121,
+                        "sha256":  "088c583065db05abeedca7868b619d22e204bcd73aafe7736b9eb79bcbb67c8a",
+                        "md5":  "ff4901b8ddf3a4a0ae4e72c6aae2da5d",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "JustEnoughProfessions-neoforge-1.21.1-4.0.5.jar",
+                        "bytes":  24879,
+                        "sha256":  "b34d6bb434d507874a6ebe49d40169c26f7cad8f51c9ffea615eedb153746696",
+                        "md5":  "68ae6dbb6b7a88cd74c85025dd68cf12",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "kaleidoscope_end-1.0.14-migration.7-neoforge+mc1.21.1.jar",
+                        "bytes":  480536,
+                        "sha256":  "e03a7dba3a67768c35f3ca1c0b47892caf4a972f8362d27ff62675c7555a11bc",
+                        "md5":  "39229f02068762c1e26092d68ba5b751",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "kaleidoscope_nether-1.1.2-neoforge+mc1.21.1.jar",
+                        "bytes":  1018826,
+                        "sha256":  "4698b09f9a3edd84ab37a9506c3b88c7b59e947b21ae894c477998421335ffb6",
+                        "md5":  "0dc3631c02ec02673812651c43157328",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
+                        "bytes":  5575411,
+                        "sha256":  "ac0d269f395a5d8cbcfedc747898d1a16171ab0c0c0e94681605f682feedaef0",
+                        "md5":  "214a068ad751b606a02730e7da916b37",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "kaleidoscope-cookery-scarecrow-compat-1.0.0+neoforge.1.21.1-candidate13.1.jar",
+                        "bytes":  4453,
+                        "sha256":  "e06fcfea1ff76fb22ead50964c18f22657971e42b6e82f0a2fe844c2f048b463",
+                        "md5":  "e396bcde22a1f2b6b9a3b2e0bba3f765",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "kaleidoscopedoll-1.4.1-neoforge+mc1.21.1.jar",
+                        "bytes":  3602786,
+                        "sha256":  "ad63142cae3b561d9badce1d8348268d85b8d4bc68084307810e22a48c7554eb",
+                        "md5":  "f016ee7b4cb58370be3b853481ffc8ec",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "kaleidoscope-nether-equivalence-backport-1.1.9-equivalence.3+mc1.21.1.jar",
+                        "bytes":  26632,
+                        "sha256":  "ad022124989ba50fb1b95d58ba7ad2f9fc525a356108307eace169f2850e2e34",
+                        "md5":  "02da657f10a3691d38800baa535b7ccd",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "kaleidoscopetavern-1.2.0-neoforge+mc1.21.1.jar",
+                        "bytes":  1838499,
+                        "sha256":  "90d08d87ea9ff6341eeb371cb95bd82cd613fbc34326bc8d1723f598ca9b957b",
+                        "md5":  "20e2852151e8020c313c16635da629f0",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "kotlinforforge-5.12.0-all.jar",
+                        "bytes":  7279264,
+                        "sha256":  "2785a4dd6de5c6c56065fd8eb789c82771bd2ee773c30794c23160a3b2c39139",
+                        "md5":  "93ec434c7112952f0501211a992538b9",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "krypton_fnp-neoforge-1.21.1-0.2.28.1-1.21.1.jar",
+                        "bytes":  1015871,
+                        "sha256":  "05ebe849611daafe533fc57ed9b5156edfa9157ced04d38a7860b1e2075984b9",
+                        "md5":  "1c215ed088f6d5a32d17656b089bae94",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "kubejs_curios_neoforge_1.21.1-1.0.4.jar",
+                        "bytes":  41200,
+                        "sha256":  "a1ea50b512aabae8859951ea6ac94f03e425e33446b4a3c507ed5e8c3f3739ab",
+                        "md5":  "ddd0398a03484e3b44cce920f6985db3",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "kubejs-neoforge-2101.7.2-build.368.jar",
+                        "bytes":  2281720,
+                        "sha256":  "28867299e7a9f02cfd74e34745fdbbb073fe4887fddbc98fd6c1ed2e87b01482",
+                        "md5":  "95792a5239ae2f1d478d2a674dcf557f",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "kubejstweaks-1.0.6.jar",
+                        "bytes":  421764,
+                        "sha256":  "2a444fb6e0931f30acc4d5880b164cc7bc8fe24801973a75bde384996c827e8f",
+                        "md5":  "7acef1eb54ef972b5f3d5b3560b7e8d9",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "L_Ender\u0027s Cataclysm 1.21.1-3.31-optimaztion2.jar",
+                        "bytes":  73362723,
+                        "sha256":  "c6556b0686167a2b4bf66163f0871986737ed51301d38ccf3fc9d1751bd578ac",
+                        "md5":  "0a619c6838c6a977198cc3dc65b2728f",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "l2complements-3.1.3.jar",
+                        "bytes":  1129976,
+                        "sha256":  "94e34372f6c0ee1d36fd18eeda5f2c6676800d32d63aa250c194472c7196b8a7",
+                        "md5":  "29dabf0481f810dc2f4d2484c0ce9275",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "l2hostility-3.0.18.jar",
+                        "bytes":  2307083,
+                        "sha256":  "8821952b49c5e9b1980b4d7ccecbcfa8e957204d39ac62d8d40dff34faaaf780",
+                        "md5":  "e5d78e32814dd3febbe0a7f3abc88068",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "l2library-3.0.8.jar",
+                        "bytes":  973882,
+                        "sha256":  "26038e30873cf505bc289e28f9dcf084561b8a4929b294dd0552ba5e52505dd6",
+                        "md5":  "08cf4b2a2a746ced5ef1437f17eb9366",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "ldlib2-neoforge-1.21.1-2.2.17-all.jar",
+                        "bytes":  6420002,
+                        "sha256":  "858b9fdaa792aabf9bf7cb622634fdfba6a3ea80019443abbd127d5e2bfe85eb",
+                        "md5":  "a126104a33d2876770d026cef2458b38",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "lionfishapi-3.1.jar",
+                        "bytes":  91596,
+                        "sha256":  "aeebf0692650afbbc78259c0d4e3d5b7edf037707e8ae5d56045066d83a19cf6",
+                        "md5":  "6103fe4848d0f8289431a0b307efc444",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "lithium-neoforge-0.15.4+mc1.21.1.jar",
+                        "bytes":  774220,
+                        "sha256":  "488f33216030c1cb0baa33e59de3d657d08d5795a6c2080c8c8bbbc133fc8757",
+                        "md5":  "969860e6a6ebe4dc2e2154b56f05483e",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "lootjs-neoforge-1.21.1-3.7.0.jar",
+                        "bytes":  247689,
+                        "sha256":  "d168fd80f45e5f23dced8a54fdee87347a4c7fc6ccd9c76d30ae4d067ba9c60a",
+                        "md5":  "21d3eda21b53344dd1f34759b4428634",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "lootr-neoforge-1.21.1-1.11.37.121.jar",
+                        "bytes":  982683,
+                        "sha256":  "ba02303c6dfec4658a17d1cdc743c8f5335799ed8b2f2103dc95f896745b1262",
+                        "md5":  "c1b256fa951408b7018a56deda434b12",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "lukis-crazy-chambers-1.0.2.jar",
+                        "bytes":  2177448,
+                        "sha256":  "59dde0047528843664309b546a9fbd7afa8a065472f6fefd457fe6a40fad23ef",
+                        "md5":  "647a82d08955b75d1e3e0544e93b68e1",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "maidsoulkitchen-1.21.1-beta-v0.1.4.jar",
+                        "bytes":  1025696,
+                        "sha256":  "311718144f170cc359f7d8b07fae67813eecd24c2fd1253621e10261bcbd672c",
+                        "md5":  "03b7f68a44891177d95c6b9767de9b24",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "MaidUseHandCrank_1.6.2-neoforge_21.1.219-1.21.1.jar",
+                        "bytes":  157169,
+                        "sha256":  "7b24ce1007c57aefd9e444c4470c5064feaf4e16e7198ae5049e98f103fb5049",
+                        "md5":  "72a641eaa2c76b0703eec5978a94c6bb",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "maxhealthfix-neoforge-1.21.1-21.1.4.jar",
+                        "bytes":  20034,
+                        "sha256":  "762f7ecc02070781119ba50d82c79a5d8c512bb8c78f6dfae0bcc667f7430105",
+                        "md5":  "5f76f9a4e9b5f2be25258bf5ccf6d15a",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "mechanicals-1.21.1-1.1.4.jar",
+                        "bytes":  2007954,
+                        "sha256":  "0a988cab2340c867b500cf3daf689cd2f375549ebff0c2e0b6d9134c901bffc9",
+                        "md5":  "0299c9378f0627f83e70eb1c6d72bb2f",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "medieval_buildings_end_edition-1.21.1-1.0.4-neoforge.jar",
+                        "bytes":  438618,
+                        "sha256":  "d11b62c633c739426c6b5812f6b1162265323e981a75ee2517b51ff78e7c20d4",
+                        "md5":  "c98a8afd7e67e4ca2622bc207b5e5494",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "mes-1.3.5-1.21.jar",
+                        "bytes":  1161207,
+                        "sha256":  "7e30f4bda5cdf2d1f1d824434cb0587e79928f9c2e0a5c777364e7e52ddb430b",
+                        "md5":  "794aeb7412620414a6f1c9833382d490",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "mighty_mail-neoforge-1.21.1-1.1.4.jar",
+                        "bytes":  224354,
+                        "sha256":  "ce5ea21cb6348769953ec68a9adb4288f033cbdfe720aa6cf7b9d78cc76526f5",
+                        "md5":  "e58fb28c5ccd6bf844e6f65968b56682",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "migration-resource-overlay-1.2.0+mc1.21.1-candidate13.jar",
+                        "bytes":  43980,
+                        "sha256":  "bccb7d7cf8019d8895a081d563e578712d7cdf93da0ad9eafb31067439c62862",
+                        "md5":  "cbc019e7748e92c47825ad0e8d1d99de",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "mineastr-neoforge-1.21.1-0.6.26.jar",
+                        "bytes":  257982,
+                        "sha256":  "0264d729a3343be1645b5afe16c15a7a57c7e89a9405fa67ec80ee06d4a148d8",
+                        "md5":  "0c7fc2eaba227a2f8cc7d2b0b8741969",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "mishanguc-1.6.1-1.21.1-migration.1.jar",
+                        "bytes":  6544920,
+                        "sha256":  "4fe5146ccc01dbb30bfd1d2ffe4caeaf590e7f24f5d8159028e1865eaa8625dd",
+                        "md5":  "1356e6255ee99d54d96a622bcdd49364",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "mishanguc-pale-oak-equivalence-backport-1.6.3-beta.5-equivalence.1+mc1.21.1.jar",
+                        "bytes":  130621,
+                        "sha256":  "1e378d0dd82f7858eca36ae28fbb26b8a9a93b77dda31ead5a48bceb043ff6c4",
+                        "md5":  "4170e1a157ac2ddeb2bad223d9c4047f",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "modernfix-neoforge-5.27.14+mc1.21.1.jar",
+                        "bytes":  589839,
+                        "sha256":  "efc89cb7d22b932ecad19777373688035a1c444443abe8e56d236c44b59c0301",
+                        "md5":  "29a4f5a367e671d08c0c7e2ec75b2224",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "modulargolems-3.1.40.jar",
+                        "bytes":  3395560,
+                        "sha256":  "252db0d3ccfc99e9dc2c4d26078f1e3c1437117e5601a8b54f6881bd480e4771",
+                        "md5":  "8233b3834f0267ed68e0cf108c86f111",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+                        "bytes":  73938,
+                        "sha256":  "68e6f4201c5de97b77929a7215c9552495696ca6a3bf3ae4eacc34e135f6cc8b",
+                        "md5":  "4ab6e808a59fdebecfbc92438b85b470",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "MyNethersDelight-1.21.1-1.10.2.jar",
+                        "bytes":  825875,
+                        "sha256":  "002678f15ae0e61805d3bbd0bc8c7d7f683d63e6ab479ff8fb2518514134c4c2",
+                        "md5":  "dec2b03b6f32739a2f9788fb2cb002ba",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "mysterious_mountain_lib-1.2.15-1.21.1.jar",
+                        "bytes":  291753,
+                        "sha256":  "d750a23aac696222984935263baeec96e95901bbeca134d8a1018d66e6e9e2d6",
+                        "md5":  "085d1ec16d6f44f1dc3ad6ae0f7fc257",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "NaturesCompass-1.21.1-3.0.3-neoforge.jar",
+                        "bytes":  216873,
+                        "sha256":  "6dd24f37f5d69a6f9803c00b7722f9f103647131c29415511fa01c6feced0848",
+                        "md5":  "7a0e95b67a63ef1bceaf40434941466b",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "nautilus-equivalence-0.1.0-equivalence.2+mc1.21.1.jar",
+                        "bytes":  2108502,
+                        "sha256":  "01ebd831ac5d12d60965168ee10887fb9de81ce660341f420d0c51e9a1e33415",
+                        "md5":  "fd90ffa6572b95b813eed348059a0312",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "netmusic-1.5.1-neoforge+mc1.21.1.jar",
+                        "bytes":  1472671,
+                        "sha256":  "54d5bd0a82af2d4e2b1cbe03d45fb2962d242ec6deca0e5b016d3092ce74dcdb",
+                        "md5":  "c652cb88b6cf2f9997dc468e0c5a5c9e",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "noisium-neoforge-2.3.0+mc1.21-1.21.1.jar",
+                        "bytes":  60296,
+                        "sha256":  "e95209d593bc00d7c5de94f746ffd1dfbfa70ac8fbe938393ef930d00416109c",
+                        "md5":  "caaf072f2e2c6261b37b8359ef8631b1",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "obscure_tooltips-neoforge-1.21.1-4.2.2.jar",
+                        "bytes":  448523,
+                        "sha256":  "42f0876d0c4a7d8e83231c542c00c80d6f3e0b3a12197dd94b695f8749d938d2",
+                        "md5":  "0bd25912f66e034f260fbcb72b2521f0",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "packetfixer-3.3.1-1.20.5-1.21.X-merged.jar",
+                        "bytes":  46623,
+                        "sha256":  "2979a8a3f44e5d5df4f9f6315d18c220f3debf736bb8a2c2740acdfb13bd820f",
+                        "md5":  "8f22fb065079340a72ae5ce0da12efcb",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "particular-1.21.1-NeoForge-1.5.5.jar",
+                        "bytes":  314940,
+                        "sha256":  "9911906ae0d883a617ce950ff4f1833bd9e379c5b221df18a2b3e09556f84b2a",
+                        "md5":  "492adff3f962445acd56eebdf8fc03cd",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "Patchouli-1.21.1-92-NEOFORGE.jar",
+                        "bytes":  646486,
+                        "sha256":  "579f23933f1db9569f35f7770b9f2b0b6592a9389d7b3411272487bf5c77c98d",
+                        "md5":  "40ae12e5ea2554ae97ea38e133558e86",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "Placebo-1.21.1-9.9.1.jar",
+                        "bytes":  324056,
+                        "sha256":  "42c90bc43800558b9322bd60faa9011d6694e66a87b7e6b3b9f51fa735b527ea",
+                        "md5":  "cc725fc5406d3af893484cfbba06f6ed",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "player-animation-lib-forge-2.0.4+1.21.1.jar",
+                        "bytes":  203149,
+                        "sha256":  "dbe5de45f5cd60c0e5e47af14e6d564534a98456e973cf670cb881f6938eee92",
+                        "md5":  "ecb81c9479605db12a77bea774b88406",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "polymorph-neoforge-1.1.0+1.21.1.jar",
+                        "bytes":  174972,
+                        "sha256":  "bec8118978adeb052de9c4eaf9a595830621d82515a764f32f9c8a4dd52ab94b",
+                        "md5":  "2368e0c92ae882677bbf4b87418656b9",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "potted-farms-1.1.1-equivalence3.jar",
+                        "bytes":  679546,
+                        "sha256":  "3e58a5c5cf33de59da08b175867c482cad6d0bebfaf5b07f6d5653646d74ba41",
+                        "md5":  "40593f09b4d62d79d62c96881b2ba6a6",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "powerful_dummy-21-0.0.9-hotfix.jar",
+                        "bytes":  136609,
+                        "sha256":  "5e273464b3bce2a177aaebefe2600b64f2e04846373451db38ed6ca90b2bca6f",
+                        "md5":  "c2bcf507f3450de893700f937f16fd56",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "prickle-neoforge-1.21.1-21.1.11.jar",
+                        "bytes":  84812,
+                        "sha256":  "ccf46c442ed3c7fe41ad056f0940560829ec4dd88360985dfacd78f4614eb167",
+                        "md5":  "533c154fb306cd8043564ee1533873ce",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "PuzzlesLib-v21.1.36-1.21.1-NeoForge.jar",
+                        "bytes":  1076281,
+                        "sha256":  "7be6db8633d27a928ab986fab52d4bb882e6b50d3087392fb6e1403d2d62edca",
+                        "md5":  "6bea7d7cd84691a4e0aebfada2642755",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "railways-0.2.1+neoforge-mc1.21.1.jar",
+                        "bytes":  12120869,
+                        "sha256":  "beb9032a5377cfcee27d79e2dd6dfa2de7abcf049abe4817c3adf618b44ed671",
+                        "md5":  "4144e2515bb880dfe4f8eda9915d4a8f",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "reddensstonelantern-1.0.4-neoforge-1.21.1.jar",
+                        "bytes":  617092,
+                        "sha256":  "401bc898c2d11de178a8cdd1225874940e5a3a3baa9a2cc1137f817b6a8ed53e",
+                        "md5":  "ec8e1f008b5d6316d0d7cfe38be22539",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "repurposed_structures-7.5.17+1.21.1-neoforge.jar",
+                        "bytes":  8238540,
+                        "sha256":  "8299ac9bedb488d65bae351d529caad6a9072dc59f46bc50d599525efa882a34",
+                        "md5":  "8fee35560b271093b6cc608e40545348",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "resourcefulconfig-neoforge-1.21-3.0.11.jar",
+                        "bytes":  341009,
+                        "sha256":  "25b4f3502d25c535004acd4a9420272fff01d2f1e2df352239fec93fdab005d4",
+                        "md5":  "84ff2805a591b10d22b7e0c69b44246c",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "resourcefullib-neoforge-1.21-3.0.12.jar",
+                        "bytes":  484332,
+                        "sha256":  "5e36f2c69de008dc5795f730c84ab767688f15c810944b585485349a0c911261",
+                        "md5":  "32da88903167d24bb20febeeb2c79225",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "respawn-pitch-compat-1.0.0+mc1.21.1.jar",
+                        "bytes":  49767,
+                        "sha256":  "fd71d70cefac0d4068df854d856d612e1103aecd38c0321f195d729d4042a5a9",
+                        "md5":  "a1569de06e1086dfe79cbb1b2ad4b33e",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "Retraining-neoforge-1.21-2.0.0.jar",
+                        "bytes":  21051,
+                        "sha256":  "5af5827a3035daab71b7a534face245c64237e5521c6c8125628ca116fe8aa26",
+                        "md5":  "876f43b959103a98564d21ccc8f81d3f",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "rhino-2101.2.7-build.85.jar",
+                        "bytes":  882075,
+                        "sha256":  "95df92ce578b2504cb16d8c9fc285303bf062eb15452246a18e57b7cf091c19a",
+                        "md5":  "f5df23fab1aef88b69f67776e0f79904",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "ritchiesprojectilelib-2.1.2-mc.1.21.1-neoforge.jar",
+                        "bytes":  76369,
+                        "sha256":  "cc509060833736fb650aa4c36b1ce33a7eeeb9ca6e9f8e80a7c951c9e7487b24",
+                        "md5":  "1772f7d2ef79cdb3e77ff0335fe7f3f8",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "sable-neoforge-1.21.1-1.2.2.1.jar",
+                        "bytes":  12778626,
+                        "sha256":  "591fc29f21095c1a7d69c88674b21e49f781a8cb1abd0a430905c0874e1ea7dd",
+                        "md5":  "1dd928f2f973cc704f6d28b8d4347706",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "sable-schematic-api-0.2.6.jar",
+                        "bytes":  919142,
+                        "sha256":  "7694e38d73249defa9d6e1aa7d35a0e1e106c0cbedc460efe40441196f0635a9",
+                        "md5":  "d4cc339b623c3977d4e8505a6350b93b",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "Searchables-neoforge-1.21.1-1.0.2.jar",
+                        "bytes":  77326,
+                        "sha256":  "ca193f0c69033d8f709f9e073a7c1ef4ea46714e5c2f94eb23ace12781c6aa68",
+                        "md5":  "0a0a8665bb4d77e3f8139750cb98d9e4",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "serverwarashi-1.0.2.jar",
+                        "bytes":  30277,
+                        "sha256":  "fc27b5a0876d6f6a2cd230efd57bc5b31c2fba92709662d03575b1a20e122875",
+                        "md5":  "660e2bfe9b4cb39e9d2cfc980b81a27a",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "showcaseitem-1.21.1-1.1.0.jar",
+                        "bytes":  19759,
+                        "sha256":  "384d87e7dfb6c36c73ec264f7c0d20758d45ab9eb1eee00ecaa3bc06b2340e63",
+                        "md5":  "6b184cc61df68d118a25767de5575fcc",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "SimpleBackups-1.21-4.0.18.jar",
+                        "bytes":  47287,
+                        "sha256":  "6ca9a590a8607263379c334a1f516396b5e28122ed00c13771d1e1669541e8d6",
+                        "md5":  "d4314a24780441614574f6d76a3d8f12",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "simpletomb-1.21.1-1.4.4.jar",
+                        "bytes":  284497,
+                        "sha256":  "bb9f1ccf10d88648534ac6fa8d688c2b56713b2bc5e3475b7a5f3b527b7e1c76",
+                        "md5":  "82eaef9221a939d7128725076eeb52af",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "simulated_gauges-1.1.0.jar",
+                        "bytes":  828225,
+                        "sha256":  "20295fda5d87bcbb32a8a566570383d5f1e68464953f151ac060e0b6f8907006",
+                        "md5":  "eda88ffbdc63ee94141916fbd0b0e743",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "smart_bounds-1.0.0.jar",
+                        "bytes":  749901,
+                        "sha256":  "0240f90b62401ef6edf30714cb0eefbbc104be629a9e595383ddf3ac898718b5",
+                        "md5":  "4a7e29a427609acd3a8925719d3eeefa",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "smrb-1.0.0.jar",
+                        "bytes":  6416,
+                        "sha256":  "91642737aad509ba39d66ed62eec56e7df47d76853913e4c862dca4421cf0dc1",
+                        "md5":  "442648eabef3c6277361857556c6a2a0",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "smsn-neoforge-1.4.1-1.21.1.jar",
+                        "bytes":  115237,
+                        "sha256":  "4b517f062b008fc600881be7bcaac3da03c13ee6e46b02b8e5670f7c7881857b",
+                        "md5":  "1f044378176c62e65a9f0078d642a04d",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "sodium-neoforge-0.8.12-alpha.2+mc1.21.1.jar",
+                        "bytes":  1284556,
+                        "sha256":  "6fb306747d28f3f38c29fbefc785d9a5723f263c51fdafbe1b0e7f8fbff9ca30",
+                        "md5":  "ca6020f7cc8d9cf8c8ac92ee9983bf4a",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "sootychimneys-neoforge-1.3.5.jar",
+                        "bytes":  175697,
+                        "sha256":  "e492f89c632b423c60f2a6f91386133f3a31e6e02ea9970f9ef30ece5fce41d4",
+                        "md5":  "93e3607e043ec68b9f946f532ec050cf",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "spark-1.10.124-neoforge.jar",
+                        "bytes":  3642581,
+                        "sha256":  "647e8a81afbe414dba1df4ba15fd06c5d32d4cb544e68828405e8e074c2e16db",
+                        "md5":  "a61dd250e618f8fd62fc6b0943831c50",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "structure_layout_optimizer-neoforge-1.0.12.jar",
+                        "bytes":  61777,
+                        "sha256":  "ef8eb29c5c4f111c74a49d379843e4c2f51d11b28c8116a49be13636c83f4385",
+                        "md5":  "b0ad6a0fd2ad8f04f5634edcaadf5421",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "StructureCompass-1.21-4.0.0.jar",
+                        "bytes":  65447,
+                        "sha256":  "d5409479af7220ae86425a3d6244b3f7b7b794fb1cf66e5f4434e9204686af7d",
+                        "md5":  "24e70761f4ed55ecd81657dcaa51ad1c",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+                        "bytes":  207514,
+                        "sha256":  "d2ba7b839a2268e4e223457e813d11aa2476c3bf708a7bba691d8fc851778a4b",
+                        "md5":  "0428149c5db7bad43d75e6f758f47678",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "synaxis-1.2.1.jar",
+                        "bytes":  3369815,
+                        "sha256":  "3cc00f2aa6d59a230467198b33b68db9b0b6ada4855998231485299bfceafa9c",
+                        "md5":  "016a83518afa3fb2752ef20e28324b8d",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "takesapillage-neoforge-1.0.12+mc1.21.1.jar",
+                        "bytes":  2795307,
+                        "sha256":  "4b44199db0a965d6cdb420025544e18d35d81fa70ee75f564f3b705ff550cf98",
+                        "md5":  "b40e8bbe0e7e92f16726da09e1186949",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "TinySkeletons-v21.1.0-1.21.1-NeoForge.jar",
+                        "bytes":  105750,
+                        "sha256":  "cf3b5094c2619bd7e7951a3d4a2c553b9ead3932ebdb4ac577f9599461261da9",
+                        "md5":  "ae7919f4009221e3477c505b918de17b",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "toms_storage-neoforge-1.21.1-2.4.1-perf5.2.jar",
+                        "bytes":  929241,
+                        "sha256":  "29db765c7eb8d91dba017cb108d1b7619e845816fdfadbb0e64bf2ccfd6a801b",
+                        "md5":  "186e63c3b4a13f1ccb94039239f13d0f",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "torchmaster-neoforge-1.21.1-21.1.5-beta.jar",
+                        "bytes":  124820,
+                        "sha256":  "d4ad13d09031d42857edfad83ef31303007a659e75486871ecdcd27efdd0fedd",
+                        "md5":  "1420cdde870931d83afca2e0ba98ab40",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+                        "bytes":  24411246,
+                        "sha256":  "32be64dd058b7a91f90107972d104bdc0946d858e690d4c72032f64873f9b15b",
+                        "md5":  "63e32ee165ec0c4fe5ff2f14b8c72179",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "tracks-neoforge-1.21.1-1.0.1.jar",
+                        "bytes":  165818,
+                        "sha256":  "3119fa84955907fd734ef77f2296ec2e546f4442bc3ae13b04046c5d71f61ccf",
+                        "md5":  "07ec58128e43c420679a4bd457257f02",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "tradeworks-1.0.7.jar",
+                        "bytes":  1631621,
+                        "sha256":  "661c1849e68ae5cb38c6e1871222067dc21858e9a966e3c61365596d3c9374da",
+                        "md5":  "1bbd2466d78e076647f59505b6d84126",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "trading_floor-3.0.12.jar",
+                        "bytes":  212493,
+                        "sha256":  "baf8f23ccddb8da5b674fe309e8007ddb5042ebab2fdeb4d2663448db53a5f3a",
+                        "md5":  "6fcc97933812a45a30027b34c1803613",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "trueuuid-1.2.1-neoforge-1.21.1.jar",
+                        "bytes":  176104,
+                        "sha256":  "a3de790bafff4d96313c4db6b06fe87f1cd3fbd94f5cb79208ad104419852550",
+                        "md5":  "14bdfc54974d3b3fe561255d90baadb9",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "ultramarine-1.21.1-0.7.jar",
+                        "bytes":  4931591,
+                        "sha256":  "91537fe70699f6c44eea9d86c1b4ea0e1883dd38855b1d55e17018e7275f3d03",
+                        "md5":  "d43c5c21bc365e6f1964ddf9705d0a85",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "umapyoi-1.4.12-1.21.1.jar",
+                        "bytes":  3942974,
+                        "sha256":  "b116cc06eb8144af264b50ad378864915343f0f6a8fee29277ba616f009f4c2d",
+                        "md5":  "71a2f778c2681c5d716d994ca338aaec",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "untitledduckmod-1.1.5-neoforge-1.21.1.jar",
+                        "bytes":  295168,
+                        "sha256":  "11eaba6a2909aced5c413619a81b93fb42e385eb36e3d754d701e83aaec33863",
+                        "md5":  "e94d5681825d732997f5f47c4d5d3c81",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "UsefulSlime-neoforge-1.21-1.12.1.jar",
+                        "bytes":  609239,
+                        "sha256":  "c853d3372c4a6a9f3cfb79940efb63c833b1bdd087f56530a82824bd6b01ad06",
+                        "md5":  "d37fb0bf0c986dfe16ed29814f690ce3",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "vanillin-neoforge-1.21.1-1.1.3-local.jar",
+                        "bytes":  123858,
+                        "sha256":  "88eadd068f6d81787721a0db3b6127ba28f9f60971dfbdde401f467c9c2c7905",
+                        "md5":  "45a3e025a74302e2b45df8f4899548d8",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "veil-neoforge-1.21.1-4.1.3.jar",
+                        "bytes":  3315077,
+                        "sha256":  "d4e93828164e0c6d2dff913d0217faa3d8427f712c93b24da5f5230f52979b5a",
+                        "md5":  "618db8303895a7214aac545014fe68a0",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "voicechat-neoforge-1.21.1-2.6.21.jar",
+                        "bytes":  4913870,
+                        "sha256":  "901c4917960ce975cecc9a39c15d32c22beabc23ed3c36f0ce75df5a6cdd9366",
+                        "md5":  "844544bf50ac62335a12283461e0a78c",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "waypoint-fire-equivalence-0.1.1+mc1.21.1.jar",
+                        "bytes":  44651,
+                        "sha256":  "86a85c0447315ac17d373e3708425ceb8450d9d0cb1fd9c7abdc82ce8d8e5b92",
+                        "md5":  "9cb1b093496e35d294c739b79ddde31a",
+                        "classification":  "required",
+                        "certainty":  "uncertain-default-required",
+                        "reason":  "Conservatively required pending isolated removal-and-join test; static metadata cannot prove remote optionality."
+                    },
+                    {
+                        "filename":  "WoolToString-NeoForge-1.21.1.jar",
+                        "bytes":  31679,
+                        "sha256":  "8895a0ce6754c0b74527c356e1c93c0423dfd72ff7644beb59f7bd3f02d46ef1",
+                        "md5":  "17e05940e5d39396ef106b8e882e32a4",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "worldedit-mod-7.3.8-direction-property-fix.1.jar",
+                        "bytes":  6264309,
+                        "sha256":  "8eb5e39aa914eb1b09307b6c004478bd1263655fcca880580673481ebfef9283",
+                        "md5":  "cf3bba22c19d67853486b5fcd688bb67",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "wwoo-2.3.4.jar",
+                        "bytes":  2217959,
+                        "sha256":  "de4ef02f438b5dc680ed90ae14ef003da295f774e58c34390d19552cee0d25b9",
+                        "md5":  "fff07297d07ebdf729876831f275965a",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "xaerominimap-neoforge-1.21.1-26.1.0.jar",
+                        "bytes":  2138254,
+                        "sha256":  "6bd6cbab01ff57b9ba2fbfee18f9605593101f15d80e8d19dc59c385d2535ccc",
+                        "md5":  "7a16e984052424ebf78f50283bca73e5",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "xaeroworldmap-neoforge-1.21.1-1.41.2.jar",
+                        "bytes":  1387921,
+                        "sha256":  "36b163fe8be4c2e800668c49294473da61eb360d821db675a2a948f8cc7c3d2b",
+                        "md5":  "56f1b5ed048937c56349dfa184fb2b20",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "xiyuslogin-1.4-migration4.jar",
+                        "bytes":  170065,
+                        "sha256":  "703e01b84558ea9afe28e82b0fb67c12dc09ba2936de70939f52759c52d2e998",
+                        "md5":  "a0c916feecf47426e577eb69f07d40ba",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    },
+                    {
+                        "filename":  "yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
+                        "bytes":  1111051,
+                        "sha256":  "673fecbffad26bb6d025fb5f60560cf6340e542bdf091d8d66074490515292f3",
+                        "md5":  "fccefbc519790ba2ccfb70bac43a6917",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar",
+                        "bytes":  28197402,
+                        "sha256":  "31dffd39d1fed94f2088405af3b8dc862e363ba389015780355571ecca4a813d",
+                        "md5":  "e41238d6ba778c1aa785347fdc2ef623",
+                        "classification":  "required",
+                        "certainty":  "high",
+                        "reason":  "Shared gameplay registry, mandatory payload/authentication, or a transitive dependency."
+                    },
+                    {
+                        "filename":  "zfastnoise-1.0.12+1.21.1+neoforge.jar",
+                        "bytes":  35120,
+                        "sha256":  "e38db8cd22a75d2a1714fff8c4d4f1e80da53f2fab3261af847c855ad26c2cca",
+                        "md5":  "70595f93d10b9a3298a1bb101b63cec4",
+                        "classification":  "recommended",
+                        "certainty":  "high",
+                        "reason":  "Client-only, UI/render/performance, server-only, or datapack-only; absence should not block entering the server."
+                    }
+                ]
+}

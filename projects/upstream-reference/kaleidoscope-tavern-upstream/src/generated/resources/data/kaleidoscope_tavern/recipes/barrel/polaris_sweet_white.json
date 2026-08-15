@@ -1,0 +1,16 @@
+{
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_tavern:ice_grape_juice",
+  "ingredients": [
+    {
+      "item": "minecraft:packed_ice"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_tavern:polaris_sweet_white"
+  },
+  "unit_time": 2400
+}

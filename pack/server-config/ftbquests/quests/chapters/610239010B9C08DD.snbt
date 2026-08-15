@@ -1,0 +1,32 @@
+{
+	consume_items: false
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "610239010B9C08DD"
+	group: "6B9D1AFD3E45FF4E"
+	icon: {
+		id: "c6c:abyssal_ticket"
+	}
+	id: "610239010B9C08DD"
+	order_index: 6
+	quest_links: [ ]
+	quests: [{
+		id: "60F0E62C7A268D3D"
+		rewards: [{
+			count: 3
+			id: "297A20940E6F2A19"
+			item: {
+				count: 1
+				id: "c6c:abyssal_ticket"
+			}
+			type: "item"
+		}]
+		tasks: [{
+			id: "7A9C7A8D346F04A0"
+			item: { count: 1, id: "c6c:abyssal_ticket" }
+			type: "item"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+}

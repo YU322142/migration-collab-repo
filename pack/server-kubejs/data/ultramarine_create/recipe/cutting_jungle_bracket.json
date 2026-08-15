@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:jungle_logs"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:jungle_bracket"
+    }
+  ]
+}

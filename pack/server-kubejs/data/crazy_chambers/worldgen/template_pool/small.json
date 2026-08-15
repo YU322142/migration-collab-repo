@@ -1,0 +1,107 @@
+{
+  "name": "crazy_chambers:small",
+  "fallback": "crazy_chambers:end",
+  "elements": [
+	
+   
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:continued/small/dungeon_1",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+     
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:continued/small/dungeon_2",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+     
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:continued/small/dungeon_3",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+     
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:continued/small/dungeon_4",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+     
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:continued/small/dungeon_5",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+     
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:continued/small/ominous",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+     
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:continued/small/rest",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+     
+    {
+      "weight": 3,
+      "element": {
+        "location": "crazy_chambers:continued/small/treasure",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+     
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:continued/small/tree",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+     
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:continued/small/vault",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

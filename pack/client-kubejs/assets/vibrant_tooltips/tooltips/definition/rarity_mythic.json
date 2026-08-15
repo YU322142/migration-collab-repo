@@ -1,0 +1,8 @@
+{
+  "priority": 200,
+  "style": "vibrant_tooltips:rarity/mythic",
+  "filter": {
+    "type": "obscure_tooltips:rarity",
+    "rarity": "mythic"
+  }
+}

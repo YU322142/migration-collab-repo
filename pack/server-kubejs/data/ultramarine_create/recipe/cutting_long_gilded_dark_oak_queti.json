@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "ultramarine:gilded_dark_oak"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:long_gilded_dark_oak_queti"
+    }
+  ]
+}

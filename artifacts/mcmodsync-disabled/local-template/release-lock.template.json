@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "status": "TEMPLATE_NOT_RELEASE_LOCK",
+  "publish_allowed": false,
+  "bundle_revision": "candidate14-r3",
+  "candidate14_ready_sha256": "66778B3F91842D0AB6CC291D03AD9538AB12447F63340E6144747C4DAE819C24",
+  "candidate14_client_manifest_sha256": "020352BA39C8FAAF511AFF02FD0F9A92451697F51A1C8E4D1E0B9BEFE0398AAC",
+  "candidate14_client_bundle_sha256": "FCBEFE432E802CA8834ADFEA8D360764F33697D84B690C53D085CBD3DCDE0E76",
+  "mcmodsync_sha256": "2DD2BEC977B8669D0EF6C90FC54A06021DC0998E903B583517052B1B5CDA25AA",
+  "manifest_url": null,
+  "catalog_version": null,
+  "derived_catalog_version": "candidate14-r3-20260812-66778b3f91842d0a",
+  "config_jar_sha256": null,
+  "mods_v4_sha256": null,
+  "external_verification": null,
+  "prism_canary": null
+}

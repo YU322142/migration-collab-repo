@@ -1,0 +1,1052 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-08-13T09:37:43+00:00",
+  "status": "STATIC_BLUEPRINT_ONLY",
+  "frontier_dimension": "mechanomania_frontier:frontier",
+  "vanilla_closure_resource_count": 61,
+  "tectonic_closure_resource_count": 139,
+  "tectonic_closure_source_key_count": 131,
+  "tree_sha256": "B45C9E9940ABECFB3EC2FF094AE2AF1532EF673E02EA3F346FEB259D64A7CF2D",
+  "files": [
+    {
+      "path": "data/mechanomania_frontier/dimension/frontier.json",
+      "size": 4318340,
+      "sha256": "4B71A4C234DD9372F05D037AF2C133252027BF48A64021699B2B85CDACBF602A"
+    },
+    {
+      "path": "data/mechanomania_frontier/dimension_type/frontier.json",
+      "size": 568,
+      "sha256": "F924479545C2B69BC3EB8C05D2B495CA609E727802C48FB4A88790035D0A6D26"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/barrier.json",
+      "size": 625,
+      "sha256": "C172C030DA18F0C8F11475694914A3174D27DE0E7B78AB60520D687F1EA183C2"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/continents.json",
+      "size": 119,
+      "sha256": "B15E5E16D2A030257ECEB6C978A679D23D14C2F75195388B58859AD4BA7233DA"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/depth.json",
+      "size": 397,
+      "sha256": "3AA819DA0E09A794B96A3E9F80F8B80BCDE1C70A4DD650D2B6B921175F1A5805"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/erosion.json",
+      "size": 121,
+      "sha256": "286D65C1F12B4ED1679291339FF2CBF1C9892F43CDC1C908EDD098DBC14BAE43"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/final_density.json",
+      "size": 2031,
+      "sha256": "14273388DA2DDB4E2C65F198AB4FD2076B0AB991BE8AB9FE94F24E581AB044B9"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/fluid_level_floodedness.json",
+      "size": 343,
+      "sha256": "36BAC5C105A147E05EF4DD30A9B2FCEBE24093F80A592ED0D2C9564E46999E6E"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/fluid_level_spread.json",
+      "size": 135,
+      "sha256": "3EABE51344130A764C696D410B60BB1E2C18C009F2EEAB6E7CAF6F8EC7ED1F1C"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/initial_density_without_jaggedness.json",
+      "size": 1754,
+      "sha256": "1DB52F45B0CCD20CD8C7DD9FBD13DE66F8B486DA75E3DF2CF4DB027AFA780E23"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/lava.json",
+      "size": 106,
+      "sha256": "6A2243A578FB306D1A1947E522C8287E0271886B545D5E875DB585763337FC7F"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/ridges.json",
+      "size": 120,
+      "sha256": "C8391051E4D451ED22DC273B4E3200E61D907C81AE1DB5F129D44EBEBC28FA7F"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/temperature.json",
+      "size": 120,
+      "sha256": "D357B1087A6B1CDC0A57E421705B19F0DB9894DC33AD46B65AB428D83B622C71"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/vegetation.json",
+      "size": 119,
+      "sha256": "0F5D39198F81E41D24D38001AC84C3E1FFEE0654F7A6EEEA7FA251876204E7C2"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/vein_gap.json",
+      "size": 101,
+      "sha256": "7852B3B540A4A1959B45EF099EB4E6D61ECDB93D6CDE55D990E972E2603B7C39"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/vein_ridged.json",
+      "size": 1159,
+      "sha256": "73217D9989E8AF6CFE8EF728B563CF6AF3D54BB93A0100BB8D3C828BAB893981"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/noise_router/vein_toggle.json",
+      "size": 359,
+      "sha256": "81007D17A2F428976A655FBD9D64D38C5C56610825994F49921AEC66C3BB74A7"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/temperature.json",
+      "size": 127,
+      "sha256": "88ABBA2924286BBAF37CE627FB91985DD8BA62E1191901AB2E43329F814473CC"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/minecraft/overworld/vegetation.json",
+      "size": 126,
+      "sha256": "32DC1838D3F0A7E514098A381567BBF7FFF34632F754293BE43F7D5555A73764"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/deep_ocean_depth.json",
+      "size": 6,
+      "sha256": "46E7CFE9BB18294B4B7E0F226A8F3FB3AAE2B045B4D85FC475A3FBF5CDFDFF65"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/flat_terrain_skew.json",
+      "size": 4,
+      "sha256": "A6311009C6C322CA8AC2E620CFF5204F0C3AF23115D403293A0CB5BE36796688"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/jungle_pillars.json",
+      "size": 2,
+      "sha256": "4355A46B19D348DC2F57C046F8EF63D4538EBB936000F3C9EE954A27460DD865"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/lava_tunnels.json",
+      "size": 2,
+      "sha256": "4355A46B19D348DC2F57C046F8EF63D4538EBB936000F3C9EE954A27460DD865"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/noise/continents.json",
+      "size": 222,
+      "sha256": "F1E9EF0B49F24D65B40DAD64016EA321946FDC6E4B36FFB1A35A150A4C7218CD"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/noise/erosion.json",
+      "size": 214,
+      "sha256": "D3398F35193DFB45C427CB853A9552F7E4EA8E0B216E7DA06284AB9127073F33"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/noise/island_a.json",
+      "size": 133,
+      "sha256": "8DF24C247640DBE5CE9AC266C9EAFBF4800BC1E7EC34E3D3C6F6ABB69458E715"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/noise/island_b.json",
+      "size": 133,
+      "sha256": "90CA46E076157C676B756514587FCCA88049BCA160CEFF035D9956264C5DB4AA"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/noise/ridge.json",
+      "size": 212,
+      "sha256": "C0D6DDAFE14759A65DD1B8F2775B55B766F125397075A0362FB008124833CD29"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/noise/temperature.json",
+      "size": 264,
+      "sha256": "C2ADF2C10118008E332711C00E848C3B14863583A35C63AED740B8E08763BB91"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/noise/vegetation.json",
+      "size": 263,
+      "sha256": "93549DB355EC5A2DB6C98252F0BDF0B1C53B6741584D3BC6A758D021534029DC"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/ocean_depth.json",
+      "size": 6,
+      "sha256": "94164884F9D8750BD5D568EA595FE287367157DE69673EED239150A66CEFD3E9"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/ocean_offset.json",
+      "size": 5,
+      "sha256": "D6BFE659C339D6A8E0556BFD8BFD7194D14EFB6E0DFE16F3992DB9917EAC9193"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/rolling_hills.json",
+      "size": 2,
+      "sha256": "4355A46B19D348DC2F57C046F8EF63D4538EBB936000F3C9EE954A27460DD865"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/underground_rivers.json",
+      "size": 3,
+      "sha256": "EE3AA64BB94A50845D5024CD4BD20202A4567AED5CD5328C0D97E9920775FC28"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/__constants/vertical_scale.json",
+      "size": 4,
+      "sha256": "B6403DA9B22ABE355AD17208A336E658322C5D1D7FF646CA7B9229237BA4AEF4"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/biome_parameter/erosion.json",
+      "size": 3263,
+      "sha256": "D312949930594AD828A00DDB3A0F50DED06D7444CCE31A2B2382A28B7F36CDAD"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/biome_parameter/ridges.json",
+      "size": 4955,
+      "sha256": "EF8EF64FDAEA8E29F22FF7CEC05E6246774350601C24B92AA5A98EC610052DDE"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/blend_alpha.json",
+      "size": 1377,
+      "sha256": "2A533C479A3AF3C7695ED99AD392F7A5B7FDA464897F356E60CE84004439C971"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/caves.json",
+      "size": 4,
+      "sha256": "88930BD051D214A973581B9492A5CA110AEA3FDD5DC65A68BC444B6173877BBD"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/continent_selector.json",
+      "size": 326,
+      "sha256": "2A9654722B214E82D162E511875E12658759332FA98436944624BEE964F99081"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/depth.json",
+      "size": 323,
+      "sha256": "7C79CCDFF56CD865EFA7BED9213185020BAD95268AB7CAC402C4C63082811C36"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/island_selector.json",
+      "size": 337,
+      "sha256": "D51748B373E93F60FE461E717DAD7F44E12503B1F104C002FCE4C34F9E072119"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/lava_tunnel/ridges.json",
+      "size": 1915,
+      "sha256": "3A283C6BCECE4AB135B19AA89C1E1E3C9FED2853063E33110F041DDA5274EB4A"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/lava_tunnel/total.json",
+      "size": 826,
+      "sha256": "2F36DF99651B47A1BED0EEFE14D155072974E689CACC40668AE9231532496BAF"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/mountain_ridges/noiseshift/base.json",
+      "size": 133,
+      "sha256": "45EF6D455110562D8B7A826591EE516BF13CA582CCEDD1FB3AFE08CFE7E9536A"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/mountain_ridges/noiseshift/shiftx.json",
+      "size": 190,
+      "sha256": "498883052E95CD7AEFA8341661C292CF525974A35802AAF6ACFD7B480523CB0B"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/mountain_ridges/noiseshift/shiftz.json",
+      "size": 190,
+      "sha256": "D348F3069F6CD8D6DED004FBF263506F8A6A7DF782B45E4C5060EAA0255C7A65"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/mountain_ridges/noiseshift/slopex.json",
+      "size": 267,
+      "sha256": "B316E6BADC262C3F77FF9EA30CAAC0EFF44EE1BBE53C484E8BF234A7AEBEA17E"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/mountain_ridges/noiseshift/slopez.json",
+      "size": 267,
+      "sha256": "017609362BE0DDEE91EBFA8C11433B7B8A9FE4F693B10F0D945C807730E72831"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/mountain_ridges/ridges.json",
+      "size": 404,
+      "sha256": "F2CE43B92FDBF6FA19A94BF0A8340E8D30FEBE7F16D6CD3CCD07BAD840DFC8C6"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/mountain_ridges/shifteddetail.json",
+      "size": 585,
+      "sha256": "2C7C4D47293BA783E57D9A787A41E125BD71D46A381349DF177D35F854A2B8F6"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/mountain_ridges/weathering.json",
+      "size": 866,
+      "sha256": "5B7819FA6F20EBB9E23E964630A2BEC1EC30AE929AFC5BC4A16540893FAB0420"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/continent/erosion.json",
+      "size": 627,
+      "sha256": "D13A06AD2604B76181D9E92EF3E04808DAA0A39EE1A33E7142B43F81CC37AD6C"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/continent/erosion_folded.json",
+      "size": 102,
+      "sha256": "94608EDEB7AEEB9AE92C74FFD0F2E2301A624C862A17596CEFC8122E57775018"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/continent/erosion_raw.json",
+      "size": 111,
+      "sha256": "E78CAE54883B78D0E2B4DD17D9C8ADA6E5A72FA2AED3FDFC3503B8BC54655C7F"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/continent/ridges.json",
+      "size": 109,
+      "sha256": "0EDD00DFED11BB32E305CE5324A1D63B969F4D37FFFAEC4F3453C6BEE4CAE45E"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/continent/ridges_folded.json",
+      "size": 101,
+      "sha256": "9E3AA9BF033B8B8B7A451DF5C9D6B02BF2AA8E9DAF98982C4EC7604ECB88135B"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/full_continents.json",
+      "size": 972,
+      "sha256": "A2B1ED689FFFFC14A54A960C8CE7FCC58AA660772E801D6A1BF9E2D763CD9098"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/island/erosion.json",
+      "size": 394,
+      "sha256": "FB4CE4004B247F7D115A1E1B8E66EB5BE44C5C97069D5464E8DDFB755C82DD55"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/island/ridges.json",
+      "size": 485,
+      "sha256": "3CCE3E7871620AE953483DAA83952C4A23DAD42E8333E2166BD68418AFE28323"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/island/ridges_folded.json",
+      "size": 771,
+      "sha256": "C22DD4CF6CC0F10AE6992F828B1F829355EC5C0759D037F27B6A784CEC0001CD"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/raw_continents.json",
+      "size": 755,
+      "sha256": "101EF223E1E11189F0DE2AD2494ACCD716811A9139E03B49F9A97A643956A8BB"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/raw_islands.json",
+      "size": 1174,
+      "sha256": "BF89BBC2F6D5647731963C2C674F1873A319D8B48D9D4D8CAAA0CBDFFF8DA4E9"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/region_selector.json",
+      "size": 437,
+      "sha256": "D277398EE4C56ACEF6DDF148CC287CA1FFFCD331F99F68AD62922DA26E1F4FA9"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/temperature_index.json",
+      "size": 1144,
+      "sha256": "A354404FD7BA8C671AD9E624D4AF69323D60B1ECC097F4F1726A08270D3FED4D"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/noise/vegetation_index.json",
+      "size": 1143,
+      "sha256": "E8595D8C927A6E252B638EA78D0CCB91FFFD1EEDF702BA11F3EFE58DA1C3A5E7"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/club/badlands_ridge.json",
+      "size": 293,
+      "sha256": "AAF603C555C56E346C1136FB2EF0163F1D87B7BFD4B110058BDDB22CD215C086"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/club/double_valley_spline.json",
+      "size": 1964,
+      "sha256": "8DEB5EC814AF93DC86F785C81BB76F4ED8A67BE8422A61E460C56FE936311022"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/club/plateau_spline.json",
+      "size": 1780,
+      "sha256": "B98E191AF3C358295604E74ABB551BE22B2F321327F81A06EFDF0C8639A81604"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/club/single_valley_spline.json",
+      "size": 1962,
+      "sha256": "C10119C3E6E5B27A067033CFED26D3E89D7E0F0A8CB604B5C71B35C36E4FF287"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/club.json",
+      "size": 5592,
+      "sha256": "36FF329B758030FE4112B3C2C0BB1FFAF8DB47B99D232DD706C4F23789D962DE"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/club_weak.json",
+      "size": 4354,
+      "sha256": "629ADB91B732F92C90C708DAE9DD44CCE57FD4ADEB95C01E6A5EC76A1E63D288"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/diamond/dune/final.json",
+      "size": 3245,
+      "sha256": "E36687F6C75A5A30F5A13DE08E06812FB44DA42AF0D4A2F8C02AD227D3D5E1A9"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/diamond/dune/noise.json",
+      "size": 348,
+      "sha256": "C88BA1B51DEA24ED9CA5AED2F6895F5BBE2470A9C82D9AF7B601AE6F82E427D9"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/diamond/dune/offset_x.json",
+      "size": 544,
+      "sha256": "CDA34A15B20D99F8DF9EE604A36AB609B6758AD0890ABF1458588FF7D947A18F"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/diamond/dune/offset_z.json",
+      "size": 608,
+      "sha256": "0BE748656AE7DBE0F33E635CA909D5FF5C0F5361B163A9FB5F52B1D8014B495D"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/diamond/dune/spline.json",
+      "size": 4059,
+      "sha256": "4B209AC495C999E82ADF410835BC07CACC827B984C28CE03B2220F861711FAFB"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/diamond.json",
+      "size": 3736,
+      "sha256": "20F6F266B4BF757CD0F51181788C0E6682297824D4AA912D92D1B3F596B683AE"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/heart/jungle_pillar.json",
+      "size": 447,
+      "sha256": "216FE6AC60540117AAB6E09B38DAC122A5B14A65F8D0AA8A698FA9FDFF66E467"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/heart/rolling_hills.json",
+      "size": 331,
+      "sha256": "1A3D3954928EC665814EB22DE48802598756EBFEBAECED400E9D9292FD0CAEA2"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/heart.json",
+      "size": 5447,
+      "sha256": "4D1836419BC9C29ABD11281B1CDD8C089733D6DD5F21FBB8668210CCBC085248"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/spade/lower_tier.json",
+      "size": 192,
+      "sha256": "E551E9EFEDA285A154C351DC28A1723AE113BFEF099A25B1F76C347B0D54FBA1"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/spade/upper_tier.json",
+      "size": 192,
+      "sha256": "20A137B8297DDD6F2587FBD261E482722E3BF2FDDFED4A62589B6E246CA533E1"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/spade.json",
+      "size": 3504,
+      "sha256": "5698F6EE0E18C1C043C81EC9016C2DEABE70FA12372FC4E1DE38B607B4E58342"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/region/spade_weak.json",
+      "size": 2387,
+      "sha256": "BF641CD5213AEFFE917FC7F3A4F9B89D7CCD40C20EE01C6F6002AE23E9E8EF90"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/sloped_cheese.json",
+      "size": 4751,
+      "sha256": "F29E8638B9284414F8983B5851D4ABE85E8B3EB847D8FE5CF32B3A48AA18EE95"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/terrain_spline/factor/continents.json",
+      "size": 4994,
+      "sha256": "FDF4EA19A9B2E732662F716D9AB781EADE52C754237D5227EBF7276B526B3853"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/terrain_spline/factor/islands.json",
+      "size": 4,
+      "sha256": "54353CF4D0F7E379A912963E945CA6449624196360BFE8DCFA7A172D6FACEA85"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/terrain_spline/jaggedness/continents.json",
+      "size": 919,
+      "sha256": "01BC679A526A08391413D78D57763A9B302F4D80FF9565229EA55E0CAB3EEB2E"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/terrain_spline/jaggedness/islands.json",
+      "size": 2707,
+      "sha256": "73A48C8E66EBB32BEA5477D640ABB43BB87F1EDDCCBD2B2E09BD549DD83C3EF9"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/terrain_spline/ocean.json",
+      "size": 1953,
+      "sha256": "4D59B92B235CFDBDE34A2311076636D3810EF1AF4333C810968976E7301634F3"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/terrain_spline/offset/continents.json",
+      "size": 17057,
+      "sha256": "330967258E89103E396031D4E968040B3A1A875D4BC08B68D6021D15FCEF26CF"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/terrain_spline/offset/depth_additive.json",
+      "size": 19125,
+      "sha256": "7BDC0DB8659FEE27FFACC064EF4F02E9675498EC2D8B690A9E4346E30A208E32"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/terrain_spline/offset/final.json",
+      "size": 1868,
+      "sha256": "A5D93D2E4FA39D3E19941E1B9C8BF8C46FF7BC94436CEB3FB3B252D3178141F6"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/terrain_spline/offset/islands.json",
+      "size": 12347,
+      "sha256": "2B50344193AE71F8BA77CA5714C00D68FFE45FFA0BD7B7BB96CF3ED8822026D8"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/terrain_spline/offset/regions.json",
+      "size": 4310,
+      "sha256": "4C60B4A2D4493EB1AC3108A4FD404634AA61A23395CE3776A0C196715A1AC50D"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/terrain_spline/offset/regions_weak.json",
+      "size": 2601,
+      "sha256": "EA26E2B72FC2AAF1FEB2AB43E4079B5EF8F3099427D6EE756D1B94958F34D303"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/terrain_spline/roughness.json",
+      "size": 1207,
+      "sha256": "69955A5033462FF5F4FF19D653FF75FB08F5DDDFF8F9C1A808CDF9EE98070AA2"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/underground_river/noise/density_additive.json",
+      "size": 408,
+      "sha256": "212A816C29FD2D8FEFFFC714CA305C64B7ECB061C646BD36BEE6D4D1474FEA9B"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/underground_river/noise/height.json",
+      "size": 447,
+      "sha256": "537206ACD98C4D92663CD01C1A18E84252FF6944F58725EAC39EFE7A22A03635"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/underground_river/noise/height_additive.json",
+      "size": 114,
+      "sha256": "0E7E16C4B3004F998F96A1B9F5AAEA9D77EB64F54A96FE4996DAA8473B2CFE61"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/underground_river/noise/roof_sharpness.json",
+      "size": 636,
+      "sha256": "CA629B1E522A4D573B114E7D02842531C03C15D757502839B9B99610DBB36383"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/underground_river/noise/y_offset.json",
+      "size": 487,
+      "sha256": "CAF1B9825C2C350F92418D5F94F40A41089A93325570FF99A7CF2AE57DB78F27"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/underground_river/parameters.json",
+      "size": 965,
+      "sha256": "AB3DEA64FC1BB40D5FAD30EF1DB6D8BFA0B780E71385DA4DED42133EFE158735"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/underground_river/pillars.json",
+      "size": 1187,
+      "sha256": "CE0C1E1B0605BCA38D318F18C6440A9EF69B0D750368A30029364DB33CD11386"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/underground_river/spline/continents.json",
+      "size": 277,
+      "sha256": "7440821FF1B6A6D18154D9AC889A17D67AD2E19C8A2545E02CF54D9910A6E04D"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/underground_river/spline/elevation.json",
+      "size": 953,
+      "sha256": "DE6317E63159595EB531C31A353122660835871AC9F32D30B43D4DBD2423DBBD"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/underground_river/spline/erosion.json",
+      "size": 418,
+      "sha256": "4C5F1CCD93E6B2C2EDCA0D740B2BB8BA6BF867AE53378D572575006783955CC2"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/underground_river/spline/ridge.json",
+      "size": 353,
+      "sha256": "8AF6F3C897EF1B24CD6F50DE5897B9D9813757CB3AA8DCF5FE5250D0EB7E7614"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/underground_river/total.json",
+      "size": 1285,
+      "sha256": "4F228F946912A5F71CCEF4E7C251E692B8B9325831138F421F160F89C0AF38A4"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/density_function/tectonic/upper_slope.json",
+      "size": 113,
+      "sha256": "0FD43597220E930B5EAFE4089AF3502CB85B590ED7E4C2065566DA54DE672976"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/minecraft/continentalness.json",
+      "size": 113,
+      "sha256": "81FA31F7CED34014DC59154AEF7602F2D79A23F3F274FDECF2745CFD78C68A97"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/minecraft/erosion.json",
+      "size": 119,
+      "sha256": "D09A477EE49CD58185728359BD496D3DE9124BD88F8C09BAB023D4AE08B08158"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/minecraft/ridge.json",
+      "size": 67,
+      "sha256": "F870020ACD112C0CC97C4A2A14F02D3DB7AA6B3D76D8A0A3A371C54AAB92E995"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/blend_alpha.json",
+      "size": 76,
+      "sha256": "263FF8CF714A9FEE19AC826BD092A0B5616DA52BA51E4028A1855B14A8314184"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/island/continents_a.json",
+      "size": 109,
+      "sha256": "F3B6FC9B726FB8273C52124083E0A2A4F68097C234A9BA19097AD3D6CC5D492E"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/island/continents_b.json",
+      "size": 109,
+      "sha256": "F3B6FC9B726FB8273C52124083E0A2A4F68097C234A9BA19097AD3D6CC5D492E"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/island/ridge.json",
+      "size": 88,
+      "sha256": "321C3F712C61F95ECB8E792222208DAE3312AF8AE3D56FAF79C3103A0715DF9C"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/lava_tunnel/offset.json",
+      "size": 67,
+      "sha256": "A227E43137237BBF044F2E1440BF8A26F65E8278CFE9C0469501C2EF6DB286DC"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/lava_tunnel/ridges.json",
+      "size": 60,
+      "sha256": "A2A4042D8E941559888FC0319A41BF34B05D76698EE17F3AF2E6E3837034B25B"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/lava_tunnel/shift_x.json",
+      "size": 60,
+      "sha256": "DAC31652286B43996C4BD7B087C4C2C5B739AAF885CB8EC85E91754EF45272AB"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/lava_tunnel/shift_z.json",
+      "size": 60,
+      "sha256": "DAC31652286B43996C4BD7B087C4C2C5B739AAF885CB8EC85E91754EF45272AB"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/mountain_ridges/base.json",
+      "size": 62,
+      "sha256": "FDD5A42260ACDD44DEA7814A035F684698FCC1657B82C2F343E1B73155D9F08F"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/mountain_ridges/detailed.json",
+      "size": 62,
+      "sha256": "4B5A440576AB60B3F6EF36DC7087AA8061A0DD18E92034F8EECFA8EC2F432C3C"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/mountain_ridges/weathering.json",
+      "size": 60,
+      "sha256": "4C5780C3E7A1BC2F5718738FF55CB56CC65BE1118E9BEE7C723602B74D5F3172"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/ocean1.json",
+      "size": 67,
+      "sha256": "1A3FC9F5700389FBAD8E36078E6DE9C77332DCE0681E91DACC5DB608C06DAF03"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/ocean2.json",
+      "size": 74,
+      "sha256": "20561A03FC226E88D7A0D21A2AD07B611C593D32F6C4BD1C0D04C6D7B38EEF86"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/region/club/badlands_ridge.json",
+      "size": 67,
+      "sha256": "2BE6A84391F4670E9883A67CBDFAC410DA327BE017463E84D5D5187618ECA90A"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/region/diamond/dune_base.json",
+      "size": 55,
+      "sha256": "1CFA6FF7724203D2D1712AD7346FA2D13C33B51158D3DDB25FFD5C522A41E205"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/region/diamond/dune_offset.json",
+      "size": 54,
+      "sha256": "0994BA442AD0680BCD8FCCE1CBBF6C80BC5F8F525166F5CD625550756078DABA"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/region/diamond/wetland.json",
+      "size": 80,
+      "sha256": "B0693E16552EA575141327729F3C48DA91F08514A5E880466E2294F393AD0E74"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/region/heart/jungle_pillar.json",
+      "size": 60,
+      "sha256": "775BCCE2946E6E2E0B8E5570F1D842FE1B6FD36D64FDB62E371312A4492F5827"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/region/heart/rolling_hills.json",
+      "size": 85,
+      "sha256": "F3527CA945D362526058FA3392F9B0D318985A9609609AEB7BD6A2F1C815AF58"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/region/height_multiplier.json",
+      "size": 67,
+      "sha256": "2BE6A84391F4670E9883A67CBDFAC410DA327BE017463E84D5D5187618ECA90A"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/region/selector.json",
+      "size": 104,
+      "sha256": "84CC5FBEF320E5BED6551AFA59F0D6B95E7A56E863EB44AAE690DD8AB8D57B9F"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/region/spade/lower_tier.json",
+      "size": 69,
+      "sha256": "F222389AD8FBA0EEFAEB438FCC45C46BD83023064C860777A70531C203713546"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/region/spade/upper_tier.json",
+      "size": 69,
+      "sha256": "F222389AD8FBA0EEFAEB438FCC45C46BD83023064C860777A70531C203713546"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/underground_river/density_additive.json",
+      "size": 76,
+      "sha256": "7E9876ADCCDEB13A11742A3B21371D8E444A6023CD71AC7A58256C68D2B226FD"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/underground_river/height.json",
+      "size": 74,
+      "sha256": "C93D1E88F92333117EE7E88868CFB43A41CDB7BAE5264EDDFA9479202BC49C38"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/underground_river/roof_sharpness.json",
+      "size": 83,
+      "sha256": "717996FDFBA551DEC7C0FD6C6B34921C400AC73E5DAB0F0D3C293D04BF6F0D6C"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise/tectonic/underground_river/y_offset.json",
+      "size": 74,
+      "sha256": "C93D1E88F92333117EE7E88868CFB43A41CDB7BAE5264EDDFA9479202BC49C38"
+    },
+    {
+      "path": "data/mechanomania_frontier/worldgen/noise_settings/tectonic.json",
+      "size": 98218,
+      "sha256": "FAAD0612FE7D3555F7CD4A970336A83EA9CBAF59F81AECE1102F965687478E16"
+    },
+    {
+      "path": "data/minecraft/dimension/overworld.json",
+      "size": 233,
+      "sha256": "FF2B47B821AE51E7455F66E2DF4EFA6A18873A713ED31C34D939D73EC5A27E6C"
+    },
+    {
+      "path": "data/minecraft/dimension_type/overworld.json",
+      "size": 545,
+      "sha256": "389447CD8C9AFC38E3B3DC509409443E0E7C97F9EE90DAA298FECFC7C8806B49"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/base_3d_noise.json",
+      "size": 158,
+      "sha256": "2791A1E6C5C730EAC1BD35AAEA9A7AB22855872FDB92349192D045330FD4614F"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/caves/entrances.json",
+      "size": 2412,
+      "sha256": "F92B181869375712268846F1FAC620E750FD331CC38FDD12D84915D5ACA9AE76"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/caves/noodle.json",
+      "size": 2663,
+      "sha256": "050BDB9B04B7A2A3765460823E4F95805C294BD0234F40EB76446327EDECE778"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/caves/pillars.json",
+      "size": 1187,
+      "sha256": "24CE67322F2D163FE3F8B6CB9C88B08CFA47F7524C1012566B1B0CE01BA12C90"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/caves/spaghetti_2d.json",
+      "size": 1689,
+      "sha256": "64F17E438868FF14A18E017A357B06371EBF7F5846AF295CE2467CA89FDA04AB"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/caves/spaghetti_2d_thickness_modulator.json",
+      "size": 372,
+      "sha256": "E41F54B39EC00D43BF3D1B1C988F5BFBE68FBACC9E1042A3822DAECB46B9F897"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/caves/spaghetti_roughness_function.json",
+      "size": 759,
+      "sha256": "B6D660C27B66EB617654DA24041C6C88DA755EBA583CD9E0E2692984FE9FBFD6"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/continents.json",
+      "size": 271,
+      "sha256": "7A4552830BA89E0CDB6D6422A04FFBA167F723FF6CD22898439425EFE8967326"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/depth.json",
+      "size": 220,
+      "sha256": "1C1DC5DF936DA8D93589402159204250F294E0FF431AFBE2472357B14304683C"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/erosion.json",
+      "size": 263,
+      "sha256": "678904FFD4E18F881E4756A3EAF80DEA970A5DE624595C2DE1CBB1CA45D0EEE7"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/factor.json",
+      "size": 34534,
+      "sha256": "C62B36CD1C69FC35BDFA5A7CFE76BD30960D5433CB93D311A3B0EE5C18C2FB97"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/jaggedness.json",
+      "size": 11912,
+      "sha256": "888C61C569CC05BEFF1E1EAFCCAF3EE2D5D7673535455B4C0F5D59D4AE6D2684"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/offset.json",
+      "size": 60107,
+      "sha256": "B4CDD5C42307AF63E85F61FDCDCC466C4ACFC87A012D07CBBEC32E730238CF95"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/ridges.json",
+      "size": 261,
+      "sha256": "1A1F553DDA0D5018EB7AE166A863FB03CA8AE9C5661714ECA89F717707B83428"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/ridges_folded.json",
+      "size": 417,
+      "sha256": "2B310F72281A44E191A76F9E08217D79383D17990BB75C800D809D533FED2A73"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/overworld/sloped_cheese.json",
+      "size": 877,
+      "sha256": "BB6A95A164BB8CD4384E31C116516E1964AE2F232ED4FB18B7DAA9DDF7C77154"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/shift_x.json",
+      "size": 187,
+      "sha256": "AB55564130965A5DF7BB578A04B438A530F197C4FDABD35B4BDF30E84E4669D0"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/shift_z.json",
+      "size": 187,
+      "sha256": "603A6C4D11F8D4F16742DC4196193ECC60E0850C9D16FEB1008F5BF860F28638"
+    },
+    {
+      "path": "data/minecraft/worldgen/density_function/y.json",
+      "size": 126,
+      "sha256": "5ED09C041999CEF58FE6E6206DBD7F95DFBCC310CEF192057DDE0C8E704ACB74"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/aquifer_barrier.json",
+      "size": 54,
+      "sha256": "8021C082551AE852079D1D094466FB525391F3AE383C1E1670C5FDFA573586D5"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/aquifer_fluid_level_floodedness.json",
+      "size": 54,
+      "sha256": "37510AB77EEDF6FB49AA8821739E0A10A91CD0B87AAA446DD1AF737E83FEFF01"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/aquifer_fluid_level_spread.json",
+      "size": 54,
+      "sha256": "5F13A7913FF95676DAA29E43E0BD692B72AB036D0ECBEC90F4E65F59996C1C6C"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/aquifer_lava.json",
+      "size": 54,
+      "sha256": "84EBA8A6C4E154D9EB1B8E6467FD852F61C207165F0517937E64F4730B1869F2"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/calcite.json",
+      "size": 81,
+      "sha256": "7CF77E6E8C01A120D183D393BB27EF8613368A17F4361789886F4FBC737292B9"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/cave_cheese.json",
+      "size": 126,
+      "sha256": "3963E71A58184D6D0D67EDDDD5A9A89618BCE436EA6DEADA88FEE9BCCE8AC91B"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/cave_entrance.json",
+      "size": 72,
+      "sha256": "5DEF3F2FDF6F647B19AF47C3D7954676ABAC780A6672D010724DA508186809DD"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/cave_layer.json",
+      "size": 54,
+      "sha256": "8AEC188A99373042BC4B4B5B697C214F78BD639715685059C42B4190420676A9"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/continentalness.json",
+      "size": 126,
+      "sha256": "7A6CF57A552A237C3F02364DB96C0F5CA858CE067E126FC2E23D607EA212C031"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/erosion.json",
+      "size": 90,
+      "sha256": "0E39E18F0A18FBC796A4DB4FA66313F07851E5362983C3A46B1749AAA1C7D537"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/gravel.json",
+      "size": 81,
+      "sha256": "814AACDDC06A22AF43A84E72821C73CF08B46D2016C50C5A6D643728B1292E72"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/ice.json",
+      "size": 81,
+      "sha256": "78A8FBA21812ED27D2D42F253976193C3C0EC8F4C70434329061DFEE85B65A0D"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/jagged.json",
+      "size": 190,
+      "sha256": "E176BB3CFAB852E5B92CF91EA02BA5C650EA9475B8799DA701FA728F61844B7C"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/noodle.json",
+      "size": 54,
+      "sha256": "8AEC188A99373042BC4B4B5B697C214F78BD639715685059C42B4190420676A9"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/noodle_ridge_a.json",
+      "size": 54,
+      "sha256": "37510AB77EEDF6FB49AA8821739E0A10A91CD0B87AAA446DD1AF737E83FEFF01"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/noodle_ridge_b.json",
+      "size": 54,
+      "sha256": "37510AB77EEDF6FB49AA8821739E0A10A91CD0B87AAA446DD1AF737E83FEFF01"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/noodle_thickness.json",
+      "size": 54,
+      "sha256": "8AEC188A99373042BC4B4B5B697C214F78BD639715685059C42B4190420676A9"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/offset.json",
+      "size": 81,
+      "sha256": "685EC5D37332A7BCC5AEC62EE1835B69AF9C1C0B8DAF7411753713AD135DA59A"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/ore_gap.json",
+      "size": 54,
+      "sha256": "5F13A7913FF95676DAA29E43E0BD692B72AB036D0ECBEC90F4E65F59996C1C6C"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/ore_vein_a.json",
+      "size": 54,
+      "sha256": "37510AB77EEDF6FB49AA8821739E0A10A91CD0B87AAA446DD1AF737E83FEFF01"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/ore_vein_b.json",
+      "size": 54,
+      "sha256": "37510AB77EEDF6FB49AA8821739E0A10A91CD0B87AAA446DD1AF737E83FEFF01"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/ore_veininess.json",
+      "size": 54,
+      "sha256": "8AEC188A99373042BC4B4B5B697C214F78BD639715685059C42B4190420676A9"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/packed_ice.json",
+      "size": 81,
+      "sha256": "9CEBF0736F35B4D2329B148F2B84BE734317AA0A3521EF8A58E236C746F819AD"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/pillar.json",
+      "size": 63,
+      "sha256": "C320989092B1012ADEF13350EC892B3B8F5F0DEDA3C852FD2AD94015B16906BF"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/pillar_rareness.json",
+      "size": 54,
+      "sha256": "8AEC188A99373042BC4B4B5B697C214F78BD639715685059C42B4190420676A9"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/pillar_thickness.json",
+      "size": 54,
+      "sha256": "8AEC188A99373042BC4B4B5B697C214F78BD639715685059C42B4190420676A9"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/powder_snow.json",
+      "size": 81,
+      "sha256": "1662CCE687EFC135F704115B74A07563F385C664A07F146CE75E0D29041B9EA3"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/ridge.json",
+      "size": 99,
+      "sha256": "7E0BEF11D327E3B60A16ACA59661AF23AB6442974A2A06CF8D19086D11085176"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/spaghetti_2d.json",
+      "size": 54,
+      "sha256": "37510AB77EEDF6FB49AA8821739E0A10A91CD0B87AAA446DD1AF737E83FEFF01"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/spaghetti_2d_elevation.json",
+      "size": 54,
+      "sha256": "8AEC188A99373042BC4B4B5B697C214F78BD639715685059C42B4190420676A9"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/spaghetti_2d_modulator.json",
+      "size": 55,
+      "sha256": "FFC5FEF5E13A37E4F8377FB84E0552F201E49440B4394DACC69A175A307ECC4F"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/spaghetti_2d_thickness.json",
+      "size": 55,
+      "sha256": "FFC5FEF5E13A37E4F8377FB84E0552F201E49440B4394DACC69A175A307ECC4F"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/spaghetti_3d_1.json",
+      "size": 54,
+      "sha256": "37510AB77EEDF6FB49AA8821739E0A10A91CD0B87AAA446DD1AF737E83FEFF01"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/spaghetti_3d_2.json",
+      "size": 54,
+      "sha256": "37510AB77EEDF6FB49AA8821739E0A10A91CD0B87AAA446DD1AF737E83FEFF01"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/spaghetti_3d_rarity.json",
+      "size": 55,
+      "sha256": "FFC5FEF5E13A37E4F8377FB84E0552F201E49440B4394DACC69A175A307ECC4F"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/spaghetti_3d_thickness.json",
+      "size": 54,
+      "sha256": "8AEC188A99373042BC4B4B5B697C214F78BD639715685059C42B4190420676A9"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/spaghetti_roughness.json",
+      "size": 54,
+      "sha256": "5F13A7913FF95676DAA29E43E0BD692B72AB036D0ECBEC90F4E65F59996C1C6C"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/spaghetti_roughness_modulator.json",
+      "size": 54,
+      "sha256": "8AEC188A99373042BC4B4B5B697C214F78BD639715685059C42B4190420676A9"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/surface.json",
+      "size": 72,
+      "sha256": "A4D4E7D8C7B5FDD83CF33A2B9DAD739565A86673F3F482BB0AA08E6A09F5488E"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/surface_swamp.json",
+      "size": 54,
+      "sha256": "73E2191444E865E7B9EE4B6EDEA3111D1F4DDD88BBC737ECD1DAF85967C496CA"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/temperature.json",
+      "size": 100,
+      "sha256": "9D98E13680CE8A1BC9ACF6CA30BDA83B761B5109D37A0B6ED61B82F93DC5A61B"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise/vegetation.json",
+      "size": 99,
+      "sha256": "6D7823EC5B23EB988CE3A95FBB64E033A3CF886F671883D93E164FCC8184784C"
+    },
+    {
+      "path": "data/minecraft/worldgen/noise_settings/overworld.json",
+      "size": 109410,
+      "sha256": "402E2754B4361CE21D3B77928199C4762A6A86CC2A2824518337EF4AD68F6DFD"
+    },
+    {
+      "path": "pack.mcmeta",
+      "size": 126,
+      "sha256": "6336F006B0668F3F68C1CB379A90F1E656AA76B3A0AEB6F780090A0FCF260FF7"
+    },
+    {
+      "path": "README.md",
+      "size": 842,
+      "sha256": "6A0D5F7959AB526FC60B07D313CF0032375161483106386F3F00B82348DDBDC3"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:flower_pot"
+    },
+    {
+      "item": "minecraft:blue_dye"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:blue_porcelain_flowerpot"
+    }
+  ]
+}

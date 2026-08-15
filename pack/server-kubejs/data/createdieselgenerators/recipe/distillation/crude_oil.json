@@ -1,0 +1,22 @@
+{
+  "type": "createdieselgenerators:distillation",
+  "ingredients": [
+    {
+      "type": "fluid_stack",
+      "fluid": "kubejs:fine_oil",
+      "amount": 300
+    }
+  ],
+  "heat_requirement": "heated",
+  "processing_time": 60,
+  "results": [
+    {
+      "id": "createdieselgenerators:diesel",
+      "amount": 150
+    },
+    {
+      "id": "createdieselgenerators:gasoline",
+      "amount": 150
+    }
+  ]
+}

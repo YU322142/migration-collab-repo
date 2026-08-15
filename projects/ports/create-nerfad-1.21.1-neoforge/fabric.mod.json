@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "create_nerfad",
+  "version": "1.1.0",
+  "name": "Create: Not Enough Recipes For A Dummy",
+  "description": "Changed mixing and compacting recipes after Create Fly update.",
+  "authors": ["Konitor"],
+  "contact": {
+	  "discord" : "https://discord.gg/pFPRhpeSDr"
+	  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "depends": {
+    "minecraft": ">=1.20"
+  }
+}

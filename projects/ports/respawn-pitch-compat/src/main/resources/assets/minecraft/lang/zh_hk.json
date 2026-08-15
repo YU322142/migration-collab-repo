@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "已將 %7$s 於 %6$s 的重生點設為 %1$s, %2$s, %3$s [%4$s, %5$s]",
+  "commands.spawnpoint.success.multiple.new": "已將 %7$s 個玩家於 %6$s 的重生點設為 %1$s, %2$s, %3$s [%4$s, %5$s]"
+}

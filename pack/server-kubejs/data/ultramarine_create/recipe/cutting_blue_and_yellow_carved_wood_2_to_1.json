@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "ultramarine:blue_and_yellow_carved_wood_variant_2"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:blue_and_yellow_carved_wood_variant_1"
+    }
+  ]
+}

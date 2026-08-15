@@ -1,0 +1,94 @@
+﻿[
+    {
+        "key":  "experience",
+        "file":  "common\\fluids\\experience\\ExperienceFuel.java"
+    },
+    {
+        "key":  "special",
+        "file":  "common\\fluids\\experience\\ExperienceFuel.java"
+    },
+    {
+        "key":  "using_convert_to",
+        "file":  "common\\fluids\\experience\\ExperienceFuel.java"
+    },
+    {
+        "key":  "capacity",
+        "file":  "common\\fluids\\lantern\\ExperienceLanternMountedStorage.java"
+    },
+    {
+        "key":  "fluid",
+        "file":  "common\\fluids\\lantern\\ExperienceLanternMountedStorage.java"
+    },
+    {
+        "key":  "sound",
+        "file":  "common\\fluids\\printer\\PrintingRecipeParams.java"
+    },
+    {
+        "key":  "value",
+        "file":  "integration\\apotheosis\\common\\logistics\\attributes\\GemPurityAttributes.java"
+    },
+    {
+        "key":  "socket",
+        "file":  "integration\\apotheosis\\common\\processing\\socket\\advanced\\SocketInsertable.java"
+    },
+    {
+        "key":  "bonuses",
+        "file":  "integration\\apotheosis\\common\\processing\\socket\\advanced\\SocketInsertable.java"
+    },
+    {
+        "key":  "weights",
+        "file":  "integration\\apotheosis\\common\\processing\\socket\\advanced\\SocketInsertable.java"
+    },
+    {
+        "key":  "constraints",
+        "file":  "integration\\apotheosis\\common\\processing\\socket\\advanced\\SocketInsertable.java"
+    },
+    {
+        "key":  "unique",
+        "file":  "integration\\apotheosis\\common\\processing\\socket\\advanced\\SocketInsertable.java"
+    },
+    {
+        "key":  "stats",
+        "file":  "integration\\apothic_enchanting\\common\\processing\\infuser\\InfusingRecipeParams.java"
+    },
+    {
+        "key":  "eterna",
+        "file":  "integration\\apothic_enchanting\\common\\processing\\infuser\\InfusionStats.java"
+    },
+    {
+        "key":  "quanta",
+        "file":  "integration\\apothic_enchanting\\common\\processing\\infuser\\InfusionStats.java"
+    },
+    {
+        "key":  "arcana",
+        "file":  "integration\\apothic_enchanting\\common\\processing\\infuser\\InfusionStats.java"
+    },
+    {
+        "key":  "enchantment",
+        "file":  "integration\\jei\\category\\printing\\EnchantedBookPrintingRecipeJEI.java"
+    },
+    {
+        "key":  "level",
+        "file":  "integration\\jei\\category\\printing\\EnchantedBookPrintingRecipeJEI.java"
+    },
+    {
+        "key":  "recipe",
+        "file":  "integration\\jei\\category\\printing\\StandardPrintingRecipeJEI.java"
+    },
+    {
+        "key":  "id",
+        "file":  "util\\CEICodecs.java"
+    },
+    {
+        "key":  "level",
+        "file":  "util\\CEICodecs.java"
+    },
+    {
+        "key":  "level",
+        "file":  "util\\CEIIntIntPair.java"
+    },
+    {
+        "key":  "value",
+        "file":  "util\\CEIIntIntPair.java"
+    }
+]

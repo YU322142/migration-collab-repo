@@ -1,0 +1,17 @@
+{
+  "values": [
+    "minecraft:netherite_block",
+    "umapyoi:jewel",
+    "l2hostility:grenade",
+    "l2hostility:adaptive",
+    "l2hostility:corrosion",
+    "l2hostility:erosion",
+    "l2hostility:growth",
+    "l2hostility:drain",
+    "l2hostility:reprint",
+    "l2hostility:split",
+    "irons_spellbooks:arcane_rune",
+    "advancednetherite:netherite_emerald_ingot",
+    "advancednetherite:netherite_emerald_block"
+  ]
+}

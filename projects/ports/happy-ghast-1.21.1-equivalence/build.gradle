@@ -1,0 +1,85 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.95'
+}
+
+group = mod_group_id
+version = mod_version
+
+base {
+    archivesName = 'happyghast-equivalence'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+// Expand only the string values used by neoforge.mods.toml.  Passing the whole
+// Gradle project property map also includes ModDev service objects, which are
+// not serializable task inputs.
+def tomlProperties = [
+    'loader_version_range', 'mod_license', 'mod_id', 'mod_version',
+    'mod_name', 'mod_authors', 'mod_description', 'neo_version_range',
+    'minecraft_version_range'
+].collectEntries { key -> [key, project.property(key).toString()] }
+
+tasks.named('processResources') {
+    inputs.properties(tomlProperties)
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand(tomlProperties)
+    }
+}
+
+def backportJar = file(project.backport_jar)
+
+dependencies {
+    compileOnly files(backportJar)
+}
+
+def sha256 = { File input ->
+    def digest = java.security.MessageDigest.getInstance('SHA-256')
+    input.withInputStream { stream ->
+        byte[] buffer = new byte[8192]
+        for (int read = stream.read(buffer); read >= 0; read = stream.read(buffer)) {
+            if (read > 0) digest.update(buffer, 0, read)
+        }
+    }
+    digest.digest().collect { String.format('%02x', it) }.join()
+}
+
+tasks.register('verifyInputs') {
+    doLast {
+        assert backportJar.isFile(): "Missing Backport 1.5 JAR: ${backportJar}"
+        assert sha256(backportJar).equalsIgnoreCase(project.backport_sha256):
+                "Backport 1.5 SHA-256 mismatch: ${sha256(backportJar)}"
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    dependsOn tasks.named('verifyInputs')
+    options.encoding = 'UTF-8'
+}
+
+tasks.named('jar') {
+    dependsOn tasks.named('verifyInputs')
+    archiveFileName = "happyghast-equivalence-${project.mod_version}.jar"
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+tasks.register('compatTest', JavaExec) {
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'com.bmt.happyghast_equivalence.RideStatSemanticsTest'
+}
+
+tasks.named('check') {
+    dependsOn tasks.named('compatTest')
+}

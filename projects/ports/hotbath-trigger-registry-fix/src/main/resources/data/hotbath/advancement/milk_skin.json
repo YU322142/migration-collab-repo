@@ -1,0 +1,28 @@
+{
+  "id": "hotbath:milk_skin",
+  "display": {
+    "icon": {
+      "id": "hotbath:milk_bath_bucket"
+    },
+    "title": {
+      "translate": "hotbath.advancement.milk_skin"
+    },
+    "description": {
+      "translate": "hotbath.advancement.milk_skin.desc"
+    },
+    "background": "minecraft:textures/block/stone.png",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "hotbath:hot_bath",
+  "criteria": {
+    "code_triggered": {
+      "trigger": "hotbath:milk_skin"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

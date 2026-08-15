@@ -1,0 +1,20 @@
+{
+    "replace":  false,
+    "values":  [
+                   "mishanguc:glass_pale_oak_handrail",
+                   "mishanguc:glass_pale_oak_handrail_central",
+                   "mishanguc:glass_pale_oak_handrail_corner",
+                   "mishanguc:glass_pale_oak_handrail_stair",
+                   "mishanguc:glass_pale_oak_handrail_outer",
+                   "mishanguc:colored_decorated_pale_oak_handrail",
+                   "mishanguc:colored_decorated_pale_oak_handrail_central",
+                   "mishanguc:colored_decorated_pale_oak_handrail_corner",
+                   "mishanguc:colored_decorated_pale_oak_handrail_stair",
+                   "mishanguc:colored_decorated_pale_oak_handrail_outer",
+                   "mishanguc:colored_decorated_stripped_pale_oak_handrail",
+                   "mishanguc:colored_decorated_stripped_pale_oak_handrail_central",
+                   "mishanguc:colored_decorated_stripped_pale_oak_handrail_corner",
+                   "mishanguc:colored_decorated_stripped_pale_oak_handrail_stair",
+                   "mishanguc:colored_decorated_stripped_pale_oak_handrail_outer"
+               ]
+}

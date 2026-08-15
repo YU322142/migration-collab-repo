@@ -1,0 +1,572 @@
+{
+  "schema": 1,
+  "generated_at": "2026-08-15T17:04:31.141261+00:00",
+  "copy_filter": {
+    "excluded_directories": [
+      ".cache",
+      ".git",
+      ".gradle",
+      ".gradle-cache",
+      ".idea",
+      ".ruff_cache",
+      ".test-tmp",
+      ".toolchains",
+      ".vscode",
+      "__pycache__",
+      "bin",
+      "build",
+      "build-cache",
+      "compat-libs",
+      "crash-reports",
+      "downloads",
+      "expanded",
+      "gradle-cache",
+      "libraries",
+      "logs",
+      "natives",
+      "node_modules",
+      "out",
+      "run",
+      "runs",
+      "target",
+      "temp",
+      "tmp"
+    ],
+    "excluded_suffixes": [
+      ".7z",
+      ".bak",
+      ".class",
+      ".dll",
+      ".dmp",
+      ".exe",
+      ".jar",
+      ".ldb",
+      ".lock",
+      ".log",
+      ".mca",
+      ".nbt",
+      ".old",
+      ".pyc",
+      ".pyo",
+      ".rar",
+      ".so",
+      ".tmp",
+      ".xz",
+      ".zip"
+    ],
+    "max_source_file_bytes": 26214400,
+    "gradle_wrapper_jar_exception": true
+  },
+  "sources": [
+    {
+      "name": "migration-tools",
+      "source": "<WORKSPACE>/outputs/tools",
+      "destination": "outputs/tools",
+      "copied_files": 379,
+      "copied_bytes": 5802210,
+      "skipped_files": 264,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace-scripts",
+      "source": "<WORKSPACE>/scripts",
+      "destination": "tools/legacy-entrypoints",
+      "copied_files": 1,
+      "copied_bytes": 7594,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace-data",
+      "source": "<WORKSPACE>/data",
+      "destination": "data",
+      "copied_files": 1,
+      "copied_bytes": 857,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/cctweaked-startup-shutdown-guard-neoforge",
+      "source": "<WORKSPACE>/outputs/projects/cctweaked-startup-shutdown-guard-neoforge",
+      "destination": "outputs/projects/cctweaked-startup-shutdown-guard-neoforge",
+      "copied_files": 10,
+      "copied_bytes": 22118,
+      "skipped_files": 37,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/chest-colorizer-neoforge-1.21.1",
+      "source": "<WORKSPACE>/outputs/projects/chest-colorizer-neoforge-1.21.1",
+      "destination": "outputs/projects/chest-colorizer-neoforge-1.21.1",
+      "copied_files": 167,
+      "copied_bytes": 169830,
+      "skipped_files": 230,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/create-carriage-orientation-guard-neoforge",
+      "source": "<WORKSPACE>/outputs/projects/create-carriage-orientation-guard-neoforge",
+      "destination": "outputs/projects/create-carriage-orientation-guard-neoforge",
+      "copied_files": 9,
+      "copied_bytes": 29198,
+      "skipped_files": 40,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/create-chute-unload-guard-neoforge",
+      "source": "<WORKSPACE>/outputs/projects/create-chute-unload-guard-neoforge",
+      "destination": "outputs/projects/create-chute-unload-guard-neoforge",
+      "copied_files": 10,
+      "copied_bytes": 18232,
+      "skipped_files": 41,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/create-dynamic-blocking-neoforge",
+      "source": "<WORKSPACE>/outputs/projects/create-dynamic-blocking-neoforge",
+      "destination": "outputs/projects/create-dynamic-blocking-neoforge",
+      "copied_files": 11,
+      "copied_bytes": 18714,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/create-saveddata-probe",
+      "source": "<WORKSPACE>/outputs/projects/create-saveddata-probe",
+      "destination": "outputs/projects/create-saveddata-probe",
+      "copied_files": 5,
+      "copied_bytes": 9110,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/deferred-content-protection-neoforge",
+      "source": "<WORKSPACE>/outputs/projects/deferred-content-protection-neoforge",
+      "destination": "outputs/projects/deferred-content-protection-neoforge",
+      "copied_files": 20,
+      "copied_bytes": 44515,
+      "skipped_files": 47,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/heightmap-384-to-544-compat-neoforge",
+      "source": "<WORKSPACE>/outputs/projects/heightmap-384-to-544-compat-neoforge",
+      "destination": "outputs/projects/heightmap-384-to-544-compat-neoforge",
+      "copied_files": 9,
+      "copied_bytes": 36349,
+      "skipped_files": 41,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/kaleidoscope-cookery-scarecrow-compat",
+      "source": "<WORKSPACE>/outputs/projects/kaleidoscope-cookery-scarecrow-compat",
+      "destination": "outputs/projects/kaleidoscope-cookery-scarecrow-compat",
+      "copied_files": 10,
+      "copied_bytes": 19982,
+      "skipped_files": 36,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/kaleidoscope-nether-backport",
+      "source": "<WORKSPACE>/outputs/projects/kaleidoscope-nether-backport",
+      "destination": "outputs/projects/kaleidoscope-nether-backport",
+      "copied_files": 27,
+      "copied_bytes": 35245,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/mishanguc-pale-oak-equivalence",
+      "source": "<WORKSPACE>/outputs/projects/mishanguc-pale-oak-equivalence",
+      "destination": "outputs/projects/mishanguc-pale-oak-equivalence",
+      "copied_files": 16,
+      "copied_bytes": 52039,
+      "skipped_files": 2,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/poi-migration-diagnostic",
+      "source": "<WORKSPACE>/outputs/projects/poi-migration-diagnostic",
+      "destination": "outputs/projects/poi-migration-diagnostic",
+      "copied_files": 5,
+      "copied_bytes": 17121,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/potted-farms-1.21.1-equivalence",
+      "source": "<WORKSPACE>/outputs/projects/potted-farms-1.21.1-equivalence",
+      "destination": "outputs/projects/potted-farms-1.21.1-equivalence",
+      "copied_files": 1,
+      "copied_bytes": 2606,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/recipe-set-diagnostic",
+      "source": "<WORKSPACE>/outputs/projects/recipe-set-diagnostic",
+      "destination": "outputs/projects/recipe-set-diagnostic",
+      "copied_files": 5,
+      "copied_bytes": 5510,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/resource-error-overlay-1.21.1",
+      "source": "<WORKSPACE>/outputs/projects/resource-error-overlay-1.21.1",
+      "destination": "outputs/projects/resource-error-overlay-1.21.1",
+      "copied_files": 28,
+      "copied_bytes": 50517,
+      "skipped_files": 2,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "workspace/waypoint-fire-equivalence",
+      "source": "<WORKSPACE>/outputs/projects/waypoint-fire-equivalence",
+      "destination": "outputs/projects/waypoint-fire-equivalence",
+      "copied_files": 28,
+      "copied_bytes": 52738,
+      "skipped_files": 64,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/cei-2.4.2-with-2.5.1-backport",
+      "source": "<AUDIT_ROOT>/cei-242-251-backport-source-20260814",
+      "destination": "projects/ports/cei-2.4.2-with-2.5.1-backport",
+      "copied_files": 744,
+      "copied_bytes": 3420151,
+      "skipped_files": 1812,
+      "source_git_head": "9317ba99d4647892873d9d56678a1b448b7959b4",
+      "source_git_dirty": true
+    },
+    {
+      "name": "ports/content-backport-cat-serializer-fix",
+      "source": "<AUDIT_ROOT>/content-backport-1.5-cat-serializer-fix-source-20260814",
+      "destination": "projects/ports/content-backport-cat-serializer-fix",
+      "copied_files": 7,
+      "copied_bytes": 41947,
+      "skipped_files": 35,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/hotbath-trigger-registry-fix",
+      "source": "<AUDIT_ROOT>/hotbath-300-trigger-fix-source-20260814",
+      "destination": "projects/ports/hotbath-trigger-registry-fix",
+      "copied_files": 341,
+      "copied_bytes": 942734,
+      "skipped_files": 23860,
+      "source_git_head": "bdc4d7cafb1de80650fedf1e62ded60c0dce06ff",
+      "source_git_dirty": false
+    },
+    {
+      "name": "ports/trueuuid-login-proxy-fix",
+      "source": "<AUDIT_ROOT>/trueuuid-login-resume-fix-20260814/upstream",
+      "destination": "projects/ports/trueuuid-login-proxy-fix",
+      "copied_files": 381,
+      "copied_bytes": 1481821,
+      "skipped_files": 651,
+      "source_git_head": "e347728b61f77fc561b6936c77d87843fe7a0707",
+      "source_git_dirty": true
+    },
+    {
+      "name": "ports/kaleidoscope-cookery-1.21.1-neoforge",
+      "source": "<AUDIT_ROOT>/KaleidoscopeCookery-1.21.1-neoforge",
+      "destination": "projects/ports/kaleidoscope-cookery-1.21.1-neoforge",
+      "copied_files": 4966,
+      "copied_bytes": 11758944,
+      "skipped_files": 5085,
+      "source_git_head": "8eaa0d2d865e42eec988cfae1464cd4055423b30",
+      "source_git_dirty": true
+    },
+    {
+      "name": "ports/kaleidoscope-nether-1.21.1-equivalence",
+      "source": "<AUDIT_ROOT>/KaleidoscopeNether-1.21.1-equivalence",
+      "destination": "projects/ports/kaleidoscope-nether-1.21.1-equivalence",
+      "copied_files": 31,
+      "copied_bytes": 90828,
+      "skipped_files": 56,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/kaleidoscope-end-1.21.1-equivalence",
+      "source": "<AUDIT_ROOT>/KaleidoscopeEnd-1.21.1-equivalence",
+      "destination": "projects/ports/kaleidoscope-end-1.21.1-equivalence",
+      "copied_files": 40,
+      "copied_bytes": 147857,
+      "skipped_files": 58,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/kaleidoscope-tavern-1.21.1",
+      "source": "<AUDIT_ROOT>/KaleidoscopeTavern-1.21.1",
+      "destination": "projects/ports/kaleidoscope-tavern-1.21.1",
+      "copied_files": 2348,
+      "copied_bytes": 3768541,
+      "skipped_files": 2478,
+      "source_git_head": "a1afba34981a00e89d57130d3dc8f1e64f1820a2",
+      "source_git_dirty": true
+    },
+    {
+      "name": "ports/happy-ghast-1.21.1-equivalence",
+      "source": "<AUDIT_ROOT>/HappyGhast-1.21.1-equivalence",
+      "destination": "projects/ports/happy-ghast-1.21.1-equivalence",
+      "copied_files": 26,
+      "copied_bytes": 91317,
+      "skipped_files": 48,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/mishanguc-1.21.1-equivalence",
+      "source": "<AUDIT_ROOT>/MishangUC-1.21.1-equivalence",
+      "destination": "projects/ports/mishanguc-1.21.1-equivalence",
+      "copied_files": 299,
+      "copied_bytes": 263309,
+      "skipped_files": 318,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/froglight-patch-1.21.1-equivalence",
+      "source": "<AUDIT_ROOT>/FroglightPatch-1.21.1-equivalence",
+      "destination": "projects/ports/froglight-patch-1.21.1-equivalence",
+      "copied_files": 31,
+      "copied_bytes": 90828,
+      "skipped_files": 56,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/toms-storage-neoforge-1.21.1-perf-port",
+      "source": "<AUDIT_ROOT>/Toms-Storage-NeoForge-1.21.1-perf-port",
+      "destination": "projects/ports/toms-storage-neoforge-1.21.1-perf-port",
+      "copied_files": 474,
+      "copied_bytes": 2621618,
+      "skipped_files": 24626,
+      "source_git_head": "dbfbce1a5d53ca422a29a418728fbc205fbc58ca",
+      "source_git_dirty": true
+    },
+    {
+      "name": "ports/nautilus-equivalence",
+      "source": "<AUDIT_ROOT>/nautilus-backport-audit/nautilus-equivalence",
+      "destination": "projects/ports/nautilus-equivalence",
+      "copied_files": 1987,
+      "copied_bytes": 62247273,
+      "skipped_files": 264,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/nautilus-alias-adapter",
+      "source": "<AUDIT_ROOT>/nautilus-backport-audit/nautilus-alias-adapter",
+      "destination": "projects/ports/nautilus-alias-adapter",
+      "copied_files": 8,
+      "copied_bytes": 52812,
+      "skipped_files": 64,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/respawn-pitch-compat",
+      "source": "<AUDIT_ROOT>/respawn-pitch-compat/mod",
+      "destination": "projects/ports/respawn-pitch-compat",
+      "copied_files": 156,
+      "copied_bytes": 100687,
+      "skipped_files": 173,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/end-client-harness",
+      "source": "<AUDIT_ROOT>/end-client-harness",
+      "destination": "projects/ports/end-client-harness",
+      "copied_files": 7,
+      "copied_bytes": 57003,
+      "skipped_files": 156,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/barched",
+      "source": "<AUDIT_ROOT>/Barched-source",
+      "destination": "projects/ports/barched",
+      "copied_files": 498,
+      "copied_bytes": 2793833,
+      "skipped_files": 765,
+      "source_git_head": "8c37e045b92348a74316439f0166d77cea07f023",
+      "source_git_dirty": true
+    },
+    {
+      "name": "ports/mcmodsync-1.9.2-pinned-source",
+      "source": "<AUDIT_ROOT>/mcmodsync-latest-audit-20260813/source/MCModSync-00a227a128d7068d9ba9e4bd0f248e1b80d57055",
+      "destination": "projects/ports/mcmodsync-1.9.2-pinned-source",
+      "copied_files": 65,
+      "copied_bytes": 720866,
+      "skipped_files": 207,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/nautilus-spears-tracked-source",
+      "source": "<AUDIT_ROOT>/Nautilus-Spears-source",
+      "destination": "projects/ports/nautilus-spears-tracked-source",
+      "copied_files": 1,
+      "copied_bytes": 1314,
+      "skipped_files": 333,
+      "source_git_head": "df6bea7af145322ac8b878a1eef492e2bcd646e2",
+      "source_git_dirty": true
+    },
+    {
+      "name": "ports/create-nerfad-1.21.1-neoforge",
+      "source": "<HANDOFF_ROOT>/03-tools-and-source/d-projects/CreateNerfad-1.21.1-neoforge",
+      "destination": "projects/ports/create-nerfad-1.21.1-neoforge",
+      "copied_files": 24,
+      "copied_bytes": 20414,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/xiyuslogin-migration",
+      "source": "<HANDOFF_ROOT>/03-tools-and-source/d-projects/XiyusLogin-migration",
+      "destination": "projects/ports/xiyuslogin-migration",
+      "copied_files": 34,
+      "copied_bytes": 214820,
+      "skipped_files": 48,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "ports/potted-farms-1.21.1-equivalence-full",
+      "source": "<HANDOFF_ROOT>/03-tools-and-source/d-projects/Potted-Farms-1.21.1-equivalence",
+      "destination": "projects/ports/potted-farms-1.21.1-equivalence-full",
+      "copied_files": 104,
+      "copied_bytes": 766781,
+      "skipped_files": 5,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "patches/worldedit-7.3.8-direction-property-fix",
+      "source": "<AUDIT_ROOT>/worldedit-738-direction-property-fix-artifacts-20260814",
+      "destination": "projects/patches/worldedit-7.3.8-direction-property-fix",
+      "copied_files": 5,
+      "copied_bytes": 24443,
+      "skipped_files": 9,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "patches/yuushya-2.3.0-patchouli-safety",
+      "source": "<AUDIT_ROOT>/yuushya-230-patchouli-fix-artifacts-20260814",
+      "destination": "projects/patches/yuushya-2.3.0-patchouli-safety",
+      "copied_files": 17,
+      "copied_bytes": 43052,
+      "skipped_files": 3,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "patches/tlm-patchouli-spawn-box-balance",
+      "source": "<WORKSPACE>/outputs/patches/tlm-patchouli-spawn-box-balance-fix-20260814",
+      "destination": "projects/patches/tlm-patchouli-spawn-box-balance",
+      "copied_files": 9,
+      "copied_bytes": 40139,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "upstream-reference/kaleidoscope-cookery-upstream",
+      "source": "<AUDIT_ROOT>/KaleidoscopeCookery-source",
+      "destination": "projects/upstream-reference/kaleidoscope-cookery-upstream",
+      "copied_files": 4197,
+      "copied_bytes": 10513139,
+      "skipped_files": 1495,
+      "source_git_head": "1d935a2c5773452aa8ad399938fac29a6d3d4695",
+      "source_git_dirty": false
+    },
+    {
+      "name": "upstream-reference/kaleidoscope-tavern-upstream",
+      "source": "<AUDIT_ROOT>/KaleidoscopeTavern-source",
+      "destination": "projects/upstream-reference/kaleidoscope-tavern-upstream",
+      "copied_files": 2047,
+      "copied_bytes": 3457966,
+      "skipped_files": 884,
+      "source_git_head": "c4ec1880bd44cf3139d3ba744ab30bb379cf1416",
+      "source_git_dirty": false
+    },
+    {
+      "name": "pack/server-config",
+      "source": "<AUDIT_ROOT>/mechanomania-matched-release-v3-20260814/server/overlay/config",
+      "destination": "pack/server-config",
+      "copied_files": 558,
+      "copied_bytes": 2565206,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "pack/server-kubejs",
+      "source": "<AUDIT_ROOT>/mechanomania-matched-release-v3-20260814/server/overlay/kubejs",
+      "destination": "pack/server-kubejs",
+      "copied_files": 2103,
+      "copied_bytes": 6793967,
+      "skipped_files": 363,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "pack/client-config",
+      "source": "<AUDIT_ROOT>/mechanomania-matched-release-v3-20260814/client/overlay/config",
+      "destination": "pack/client-config",
+      "copied_files": 603,
+      "copied_bytes": 2465780,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "pack/client-kubejs",
+      "source": "<AUDIT_ROOT>/mechanomania-matched-release-v3-20260814/client/overlay/kubejs",
+      "destination": "pack/client-kubejs",
+      "copied_files": 191,
+      "copied_bytes": 4131748,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    },
+    {
+      "name": "pack/common-tlm-custom-pack",
+      "source": "<AUDIT_ROOT>/mechanomania-matched-release-v3-20260814/server/overlay/tlm_custom_pack",
+      "destination": "pack/common-tlm-custom-pack",
+      "copied_files": 1260,
+      "copied_bytes": 39182891,
+      "skipped_files": 0,
+      "source_git_head": null,
+      "source_git_dirty": null
+    }
+  ]
+}

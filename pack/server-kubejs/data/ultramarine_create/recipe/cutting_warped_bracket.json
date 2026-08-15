@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:warped_stems"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:warped_bracket"
+    }
+  ]
+}

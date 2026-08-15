@@ -1,0 +1,18 @@
+#Determines the max depth of an end city.
+# Default: 8
+# Range: 0 ~ 100
+MaximumDepth = 6
+#Determines the maximum number of end ships that CAN generate.
+# Default: 1
+# Range: 0 ~ 100
+MaximumShips = 2
+#Determines the max height of the middle branching towers.
+# Default: 2
+# Range: 0 ~ 30
+MaximumMiddleTowers = 1
+#Determines the average length of bridges. (short, medium, long)
+BridgeLength = "medium"
+#Places more branching paths. May get overcrowded.
+MoreBranches = false
+#Adds double stacked loot rooms.
+MoreLootRooms = true

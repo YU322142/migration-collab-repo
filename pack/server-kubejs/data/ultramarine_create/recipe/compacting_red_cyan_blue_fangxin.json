@@ -1,0 +1,33 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "c:dyes/red"
+    },
+    {
+      "tag": "c:dyes/cyan"
+    },
+    {
+      "tag": "c:dyes/blue"
+    },
+    {
+      "item": "ultramarine:red_dye_powder"
+    },
+    {
+      "item": "ultramarine:fangxin_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:red_cyan_blue_fangxin"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:fangxin_template"
+    }
+  ]
+}

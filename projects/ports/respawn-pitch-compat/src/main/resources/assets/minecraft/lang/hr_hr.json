@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Točka stvaranja postavljena na %s, %s, %s [%s, %s] u %s za %s",
+  "commands.spawnpoint.success.multiple.new": "Točka stvaranja postavljena na %s, %s, %s [%s, %s] u %s za %s igrača"
+}

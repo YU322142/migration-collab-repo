@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Stillti lífgunarstað á %s, %s, %s [%s,%s] í %s fyrir %s",
+  "commands.spawnpoint.success.multiple.new": "Stillti lífgunarstað á %s, %s, %s [%s,%s] í %s fyrir %s spilara"
+}

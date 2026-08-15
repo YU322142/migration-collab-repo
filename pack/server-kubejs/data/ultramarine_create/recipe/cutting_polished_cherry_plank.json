@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:cherry_planks"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "ultramarine:polished_cherry_plank"
+    }
+  ]
+}

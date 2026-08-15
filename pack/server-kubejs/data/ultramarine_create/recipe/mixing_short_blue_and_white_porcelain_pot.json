@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "ultramarine:clay_pot"
+    },
+    {
+      "item": "ultramarine:blue_and_white_glaze_powder"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:short_blue_and_white_porcelain_pot"
+    }
+  ]
+}

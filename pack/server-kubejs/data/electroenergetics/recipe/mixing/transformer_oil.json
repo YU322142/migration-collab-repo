@@ -1,0 +1,22 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "type": "neoforge:tag",
+      "amount": 50,
+      "tag": "c6c:to_transformer_oil"
+    },
+    {
+      "type": "neoforge:single",
+      "amount": 250,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "results": [
+    {
+      "amount": 250,
+      "id": "electroenergetics:transformer_oil"
+    }
+  ]
+}

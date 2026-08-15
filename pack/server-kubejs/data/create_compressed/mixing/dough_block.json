@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "create_compressed:wheat_flour_pile"
+    },
+    {
+      "amount": 1000,
+      "fluid": "minecraft:water",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "id": "create_compressed:dough_block"
+    }
+  ]
+}

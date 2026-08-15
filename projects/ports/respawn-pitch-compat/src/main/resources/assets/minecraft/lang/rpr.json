@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Установлена точка возрожденія на %s, %s, %s [%s, %s] въ %s для %s",
+  "commands.spawnpoint.success.multiple.new": "Установлена точка возрожденія на %s, %s, %s [%s, %s] въ %s для %s игроковъ"
+}

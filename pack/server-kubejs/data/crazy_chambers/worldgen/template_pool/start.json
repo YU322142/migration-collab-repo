@@ -1,0 +1,16 @@
+{
+  "name": "crazy_chambers:start",
+  "fallback": "minecraft:empty",
+  "elements": [
+	
+    {
+      "weight": 99,
+      "element": {
+        "location": "crazy_chambers:atrium/oak_tree",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

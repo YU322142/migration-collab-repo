@@ -1,0 +1,15 @@
+{
+  "type": "ultramarine:composite_smelting",
+  "experience": 0.05,
+  "cookingtime": 100,
+  "primary_ingredient": {
+    "item": "ultramarine:porcelain_piece"
+  },
+  "secondary_ingredient": {
+    "item": "ultramarine:blue_and_white_glaze_powder"
+  },
+  "result": {
+    "count": 1,
+    "id": "ultramarine:blue_and_white_porcelain_piece"
+  }
+}

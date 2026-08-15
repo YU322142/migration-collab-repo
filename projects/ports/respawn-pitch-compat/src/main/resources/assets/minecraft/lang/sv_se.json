@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Ändrade återuppståndelsepunkten till %s, %s, %s [%s, %s] i %s för %s",
+  "commands.spawnpoint.success.multiple.new": "Ändrade återuppståndelsepunkten till %s, %s, %s [%s, %s] i %s för %s spelare"
+}

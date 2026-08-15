@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Set point o' spawn t' %s, %s, %s [%s, %s] in %s fer %s",
+  "commands.spawnpoint.success.multiple.new": "Set point o' spawn t' %s, %s, %s [%s, %s] in %s fer %s pirates"
+}

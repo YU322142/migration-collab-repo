@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Ponto de renascimento de %7$s definido para %1$s, %2$s, %3$s [%4$s, %5$s] na dimensão %6$s",
+  "commands.spawnpoint.success.multiple.new": "Ponto de renascimento de %7$s jogadores definido para %1$s, %2$s, %3$s [%4$s, %5$s] na dimensão %6$s"
+}

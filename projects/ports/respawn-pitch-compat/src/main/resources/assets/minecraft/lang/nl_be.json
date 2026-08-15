@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Spawnpunt van %7$s ingesteld op %1$s, %2$s, %3$s [%4$s, %5$s] in %6$s",
+  "commands.spawnpoint.success.multiple.new": "Spawnpunt van %7$s spelers ingesteld op %1$s, %2$s, %3$s [%4$s, %5$s] in %6$s"
+}

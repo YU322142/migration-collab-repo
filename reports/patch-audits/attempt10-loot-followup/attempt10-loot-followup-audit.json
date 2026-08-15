@@ -1,0 +1,220 @@
+{
+  "schema": "attempt10-loot-followup-fix/v1",
+  "generated_at": "2026-08-14T08:03:45+00:00",
+  "status": "PASS_STATIC_CANDIDATE",
+  "scope": {
+    "java_started": false,
+    "minecraft_started": false,
+    "attempt10_modified": false,
+    "reference_runtime_modified": false,
+    "world_modified": false,
+    "release_modified": false,
+    "prism_modified": false
+  },
+  "audit": {
+    "attempt10_log": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-cei-backport-startup-gate-attempt10-artifacts-20260814\\failure-final-server.latest.log",
+      "sha256": "60808EA4EE07BB6E1B8FBEC0502B913F9C6EB2A624108C9EC259C5DE6B3F035D",
+      "exact_error_counts": {
+        "ring": 1,
+        "library": 1,
+        "secret": 1
+      }
+    },
+    "ring_test_table": {
+      "classification": "orphan_test_resource",
+      "official_pack_entry": "overrides/kubejs/data/irons_spellbooks/loot_table/test/ring_gen_break_me.json",
+      "official_pack_sha256": "2B9C39579EA82A3D9C8C1A22029C7379D1BD240A1F4A08ABD70B03374E55617A",
+      "loose_runtime_path": "kubejs/data/irons_spellbooks/loot_table/test/ring_gen_break_me.json",
+      "sha256": "C836FCE6BE894AB5C5004692A4F2215B6FCCAF7EE88848E2F476CC3C0F189636",
+      "bytes": 466,
+      "byte_identical_to_original_iron_jar_entry": true,
+      "already_absent_from_patched_iron_jar": true,
+      "test_markers": [
+        "/loot_table/test/",
+        "ring_gen_break_me",
+        "spell_filter.spells == ['none']"
+      ],
+      "safe_action": "delete exact loose server override only"
+    },
+    "dnt_tables": {
+      "classification": "production_gameplay_loot_tables",
+      "reason": "minecraft:chest tables with real pools, items, weights, and DnT/Nova modifier; not under a test namespace",
+      "attempt10_empty_function_objects": [
+        {
+          "entry": "data/minecraft/loot_table/chests/illager_mansion/library_chest.json",
+          "json_path": "$.pools[2].entries[2].functions[0]"
+        },
+        {
+          "entry": "data/minecraft/loot_table/chests/illager_mansion/secret_room.json",
+          "json_path": "$.pools[1].entries[3].functions[0]"
+        }
+      ],
+      "safe_action": "preserve complete tables and remove only the empty functions property left by the prior transform"
+    }
+  },
+  "reference_scan": {
+    "reference_runtime": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt9-20260814",
+    "equivalence_guards": {
+      "reference_dnt_sha256": "890882EC1239FFF1CD5CC5F1DA1FE4BE98A31E748D418220BEE5F2B9F3D8FD91",
+      "reference_iron_sha256": "BA1F1986CA706AE348CB6FCE6E383AB7CC61C375826CCF0E4D3A88ED2F9FCD3D",
+      "attempt10_dnt_build_source_sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39",
+      "attempt10_iron_assertion_sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB",
+      "official_ring_loose_sha256": "C836FCE6BE894AB5C5004692A4F2215B6FCCAF7EE88848E2F476CC3C0F189636"
+    },
+    "jars_scanned": 236,
+    "jar_entries_scanned": 199339,
+    "jar_payload_bytes_scanned": 1037770826,
+    "regular_files_scanned": 3188,
+    "regular_payload_bytes_scanned": 45356541,
+    "content_hits": {
+      "ring_full_id": [],
+      "ring_path": [],
+      "library_full_id": [],
+      "library_path": [],
+      "secret_full_id": [],
+      "secret_path": []
+    },
+    "scope_note": "Attempt9 installed JAR code/data plus KubeJS, world datapacks, defaultconfigs, and config; Attempt10 source-definition-only deltas cannot hide external content references; generated world region chunks were not parsed"
+  },
+  "build": {
+    "source_dnt": "D:\\Trans\\migration-audit-work\\attempt6-data-resource-fixes-20260814\\jars\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+    "source_dnt_sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39",
+    "untouched_dnt": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt6-20260814\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+    "untouched_dnt_sha256": "890882EC1239FFF1CD5CC5F1DA1FE4BE98A31E748D418220BEE5F2B9F3D8FD91",
+    "changes": [
+      {
+        "entry": "data/minecraft/loot_table/chests/illager_mansion/library_chest.json",
+        "classification": "production_gameplay_loot_table",
+        "action": "remove_empty_functions_property_from_one_book_entry",
+        "old_sha256": "0D198895602C0BEF4493B34B4EF171610C424823D2A9705902443F3BF1BD0F84",
+        "new_sha256": "C79A78344CDC89FE52D3FD4798EE1D28C51CDF2F1BCF7A77DBE19B1F7B1CF586",
+        "semantic_preservation": {
+          "table_type": "minecraft:chest",
+          "pool_count": 3,
+          "target_item": "minecraft:book",
+          "target_weight": 60,
+          "removed_unavailable_enchantment": "nova_structures:illagers_bane",
+          "outer_nova_modifier_preserved": true,
+          "all_other_json_equal_to_original": true
+        }
+      },
+      {
+        "entry": "data/minecraft/loot_table/chests/illager_mansion/secret_room.json",
+        "classification": "production_gameplay_loot_table",
+        "action": "remove_empty_functions_property_from_one_book_entry",
+        "old_sha256": "9EB209AC2CE43EB2D31D4EAE1ECED721B489500BEC6169B234A1D91882A6977A",
+        "new_sha256": "3D7738CF082717448F9A1C97FF3F443AE8D90798EBA2EAAD9E6B4D82700BBD9B",
+        "semantic_preservation": {
+          "table_type": "minecraft:chest",
+          "pool_count": 2,
+          "target_item": "minecraft:book",
+          "target_weight": 30,
+          "removed_unavailable_enchantment": "nova_structures:illagers_bane",
+          "outer_nova_modifier_preserved": true,
+          "all_other_json_equal_to_original": true
+        }
+      }
+    ],
+    "output": {
+      "jar_sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E",
+      "jar_bytes": 945155,
+      "entry_count": 197,
+      "changed_entries": [
+        "data/minecraft/loot_table/chests/illager_mansion/library_chest.json",
+        "data/minecraft/loot_table/chests/illager_mansion/secret_room.json"
+      ],
+      "unchanged_entries": 195,
+      "loot_and_item_modifier_json_parsed": 19,
+      "loot_json_parse_errors": [],
+      "empty_function_objects": [],
+      "zip_crc": "PASS",
+      "duplicate_entries": false,
+      "signed_jar": false
+    },
+    "reproducibility": {
+      "independent_builds": 2,
+      "byte_identical": true,
+      "sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E"
+    }
+  },
+  "integration_plan": {
+    "schema": "attempt10-loot-followup-integration/v1",
+    "target": "fresh Attempt11 server/client cloned from the reviewed Attempt10-equivalent baseline",
+    "never_modify": [
+      "Attempt10/Attempt9 sources",
+      "world",
+      "release",
+      "Prism"
+    ],
+    "operations": [
+      {
+        "side": "server",
+        "action": "replace_file_atomically",
+        "relative_path": "mods/DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "expected_source_sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39",
+        "artifact": "D:\\Trans\\migration-audit-work\\attempt10-loot-followup-fixes-20260814\\jars\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "artifact_sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E",
+        "artifact_bytes": 945155
+      },
+      {
+        "side": "client",
+        "action": "replace_file_atomically",
+        "relative_path": "mods/DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "expected_source_sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39",
+        "artifact": "D:\\Trans\\migration-audit-work\\attempt10-loot-followup-fixes-20260814\\jars\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "artifact_sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E",
+        "artifact_bytes": 945155
+      },
+      {
+        "side": "server",
+        "action": "delete_exact_file",
+        "relative_path": "kubejs/data/irons_spellbooks/loot_table/test/ring_gen_break_me.json",
+        "expected_source_sha256": "C836FCE6BE894AB5C5004692A4F2215B6FCCAF7EE88848E2F476CC3C0F189636",
+        "expected_source_bytes": 466,
+        "classification": "official-pack orphan test override"
+      }
+    ],
+    "assertions": [
+      {
+        "side": "server",
+        "relative_path": "mods/irons_spellbooks-1.21.1-3.15.6.jar",
+        "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB",
+        "jar_entry_must_be_absent": "data/irons_spellbooks/loot_table/test/ring_gen_break_me.json"
+      },
+      {
+        "side": "client",
+        "relative_path": "mods/irons_spellbooks-1.21.1-3.15.6.jar",
+        "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB",
+        "jar_entry_must_be_absent": "data/irons_spellbooks/loot_table/test/ring_gen_break_me.json"
+      },
+      {
+        "side": "client",
+        "relative_path": "kubejs/data/irons_spellbooks/loot_table/test/ring_gen_break_me.json",
+        "must_be_absent": true
+      }
+    ],
+    "postconditions": {
+      "changed_paths": [
+        "server/mods/DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "client/mods/DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "server/kubejs/data/irons_spellbooks/loot_table/test/ring_gen_break_me.json"
+      ],
+      "changed_path_count": 3,
+      "world_changes": 0,
+      "config_changes": 0,
+      "script_changes": 0,
+      "mcmodsync_changes": 0,
+      "dnt_changed_jar_entries": [
+        "data/minecraft/loot_table/chests/illager_mansion/library_chest.json",
+        "data/minecraft/loot_table/chests/illager_mansion/secret_room.json"
+      ],
+      "dnt_other_jar_entries_byte_identical": 195
+    },
+    "mandatory_next_gate": "fresh startup + strict ERROR audit; static validation cannot substitute for Minecraft codec/runtime validation"
+  },
+  "limitations": [
+    "No Java/Minecraft codec or startup test was run by this static task.",
+    "Generated world region chunks were not parsed for dormant loot-table references."
+  ]
+}

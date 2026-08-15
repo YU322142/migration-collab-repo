@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:crimson_planks"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "ultramarine:polished_crimson_plank"
+    }
+  ]
+}

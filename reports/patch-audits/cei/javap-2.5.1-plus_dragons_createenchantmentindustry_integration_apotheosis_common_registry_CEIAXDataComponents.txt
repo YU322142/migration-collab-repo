@@ -1,0 +1,65 @@
+﻿Compiled from "CEIAXDataComponents.java"
+public class plus.dragons.createenchantmentindustry.integration.apotheosis.common.registry.CEIAXDataComponents {
+  public static final net.neoforged.neoforge.registries.DeferredRegister$DataComponents REGISTRAR;
+    descriptor: Lnet/neoforged/neoforge/registries/DeferredRegister$DataComponents;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.core.component.DataComponentType<?>, net.minecraft.core.component.DataComponentType<plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateData>> AFFIX_TEMPLATE;
+    descriptor: Lnet/neoforged/neoforge/registries/DeferredHolder;
+
+  public static final net.neoforged.neoforge.registries.DeferredHolder<net.minecraft.core.component.DataComponentType<?>, net.minecraft.core.component.DataComponentType<plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.OverlimitAffixes>> OVERLIMIT_AFFIXES;
+    descriptor: Lnet/neoforged/neoforge/registries/DeferredHolder;
+
+  public plus.dragons.createenchantmentindustry.integration.apotheosis.common.registry.CEIAXDataComponents();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void register(net.neoforged.bus.api.IEventBus);
+    descriptor: (Lnet/neoforged/bus/api/IEventBus;)V
+    Code:
+       0: getstatic     #7                  // Field REGISTRAR:Lnet/neoforged/neoforge/registries/DeferredRegister$DataComponents;
+       3: aload_0
+       4: invokevirtual #13                 // Method net/neoforged/neoforge/registries/DeferredRegister$DataComponents.register:(Lnet/neoforged/bus/api/IEventBus;)V
+       7: return
+
+  private static net.minecraft.core.component.DataComponentType$Builder lambda$static$1(net.minecraft.core.component.DataComponentType$Builder);
+    descriptor: (Lnet/minecraft/core/component/DataComponentType$Builder;)Lnet/minecraft/core/component/DataComponentType$Builder;
+    Code:
+       0: aload_0
+       1: getstatic     #19                 // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/OverlimitAffixes.CODEC:Lcom/mojang/serialization/Codec;
+       4: invokevirtual #25                 // Method net/minecraft/core/component/DataComponentType$Builder.persistent:(Lcom/mojang/serialization/Codec;)Lnet/minecraft/core/component/DataComponentType$Builder;
+       7: getstatic     #31                 // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/OverlimitAffixes.STREAM_CODEC:Lnet/minecraft/network/codec/StreamCodec;
+      10: invokevirtual #35                 // Method net/minecraft/core/component/DataComponentType$Builder.networkSynchronized:(Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/core/component/DataComponentType$Builder;
+      13: areturn
+
+  private static net.minecraft.core.component.DataComponentType$Builder lambda$static$0(net.minecraft.core.component.DataComponentType$Builder);
+    descriptor: (Lnet/minecraft/core/component/DataComponentType$Builder;)Lnet/minecraft/core/component/DataComponentType$Builder;
+    Code:
+       0: aload_0
+       1: getstatic     #39                 // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateData.CODEC:Lcom/mojang/serialization/Codec;
+       4: invokevirtual #25                 // Method net/minecraft/core/component/DataComponentType$Builder.persistent:(Lcom/mojang/serialization/Codec;)Lnet/minecraft/core/component/DataComponentType$Builder;
+       7: getstatic     #42                 // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateData.STREAM_CODEC:Lnet/minecraft/network/codec/StreamCodec;
+      10: invokevirtual #35                 // Method net/minecraft/core/component/DataComponentType$Builder.networkSynchronized:(Lnet/minecraft/network/codec/StreamCodec;)Lnet/minecraft/core/component/DataComponentType$Builder;
+      13: areturn
+
+  static {};
+    descriptor: ()V
+    Code:
+       0: getstatic     #43                 // Field net/minecraft/core/registries/Registries.DATA_COMPONENT_TYPE:Lnet/minecraft/resources/ResourceKey;
+       3: ldc           #51                 // String create_enchantment_industry
+       5: invokestatic  #53                 // Method net/neoforged/neoforge/registries/DeferredRegister.createDataComponents:(Lnet/minecraft/resources/ResourceKey;Ljava/lang/String;)Lnet/neoforged/neoforge/registries/DeferredRegister$DataComponents;
+       8: putstatic     #7                  // Field REGISTRAR:Lnet/neoforged/neoforge/registries/DeferredRegister$DataComponents;
+      11: getstatic     #7                  // Field REGISTRAR:Lnet/neoforged/neoforge/registries/DeferredRegister$DataComponents;
+      14: ldc           #59                 // String affix_template
+      16: invokedynamic #61,  0             // InvokeDynamic #0:apply:()Ljava/util/function/UnaryOperator;
+      21: invokevirtual #65                 // Method net/neoforged/neoforge/registries/DeferredRegister$DataComponents.registerComponentType:(Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/neoforged/neoforge/registries/DeferredHolder;
+      24: putstatic     #69                 // Field AFFIX_TEMPLATE:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      27: getstatic     #7                  // Field REGISTRAR:Lnet/neoforged/neoforge/registries/DeferredRegister$DataComponents;
+      30: ldc           #73                 // String overlimit_affixes
+      32: invokedynamic #75,  0             // InvokeDynamic #1:apply:()Ljava/util/function/UnaryOperator;
+      37: invokevirtual #65                 // Method net/neoforged/neoforge/registries/DeferredRegister$DataComponents.registerComponentType:(Ljava/lang/String;Ljava/util/function/UnaryOperator;)Lnet/neoforged/neoforge/registries/DeferredHolder;
+      40: putstatic     #76                 // Field OVERLIMIT_AFFIXES:Lnet/neoforged/neoforge/registries/DeferredHolder;
+      43: return
+}

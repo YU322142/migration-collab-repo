@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "ultramarine:gilded_dark_oak"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:gilded_dark_oak_pillar_head_variant_4"
+    }
+  ]
+}

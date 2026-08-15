@@ -1,0 +1,25 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "c:crops/carrot"
+    },
+    {
+      "tag": "c:crops/nether_wart"
+    },
+    {
+      "tag": "c:sugar"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 250,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "results": [
+    {
+    "count": 1,
+    "id": "umapyoi:small_energy_drink"
+  }
+  ]
+}

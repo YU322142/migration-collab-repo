@@ -1,0 +1,21 @@
+{
+    "type":  "create:cutting",
+    "processing_time":  20,
+    "results":  [
+                    {
+                        "count":  2,
+                        "id":  "kaleidoscope_cookery:raw_lamb_chops"
+                    }
+                ],
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:mutton"
+                        }
+                    ],
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "create"
+                                }
+                            ]
+}

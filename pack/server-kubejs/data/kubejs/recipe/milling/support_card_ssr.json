@@ -1,0 +1,19 @@
+{
+  "type": "create:milling",
+  "ingredients": [
+    {
+        "type": "neoforge:components",
+        "items": "umapyoi:support_card",
+        "components": {
+          "rarity": "epic"
+        },
+        "strict": false
+    }
+  ],
+  "processing_time": 400,
+  "results": [
+    {
+      "id": "umapyoi:horseshoe_rainbow"
+    }
+  ]
+}

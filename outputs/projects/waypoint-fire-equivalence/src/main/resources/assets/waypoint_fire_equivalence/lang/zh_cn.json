@@ -1,0 +1,12 @@
+{
+  "attribute.name.waypoint_receive_range": "路径点接收范围",
+  "attribute.name.waypoint_transmit_range": "路径点发送范围",
+  "commands.waypoint.invalid": "所选实体不能作为路径点",
+  "commands.waypoint.list.empty": "当前维度没有活动路径点",
+  "commands.waypoint.modify.color": "已更新路径点颜色",
+  "commands.waypoint.modify.color.reset": "已重置路径点颜色",
+  "commands.waypoint.modify.style": "已更新路径点样式",
+  "argument.hexcolor.invalid": "无效的十六进制颜色：%s",
+  "gamerule.minecraft:fire_spread_radius_around_player": "玩家周围火焰蔓延半径",
+  "gamerule.minecraft:locator_bar": "显示定位栏"
+}

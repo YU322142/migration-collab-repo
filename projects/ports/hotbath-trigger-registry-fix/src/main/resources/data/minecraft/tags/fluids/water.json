@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "hotbath:herbal_bath_fluid",
+    "hotbath:herbal_bath_flowing",
+    "hotbath:honey_bath_fluid",
+    "hotbath:honey_bath_flowing",
+    "hotbath:hot_water_flowing",
+    "hotbath:hot_water_fluid",
+    "hotbath:milk_bath_fluid",
+    "hotbath:milk_bath_flowing",
+    "hotbath:peony_bath_fluid",
+    "hotbath:peony_bath_flowing",
+    "hotbath:rose_bath_fluid",
+    "hotbath:rose_bath_flowing"
+  ]
+}

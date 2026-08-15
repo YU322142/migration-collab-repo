@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Iestatīta dzimšanas vieta uz %s, %s, %s [%s, %s] atrodoties %s priekš %s",
+  "commands.spawnpoint.success.multiple.new": "Iestatīta dzimšanas vieta uz %s, %s, %s [%s, %s] atrodoties %s priekš %s spēlētājiem"
+}

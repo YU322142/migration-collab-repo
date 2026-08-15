@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "status": "FIXED_STATIC_AND_SIMULATED_PASS",
+  "date": "2026-08-14",
+  "scope": "attempt5 private desktop client launcher only",
+  "root_cause": {
+    "phase": "launcher_preflight_before_java",
+    "selected_non_native_libraries": 93,
+    "missing_non_native_libraries": 0,
+    "selected_windows_native_artifacts": 24,
+    "present_windows_native_artifacts": 0,
+    "missing_windows_native_artifacts": 24,
+    "first_missing": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-20260813\\libraries\\org\\lwjgl\\lwjgl-freetype\\3.3.3\\lwjgl-freetype-3.3.3-natives-windows.jar",
+    "launcher_pid": 21984,
+    "java_pid": null,
+    "pre_fix_launcher_sha256": "A7996B3B8E7AB5F71AB1AF7DB373465EBEA96203FF67FAE5BCD0070CC27F5F89"
+  },
+  "reusable_native_source": {
+    "versions_target": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\1.21.11\\minecraft\\versions",
+    "native_directory": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\1.21.11\\minecraft\\natives",
+    "files": 66,
+    "bytes": 16505767,
+    "required_x64_files": 8,
+    "missing_required_x64_files": 0,
+    "manifest_sha256": "55559F16F0C2A8D199C1F736500BCFEEB067667CAA59D8A6A379DE20597B1BAF"
+  },
+  "patch": {
+    "launcher": {
+      "path": "<WORKSPACE>\\outputs\\tools\\launch_neoforge_client_isolated.ps1",
+      "bytes": 10613,
+      "sha256": "CD8BAEC99762F6260B43CA1E7C92E47AE19BC2583FAA7BE9865D2CEA06154914"
+    },
+    "private_helper": {
+      "changed": false,
+      "path": "<WORKSPACE>\\outputs\\tools\\run_private_desktop_client_session.ps1",
+      "bytes": 14764,
+      "sha256": "FB819479F7143C53B2E690568CE85CC5E31F47F5EE9C3C6ACB561C111AF195F9"
+    },
+    "test": {
+      "path": "<WORKSPACE>\\outputs\\tools\\test_launch_neoforge_client_isolated_native_fallback.ps1",
+      "bytes": 8197,
+      "sha256": "8EE4AE85D04E6FAB9C2314D599C2F7B5A493E41EABC873EC3E6CB7619277C303"
+    }
+  },
+  "contracts": {
+    "ordinary_library_missing_fails_closed": true,
+    "all_native_artifacts_present_uses_original_extraction": true,
+    "partial_native_artifacts_fail_closed": true,
+    "all_native_artifacts_missing_requires_single_versions_junction": true,
+    "fallback_restricted_to_versions_sibling": true,
+    "fallback_requires_eight_x64_lwjgl_files": true
+  },
+  "tests": {
+    "launcher_ast_parse": "PASS",
+    "test_ast_parse": "PASS",
+    "synthetic_fallback": "PASS",
+    "incomplete_reusable_native_rejected": "PASS",
+    "partial_native_artifacts_rejected": "PASS",
+    "actual_matched_client_stub_probe": {
+      "status": "PASS",
+      "fake_pid": 424242,
+      "native_source": "versions_sibling",
+      "client_top_level_unchanged": true,
+      "client_native_files_before": 0,
+      "client_native_files_after": 0,
+      "process_created": false,
+      "result": {
+        "path": "D:\\Trans\\migration-audit-work\\private-launcher-fix-audit-20260814\\matched-client-stub-launch-result.json",
+        "bytes": 723,
+        "sha256": "330A075D2E0ED96EC0AFAC9B30CF1F32202A6110702C8659100CB30D8A017297"
+      }
+    },
+    "candidate8_join_unit_tests": "32/32 PASS",
+    "candidate14_release_unit_tests": "18/18 PASS",
+    "mechanomania_startup_gate_unit_tests": "14/14 PASS",
+    "java_process_inventory_after": 0
+  },
+  "evidence": {
+    "attempt5_report": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-cei-backport-startup-gate-attempt5-20260814.json",
+      "bytes": 7319,
+      "sha256": "C6DBAE8BE745874C70E87113F45D0D6C21F3ED52EE537BB7016D5635152E0333"
+    },
+    "attempt5_client_state": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-cei-backport-startup-gate-attempt5-artifacts-20260814\\client-round1.state.json",
+      "bytes": 400,
+      "sha256": "24CE1026F1112D6F49CA3DB269D28EE916FF82FCC0ABB5FB76B02D929DDFA8F9"
+    }
+  },
+  "safety": {
+    "minecraft_started": false,
+    "java_started": false,
+    "runtime_modified": false,
+    "matched_client_modified": false,
+    "prism_instance_modified": false,
+    "production_configuration_modified": false,
+    "production_ports_modified": false
+  }
+}

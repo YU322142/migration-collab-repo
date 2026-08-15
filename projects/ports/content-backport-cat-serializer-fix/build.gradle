@@ -1,0 +1,70 @@
+plugins {
+    id 'java'
+}
+
+group = 'dev.codex.migration'
+version = '1.5-cat-serializer-fix.1'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.ow2.asm:asm:9.7.1'
+    implementation 'org.ow2.asm:asm-analysis:9.7.1'
+    implementation 'org.ow2.asm:asm-tree:9.7.1'
+
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 21
+}
+
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
+    systemProperty 'backport.inputJar', providers.gradleProperty('inputJar')
+        .orElse('D:/Trans/migration-audit-work/mod-candidates/backport-1.5.jar').get()
+}
+
+def inputJar = providers.gradleProperty('inputJar')
+    .orElse('D:/Trans/migration-audit-work/mod-candidates/backport-1.5.jar')
+def fixedJar = layout.buildDirectory.file('libs/backport-1.5-cat-serializer-fix.1.jar')
+
+tasks.register('patchBackportJar', JavaExec) {
+    group = 'build'
+    description = 'Builds the deterministic fixed Content Backport replacement JAR.'
+    dependsOn classes
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'dev.codex.backportfix.BackportJarPatcher'
+    args inputJar.get(), fixedJar.get().asFile.absolutePath
+    inputs.file(inputJar)
+    outputs.file(fixedJar)
+}
+
+tasks.register('verifyPatchedJar', JavaExec) {
+    group = 'verification'
+    description = 'Verifies the fixed JAR bytecode and unchanged-entry contract.'
+    dependsOn patchBackportJar
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'dev.codex.backportfix.BackportJarVerifier'
+    args inputJar.get(), fixedJar.get().asFile.absolutePath
+}
+
+tasks.named('check') {
+    dependsOn patchBackportJar
+    dependsOn verifyPatchedJar
+}
+
+tasks.named('jar') {
+    enabled = false
+}

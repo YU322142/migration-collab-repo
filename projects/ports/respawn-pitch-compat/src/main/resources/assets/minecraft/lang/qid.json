@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Titik bangkit oentoek %7$s disetel dikoördinat %1$s, %%s, %3$s [%4$s, %5$s] dalam %6$s",
+  "commands.spawnpoint.success.multiple.new": "Titik bangkit oentoek %7$s pemaïn disetel dikoördinat %1$s, %%s, %3$s [%4$s, %5$s] dalam %6$s"
+}

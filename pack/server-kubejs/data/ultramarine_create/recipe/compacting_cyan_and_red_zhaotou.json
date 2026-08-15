@@ -1,0 +1,30 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "c:dyes/cyan"
+    },
+    {
+      "tag": "c:dyes/red"
+    },
+    {
+      "tag": "c:dyes/cyan"
+    },
+    {
+      "item": "ultramarine:zhaotou_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:cyan_and_red_zhaotou"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:zhaotou_template"
+    }
+  ]
+}

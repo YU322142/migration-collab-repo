@@ -1,0 +1,17 @@
+{
+  "replace": true,
+  "values": [
+    {
+      "id": "farmersdelight:dumplings",
+      "required": false
+    },
+    {
+      "id": "kaleidoscope_cookery:baozi",
+      "required": false
+    },
+    {
+      "id": "youkaishomecoming:bun",
+      "required": false
+    }
+  ]
+}

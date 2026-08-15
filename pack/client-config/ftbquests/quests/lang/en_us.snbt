@@ -1,0 +1,970 @@
+{
+	chapter.022F1E7B0C05C13B.title: "Cataclysm(@L_Ender 's Cataclysm)"
+	chapter.05D37BDE6DDB3CF4.title: "“Hostility” Descends(@L2Hostility)"
+	chapter.07793F365C646741.title: "Strange Biome of “The End”(End Warped Forest)"
+	chapter.07D198D3DDD33F05.title: "UmaMusume(@Umapyoi)"
+	chapter.0BE61D98EC2E6FEF.title: "Storage and Organization(@Create:Storage)"
+	chapter.1505E388615EF814.title: "Alloy Smelter(@Alloy Smelter)"
+	chapter.1B463ED58F5BC382.title: "Jewelry\\&Accessories(@Iron's Gems 'n Jewelry)"
+	chapter.2712B84FC95D24A9.title: "Mechanomania"
+	chapter.273D877EDE86BEE7.title: "Ender islands"
+	chapter.30CF816281C9CC36.title: "Touhou Little Maid"
+	chapter.3C805D6AA3D59793.title: "End Ice Spikes"
+	chapter.4350B63C95F47CFF.title: "End Flower Forest"
+	chapter.4B14987D9F164B1A.title: "Farmer's Delight"
+	chapter.610239010B9C08DD.title: "Abyssal Carnival"
+	chapter.640A5F4C7DC06EDE.title: "Andesite Era(@Create)"
+	chapter.700A1A40AA9B1D69.title: "Lifestyle gadgets"
+	chapter.7519FE5CE0D0A541.title: "End Deep Dark"
+	chapter.771ACE65A798117A.title: "CuZn Revolution(@Create)"
+	chapter_group.08701E4938C3D337.title: "Other Mods"
+	chapter_group.2195A9D3E7D1D788.title: "Overworld - Slow Life"
+	chapter_group.6B9D1AFD3E45FF4E.title: "The End - Combat and Adventure"
+	quest.000EAE75E8F04497.quest_desc: [
+		"When using, you first need to place &6{item.exposure.developed_black_and_white_film}&r or &6{item.exposure.developed_color_film}&r in the left slot. These allow you to print black-and-white photos or color photos respectively."
+		""
+		"Clicking the left/right positions lets you select the previous/next negative. Clicking the current negative or scrolling upward with the mouse wheel allows you to zoom in and view that negative in detail."
+		""
+		"After inserting &6{item.minecraft.paper}&r and dyes, click the print button to start the printing process. At this time, the red indicator light on the texture of &6{block.exposure.lightroom}&r will light up. Printing a black-and-white photo consumes one &6{item.minecraft.paper}&r and one 'minecraft:black_dye'; printing a color photo consumes one &6{item.minecraft.paper}&r and one of each of the four dyes, and also takes more time."
+	]
+	quest.000EAE75E8F04497.quest_subtitle: "Print out your photos!"
+	quest.023C81F541EAFB0D.quest_desc: [
+		"Congratulations on slaying the servant of {dimension.minecraft.the_end} - &d{entity.minecraft.ender_dragon}&r"
+		"Now, stronger monsters await you on the outer islands of {dimension.minecraft.the_end}"
+	]
+	quest.02C7A69D089135C3.title: "Transmission Device"
+	quest.05254E5479383C89.title: "Power Source"
+	quest.053B7489051084E1.quest_desc: [
+		"Standing in the fluid of &6{item.hotbath.rose_bath_bucket}&r will restore health at a rate of 0.25 per second,"
+		"After standing in the fluid of &6{item.hotbath.rose_bath_bucket}&r for 15 seconds, all negative status effects will be removed."
+		"After standing in the fluid of &6{item.hotbath.rose_bath_bucket}&r for 15 seconds, you will gain Level 1 &6{effect.minecraft.strength}&r effect, lasting for 20 seconds."
+	]
+	quest.06486C7C061D349B.quest_desc: [
+		"After defeating &d{entity.minecraft.ender_dragon}&r, the &5{block.minecraft.end_gateway}&r will generate"
+		"It will teleport the player to a &drandom location&r on the outer islands"
+		"The outer islands of {dimension.minecraft.the_end} produce valuable items:"
+		"- &6{item.minecraft.potion.effect.apothic_attributes.flying}&r"
+		"- &6{block.minecraft.netherite_block}&r"
+		"- &2{item.kubejs.chlorophyte_ingot}&r"
+		"- &2{item.umapyoi.jewel}"
+		""
+		"However"
+		"Since it is difficult for players to return to their last death location"
+		"Dropped items are almost permanently lost."
+		""
+		"&o&5{block.minecraft.end_gateway}&r has a 5-minute cooldown. Entering during cooldown will not refresh the exit location but will reset the cooldown, making team exploration easier&r"
+		"&oThere is no player-to-player damage between the {dimension.minecraft.the_nether} and {dimension.minecraft.the_end}&r"
+	]
+	quest.06486C7C061D349B.title: "Outer Islands"
+	quest.068BF44B149A3415.quest_desc: ["The Nether version of &c{block.farmersdelight.organic_compost}&r. Can only be transformed into &c{block.mynethersdelight.resurgent_soil}&r within the Nether."]
+	quest.0878F69BAFB5F301.quest_desc: [
+		"Reward: Permanent [&6{effect.kaleidoscope_cookery.vigor}&r] BUFF: "
+		"  Sprinting does not consume saturation"
+		""
+		"&oYou can view all collectible items and rewards in the achievement “&c{advancement.c6c.root}&r”"
+	]
+	quest.0878F69BAFB5F301.quest_subtitle: "Collect all types of &6{model.geckolib.zhiban.name}&r maids"
+	quest.0BDB2241B517EC3E.quest_desc: [
+		"放置墨水，墨水的品质决定卷轴的品质。"
+		""
+		"放置纸，书写一张卷轴需要消耗一张纸。"
+		""
+		"放置材料，材料决定法术学派。"
+		""
+		"放置材料后，会显示出可撰写的法术。部分法术可能会显示问号图样，尝试使用更高等级的墨水来撰写。"
+		""
+		"撰写完毕的卷轴位于此处。注意，只有鼠标左键将其拿出才会消耗原材料。"
+		""
+		"可撰写法术卷轴"
+		"法术卷轴也可以从战利品箱中获得或击杀死者之王"
+		"也可以与流浪商人/火焰术士/药剂师交易获得"
+	]
+	quest.0C04B0D91BB46687.quest_desc: [""]
+	quest.0C04B0D91BB46687.quest_subtitle: "Place it in the {curios.identifier.uma_suit} slot"
+	quest.0C04B0D91BB46687.title: "Dress your {UmaMusu} in new clothes"
+	quest.0D10CBCC2332A0A0.quest_desc: ["&e&lAutomated logistics assistant&r&r across long distances within the same dimension"]
+	quest.0D70527CD0560FA3.quest_desc: [
+		"{dimension.minecraft.the_end} outer islands will spawn monsters with &dhostility&r"
+		"&lAs players kill more monsters&r"
+		"The monsters’ attributes will become stronger"
+		"They will gradually begin to gain {trait}"
+		"For example:"
+		"- &d{trait.l2hostility.blindness}&r"
+		"- &d{trait.l2hostility.levitation}&r"
+		""
+		"                    --> Next Page"
+		"{@pagebreak}"
+		"You can always check the current difficulty level on the difficulty page above your inventory"
+		"Be careful not to let the difficulty exceed your capability too much!"
+		"Before your life is in danger, find a portal to evacuate the {dimension.minecraft.the_end} outer islands"
+		"When you re-enter the {dimension.minecraft.the_end} outer islands next time"
+		"Monster strength will automatically readjust"
+		""
+		"If the player dies"
+		"Monster strength will be reset"
+		""
+		"&o&lCannot use &5{item.c6c.recall_potion}&r in &c{dimension.minecraft.the_end}&r "
+	]
+	quest.0E0AA6FDAB840DA8.title: "{container.fxntstorage.simple_storage_box_title}upgrade"
+	quest.0E98873F2A744F77.title: "Your First Machine"
+	quest.0EAED4471D8CE8AC.quest_desc: [
+		"Shift + Right-click &6{item.exposure.camera}&r to open the internal GUI of &6{item.exposure.camera}&r and install the required components, including &6{film}&r, Flash, Lens, and filters. You can also directly right-click &6{item.exposure.camera}&r with the corresponding item to install or replace components."
+		"(If &6{item.exposure.camera}&r is placed on a tripod, please stand a bit farther away before Shift + Right-click to avoid triggering &6{carryon}&r pickup.)"
+		""
+		"&6{film}&r: Various undeveloped &6{film}&r"
+		"Flash: &6{block.minecraft.redstone_lamp}&r"
+		"Lens: &6{item.minecraft.spyglass}&r"
+		"Filter: Various stained glass panes / &6{item.exposure.interplanar_projector}&r"
+	]
+	quest.0EAED4471D8CE8AC.quest_subtitle: "Capture beautiful moments"
+	quest.0EC90EBB03243D94.quest_desc: [
+		"&6{block.torchmaster.feral_flare_lantern}&r will detect the light level of each block within a 16-block radius sphere. If a block’s light level is less than 7, &6{block.torchmaster.feral_flare_lantern}&r will attempt to place an invisible light source with a brightness of 11 nearby."
+		""
+		"To achieve maximum efficiency, the ideal lighting method is to place one &6{block.torchmaster.feral_flare_lantern}&r approximately every 30 blocks."
+	]
+	quest.0F5E82B5594F0725.quest_desc: ["Prevents players from taking fall damage while carrying a backpack."]
+	quest.114E23CD35C37E9B.quest_desc: ["Consuming {item.umapyoi.sweet_cupcake} increases Motivation Level by 2 and restores 7 hunger points and 9 saturation."]
+	quest.1169390015BB59F9.title: "Engineer Essentials"
+	quest.1171B51ED997D998.quest_desc: [
+		"Reward: Permanent “&a{effect.minecraft.luck}&r” BUFF"
+		""
+		"You can press [&bL&r] in the game interface to open the achievements page"
+		""
+		"Find “&c{advancement.c6c.root}&r” to check the current maid collection progress"
+	]
+	quest.1171B51ED997D998.quest_subtitle: "Collect your first maid"
+	quest.121E38D67771FEB0.quest_desc: [
+		"You can customize your Golem."
+		"And equip them with suitable gear."
+	]
+	quest.121E38D67771FEB0.title: "Golem Assembly"
+	quest.12B2B927FFFFD3F1.quest_desc: [
+		"自然生成于结构远古战场,炽焰术士塔中也会生成"
+		""
+		"需要钻石镐或以上挖掘等级来破坏，如果挖掘等级不足不会掉落物品并且生成远古骑士。"
+		""
+		"破坏后掉落大量铁粒，金粒，0-1个灰烬源质，低概率掉落一个下界合金碎片；"
+		""
+		"破坏后原地生成敌对生物远古骑士。"
+	]
+	quest.12B2B927FFFFD3F1.title: "散落的盔甲"
+	quest.136C3B3FEB2ED0CC.quest_desc: [
+		"&4Note:&r"
+		"If you have installed the {YSM mod}, it &dmay cause the inventory to not display player armor&r"
+		""
+		"Solution: "
+		"* Disable the display of {item.umapyoi.uma_soul} in the trinket slot"
+		""
+		"Or"
+		""
+		"* Press Alt+Y to open the YSM page"
+		"At the wrench icon in the top right, select “{Prevents rendering of self player's model}”"
+	]
+	quest.136C3B3FEB2ED0CC.title: "YSM"
+	quest.13B1E27BAA44F3B8.quest_desc: [
+		"Because the mob spawn limit in the Overworld is low, the conditions for building a mob farm are not met. Players can build their own mob spawners, which can directly spawn monster loot into chests with low lag."
+		"Similar to normal mob farms, different biomes will spawn different mobs (&a The types of mobs spawned are the same as in the original game&r)"
+		""
+		"input &d{block.create_mechanical_spawner.spawn_fluid_random}&r to start spawning monsters"
+		""
+		"&a&lNext Page&r&r"
+		"{@pagebreak}"
+		""
+		"&l Mobs Spawning Reference&r"
+		"Stray: frozen ocean, deep frozen ocean, snowy tundra, snowy taiga, snowy slopes"
+		"Husk: Desert"
+		"Magma cube: Nether Wastes, Basalt Deltas"
+	]
+	quest.14C82B046FCA091C.title: "Chunk Loading"
+	quest.1534B59AA6AB4BD9.title: "Non-standard Transmission Device"
+	quest.1566785ABC7FC6BC.quest_subtitle: "Multiblock Structure Packager"
+	quest.1637D39489C22EB9.title: "{item.structurecompass.structure_compass}"
+	quest.17E8B04D5E517FFD.quest_desc: [
+		"Standing in the fluid of &6{item.hotbath.herbal_bath_bucket}&r will restore health at a rate of 0.25 every 2 seconds."
+		"After standing in the fluid of &6{item.hotbath.herbal_bath_bucket}&r for 15 seconds, all negative status effects will be removed."
+		"After standing in the fluid of &6{item.hotbath.herbal_bath_bucket}&r for 5 seconds, you will gain Level 1 &6{effect.minecraft.resistance}&r effect, lasting for 10 seconds."
+		"Undead creatures standing in the fluid of &6{item.hotbath.herbal_bath_bucket}&r will lose health at a rate of 0.5 per second."
+	]
+	quest.18DE4FF6E70319A5.quest_desc: [
+		"In the inventory, when the mouse hovers over any item"
+		"key R (Recipes): Display item recipes"
+		"key U (Uses): Displays the item's purpose."
+		"key A: Save an item so you can view the recipe later."
+	]
+	quest.18DE4FF6E70319A5.title: "Check item recipes"
+	quest.1A84011D71AF4A87.quest_desc: [
+		"Once you possess &e{item.umapyoi.crystal_gold}&r"
+		"You can craft &e{block.umapyoi.uma_pedestal}&r"
+		""
+		"You can only with it summon SSR {UmaMusu} and SSR {Support Card}"
+	]
+	quest.1B12A06587207CCB.quest_desc: ["Refill your main hand item or off-hand item (if any) from your inventory."]
+	quest.1B7A31081B34C2D0.quest_desc: [
+		"Once you possess &d{item.umapyoi.skill_book}&r, you can &aTrain&r {UmaMusu} at the {block.umapyoi.skill_learning_table}"
+		""
+		"After &aTraining&r, the attributes of {UmaMusu} will be greatly enhanced!"
+		""
+		"{item.umapyoi.skill_book} can be found in chests within {dimension.minecraft.the_end}"
+	]
+	quest.1BBF920628E5D7D8.quest_desc: [
+		"Craft a &6{block.kaleidoscope_doll.doll_machine}&r to pull for a maid"
+		""
+		"Each draw has a 100% chance to obtain a doll,"
+		"and a 12% chance to obtain a &6{item.touhou_little_maid.smart_slab}&r containing a maid"
+	]
+	quest.1E997C93EDDBD107.quest_desc: [
+		"You have obtained &a{item.kubejs.chlorophyte_ingot}&r"
+		"It can be used to craft the following ingots"
+		""
+		"Those ingots can be used to craft {l2complements.title} equipment. All of this equipment has powerful effects or set bonuses"
+		""
+		"&d&lThere are also two other ways to obtain {l2complements.title} equipment:&r&r"
+		"* Directly upgrade &bDiamond·Netherite&r equipment"
+		"* Use &e{item.irons_spellbooks.timeless_slurry}&r to upgrade Netherite equipment"
+	]
+	quest.1F18639774CCF28E.quest_desc: [
+		"Use &d{item.umapyoi.blank_ticket}&r on the {block.umapyoi.silver_uma_pedestal} (note: your off-hand must be empty)"
+		"You will then obtain &e{item.umapyoi.blank_uma_soul}&r"
+		""
+		"Next, place &e{item.umapyoi.blank_uma_soul}&r into the &b{block.umapyoi.three_goddess}&r to receive &b{item.umapyoi.uma_soul}&r"
+		""
+		"Equip &b{item.umapyoi.uma_soul}&r in your trinket slot to gain &6attribute boosts&r!"
+	]
+	quest.1F829C67174A4944.quest_desc: [""]
+	quest.20C36E1FC5B0C4EF.title: "Next, you can build an elevator to decorate your house"
+	quest.2105773288B818A7.title: "Advanced Logistics"
+	quest.21A14597E092B4EC.title: "Train Transport Package"
+	quest.225EE2F819DD7B94.quest_desc: ["Upon consumption, restores 2 hunger points and 2.4 saturation, while also recovering stamina equal to a percentage of the maximum stamina."]
+	quest.23C25A1C2A64D98A.quest_desc: [
+		"First, use the {block.minecraft.dragon_head} dropped by &d{entity.minecraft.ender_dragon}&r to craft a &b{block.alloy_smelter.forge_controller_tier3}"
+		"It can increase your ore yield, and more importantly, it can smelt and digest various products from the {dimension.minecraft.the_end} outer islands"
+	]
+	quest.245F475CE17B31BE.title: "Building Assistant"
+	quest.2513F6677A477C78.quest_desc: [
+		"要塞会直接生成在坐标0，0处地下。并且自动开启末地传送门。"
+		""
+		"你可以直接前往末地开始冒险。"
+		""
+		"由于末地难度极高，建议组队前往"
+	]
+	quest.253789D53CF7F585.quest_desc: [
+		"Located within the &5End&r at the &d&lRuined Citadel&r&r"
+		"Structure ID: cataclysm:ruined_citadel"
+	]
+	quest.253789D53CF7F585.quest_subtitle: "Difficulty100"
+	quest.254B565D5CB0CD9D.quest_desc: [
+		"Different ores are densely distributed in different biomes."
+		"For example, plains may contain a large number of iron ore veins, while windswept hills may contain a large number of &c{block.kubejs.compressed_tuff}&r veins."
+		"Some ore veins require &bCoolant&r, which can only be mined in cold biomes."
+		"&cCopper &rand &czinc &rcan be obtained by crushing &c{block.kubejs.compressed_tuff}&r."
+		""
+		"Almost any ore can be mined."
+		"&dSearch &a@ore&r on JEI to get all mineral vein information.&r"
+	]
+	quest.2765F1D3D9529A27.quest_desc: ["Standing in the hot spring bath for 15 seconds grants a Level 1 &6{effect.minecraft.speed}&r effect for 20 seconds."]
+	quest.2813FF8C41AFEF22.quest_desc: ["You can find a large number of &5{block.irons_spellbooks.brazier_soul}&r here"]
+	quest.2813FF8C41AFEF22.title: "Serene Ice Garden"
+	quest.295B71FE3F4848D6.quest_desc: [
+		"Reward: Permanent [&a{effect.farmersdelight.nourishment}&r] BUFF: "
+		"  When not taking damage, &d&lno hunger or saturation will be consumed&r&r"
+		""
+		""
+		"&oYou can view all collectible items and rewards in the achievement “&c{advancement.c6c.root}&r”"
+	]
+	quest.295B71FE3F4848D6.quest_subtitle: "Collect all types of &6{Wine Fox}&r maids"
+	quest.29641835AFA986E4.quest_desc: [
+		"Extremely high durability, not easily damaged."
+		""
+		"At most 1 point of durability loss at a time."
+		""
+		"When the player is invisible, the armor also becomes invisible."
+		""
+		"{@pagebreak}"
+		"When the player is invisible, tools also become invisible."
+		""
+		"Attack range and mining range +1"
+	]
+	quest.29641835AFA986E4.quest_subtitle: "Armor and Tools"
+	quest.298F765A538085EE.quest_desc: ["Consuming {item.umapyoi.royal_bitter} fully restores stamina, and recovers 2 hunger points and 3 saturation, but decreases Motivation Level by 1."]
+	quest.2B4E14697A217391.quest_desc: [
+		"Reward: Permanent [&aReach Distance +1&r]"
+		""
+		"&oYou can view all collectible items and rewards in the achievement “&c{advancement.c6c.root}&r”"
+	]
+	quest.2B4E14697A217391.quest_subtitle: "Collect 5 maids"
+	quest.2B88D9C4FF3F9C1E.quest_desc: [
+		"Craft a &6{block.irons_jewelry.jewelcrafting_station}&r"
+		"You can use it to create various accessories, enhancing your &6attributes&r"
+	]
+	quest.2CC6203A4CCE5D19.quest_desc: [
+		"The maid can be cute, cook, and even crank a hand crank. Depending on the level of affection, she can provide any amount of &c{create.display_source.kinetic_stress.current}&r between 4096 and 65536."
+		""
+		"The maid also features a collection element, and &crewards players with powerful buffs such as increased player stats and never getting hungry&r. Please refer to the “Touhou Little Maid” chapter in the quest book."
+	]
+	quest.2CCE21B461C8DF85.quest_desc: [
+		"Similar to a magnet upgrade, but with a relatively limited range;"
+		"Items picked up by players will be stored in the backpack instead of the inventory itself."
+	]
+	quest.2DACA9D43F90D423.quest_desc: [
+		"Items from {itemGroup.umapyoi} are one of the most important outputs of &c{dimension.minecraft.the_end}&r"
+		""
+		"A trained {item.umapyoi.uma_soul} can &c greatly enhance your attributes&r"
+		"Please refer to the {itemGroup.umapyoi} chapter in other mods"
+		""
+		"Be careful not to lose &e{book.umapyoi.trainers_manual.title}&r, as it can be crafted into a &d{item.umapyoi.blank_ticket}&r"
+	]
+	quest.2F179AA3C20F87C6.quest_desc: [
+		"When water or lava reaches 10,000 blocks, &6{block.create.hose_pulley}&r will treat it as infinite fluid, allowing unlimited extraction"
+		""
+		"When placing fluid, &6{block.create.hose_pulley}&r must be above the target fluid surface."
+		"When extracting fluid, &6{block.create.hose_pulley}&r must be at the bottom of the target fluid."
+	]
+	quest.315C4FF982B23FBE.quest_desc: ["Place &7{block.umapyoi.silver_uma_pedestal}&r and &b{block.umapyoi.three_goddess}&r into the world"]
+	quest.324AB45A0A0B05A4.quest_desc: [""]
+	quest.324AB45A0A0B05A4.title: "{item.naturescompass.naturescompass}"
+	quest.3282EB41DB52504C.quest_desc: [""]
+	quest.3370CAF47A5F8EBD.quest_desc: [
+		"You need to prepare 4 &a{item.umapyoi.jewel}&r"
+		"to craft &7{block.umapyoi.silver_uma_pedestal}&r and &b{block.umapyoi.three_goddess}&r"
+	]
+	quest.3454BE7CF82A56B4.quest_desc: ["This is one of the drops from &d{entity.irons_spellbooks.dead_king}&r"]
+	quest.356B1B423D318A77.quest_desc: [
+		"You can obtain brand-new jewelry scrolls from various ruins in {dimension.minecraft.the_end} or {dimension.minecraft.the_nether}"
+		"Learn them"
+		"You will be able to craft more powerful jewelry"
+	]
+	quest.35BFF10E665799C5.quest_desc: ["You need to use {item.irons_spellbooks.mithril_ingot} to craft a 15-minute {item.minecraft.potion.effect.apothic_attributes.flying}"]
+	quest.35C67C49516C597B.quest_desc: [
+		"Located within the &aOverworld&r at the &e&lCursed Pyramid&r&r"
+		"Structure ID: cataclysm:cursed_pyramid"
+	]
+	quest.35C67C49516C597B.quest_subtitle: "Difficulty200"
+	quest.35FAF22E1BE9187F.quest_desc: [
+		"You can use &d{Support Card}&r to &aTrain&r {UmaMusu} at the {block.umapyoi.training_facility}"
+		""
+		"After &aTraining&r, the attributes of {UmaMusu} will be greatly enhanced!"
+		""
+		"Place a book on either the &7{block.umapyoi.silver_uma_pedestal}&r or the &6{block.umapyoi.uma_pedestal}"
+		"Then you can use &d{item.umapyoi.blank_ticket}&r to summon &d{Support Card}&r"
+	]
+	quest.379E53FBABC20CC3.quest_desc: [
+		"You can use &a{item.kubejs.chlorophyte_ingot}&r to craft brand new equipment, and enhance player attributes with “&c{itemGroup.umapyoi}&r” and “&cAccessories&r”."
+		""
+		"&lYou can use the shortcut key&r &6Shift + X&r &lto share the treasures you have obtained&r"
+		""
+		"&dYou can craft a book &a{patchouli.l2hostility.title}&r&d, which contains strategies for dealing with various enemies/&6&l{trait}&r&r&d"
+		""
+		"If you need more detailed process recommendations, please check the next page"
+		""
+		""
+		"{@pagebreak}"
+		""
+		"You can go to the {dimension.minecraft.the_end} eerie biome, mine some {item.kubejs.chlorophyte_ingot} to craft {item.kubejs.chlorophyte_sword}, which has higher attack power and longer reach than a diamond sword (see the {dimension.minecraft.the_end} eerie chapter)."
+		""
+		"Then, head to the {dimension.minecraft.the_end} city to loot chests and craft “&c{itemGroup.umapyoi}&r” and “&cAccessories&r” to enhance player attributes. (See the {dimension.minecraft.the_end} islands chapter)."
+		"Most accessories will not drop upon death. Each adventure in {dimension.minecraft.the_end} will provide growth for you."
+		""
+		"Next, go to the {dimension.minecraft.the_end} deep dark biome, find the ancient city, and use the looted materials to craft “&dSoul Binding Enchantment&r”. (One book is enough, you can use {itemGroup.create.base} machinery to duplicate enchanted books infinitely)."
+		""
+		"Then challenge {entity.irons_spellbooks.dead_king} in {dimension.minecraft.the_end} deep dark biome to learn magic."
+		""
+		"Finally, go to the trial hall in the {dimension.minecraft.the_end} flower forest to obtain the {l2hostility.title} {l2hostility.jei.loot_title}, and craft the items listed below in this chapter’s quest book."
+		""
+		"When you can easily wipe out level 300 monsters, you may try surviving longer in {dimension.minecraft.the_end}, until you encounter monsters with “{trait.l2hostility.killer_aura}” and “{trait.l2hostility.ragnarok}”."
+		""
+		"“{trait.l2hostility.killer_aura}” will periodically deal massive magic armor-piercing damage to nearby players."
+		""
+		"“{trait.l2hostility.ragnarok}” will seal the player’s accessories upon hitting them (except inventory and {itemGroup.umapyoi} accessories). You need to use the sealed accessories like food to lift the seal."
+		"Craft a “{item.l2hostility.pocket_of_restoration}”, which will automatically remove the “{trait.l2hostility.ragnarok}” seal, greatly reducing the pressure of fighting against “{trait.l2hostility.ragnarok}” mobs."
+		""
+		"Make defeating monsters with “{trait.l2hostility.ragnarok}” your goal, and strive towards it."
+	]
+	quest.379E53FBABC20CC3.title: "Recommended Grinding Route"
+	quest.38014DB8FC25BED2.quest_desc: [
+		"Right-clicking the rope while holding it will place a new rope below."
+		""
+		"Right-clicking the rope while sneaking with it in hand will place a new rope in the area specified by the player's crosshair;"
+		""
+		"Right-clicking the rope while sneaking without hands will retrieve the rope to the player's inventory, starting from the bottom of the rope;"
+		""
+		"Two adjacent ropes will be visually connected."
+		""
+		"If a bell is directly above a rope, right-clicking these ropes (up to 24 blocks away from the bell) will ring the bell. The rope directly below the bell will be visually connected to the bell."
+	]
+	quest.38014DB8FC25BED2.quest_subtitle: "Hold down the spacebar to climb."
+	quest.393188CC2575E3CF.quest_desc: [
+		"It can help you increase mineral production"
+		"At the same time, it has some unique recipes"
+		""
+		"You need to build this alloy smelter according to a &2multiblock structure&r"
+		"Don’t worry, I’ve prepared a &bblueprint&r {(alloy_smelter.nbt)} for you"
+		""
+		"You can also refer to the diagram on the left for construction"
+		"If you need &6automation&r, you can refer to the diagram on the right"
+		""
+		"Materials can be inserted into the controller from both sides, fuel from the front, and a hopper can be placed below to collect products"
+		""
+		"&dTier 1 Smelter uses: {item.minecraft.brick}&r"
+		"&dTier 2 Smelter uses: {block.minecraft.polished_blackstone_bricks}&r"
+		"&dTier 3 Smelter uses: {block.minecraft.end_stone_bricks}&r"
+	]
+	quest.3DBA88AAE97C7DE8.quest_desc: ["Drowned converted from zombies have a high chance of carrying tridents, which can be used to craft {item.l2complements.poseidite_ingot}"]
+	quest.3DD1B51E6A581AA1.quest_desc: [
+		"&c{block.farmersdelight.rich_soil_farmland}&r is obtained by right-clicking with a hoe and will not degenerate into &c{block.farmersdelight.rich_soil}&r due to trampling. It cannot be obtained with Silk Touch, but will drop &c{block.farmersdelight.rich_soil}&r after broken"
+		""
+		"Gives more frequent tick updating and a higher chance for increased growth rate for crops planted on it; on lucky circumstances, a planted seed can grow twice consecutively and be ready for harvest. The effect is more apparent for hydrated &c{block.farmersdelight.rich_soil_farmland}&r."
+	]
+	quest.3E3B9BAC8D0CC46C.quest_desc: ["Entity that falls onto the {block.farmersdelight.safety_net} will not receive fall damage and bounce back up (similiar to the original {block.minecraft.slime_block}). Crouching will negate this effect."]
+	quest.3EB7A495A8443564.quest_desc: [
+		"Head to the Trial Hall to challenge &2{block.minecraft.trial_spawner}&r"
+		"Upon success, it may release a level 0–100 “{hostility}” {l2hostility.jei.loot_title}"
+		""
+		"If you have the &5{effect.minecraft.bad_omen}&r debuff..."
+		"It will transform into an &dOminous {block.minecraft.trial_spawner}&r"
+		"At the same time, it has a chance to release all “{hostility}” {l2hostility.jei.loot_title} at levels 0–299"
+		""
+		"Difficulty Level: 150+"
+	]
+	quest.3EB7A495A8443564.title: "{trait}！{trait}！"
+	quest.4136927C252AD534.quest_desc: [
+		"Use an axe to right-click logs to obtain stripped logs"
+		"Then use &6{item.create.andesite_alloy}&r to right-click stripped logs to obtain &6{block.create.andesite_casing}&r"
+	]
+	quest.41602D65D7AC69EB.quest_subtitle: "Can be obtained from loot chests"
+	quest.41602D65D7AC69EB.title: "More Wolf Armor"
+	quest.41A7BD9935057245.quest_desc: [
+		"Right-click {block.umapyoi.uma_statues} while holding {item.umapyoi.uma_soul} to display a static model of {UmaMusu}."
+		""
+		"Right-click again on the displayed {block.umapyoi.uma_statues} to remove the {item.umapyoi.uma_soul}."
+	]
+	quest.41A7BD9935057245.quest_subtitle: "Showcase your {UmaMusu}"
+	quest.420F2FE9D30CFFC3.quest_desc: [
+		"Reward: Permanent [&aMining Speed +30%&r]"
+		""
+		"&oYou can view all collectible items and rewards in the achievement “&c{advancement.c6c.root}&r”"
+	]
+	quest.420F2FE9D30CFFC3.quest_subtitle: "Collect 20 maids"
+	quest.43104742822CBF0C.quest_desc: [
+		"Located within the &aOverworld&r at the &8&lAncient Factory&r&r"
+		"Structure ID: cataclysm:ancient_factory"
+	]
+	quest.43104742822CBF0C.quest_subtitle: "Difficulty10"
+	quest.43292FFEA3A7B2B4.quest_desc: ["If you don’t understand how the machine works, open your inventory, hold [&bW&r] while pointing at &6{Create Mod}&r components to ponder"]
+	quest.43292FFEA3A7B2B4.quest_subtitle: "First Step of &6{Create Mod}&r"
+	quest.4564BE69E51A90A4.quest_desc: [
+		"Located within the &4Nether&r at the &l&cSoul Forge&r&r"
+		"Structure ID: cataclysm:soul_black_smith"
+	]
+	quest.4564BE69E51A90A4.quest_subtitle: "Difficulty50"
+	quest.473CA38006F3C4A4.quest_desc: ["Once you craft a 30-minute {item.minecraft.potion.effect.apothic_attributes.flying}, you can use it to craft {item.minecraft.elytra}"]
+	quest.488961A673AFA318.quest_desc: [
+		"Very small chance to obtain from loot chests"
+		""
+		"Maids will drop &c{item.touhou_little_maid.film}&r upon death"
+		""
+		"Can be placed in &6{block.touhou_little_maid.shrine}&r to revive by consuming player health, or revived through rituals"
+	]
+	quest.48EF078682A042D6.title: "Producer for All"
+	quest.492D4709E52D0C97.quest_desc: ["Upon consumption, restores 2 hunger points and 2.4 saturation, while also recovering stamina equal to a percentage of the maximum stamina."]
+	quest.49C7F3D4FE51C089.quest_subtitle: "Allows players to teleport between two points"
+	quest.49C7F3D4FE51C089.title: "Portal"
+	quest.4A85185CDE1A7AD2.quest_desc: [
+		"Located within the &aOverworld&r at the &3&lFrosted Prison&r&r"
+		"Structure ID: cataclysm:frosted_prison"
+	]
+	quest.4A85185CDE1A7AD2.quest_subtitle: "Difficulty600"
+	quest.4AF0160AB01B5304.quest_desc: [
+		"Standing in the fluid of &6{item.hotbath.peony_bath_bucket}&r will restore health at a rate of 0.25 every 2 seconds."
+		"After standing in the fluid of &6{item.hotbath.peony_bath_bucket}&r for 15 seconds, all negative status effects will be removed."
+		"After standing in the fluid of &6{item.hotbath.peony_bath_bucket}&r for 15 seconds, you will gain 0.05 knockback resistance, lasting for 30 seconds."
+		"After standing in the fluid of &6{item.hotbath.peony_bath_bucket}&r for 15 seconds, your attack speed will increase by 10%, lasting for 15 seconds."
+		"After soaking a total of 50 times, each subsequent soak will grant a Level 1 &6{effect.minecraft.luck}&r effect, lasting for 45 seconds."
+	]
+	quest.4B3863244FB807C3.quest_desc: [
+		"&6{item.minecraft.potion.effect.apothic_attributes.flying}&r"
+		""
+		"It will replace the generation of {item.minecraft.elytra} in the &c{End Ship}&r."
+		"Honestly, creative flight is much more useful than {item.minecraft.elytra}."
+		"If you want to experience the feel of {item.minecraft.elytra}, you can also use two bottles of &d30&r-minute {item.minecraft.potion.effect.apothic_attributes.flying} to craft {item.minecraft.elytra}."
+		""
+		"&c{End Ship}&r item generation probabilities:"
+		"- &d8-minute {item.minecraft.potion.effect.apothic_attributes.flying}&r 33.3%"
+		"- Strong Haste Potion 33.3%"
+		"- &c{block.minecraft.netherite_block}&r 16.7%"
+		"- {block.minecraft.diamond_block} 8.6%"
+		"- &e{book.umapyoi.trainers_manual.title}&r 8.6%"
+		"- Others"
+	]
+	quest.4CB753DB3E3039CD.quest_desc: [
+		"Place your &e{item.umapyoi.uma_soul}&r into the {block.umapyoi.register_lectern}"
+		""
+		"Your {UmaMusu}'s attributes will be &6greatly enhanced&r"
+		"At the same time, you will gain the Will of a {UmaMusu}"
+	]
+	quest.4D76E3D866F31784.quest_desc: [
+		"Allows quick mailing of items between players."
+		"Place and name a &eMailbox&r, then use the &bMail System&r to send items to the corresponding &eMailbox&r."
+		""
+		"Transporting containers or items with large NBT data is not allowed."
+	]
+	quest.4D967AC9E5045DDB.quest_desc: [
+		"&c{block.mynethersdelight.powdery_cannon}&r does not spawn naturally; it is obtained by collecting the roots of &c{block.mynethersdelight.powdery_cane}&r."
+		""
+		"&c{block.mynethersdelight.powdery_cane}&r producing &c{block.mynethersdelight.bullet_pepper}&r at the tip spawns naturally in crimson forests; production of &c{block.mynethersdelight.bullet_pepper}&r triggers a crossbow sound. &c{block.mynethersdelight.bullet_pepper}&r explodes upon being touched or broken (&c{block.mynethersdelight.bullet_pepper}&r produced on &c{block.mynethersdelight.powdery_cannon}&r has a greater power, and can destroy itself with explosion)."
+		""
+		"Destroying &c{block.mynethersdelight.powdery_cane}&r other than the root gives &c{item.minecraft.stick}&r. Planting &c{block.mynethersdelight.bullet_pepper}&r produces new &c{block.mynethersdelight.powdery_cane}&r, and &c{block.mynethersdelight.powdery_cannon}&r can be obtained only after its root becomes sturdy. Destroying any part of &c{block.mynethersdelight.powdery_cannon}&r gives &c{block.mynethersdelight.powdery_cannon}&r."
+	]
+	quest.4E221A3F92D840AB.quest_desc: [
+		"You can use &2{book.umapyoi.trainers_manual.title}&r to craft &d{item.umapyoi.blank_ticket}&r"
+		""
+		"This is an important item that will be needed later"
+	]
+	quest.4E6B6B368A8A4EA6.quest_desc: [
+		"Craft an &e{item.pandora.pandora_bracelet}&r together with an &a{item.l2hostility.charm_of_looting_1}&r"
+		"Insert the &a{item.l2hostility.charm_of_looting_1}&r into the &e{item.pandora.pandora_bracelet}&r"
+		"Defeat enemies to obtain more loot (details can be checked in JEI)"
+		"Craft more orbs to gain more and better loot"
+	]
+	quest.4EE2DA5EC1E8572B.quest_desc: [
+		"{block.kubejs.warped_stem_chlorophyte} is hidden inside {block.minecraft.warped_stem} in the warped forest"
+		"It is very hard and difficult to mine with an axe."
+		"However, it is very fragile against explosions. You can use &cTNT&r or lure a &2{entity.minecraft.creeper}&r to explode near it"
+		"It will directly drop &a{item.kubejs.chlorophyte_ingot}&r"
+	]
+	quest.4EE2DA5EC1E8572B.title: "Observe {block.kubejs.warped_stem_chlorophyte}"
+	quest.4F64FB65FFEA050C.quest_subtitle: "Now Start Gluing"
+	quest.4FC1C7D438B19492.quest_desc: [
+		"Collect two Wills of {UmaMusu} and place them into the {block.umapyoi.three_goddess}"
+		""
+		"The Will of {UmaMusu} will serve as a stud to breed the next generation of {UmaMusu}"
+		""
+		"The stronger the stud, the more powerful the next generation of {UmaMusu} will be"
+	]
+	quest.4FD79173051DDEB8.quest_desc: ["Upon consumption, restores 2 hunger points and 2.4 saturation, while also recovering stamina equal to a percentage of the maximum stamina."]
+	quest.5083B5F89464A522.quest_desc: [
+		"In the {End Ice Spikes}, you can occasionally find some abandoned churches"
+		"Frost Spiders have made their nests here, laying eggs and falling into hibernation"
+		"If you &cbreak&r the frost protection layer around the Frost Spider eggs"
+		"You will awaken the &lFrost Spider&r Guardians"
+		""
+		"Be careful! They are extremely dangerous!"
+		"But the rewards are also very generous — the &lFrost Spiders&r have a chance to carry &brare equipment&r as well as &4{item.irons_spellbooks.cinderous_soulcaller}&r"
+		"Defeat them to claim your prize!"
+		""
+		"Difficulty Level: 200+"
+	]
+	quest.513BC9A3564D299E.quest_subtitle: "Can be used with chassis or super glue, makes blocks act as entities when working"
+	quest.51793B81F3FE45CE.quest_desc: ["During the day, it automatically engages in non-limited transactions with villagers."]
+	quest.5283E81D31BE83AB.quest_desc: [
+		"This weapon usually cannot deal damage, only knockback."
+		"Deals damage to arthropods"
+	]
+	quest.5283E81D31BE83AB.quest_subtitle: "Six Hits per Second"
+	quest.52A28F0788814240.quest_desc: [
+		"This is the most &limportant&r drop from &d{entity.irons_spellbooks.dead_king}&r!"
+		""
+		"It will guide you onto the path of magic"
+		"You first need to find a &5{block.irons_spellbooks.brazier_soul}&r in {dimension.minecraft.the_end}"
+	]
+	quest.534C36E4439EB3C7.quest_subtitle: "Defeat a maid in Chinese Chess"
+	quest.53C14996CDBA5DC2.quest_desc: [
+		"Throw the {item.irons_spellbooks.chained_book} into the &5{block.irons_spellbooks.brazier_soul}&r"
+		"You will obtain a random &dMagic Scroll&r"
+		"Equip it in your trinket slot, and it will automatically cast when you attack"
+		""
+		"&oNote! &dMagic Scrolls&r will drop upon death!&r"
+	]
+	quest.53C14996CDBA5DC2.title: "Observe “{block.irons_spellbooks.brazier_soul}”"
+	quest.548EEBA7C16661D6.quest_desc: [
+		"Equipment made from {item.l2complements.totemic_gold_ingot} has the quality of diamond and the enchantability of gold. As tools, their durability is close to diamond items, with mining speed similar to gold, but still at the diamond mining level. When crafting tools with {item.l2complements.totemic_gold_ingot} as the handle material and emerald as the head material, the durability is relatively high."
+		""
+		"Life Armor Effect: Every 5 seconds, each piece of armor restores 1 health point."
+		""
+		"Common effect of Life Equipment: When durability is consumed, &a restore the same amount of health&r, immune to hunger, wither, and poison effects."
+		""
+		"Therefore, Life Equipment is not suitable for using durability enchantments."
+		"Life Armor can use armor durability enchantments to increase endurance, or use the {enchantment.l2complements.life_mending} enchantment to achieve a cycle of durability loss → health recovery → durability restoration, &6 making it so that as long as it is not destroyed in one hit, it can fully restore durability&r. With the addition of the {enchantment.l2complements.safeguard} enchantment, even one-hit destruction will no longer occur. No matter how much durability is lost, 1 point will remain, and then durability will be fully restored through {enchantment.l2complements.life_mending}. The only concern is potion effects that prevent health recovery."
+		"{@pagebreak}"
+		"Tools made from {item.l2complements.totemic_gold_ingot} have the quality of diamond and the enchantability of gold. As tools, their durability is close to diamond items, with mining speed similar to gold, but still at the diamond mining level."
+	]
+	quest.54931F97C140412D.quest_desc: ["Hot springs occasionally generate in the Overworld, and once found, they can be used infinitely."]
+	quest.54931F97C140412D.title: "Hot Spring"
+	quest.552F937D15E04A15.quest_desc: [
+		"Standing in the fluid of &6{item.hotbath.honey_bath_bucket}&r will restore health at a rate of 0.25 per second."
+		"Standing in the fluid of &6{item.hotbath.honey_bath_bucket}&r will grant Level 1 Slowness for 10 seconds."
+		"After standing in the fluid of &6{item.hotbath.honey_bath_bucket}&r for 15 seconds, all negative status effects will be removed except &c{effect.minecraft.slowness}&r and &c{effect.minecraft.unluck}&r."
+		"Standing in the fluid of &6{item.hotbath.honey_bath_bucket}&r will restore hunger at a rate of 1 every 4 seconds."
+		"After standing in the fluid of &6{item.hotbath.honey_bath_bucket}&r for 15 seconds, you will gain Level 2 &6{effect.minecraft.absorption}&r, lasting for 20 seconds."
+	]
+	quest.55A6F9F0BC4D0096.quest_desc: [""]
+	quest.56469F8456C022EF.quest_desc: ["Allows the player to quickly return to the bed or spawn point (cannot be used in &dThe End&r)."]
+	quest.5655FD8F2B8FB4D2.quest_desc: ["Consuming {item.umapyoi.hachimi_big} increases Mood Level by 2 and restores 4 hunger points and 7 saturation."]
+	quest.5655FD8F2B8FB4D2.quest_subtitle: "Can be consumed even at full hunger"
+	quest.568DB1FCA0026DB0.quest_desc: ["The camera can capture a tamed maid. Players can right-click within 8 blocks of the maid to capture and create a photo."]
+	quest.591763149B3E9648.title: "Traveling Tool"
+	quest.592017A5227B6679.quest_desc: [
+		"Use &6{block.create_hypertube.hypertube}&r to link &a{block.create_hypertube.hypertube_entrance}&r, and connect &c{create.display_source.kinetic_stress.current}&r to create a tunnel for player movement."
+		""
+		"This tunnel considerable pressure on frame rate, so use with discretion."
+	]
+	quest.592017A5227B6679.quest_subtitle: "A stylish short-distance travel method"
+	quest.593E1782EC446B28.quest_desc: [
+		"{UmaMusu} is an &e&litem&r&r that greatly enhances player attributes"
+		"You can even cultivate an {UmaMusu} that &eincreases player attack power by 600%&r"
+		""
+		"You can find &2{book.umapyoi.trainers_manual.title}&r in chests within {dimension.minecraft.the_end}"
+		"It serves as the gameplay guide for the “{itemGroup.umapyoi}” mod"
+		""
+		"Of course, you can also follow this quest book to learn how to play with {UmaMusu}"
+	]
+	quest.5AD85A669E436FAD.quest_desc: ["&z这世上再也没有什么能伤害到你&r"]
+	quest.5AD85A669E436FAD.quest_subtitle: "苦尽甘来，超脱万物"
+	quest.5C9F0C22F503C49A.quest_desc: [
+		"Have you ever played 《{Terraria}》 on &cMaster&r difficulty?"
+		""
+		"&lIt requires you to carefully choose attack and health boosts, use flexible controls, rely on your knowledge of monsters, and complete the first clear with the help of many buff potions&r"
+		""
+		"The difficulty of this modpack’s adventure content is aligned with 《{Terraria}》 &cMaster&r difficulty."
+		"If you have not yet played 《{Terraria}》 on &cMaster&r difficulty, I recommend choosing &aEasy Mode&r and enabling &aKeep Inventory&r to experience the adventure content."
+		""
+		"The command to enable Keep Inventory is:"
+		"/gamerule keepInventory true"
+		""
+		"Before release, this modpack was tested three times on Easy, Normal, and Hard difficulties. All of them can clear the {dimension.minecraft.the_end} adventure content."
+	]
+	quest.5C9F0C22F503C49A.title: "Difficulty Tips"
+	quest.5E7426AF846024EE.quest_desc: [
+		"{item.l2complements.poseidite_ingot} equipment increases armor, armor toughness, movement speed, and swimming speed when underwater."
+		""
+		"Helmets and chestplates grant the player the {block.minecraft.conduit} effect while underwater."
+		""
+		"Leggings and boots grant the Dolphin’s Grace effect while underwater."
+		""
+		"{@pagebreak}"
+		"{item.l2complements.poseidite_ingot} tools gain 50% increased attack damage and 20% increased attack speed underwater, and deal an additional 100% damage (multiplicative) to aquatic creatures and water-fearing creatures."
+	]
+	quest.5F4BF0D8936B370B.quest_desc: [
+		"Tickets crafted with &e{Umamusume Crystal}&r can summon higher-tier {UmaMusu}"
+		"(R {UmaMusu} Ticket can summon SR {UmaMusu})"
+		"(SR {UmaMusu} Ticket can summon SSR {UmaMusu})"
+	]
+	quest.5F69670FBE1B5FE4.quest_desc: [
+		"Combine a photo with &6{item.minecraft.brown_dye}&r to obtain a photo with a more vintage style."
+		""
+		"Hold a photo in your inventory and right-click it onto another photo to stack them together into a pile."
+	]
+	quest.605639A83B5AE2B9.quest_desc: [
+		"Armor Effect: Silence (&9When wearing 4 pieces of equipment with the Silence effect, any vibrations caused by the player will be nullified&r)"
+		""
+		"When wearing one piece, grants immunity to: Blindness, Darkness, Mining Fatigue, Nausea, Slowness, Weakness."
+		""
+		""
+		"{@pagebreak}"
+		"Sculk tools can &d break any destructible block at a relatively fast speed&r, ignoring hardness and mining level."
+		""
+		"Efficiency enchantments can further increase mining speed."
+		""
+		"&oWhen mining blocks, pay attention to the required tool and mining level. If the tool is incorrect or the mining level is insufficient, no drops will be obtained.&r"
+	]
+	quest.605639A83B5AE2B9.quest_subtitle: "Armor and Tools"
+	quest.60BA9FC4C0678513.quest_desc: [
+		"&6{item.exposure.interplanar_projector}&r is a special &6{item.exposure.camera}&r filter that can capture images from another dimension and turn them into photos (you can upload local images and shoot them as photos)."
+		"First, rename &6{item.exposure.interplanar_projector}&r using &6{block.minecraft.anvil}&r or similar methods to the file path of a local image, e.g., D:/Images/cat.jpg. Supported formats include png, jpg, bmp, gif (static only), and transparency is supported (pixels must be fully transparent). Note that renaming items in &6{block.minecraft.anvil}&r has a length limit. If renamed as a URL path, it can also fetch images from the web."
+		""
+		"If projection fails, the projector will not be consumed but instead become a damaged &6{item.exposure.interplanar_projector}&r, which will display a blue screen error code in &6{item.exposure.camera}&r. A damaged projector can be repaired by combining it with &6{item.minecraft.ender_eye}&r."
+	]
+	quest.60F0E62C7A268D3D.quest_desc: [
+		"You can use {item.l2hostility.miracle_powder} or {item.l2hostility.chaos_ingot} to craft &d{item.c6c.abyssal_ticket}&r"
+		"Using &d{item.c6c.abyssal_ticket}&r at the home of &c{entity.irons_spellbooks.fire_boss}&r will open the &d{Abyssal Carnival}&r"
+		"It may drop equipment of Normal, &bExcellent&r, &9Rare&r, &dLegendary&r, &6Epic&r, and &zMythical&r tiers, providing massive attribute bonuses"
+		""
+		"Once you complete the challenge and obtain the &l&b{item.irons_spellbooks.arcane_rune}&r&r, you can craft {block.irons_spellbooks.cinderous_soul_rune} to open the &d{Abyssal Carnival}&r challenge in the Overworld"
+		""
+		"&o{Abyssal Carnival} is not affected by {item.l2hostility.greed_of_nidhoggur}&r"
+		"&oMost magic damage in {Abyssal Carnival} is not immune to {item.l2hostility.ring_of_divinity}&r"
+		"&o{Abyssal Carnival} will not spawn BOSSes with &4{trait.l2hostility.dispell}&r&o or &4{trait.l2hostility.reprint}&r&o traits&r"
+		""
+		"Difficulty Level: 350+"
+	]
+	quest.620DE65D4B2B3547.quest_desc: [
+		"The nether equivalent of &c{block.farmersdelight.rich_soil_farmland}&r. Becomes hydrated with open flames (&c{block.minecraft.fire}&r, &c{block.minecraft.lava}&r, &c{block.minecraft.torch}&r, &c{block.minecraft.lantern}&r, &c{block.minecraft.campfire}&r, &c{block.farmersdelight.stove}&r, &c{block.mynethersdelight.bullet_pepper}&r etc.) instead of water."
+		""
+		"Each open flame source hydrates &c{block.mynethersdelight.resurgent_soil_farmland}&r situated within a volume of 17x9x17 blocks from it."
+		""
+		"Hydrated &c{block.mynethersdelight.resurgent_soil_farmland}&r has a light level of 10, enough for most crops."
+	]
+	quest.62F46A2AF56A5FD6.quest_desc: ["Can be placed as a stand for &6{item.exposure.camera}&r, or held directly for taking photos."]
+	quest.631002556817F054.quest_desc: ["Consuming {item.umapyoi.cupcake} increases Motivation Level by 1 and restores 5 hunger points and 6 saturation."]
+	quest.639AE612BBE4F363.quest_desc: [
+		"Using the initial &6{item.touhou_little_maid.smart_slab}&r can release an unowned maid"
+		""
+		"You can use &d{block.minecraft.cake}&r to tame an unowned maid"
+		""
+		"In single-player mode, you can change the maid’s model"
+		"In servers, you cannot change the maid’s model"
+		""
+		"Collecting different maid combinations grants different buffs"
+		"Collection statistics are based on the maid at the time of taming"
+		""
+		"You can also exchange unowned maids with server partners using &6{item.touhou_little_maid.smart_slab}&r"
+	]
+	quest.6724A17ED66D090E.quest_desc: [
+		"Can be used for infinite mining of ores"
+		"Search @ore in JEI to see all ore veins and their distribution locations"
+	]
+	quest.67F1D38FF93B5199.title: "Enter &4{dimension.minecraft.the_nether}&r"
+	quest.6802763D2F467790.quest_desc: [
+		"Located within the &aNether&r at the &6&lBurning Arena&r&r"
+		"Structure ID: cataclysm:burning_arena"
+	]
+	quest.6802763D2F467790.quest_subtitle: "Difficulty800"
+	quest.6954E808A764BB6D.quest_desc: [
+		"&6{itemGroup.create_hypertube}&r placement works similarly to &6{block.create.track}&r. Once the track network is built, provide sufficient &6{create.display_source.kinetic_stress.current}&r to both ends of the &6{block.create_hypertube.hypertube_entrance}&r to put it into use."
+		"By default, players only need to approach the &6{block.create_hypertube.hypertube_entrance}&r to enter and begin their journey."
+		"Use &6{item.create.wrench}&r to adjust its mode. In auto-close mode, sneaking prevents entry into the hypertube; in manual-close mode, sneaking is required to enter."
+	]
+	quest.69F8F1E623EFEEF8.quest_desc: [
+		"The Trial Hall lurks beneath the {biome.c6c.end_flower_forest}"
+		"Other than that, the {biome.c6c.end_flower_forest} is peaceful and tranquil, with no particular danger"
+	]
+	quest.6A76D1EBB43A2451.quest_desc: [
+		"可以将法术卷轴敲在武器上，使玩家在手持该武器时可以释放该法术"
+		""
+		"将卷轴与对应等级墨水合成一个高一级的卷轴"
+	]
+	quest.6B28FC5FC8BCAB87.quest_desc: ["Automatically feed the player when they are carrying a backpack equipped with this upgrade."]
+	quest.6B453132CFF68D96.quest_desc: [
+		"BOSS &c{entity.irons_spellbooks.fire_boss}&r Summoning Item"
+		"Appears with a 1.5% chance in chests within {dimension.minecraft.the_end}"
+		""
+		"You can use it to craft a map to search for &c{entity.irons_spellbooks.fire_boss}&r in the &4{dimension.minecraft.the_nether}&r"
+		""
+		"Difficulty Level: 250+"
+	]
+	quest.6D54EE1C48F02762.quest_desc: [
+		"可用于编辑玩家的法术书内含的法术。"
+		"同一种法术无法被重复嵌入法术书中。"
+	]
+	quest.6DB3C1C6D21EA436.quest_desc: [
+		"“&l&eMechanomania&r&r” is a modpack designed for: &aCreate Mod&r, &6Building&r, &cAdventure Players&r, and intended for &bMultiplayer&r&dLong-term&r servers."
+		"Since there is no means of teleportation in the early stages, and in order to obtain resources, you may need to travel to different biomes to build mining machines and mob farms. Playing solo may feel like &lbeing imprisoned&r."
+		""
+		"If you are an &eAdventure Player&r and have confidence in your PVE skills, you can directly proceed to read the “&dThe End - Combat and Adventure&r” chapter."
+		""
+		"Thanks to the “JSI制作组” for their assistance in creating the quest book for the modpack. Without them, I would not have been able to complete this quest book."
+		"Thanks to “老King呀老King” for the modpack playtesting and promotion."
+		"Thanks to NaraZX and Staples17 for creating the zh-cn localization."
+		"Thanks to ティオムTEOM for creating the en-us and th-th localization."
+		"                                                             -MoePus 2025.07.29"
+		""
+		"&a&lNext Page&r&r"
+		""
+		"{@pagebreak}"
+		""
+		"&a&lServer Configuration Selection Guide&r&r"
+		""
+		"13700K + 8GB can support more than 8 players"
+		"13900K + 16GB can support more than 10 players + DH"
+		"Xeon and other server-grade CPUs can support 4 players"
+		""
+		"If DH is enabled, the server requires at least 12GB of memory!"
+		""
+		""
+		""
+		""
+		""
+		""
+		"{@pagebreak}"
+		""
+		"&a&lAbout Shaders and Rendering&r&r"
+		""
+		""
+		""
+		""
+		""
+		""
+		"Shaders with the suffix &6Clrwl&r include exclusive optimizations for Create Mod. If you use other shaders, you may experience a decrease in frame rate."
+		""
+		"If you encounter the issue where chests and Create Mod components&c cannot be displayed&r, follow the steps below:"
+		"1. Make sure you are using a dedicated graphics card"
+		"2. Make sure your graphics card driver is up to date"
+		"3. Execute the command /flywheel backend instancing"
+		"4. Execute the command /flywheel backend off"
+		"Once one step takes effect, there is no need to execute the next step."
+		"This issue is commonly seen with Intel graphics cards and AMD RDNA2 architecture graphics cards."
+		""
+		"{@pagebreak}"
+		"&a&lC6C&r&r"
+		"The C6C mod is the core customized module of the modpack. It provides some configuration options in c6c-common.toml, which you can modify as needed."
+		"* Monster spawn rate in the Overworld"
+		"* Monster spawn rate in the End"
+		"* Disable changing maid skins in server environments"
+		"* Double jump"
+		""
+		"{@pagebreak}"
+		"&a&lReport a Crash&r&r"
+		"If you encounter crashes or similar issues, please upload the crash report to"
+		"&ehttps://mclo.gs/&r"
+		"and send the generated link to the author"
+	]
+	quest.6DB3C1C6D21EA436.title: "Welcome to the &l&eMechanomania&r&r Modpack"
+	quest.6F343418CE247D0D.quest_desc: [
+		"Horse: The horse’s speed is twice that of vanilla, and it can ignore most terrain obstacles, running swiftly. &c{item.horseman.copper_horn}&r can summon a tamed horse."
+		""
+		"&c{item.usefulslime.slime_boots}&r and &c{item.usefulslime.slime_sling}&r: Allow the player to super jump and move quickly."
+		""
+		"&c{@create_hypertube}&r:Allows the player to move quickly over short distances within the base."
+		""
+		"&c{item.c6c.recall_potion}&r: Allows the player to quickly return to the bed or spawn point (cannot be used in the End)."
+		""
+		"Train (Mid-game): Can connect distant bases and resource points."
+		""
+		"&c{item.l2complements.fragile_warp_stone}&r (Mid-game): Allows the player to teleport to a designated marked location."
+		""
+		"&c{item.irons_spellbooks.hither_thither_wand}&r and &c{block.irons_spellbooks.portal_frame}&r (Late-game): Allow the player to teleport between two points."
+	]
+	quest.6F343418CE247D0D.title: "About Traveling the world"
+	quest.6F4F862CB6AF1A4C.quest_desc: ["Consuming {item.umapyoi.hachimi_mid} increases Mood Level by 1 and restores 2 hunger points and 3 saturation."]
+	quest.6F4F862CB6AF1A4C.quest_subtitle: "Can be consumed even at full hunger"
+	quest.6FF2FBFB5A8D4C13.quest_desc: ["&oIn &c{dimension.minecraft.the_end}&r, the broom’s movement ability is severely restricted. This can be adjusted through the C6C configuration file&r"]
+	quest.6FF2FBFB5A8D4C13.quest_subtitle: "You need a maid to sit with you"
+	quest.6FF2FBFB5A8D4C13.title: "Flying Broom"
+	quest.717036CE2862E3FF.quest_desc: ["When mining blocks or attacking entities, replace any tools in the player's primary hand with the best available tools or weapons."]
+	quest.7190D0D53DB975B2.quest_desc: [
+		"You can check other chapters of “{dimension.minecraft.the_end}” to decide your adventure plan"
+		"Once decided"
+		"Set off!"
+	]
+	quest.7199171C6EEE34F6.title: "Clone Blueprint"
+	quest.73983F6255308C0E.quest_desc: [
+		"Standing in the fluid of &6{item.hotbath.milk_bath_bucket}&r will restore health at a rate of 0.25 every 2 seconds."
+		""
+		"After standing in the fluid of &6{item.hotbath.milk_bath_bucket}&r for 15 seconds, all negative status effects will be removed except &c{effect.minecraft.unluck}&r."
+		""
+		"Standing in the fluid of &6{item.hotbath.milk_bath_bucket}&r will restore hunger at a rate of 1 every 15 seconds."
+	]
+	quest.74C40A81C9605AC0.quest_desc: [
+		"The {End Deep Dark} biome is absolutely the &4most dangerous&r place in {dimension.minecraft.the_end}"
+		"Two monsters, &d{entity.minecraft.warden}&r and &d{entity.irons_spellbooks.dead_king}&r, dwell here"
+		"Fortunately, both of them are in a slumbering state"
+		"As long as no one awakens them, they will remain asleep forever"
+		""
+		"&d{entity.minecraft.warden}&r and &d{entity.irons_spellbooks.dead_king}&r"
+		"Which one is the truly owner of the deep dark?"
+		""
+		"Difficulty Level: 100+"
+	]
+	quest.74C40A81C9605AC0.title: "Shh! Keep Quiet!"
+	quest.74F2404B036CB503.quest_desc: [
+		"{Ancient City} occasionally appears in the Deep Dark biome of {dimension.minecraft.the_end}"
+		""
+		"It contains large amounts of &cNetherite&r, as well as materials for crafting the &dSoulbinding&r enchantment, such as &d{item.minecraft.echo_shard}&r. However, here also much more dangerous."
+		""
+		"Difficulty Level: 150+"
+	]
+	quest.74F2404B036CB503.title: "{Ancient City}"
+	quest.75BA253A92043A09.quest_desc: [
+		"This is the eerie biome of the End"
+		"Everywhere you look, it’s lush and green"
+		"&d{entity.minecraft.enderman}&r and &2{entity.minecraft.creeper}&r dwell here"
+		"It is rich in &a{item.kubejs.chlorophyte_ingot}&r, which can be used to craft all kinds of new equipment and items"
+		"If you want to survive on the outer islands of the End, &a{item.kubejs.chlorophyte_ingot}&r is essential"
+		""
+		"Difficulty Level: 20+"
+	]
+	quest.77305B767FC35FD7.quest_subtitle: "Enough said, let’s cook."
+	quest.78158AE15F2A7180.quest_desc: [
+		"Located within the &aOverworld&r at the &1&lSunken City&r&r"
+		"Structure ID: cataclysm:sunken_city"
+	]
+	quest.78158AE15F2A7180.quest_subtitle: "Difficulty300"
+	quest.7A3169F8A7713383.quest_desc: [
+		"Transforms any backpack into a fully functional jetpack with flight and hovering capabilities;"
+		"Uses {item.create.copper_backtank}/{item.create.netherite_backtank} as fuel (must be inside the backpack)."
+	]
+	quest.7A9D46939AA33A20.title: "More Refined"
+	quest.7ADA92302AD2425C.quest_desc: [
+		"&cNow, the {stronghold} is generated directly underground at coordinates 0,0 in the Overworld, and the portal to {dimension.minecraft.the_end} is automatically opened&r"
+		""
+		"&l&4The difficulty of {dimension.minecraft.the_end} is extremely high, it is recommended to go as a team.&r&r"
+	]
+	quest.7ADA92302AD2425C.title: "Go to {dimension.minecraft.the_end}"
+	quest.7B75EE328291ABCC.quest_desc: ["I hope you can cultivate the most powerful {UmaMusu}!"]
+	quest.7CD24C618C37D5C2.quest_desc: [
+		"There are mainly two ways to obtain &d{item.l2hostility.chaos_ingot}&r"
+		""
+		"1. Crafting with a recipe"
+		"2. Create a &b{item.l2hostility.charm_of_looting_4}&r, then go to the &c{End City}&r at difficulty level 200+. At this time, shulkers will always carry the {trait.l2hostility.dispell} trait, with a chance to drop &d{item.l2hostility.chaos_ingot}&r"
+	]
+	quest.7D783507714BF010.quest_desc: [
+		"The altar can be built using red wool (20 pieces) and oak wood (18 pieces). After construction, right-click the blue position shown below with Hakurei’s gohei to generate the altar. By consuming &6{item.touhou_little_maid.power_point}&r, it can synthesize items and trigger specific events, and can also serve as energy for the &6{block.touhou_little_maid.maid_beacon}&r."
+		""
+		"After building according to the diagram, right-click the pillars to place items, Shift+right-click to remove items. When placed correctly, sufficient &6{item.touhou_little_maid.power_point}&r will be consumed to directly synthesize items or trigger specific events."
+		""
+		"Please check the entry &6{patchouli.touhou_little_maid.book.entries.overview.multiblocks_altar.name}&r in the guidebook &6{patchouli.touhou_little_maid.book.name}&r. Clicking the eye button will generate a visual projection."
+		"{image:ftbquests:textures/nvpujitian.png width:160 height:120 align:center}"
+	]
+	quest.7D783507714BF010.title: "{touhou_little_maid.ponder.altar.header}"
+	quest.7DB3025A320096D6.quest_desc: [
+		"&c{End City}&r floats above the islands of &c{dimension.minecraft.the_end}&r"
+		"Be careful, don’t slip! Below lies the endless abyss."
+		""
+		"Difficulty Level: 50+"
+	]
+	quest.7DB3025A320096D6.title: "Where the Ruins Lie"
+	quest.7DF40621D9ECBE60.quest_desc: [
+		"Effective when worn on the player's back or placed on the floor;"
+		"Drags the item from outside a maximum of 5 blocks into the main storage slot of the backpack."
+	]
+	quest.7E563C97A327B537.quest_desc: [
+		"Located within the &aOverworld&r at the &b&lAcropolis&r&r"
+		"Structure ID: cataclysm:acropolis"
+	]
+	quest.7E563C97A327B537.quest_subtitle: "Difficulty600"
+	quest.7E8FD764CCC38327.quest_desc: [
+		"Reward: Permanent [&aEntity Interaction Distance +1&r]"
+		""
+		"&oYou can view all collectible items and rewards in the achievement “&c{advancement.c6c.root}&r”"
+	]
+	quest.7EFEEF11A184A08E.quest_desc: [
+		"Craft a &b{block.umapyoi.disassembly_block}&r"
+		""
+		"Place unwanted UmaMusume into it to obtain &eUmamusume Crystal&r"
+	]
+	quest.7F438F9D2D109C6F.quest_desc: [
+		"Reward: Permanent [&aOverheal +10%&r]:"
+		"  10% of the damage you deal will be converted into your &6Temporary Health&r"
+		""
+		"&oYou can view all collectible items and rewards in the achievement “&c{advancement.c6c.root}&r”"
+	]
+	quest.7F438F9D2D109C6F.quest_subtitle: "Collect &6{model.touhou_little_maid.saigyouji_yuyuko.name}&r and &6{model.touhou_little_maid.konpaku_youmu.name}&r maids"
+	task.018D50BCD26EC52D.title: "About Horses"
+	task.079598ED34BDA743.title: "Using JEI"
+	task.07BD684C5841D867.title: "末地！"
+	task.0C0C580E2F734E82.title: "Lush Green"
+	task.0EC1C934EE7E9C9C.title: "Play chess with a maid"
+	task.112CBA6D46832979.title: "\"hostility\""
+	task.13AB58A961702203.title: "Hot Bath"
+	task.14B8564808BA252E.title: "Transmission"
+	task.1A0E470B8AAAA037.title: "实用工具"
+	task.1AA1A41B0F9286FD.title: "观察散落的盔甲"
+	task.1B22D77617B1FB2B.title: "Better Wolf Armor"
+	task.1C7B52B2D8C27CA5.title: "女仆饰品"
+	task.1E05D9F4697EBE41.title: "Filter"
+	task.3056BA1F2A472133.title: "Welcome to the Heart of Chimíng Integration Pack"
+	task.3A9D318495BFF9AE.title: "Set Off"
+	task.3DCCCC14D391742B.title: "Dungeon! Dungeon!"
+	task.49D91506FB3FF564.title: "Capture or revive a maid"
+	task.49FE4F7B204197F0.title: "Master’s Tools"
+	task.4A021CCA252DCB4E.title: "King of the Sculk"
+	task.4BEEA63B2528F8B9.title: "Auxiliary Work Device"
+	task.4C3F131687C993FF.title: "Transmission Device"
+	task.596535A955251949.title: "简易抽屉升级"
+	task.5A4EC83AAAB86751.title: "You can search for @delight in the JEI search box to view all food items."
+	task.627EF049D666373E.title: "Where the Ruins Lie"
+	task.6517A277B3E3D931.title: "&c{create.display_source.kinetic_stress.current}&r Generating Device"
+	task.731A8373E429DB6E.title: "Decoration"
+	task.763F25EE5DE39431.title: "终极目标女仆控"
+	task.7CED1C11ECCA5318.title: "More Advanced Transmission Device"
+	task.7FBFB25DA5BBCF28.title: "{item.fxntstorage.backpack_blank_upgrade}"
+}

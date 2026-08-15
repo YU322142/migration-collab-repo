@@ -1,0 +1,387 @@
+{
+  "allowed_mutations": [
+    "server/mods/DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+    "client/mods/DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+    "server/mods/tracks-neoforge-1.21.1-1.0.1.jar",
+    "client/mods/tracks-neoforge-1.21.1-1.0.1.jar",
+    "server/kubejs/data/irons_spellbooks/loot_table/test/ring_gen_break_me.json (delete exact file)"
+  ],
+  "detail": {
+    "backup_files": {
+      "client_dnt": {
+        "bytes": 945261,
+        "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-backup-20260814\\originals\\client\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39"
+      },
+      "client_tracks": {
+        "bytes": 165882,
+        "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-backup-20260814\\originals\\client\\mods\\tracks-neoforge-1.21.1-1.0.1.jar",
+        "sha256": "B5022C73AE4A36E8798D1E57D8128EB42DA2964C6E38C722D2AD7CCD2FF443E5"
+      },
+      "server_dnt": {
+        "bytes": 945261,
+        "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-backup-20260814\\originals\\server\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39"
+      },
+      "server_ring": {
+        "bytes": 466,
+        "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-backup-20260814\\originals\\server\\kubejs\\data\\irons_spellbooks\\loot_table\\test\\ring_gen_break_me.json",
+        "sha256": "C836FCE6BE894AB5C5004692A4F2215B6FCCAF7EE88848E2F476CC3C0F189636"
+      },
+      "server_tracks": {
+        "bytes": 165882,
+        "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-backup-20260814\\originals\\server\\mods\\tracks-neoforge-1.21.1-1.0.1.jar",
+        "sha256": "B5022C73AE4A36E8798D1E57D8128EB42DA2964C6E38C722D2AD7CCD2FF443E5"
+      }
+    },
+    "backup_root": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-backup-20260814",
+    "committed_operations": [
+      "replace:server/mods/DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+      "replace:client/mods/DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+      "replace:server/mods/tracks-neoforge-1.21.1-1.0.1.jar",
+      "replace:client/mods/tracks-neoforge-1.21.1-1.0.1.jar",
+      "delete:server/kubejs/data/irons_spellbooks/loot_table/test/ring_gen_break_me.json"
+    ],
+    "config_changes": 0,
+    "maid_js_changes": 0,
+    "mcmodsync_active": false,
+    "poststate": {
+      "backup": {
+        "client_dnt": {
+          "bytes": 945261,
+          "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-backup-20260814\\originals\\client\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+          "sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39"
+        },
+        "client_tracks": {
+          "bytes": 165882,
+          "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-backup-20260814\\originals\\client\\mods\\tracks-neoforge-1.21.1-1.0.1.jar",
+          "sha256": "B5022C73AE4A36E8798D1E57D8128EB42DA2964C6E38C722D2AD7CCD2FF443E5"
+        },
+        "server_dnt": {
+          "bytes": 945261,
+          "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-backup-20260814\\originals\\server\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+          "sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39"
+        },
+        "server_ring": {
+          "bytes": 466,
+          "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-backup-20260814\\originals\\server\\kubejs\\data\\irons_spellbooks\\loot_table\\test\\ring_gen_break_me.json",
+          "sha256": "C836FCE6BE894AB5C5004692A4F2215B6FCCAF7EE88848E2F476CC3C0F189636"
+        },
+        "server_tracks": {
+          "bytes": 165882,
+          "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-backup-20260814\\originals\\server\\mods\\tracks-neoforge-1.21.1-1.0.1.jar",
+          "sha256": "B5022C73AE4A36E8798D1E57D8128EB42DA2964C6E38C722D2AD7CCD2FF443E5"
+        }
+      },
+      "installed_after": {
+        "client_dnt": {
+          "bytes": 945155,
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+          "semantics": {
+            "empty_function_objects": 0,
+            "entry_count": 197,
+            "loot_and_item_modifier_json_parsed": 19,
+            "target_entries": [
+              "data/minecraft/loot_table/chests/illager_mansion/library_chest.json",
+              "data/minecraft/loot_table/chests/illager_mansion/secret_room.json"
+            ],
+            "zip_crc": "PASS"
+          },
+          "sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E"
+        },
+        "client_tracks": {
+          "bytes": 165818,
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\tracks-neoforge-1.21.1-1.0.1.jar",
+          "semantics": {
+            "corrected_tags": {
+              "data/create/tags/block/safe_nbt.json": [
+                "tracks:track_mount"
+              ],
+              "data/minecraft/tags/block/mineable/pickaxe.json": [
+                "tracks:track_mount"
+              ]
+            },
+            "entry_count": 184,
+            "zip_crc": "PASS"
+          },
+          "sha256": "3119FA84955907FD734EF77F2296EC2E546F4442BC3AE13B04046C5D71F61CCF"
+        },
+        "server_dnt": {
+          "bytes": 945155,
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+          "semantics": {
+            "empty_function_objects": 0,
+            "entry_count": 197,
+            "loot_and_item_modifier_json_parsed": 19,
+            "target_entries": [
+              "data/minecraft/loot_table/chests/illager_mansion/library_chest.json",
+              "data/minecraft/loot_table/chests/illager_mansion/secret_room.json"
+            ],
+            "zip_crc": "PASS"
+          },
+          "sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E"
+        },
+        "server_tracks": {
+          "bytes": 165818,
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\tracks-neoforge-1.21.1-1.0.1.jar",
+          "semantics": {
+            "corrected_tags": {
+              "data/create/tags/block/safe_nbt.json": [
+                "tracks:track_mount"
+              ],
+              "data/minecraft/tags/block/mineable/pickaxe.json": [
+                "tracks:track_mount"
+              ]
+            },
+            "entry_count": 184,
+            "zip_crc": "PASS"
+          },
+          "sha256": "3119FA84955907FD734EF77F2296EC2E546F4442BC3AE13B04046C5D71F61CCF"
+        }
+      },
+      "irons_spellbooks": {
+        "client": {
+          "bytes": 13584342,
+          "debug_ring_entry": "ABSENT",
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\irons_spellbooks-1.21.1-3.15.6.jar",
+          "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB"
+        },
+        "server": {
+          "bytes": 13584342,
+          "debug_ring_entry": "ABSENT",
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\irons_spellbooks-1.21.1-3.15.6.jar",
+          "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB"
+        }
+      },
+      "mcmodsync_active_hits": {
+        "client": [],
+        "server": []
+      },
+      "mod_counts": {
+        "client": 247,
+        "server": 236
+      },
+      "protected": {
+        "client_config": {
+          "bytes": 2532744,
+          "files": 631,
+          "manifest_sha256": "312BD0CB0DA73E6FB47C991A92C09D4BFFA379C7D366E83B2C2C4549FC825917",
+          "method": "full-content-sha256-manifest"
+        },
+        "client_maid_js": "ABSENT",
+        "server_config": {
+          "bytes": 17354884,
+          "files": 871,
+          "manifest_sha256": "5A76C8F74BC16599D01CAB0CB4CB9072204DCB3F5E3E6BEB48E6467A669D6366",
+          "method": "full-content-sha256-manifest"
+        },
+        "server_maid_js": {
+          "bytes": 119,
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\server_scripts\\maid.js",
+          "sha256": "FA458896BC728721995925563DD491F7ED54073FD1A94A5AE87004C66E4990F4"
+        },
+        "server_world": {
+          "bytes": 9922193847,
+          "content_manifest_sha256": "26552E02146F93C5E8507A3E64141A0BA870DF2983AFA33301C3A7428CBD194F",
+          "files": 5821,
+          "fully_hashed_bytes": 7611913,
+          "metadata_manifest_sha256": "175AC29588705F6ADB1ACAD59A07DFF48D90E947DC2D957EB18D8C2D2BF963D8",
+          "method": "all-path-size-mtime + full non-region hashes + 3-point region samples",
+          "region_files": 5286,
+          "sampled_region_bytes": 48937404
+        }
+      },
+      "ring_after": {
+        "client": "ABSENT",
+        "server": "ABSENT"
+      },
+      "sources": {
+        "dnt": {
+          "bytes": 945155,
+          "path": "D:\\Trans\\migration-audit-work\\attempt10-loot-followup-fixes-20260814\\jars\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+          "semantics": {
+            "empty_function_objects": 0,
+            "entry_count": 197,
+            "loot_and_item_modifier_json_parsed": 19,
+            "target_entries": [
+              "data/minecraft/loot_table/chests/illager_mansion/library_chest.json",
+              "data/minecraft/loot_table/chests/illager_mansion/secret_room.json"
+            ],
+            "zip_crc": "PASS"
+          },
+          "sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E"
+        },
+        "tracks": {
+          "bytes": 165818,
+          "path": "D:\\Trans\\migration-audit-work\\tracks-tag-fix-artifacts-20260814\\tracks-neoforge-1.21.1-1.0.1-block-tag-fix.1.jar",
+          "semantics": {
+            "corrected_tags": {
+              "data/create/tags/block/safe_nbt.json": [
+                "tracks:track_mount"
+              ],
+              "data/minecraft/tags/block/mineable/pickaxe.json": [
+                "tracks:track_mount"
+              ]
+            },
+            "entry_count": 184,
+            "zip_crc": "PASS"
+          },
+          "sha256": "3119FA84955907FD734EF77F2296EC2E546F4442BC3AE13B04046C5D71F61CCF"
+        }
+      }
+    },
+    "prestate": {
+      "installed_before": {
+        "client_dnt": {
+          "artifact_changed_entries": [
+            "data/minecraft/loot_table/chests/illager_mansion/library_chest.json",
+            "data/minecraft/loot_table/chests/illager_mansion/secret_room.json"
+          ],
+          "bytes": 945261,
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+          "sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39"
+        },
+        "client_tracks": {
+          "artifact_changed_entries": [
+            "data/create/tags/block/safe_nbt.json",
+            "data/minecraft/tags/block/mineable/pickaxe.json"
+          ],
+          "bytes": 165882,
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\tracks-neoforge-1.21.1-1.0.1.jar",
+          "sha256": "B5022C73AE4A36E8798D1E57D8128EB42DA2964C6E38C722D2AD7CCD2FF443E5"
+        },
+        "server_dnt": {
+          "artifact_changed_entries": [
+            "data/minecraft/loot_table/chests/illager_mansion/library_chest.json",
+            "data/minecraft/loot_table/chests/illager_mansion/secret_room.json"
+          ],
+          "bytes": 945261,
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+          "sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39"
+        },
+        "server_tracks": {
+          "artifact_changed_entries": [
+            "data/create/tags/block/safe_nbt.json",
+            "data/minecraft/tags/block/mineable/pickaxe.json"
+          ],
+          "bytes": 165882,
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\tracks-neoforge-1.21.1-1.0.1.jar",
+          "sha256": "B5022C73AE4A36E8798D1E57D8128EB42DA2964C6E38C722D2AD7CCD2FF443E5"
+        }
+      },
+      "irons_spellbooks": {
+        "client": {
+          "bytes": 13584342,
+          "debug_ring_entry": "ABSENT",
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\irons_spellbooks-1.21.1-3.15.6.jar",
+          "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB"
+        },
+        "server": {
+          "bytes": 13584342,
+          "debug_ring_entry": "ABSENT",
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\irons_spellbooks-1.21.1-3.15.6.jar",
+          "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB"
+        }
+      },
+      "mcmodsync_active_hits": {
+        "client": [],
+        "server": []
+      },
+      "mod_counts": {
+        "client": 247,
+        "server": 236
+      },
+      "protected": {
+        "client_config": {
+          "bytes": 2532744,
+          "files": 631,
+          "manifest_sha256": "312BD0CB0DA73E6FB47C991A92C09D4BFFA379C7D366E83B2C2C4549FC825917",
+          "method": "full-content-sha256-manifest"
+        },
+        "client_maid_js": "ABSENT",
+        "server_config": {
+          "bytes": 17354884,
+          "files": 871,
+          "manifest_sha256": "5A76C8F74BC16599D01CAB0CB4CB9072204DCB3F5E3E6BEB48E6467A669D6366",
+          "method": "full-content-sha256-manifest"
+        },
+        "server_maid_js": {
+          "bytes": 119,
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\server_scripts\\maid.js",
+          "sha256": "FA458896BC728721995925563DD491F7ED54073FD1A94A5AE87004C66E4990F4"
+        },
+        "server_world": {
+          "bytes": 9922193847,
+          "content_manifest_sha256": "26552E02146F93C5E8507A3E64141A0BA870DF2983AFA33301C3A7428CBD194F",
+          "files": 5821,
+          "fully_hashed_bytes": 7611913,
+          "metadata_manifest_sha256": "175AC29588705F6ADB1ACAD59A07DFF48D90E947DC2D957EB18D8C2D2BF963D8",
+          "method": "all-path-size-mtime + full non-region hashes + 3-point region samples",
+          "region_files": 5286,
+          "sampled_region_bytes": 48937404
+        }
+      },
+      "ring_before": {
+        "bytes": 466,
+        "classification": "official-pack orphan test override",
+        "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\data\\irons_spellbooks\\loot_table\\test\\ring_gen_break_me.json",
+        "sha256": "C836FCE6BE894AB5C5004692A4F2215B6FCCAF7EE88848E2F476CC3C0F189636",
+        "spells": [
+          "none"
+        ]
+      },
+      "sources": {
+        "dnt": {
+          "bytes": 945155,
+          "path": "D:\\Trans\\migration-audit-work\\attempt10-loot-followup-fixes-20260814\\jars\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+          "semantics": {
+            "empty_function_objects": 0,
+            "entry_count": 197,
+            "loot_and_item_modifier_json_parsed": 19,
+            "target_entries": [
+              "data/minecraft/loot_table/chests/illager_mansion/library_chest.json",
+              "data/minecraft/loot_table/chests/illager_mansion/secret_room.json"
+            ],
+            "zip_crc": "PASS"
+          },
+          "sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E"
+        },
+        "tracks": {
+          "bytes": 165818,
+          "path": "D:\\Trans\\migration-audit-work\\tracks-tag-fix-artifacts-20260814\\tracks-neoforge-1.21.1-1.0.1-block-tag-fix.1.jar",
+          "semantics": {
+            "corrected_tags": {
+              "data/create/tags/block/safe_nbt.json": [
+                "tracks:track_mount"
+              ],
+              "data/minecraft/tags/block/mineable/pickaxe.json": [
+                "tracks:track_mount"
+              ]
+            },
+            "entry_count": 184,
+            "zip_crc": "PASS"
+          },
+          "sha256": "3119FA84955907FD734EF77F2296EC2E546F4442BC3AE13B04046C5D71F61CCF"
+        }
+      }
+    },
+    "protected_unchanged": true,
+    "transaction": "COMMITTED",
+    "world_changes": 0
+  },
+  "generated_at_utc": "2026-08-14T10:23:17.068405+00:00",
+  "java_started": false,
+  "mode": "apply",
+  "protected_paths": [
+    "server/world/**",
+    "server/config/**",
+    "client/config/**",
+    "server/kubejs/server_scripts/maid.js"
+  ],
+  "schema": "mechanomania-attempt11-followup-transaction/v1",
+  "status": "PASS",
+  "targets": {
+    "client": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814",
+    "server": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814"
+  }
+}

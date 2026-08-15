@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:leaves"
+    }
+  ],
+  "results": [
+    {
+      "count": 3,
+      "id": "ultramarine:large_leaf_pile"
+    }
+  ]
+}

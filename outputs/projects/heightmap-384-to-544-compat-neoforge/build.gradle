@@ -1,0 +1,91 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.95'
+}
+
+group = mod_group_id
+version = mod_version
+
+base {
+    archivesName = 'heightmap-384-to-544-compat'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+def runtimeMinecraftJar = file(project.runtime_minecraft_jar)
+def runtimeNeoForgeJar = file(project.runtime_neoforge_jar)
+
+dependencies {
+    testImplementation 'org.ow2.asm:asm:9.8'
+    testImplementation 'org.ow2.asm:asm-tree:9.8'
+}
+
+def sha256 = { File input ->
+    def digest = java.security.MessageDigest.getInstance('SHA-256')
+    input.withInputStream { stream ->
+        byte[] buffer = new byte[8192]
+        for (int read = stream.read(buffer); read >= 0; read = stream.read(buffer)) {
+            if (read > 0) digest.update(buffer, 0, read)
+        }
+    }
+    digest.digest().collect { String.format('%02X', it) }.join()
+}
+
+tasks.register('verifyRuntimeInputs') {
+    doLast {
+        assert runtimeMinecraftJar.isFile(): "Missing runtime Minecraft JAR: ${runtimeMinecraftJar}"
+        assert sha256(runtimeMinecraftJar).equalsIgnoreCase(project.runtime_minecraft_sha256):
+                "Runtime Minecraft SHA-256 mismatch: ${sha256(runtimeMinecraftJar)}"
+        assert runtimeNeoForgeJar.isFile(): "Missing NeoForge JAR: ${runtimeNeoForgeJar}"
+        assert sha256(runtimeNeoForgeJar).equalsIgnoreCase(project.runtime_neoforge_sha256):
+                "Runtime NeoForge SHA-256 mismatch: ${sha256(runtimeNeoForgeJar)}"
+    }
+}
+
+def tomlProperties = [
+        'loader_version_range', 'mod_license', 'mod_id', 'mod_version',
+        'mod_name', 'mod_authors', 'mod_description', 'neo_version_range',
+        'minecraft_version_range'
+].collectEntries { key -> [key, project.property(key).toString()] }
+
+tasks.named('processResources') {
+    inputs.properties(tomlProperties)
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand(tomlProperties)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    dependsOn tasks.named('verifyRuntimeInputs')
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('heightmapContractTest', JavaExec) {
+    group = 'verification'
+    description = 'Runs codec tests and verifies the exact 1.21.1 runtime and compiled mixin contract.'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.migration.heightmap_384_to_544_compat.Heightmap384To544CompatTest'
+    systemProperty 'runtimeMinecraftJar', runtimeMinecraftJar.absolutePath
+    systemProperty 'runtimeNeoForgeJar', runtimeNeoForgeJar.absolutePath
+}
+
+tasks.named('check') {
+    dependsOn tasks.named('heightmapContractTest')
+}
+
+tasks.named('jar') {
+    dependsOn tasks.named('verifyRuntimeInputs')
+    archiveFileName = "heightmap-384-to-544-compat-${project.mod_version}.jar"
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}

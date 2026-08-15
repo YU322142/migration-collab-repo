@@ -1,0 +1,8 @@
+{
+  "mix_type": "potion",
+  "from": "apothic_attributes:levitation",
+  "ingredient": {
+    "item": "irons_spellbooks:arcane_rune"
+  },
+  "to": "apothic_attributes:flying"
+}

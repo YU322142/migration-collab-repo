@@ -1,0 +1,25 @@
+{
+"item.darkdoppelganger.summon_scroll": "召唤卷轴",
+"item.darkdoppelganger.shadow_orb": "暗影宝珠",
+"item.darkdoppelganger.doppelganger_ring": "分身戒指",
+"item.darkdoppelganger.elder_necklace": "长老项链",
+"item.darkdoppelganger.summons_necklace": "召唤师项链",
+"itemGroup.darkdoppelganger.example_tab": "黑暗分身",
+"item.darkdoppelganger.summon_scroll.tooltip": "使用此卷轴召唤黑暗分身！",
+"advancement.kill_dark_doppelganger.title": "黑暗分身杀手",
+"advancement.kill_dark_doppelganger.description": "击败黑暗分身！",
+
+"advancement.summon_dark_doppelganger.title": "黑暗分身觉醒",
+"advancement.summon_dark_doppelganger.description": "使用召唤卷轴召唤黑暗分身。",
+
+"spell.irons_spellbooks.doppel_portal": "跳跃传送",
+"spell.darkdoppelganger.doppel_portal": "跳跃传送",
+"tooltip.doppelganger.passive_ability": "被动技能冷却时间：%s 秒",
+"tooltip.doppelganger.health_bonus": "获得 +%s 最大生命值",
+"tooltip.doppelganger.cooldown_reduction": "减少冷却时间%s",
+
+"itemGroup.items.darkdoppelganger": "黑暗分身",
+"itemGroup.item.darkdoppelganger": "黑暗分身",
+
+"spell.irons_spellbooks.doppel_portal.guide": "从你面前召唤的传送门进入，然后从几格外的另一个传送门离开。"
+}

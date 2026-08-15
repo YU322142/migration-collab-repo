@@ -1,0 +1,30 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "c:dyes/red"
+    },
+    {
+      "item": "ultramarine:white_dye_powder"
+    },
+    {
+      "tag": "c:dyes/cyan"
+    },
+    {
+      "item": "ultramarine:architrave_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:red_and_cyan_carved_architrave"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:architrave_template"
+    }
+  ]
+}

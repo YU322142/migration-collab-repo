@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "S'ha establert el punt de reaparició a %s, %s, %s [%s, %s] a %s per %s",
+  "commands.spawnpoint.success.multiple.new": "S'ha establert el punt de reaparició a %s, %s, %s [%s, %s] a %s pels jugadors %s"
+}

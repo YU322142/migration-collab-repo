@@ -1,0 +1,143 @@
+plugins {
+    id 'dev.architectury.loom' version '1.13-SNAPSHOT' apply false
+    id 'architectury-plugin' version '3.4-SNAPSHOT'
+    id 'com.github.johnrengelman.shadow' version '8.1.1' apply false
+}
+
+architectury {
+    minecraft = project.minecraft_version
+}
+
+allprojects {
+    group = rootProject.maven_group
+    version = rootProject.mod_version
+}
+
+subprojects {
+    apply plugin: 'dev.architectury.loom'
+    apply plugin: 'architectury-plugin'
+    apply plugin: 'maven-publish'
+
+    base {
+        // Set up a suffixed format for the mod jar names, e.g. `example-fabric`.
+        archivesName = "$rootProject.archives_name-$project.name"
+    }
+
+    repositories {
+        // Add repositories to retrieve artifacts from in here.
+        // You should only use this when depending on other mods because
+        // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+        // See https://docs.gradle.org/current/userguide/declaring_repositories.html
+        // for more information about repositories.
+        mavenCentral()
+        mavenLocal()
+        maven { url "https://maven.shedaniel.me/" }
+    }
+
+    dependencies {
+        minecraft "net.minecraft:minecraft:$rootProject.minecraft_version"
+        mappings loom.officialMojangMappings()
+
+        implementation("kr.zzik2:zreflex:$rootProject.zreflex_version")
+    }
+
+    java {
+        // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
+        // if it is present.
+        // If you remove this line, sources will not be generated.
+        withSourcesJar()
+
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        it.options.release = 21
+    }
+
+    // Configure Maven publishing.
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                artifactId = base.archivesName.get()
+                from components.java
+            }
+        }
+
+        // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
+        repositories {
+            // Add repositories to publish to here.
+            // Notice: This block does NOT have the same function as the block in the top level.
+            // The repositories here will be used for publishing your artifact, not for
+            // retrieving dependencies.
+        }
+    }
+
+    pluginManager.withPlugin('com.github.johnrengelman.shadow') {
+        shadowJar {
+            def netMinecraftDir = rootProject.file('common/src/main/java/net/minecraft')
+            if (netMinecraftDir.exists()) {
+                netMinecraftDir.eachFileRecurse(groovy.io.FileType.FILES) { file ->
+                    if (file.name.endsWith('.java')) {
+                        def relativePath = netMinecraftDir.toPath().relativize(file.toPath()).toString()
+                        def className = relativePath.replace(File.separator, '.').replace('.java', '')
+                        relocate "net.minecraft.$className", "zzik2.barched.minecraft.$className"
+                    }
+                }
+            }
+        }
+    }
+}
+
+tasks.register('applyPatches') {
+    group = 'patching'
+    description = 'Apply all patches from the patches/ directory.'
+    doLast {
+        def patchDir = file("patches")
+        if (!patchDir.exists()) {
+            throw new GradleException("patches/ directory does not exist.")
+        }
+        def patches = patchDir.listFiles()
+                .findAll { it.name.endsWith('.patch') }
+                .sort { it.name }
+        if (patches.isEmpty()) {
+            logger.lifecycle("No patch files to apply.")
+            return
+        }
+        patches.each { patch ->
+            logger.lifecycle("Applying patch: ${patch.name}")
+            exec {
+                commandLine 'git', 'apply', '--check', '--ignore-space-change', '--ignore-whitespace', patch.absolutePath
+            }
+            exec {
+                commandLine 'git', 'apply', '--ignore-space-change', '--ignore-whitespace', patch.absolutePath
+            }
+        }
+        logger.lifecycle("${patches.size()} patch(es) applied successfully.")
+    }
+}
+tasks.register('revertPatches') {
+    group = 'patching'
+    description = 'Revert all applied patches.'
+    doLast {
+        def patchDir = file("patches")
+        if (!patchDir.exists()) {
+            throw new GradleException("patches/ directory does not exist.")
+        }
+        def patches = patchDir.listFiles()
+                .findAll { it.name.endsWith('.patch') }
+                .sort { it.name }
+                .reverse()
+        if (patches.isEmpty()) {
+            logger.lifecycle("No patch files to revert.")
+            return
+        }
+        patches.each { patch ->
+            logger.lifecycle("Reverting patch: ${patch.name}")
+            exec {
+                commandLine 'git', 'apply', '--reverse', '--ignore-space-change', '--ignore-whitespace', patch.absolutePath
+            }
+        }
+        logger.lifecycle("${patches.size()} patch(es) reverted successfully.")
+    }
+}

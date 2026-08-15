@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Establecer el punto de aparición en %s, %s, %s [%s, %s] en %s para %s",
+  "commands.spawnpoint.success.multiple.new": "Establecer el punto de aparición en %s, %s, %s [%s, %s] en %s para %s jugadores"
+}

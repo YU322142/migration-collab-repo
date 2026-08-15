@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Atsiradimo vieta nustatyta į %s, %s, %s [%s, %s] %s %s",
+  "commands.spawnpoint.success.multiple.new": "Atsiradimo vieta nustatyta į %s, %s, %s [%s, %s] %s žaidėjui %s"
+}

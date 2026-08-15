@@ -1,0 +1,30 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "item": "ultramarine:gold_dye_powder"
+    },
+    {
+      "tag": "c:dyes/red"
+    },
+    {
+      "tag": "c:dyes/red"
+    },
+    {
+      "item": "ultramarine:carved_wood_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:carved_red_pillar"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:carved_wood_template"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "%7$s oyuncular üçün %6$s ölçüsündəki başlanğıc nöqtəsi %1$s, %2$s, %3$s, [%4$s, %5$s] olaraq təyin olundu",
+  "commands.spawnpoint.success.multiple.new": "%7$s oyuncu üçün %6$s ölçüsündəki başlanğıc nöqtəsi %1$s, %2$s, %3$s, [%4$s, %5$s] olaraq təyin olundu"
+}

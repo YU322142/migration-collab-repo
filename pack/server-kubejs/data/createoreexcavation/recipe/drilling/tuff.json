@@ -1,0 +1,21 @@
+{
+  "type": "createoreexcavation:drilling",
+  "drill": {
+    "tag": "createoreexcavation:drills"
+  },
+  "fluid": {
+    "amount": 3,
+    "ingredient": {
+      "fluid": "kubejs:coolant"
+    }
+  },
+  "output": [
+    {
+      "id": "kubejs:compressed_tuff"
+    }
+  ],
+  "priority": 0,
+  "stress": 256,
+  "ticks": 600,
+  "veinId": "createoreexcavation:ore_vein_type/tuff"
+}

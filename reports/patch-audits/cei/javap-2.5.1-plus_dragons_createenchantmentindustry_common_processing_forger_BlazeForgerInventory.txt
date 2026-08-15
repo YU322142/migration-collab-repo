@@ -1,0 +1,1916 @@
+﻿Compiled from "BlazeForgerInventory.java"
+public class plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory extends net.neoforged.neoforge.items.ItemStackHandler {
+  private final plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerBlockEntity forger;
+    descriptor: Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+
+  private int cost;
+    descriptor: I
+
+  private plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerMode operation;
+    descriptor: Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+
+  private boolean conflicting;
+    descriptor: Z
+
+  private boolean overCap;
+    descriptor: Z
+
+  private plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$Result result;
+    descriptor: Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+
+  public plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory(plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerBlockEntity);
+    descriptor: (Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;)V
+    Code:
+       0: aload_0
+       1: bipush        6
+       3: invokespecial #1                  // Method net/neoforged/neoforge/items/ItemStackHandler."<init>":(I)V
+       6: aload_0
+       7: invokestatic  #7                  // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.emptyInput:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      10: putfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      13: aload_0
+      14: aload_1
+      15: putfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+      18: aload_0
+      19: getstatic     #23                 // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.MERGE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      22: putfield      #29                 // Field operation:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      25: aload_0
+      26: iconst_0
+      27: putfield      #32                 // Field conflicting:Z
+      30: aload_0
+      31: iconst_0
+      32: putfield      #36                 // Field overCap:Z
+      35: return
+
+  public int getSlotLimit(int);
+    descriptor: (I)I
+    Code:
+       0: iconst_1
+       1: ireturn
+
+  public int getSlots();
+    descriptor: ()I
+    Code:
+       0: iconst_4
+       1: ireturn
+
+  public net.minecraft.world.item.ItemStack insertItem(int, net.minecraft.world.item.ItemStack, boolean);
+    descriptor: (ILnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/world/item/ItemStack;
+    Code:
+       0: iload_1
+       1: iconst_1
+       2: if_icmple     7
+       5: aload_2
+       6: areturn
+       7: aload_0
+       8: invokevirtual #39                 // Method hasRemainingOutput:()Z
+      11: ifeq          16
+      14: aload_2
+      15: areturn
+      16: aload_0
+      17: iload_1
+      18: aload_2
+      19: iload_3
+      20: invokespecial #43                 // Method net/neoforged/neoforge/items/ItemStackHandler.insertItem:(ILnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/world/item/ItemStack;
+      23: areturn
+
+  protected void onLoad();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+       4: invokevirtual #47                 // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.getLevel:()Lnet/minecraft/world/level/Level;
+       7: astore_1
+       8: aload_1
+       9: ifnull        23
+      12: aload_1
+      13: getfield      #53                 // Field net/minecraft/world/level/Level.isClientSide:Z
+      16: ifne          23
+      19: aload_0
+      20: invokevirtual #58                 // Method updateResult:()V
+      23: return
+
+  protected void onContentsChanged(int);
+    descriptor: (I)V
+    Code:
+       0: iload_1
+       1: ifeq          9
+       4: iload_1
+       5: iconst_1
+       6: if_icmpne     13
+       9: aload_0
+      10: invokevirtual #58                 // Method updateResult:()V
+      13: aload_0
+      14: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+      17: invokevirtual #62                 // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.notifyUpdate:()V
+      20: return
+
+  public void deserializeNBT(net.minecraft.core.HolderLookup$Provider, net.minecraft.nbt.CompoundTag);
+    descriptor: (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/nbt/CompoundTag;)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: invokespecial #65                 // Method net/neoforged/neoforge/items/ItemStackHandler.deserializeNBT:(Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/nbt/CompoundTag;)V
+       6: aload_0
+       7: aload_2
+       8: ldc           #69                 // String Cost
+      10: invokevirtual #71                 // Method net/minecraft/nbt/CompoundTag.getInt:(Ljava/lang/String;)I
+      13: putfield      #77                 // Field cost:I
+      16: aload_2
+      17: ldc           #81                 // String Operation
+      19: iconst_3
+      20: invokevirtual #85                 // Method net/minecraft/nbt/CompoundTag.contains:(Ljava/lang/String;I)Z
+      23: ifeq          50
+      26: aload_0
+      27: getstatic     #89                 // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.BY_ID:Ljava/util/function/IntFunction;
+      30: aload_2
+      31: ldc           #81                 // String Operation
+      33: invokevirtual #71                 // Method net/minecraft/nbt/CompoundTag.getInt:(Ljava/lang/String;)I
+      36: invokeinterface #93,  2           // InterfaceMethod java/util/function/IntFunction.apply:(I)Ljava/lang/Object;
+      41: checkcast     #24                 // class plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode
+      44: putfield      #29                 // Field operation:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      47: goto          63
+      50: aload_0
+      51: aload_2
+      52: ldc           #99                 // String Mode
+      54: invokevirtual #71                 // Method net/minecraft/nbt/CompoundTag.getInt:(Ljava/lang/String;)I
+      57: invokestatic  #101                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.fromLegacyOperation:(I)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      60: putfield      #29                 // Field operation:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      63: aload_0
+      64: aload_2
+      65: ldc           #105                // String Conflicting
+      67: invokevirtual #107                // Method net/minecraft/nbt/CompoundTag.getBoolean:(Ljava/lang/String;)Z
+      70: putfield      #32                 // Field conflicting:Z
+      73: aload_0
+      74: aload_2
+      75: ldc           #111                // String OverCap
+      77: invokevirtual #107                // Method net/minecraft/nbt/CompoundTag.getBoolean:(Ljava/lang/String;)Z
+      80: putfield      #36                 // Field overCap:Z
+      83: aload_0
+      84: invokevirtual #58                 // Method updateResult:()V
+      87: return
+
+  public net.minecraft.nbt.CompoundTag serializeNBT(net.minecraft.core.HolderLookup$Provider);
+    descriptor: (Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/CompoundTag;
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #113                // Method net/neoforged/neoforge/items/ItemStackHandler.serializeNBT:(Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/CompoundTag;
+       5: astore_2
+       6: aload_2
+       7: ldc           #69                 // String Cost
+       9: aload_0
+      10: getfield      #77                 // Field cost:I
+      13: invokevirtual #117                // Method net/minecraft/nbt/CompoundTag.putInt:(Ljava/lang/String;I)V
+      16: aload_2
+      17: ldc           #81                 // String Operation
+      19: aload_0
+      20: getfield      #29                 // Field operation:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      23: invokevirtual #121                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.ordinal:()I
+      26: invokevirtual #117                // Method net/minecraft/nbt/CompoundTag.putInt:(Ljava/lang/String;I)V
+      29: aload_2
+      30: ldc           #105                // String Conflicting
+      32: aload_0
+      33: getfield      #32                 // Field conflicting:Z
+      36: invokevirtual #125                // Method net/minecraft/nbt/CompoundTag.putBoolean:(Ljava/lang/String;Z)V
+      39: aload_2
+      40: ldc           #111                // String OverCap
+      42: aload_0
+      43: getfield      #36                 // Field overCap:Z
+      46: invokevirtual #125                // Method net/minecraft/nbt/CompoundTag.putBoolean:(Ljava/lang/String;Z)V
+      49: aload_2
+      50: areturn
+
+  public plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$Result getLastResult();
+    descriptor: ()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+       4: areturn
+
+  public boolean hasRemainingOutput();
+    descriptor: ()Z
+    Code:
+       0: aload_0
+       1: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+       4: iconst_2
+       5: invokevirtual #133                // Method net/minecraft/core/NonNullList.get:(I)Ljava/lang/Object;
+       8: checkcast     #138                // class net/minecraft/world/item/ItemStack
+      11: invokevirtual #140                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      14: ifeq          34
+      17: aload_0
+      18: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+      21: iconst_3
+      22: invokevirtual #133                // Method net/minecraft/core/NonNullList.get:(I)Ljava/lang/Object;
+      25: checkcast     #138                // class net/minecraft/world/item/ItemStack
+      28: invokevirtual #140                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      31: ifne          38
+      34: iconst_1
+      35: goto          39
+      38: iconst_0
+      39: ireturn
+
+  protected int getExperienceCost();
+    descriptor: ()I
+    Code:
+       0: aload_0
+       1: getfield      #77                 // Field cost:I
+       4: ifne          11
+       7: iconst_0
+       8: goto          18
+      11: aload_0
+      12: getfield      #77                 // Field cost:I
+      15: invokestatic  #143                // Method plus/dragons/createenchantmentindustry/common/fluids/experience/ExperienceHelper.getExperienceForTotalLevel:(I)I
+      18: ireturn
+
+  protected net.minecraft.world.item.ItemStack extractInput(int, boolean);
+    descriptor: (IZ)Lnet/minecraft/world/item/ItemStack;
+    Code:
+       0: aload_0
+       1: iload_1
+       2: invokevirtual #149                // Method validateSlotIndex:(I)V
+       5: aload_0
+       6: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+       9: iload_1
+      10: invokevirtual #133                // Method net/minecraft/core/NonNullList.get:(I)Ljava/lang/Object;
+      13: checkcast     #138                // class net/minecraft/world/item/ItemStack
+      16: astore_3
+      17: aload_3
+      18: invokevirtual #140                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      21: ifeq          28
+      24: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      27: areturn
+      28: iload_2
+      29: ifne          40
+      32: aload_0
+      33: iload_1
+      34: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      37: invokevirtual #156                // Method setStackInSlot:(ILnet/minecraft/world/item/ItemStack;)V
+      40: aload_3
+      41: invokevirtual #160                // Method net/minecraft/world/item/ItemStack.copy:()Lnet/minecraft/world/item/ItemStack;
+      44: areturn
+
+  protected net.minecraft.world.item.ItemStack getResult(int);
+    descriptor: (I)Lnet/minecraft/world/item/ItemStack;
+    Code:
+       0: iload_1
+       1: iflt          9
+       4: iload_1
+       5: iconst_2
+       6: if_icmplt     23
+       9: new           #164                // class java/lang/RuntimeException
+      12: dup
+      13: iload_1
+      14: invokedynamic #166,  0            // InvokeDynamic #0:makeConcatWithConstants:(I)Ljava/lang/String;
+      19: invokespecial #170                // Method java/lang/RuntimeException."<init>":(Ljava/lang/String;)V
+      22: athrow
+      23: aload_0
+      24: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+      27: iload_1
+      28: iconst_4
+      29: iadd
+      30: invokevirtual #133                // Method net/minecraft/core/NonNullList.get:(I)Ljava/lang/Object;
+      33: checkcast     #138                // class net/minecraft/world/item/ItemStack
+      36: areturn
+
+  protected void clearInput();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+       4: iconst_0
+       5: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+       8: invokevirtual #173                // Method net/minecraft/core/NonNullList.set:(ILjava/lang/Object;)Ljava/lang/Object;
+      11: pop
+      12: aload_0
+      13: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+      16: iconst_1
+      17: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      20: invokevirtual #173                // Method net/minecraft/core/NonNullList.set:(ILjava/lang/Object;)Ljava/lang/Object;
+      23: pop
+      24: aload_0
+      25: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+      28: iconst_4
+      29: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      32: invokevirtual #173                // Method net/minecraft/core/NonNullList.set:(ILjava/lang/Object;)Ljava/lang/Object;
+      35: pop
+      36: aload_0
+      37: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+      40: iconst_5
+      41: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      44: invokevirtual #173                // Method net/minecraft/core/NonNullList.set:(ILjava/lang/Object;)Ljava/lang/Object;
+      47: pop
+      48: aload_0
+      49: iconst_0
+      50: putfield      #77                 // Field cost:I
+      53: aload_0
+      54: invokestatic  #7                  // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.emptyInput:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      57: putfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      60: return
+
+  protected void clear();
+    descriptor: ()V
+    Code:
+       0: iconst_0
+       1: istore_1
+       2: iload_1
+       3: aload_0
+       4: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+       7: invokevirtual #177                // Method net/minecraft/core/NonNullList.size:()I
+      10: if_icmpge     31
+      13: aload_0
+      14: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+      17: iload_1
+      18: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      21: invokevirtual #173                // Method net/minecraft/core/NonNullList.set:(ILjava/lang/Object;)Ljava/lang/Object;
+      24: pop
+      25: iinc          1, 1
+      28: goto          2
+      31: aload_0
+      32: iconst_0
+      33: putfield      #77                 // Field cost:I
+      36: aload_0
+      37: invokestatic  #7                  // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.emptyInput:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      40: putfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      43: return
+
+  protected void applyResult();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: aload_0
+       2: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+       5: iconst_0
+       6: invokevirtual #133                // Method net/minecraft/core/NonNullList.get:(I)Ljava/lang/Object;
+       9: checkcast     #138                // class net/minecraft/world/item/ItemStack
+      12: aload_0
+      13: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+      16: iconst_1
+      17: invokevirtual #133                // Method net/minecraft/core/NonNullList.get:(I)Ljava/lang/Object;
+      20: checkcast     #138                // class net/minecraft/world/item/ItemStack
+      23: invokevirtual #180                // Method calculateResult:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      26: astore_1
+      27: aload_1
+      28: invokevirtual #184                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.valid:()Z
+      31: ifne          35
+      34: return
+      35: aload_1
+      36: invokevirtual #187                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.operation:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      39: astore_2
+      40: aload_1
+      41: invokevirtual #190                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.conflicting:()Z
+      44: istore_3
+      45: aload_1
+      46: invokevirtual #192                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.overCap:()Z
+      49: istore        4
+      51: aload_0
+      52: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+      55: iconst_2
+      56: aload_1
+      57: invokevirtual #194                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.primaryOutput:()Lnet/minecraft/world/item/ItemStack;
+      60: invokevirtual #160                // Method net/minecraft/world/item/ItemStack.copy:()Lnet/minecraft/world/item/ItemStack;
+      63: invokevirtual #173                // Method net/minecraft/core/NonNullList.set:(ILjava/lang/Object;)Ljava/lang/Object;
+      66: pop
+      67: aload_0
+      68: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+      71: iconst_3
+      72: aload_1
+      73: invokevirtual #197                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.secondaryOutput:()Lnet/minecraft/world/item/ItemStack;
+      76: invokevirtual #160                // Method net/minecraft/world/item/ItemStack.copy:()Lnet/minecraft/world/item/ItemStack;
+      79: invokevirtual #173                // Method net/minecraft/core/NonNullList.set:(ILjava/lang/Object;)Ljava/lang/Object;
+      82: pop
+      83: aload_0
+      84: invokevirtual #200                // Method clearInput:()V
+      87: aload_0
+      88: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+      91: getfield      #203                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.advancement:Lplus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour;
+      94: getstatic     #207                // Field plus/dragons/createenchantmentindustry/common/registry/CEIStats.FORGE:Lcom/tterrag/registrate/util/entry/RegistryEntry;
+      97: invokevirtual #213                // Method com/tterrag/registrate/util/entry/RegistryEntry.get:()Ljava/lang/Object;
+     100: checkcast     #218                // class net/minecraft/resources/ResourceLocation
+     103: iconst_1
+     104: invokevirtual #220                // Method plus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour.awardStat:(Lnet/minecraft/resources/ResourceLocation;I)V
+     107: aload_0
+     108: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     111: getfield      #226                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.special:Z
+     114: ifeq          178
+     117: aload_0
+     118: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     121: getfield      #203                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.advancement:Lplus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour;
+     124: getstatic     #229                // Field plus/dragons/createenchantmentindustry/common/registry/CEIStats.SUPER_ENCHANT:Lcom/tterrag/registrate/util/entry/RegistryEntry;
+     127: invokevirtual #213                // Method com/tterrag/registrate/util/entry/RegistryEntry.get:()Ljava/lang/Object;
+     130: checkcast     #218                // class net/minecraft/resources/ResourceLocation
+     133: iconst_1
+     134: invokevirtual #220                // Method plus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour.awardStat:(Lnet/minecraft/resources/ResourceLocation;I)V
+     137: iload         4
+     139: ifeq          158
+     142: aload_0
+     143: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     146: getfield      #203                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.advancement:Lplus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour;
+     149: getstatic     #232                // Field plus/dragons/createenchantmentindustry/common/registry/CEIAdvancements.TRANSCENDENT_OVERCLOCK:Lplus/dragons/createdragonsplus/common/advancements/CDPAdvancement;
+     152: invokevirtual #238                // Method plus/dragons/createdragonsplus/common/advancements/CDPAdvancement.builtinTrigger:()Lplus/dragons/createdragonsplus/common/advancements/criterion/BuiltinTrigger;
+     155: invokevirtual #244                // Method plus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour.trigger:(Lplus/dragons/createdragonsplus/common/advancements/criterion/BuiltinTrigger;)V
+     158: iload_3
+     159: ifeq          178
+     162: aload_0
+     163: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     166: getfield      #203                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.advancement:Lplus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour;
+     169: getstatic     #248                // Field plus/dragons/createenchantmentindustry/common/registry/CEIAdvancements.PARADOX_FUSION:Lplus/dragons/createdragonsplus/common/advancements/CDPAdvancement;
+     172: invokevirtual #238                // Method plus/dragons/createdragonsplus/common/advancements/CDPAdvancement.builtinTrigger:()Lplus/dragons/createdragonsplus/common/advancements/criterion/BuiltinTrigger;
+     175: invokevirtual #244                // Method plus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour.trigger:(Lplus/dragons/createdragonsplus/common/advancements/criterion/BuiltinTrigger;)V
+     178: aload_0
+     179: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     182: getfield      #203                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.advancement:Lplus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour;
+     185: getstatic     #251                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$1.$SwitchMap$plus$dragons$createenchantmentindustry$common$processing$forger$BlazeForgerMode:[I
+     188: aload_2
+     189: invokevirtual #121                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.ordinal:()I
+     192: iaload
+     193: tableswitch   { // 1 to 3
+
+                     1: 230
+
+                     2: 239
+
+                     3: 248
+               default: 220
+          }
+     220: new           #257                // class java/lang/MatchException
+     223: dup
+     224: aconst_null
+     225: aconst_null
+     226: invokespecial #259                // Method java/lang/MatchException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+     229: athrow
+     230: getstatic     #262                // Field plus/dragons/createenchantmentindustry/common/registry/CEIAdvancements.BLAZING_FUSION:Lplus/dragons/createdragonsplus/common/advancements/CDPAdvancement;
+     233: invokevirtual #238                // Method plus/dragons/createdragonsplus/common/advancements/CDPAdvancement.builtinTrigger:()Lplus/dragons/createdragonsplus/common/advancements/criterion/BuiltinTrigger;
+     236: goto          254
+     239: getstatic     #265                // Field plus/dragons/createenchantmentindustry/common/registry/CEIAdvancements.SIGIL_CASTING:Lplus/dragons/createdragonsplus/common/advancements/CDPAdvancement;
+     242: invokevirtual #238                // Method plus/dragons/createdragonsplus/common/advancements/CDPAdvancement.builtinTrigger:()Lplus/dragons/createdragonsplus/common/advancements/criterion/BuiltinTrigger;
+     245: goto          254
+     248: getstatic     #268                // Field plus/dragons/createenchantmentindustry/common/registry/CEIAdvancements.MAGIC_UNBINDING:Lplus/dragons/createdragonsplus/common/advancements/CDPAdvancement;
+     251: invokevirtual #238                // Method plus/dragons/createdragonsplus/common/advancements/CDPAdvancement.builtinTrigger:()Lplus/dragons/createdragonsplus/common/advancements/criterion/BuiltinTrigger;
+     254: invokevirtual #244                // Method plus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour.trigger:(Lplus/dragons/createdragonsplus/common/advancements/criterion/BuiltinTrigger;)V
+     257: return
+
+  protected void updateResult();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+       4: iconst_4
+       5: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+       8: invokevirtual #173                // Method net/minecraft/core/NonNullList.set:(ILjava/lang/Object;)Ljava/lang/Object;
+      11: pop
+      12: aload_0
+      13: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+      16: iconst_5
+      17: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      20: invokevirtual #173                // Method net/minecraft/core/NonNullList.set:(ILjava/lang/Object;)Ljava/lang/Object;
+      23: pop
+      24: aload_0
+      25: aload_0
+      26: aload_0
+      27: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+      30: iconst_0
+      31: invokevirtual #133                // Method net/minecraft/core/NonNullList.get:(I)Ljava/lang/Object;
+      34: checkcast     #138                // class net/minecraft/world/item/ItemStack
+      37: aload_0
+      38: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+      41: iconst_1
+      42: invokevirtual #133                // Method net/minecraft/core/NonNullList.get:(I)Ljava/lang/Object;
+      45: checkcast     #138                // class net/minecraft/world/item/ItemStack
+      48: invokevirtual #180                // Method calculateResult:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      51: putfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      54: aload_0
+      55: aload_0
+      56: getfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      59: invokevirtual #184                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.valid:()Z
+      62: ifeq          75
+      65: aload_0
+      66: getfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      69: invokevirtual #271                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.levelCost:()I
+      72: goto          76
+      75: iconst_0
+      76: putfield      #77                 // Field cost:I
+      79: aload_0
+      80: aload_0
+      81: getfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      84: invokevirtual #187                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.operation:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      87: putfield      #29                 // Field operation:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      90: aload_0
+      91: aload_0
+      92: getfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      95: invokevirtual #190                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.conflicting:()Z
+      98: putfield      #32                 // Field conflicting:Z
+     101: aload_0
+     102: aload_0
+     103: getfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     106: invokevirtual #192                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.overCap:()Z
+     109: putfield      #36                 // Field overCap:Z
+     112: aload_0
+     113: getfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     116: invokevirtual #184                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.valid:()Z
+     119: ifne          123
+     122: return
+     123: aload_0
+     124: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+     127: iconst_4
+     128: aload_0
+     129: getfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     132: invokevirtual #194                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.primaryOutput:()Lnet/minecraft/world/item/ItemStack;
+     135: invokevirtual #160                // Method net/minecraft/world/item/ItemStack.copy:()Lnet/minecraft/world/item/ItemStack;
+     138: invokevirtual #173                // Method net/minecraft/core/NonNullList.set:(ILjava/lang/Object;)Ljava/lang/Object;
+     141: pop
+     142: aload_0
+     143: getfield      #129                // Field stacks:Lnet/minecraft/core/NonNullList;
+     146: iconst_5
+     147: aload_0
+     148: getfield      #13                 // Field result:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     151: invokevirtual #197                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.secondaryOutput:()Lnet/minecraft/world/item/ItemStack;
+     154: invokevirtual #160                // Method net/minecraft/world/item/ItemStack.copy:()Lnet/minecraft/world/item/ItemStack;
+     157: invokevirtual #173                // Method net/minecraft/core/NonNullList.set:(ILjava/lang/Object;)Ljava/lang/Object;
+     160: pop
+     161: return
+
+  private plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$Result calculateResult(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+    Code:
+       0: aload_0
+       1: invokevirtual #274                // Method resetComputation:()V
+       4: aload_0
+       5: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+       8: invokevirtual #277                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.getMode:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      11: astore_3
+      12: aload_0
+      13: aload_3
+      14: putfield      #29                 // Field operation:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      17: aload_1
+      18: invokevirtual #140                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      21: ifeq          36
+      24: aload_2
+      25: invokevirtual #140                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      28: ifeq          36
+      31: aload_3
+      32: invokestatic  #280                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.emptyInput:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      35: areturn
+      36: aload_1
+      37: invokevirtual #140                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      40: ifeq          55
+      43: aload_3
+      44: getstatic     #283                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.MISSING_FIRST_INPUT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+      47: iconst_0
+      48: anewarray     #289                // class java/lang/Object
+      51: invokestatic  #291                // Method incomplete:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      54: areturn
+      55: aload_2
+      56: invokevirtual #140                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      59: ifeq          74
+      62: aload_3
+      63: getstatic     #295                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.MISSING_SECOND_INPUT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+      66: iconst_0
+      67: anewarray     #289                // class java/lang/Object
+      70: invokestatic  #291                // Method incomplete:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      73: areturn
+      74: aload_0
+      75: aload_1
+      76: aload_3
+      77: invokevirtual #298                // Method validateTemplateMode:(Lnet/minecraft/world/item/ItemStack;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      80: astore        4
+      82: aload         4
+      84: ifnull        90
+      87: aload         4
+      89: areturn
+      90: aload_0
+      91: aload_2
+      92: aload_3
+      93: invokevirtual #298                // Method validateTemplateMode:(Lnet/minecraft/world/item/ItemStack;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      96: astore        4
+      98: aload         4
+     100: ifnull        106
+     103: aload         4
+     105: areturn
+     106: aload_1
+     107: invokestatic  #302                // Method single:(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
+     110: astore        5
+     112: aload_2
+     113: invokestatic  #302                // Method single:(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
+     116: astore        6
+     118: getstatic     #251                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$1.$SwitchMap$plus$dragons$createenchantmentindustry$common$processing$forger$BlazeForgerMode:[I
+     121: aload_3
+     122: invokevirtual #121                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.ordinal:()I
+     125: iaload
+     126: tableswitch   { // 1 to 3
+
+                     1: 162
+
+                     2: 173
+
+                     3: 184
+               default: 152
+          }
+     152: new           #257                // class java/lang/MatchException
+     155: dup
+     156: aconst_null
+     157: aconst_null
+     158: invokespecial #259                // Method java/lang/MatchException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+     161: athrow
+     162: aload_0
+     163: aload         5
+     165: aload         6
+     167: invokevirtual #306                // Method calculateMerge:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     170: goto          192
+     173: aload_0
+     174: aload         5
+     176: aload         6
+     178: invokevirtual #309                // Method calculateApply:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     181: goto          192
+     184: aload_0
+     185: aload         5
+     187: aload         6
+     189: invokevirtual #312                // Method calculateExtract:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     192: astore        7
+     194: aload         7
+     196: invokevirtual #184                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.valid:()Z
+     199: ifne          205
+     202: aload         7
+     204: areturn
+     205: aload         7
+     207: invokevirtual #194                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.primaryOutput:()Lnet/minecraft/world/item/ItemStack;
+     210: invokevirtual #160                // Method net/minecraft/world/item/ItemStack.copy:()Lnet/minecraft/world/item/ItemStack;
+     213: astore        8
+     215: aload         7
+     217: invokevirtual #197                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.secondaryOutput:()Lnet/minecraft/world/item/ItemStack;
+     220: invokevirtual #160                // Method net/minecraft/world/item/ItemStack.copy:()Lnet/minecraft/world/item/ItemStack;
+     223: astore        9
+     225: aload         8
+     227: getstatic     #315                // Field net/minecraft/core/component/DataComponents.REPAIR_COST:Lnet/minecraft/core/component/DataComponentType;
+     230: iconst_0
+     231: invokestatic  #321                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     234: invokevirtual #327                // Method net/minecraft/world/item/ItemStack.getOrDefault:(Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Ljava/lang/Object;
+     237: checkcast     #322                // class java/lang/Integer
+     240: invokevirtual #331                // Method java/lang/Integer.intValue:()I
+     243: istore        10
+     245: aload_0
+     246: aload         8
+     248: aload         9
+     250: invokevirtual #334                // Method applyRepairCost:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V
+     253: aload         8
+     255: getstatic     #315                // Field net/minecraft/core/component/DataComponents.REPAIR_COST:Lnet/minecraft/core/component/DataComponentType;
+     258: iconst_0
+     259: invokestatic  #321                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+     262: invokevirtual #327                // Method net/minecraft/world/item/ItemStack.getOrDefault:(Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Ljava/lang/Object;
+     265: checkcast     #322                // class java/lang/Integer
+     268: invokevirtual #331                // Method java/lang/Integer.intValue:()I
+     271: istore        11
+     273: aload_3
+     274: aload         8
+     276: aload         9
+     278: aload_0
+     279: getfield      #77                 // Field cost:I
+     282: aload_0
+     283: getfield      #32                 // Field conflicting:Z
+     286: aload_0
+     287: getfield      #36                 // Field overCap:Z
+     290: iload         11
+     292: iload         10
+     294: if_icmple     301
+     297: iconst_1
+     298: goto          302
+     301: iconst_0
+     302: iload         10
+     304: iload         11
+     306: aload         7
+     308: invokevirtual #338                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.lostEnchantments:()Ljava/util/List;
+     311: invokestatic  #342                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.ready:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;IZZZIILjava/util/List;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     314: areturn
+
+  private plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$Result calculateMerge(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+    Code:
+       0: aload_1
+       1: invokestatic  #346                // Method getEnchantments:(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+       4: astore_3
+       5: aload_2
+       6: invokestatic  #346                // Method getEnchantments:(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+       9: astore        4
+      11: aload_1
+      12: invokestatic  #350                // Method isTemplate:(Lnet/minecraft/world/item/ItemStack;)Z
+      15: ifne          25
+      18: aload_2
+      19: invokestatic  #350                // Method isTemplate:(Lnet/minecraft/world/item/ItemStack;)Z
+      22: ifeq          75
+      25: aload_1
+      26: invokestatic  #354                // Method isFilledTemplate:(Lnet/minecraft/world/item/ItemStack;)Z
+      29: ifeq          39
+      32: aload_2
+      33: invokestatic  #354                // Method isFilledTemplate:(Lnet/minecraft/world/item/ItemStack;)Z
+      36: ifne          53
+      39: getstatic     #23                 // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.MERGE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      42: getstatic     #357                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.MERGE_REQUIRES_FILLED_TEMPLATES:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+      45: iconst_0
+      46: anewarray     #289                // class java/lang/Object
+      49: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      52: areturn
+      53: aload_1
+      54: aload_2
+      55: invokestatic  #363                // Method net/minecraft/world/item/ItemStack.isSameItem:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
+      58: ifne          151
+      61: getstatic     #23                 // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.MERGE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      64: getstatic     #367                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.TEMPLATE_TYPE_MISMATCH:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+      67: iconst_0
+      68: anewarray     #289                // class java/lang/Object
+      71: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      74: areturn
+      75: aload_1
+      76: getstatic     #370                // Field net/minecraft/world/item/Items.ENCHANTED_BOOK:Lnet/minecraft/world/item/Item;
+      79: invokevirtual #376                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/world/item/Item;)Z
+      82: ifne          95
+      85: aload_2
+      86: getstatic     #370                // Field net/minecraft/world/item/Items.ENCHANTED_BOOK:Lnet/minecraft/world/item/Item;
+      89: invokevirtual #376                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/world/item/Item;)Z
+      92: ifeq          129
+      95: aload_1
+      96: getstatic     #370                // Field net/minecraft/world/item/Items.ENCHANTED_BOOK:Lnet/minecraft/world/item/Item;
+      99: invokevirtual #376                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/world/item/Item;)Z
+     102: ifeq          115
+     105: aload_2
+     106: getstatic     #370                // Field net/minecraft/world/item/Items.ENCHANTED_BOOK:Lnet/minecraft/world/item/Item;
+     109: invokevirtual #376                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/world/item/Item;)Z
+     112: ifne          151
+     115: getstatic     #23                 // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.MERGE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     118: getstatic     #380                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.MERGE_REQUIRES_MATCHING_CARRIERS:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+     121: iconst_0
+     122: anewarray     #289                // class java/lang/Object
+     125: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     128: areturn
+     129: aload_1
+     130: aload_2
+     131: invokestatic  #363                // Method net/minecraft/world/item/ItemStack.isSameItem:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
+     134: ifne          151
+     137: getstatic     #23                 // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.MERGE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     140: getstatic     #380                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.MERGE_REQUIRES_MATCHING_CARRIERS:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+     143: iconst_0
+     144: anewarray     #289                // class java/lang/Object
+     147: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     150: areturn
+     151: aload_0
+     152: aload_1
+     153: aload_2
+     154: aload_3
+     155: aload         4
+     157: invokevirtual #383                // Method combineEnchantments:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentCombinationResult;
+     160: astore        5
+     162: aload         5
+     164: invokevirtual #387                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentCombinationResult.changed:()Z
+     167: ifne          189
+     170: getstatic     #23                 // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.MERGE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     173: getstatic     #392                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.WOULD_NOT_IMPROVE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+     176: aload         5
+     178: invokevirtual #395                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentCombinationResult.rejectedDescriptions:()Ljava/util/List;
+     181: iconst_0
+     182: anewarray     #289                // class java/lang/Object
+     185: invokestatic  #398                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;Ljava/util/List;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     188: areturn
+     189: getstatic     #23                 // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.MERGE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     192: aload_1
+     193: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+     196: aload_0
+     197: getfield      #77                 // Field cost:I
+     200: aload_0
+     201: getfield      #32                 // Field conflicting:Z
+     204: aload_0
+     205: getfield      #36                 // Field overCap:Z
+     208: iconst_0
+     209: iconst_0
+     210: iconst_0
+     211: aload         5
+     213: invokevirtual #401                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentCombinationResult.lostDescriptions:()Ljava/util/List;
+     216: invokestatic  #342                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.ready:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;IZZZIILjava/util/List;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     219: areturn
+
+  private plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$Result calculateApply(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+    Code:
+       0: aload_1
+       1: invokestatic  #346                // Method getEnchantments:(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+       4: astore_3
+       5: aload_2
+       6: invokestatic  #346                // Method getEnchantments:(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+       9: astore        4
+      11: aload_2
+      12: invokevirtual #404                // Method net/minecraft/world/item/ItemStack.getItem:()Lnet/minecraft/world/item/Item;
+      15: instanceof    #408                // class plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem
+      18: ifeq          217
+      21: aload_2
+      22: invokestatic  #354                // Method isFilledTemplate:(Lnet/minecraft/world/item/ItemStack;)Z
+      25: ifne          42
+      28: getstatic     #410                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      31: getstatic     #413                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.REQUIRES_FILLED_TEMPLATE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+      34: iconst_0
+      35: anewarray     #289                // class java/lang/Object
+      38: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      41: areturn
+      42: aload_1
+      43: invokevirtual #404                // Method net/minecraft/world/item/ItemStack.getItem:()Lnet/minecraft/world/item/Item;
+      46: instanceof    #408                // class plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem
+      49: ifeq          66
+      52: getstatic     #410                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      55: getstatic     #416                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.APPLY_REQUIRES_TARGET_ITEM:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+      58: iconst_0
+      59: anewarray     #289                // class java/lang/Object
+      62: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      65: areturn
+      66: aload_1
+      67: getstatic     #419                // Field net/minecraft/world/item/Items.BOOK:Lnet/minecraft/world/item/Item;
+      70: invokevirtual #376                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/world/item/Item;)Z
+      73: ifeq          149
+      76: aload_0
+      77: aload         4
+      79: invokevirtual #422                // Method applyEnchantmentsToBook:(Lnet/minecraft/world/item/enchantment/ItemEnchantments;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentBookApplicationResult;
+      82: astore        5
+      84: aload         5
+      86: invokevirtual #426                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentBookApplicationResult.stack:()Lnet/minecraft/world/item/ItemStack;
+      89: invokevirtual #140                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      92: ifeq          114
+      95: getstatic     #410                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      98: getstatic     #431                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.ENCHANTMENT_CANNOT_APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+     101: aload         5
+     103: invokevirtual #434                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentBookApplicationResult.rejectedDescriptions:()Ljava/util/List;
+     106: iconst_0
+     107: anewarray     #289                // class java/lang/Object
+     110: invokestatic  #398                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;Ljava/util/List;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     113: areturn
+     114: getstatic     #410                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     117: aload         5
+     119: invokevirtual #426                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentBookApplicationResult.stack:()Lnet/minecraft/world/item/ItemStack;
+     122: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+     125: aload_0
+     126: getfield      #77                 // Field cost:I
+     129: aload_0
+     130: getfield      #32                 // Field conflicting:Z
+     133: aload_0
+     134: getfield      #36                 // Field overCap:Z
+     137: iconst_0
+     138: iconst_0
+     139: iconst_0
+     140: aload         5
+     142: invokevirtual #435                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentBookApplicationResult.lostDescriptions:()Ljava/util/List;
+     145: invokestatic  #342                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.ready:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;IZZZIILjava/util/List;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     148: areturn
+     149: aload_0
+     150: aload_1
+     151: aload_3
+     152: aload         4
+     154: invokevirtual #436                // Method applyEnchantments:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult;
+     157: astore        5
+     159: aload         5
+     161: invokevirtual #440                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult.changed:()Z
+     164: ifne          186
+     167: getstatic     #410                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     170: getstatic     #431                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.ENCHANTMENT_CANNOT_APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+     173: aload         5
+     175: invokevirtual #443                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult.rejectedDescriptions:()Ljava/util/List;
+     178: iconst_0
+     179: anewarray     #289                // class java/lang/Object
+     182: invokestatic  #398                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;Ljava/util/List;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     185: areturn
+     186: getstatic     #410                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     189: aload_1
+     190: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+     193: aload_0
+     194: getfield      #77                 // Field cost:I
+     197: aload_0
+     198: getfield      #32                 // Field conflicting:Z
+     201: aload_0
+     202: getfield      #36                 // Field overCap:Z
+     205: iconst_0
+     206: iconst_0
+     207: iconst_0
+     208: aload         5
+     210: invokevirtual #444                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult.lostDescriptions:()Ljava/util/List;
+     213: invokestatic  #342                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.ready:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;IZZZIILjava/util/List;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     216: areturn
+     217: aload_2
+     218: getstatic     #370                // Field net/minecraft/world/item/Items.ENCHANTED_BOOK:Lnet/minecraft/world/item/Item;
+     221: invokevirtual #376                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/world/item/Item;)Z
+     224: ifeq          351
+     227: aload         4
+     229: invokevirtual #445                // Method net/minecraft/world/item/enchantment/ItemEnchantments.isEmpty:()Z
+     232: ifeq          249
+     235: getstatic     #410                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     238: getstatic     #448                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.REQUIRES_ENCHANTED_ADDITION:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+     241: iconst_0
+     242: anewarray     #289                // class java/lang/Object
+     245: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     248: areturn
+     249: aload_1
+     250: getstatic     #419                // Field net/minecraft/world/item/Items.BOOK:Lnet/minecraft/world/item/Item;
+     253: invokevirtual #376                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/world/item/Item;)Z
+     256: ifne          269
+     259: aload_1
+     260: invokevirtual #404                // Method net/minecraft/world/item/ItemStack.getItem:()Lnet/minecraft/world/item/Item;
+     263: instanceof    #408                // class plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem
+     266: ifeq          283
+     269: getstatic     #410                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     272: getstatic     #416                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.APPLY_REQUIRES_TARGET_ITEM:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+     275: iconst_0
+     276: anewarray     #289                // class java/lang/Object
+     279: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     282: areturn
+     283: aload_0
+     284: aload_1
+     285: aload_3
+     286: aload         4
+     288: invokevirtual #436                // Method applyEnchantments:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult;
+     291: astore        5
+     293: aload         5
+     295: invokevirtual #440                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult.changed:()Z
+     298: ifne          320
+     301: getstatic     #410                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     304: getstatic     #431                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.ENCHANTMENT_CANNOT_APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+     307: aload         5
+     309: invokevirtual #443                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult.rejectedDescriptions:()Ljava/util/List;
+     312: iconst_0
+     313: anewarray     #289                // class java/lang/Object
+     316: invokestatic  #398                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;Ljava/util/List;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     319: areturn
+     320: getstatic     #410                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     323: aload_1
+     324: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+     327: aload_0
+     328: getfield      #77                 // Field cost:I
+     331: aload_0
+     332: getfield      #32                 // Field conflicting:Z
+     335: aload_0
+     336: getfield      #36                 // Field overCap:Z
+     339: iconst_0
+     340: iconst_0
+     341: iconst_0
+     342: aload         5
+     344: invokevirtual #444                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult.lostDescriptions:()Ljava/util/List;
+     347: invokestatic  #342                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.ready:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;IZZZIILjava/util/List;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     350: areturn
+     351: getstatic     #410                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.APPLY:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     354: getstatic     #451                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.APPLY_REQUIRES_ENCHANTED_ADDITION:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+     357: iconst_0
+     358: anewarray     #289                // class java/lang/Object
+     361: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     364: areturn
+
+  private plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$Result calculateExtract(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+    Code:
+       0: aload_1
+       1: invokestatic  #346                // Method getEnchantments:(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+       4: astore_3
+       5: aload_2
+       6: invokestatic  #346                // Method getEnchantments:(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+       9: astore        4
+      11: aload_2
+      12: invokestatic  #350                // Method isTemplate:(Lnet/minecraft/world/item/ItemStack;)Z
+      15: ifeq          26
+      18: aload         4
+      20: invokevirtual #445                // Method net/minecraft/world/item/enchantment/ItemEnchantments.isEmpty:()Z
+      23: ifne          40
+      26: getstatic     #454                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.EXTRACT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      29: getstatic     #457                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.REQUIRES_BLANK_TEMPLATE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+      32: iconst_0
+      33: anewarray     #289                // class java/lang/Object
+      36: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      39: areturn
+      40: aload_3
+      41: invokevirtual #445                // Method net/minecraft/world/item/enchantment/ItemEnchantments.isEmpty:()Z
+      44: ifeq          61
+      47: getstatic     #454                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.EXTRACT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      50: getstatic     #460                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.SOURCE_HAS_NO_ENCHANTMENTS:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+      53: iconst_0
+      54: anewarray     #289                // class java/lang/Object
+      57: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      60: areturn
+      61: aload_0
+      62: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+      65: getfield      #226                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.special:Z
+      68: ifne          107
+      71: aload_3
+      72: invokevirtual #463                // Method net/minecraft/world/item/enchantment/ItemEnchantments.keySet:()Ljava/util/Set;
+      75: invokeinterface #467,  1          // InterfaceMethod java/util/Set.stream:()Ljava/util/stream/Stream;
+      80: invokedynamic #473,  0            // InvokeDynamic #1:test:()Ljava/util/function/Predicate;
+      85: invokeinterface #477,  2          // InterfaceMethod java/util/stream/Stream.allMatch:(Ljava/util/function/Predicate;)Z
+      90: ifeq          107
+      93: getstatic     #454                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.EXTRACT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      96: getstatic     #483                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.CURSE_EXTRACTION_REQUIRES_SUPER_MODE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+      99: iconst_0
+     100: anewarray     #289                // class java/lang/Object
+     103: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     106: areturn
+     107: aload_1
+     108: getstatic     #370                // Field net/minecraft/world/item/Items.ENCHANTED_BOOK:Lnet/minecraft/world/item/Item;
+     111: invokevirtual #376                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/world/item/Item;)Z
+     114: ifeq          290
+     117: aload_3
+     118: invokevirtual #486                // Method net/minecraft/world/item/enchantment/ItemEnchantments.size:()I
+     121: iconst_1
+     122: if_icmpne     290
+     125: getstatic     #419                // Field net/minecraft/world/item/Items.BOOK:Lnet/minecraft/world/item/Item;
+     128: invokevirtual #487                // Method net/minecraft/world/item/Item.getDefaultInstance:()Lnet/minecraft/world/item/ItemStack;
+     131: astore        5
+     133: aload_3
+     134: invokevirtual #492                // Method net/minecraft/world/item/enchantment/ItemEnchantments.entrySet:()Ljava/util/Set;
+     137: invokeinterface #467,  1          // InterfaceMethod java/util/Set.stream:()Ljava/util/stream/Stream;
+     142: invokeinterface #495,  1          // InterfaceMethod java/util/stream/Stream.findFirst:()Ljava/util/Optional;
+     147: invokevirtual #499                // Method java/util/Optional.get:()Ljava/lang/Object;
+     150: checkcast     #502                // class it/unimi/dsi/fastutil/objects/Object2IntMap$Entry
+     153: astore        6
+     155: aload_0
+     156: aload         6
+     158: invokeinterface #504,  1          // InterfaceMethod it/unimi/dsi/fastutil/objects/Object2IntMap$Entry.getKey:()Ljava/lang/Object;
+     163: checkcast     #507                // class net/minecraft/core/Holder
+     166: aload_3
+     167: invokevirtual #509                // Method getExtractLevel:(Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)I
+     170: istore        7
+     172: new           #513                // class net/minecraft/world/item/enchantment/ItemEnchantments$Mutable
+     175: dup
+     176: getstatic     #515                // Field net/minecraft/world/item/enchantment/ItemEnchantments.EMPTY:Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+     179: invokespecial #518                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable."<init>":(Lnet/minecraft/world/item/enchantment/ItemEnchantments;)V
+     182: astore        8
+     184: aload         8
+     186: aload         6
+     188: invokeinterface #504,  1          // InterfaceMethod it/unimi/dsi/fastutil/objects/Object2IntMap$Entry.getKey:()Ljava/lang/Object;
+     193: checkcast     #507                // class net/minecraft/core/Holder
+     196: iload         7
+     198: invokevirtual #521                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable.set:(Lnet/minecraft/core/Holder;I)V
+     201: aload_2
+     202: aload         8
+     204: invokevirtual #524                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable.toImmutable:()Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+     207: invokestatic  #528                // Method net/minecraft/world/item/enchantment/EnchantmentHelper.setEnchantments:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)V
+     210: aload_0
+     211: dup
+     212: getfield      #77                 // Field cost:I
+     215: aload         6
+     217: invokeinterface #504,  1          // InterfaceMethod it/unimi/dsi/fastutil/objects/Object2IntMap$Entry.getKey:()Ljava/lang/Object;
+     222: checkcast     #507                // class net/minecraft/core/Holder
+     225: getstatic     #454                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.EXTRACT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     228: aload_0
+     229: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     232: getfield      #226                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.special:Z
+     235: aload         6
+     237: invokeinterface #504,  1          // InterfaceMethod it/unimi/dsi/fastutil/objects/Object2IntMap$Entry.getKey:()Ljava/lang/Object;
+     242: checkcast     #507                // class net/minecraft/core/Holder
+     245: invokeinterface #534,  1          // InterfaceMethod net/minecraft/core/Holder.value:()Ljava/lang/Object;
+     250: checkcast     #537                // class net/minecraft/world/item/enchantment/Enchantment
+     253: invokevirtual #539                // Method net/minecraft/world/item/enchantment/Enchantment.getAnvilCost:()I
+     256: iload         7
+     258: invokestatic  #542                // Method plus/dragons/createenchantmentindustry/common/processing/EnchantmentProcessingRules.blazeForgerLevelCost:(Lnet/minecraft/core/Holder;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;ZII)I
+     261: iadd
+     262: putfield      #77                 // Field cost:I
+     265: getstatic     #454                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.EXTRACT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     268: aload         5
+     270: aload_2
+     271: aload_0
+     272: getfield      #77                 // Field cost:I
+     275: aload_0
+     276: getfield      #32                 // Field conflicting:Z
+     279: aload_0
+     280: getfield      #36                 // Field overCap:Z
+     283: iconst_0
+     284: iconst_0
+     285: iconst_0
+     286: invokestatic  #548                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.ready:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;IZZZII)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     289: areturn
+     290: aload_0
+     291: aload_1
+     292: aload_2
+     293: aload_3
+     294: invokevirtual #551                // Method extractEnchantments:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)Z
+     297: ifne          314
+     300: getstatic     #454                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.EXTRACT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     303: getstatic     #555                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.SOURCE_HAS_NO_EXTRACTABLE_ENCHANTMENTS:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+     306: iconst_0
+     307: anewarray     #289                // class java/lang/Object
+     310: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     313: areturn
+     314: getstatic     #454                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.EXTRACT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     317: aload_1
+     318: aload_2
+     319: aload_0
+     320: getfield      #77                 // Field cost:I
+     323: aload_0
+     324: getfield      #32                 // Field conflicting:Z
+     327: aload_0
+     328: getfield      #36                 // Field overCap:Z
+     331: iconst_0
+     332: iconst_0
+     333: iconst_0
+     334: invokestatic  #548                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.ready:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;IZZZII)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     337: areturn
+
+  protected boolean extractEnchantments(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack, net.minecraft.world.item.enchantment.ItemEnchantments);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)Z
+    Code:
+       0: aload_3
+       1: invokevirtual #445                // Method net/minecraft/world/item/enchantment/ItemEnchantments.isEmpty:()Z
+       4: ifeq          9
+       7: iconst_0
+       8: ireturn
+       9: aload_0
+      10: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+      13: invokevirtual #47                 // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.getLevel:()Lnet/minecraft/world/level/Level;
+      16: invokestatic  #558                // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+      19: checkcast     #54                 // class net/minecraft/world/level/Level
+      22: invokevirtual #564                // Method net/minecraft/world/level/Level.registryAccess:()Lnet/minecraft/core/RegistryAccess;
+      25: getstatic     #568                // Field net/minecraft/core/registries/Registries.ENCHANTMENT:Lnet/minecraft/resources/ResourceKey;
+      28: invokeinterface #574,  2          // InterfaceMethod net/minecraft/core/RegistryAccess.registryOrThrow:(Lnet/minecraft/resources/ResourceKey;)Lnet/minecraft/core/Registry;
+      33: astore        4
+      35: aload_3
+      36: invokevirtual #463                // Method net/minecraft/world/item/enchantment/ItemEnchantments.keySet:()Ljava/util/Set;
+      39: invokeinterface #467,  1          // InterfaceMethod java/util/Set.stream:()Ljava/util/stream/Stream;
+      44: aload         4
+      46: invokedynamic #580,  0            // InvokeDynamic #2:applyAsInt:(Lnet/minecraft/core/Registry;)Ljava/util/function/ToIntFunction;
+      51: invokestatic  #584                // InterfaceMethod java/util/Comparator.comparingInt:(Ljava/util/function/ToIntFunction;)Ljava/util/Comparator;
+      54: invokeinterface #590,  2          // InterfaceMethod java/util/stream/Stream.sorted:(Ljava/util/Comparator;)Ljava/util/stream/Stream;
+      59: astore        5
+      61: aload_0
+      62: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+      65: getfield      #226                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.special:Z
+      68: ifne          85
+      71: aload         5
+      73: invokedynamic #594,  0            // InvokeDynamic #3:test:()Ljava/util/function/Predicate;
+      78: invokeinterface #595,  2          // InterfaceMethod java/util/stream/Stream.filter:(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      83: astore        5
+      85: aload         5
+      87: invokeinterface #495,  1          // InterfaceMethod java/util/stream/Stream.findFirst:()Ljava/util/Optional;
+      92: astore        6
+      94: aload         6
+      96: invokevirtual #599                // Method java/util/Optional.isEmpty:()Z
+      99: ifeq          104
+     102: iconst_0
+     103: ireturn
+     104: aload         6
+     106: invokevirtual #499                // Method java/util/Optional.get:()Ljava/lang/Object;
+     109: checkcast     #507                // class net/minecraft/core/Holder
+     112: astore        7
+     114: new           #513                // class net/minecraft/world/item/enchantment/ItemEnchantments$Mutable
+     117: dup
+     118: aload_3
+     119: invokespecial #518                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable."<init>":(Lnet/minecraft/world/item/enchantment/ItemEnchantments;)V
+     122: astore        8
+     124: aload         8
+     126: aload         7
+     128: iconst_0
+     129: invokevirtual #521                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable.set:(Lnet/minecraft/core/Holder;I)V
+     132: aload_1
+     133: aload         8
+     135: invokevirtual #524                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable.toImmutable:()Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+     138: invokestatic  #528                // Method net/minecraft/world/item/enchantment/EnchantmentHelper.setEnchantments:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)V
+     141: aload_0
+     142: aload         7
+     144: aload_3
+     145: invokevirtual #509                // Method getExtractLevel:(Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)I
+     148: istore        9
+     150: aload_2
+     151: aload         7
+     153: iload         9
+     155: invokevirtual #600                // Method net/minecraft/world/item/ItemStack.enchant:(Lnet/minecraft/core/Holder;I)V
+     158: aload_0
+     159: dup
+     160: getfield      #77                 // Field cost:I
+     163: aload         7
+     165: getstatic     #454                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.EXTRACT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     168: aload_0
+     169: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     172: getfield      #226                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.special:Z
+     175: aload         7
+     177: invokeinterface #534,  1          // InterfaceMethod net/minecraft/core/Holder.value:()Ljava/lang/Object;
+     182: checkcast     #537                // class net/minecraft/world/item/enchantment/Enchantment
+     185: invokevirtual #539                // Method net/minecraft/world/item/enchantment/Enchantment.getAnvilCost:()I
+     188: iload         9
+     190: invokestatic  #542                // Method plus/dragons/createenchantmentindustry/common/processing/EnchantmentProcessingRules.blazeForgerLevelCost:(Lnet/minecraft/core/Holder;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;ZII)I
+     193: iadd
+     194: putfield      #77                 // Field cost:I
+     197: iconst_1
+     198: ireturn
+
+  private int getExtractLevel(net.minecraft.core.Holder<net.minecraft.world.item.enchantment.Enchantment>, net.minecraft.world.item.enchantment.ItemEnchantments);
+    descriptor: (Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)I
+    Code:
+       0: aload_2
+       1: aload_1
+       2: invokevirtual #603                // Method net/minecraft/world/item/enchantment/ItemEnchantments.getLevel:(Lnet/minecraft/core/Holder;)I
+       5: istore_3
+       6: aload_0
+       7: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+      10: getfield      #226                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.special:Z
+      13: ifeq          18
+      16: iload_3
+      17: ireturn
+      18: aload_1
+      19: invokestatic  #606                // Method plus/dragons/createenchantmentindustry/common/processing/enchanter/CEIEnchantmentHelper.maxLevel:(Lnet/minecraft/core/Holder;)I
+      22: istore        4
+      24: invokestatic  #611                // Method plus/dragons/createenchantmentindustry/config/CEIConfig.enchantments:()Lplus/dragons/createenchantmentindustry/config/CEIEnchantmentsConfig;
+      27: getfield      #617                // Field plus/dragons/createenchantmentindustry/config/CEIEnchantmentsConfig.extractEnchantmentRespectLevelExtension:Lnet/createmod/catnip/config/ConfigBase$ConfigBool;
+      30: invokevirtual #623                // Method net/createmod/catnip/config/ConfigBase$ConfigBool.get:()Ljava/lang/Object;
+      33: checkcast     #626                // class java/lang/Boolean
+      36: invokevirtual #628                // Method java/lang/Boolean.booleanValue:()Z
+      39: ifeq          51
+      42: iload         4
+      44: aload_1
+      45: invokestatic  #631                // Method plus/dragons/createenchantmentindustry/common/processing/EnchantmentProcessingRules.blazeForgerLevelExtension:(Lnet/minecraft/core/Holder;)I
+      48: iadd
+      49: istore        4
+      51: iload_3
+      52: iload         4
+      54: invokestatic  #634                // Method java/lang/Math.min:(II)I
+      57: ireturn
+
+  protected plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$EnchantmentApplicationResult applyEnchantments(net.minecraft.world.item.ItemStack, net.minecraft.world.item.enchantment.ItemEnchantments, net.minecraft.world.item.enchantment.ItemEnchantments);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult;
+    Code:
+       0: iconst_0
+       1: istore        4
+       3: new           #513                // class net/minecraft/world/item/enchantment/ItemEnchantments$Mutable
+       6: dup
+       7: aload_2
+       8: invokespecial #518                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable."<init>":(Lnet/minecraft/world/item/enchantment/ItemEnchantments;)V
+      11: astore        5
+      13: iconst_0
+      14: istore        6
+      16: new           #640                // class java/util/ArrayList
+      19: dup
+      20: invokespecial #642                // Method java/util/ArrayList."<init>":()V
+      23: astore        7
+      25: aload_3
+      26: invokevirtual #492                // Method net/minecraft/world/item/enchantment/ItemEnchantments.entrySet:()Ljava/util/Set;
+      29: invokeinterface #644,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+      34: astore        8
+      36: aload         8
+      38: invokeinterface #648,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      43: ifeq          443
+      46: aload         8
+      48: invokeinterface #653,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      53: checkcast     #502                // class it/unimi/dsi/fastutil/objects/Object2IntMap$Entry
+      56: astore        9
+      58: aload         9
+      60: invokeinterface #504,  1          // InterfaceMethod it/unimi/dsi/fastutil/objects/Object2IntMap$Entry.getKey:()Ljava/lang/Object;
+      65: checkcast     #507                // class net/minecraft/core/Holder
+      68: astore        10
+      70: aload         5
+      72: aload         10
+      74: invokevirtual #656                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable.getLevel:(Lnet/minecraft/core/Holder;)I
+      77: istore        11
+      79: aload         9
+      81: invokeinterface #657,  1          // InterfaceMethod it/unimi/dsi/fastutil/objects/Object2IntMap$Entry.getIntValue:()I
+      86: istore        12
+      88: iload         11
+      90: iload         12
+      92: if_icmpne     102
+      95: iload         12
+      97: iconst_1
+      98: iadd
+      99: goto          109
+     102: iload         12
+     104: iload         11
+     106: invokestatic  #660                // Method java/lang/Math.max:(II)I
+     109: istore        13
+     111: aload         10
+     113: invokeinterface #534,  1          // InterfaceMethod net/minecraft/core/Holder.value:()Ljava/lang/Object;
+     118: checkcast     #537                // class net/minecraft/world/item/enchantment/Enchantment
+     121: astore        14
+     123: aload_1
+     124: aload         10
+     126: invokevirtual #663                // Method net/minecraft/world/item/ItemStack.supportsEnchantment:(Lnet/minecraft/core/Holder;)Z
+     129: ifne          167
+     132: aload         7
+     134: aload         10
+     136: iload         12
+     138: getstatic     #667                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectionReason.CANNOT_APPLY_TO_ITEM:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectionReason;
+     141: iconst_1
+     142: anewarray     #289                // class java/lang/Object
+     145: dup
+     146: iconst_0
+     147: aload_1
+     148: invokevirtual #673                // Method net/minecraft/world/item/ItemStack.getHoverName:()Lnet/minecraft/network/chat/Component;
+     151: aastore
+     152: invokevirtual #677                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectionReason.message:([Ljava/lang/Object;)Lnet/minecraft/network/chat/Component;
+     155: invokestatic  #681                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectedEnchantment.of:(Lnet/minecraft/core/Holder;ILnet/minecraft/network/chat/Component;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectedEnchantment;
+     158: invokeinterface #687,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     163: pop
+     164: goto          36
+     167: aload_0
+     168: aload         10
+     170: aload         5
+     172: invokevirtual #693                // Method incompatibleEnchantments:(Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/enchantment/ItemEnchantments$Mutable;)Ljava/util/List;
+     175: astore        15
+     177: aload         15
+     179: invokeinterface #697,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+     184: ifne          278
+     187: aload_0
+     188: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     191: getfield      #226                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.special:Z
+     194: ifeq          223
+     197: invokestatic  #611                // Method plus/dragons/createenchantmentindustry/config/CEIConfig.enchantments:()Lplus/dragons/createenchantmentindustry/config/CEIEnchantmentsConfig;
+     200: getfield      #698                // Field plus/dragons/createenchantmentindustry/config/CEIEnchantmentsConfig.ignoreEnchantmentCompatibility:Lnet/createmod/catnip/config/ConfigBase$ConfigBool;
+     203: invokevirtual #623                // Method net/createmod/catnip/config/ConfigBase$ConfigBool.get:()Ljava/lang/Object;
+     206: checkcast     #626                // class java/lang/Boolean
+     209: invokevirtual #628                // Method java/lang/Boolean.booleanValue:()Z
+     212: ifeq          223
+     215: aload_0
+     216: iconst_1
+     217: putfield      #32                 // Field conflicting:Z
+     220: goto          278
+     223: aload         15
+     225: invokeinterface #701,  1          // InterfaceMethod java/util/List.getFirst:()Ljava/lang/Object;
+     230: checkcast     #507                // class net/minecraft/core/Holder
+     233: astore        16
+     235: aload         7
+     237: aload         10
+     239: iload         12
+     241: getstatic     #704                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectionReason.INCOMPATIBLE_WITH_OUTPUT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectionReason;
+     244: iconst_1
+     245: anewarray     #289                // class java/lang/Object
+     248: dup
+     249: iconst_0
+     250: aload         16
+     252: aload         5
+     254: aload         16
+     256: invokevirtual #656                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable.getLevel:(Lnet/minecraft/core/Holder;)I
+     259: invokestatic  #707                // Method net/minecraft/world/item/enchantment/Enchantment.getFullname:(Lnet/minecraft/core/Holder;I)Lnet/minecraft/network/chat/Component;
+     262: aastore
+     263: invokevirtual #677                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectionReason.message:([Ljava/lang/Object;)Lnet/minecraft/network/chat/Component;
+     266: invokestatic  #681                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectedEnchantment.of:(Lnet/minecraft/core/Holder;ILnet/minecraft/network/chat/Component;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectedEnchantment;
+     269: invokeinterface #687,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     274: pop
+     275: goto          36
+     278: aload         10
+     280: invokestatic  #606                // Method plus/dragons/createenchantmentindustry/common/processing/enchanter/CEIEnchantmentHelper.maxLevel:(Lnet/minecraft/core/Holder;)I
+     283: istore        16
+     285: iload         16
+     287: aload         10
+     289: invokestatic  #631                // Method plus/dragons/createenchantmentindustry/common/processing/EnchantmentProcessingRules.blazeForgerLevelExtension:(Lnet/minecraft/core/Holder;)I
+     292: iadd
+     293: istore        17
+     295: iload         13
+     297: iload         17
+     299: if_icmple     309
+     302: iload         17
+     304: istore        13
+     306: goto          330
+     309: iload         13
+     311: iload         16
+     313: if_icmple     330
+     316: aload_0
+     317: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     320: getfield      #226                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.special:Z
+     323: ifne          330
+     326: iload         16
+     328: istore        13
+     330: iload         13
+     332: iload         11
+     334: if_icmpgt     365
+     337: aload         7
+     339: aload         10
+     341: iload         12
+     343: getstatic     #711                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectionReason.WOULD_NOT_IMPROVE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectionReason;
+     346: iconst_0
+     347: anewarray     #289                // class java/lang/Object
+     350: invokevirtual #677                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectionReason.message:([Ljava/lang/Object;)Lnet/minecraft/network/chat/Component;
+     353: invokestatic  #681                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectedEnchantment.of:(Lnet/minecraft/core/Holder;ILnet/minecraft/network/chat/Component;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectedEnchantment;
+     356: invokeinterface #687,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     361: pop
+     362: goto          36
+     365: iload         13
+     367: iload         16
+     369: if_icmple     377
+     372: aload_0
+     373: iconst_1
+     374: putfield      #36                 // Field overCap:Z
+     377: iconst_1
+     378: istore        6
+     380: iload         4
+     382: invokestatic  #713                // Method plus/dragons/createenchantmentindustry/common/processing/EnchantmentProcessingRules.conflictExtraLevelCost:()I
+     385: aload         15
+     387: invokeinterface #716,  1          // InterfaceMethod java/util/List.size:()I
+     392: imul
+     393: iadd
+     394: istore        4
+     396: aload         5
+     398: aload         10
+     400: iload         13
+     402: invokevirtual #521                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable.set:(Lnet/minecraft/core/Holder;I)V
+     405: aload         14
+     407: invokevirtual #539                // Method net/minecraft/world/item/enchantment/Enchantment.getAnvilCost:()I
+     410: istore        18
+     412: iload         4
+     414: aload         10
+     416: aload_0
+     417: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     420: invokevirtual #277                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.getMode:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     423: aload_0
+     424: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     427: getfield      #226                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.special:Z
+     430: iload         18
+     432: iload         13
+     434: invokestatic  #542                // Method plus/dragons/createenchantmentindustry/common/processing/EnchantmentProcessingRules.blazeForgerLevelCost:(Lnet/minecraft/core/Holder;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;ZII)I
+     437: iadd
+     438: istore        4
+     440: goto          36
+     443: iload         6
+     445: ifne          459
+     448: new           #441                // class plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult
+     451: dup
+     452: iconst_0
+     453: aload         7
+     455: invokespecial #717                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult."<init>":(ZLjava/util/List;)V
+     458: areturn
+     459: aload_1
+     460: aload         5
+     462: invokevirtual #524                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable.toImmutable:()Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+     465: invokestatic  #528                // Method net/minecraft/world/item/enchantment/EnchantmentHelper.setEnchantments:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)V
+     468: aload_0
+     469: dup
+     470: getfield      #77                 // Field cost:I
+     473: iload         4
+     475: iadd
+     476: putfield      #77                 // Field cost:I
+     479: new           #441                // class plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult
+     482: dup
+     483: iconst_1
+     484: aload         7
+     486: invokespecial #717                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult."<init>":(ZLjava/util/List;)V
+     489: areturn
+
+  protected plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$EnchantmentBookApplicationResult applyEnchantmentsToBook(net.minecraft.world.item.enchantment.ItemEnchantments);
+    descriptor: (Lnet/minecraft/world/item/enchantment/ItemEnchantments;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentBookApplicationResult;
+    Code:
+       0: iconst_0
+       1: istore_2
+       2: new           #513                // class net/minecraft/world/item/enchantment/ItemEnchantments$Mutable
+       5: dup
+       6: getstatic     #515                // Field net/minecraft/world/item/enchantment/ItemEnchantments.EMPTY:Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+       9: invokespecial #518                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable."<init>":(Lnet/minecraft/world/item/enchantment/ItemEnchantments;)V
+      12: astore_3
+      13: iconst_0
+      14: istore        4
+      16: new           #640                // class java/util/ArrayList
+      19: dup
+      20: invokespecial #642                // Method java/util/ArrayList."<init>":()V
+      23: astore        5
+      25: aload_1
+      26: invokevirtual #492                // Method net/minecraft/world/item/enchantment/ItemEnchantments.entrySet:()Ljava/util/Set;
+      29: invokeinterface #644,  1          // InterfaceMethod java/util/Set.iterator:()Ljava/util/Iterator;
+      34: astore        6
+      36: aload         6
+      38: invokeinterface #648,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      43: ifeq          267
+      46: aload         6
+      48: invokeinterface #653,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      53: checkcast     #502                // class it/unimi/dsi/fastutil/objects/Object2IntMap$Entry
+      56: astore        7
+      58: aload         7
+      60: invokeinterface #504,  1          // InterfaceMethod it/unimi/dsi/fastutil/objects/Object2IntMap$Entry.getKey:()Ljava/lang/Object;
+      65: checkcast     #507                // class net/minecraft/core/Holder
+      68: astore        8
+      70: aload         8
+      72: invokeinterface #534,  1          // InterfaceMethod net/minecraft/core/Holder.value:()Ljava/lang/Object;
+      77: checkcast     #537                // class net/minecraft/world/item/enchantment/Enchantment
+      80: astore        9
+      82: aload_0
+      83: aload         8
+      85: aload_3
+      86: invokevirtual #693                // Method incompatibleEnchantments:(Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/enchantment/ItemEnchantments$Mutable;)Ljava/util/List;
+      89: astore        10
+      91: aload         10
+      93: invokeinterface #697,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+      98: ifne          210
+     101: aload_0
+     102: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     105: getfield      #226                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.special:Z
+     108: ifeq          151
+     111: invokestatic  #611                // Method plus/dragons/createenchantmentindustry/config/CEIConfig.enchantments:()Lplus/dragons/createenchantmentindustry/config/CEIEnchantmentsConfig;
+     114: getfield      #698                // Field plus/dragons/createenchantmentindustry/config/CEIEnchantmentsConfig.ignoreEnchantmentCompatibility:Lnet/createmod/catnip/config/ConfigBase$ConfigBool;
+     117: invokevirtual #623                // Method net/createmod/catnip/config/ConfigBase$ConfigBool.get:()Ljava/lang/Object;
+     120: checkcast     #626                // class java/lang/Boolean
+     123: invokevirtual #628                // Method java/lang/Boolean.booleanValue:()Z
+     126: ifeq          151
+     129: aload_0
+     130: iconst_1
+     131: putfield      #32                 // Field conflicting:Z
+     134: iload_2
+     135: invokestatic  #713                // Method plus/dragons/createenchantmentindustry/common/processing/EnchantmentProcessingRules.conflictExtraLevelCost:()I
+     138: aload         10
+     140: invokeinterface #716,  1          // InterfaceMethod java/util/List.size:()I
+     145: imul
+     146: iadd
+     147: istore_2
+     148: goto          210
+     151: aload         10
+     153: invokeinterface #701,  1          // InterfaceMethod java/util/List.getFirst:()Ljava/lang/Object;
+     158: checkcast     #507                // class net/minecraft/core/Holder
+     161: astore        11
+     163: aload         5
+     165: aload         8
+     167: aload         7
+     169: invokeinterface #657,  1          // InterfaceMethod it/unimi/dsi/fastutil/objects/Object2IntMap$Entry.getIntValue:()I
+     174: getstatic     #704                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectionReason.INCOMPATIBLE_WITH_OUTPUT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectionReason;
+     177: iconst_1
+     178: anewarray     #289                // class java/lang/Object
+     181: dup
+     182: iconst_0
+     183: aload         11
+     185: aload_3
+     186: aload         11
+     188: invokevirtual #656                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable.getLevel:(Lnet/minecraft/core/Holder;)I
+     191: invokestatic  #707                // Method net/minecraft/world/item/enchantment/Enchantment.getFullname:(Lnet/minecraft/core/Holder;I)Lnet/minecraft/network/chat/Component;
+     194: aastore
+     195: invokevirtual #677                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectionReason.message:([Ljava/lang/Object;)Lnet/minecraft/network/chat/Component;
+     198: invokestatic  #681                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectedEnchantment.of:(Lnet/minecraft/core/Holder;ILnet/minecraft/network/chat/Component;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$RejectedEnchantment;
+     201: invokeinterface #687,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     206: pop
+     207: goto          36
+     210: iconst_1
+     211: istore        4
+     213: aload_3
+     214: aload         8
+     216: aload         7
+     218: invokeinterface #657,  1          // InterfaceMethod it/unimi/dsi/fastutil/objects/Object2IntMap$Entry.getIntValue:()I
+     223: invokevirtual #521                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable.set:(Lnet/minecraft/core/Holder;I)V
+     226: aload         9
+     228: invokevirtual #539                // Method net/minecraft/world/item/enchantment/Enchantment.getAnvilCost:()I
+     231: istore        11
+     233: iload_2
+     234: aload         8
+     236: aload_0
+     237: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     240: invokevirtual #277                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.getMode:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     243: aload_0
+     244: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+     247: getfield      #226                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.special:Z
+     250: iload         11
+     252: aload         7
+     254: invokeinterface #657,  1          // InterfaceMethod it/unimi/dsi/fastutil/objects/Object2IntMap$Entry.getIntValue:()I
+     259: invokestatic  #542                // Method plus/dragons/createenchantmentindustry/common/processing/EnchantmentProcessingRules.blazeForgerLevelCost:(Lnet/minecraft/core/Holder;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;ZII)I
+     262: iadd
+     263: istore_2
+     264: goto          36
+     267: iload         4
+     269: ifne          285
+     272: new           #427                // class plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentBookApplicationResult
+     275: dup
+     276: getstatic     #152                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+     279: aload         5
+     281: invokespecial #720                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentBookApplicationResult."<init>":(Lnet/minecraft/world/item/ItemStack;Ljava/util/List;)V
+     284: areturn
+     285: getstatic     #370                // Field net/minecraft/world/item/Items.ENCHANTED_BOOK:Lnet/minecraft/world/item/Item;
+     288: invokevirtual #487                // Method net/minecraft/world/item/Item.getDefaultInstance:()Lnet/minecraft/world/item/ItemStack;
+     291: astore        6
+     293: aload         6
+     295: aload_3
+     296: invokevirtual #524                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable.toImmutable:()Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+     299: invokestatic  #528                // Method net/minecraft/world/item/enchantment/EnchantmentHelper.setEnchantments:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)V
+     302: aload_0
+     303: dup
+     304: getfield      #77                 // Field cost:I
+     307: iload_2
+     308: iadd
+     309: putfield      #77                 // Field cost:I
+     312: new           #427                // class plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentBookApplicationResult
+     315: dup
+     316: aload         6
+     318: aload         5
+     320: invokespecial #720                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentBookApplicationResult."<init>":(Lnet/minecraft/world/item/ItemStack;Ljava/util/List;)V
+     323: areturn
+
+  protected plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$EnchantmentCombinationResult combineEnchantments(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack, net.minecraft.world.item.enchantment.ItemEnchantments, net.minecraft.world.item.enchantment.ItemEnchantments);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentCombinationResult;
+    Code:
+       0: iconst_0
+       1: istore        5
+       3: aload_1
+       4: invokevirtual #723                // Method net/minecraft/world/item/ItemStack.isDamaged:()Z
+       7: ifeq          101
+      10: aload_1
+      11: invokevirtual #726                // Method net/minecraft/world/item/ItemStack.getMaxDamage:()I
+      14: aload_1
+      15: invokevirtual #729                // Method net/minecraft/world/item/ItemStack.getDamageValue:()I
+      18: isub
+      19: istore        6
+      21: aload_2
+      22: invokevirtual #726                // Method net/minecraft/world/item/ItemStack.getMaxDamage:()I
+      25: aload_2
+      26: invokevirtual #729                // Method net/minecraft/world/item/ItemStack.getDamageValue:()I
+      29: isub
+      30: istore        7
+      32: iload         7
+      34: aload_1
+      35: invokevirtual #726                // Method net/minecraft/world/item/ItemStack.getMaxDamage:()I
+      38: bipush        12
+      40: imul
+      41: bipush        100
+      43: idiv
+      44: iadd
+      45: istore        8
+      47: iload         6
+      49: iload         8
+      51: iadd
+      52: istore        9
+      54: aload_1
+      55: invokevirtual #726                // Method net/minecraft/world/item/ItemStack.getMaxDamage:()I
+      58: iload         9
+      60: isub
+      61: istore        10
+      63: iload         10
+      65: ifge          71
+      68: iconst_0
+      69: istore        10
+      71: iload         10
+      73: aload_1
+      74: invokevirtual #729                // Method net/minecraft/world/item/ItemStack.getDamageValue:()I
+      77: if_icmpge     101
+      80: aload_1
+      81: iload         10
+      83: invokevirtual #732                // Method net/minecraft/world/item/ItemStack.setDamageValue:(I)V
+      86: aload_0
+      87: dup
+      88: getfield      #77                 // Field cost:I
+      91: invokestatic  #735                // Method plus/dragons/createenchantmentindustry/common/processing/EnchantmentProcessingRules.durabilityRepairLevelCost:()I
+      94: iadd
+      95: putfield      #77                 // Field cost:I
+      98: iconst_1
+      99: istore        5
+     101: aload_0
+     102: aload_1
+     103: aload_3
+     104: aload         4
+     106: invokevirtual #436                // Method applyEnchantments:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/enchantment/ItemEnchantments;Lnet/minecraft/world/item/enchantment/ItemEnchantments;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult;
+     109: astore        6
+     111: new           #388                // class plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentCombinationResult
+     114: dup
+     115: iload         5
+     117: ifne          128
+     120: aload         6
+     122: invokevirtual #440                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult.changed:()Z
+     125: ifeq          132
+     128: iconst_1
+     129: goto          133
+     132: iconst_0
+     133: aload         6
+     135: invokevirtual #738                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentApplicationResult.rejectedEnchantments:()Ljava/util/List;
+     138: invokespecial #741                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$EnchantmentCombinationResult."<init>":(ZLjava/util/List;)V
+     141: areturn
+
+  private java.util.List<net.minecraft.core.Holder<net.minecraft.world.item.enchantment.Enchantment>> incompatibleEnchantments(net.minecraft.core.Holder<net.minecraft.world.item.enchantment.Enchantment>, net.minecraft.world.item.enchantment.ItemEnchantments$Mutable);
+    descriptor: (Lnet/minecraft/core/Holder;Lnet/minecraft/world/item/enchantment/ItemEnchantments$Mutable;)Ljava/util/List;
+    Code:
+       0: aload_2
+       1: invokevirtual #742                // Method net/minecraft/world/item/enchantment/ItemEnchantments$Mutable.keySet:()Ljava/util/Set;
+       4: invokeinterface #467,  1          // InterfaceMethod java/util/Set.stream:()Ljava/util/stream/Stream;
+       9: aload_1
+      10: invokedynamic #743,  0            // InvokeDynamic #4:test:(Lnet/minecraft/core/Holder;)Ljava/util/function/Predicate;
+      15: invokeinterface #595,  2          // InterfaceMethod java/util/stream/Stream.filter:(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      20: aload_1
+      21: invokedynamic #746,  0            // InvokeDynamic #5:test:(Lnet/minecraft/core/Holder;)Ljava/util/function/Predicate;
+      26: invokeinterface #595,  2          // InterfaceMethod java/util/stream/Stream.filter:(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      31: invokeinterface #747,  1          // InterfaceMethod java/util/stream/Stream.toList:()Ljava/util/List;
+      36: areturn
+
+  protected void applyRepairCost(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)V
+    Code:
+       0: aload_0
+       1: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+       4: getfield      #750                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.cursed:Z
+       7: ifne          11
+      10: return
+      11: aload_1
+      12: getstatic     #315                // Field net/minecraft/core/component/DataComponents.REPAIR_COST:Lnet/minecraft/core/component/DataComponentType;
+      15: iconst_0
+      16: invokestatic  #321                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      19: invokevirtual #327                // Method net/minecraft/world/item/ItemStack.getOrDefault:(Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Ljava/lang/Object;
+      22: checkcast     #322                // class java/lang/Integer
+      25: invokevirtual #331                // Method java/lang/Integer.intValue:()I
+      28: istore_3
+      29: aload_2
+      30: getstatic     #315                // Field net/minecraft/core/component/DataComponents.REPAIR_COST:Lnet/minecraft/core/component/DataComponentType;
+      33: iconst_0
+      34: invokestatic  #321                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      37: invokevirtual #327                // Method net/minecraft/world/item/ItemStack.getOrDefault:(Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Ljava/lang/Object;
+      40: checkcast     #322                // class java/lang/Integer
+      43: invokevirtual #331                // Method java/lang/Integer.intValue:()I
+      46: istore        4
+      48: iload_3
+      49: iload         4
+      51: invokestatic  #660                // Method java/lang/Math.max:(II)I
+      54: invokestatic  #753                // Method net/minecraft/world/inventory/AnvilMenu.calculateIncreasedRepairCost:(I)I
+      57: istore        5
+      59: aload_1
+      60: getstatic     #315                // Field net/minecraft/core/component/DataComponents.REPAIR_COST:Lnet/minecraft/core/component/DataComponentType;
+      63: iload         5
+      65: invokestatic  #321                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      68: invokevirtual #758                // Method net/minecraft/world/item/ItemStack.set:(Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Ljava/lang/Object;
+      71: pop
+      72: return
+
+  private plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$Result validateTemplateMode(net.minecraft.world.item.ItemStack, plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerMode);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+    Code:
+       0: aload_1
+       1: invokevirtual #404                // Method net/minecraft/world/item/ItemStack.getItem:()Lnet/minecraft/world/item/Item;
+       4: astore        4
+       6: aload         4
+       8: instanceof    #408                // class plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem
+      11: ifeq          23
+      14: aload         4
+      16: checkcast     #408                // class plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem
+      19: astore_3
+      20: goto          25
+      23: aconst_null
+      24: areturn
+      25: aload_3
+      26: invokevirtual #760                // Method plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem.isSpecial:()Z
+      29: aload_0
+      30: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+      33: getfield      #226                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.special:Z
+      36: if_icmpne     41
+      39: aconst_null
+      40: areturn
+      41: aload_3
+      42: invokevirtual #760                // Method plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem.isSpecial:()Z
+      45: ifeq          62
+      48: aload_2
+      49: getstatic     #763                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.SUPER_TEMPLATE_REQUIRES_SUPER_MODE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+      52: iconst_0
+      53: anewarray     #289                // class java/lang/Object
+      56: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      59: goto          73
+      62: aload_2
+      63: getstatic     #766                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.NORMAL_TEMPLATE_REQUIRES_NORMAL_MODE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;
+      66: iconst_0
+      67: anewarray     #289                // class java/lang/Object
+      70: invokestatic  #360                // Method invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      73: areturn
+
+  private void resetComputation();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: putfield      #77                 // Field cost:I
+       5: aload_0
+       6: aload_0
+       7: getfield      #19                 // Field forger:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;
+      10: invokevirtual #277                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity.getMode:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      13: putfield      #29                 // Field operation:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      16: aload_0
+      17: iconst_0
+      18: putfield      #32                 // Field conflicting:Z
+      21: aload_0
+      22: iconst_0
+      23: putfield      #36                 // Field overCap:Z
+      26: return
+
+  private static net.minecraft.world.item.enchantment.ItemEnchantments getEnchantments(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+    Code:
+       0: aload_0
+       1: aload_0
+       2: invokestatic  #769                // Method net/minecraft/world/item/enchantment/EnchantmentHelper.getComponentType:(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/core/component/DataComponentType;
+       5: getstatic     #515                // Field net/minecraft/world/item/enchantment/ItemEnchantments.EMPTY:Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+       8: invokevirtual #327                // Method net/minecraft/world/item/ItemStack.getOrDefault:(Lnet/minecraft/core/component/DataComponentType;Ljava/lang/Object;)Ljava/lang/Object;
+      11: checkcast     #446                // class net/minecraft/world/item/enchantment/ItemEnchantments
+      14: areturn
+
+  private static boolean isTemplate(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_0
+       1: invokevirtual #404                // Method net/minecraft/world/item/ItemStack.getItem:()Lnet/minecraft/world/item/Item;
+       4: instanceof    #408                // class plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem
+       7: ireturn
+
+  private static boolean isFilledTemplate(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_0
+       1: invokestatic  #350                // Method isTemplate:(Lnet/minecraft/world/item/ItemStack;)Z
+       4: ifeq          21
+       7: aload_0
+       8: invokestatic  #346                // Method getEnchantments:(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+      11: invokevirtual #445                // Method net/minecraft/world/item/enchantment/ItemEnchantments.isEmpty:()Z
+      14: ifne          21
+      17: iconst_1
+      18: goto          22
+      21: iconst_0
+      22: ireturn
+
+  private static net.minecraft.world.item.ItemStack single(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;
+    Code:
+       0: aload_0
+       1: invokevirtual #160                // Method net/minecraft/world/item/ItemStack.copy:()Lnet/minecraft/world/item/ItemStack;
+       4: astore_1
+       5: aload_1
+       6: iconst_1
+       7: invokevirtual #773                // Method net/minecraft/world/item/ItemStack.setCount:(I)V
+      10: aload_1
+      11: areturn
+
+  private static plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$Result incomplete(plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerMode, plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$FailureReason, java.lang.Object...);
+    descriptor: (Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: invokevirtual #776                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.message:([Ljava/lang/Object;)Lnet/minecraft/network/chat/Component;
+       6: invokestatic  #777                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.incomplete:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lnet/minecraft/network/chat/Component;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+       9: areturn
+
+  private static plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$Result invalid(plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerMode, plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$FailureReason, java.lang.Object...);
+    descriptor: (Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: invokevirtual #776                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.message:([Ljava/lang/Object;)Lnet/minecraft/network/chat/Component;
+       6: invokestatic  #780                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lnet/minecraft/network/chat/Component;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+       9: areturn
+
+  private static plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$Result invalid(plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerMode, plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory$FailureReason, java.util.List<net.minecraft.network.chat.Component>, java.lang.Object...);
+    descriptor: (Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason;Ljava/util/List;[Ljava/lang/Object;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_3
+       3: invokevirtual #776                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$FailureReason.message:([Ljava/lang/Object;)Lnet/minecraft/network/chat/Component;
+       6: aload_2
+       7: invokestatic  #782                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.invalid:(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;Lnet/minecraft/network/chat/Component;Ljava/util/List;)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      10: areturn
+
+  public void deserializeNBT(net.minecraft.core.HolderLookup$Provider, net.minecraft.nbt.Tag);
+    descriptor: (Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/nbt/Tag;)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: checkcast     #72                 // class net/minecraft/nbt/CompoundTag
+       6: invokevirtual #785                // Method deserializeNBT:(Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/nbt/CompoundTag;)V
+       9: return
+
+  public net.minecraft.nbt.Tag serializeNBT(net.minecraft.core.HolderLookup$Provider);
+    descriptor: (Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/Tag;
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #786                // Method serializeNBT:(Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/CompoundTag;
+       5: areturn
+
+  private static boolean lambda$incompatibleEnchantments$4(net.minecraft.core.Holder, net.minecraft.core.Holder);
+    descriptor: (Lnet/minecraft/core/Holder;Lnet/minecraft/core/Holder;)Z
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokestatic  #787                // Method net/minecraft/world/item/enchantment/Enchantment.areCompatible:(Lnet/minecraft/core/Holder;Lnet/minecraft/core/Holder;)Z
+       5: ifne          12
+       8: iconst_1
+       9: goto          13
+      12: iconst_0
+      13: ireturn
+
+  private static boolean lambda$incompatibleEnchantments$3(net.minecraft.core.Holder, net.minecraft.core.Holder);
+    descriptor: (Lnet/minecraft/core/Holder;Lnet/minecraft/core/Holder;)Z
+    Code:
+       0: aload_1
+       1: aload_0
+       2: invokeinterface #791,  2          // InterfaceMethod net/minecraft/core/Holder.equals:(Ljava/lang/Object;)Z
+       7: ifne          14
+      10: iconst_1
+      11: goto          15
+      14: iconst_0
+      15: ireturn
+
+  private static boolean lambda$extractEnchantments$2(net.minecraft.core.Holder);
+    descriptor: (Lnet/minecraft/core/Holder;)Z
+    Code:
+       0: aload_0
+       1: getstatic     #794                // Field net/minecraft/tags/EnchantmentTags.CURSE:Lnet/minecraft/tags/TagKey;
+       4: invokeinterface #800,  2          // InterfaceMethod net/minecraft/core/Holder.is:(Lnet/minecraft/tags/TagKey;)Z
+       9: ifne          16
+      12: iconst_1
+      13: goto          17
+      16: iconst_0
+      17: ireturn
+
+  private static int lambda$extractEnchantments$1(net.minecraft.core.Registry, net.minecraft.core.Holder);
+    descriptor: (Lnet/minecraft/core/Registry;Lnet/minecraft/core/Holder;)I
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokeinterface #534,  1          // InterfaceMethod net/minecraft/core/Holder.value:()Ljava/lang/Object;
+       7: checkcast     #537                // class net/minecraft/world/item/enchantment/Enchantment
+      10: invokeinterface #803,  2          // InterfaceMethod net/minecraft/core/Registry.getId:(Ljava/lang/Object;)I
+      15: ireturn
+
+  private static boolean lambda$calculateExtract$0(net.minecraft.core.Holder);
+    descriptor: (Lnet/minecraft/core/Holder;)Z
+    Code:
+       0: aload_0
+       1: getstatic     #794                // Field net/minecraft/tags/EnchantmentTags.CURSE:Lnet/minecraft/tags/TagKey;
+       4: invokeinterface #800,  2          // InterfaceMethod net/minecraft/core/Holder.is:(Lnet/minecraft/tags/TagKey;)Z
+       9: ireturn
+}

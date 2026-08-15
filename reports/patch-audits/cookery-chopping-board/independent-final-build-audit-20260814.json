@@ -1,0 +1,285 @@
+{
+  "schema": "kaleidoscope-cookery-migration4-independent-audit/v1",
+  "status": "PASS_BYTE_REPRODUCIBLE_SCOPE_AND_RESOURCE_PRESERVED",
+  "generated_at_utc": "2026-08-14T12:09:05+00:00",
+  "scope": {
+    "read_only_jar_audit": true,
+    "jar_installed": false,
+    "java_started": false,
+    "minecraft_started": false,
+    "prism_touched": false
+  },
+  "build_logs": {
+    "build1_stdout": {
+      "path": "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\final-build1.stdout.log",
+      "bytes": 2567,
+      "sha256": "420A2C4EBD4AF64933364170D5A658808F25E4C3C610A4444289E2425899829B",
+      "build_successful": true,
+      "build_failed": false
+    },
+    "build1_stderr": {
+      "path": "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\final-build1.stderr.log",
+      "bytes": 202,
+      "sha256": "82DE028937D52C42D1A93F085E7EB902EBD925CFFF59D690F8AC3E771A0ACBBA",
+      "build_successful": false,
+      "build_failed": false
+    },
+    "build2_stdout": {
+      "path": "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\final-build2.stdout.log",
+      "bytes": 2567,
+      "sha256": "C4394C994F78707449CCB81BEE81AEA60742BE2CEEC6EBDA3C7D7A1A9A4DE68A",
+      "build_successful": true,
+      "build_failed": false
+    },
+    "build2_stderr": {
+      "path": "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\final-build2.stderr.log",
+      "bytes": 202,
+      "sha256": "82DE028937D52C42D1A93F085E7EB902EBD925CFFF59D690F8AC3E771A0ACBBA",
+      "build_successful": false,
+      "build_failed": false
+    }
+  },
+  "upstream_self_audit": {
+    "path": "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\kaleidoscope-cookery-chopping-board-fix-final-build-audit.json",
+    "bytes": 1953,
+    "sha256": "47194657EE629D8EB51BF79269CFAD4BF74C6E5B6987297F225C42D110B7CBAD"
+  },
+  "artifacts": {
+    "migration3_server": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-release-v3-20260814\\server\\mods\\kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
+      "bytes": 5574913,
+      "sha256": "A061FB1E953AD815144304F7567B30876DBBC07B8565069871771F0AAEB63D3F"
+    },
+    "migration3_client": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-release-v3-20260814\\client\\mods\\kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
+      "bytes": 5574913,
+      "sha256": "A061FB1E953AD815144304F7567B30876DBBC07B8565069871771F0AAEB63D3F"
+    },
+    "build1": {
+      "path": "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\final-build1-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar",
+      "bytes": 5575411,
+      "sha256": "9113FD81FABED5B2E8FB969AC858F1FE5707E0FF6ADC7C037D407B3D80633C17"
+    },
+    "build2": {
+      "path": "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\final-build2-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar",
+      "bytes": 5575411,
+      "sha256": "9113FD81FABED5B2E8FB969AC858F1FE5707E0FF6ADC7C037D407B3D80633C17"
+    }
+  },
+  "zip_integrity": {
+    "migration3": {
+      "zip_crc": "PASS",
+      "entry_count": 5587,
+      "duplicate_entries": 0,
+      "case_insensitive_duplicate_entries": 0,
+      "entry_order_sha256": "602D2A9F2FBE3DB825D063AC8E7220F8E6CEBE0B22C1FB86A213F1B26D9FCE58",
+      "content_tree_sha256": "D39F3446FE6065E4DA0ABE025C2768457778A4C29EA48BA8DD0A0D4EBE195485",
+      "gameplay_resource_entries": 3494,
+      "gameplay_resource_tree_sha256": "F329D61CF726396488D840874C05CE50D9762837F35F3F7A3CB120CF6A5BBEC5"
+    },
+    "build1": {
+      "zip_crc": "PASS",
+      "entry_count": 5587,
+      "duplicate_entries": 0,
+      "case_insensitive_duplicate_entries": 0,
+      "entry_order_sha256": "24F6BFFA5FF8B4FB67B42115F0E3ED10DAA642CB8C3AA568624F4829057364E2",
+      "content_tree_sha256": "81188EC80706F29BCDDBE9F556342FA432B8D5C40A4B68C675E4E3A5FE861372",
+      "gameplay_resource_entries": 3494,
+      "gameplay_resource_tree_sha256": "F329D61CF726396488D840874C05CE50D9762837F35F3F7A3CB120CF6A5BBEC5"
+    },
+    "build2": {
+      "zip_crc": "PASS",
+      "entry_count": 5587,
+      "duplicate_entries": 0,
+      "case_insensitive_duplicate_entries": 0,
+      "entry_order_sha256": "24F6BFFA5FF8B4FB67B42115F0E3ED10DAA642CB8C3AA568624F4829057364E2",
+      "content_tree_sha256": "81188EC80706F29BCDDBE9F556342FA432B8D5C40A4B68C675E4E3A5FE861372",
+      "gameplay_resource_entries": 3494,
+      "gameplay_resource_tree_sha256": "F329D61CF726396488D840874C05CE50D9762837F35F3F7A3CB120CF6A5BBEC5"
+    }
+  },
+  "build1_vs_build2": {
+    "outer_sha256_equal": true,
+    "entry_order_equal": true,
+    "entry_sets_equal": true,
+    "added_entries": [],
+    "removed_entries": [],
+    "content_changed_count": 0,
+    "content_changed_entries": [],
+    "unchanged_content_entries": 5587,
+    "metadata_field_change_counts": {
+      "date_time": 0,
+      "compressed_size": 0,
+      "compress_type": 0,
+      "flag_bits": 0,
+      "external_attr": 0,
+      "internal_attr": 0,
+      "create_system": 0,
+      "create_version": 0,
+      "extract_version": 0,
+      "volume": 0,
+      "extra_sha256": 0,
+      "comment_sha256": 0
+    },
+    "content_tree_sha256_equal": true,
+    "gameplay_resource_tree_sha256_equal": true,
+    "gameplay_resource_changed_entries": [],
+    "byte_identical": true,
+    "content_identical": true,
+    "all_zip_metadata_identical": true,
+    "strict_byte_reproducibility": "PASS",
+    "semantic_content_reproducibility": "PASS"
+  },
+  "migration3_to_migration4": {
+    "expected_changed_classes": [
+      "com/github/ysbbbbbb/kaleidoscopecookery/blockentity/kitchen/ChoppingBoardBlockEntity.class",
+      "com/github/ysbbbbbb/kaleidoscopecookery/client/render/block/ChoppingBoardBlockEntityRender.class"
+    ],
+    "expected_version_metadata": [
+      "META-INF/MANIFEST.MF",
+      "META-INF/neoforge.mods.toml"
+    ],
+    "build1": {
+      "outer_sha256_equal": false,
+      "entry_order_equal": false,
+      "entry_sets_equal": true,
+      "added_entries": [],
+      "removed_entries": [],
+      "content_changed_count": 4,
+      "content_changed_entries": [
+        "com/github/ysbbbbbb/kaleidoscopecookery/blockentity/kitchen/ChoppingBoardBlockEntity.class",
+        "com/github/ysbbbbbb/kaleidoscopecookery/client/render/block/ChoppingBoardBlockEntityRender.class",
+        "META-INF/MANIFEST.MF",
+        "META-INF/neoforge.mods.toml"
+      ],
+      "unchanged_content_entries": 5583,
+      "metadata_field_change_counts": {
+        "date_time": 5587,
+        "compressed_size": 2,
+        "compress_type": 0,
+        "flag_bits": 0,
+        "external_attr": 0,
+        "internal_attr": 0,
+        "create_system": 0,
+        "create_version": 0,
+        "extract_version": 0,
+        "volume": 0,
+        "extra_sha256": 0,
+        "comment_sha256": 0
+      },
+      "content_tree_sha256_equal": false,
+      "gameplay_resource_tree_sha256_equal": true,
+      "gameplay_resource_changed_entries": []
+    },
+    "build2": {
+      "outer_sha256_equal": false,
+      "entry_order_equal": false,
+      "entry_sets_equal": true,
+      "added_entries": [],
+      "removed_entries": [],
+      "content_changed_count": 4,
+      "content_changed_entries": [
+        "com/github/ysbbbbbb/kaleidoscopecookery/blockentity/kitchen/ChoppingBoardBlockEntity.class",
+        "com/github/ysbbbbbb/kaleidoscopecookery/client/render/block/ChoppingBoardBlockEntityRender.class",
+        "META-INF/MANIFEST.MF",
+        "META-INF/neoforge.mods.toml"
+      ],
+      "unchanged_content_entries": 5583,
+      "metadata_field_change_counts": {
+        "date_time": 5587,
+        "compressed_size": 2,
+        "compress_type": 0,
+        "flag_bits": 0,
+        "external_attr": 0,
+        "internal_attr": 0,
+        "create_system": 0,
+        "create_version": 0,
+        "extract_version": 0,
+        "volume": 0,
+        "extra_sha256": 0,
+        "comment_sha256": 0
+      },
+      "content_tree_sha256_equal": false,
+      "gameplay_resource_tree_sha256_equal": true,
+      "gameplay_resource_changed_entries": []
+    },
+    "unreviewed_changed_entries": [],
+    "all_other_entries_byte_identical": true,
+    "all_assets_and_data_resources_byte_identical": true,
+    "gameplay_resource_changed_entries": [],
+    "manifest_diff": [
+      "--- migration.3",
+      "+++ migration.4",
+      "@@ -1,4 +1,4 @@",
+      " Manifest-Version: 1.0",
+      " Implementation-Title: kaleidoscopecookery",
+      "-Implementation-Version: 1.4.1.7-migration.3-neoforge+mc1.21.1",
+      "+Implementation-Version: 1.4.1.7-migration.4-neoforge+mc1.21.1",
+      " "
+    ],
+    "neoforge_mods_toml_diff": [
+      "--- migration.3",
+      "+++ migration.4",
+      "@@ -10,7 +10,7 @@",
+      " ",
+      " [[mods]]",
+      " modId = \"kaleidoscope_cookery\"",
+      "-version = \"1.4.1.7-migration.3-neoforge+mc1.21.1\"",
+      "+version = \"1.4.1.7-migration.4-neoforge+mc1.21.1\"",
+      " displayName = \"Kaleidoscope Cookery\"",
+      " authors = \"ysbbbbbb, tartaric_acid, Azumic\"",
+      " description = '''A Minecraft mod that adds immersive cooking systems and delicious recipes to enhance your culinary adventure.'''"
+    ],
+    "class_fix_markers": {
+      "build1": {
+        "com/github/ysbbbbbb/kaleidoscopecookery/blockentity/kitchen/ChoppingBoardBlockEntity.class": {
+          "EMPTY_MODEL_ID": true,
+          "fromNamespaceAndPath": true
+        },
+        "com/github/ysbbbbbb/kaleidoscopecookery/client/render/block/ChoppingBoardBlockEntityRender.class": {
+          "EMPTY_MODEL_ID": true,
+          "fromNamespaceAndPath": true,
+          "getMissingModel": true
+        }
+      },
+      "build2": {
+        "com/github/ysbbbbbb/kaleidoscopecookery/blockentity/kitchen/ChoppingBoardBlockEntity.class": {
+          "EMPTY_MODEL_ID": true,
+          "fromNamespaceAndPath": true
+        },
+        "com/github/ysbbbbbb/kaleidoscopecookery/client/render/block/ChoppingBoardBlockEntityRender.class": {
+          "EMPTY_MODEL_ID": true,
+          "fromNamespaceAndPath": true,
+          "getMissingModel": true
+        }
+      }
+    }
+  },
+  "source_evidence": {
+    "block_entity": {
+      "path": "D:\\Trans\\migration-audit-work\\KaleidoscopeCookery-1.21.1-neoforge\\src\\main\\java\\com\\github\\ysbbbbbb\\kaleidoscopecookery\\blockentity\\kitchen\\ChoppingBoardBlockEntity.java",
+      "bytes": 9083,
+      "sha256": "579C7533174244D7D669DB67EF812DAD118484C769B537C4ADDF244D84E9377C"
+    },
+    "renderer": {
+      "path": "D:\\Trans\\migration-audit-work\\KaleidoscopeCookery-1.21.1-neoforge\\src\\main\\java\\com\\github\\ysbbbbbb\\kaleidoscopecookery\\client\\render\\block\\ChoppingBoardBlockEntityRender.java",
+      "bytes": 3997,
+      "sha256": "6885D1389023B7545EBF282ED37FFFF01E8C54CA23B1293E11D509E208C19DEF"
+    },
+    "gradle_properties": {
+      "path": "D:\\Trans\\migration-audit-work\\KaleidoscopeCookery-1.21.1-neoforge\\gradle.properties",
+      "bytes": 718,
+      "sha256": "13AED5C9DDD8B84720D055A05257F1F6E76150638F8882F1F5EF90B94D934EB2"
+    }
+  },
+  "conclusion": {
+    "scope_correct": true,
+    "gameplay_resources_preserved": true,
+    "changed_classes_exactly_expected": true,
+    "version_metadata_change_exactly_expected": true,
+    "archive_crc_and_duplicate_entry_checks": "PASS",
+    "byte_reproducible": true,
+    "byte_difference_cause": null,
+    "release_guidance": "The two frozen final builds are byte-identical. The migration.4 release input may be pinned to SHA-256 9113FD81FABED5B2E8FB969AC858F1FE5707E0FF6ADC7C037D407B3D80633C17."
+  }
+}

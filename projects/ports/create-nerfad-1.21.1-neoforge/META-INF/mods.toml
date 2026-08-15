@@ -1,0 +1,9 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT"
+
+[[mods]]
+modId="create_nerfad"
+version="1.0.0"
+displayName="Create: Not Enough Recipes For A Dummy"
+description="Adding some recipes for the Create mod"

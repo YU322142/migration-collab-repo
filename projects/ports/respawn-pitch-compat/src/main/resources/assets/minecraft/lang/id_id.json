@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Mengatur titik bangkit di %s, %s, %s [%s, %s] dalam %s untuk %s",
+  "commands.spawnpoint.success.multiple.new": "Mengatur titik bangkit di %s, %s, %s [%s, %s] dalam %s untuk %s pemain"
+}

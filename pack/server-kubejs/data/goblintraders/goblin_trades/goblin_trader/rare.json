@@ -1,0 +1,117 @@
+{
+  "replace": false,
+  "trades": [
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "irons_jewelry:ruby"
+      },
+      "payment_item": {
+        "count": {
+          "max": 4,
+          "min": 1
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "irons_jewelry:sapphire"
+      },
+      "payment_item": {
+        "count": {
+          "max": 4,
+          "min": 1
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "irons_jewelry:topaz"
+      },
+      "payment_item": {
+        "count": {
+          "max": 4,
+          "min": 1
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "irons_jewelry:moonstone"
+      },
+      "payment_item": {
+        "count": {
+          "max": 4,
+          "min": 1
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "irons_jewelry:peridot"
+      },
+      "payment_item": {
+        "count": {
+          "max": 4,
+          "min": 1
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "irons_jewelry:onyx"
+      },
+      "payment_item": {
+        "count": {
+          "max": 4,
+          "min": 1
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "irons_jewelry:garnet"
+      },
+      "payment_item": {
+        "count": {
+          "max": 4,
+          "min": 1
+        },
+        "id": "umapyoi:jewel"
+      }
+    }
+  ]
+}

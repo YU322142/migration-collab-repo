@@ -1,0 +1,33 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "ultramarine:polished_planks"
+    },
+    {
+      "item": "ultramarine:yellow_dye_powder"
+    },
+    {
+      "tag": "c:dyes/yellow"
+    },
+    {
+      "tag": "c:dyes/yellow"
+    },
+    {
+      "item": "ultramarine:yellow_dye_powder"
+    },
+    {
+      "item": "ultramarine:caihua_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:medium_yellow_carved_pattern"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:caihua_template"
+    }
+  ]
+}

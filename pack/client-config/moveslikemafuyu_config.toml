@@ -1,0 +1,45 @@
+[slide_setting]
+	enable_slide = true
+	enable_dap = true
+	enable_slide_repeat = true
+	enable_slide_knock = true
+
+[climb_setting]
+	enable_climb = false
+	enable_climb_jump = false
+	enable_falling_rescue = false
+
+[swimming_setting]
+	enable_shallow_swimming = true
+	enable_swimming_boost = true
+	enable_free_style = true
+	enable_swimming_push = true
+
+[craw_setting]
+	enable_craw = false
+	enable_craw_slide = true
+	enable_leap = true
+	enable_jump_cancel_crawl = false
+
+[attribute_setting]
+	# Default: 25
+	# Range: > 0
+	slide_duration = 15
+	# Default: 2
+	# Range: > 0
+	slide_air_duration = 2
+	# Default: 2
+	# Range: > 0
+	dap_times = 2
+	# Default: 60
+	# Range: > 0
+	slide_cooldown = 15
+	# Default: 60
+	# Range: > 0
+	climb_jump_cooldown = 60
+	# Default: 60
+	# Range: > 0
+	swimming_boost_cooldown = 60
+	# Default: 30
+	# Range: 0 ~ 300
+	swimming_boost_air_cost = 30

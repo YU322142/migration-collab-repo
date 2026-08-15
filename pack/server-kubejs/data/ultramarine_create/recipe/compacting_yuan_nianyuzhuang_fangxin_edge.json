@@ -1,0 +1,33 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "c:dyes/blue"
+    },
+    {
+      "item": "ultramarine:cyan_dye_powder"
+    },
+    {
+      "tag": "c:dyes/blue"
+    },
+    {
+      "tag": "c:dyes/blue"
+    },
+    {
+      "item": "ultramarine:fangxin_edge_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:yuan_nianyuzhuang_fangxin_edge"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:fangxin_edge_template"
+    }
+  ]
+}

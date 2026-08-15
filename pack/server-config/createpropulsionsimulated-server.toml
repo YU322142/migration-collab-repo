@@ -1,0 +1,99 @@
+[thruster]
+	#Base thrust at redstone 15 and full obstruction efficiency for the standard thruster.
+	#Effective thrust uses: baseThrust * fuel_thrust_percent / 100.
+	# Default: 600.0
+	# Range: 1.0 ~ 1.0E7
+	baseThrust = 3000.0
+	#How many blocks behind the nozzle are checked for obstruction.
+	# Default: 10
+	# Range: 1 ~ 64
+	obstructionScanLength = 10
+	#If true, standard thrusters require configured fluid fuel to produce force.
+	requireFuel = true
+	#Internal fuel tank capacity in millibuckets.
+	# Default: 250
+	# Range: 250 ~ 64000
+	fuelTankCapacityMb = 250
+	#Standard thruster speed limit in blocks per second.
+	# Default: 600
+	# Range: 1 ~ 10000000
+	thrusterMaxSpeed = 5000
+	#Creative thruster speed limit in blocks per second.
+	# Default: 10000
+	# Range: 1 ~ 100000
+	creativeThrusterMaxSpeed = 1000
+	#Fuel consumption in millibuckets per tick at full redstone throttle.
+	# Default: 1.0
+	# Range: 1.0E-4 ~ 1000.0
+	fuelMbPerTickAtFullThrottle = 2.0
+	#Ion thruster internal FE capacity.
+	# Default: 1000
+	# Range: 1 ~ 100000000
+	ionThrusterEnergyCapacityFe = 1000
+	#Ion thruster energy consumption in FE per tick at full redstone throttle.
+	# Default: 80.0
+	# Range: 1.0E-4 ~ 1000000.0
+	ionThrusterFePerTickAtFullThrottle = 80.0
+	#Ion thruster base thrust at redstone 15 and full obstruction efficiency.
+	# Default: 1000.0
+	# Range: 1.0 ~ 1.0E7
+	ionThrusterBaseThrust = 600.0
+	#If true, entities inside active thruster plume are damaged.
+	damageEntities = true
+	#How often plume damage checks run, in ticks.
+	# Default: 5
+	# Range: 1 ~ 40
+	damageTickInterval = 5
+	#Offset from the block center where force is applied.
+	# Default: 0.45
+	# Range: 0.0 ~ 1.5
+	nozzleOffsetFromCenter = 0.45
+	#If true, atmospheric pressure affects thruster output at altitude.
+	useAtmosphericPressure = true
+	#Strength of atmospheric pressure influence. 1.0 = full effect, 0.0 = no effect.
+	# Default: 1.0
+	# Range: 0.0 ~ 2.0
+	atmosphericPressureAmount = 1.0
+	#Max client particles per tick while active.
+	# Default: 4
+	# Range: 0 ~ 64
+	clientParticlesPerTick = 4
+	#Ground friction coefficient applied while a thruster detects support under it.
+	# Default: 0.08
+	# Range: 0.0 ~ 5.0
+	groundFrictionCoefficient = 0.08
+	#Grounded linear drag coefficient in pN per m/s.
+	# Default: 180.0
+	# Range: 0.0 ~ 10000.0
+	groundLinearDrag = 180.0
+	#Additional grounded rolling resistance in pN.
+	# Default: 80.0
+	# Range: 0.0 ~ 10000.0
+	groundRollingResistance = 80.0
+	#Horizontal speed below this value is treated as stopped for grounded drag.
+	# Default: 0.03
+	# Range: 0.0 ~ 5.0
+	groundedSpeedDeadzone = 0.03
+	#How far downward a thruster probes to detect grounded support.
+	# Default: 1.5
+	# Range: 0.05 ~ 5.0
+	groundProbeDistance = 1.5
+	#Ion thruster speed limit in blocks per second.
+	# Default: 1000
+	# Range: 1 ~ 10000000
+	ionThrusterMaxSpeed = 1000
+	#Creative thruster max thrust in pN.
+	# Default: 10000.0
+	# Range: 10.0 ~ 1000000.0
+	creativeThrusterMaxThrust = 10000.0
+
+	[thruster.fuelTable]
+		#Fuel table entries as '<namespace:fluid>=<thrust_percent>,<burn_rate_percent>'.
+		#Example: createpropulsionsimulated:turpentine=80,120
+		fuelProperties = ["createpropulsionsimulated:turpentine=80,120", "createdieselgenerators:plant_oil=55,170", "immersiveengineering:plantoil=55,170", "createdieselgenerators:ethanol=70,140", "immersiveengineering:ethanol=70,140", "mekanismgenerators:bioethanol=75,135", "northstar:biofuel=80,125", "createdieselgenerators:biodiesel=90,110", "immersiveengineering:biodiesel=90,110", "immersiveengineering:high_power_biodiesel=105,95", "createdieselgenerators:diesel=100,100", "tfmg:diesel=100,100", "stellaris:diesel=100,100", "tfmg:naphtha=95,105", "tfmg:kerosene=115,90", "createdieselgenerators:gasoline=125,80", "tfmg:gasoline=125,80", "tfmg:lpg=120,85", "northstar:hydrocarbon=130,75", "stellaris:fuel=115,100", "mekanism:hydrogen=120,80", "createaddition:bioethanol=75,135", "createaddition:seed_oil=55,170"]
+
+	[thruster.tiltAdapter]
+		#Maximum angle the tilt adapter can rotate to, in degrees.
+		# Default: 90.0
+		# Range: 0.0 ~ 180.0
+		tiltAdapterMaxAngle = 90.0

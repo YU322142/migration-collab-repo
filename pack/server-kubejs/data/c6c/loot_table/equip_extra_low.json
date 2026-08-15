@@ -1,0 +1,22 @@
+{
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_helmet",
+          "functions": [
+            {
+              "function": "c6c:randomize_equipments",
+              "quality": {
+                "min": 0.0,
+                "max": 0.5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

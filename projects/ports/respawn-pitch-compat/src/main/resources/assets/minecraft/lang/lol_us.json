@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Set kat home 2 %s, %s, %s [%s, %s] in %s 4 %s",
+  "commands.spawnpoint.success.multiple.new": "Set kat home 2 %s, %s, %s [%s, %s] in %s 4 %s playrz"
+}

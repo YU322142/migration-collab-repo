@@ -1,0 +1,9 @@
+﻿Compiled from "CEIAXDataComponents.java"
+public class plus.dragons.createenchantmentindustry.integration.apotheosis.common.registry.CEIAXDataComponents {
+  public plus.dragons.createenchantmentindustry.integration.apotheosis.common.registry.CEIAXDataComponents();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+}

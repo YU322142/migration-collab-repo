@@ -1,0 +1,5 @@
+{
+  "deferred_content_protection.protected": "Migration protected: gameplay support will arrive in a later OTA update.",
+  "deferred_content_protection.blocked": "Protected migration item: this action is disabled to prevent data loss.",
+  "deferred_content_protection.horse_locked": "This horse carries protected migration data. Its inventory is temporarily locked."
+}

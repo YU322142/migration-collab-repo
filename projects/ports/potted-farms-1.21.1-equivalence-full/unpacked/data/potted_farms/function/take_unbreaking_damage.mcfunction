@@ -1,0 +1,13 @@
+execute as @s if data entity @s Item.components."minecraft:unbreakable" run return fail
+execute as @s if data entity @s Item.components."minecraft:enchantments".levels."minecraft:mending" run return fail
+execute as @s unless data entity @s Item.components."minecraft:enchantments".levels."minecraft:unbreaking" run return run function potted_farms:update_damage with entity @s
+execute as @s if entity @s[nbt={Item:{components:{"minecraft:enchantments":{levels:{"minecraft:unbreaking":1}}}}}] unless predicate potted_farms:unbreaking_1 run return run function potted_farms:update_damage with entity @s
+execute as @s if entity @s[nbt={Item:{components:{"minecraft:enchantments":{levels:{"minecraft:unbreaking":2}}}}}] unless predicate potted_farms:unbreaking_2 run return run function potted_farms:update_damage with entity @s
+execute as @s if entity @s[nbt={Item:{components:{"minecraft:enchantments":{levels:{"minecraft:unbreaking":3}}}}}] unless predicate potted_farms:unbreaking_3 run return run function potted_farms:update_damage with entity @s
+execute as @s if entity @s[nbt={Item:{components:{"minecraft:enchantments":{levels:{"minecraft:unbreaking":4}}}}}] unless predicate potted_farms:unbreaking_4 run return run function potted_farms:update_damage with entity @s
+execute as @s if entity @s[nbt={Item:{components:{"minecraft:enchantments":{levels:{"minecraft:unbreaking":5}}}}}] unless predicate potted_farms:unbreaking_5 run return run function potted_farms:update_damage with entity @s
+execute as @s if entity @s[nbt={Item:{components:{"minecraft:enchantments":{levels:{"minecraft:unbreaking":6}}}}}] unless predicate potted_farms:unbreaking_6 run return run function potted_farms:update_damage with entity @s
+execute as @s if entity @s[nbt={Item:{components:{"minecraft:enchantments":{levels:{"minecraft:unbreaking":7}}}}}] unless predicate potted_farms:unbreaking_7 run return run function potted_farms:update_damage with entity @s
+execute as @s if entity @s[nbt={Item:{components:{"minecraft:enchantments":{levels:{"minecraft:unbreaking":8}}}}}] unless predicate potted_farms:unbreaking_8 run return run function potted_farms:update_damage with entity @s
+execute as @s if entity @s[nbt={Item:{components:{"minecraft:enchantments":{levels:{"minecraft:unbreaking":9}}}}}] unless predicate potted_farms:unbreaking_9 run return run function potted_farms:update_damage with entity @s
+execute as @s if entity @s[nbt={Item:{components:{"minecraft:enchantments":{levels:{"minecraft:unbreaking":10}}}}}] unless predicate potted_farms:unbreaking_10 run return run function potted_farms:update_damage with entity @s

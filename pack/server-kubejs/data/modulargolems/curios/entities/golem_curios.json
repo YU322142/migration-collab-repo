@@ -1,0 +1,13 @@
+{
+  "entities": [
+    "modulargolems:dog_golem",
+    "modulargolems:metal_golem",
+    "modulargolems:humanoid_golem"
+  ],
+  "slots": [
+    "ring",
+    "back",
+    "golem_route",
+    "golem_skin"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_tavern:gold_grape_juice",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_nugget"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_tavern:madame_shexiang"
+  },
+  "unit_time": 2400
+}

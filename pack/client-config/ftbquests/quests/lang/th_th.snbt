@@ -1,0 +1,889 @@
+{
+	chapter.022F1E7B0C05C13B.title: "มหาภัยพิบัติ(@L_Ender 's Cataclysm)"
+	chapter.05D37BDE6DDB3CF4.title: "“ความเป็นปรปักษ์” แผ่ขยายออกไป(@L2Hostility)"
+	chapter.07793F365C646741.title: "ระบบนิเวศแปลกประหลาดของ “ {dimension.minecraft.the_end} ”[ไบโอม(End Warped Forest)]"
+	chapter.07D198D3DDD33F05.title: "อุมะมุซึเมะ(@Umapyoi)"
+	chapter.0BE61D98EC2E6FEF.title: "การจัดเก็บและการจัดระเบียบ(@Create:Storage)"
+	chapter.1505E388615EF814.title: "เตาหลอมโลหะผสม(@Alloy Smelter)"
+	chapter.1B463ED58F5BC382.title: "เครื่องประดับและเครื่องประดับตกแต่ง(@Iron's Gems 'n Jewelry)"
+	chapter.2712B84FC95D24A9.title: "Mechanomania"
+	chapter.273D877EDE86BEE7.title: "เกาะเอนเดอร์"
+	chapter.30CF816281C9CC36.title: "Touhou Little Maid"
+	chapter.3C805D6AA3D59793.title: "ไบโอม(End Ice Spikes)"
+	chapter.4350B63C95F47CFF.title: "ไบโอม(End Flower Forest)"
+	chapter.4B14987D9F164B1A.title: "Farmer's Delight"
+	chapter.610239010B9C08DD.title: "งานรื่นเริงแห่งห้วงเหว"
+	chapter.640A5F4C7DC06EDE.title: "ยุคแอนดีไซต์(@Create)"
+	chapter.700A1A40AA9B1D69.title: "อุปกรณ์ไลฟ์สไตล์"
+	chapter.7519FE5CE0D0A541.title: "ไบโอม(End Deep Dark)"
+	chapter.771ACE65A798117A.title: "การปฏิวัติCuZn(@Create)"
+	chapter_group.08701E4938C3D337.title: "ม็อดอื่นๆ"
+	chapter_group.2195A9D3E7D1D788.title: "โอเวอร์เวิลด์-ชีวิตที่ช้าลง"
+	chapter_group.6B9D1AFD3E45FF4E.title: " {dimension.minecraft.the_end} -การต่อสู้และการผจญภัย"
+	quest.000EAE75E8F04497.quest_desc: [
+		"เมื่อใช้งาน คุณต้องวาง &6{item.exposure.developed_black_and_white_film}&r หรือ &6{item.exposure.developed_color_film}&r ในช่องซ้ายก่อน สิ่งเหล่านี้จะช่วยให้คุณสามารถพิมพ์ภาพถ่ายขาวดำหรือภาพถ่ายสีได้ตามลำดับ"
+		""
+		"การคลิกตำแหน่งซ้าย/ขวาจะช่วยให้คุณเลือกเนกาทีฟก่อนหน้า/ถัดไป การคลิกที่เนกาทีฟปัจจุบันหรือเลื่อนขึ้นด้วยล้อเมาส์จะช่วยให้คุณซูมเข้าและดูรายละเอียดของเนกาทีฟนั้น"
+		""
+		"หลังจากใส่ &6{item.minecraft.paper}&r และสีย้อมแล้ว ให้คลิกปุ่มพิมพ์เพื่อเริ่มกระบวนการพิมพ์ ในเวลานี้ไฟแสดงสถานะแดงบนพื้นผิวของ &6{block.exposure.lightroom}&r จะสว่างขึ้น การพิมพ์ภาพถ่ายขาวดำจะใช้ &6{item.minecraft.paper}&r หนึ่งแผ่นและ 'minecraft:black_dye' หนึ่งชิ้น ส่วนการพิมพ์ภาพถ่ายสีจะใช้ &6{item.minecraft.paper}&r หนึ่งแผ่นและสีย้อมทั้งสี่ชนิดอย่างละหนึ่งชิ้น และยังใช้เวลามากกว่า"
+	]
+	quest.000EAE75E8F04497.quest_subtitle: "พิมพ์ภาพถ่ายของคุณออกมา!"
+	quest.023C81F541EAFB0D.quest_desc: [
+		"ขอแสดงความยินดีที่คุณได้สังหารคนรับใช้ของ {dimension.minecraft.the_end} - &d{entity.minecraft.ender_dragon}&r"
+		"ตอนนี้ ที่เกาะนอก {dimension.minecraft.the_end} มีมอนสเตอร์ที่แข็งแกร่งกว่ารอคุณอยู่"
+	]
+	quest.02C7A69D089135C3.title: "อุปกรณ์ส่งกำลัง"
+	quest.05254E5479383C89.title: "แหล่งพลังงาน"
+	quest.053B7489051084E1.quest_desc: [
+		"การยืนอยู่ในของเหลว &6{item.hotbath.rose_bath_bucket}&r จะฟื้นฟูพลังชีวิตในอัตรา 0.25 ต่อวินาที,"
+		"หลังจากยืนอยู่ในของเหลว &6{item.hotbath.rose_bath_bucket}&r เป็นเวลา 15 วินาที เอฟเฟกต์สถานะเชิงลบทั้งหมดจะถูกลบออก"
+		"หลังจากยืนอยู่ในของเหลว &6{item.hotbath.rose_bath_bucket}&r เป็นเวลา 15 วินาที คุณจะได้รับเอฟเฟกต์ &6{effect.minecraft.strength}&r ระดับ 1 ซึ่งมีผลนาน 20 วินาที"
+	]
+	quest.06486C7C061D349B.quest_desc: [
+		"หลังจากเอาชนะ &d{entity.minecraft.ender_dragon}&r แล้ว จะเกิด &5{block.minecraft.end_gateway}&r"
+		"ซึ่งจะส่งผู้เล่นไปยัง &dตำแหน่งสุ่ม&r บนเกาะนอก"
+		"เกาะนอก {dimension.minecraft.the_end} จะให้ไอเท็มล้ำค่า:"
+		"- &6{item.minecraft.potion.effect.apothic_attributes.flying}&r"
+		"- &6{block.minecraft.netherite_block}&r"
+		"- &2{item.kubejs.chlorophyte_ingot}&r"
+		"- &2{item.umapyoi.jewel}"
+		""
+		"แต่ทว่า"
+		"เนื่องจากผู้เล่นยากที่จะไปยังจุดที่ตายครั้งก่อน"
+		"ไอเท็มที่ตกแทบจะหายไปถาวร"
+		""
+		"&o&5{block.minecraft.end_gateway}&r มีคูลดาวน์ 5 นาที หากเข้าไปในช่วงคูลดาวน์ จะไม่รีเฟรชตำแหน่งทางออก และจะรีเฟรชคูลดาวน์ใหม่ ทำให้สะดวกต่อการผจญภัยแบบทีม&r"
+		"&oใน {dimension.minecraft.the_nether} และ {dimension.minecraft.the_end} จะไม่มีการโจมตีระหว่างผู้เล่น&r"
+	]
+	quest.06486C7C061D349B.title: "เกาะนอก"
+	quest.068BF44B149A3415.quest_desc: [
+		"เวอร์ชัน Nether ของ &c{block.farmersdelight.organic_compost}&r"
+		""
+		" สามารถแปรสภาพเป็น &c{block.mynethersdelight.resurgent_soil}&r ได้เฉพาะภายใน Nether เท่านั้น"
+	]
+	quest.0878F69BAFB5F301.quest_desc: [
+		"รางวัลถาวร [&6{effect.kaleidoscope_cookery.vigor}&r] BUFF: "
+		"  การวิ่งเร็วไม่ทำให้ความอิ่มตัวของพลังงานลดลง"
+		""
+		""
+		"&oสามารถดูรายการที่สามารถเก็บสะสมและรางวัลทั้งหมดได้ในความสำเร็จ “&c{advancement.c6c.root}&r”&r"
+	]
+	quest.0878F69BAFB5F301.quest_subtitle: "รวบรวมเมดทุกประเภทของ &6{model.geckolib.zhiban.name}&r"
+	quest.0C04B0D91BB46687.quest_desc: [""]
+	quest.0C04B0D91BB46687.quest_subtitle: "นำไปใส่ในช่อง {curios.identifier.uma_suit}"
+	quest.0C04B0D91BB46687.title: "สวมชุดใหม่ให้ {UmaMusu} ของคุณ"
+	quest.0D10CBCC2332A0A0.quest_desc: ["&e&lผู้ช่วยโลจิสติกส์อัตโนมัติ&r&r สำหรับระยะทางไกลภายในมิติเดียวกัน"]
+	quest.0D70527CD0560FA3.quest_desc: [
+		"บนเกาะนอก {dimension.minecraft.the_end} จะเกิดมอนสเตอร์ที่มี &dความเป็นศัตรู&r"
+		"&lเมื่อผู้เล่นสังหารมอนสเตอร์&r"
+		"คุณสมบัติของมอนสเตอร์จะยิ่งแข็งแกร่งขึ้น"
+		"พร้อมกันนั้นจะค่อย ๆ เริ่มมี {ลักษณะเฉพาะ}"
+		"เช่น:"
+		"- &d{trait.l2hostility.blindness}&r"
+		"- &d{trait.l2hostility.levitation}&r"
+		""
+		"                                 -->หน้าถัดไป"
+		"{@pagebreak}"
+		"คุณสามารถตรวจสอบระดับความยากปัจจุบันได้ตลอดเวลาในหน้าความยากเหนือช่องเก็บของ"
+		"ระวังอย่าให้ความยากเกินความสามารถของคุณมากเกินไป!"
+		"ก่อนที่คุณจะตกอยู่ในอันตรายถึงชีวิต ให้หาประตูมิติแล้วถอนตัวออกจากเกาะนอก {dimension.minecraft.the_end}"
+		"ครั้งต่อไปที่เข้าสู่เกาะนอก {dimension.minecraft.the_end} อีกครั้ง"
+		"ความแข็งแกร่งของมอนสเตอร์จะถูกปรับใหม่โดยอัตโนมัติ"
+		""
+		"หากผู้เล่นตาย"
+		"ความแข็งแกร่งของมอนสเตอร์จะลดลงหนึ่งระดับ"
+		""
+		"&o&l{dimension.minecraft.the_end} ไม่สามารถใช้ &5{item.c6c.recall_potion}&r&r&r ได้"
+	]
+	quest.0E0AA6FDAB840DA8.title: "{container.fxntstorage.simple_storage_box_title}อัพเกรด"
+	quest.0E98873F2A744F77.title: "เครื่องแรกของคุณ"
+	quest.0EAED4471D8CE8AC.quest_desc: [
+		"Shift + คลิกขวา &6{item.exposure.camera}&r เพื่อเปิด GUI ภายในของ &6{item.exposure.camera}&r และติดตั้งส่วนประกอบที่จำเป็น รวมถึง &6{film}&r, แฟลช, เลนส์ และฟิลเตอร์ คุณยังสามารถคลิกขวา &6{item.exposure.camera}&r โดยตรงด้วยไอเท็มที่เกี่ยวข้องเพื่อทำการติดตั้งหรือเปลี่ยนส่วนประกอบได้"
+		"(หาก &6{item.exposure.camera}&r ถูกวางบนขาตั้งกล้อง กรุณายืนห่างออกไปเล็กน้อยก่อน Shift + คลิกขวา เพื่อหลีกเลี่ยงการเรียกใช้งาน &6{carryon}&r pickup)"
+		""
+		"&6{film}&r: ฟิล์มที่ยังไม่ได้ล้างชนิดต่าง ๆ"
+		"แฟลช: &6{block.minecraft.redstone_lamp}&r"
+		"เลนส์: &6{item.minecraft.spyglass}&r"
+		"ฟิลเตอร์: แผ่นกระจกสีต่าง ๆ / &6{item.exposure.interplanar_projector}&r"
+	]
+	quest.0EAED4471D8CE8AC.quest_subtitle: "บันทึกช่วงเวลาที่สวยงาม"
+	quest.0EC90EBB03243D94.quest_desc: [
+		"&6{block.torchmaster.feral_flare_lantern}&r จะตรวจจับระดับแสงของแต่ละบล็อกภายในรัศมีทรงกลม 16 บล็อก หากระดับแสงของบล็อกน้อยกว่า 7 &6{block.torchmaster.feral_flare_lantern}&r จะพยายามวางแหล่งกำเนิดแสงที่มองไม่เห็นซึ่งมีความสว่าง 11 ใกล้เคียง"
+		""
+		"เพื่อให้ได้ประสิทธิภาพสูงสุด วิธีการจัดแสงที่เหมาะสมคือการวาง &6{block.torchmaster.feral_flare_lantern}&r หนึ่งอันทุก ๆ ประมาณ 30 บล็อก"
+	]
+	quest.0F5E82B5594F0725.quest_desc: ["ป้องกันไม่ให้ผู้เล่นได้รับความเสียหายจากการตกขณะสะพายเป้"]
+	quest.114E23CD35C37E9B.quest_desc: ["เมื่อกิน {item.umapyoi.sweet_cupcake} จะเพิ่มระดับแรงจูงใจขึ้น 2 ระดับ และฟื้นฟูค่าความหิว 7 หน่วย พร้อมค่าความอิ่ม 9 หน่วย"]
+	quest.1169390015BB59F9.title: "สิ่งจำเป็นของวิศวกร"
+	quest.1171B51ED997D998.quest_desc: [
+		"รางวัลถาวร “&a{effect.minecraft.luck}&r” BUFF"
+		""
+		"คุณสามารถกด [&bL&r] ในหน้าจอเกมเพื่อเปิดหน้า ความสำเร็จ"
+		""
+		"ค้นหา “&c{advancement.c6c.root}&r” เพื่อดูความคืบหน้าในการสะสมเมดปัจจุบัน"
+	]
+	quest.1171B51ED997D998.quest_subtitle: "รวบรวมเมดตัวแรก"
+	quest.121E38D67771FEB0.quest_desc: [
+		"คุณสามารถปรับแต่งโกเล็มของคุณได้"
+		"และติดตั้งอุปกรณ์ที่เหมาะสมให้กับพวกเขา"
+	]
+	quest.121E38D67771FEB0.title: "การประกอบโกเล็ม"
+	quest.136C3B3FEB2ED0CC.quest_desc: [
+		"&4หมายเหตุ:&r"
+		"หากคุณติดตั้ง {YSM mod} อาจ &dทำให้ช่องเกราะของผู้เล่นไม่สามารถแสดงได้&r"
+		""
+		"วิธีแก้ไข: "
+		"* ปิดการแสดง {item.umapyoi.uma_soul} ในช่องเครื่องประดับ"
+		""
+		"หรือ"
+		""
+		"* กด Alt+Y เพื่อเปิดหน้า YSM"
+		"เลือกที่ไอคอนประแจด้านขวาบน แล้วเลือก “{Prevents rendering of self player's model}”"
+	]
+	quest.136C3B3FEB2ED0CC.title: "YSM"
+	quest.13B1E27BAA44F3B8.quest_desc: [
+		"เนื่องจากจำนวนการเกิดมอนสเตอร์ในโลกหลักมีขีดจำกัดต่ำ จึงไม่เพียงพอสำหรับการสร้างฟาร์มมอนสเตอร์ ผู้เล่นสามารถสร้างกรงมอนสเตอร์เองได้ กรงนี้สามารถส่งของดรอปจากมอนสเตอร์ไปยังหีบได้โดยตรง และลดการกระตุก"
+		"เหมือนกับฟาร์มมอนสเตอร์ปกติ มอนสเตอร์ที่เกิดจะแตกต่างกันไปตามไบโอม (&aชนิดมอนสเตอร์เหมือนกับเวอร์ชันดั้งเดิม&r)"
+		""
+		"เทลงไป &d{spawn_fluid_random}&r เพื่อเริ่มสร้างมอนสเตอร์"
+		""
+		"&a&lมีหน้าถัดไป!&r&r"
+		"{@pagebreak}"
+		""
+		"&lการอ้างอิงไบโอมสำหรับการเกิดมอนสเตอร์&r"
+		"โครงกระดูกน้ำแข็ง: โอมทุนดราหิมะ, ภูเขาหิมะ, ยอดแหลมน้ำแข็ง, แม่น้ำแช่แข็ง, ทะเลแช่แข็ง"
+		"ซอมบี้ทะเลทราย: ทะเลทราย"
+		"สไลม์ไฟ: ที่รกร้างเนเธอร์, สันดอนหินบะซอลต์"
+	]
+	quest.14C82B046FCA091C.title: "การโหลดชังก์"
+	quest.1534B59AA6AB4BD9.title: "อุปกรณ์ส่งกำลังแบบไม่มาตรฐาน"
+	quest.1566785ABC7FC6BC.quest_subtitle: "ตัวบรรจุโครงสร้าง Multiblock"
+	quest.1637D39489C22EB9.title: "{item.structurecompass.structure_compass}"
+	quest.17E8B04D5E517FFD.quest_desc: [
+		"การยืนอยู่ในของเหลว &6{item.hotbath.herbal_bath_bucket}&r จะฟื้นฟูพลังชีวิตในอัตรา 0.25 ทุก ๆ 2 วินาที"
+		"หลังจากยืนอยู่ในของเหลว &6{item.hotbath.herbal_bath_bucket}&r เป็นเวลา 15 วินาที เอฟเฟกต์สถานะเชิงลบทั้งหมดจะถูกลบออก"
+		"หลังจากยืนอยู่ในของเหลว &6{item.hotbath.herbal_bath_bucket}&r เป็นเวลา 5 วินาที คุณจะได้รับเอฟเฟกต์ &6{effect.minecraft.resistance}&r ระดับ 1 ซึ่งมีผลนาน 10 วินาที"
+		"สิ่งมีชีวิตที่เป็นอันเดดที่ยืนอยู่ในของเหลว &6{item.hotbath.herbal_bath_bucket}&r จะสูญเสียพลังชีวิตในอัตรา 0.5 ต่อวินาที"
+	]
+	quest.18DE4FF6E70319A5.quest_desc: [
+		"ในช่องเก็บของ เมื่อเมาส์วางเหนือไอเท็มใด ๆ"
+		"ปุ่ม R (สูตรการคราฟต์): แสดงสูตรการคราฟต์ของไอเท็ม"
+		"ปุ่ม U (การใช้งาน): แสดงวัตถุประสงค์ของไอเท็ม"
+		"ปุ่ม A: บันทึกไอเท็มเพื่อให้คุณสามารถดูสูตรการคราฟต์ภายหลังได้"
+	]
+	quest.18DE4FF6E70319A5.title: "ตรวจสอบสูตรการคราฟต์ของไอเท็ม"
+	quest.1A84011D71AF4A87.quest_desc: [
+		"เมื่อคุณมี &e{item.umapyoi.crystal_gold}&r"
+		"คุณสามารถคราฟต์ &e{block.umapyoi.uma_pedestal}&r ได้"
+		""
+		"มีเพียงสิ่งนี้เท่านั้นที่สามารถใช้ในการอัญเชิญ SSR{UmaMusu} และ SSR{Support Card}"
+	]
+	quest.1B12A06587207CCB.quest_desc: ["เติมไอเท็มที่ถืออยู่ในมือหลัก หรือมือรองจากกระเป๋า"]
+	quest.1B7A31081B34C2D0.quest_desc: [
+		"คุณสามารถใช้ &d{item.umapyoi.skill_book}&r ที่ {block.umapyoi.skill_learning_table} เพื่อ &aฝึกฝน&r {UmaMusu}"
+		""
+		"หลังจาก &aฝึกฝน&r แล้ว {UmaMusu} จะได้รับการเพิ่มค่าสถานะอย่างมาก!"
+		""
+		"{item.umapyoi.skill_book} สามารถพบได้ในหีบสมบัติของ {dimension.minecraft.the_end}"
+	]
+	quest.1BBF920628E5D7D8.quest_desc: [
+		"สร้าง &6{block.kaleidoscope_doll.doll_machine}&r เพื่อสุ่มรับเมด"
+		""
+		"ทุกครั้งที่สุ่มจะมีโอกาส 100% รับตุ๊กตา 1 ตัว"
+		"มีโอกาส 12% ที่จะได้รับ &6{item.touhou_little_maid.smart_slab}&r"
+	]
+	quest.1E997C93EDDBD107.quest_desc: [
+		"คุณได้รับ &a{item.kubejs.chlorophyte_ingot}&r"
+		"มันสามารถใช้ในการสร้างแท่งโลหะต่อไปนี้"
+		""
+		"แท่งโลหะเหล่านี้สามารถใช้สร้างอุปกรณ์ของ {l2hostility.title} ซึ่งทั้งหมดมีเอฟเฟกต์ทรงพลังหรือเอฟเฟกต์เซ็ต"
+		""
+		"&d&lยังมีอีกสองวิธีในการได้รับอุปกรณ์ {l2hostility.title}:&r&r"
+		"* อัปเกรดโดยตรงจากอุปกรณ์ &bเพชร·เนเธอไรต์&r"
+		"* ใช้ &e{item.irons_spellbooks.timeless_slurry}&r เพื่ออัปเกรดอุปกรณ์เนเธอไรต์"
+	]
+	quest.1F18639774CCF28E.quest_desc: [
+		"ใช้ &d{item.umapyoi.blank_ticket}&r กับ {block.umapyoi.silver_uma_pedestal} (โปรดทราบว่ามือรองต้องว่าง)"
+		"คุณจะได้รับ &e{item.umapyoi.blank_uma_soul}&r"
+		""
+		"จากนั้นนำ &e{item.umapyoi.blank_uma_soul}&r ไปวางใน &b{block.umapyoi.three_goddess}&r เพื่อรับ &b{item.umapyoi.uma_soul}&r"
+		""
+		"เมื่อสวมใส่ &b{item.umapyoi.uma_soul}&r ในช่องเครื่องประดับ คุณจะได้รับ &6การเพิ่มค่าสถานะ&r!"
+	]
+	quest.1F829C67174A4944.quest_desc: [""]
+	quest.20C36E1FC5B0C4EF.title: "ต่อไปคุณสามารถทำลิฟต์เพื่อตกแต่งบ้านของคุณได้แล้ว"
+	quest.2105773288B818A7.title: "โลจิสติกส์ขั้นสูง"
+	quest.21A14597E092B4EC.title: "การขนส่งพัสดุด้วยรถไฟ"
+	quest.225EE2F819DD7B94.quest_desc: ["เมื่อกินจะฟื้นฟูค่าความหิว 2 หน่วย และค่าความอิ่ม 2.4 หน่วย พร้อมทั้งฟื้นฟูพลังการกระทำตามเปอร์เซ็นต์ของขีดจำกัดสูงสุด"]
+	quest.23C25A1C2A64D98A.quest_desc: [
+		"ก่อนอื่น ใช้ {block.minecraft.dragon_head} ที่ดรอปจาก &d{entity.minecraft.ender_dragon}&r เพื่อสร้าง &b{block.alloy_smelter.forge_controller_tier3}"
+		"มันสามารถเพิ่มผลผลิตแร่ของคุณได้ และที่สำคัญกว่านั้น มันสามารถหลอมและย่อยผลิตผลต่าง ๆ จากเกาะนอก {dimension.minecraft.the_end}"
+	]
+	quest.245F475CE17B31BE.title: "ผู้ช่วยการสร้าง"
+	quest.253789D53CF7F585.quest_subtitle: "ความยากลำบาก100"
+	quest.254B565D5CB0CD9D.quest_desc: [
+		"แร่ชนิดต่าง ๆ จะถูกกระจายอย่างหนาแน่นในไบโอมที่แตกต่างกัน"
+		"เช่น ทุ่งหญ้าอาจมีเส้นแร่เหล็กจำนวนมาก ในขณะที่เนินเขาลมแรงอาจมีเส้นแร่จำนวนมากของ &c{block.kubejs.compressed_tuff}&r"
+		"เส้นแร่บางชนิดต้องใช้ &bCoolant&r ที่สามารถขุดได้เฉพาะในไบโอมที่มีอากาศหนาว"
+		"&cทองแดง&r และ &cสังกะสี&r สามารถได้จากการบด &c{block.kubejs.compressed_tuff}&r"
+		""
+		"แทบทุกชนิดของแร่สามารถขุดได้"
+		"ค้นหา &a@ore&r บน JEI เพื่อดูข้อมูลเส้นแร่ทั้งหมด"
+	]
+	quest.2765F1D3D9529A27.quest_desc: ["การยืนอยู่ในบ่อน้ำพุร้อนเป็นเวลา 15 วินาทีจะได้รับเอฟเฟกต์ &6{effect.minecraft.speed}&r ระดับ 1 เป็นเวลา 20 วินาที"]
+	quest.2813FF8C41AFEF22.quest_desc: ["คุณสามารถพบ &5{block.irons_spellbooks.brazier_soul}&r จำนวนมากได้ที่นี่"]
+	quest.2813FF8C41AFEF22.title: "สวนเยือกแข็งอันเงียบสงบ"
+	quest.295B71FE3F4848D6.quest_desc: [
+		"รางวัลถาวร [&a{effect.farmersdelight.nourishment}&r] BUFF: "
+		"  เมื่อไม่ได้รับความเสียหาย &d&lจะไม่สูญเสียค่าความหิวและความอิ่ม&r&r"
+		""
+		""
+		"&oสามารถดูรายการที่สามารถเก็บสะสมและรางวัลทั้งหมดได้ในความสำเร็จ “&c{advancement.c6c.root}&r”&r"
+	]
+	quest.295B71FE3F4848D6.quest_subtitle: "รวบรวมเมดทุกประเภทของ &6{Wine Fox}&r"
+	quest.29641835AFA986E4.quest_desc: [
+		"มีความทนทานสูงมาก ไม่เสียหายง่าย"
+		""
+		"แต่ละครั้งจะเสียหายเพียง 1 จุดทนทานเท่านั้น"
+		""
+		"เมื่อผู้เล่นล่องหน ชุดเกราะจะล่องหนไปด้วย"
+		""
+		"{@pagebreak}"
+		"เมื่อผู้เล่นล่องหน เครื่องมือก็จะล่องหนไปด้วย"
+		""
+		"ระยะโจมตีและระยะขุด +1"
+	]
+	quest.29641835AFA986E4.quest_subtitle: "เกราะและเครื่องมือ"
+	quest.298F765A538085EE.quest_desc: ["เมื่อกิน {item.umapyoi.royal_bitter} จะฟื้นฟูพลังการกระทำเต็ม และฟื้นฟูค่าความหิว 2 หน่วย พร้อมค่าความอิ่ม 3 หน่วย แต่จะลดระดับแรงจูงใจลง 1 ระดับ"]
+	quest.2B4E14697A217391.quest_desc: [
+		"รางวัลถาวร [&aระยะเอื้อม+1&r]"
+		""
+		"&oสามารถดูรายการที่สามารถเก็บสะสมและรางวัลทั้งหมดได้ในความสำเร็จ “&c{advancement.c6c.root}&r”&r"
+	]
+	quest.2B4E14697A217391.quest_subtitle: "รวบรวมเมด 5 คน"
+	quest.2B88D9C4FF3F9C1E.quest_desc: [
+		"คราฟต์ &6{block.irons_jewelry.jewelcrafting_station}&r"
+		"คุณสามารถใช้มันในการคราฟต์เครื่องประดับหลากหลายชนิด เพื่อเพิ่ม &6ค่าสถานะ&r ของคุณ"
+	]
+	quest.2CC6203A4CCE5D19.quest_desc: [
+		"เมดสามารถน่ารัก ทำอาหาร และยังสามารถหมุนมือหมุนได้ ตามระดับความรัก เธอสามารถจัดหาได้ 4096-65536  &c{create.display_source.kinetic_stress.current}&r"
+		""
+		"เมดยังมีรูปแบบการเก็บสะสม และ &cให้รางวัลแก่ผู้เล่นด้วยบัฟที่ทรงพลัง เช่น เพิ่มค่าสถานะของผู้เล่นและไม่หิวอีกต่อไป&r โปรดดูบท “Touhou Little Maid” ในสมุดภารกิจ"
+	]
+	quest.2CCE21B461C8DF85.quest_desc: [
+		"คล้ายกับการอัปเกรดแม่เหล็ก แต่มีระยะการใช้งานค่อนข้างจำกัด"
+		"ไอเทมที่เก็บขึ้นมาจะถูกใส่ในกระเป๋าของผู้เล่นอัตโนมัติแทนช่องเก็บของหลัก"
+	]
+	quest.2DACA9D43F90D423.quest_desc: [
+		"ไอเท็ม {itemGroup.umapyoi} เป็นหนึ่งในผลผลิตที่สำคัญที่สุดของ &c{dimension.minecraft.the_end}&r"
+		""
+		"{item.umapyoi.uma_soul} ที่ผ่านการฝึกฝนสามารถ &cเพิ่มคุณสมบัติของคุณอย่างมาก&r"
+		"โปรดดูบท {itemGroup.umapyoi} ในม็อดอื่น ๆ"
+		""
+		"โปรดระวังอย่าเสีย &e{book.umapyoi.trainers_manual.title}&r เพราะมันสามารถนำไปคราฟเป็น &d{item.umapyoi.blank_ticket}&r ได้"
+	]
+	quest.2F179AA3C20F87C6.quest_desc: [
+		"เมื่อมีน้ำหรือแมกมาเพียงพอ 10,000 บล็อก &6{block.create.hose_pulley}&r จะถือว่าเป็นของเหลวไม่จำกัด สามารถสูบได้ไม่สิ้นสุด"
+		""
+		"เมื่อวางของเหลว &6{block.create.hose_pulley}&r ต้องอยู่เหนือระดับผิวของเหลวเป้าหมาย"
+		"เมื่อสูบของเหลว &6{block.create.hose_pulley}&r ต้องอยู่ที่ก้นของเหลวเป้าหมาย"
+	]
+	quest.315C4FF982B23FBE.quest_desc: ["วาง &7{block.umapyoi.silver_uma_pedestal}&r และ &b{block.umapyoi.three_goddess}&r ลงในโลก"]
+	quest.324AB45A0A0B05A4.quest_desc: [""]
+	quest.324AB45A0A0B05A4.title: "{item.naturescompass.naturescompass}"
+	quest.3282EB41DB52504C.quest_desc: [""]
+	quest.3370CAF47A5F8EBD.quest_desc: [
+		"คุณต้องเตรียม &a{item.umapyoi.jewel}&r จำนวน 4 ชิ้น"
+		"เพื่อคราฟต์ &7{block.umapyoi.silver_uma_pedestal}&r และ &b{block.umapyoi.three_goddess}&r"
+	]
+	quest.3454BE7CF82A56B4.quest_desc: ["นี่คือหนึ่งในดรอปของ &d{entity.irons_spellbooks.dead_king}&r"]
+	quest.356B1B423D318A77.quest_desc: [
+		"คุณสามารถหาแผ่นสกิลเครื่องประดับใหม่ ๆ ได้จากซากปรักหักพังใน {dimension.minecraft.the_end} หรือ {dimension.minecraft.the_nether}"
+		"เรียนรู้มัน"
+		"คุณจะสามารถคราฟต์เครื่องประดับที่ทรงพลังยิ่งขึ้น"
+	]
+	quest.35BFF10E665799C5.quest_desc: ["คุณจำเป็นต้องใช้ {item.irons_spellbooks.mithril_ingot} เพื่อคราฟต์โพชั่นบิน {item.minecraft.potion.effect.apothic_attributes.flying} 15 นาที"]
+	quest.35C67C49516C597B.quest_subtitle: "ความยากลำบาก200"
+	quest.35FAF22E1BE9187F.quest_desc: [
+		"คุณสามารถใช้ &d{Support Card}&r ที่ {block.umapyoi.training_facility} เพื่อ &aฝึกฝน&r {UmaMusu}"
+		""
+		"หลังจาก &aฝึกฝน&r แล้ว {UmaMusu} จะได้รับการเพิ่มค่าสถานะอย่างมาก!"
+		""
+		"เมื่อวางหนังสือบน &7{block.umapyoi.silver_uma_pedestal}&r หรือ &6{block.umapyoi.uma_pedestal}"
+		"คุณสามารถใช้ &d{item.umapyoi.blank_ticket}&r เพื่ออัญเชิญ &d{Support Card}&r"
+	]
+	quest.379E53FBABC20CC3.quest_desc: [
+		"คุณสามารถใช้ &a{item.kubejs.chlorophyte_ingot}&r เพื่อสร้างอุปกรณ์ใหม่ ๆ และใช้ “&c{itemGroup.umapyoi}&r” และ “&cเครื่องประดับ&r” เพื่อเพิ่มค่าสถานะของผู้เล่น"
+		""
+		"&lคุณสามารถใช้ปุ่มลัด&r &6Shift + X&r &lเพื่อแชร์สมบัติที่คุณได้รับ&r"
+		""
+		"&dคุณสามารถสร้างหนังสือ &a{patchouli.l2hostility.title}&r&d ซึ่งมีวิธีรับมือศัตรู/&6&l{ลักษณะเฉพาะ}&r&r&d หลากหลายรูปแบบ&r"
+		""
+		"หากคุณต้องการคำแนะนำขั้นตอนที่ละเอียดมากขึ้น โปรดดูหน้าถัดไป"
+		""
+		""
+		"{@pagebreak}"
+		""
+		"คุณสามารถไปยังไบโอมแปลกประหลาดของ {dimension.minecraft.the_end} เพื่อขุดหา {item.kubejs.chlorophyte_ingot} มาสร้าง {item.kubejs.chlorophyte_sword} ซึ่งมีพลังโจมตีสูงกว่าดาบเพชรและมีระยะไกลกว่า (อ้างอิงบท --> ระบบนิเวศแปลกประหลาดของ “ {dimension.minecraft.the_end} ”[ไบโอม(End Warped Forest)])"
+		""
+		"จากนั้น ไปยังเมือง {dimension.minecraft.the_end} เพื่อค้นหาหีบสมบัติ สร้าง “&c{itemGroup.umapyoi}&r” และ “&cเครื่องประดับ&r” เพื่อเพิ่มค่าสถานะของผู้เล่น (อ้างอิงบท --> เกาะเอนเดอร์)"
+		"เครื่องประดับส่วนใหญ่จะไม่ดรอปเมื่อผู้เล่นตาย ทุกการผจญภัยใน {dimension.minecraft.the_end} จะช่วยให้คุณเติบโต"
+		""
+		"ต่อไป ไปยังไบโอมมืดมิดของ {dimension.minecraft.the_end} เพื่อหานครโบราณ ใช้วัสดุที่ค้นหาได้สร้าง “&dการร่ายมนต์ผูกวิญญาณ&r” (เพียงเล่มเดียวก็พอ คุณสามารถใช้ {itemGroup.create.base} ทำสำเนาหนังสือเวทมนตร์เพื่อสร้างได้ไม่จำกัด)"
+		""
+		"จากนั้น ท้าทาย {entity.irons_spellbooks.dead_king} ในไบโอมมืดมิดของ {dimension.minecraft.the_end} เพื่อเรียนรู้เวทมนตร์"
+		""
+		"สุดท้าย ไปยังห้องทดสอบในป่าดอกไม้ของ {dimension.minecraft.the_end} เพื่อรับ {l2hostility.title} ของ {l2hostility.jei.loot_title} และสร้างไอเท็มที่อยู่ด้านล่างของหนังสือภารกิจบทนี้"
+		""
+		"เมื่อคุณสามารถกำจัดมอนสเตอร์ระดับ 300 ได้อย่างง่ายดาย คุณสามารถลองอยู่รอดใน {dimension.minecraft.the_end} ให้นานขึ้น จนกว่าจะพบมอนสเตอร์ที่มี “{trait.l2hostility.killer_aura}” และ “{trait.l2hostility.ragnarok}”"
+		""
+		"“{trait.l2hostility.killer_aura}” จะสร้างความเสียหายเวทมนตร์เจาะเกราะจำนวนมากต่อผู้เล่นใกล้เคียงเป็นระยะ ๆ"
+		""
+		"“{trait.l2hostility.ragnarok}” จะปิดผนึกเครื่องประดับของผู้เล่นเมื่อโจมตี (ยกเว้นในช่องเก็บของและเครื่องประดับ {itemGroup.umapyoi}) คุณต้องใช้เครื่องประดับที่ถูกปิดผนึกเหมือนการกินอาหารเพื่อปลดผนึก"
+		"สร้าง “{item.l2hostility.pocket_of_restoration}” ซึ่งจะช่วยปลดผนึก “{trait.l2hostility.ragnarok}” โดยอัตโนมัติ เพื่อลดความกดดันในการต่อสู้กับ “{trait.l2hostility.ragnarok}” อย่างมาก"
+		""
+		"โปรดตั้งเป้าหมายในการสังหารมอนสเตอร์ “{trait.l2hostility.ragnarok}” แล้วพยายามให้เต็มที่"
+	]
+	quest.379E53FBABC20CC3.title: "เส้นทางการพัฒนาแนะนำ"
+	quest.38014DB8FC25BED2.quest_desc: [
+		"ถือ &c{block.farmersdelight.rope}&r แล้วคลิกขวาที่ &c{block.farmersdelight.rope}&r จะวาง &c{block.farmersdelight.rope}&r ใหม่ไว้ด้านล่าง；"
+		""
+		"ถือ &c{block.farmersdelight.rope}&r แล้วกด Shift คลิกขวาที่ &c{block.farmersdelight.rope}&r จะสามารถวาง &c{block.farmersdelight.rope}&r ใหม่บนพื้นผิวที่ผู้เล่นเล็งอยู่；"
+		""
+		"มือเปล่ากด Shift คลิกขวาที่ &c{block.farmersdelight.rope}&r จะสามารถเก็บ &c{block.farmersdelight.rope}&r กลับเข้าสู่กระเป๋า โดยจะเริ่มเก็บจากด้านล่างสุดของ &c{block.farmersdelight.rope}&r；"
+		""
+		"เชือก &c{block.farmersdelight.rope}&r สองเส้นที่อยู่ติดกันจะเชื่อมต่อกันในภาพที่เห็น；"
+		""
+		"หาก &c{block.minecraft.bell}&r อยู่ตรงเหนือ &c{block.farmersdelight.rope}&r สามารถคลิกขวาที่ &c{block.farmersdelight.rope}&r เหล่านี้ (ในระยะไม่เกิน 24 บล็อกจากระฆัง) เพื่อสั่นระฆังได้ เชือก &c{block.farmersdelight.rope}&r ที่อยู่ตรงใต้ระฆังจะเชื่อมต่อกับระฆังในภาพที่เห็น"
+	]
+	quest.38014DB8FC25BED2.quest_subtitle: "กดปุ่ม Spacebar ค้างไว้เพื่อปีนขึ้น"
+	quest.393188CC2575E3CF.quest_desc: [
+		"มันสามารถช่วยเพิ่มผลผลิตแร่ได้"
+		"พร้อมทั้งมีสูตรเฉพาะบางอย่าง"
+		""
+		"คุณจำเป็นต้องสร้างเตาหลอมโลหะผสมนี้ตาม &2โครงสร้างหลายบล็อก&r"
+		"ไม่ต้องกังวล ฉันได้เตรียม &bแผนผัง&r {(alloy_smelter.nbt)} ไว้ให้คุณแล้ว"
+		""
+		"คุณยังสามารถอ้างอิงภาพตัวอย่างทางด้านซ้ายเพื่อสร้าง"
+		"หากคุณต้องการ &6ระบบอัตโนมัติ&r สามารถอ้างอิงภาพตัวอย่างทางด้านขวา"
+		""
+		"ด้านข้างของตัวควบคุมสามารถใส่วัตถุดิบสำหรับการหลอม ด้านหน้าใส่เชื้อเพลิง ด้านล่างสามารถวางฮอปเปอร์เพื่อรับผลผลิต"
+		""
+		"&dเตาหลอมระดับ 1 ใช้: {item.minecraft.brick}&r"
+		"&dเตาหลอมระดับ 2 ใช้: {block.minecraft.polished_blackstone_bricks}&r"
+		"&dเตาหลอมระดับ 3 ใช้: {block.minecraft.end_stone_bricks}&r"
+	]
+	quest.3DBA88AAE97C7DE8.quest_desc: ["ซอมบี้ที่ถูกแปลงเป็นดราวน์มีโอกาสสูงที่จะถือสามง่าม ซึ่งสามารถใช้สร้าง {item.l2complements.poseidite_ingot} ได้"]
+	quest.3DD1B51E6A581AA1.quest_desc: [
+		"&c{block.farmersdelight.rich_soil_farmland}&r ได้มาจากการคลิกขวาด้วยจอบ และจะไม่เสื่อมสภาพกลับเป็น &c{block.farmersdelight.rich_soil}&r จากการเหยียบย่ำ ไม่สามารถได้มาด้วย Silk Touch แต่เมื่อถูกทำลายจะดรอป &c{block.farmersdelight.rich_soil}&r"
+		""
+		"ให้การอัปเดตสุ่ม tick เพิ่มเติมแก่พืชที่ปลูกอยู่บนมัน และเพิ่มโอกาสในการเร่งการเติบโต หากโชคดี พืชที่เพิ่งปลูกสามารถเติบโตต่อเนื่องสองครั้งและพร้อมสำหรับการเก็บเกี่ยว ผลลัพธ์จะเห็นได้ชัดเจนมากขึ้นบน &c{block.farmersdelight.rich_soil_farmland}&r ที่มีน้ำหล่อเลี้ยง"
+	]
+	quest.3E3B9BAC8D0CC46C.quest_desc: ["เอนทิตีที่ตกลงบน {block.farmersdelight.safety_net} จะไม่ได้รับความเสียหายจากการตก และจะเด้งกลับขึ้นไป (คล้ายกับ {block.minecraft.slime_block} ดั้งเดิม) การกด Shift จะยกเลิกเอฟเฟกต์นี้"]
+	quest.3EB7A495A8443564.quest_desc: [
+		"ไปที่ห้องทดสอบเพื่อท้าทาย &2{block.minecraft.trial_spawner}&r"
+		"เมื่อสำเร็จ มันอาจพ่นออกมา “{ความเป็นศัตรู}”({l2hostility.jei.loot_title}) ระดับ 0-100"
+		""
+		"ถ้าคุณมีดีบัฟ &5{effect.minecraft.bad_omen}&r..."
+		"มันจะเปลี่ยนเป็น &d{block.minecraft.trial_spawner} ที่ไม่เป็นมงคล&r"
+		"พร้อมกับมีโอกาสพ่นออกมา “{ความเป็นศัตรู}”({l2hostility.jei.loot_title}) ระดับ 0-299 ทั้งหมด"
+		""
+		"ระดับความยาก: 150+"
+	]
+	quest.3EB7A495A8443564.title: "{ลักษณะเฉพาะ}! {ลักษณะเฉพาะ}!"
+	quest.4136927C252AD534.quest_desc: [
+		"ใช้ขวานคลิกขวาที่ท่อนไม้เพื่อให้ได้ท่อนไม้ที่ลอกเปลือก"
+		"จากนั้นใช้ &6{item.create.andesite_alloy}&r คลิกขวาที่ท่อนไม้ที่ลอกเปลือกเพื่อให้ได้ &6{block.create.andesite_casing}&r"
+	]
+	quest.41602D65D7AC69EB.quest_subtitle: "สามารถหาได้จากหีบสมบัติ"
+	quest.41602D65D7AC69EB.title: "เกราะหมาป่าเพิ่มเติม"
+	quest.41A7BD9935057245.quest_desc: [
+		"ถือ {item.umapyoi.uma_soul} แล้วคลิกขวาที่ {block.umapyoi.uma_statues} เพื่อแสดงโมเดล {UmaMusu} แบบนิ่ง"
+		""
+		"คลิกขวาที่ {block.umapyoi.uma_statues} ที่แสดงอยู่แล้วอีกครั้งเพื่อถอด {item.umapyoi.uma_soul}"
+	]
+	quest.41A7BD9935057245.quest_subtitle: "แสดง {UmaMusu} ของคุณ"
+	quest.420F2FE9D30CFFC3.quest_desc: [
+		"รางวัลถาวร [&aความเร็วในการขุด+30%&r]"
+		""
+		"&oสามารถดูรายการที่สามารถเก็บสะสมและรางวัลทั้งหมดได้ในความสำเร็จ “&c{advancement.c6c.root}&r”&r"
+	]
+	quest.420F2FE9D30CFFC3.quest_subtitle: "รวบรวมเมด 20 คน"
+	quest.43104742822CBF0C.quest_desc: [""]
+	quest.43104742822CBF0C.quest_subtitle: "ความยากลำบาก10"
+	quest.43292FFEA3A7B2B4.quest_desc: ["หากคุณไม่เข้าใจการทำงานของเครื่องจักร ให้เปิดช่องเก็บของ กดค้าง [&bW&r] ขณะชี้ไปที่ส่วนประกอบของ &6{Create Mod}&r เพื่อพิจารณา"]
+	quest.43292FFEA3A7B2B4.quest_subtitle: "ก้าวแรกของ &6{Create Mod}&r"
+	quest.4564BE69E51A90A4.quest_subtitle: "ความยากลำบาก50"
+	quest.473CA38006F3C4A4.quest_desc: ["เมื่อคุณคราฟต์ {item.minecraft.potion.effect.apothic_attributes.flying} 30 นาทีแล้ว คุณสามารถใช้มันในการคราฟต์ {item.minecraft.elytra} ได้"]
+	quest.488961A673AFA318.quest_desc: [
+		"มีโอกาสเล็กน้อยมากที่จะได้รับจากหีบสมบัติ"
+		""
+		"เมื่อเมดตายจะดรอป &c{item.touhou_little_maid.film}&r"
+		""
+		"สามารถวางไว้ใน &6{block.touhou_little_maid.shrine}&r เพื่อชุบชีวิตเมดโดยการใช้พลังชีวิตของผู้เล่น หรือสามารถชุบชีวิตได้ในพิธีกรรม"
+	]
+	quest.48EF078682A042D6.title: "โปรดิวเซอร์ของทุกคน"
+	quest.492D4709E52D0C97.quest_desc: ["เมื่อกินจะฟื้นฟูค่าความหิว 2 หน่วย และค่าความอิ่ม 2.4 หน่วย พร้อมทั้งฟื้นฟูพลังการกระทำตามเปอร์เซ็นต์ของขีดจำกัดสูงสุด"]
+	quest.49C7F3D4FE51C089.quest_subtitle: "สามารถให้ผู้เล่นวาร์ประหว่างสองจุดได้"
+	quest.49C7F3D4FE51C089.title: "ประตูมิติ"
+	quest.4A85185CDE1A7AD2.quest_subtitle: "ความยากลำบาก600"
+	quest.4AF0160AB01B5304.quest_desc: [
+		"การยืนอยู่ในของเหลว &6{item.hotbath.peony_bath_bucket}&r จะฟื้นฟูพลังชีวิตในอัตรา 0.25 ทุก ๆ 2 วินาที"
+		"การยืนอยู่ในของเหลว &6{item.hotbath.peony_bath_bucket}&r เป็นเวลา 15 วินาที จะลบเอฟเฟกต์สถานะเชิงลบทั้งหมด"
+		"การยืนอยู่ในของเหลว &6{item.hotbath.peony_bath_bucket}&r เป็นเวลา 15 วินาที จะได้รับความต้านทานการกระแทก 0.05 หน่วย มีผลนาน 30 วินาที"
+		"การยืนอยู่ในของเหลว &6{item.hotbath.peony_bath_bucket}&r เป็นเวลา 15 วินาที จะเพิ่มความเร็วในการโจมตีขึ้น 10% มีผลนาน 15 วินาที"
+		"เมื่อจำนวนครั้งในการแช่รวมถึง 50 ครั้งขึ้นไป ทุกครั้งที่แช่จะได้รับเอฟเฟกต์ &6{effect.minecraft.luck}&r ระดับ 1 มีผลนาน 45 วินาที"
+	]
+	quest.4B3863244FB807C3.quest_desc: [
+		"&6{item.minecraft.potion.effect.apothic_attributes.flying}&r"
+		""
+		"มันจะแทนที่การเกิดของ {item.minecraft.elytra} ใน &c{End Ship}&r"
+		"พูดตรง ๆ การบินแบบสร้างสรรค์ใช้ง่ายกว่า {item.minecraft.elytra} มาก"
+		"หากคุณต้องการสัมผัสความรู้สึกของ {item.minecraft.elytra} ก็สามารถใช้โพชั่น &dสามสิบ&r นาที {item.minecraft.potion.effect.apothic_attributes.flying} สองขวดในการคราฟ {item.minecraft.elytra}"
+		""
+		"ความน่าจะเป็นในการเกิดไอเท็มทั้งหมดใน &c{End Ship}&r:"
+		"- &dแปดนาที {item.minecraft.potion.effect.apothic_attributes.flying}&r 33.3%"
+		"- โพชั่นเร่งความเร็วอย่างแรง 33.3%"
+		"- &c{block.minecraft.netherite_block}&r 16.7%"
+		"- {block.minecraft.diamond_block} 8.6%"
+		"- &e{book.umapyoi.trainers_manual.title}&r 8.6%"
+		"- อื่น ๆ"
+	]
+	quest.4CB753DB3E3039CD.quest_desc: [
+		"นำ &e{item.umapyoi.uma_soul}&r ของคุณไปใส่ใน {block.umapyoi.register_lectern}"
+		""
+		"ค่าสถานะของ {UmaMusu} ของคุณจะ &6เพิ่มขึ้นอย่างมาก&r"
+		"พร้อมทั้งคุณจะได้รับเจตจำนงของ {UmaMusu}"
+	]
+	quest.4D76E3D866F31784.quest_desc: [
+		"สามารถส่งไอเท็มระหว่างผู้เล่นได้อย่างรวดเร็ว"
+		"วางและตั้งชื่อ&eตู้จดหมาย&r จากนั้นสามารถใช้&bกล่องจดหมาย&r เพื่อส่งไอเท็มไปยัง&eตู้จดหมาย&r ที่สอดคล้องกัน"
+		""
+		"ไม่อนุญาตให้ขนส่งคอนเทนเนอร์ หรือไอเท็มที่มีข้อมูล NBT ขนาดใหญ่"
+	]
+	quest.4D967AC9E5045DDB.quest_desc: [
+		"&c{block.mynethersdelight.powdery_cannon}&r จะไม่เกิดขึ้นเองตามธรรมชาติ; สามารถได้มาจากการเก็บรากของ &c{block.mynethersdelight.powdery_cane}&r."
+		""
+		"&c{block.mynethersdelight.powdery_cane}&r ที่ผลิต &c{block.mynethersdelight.bullet_pepper}&r ที่ปลายจะเกิดขึ้นเองในป่าคริมสัน; การผลิต &c{block.mynethersdelight.bullet_pepper}&r จะทำให้เกิดเสียงหน้าไม้ &c{block.mynethersdelight.bullet_pepper}&r จะระเบิดเมื่อถูกสัมผัสหรือถูกทำลาย (&c{block.mynethersdelight.bullet_pepper}&r ที่ผลิตบน &c{block.mynethersdelight.powdery_cannon}&r มีพลังมากกว่า และสามารถทำลายตัวเองด้วยการระเบิด)."
+		""
+		"การทำลาย &c{block.mynethersdelight.powdery_cane}&r ที่ไม่ใช่รากจะให้ &c{item.minecraft.stick}&r การปลูก &c{block.mynethersdelight.bullet_pepper}&r จะทำให้เกิด &c{block.mynethersdelight.powdery_cane}&r ใหม่ และ &c{block.mynethersdelight.powdery_cannon}&r จะสามารถได้มาก็ต่อเมื่อรากของมันแข็งแรง การทำลายส่วนใด ๆ ของ &c{block.mynethersdelight.powdery_cannon}&r จะให้ &c{block.mynethersdelight.powdery_cannon}&r"
+	]
+	quest.4E221A3F92D840AB.quest_desc: [
+		"คุณสามารถใช้ &2{book.umapyoi.trainers_manual.title}&r เพื่อคราฟต์ &d{item.umapyoi.blank_ticket}&r"
+		""
+		"นี่คือไอเทมสำคัญที่จะต้องใช้ต่อไป"
+	]
+	quest.4E6B6B368A8A4EA6.quest_desc: [
+		"สร้าง &e{item.pandora.pandora_bracelet}&r หนึ่งชิ้น และ &a{item.l2hostility.charm_of_looting_1}&r หนึ่งชิ้น"
+		"นำ &a{item.l2hostility.charm_of_looting_1}&r ใส่เข้าไปใน &e{item.pandora.pandora_bracelet}&r"
+		"หลังจากเอาชนะศัตรู คุณจะได้รับของดรอปมากขึ้น (สามารถดูรายละเอียดได้ใน JEI)"
+		"สร้างลูกแก้วเพิ่มเติมเพื่อให้ได้ของดรอปที่มากขึ้นและดียิ่งขึ้น"
+	]
+	quest.4EE2DA5EC1E8572B.quest_desc: [
+		"{block.kubejs.warped_stem_chlorophyte} ซ่อนอยู่ใน {block.minecraft.warped_stem} ของป่าแปลกประหลาด"
+		"มันแข็งมาก ทำให้ยากที่จะขุดด้วยขวาน"
+		"แต่ทว่ามันเปราะบางต่อการระเบิด คุณสามารถใช้ &cTNT&r หรือหลอกล่อ &2{entity.minecraft.creeper}&r ให้ระเบิดใกล้ ๆ มัน"
+		"มันจะดรอป &a{item.kubejs.chlorophyte_ingot}&r โดยตรง"
+	]
+	quest.4EE2DA5EC1E8572B.title: "สังเกต{block.kubejs.warped_stem_chlorophyte}"
+	quest.4F64FB65FFEA050C.quest_subtitle: "เริ่มติดกาวกันเลย"
+	quest.4FC1C7D438B19492.quest_desc: [
+		"รวบรวมเจตจำนงของ {UmaMusu} จำนวนสองชิ้น แล้วนำไปวางใน {block.umapyoi.three_goddess}"
+		""
+		"เจตจำนงของ {UmaMusu} จะทำหน้าที่เป็นพ่อพันธุ์ เพื่อฝึกฝนรุ่นถัดไปของ {UmaMusu}"
+		""
+		"ยิ่งพ่อพันธุ์แข็งแกร่ง รุ่นถัดไปของ {UmaMusu} ก็จะยิ่งมีความสามารถสูงขึ้น"
+	]
+	quest.4FD79173051DDEB8.quest_desc: ["เมื่อกินจะฟื้นฟูค่าความหิว 2 หน่วย และค่าความอิ่ม 2.4 หน่วย พร้อมทั้งฟื้นฟูพลังการกระทำตามเปอร์เซ็นต์ของขีดจำกัดสูงสุด"]
+	quest.5083B5F89464A522.quest_desc: [
+		"บางครั้งสามารถพบโบสถ์ร้างใน {End Ice Spikes}"
+		"แมงมุมหิมะตั้งรังและวางไข่ที่นี่ พร้อมเข้าสู่การจำศีล"
+		"หากคุณ &cทำลาย&r ชั้นป้องกันน้ำแข็งรอบไข่แมงมุมหิมะ"
+		"คุณจะปลุก &lผู้พิทักษ์แมงมุมหิมะ&r ให้ตื่นขึ้น"
+		""
+		"ระวัง! พวกมันอันตรายมาก!"
+		"แต่รางวัลก็คุ้มค่า &lแมงมุมหิมะ&r มีโอกาสดรอป &bอุปกรณ์หายาก&r และ &4{item.irons_spellbooks.cinderous_soulcaller}&r"
+		"เอาชนะพวกมันเพื่อรับรางวัล!"
+		""
+		"ระดับความยาก: 200+"
+	]
+	quest.513BC9A3564D299E.quest_subtitle: "สามารถใช้ร่วมกับแชสซีหรือกาวพิเศษ ทำให้บล็อกทำงานเสมือนเอนทิตี"
+	quest.51793B81F3FE45CE.quest_desc: ["ในระหว่างวัน จะทำการค้าขายกับชาวบ้านโดยอัตโนมัติโดยไม่จำกัดจำนวนครั้ง"]
+	quest.5283E81D31BE83AB.quest_desc: [
+		"อาวุธนี้โดยทั่วไปไม่สามารถสร้างความเสียหายได้ มีแต่ผลักกระเด็น"
+		"สามารถสร้างความเสียหายต่อสัตว์จำพวกแมลง"
+	]
+	quest.5283E81D31BE83AB.quest_subtitle: "ตีได้หกครั้งต่อวินาที"
+	quest.52A28F0788814240.quest_desc: [
+		"นี่คือดรอปที่ &lสำคัญ&r ที่สุดจาก &d{entity.irons_spellbooks.dead_king}&r!"
+		""
+		"มันจะชี้นำคุณไปสู่เส้นทางแห่งเวทมนตร์"
+		"คุณจำเป็นต้องไปหา &5{block.irons_spellbooks.brazier_soul}&r ที่ {dimension.minecraft.the_end} ก่อน"
+	]
+	quest.534C36E4439EB3C7.quest_subtitle: "เอาชนะเมดในการเล่นหมากรุกจีน"
+	quest.53C14996CDBA5DC2.quest_desc: [
+		"โยน {item.irons_spellbooks.chained_book} ลงไปใน &5{block.irons_spellbooks.brazier_soul}&r"
+		"คุณจะได้รับ &dม้วนคาถา&r แบบสุ่มหนึ่งใบ"
+		"นำมันไปใส่ในช่องเครื่องประดับของคุณ มันจะถูกปลดปล่อยอัตโนมัติเมื่อคุณโจมตี"
+		""
+		"&oระวัง! &dม้วนคาถา&r จะดรอปเมื่อคุณตาย!&r"
+	]
+	quest.53C14996CDBA5DC2.title: "สังเกต “{block.irons_spellbooks.brazier_soul}”"
+	quest.548EEBA7C16661D6.quest_desc: [
+		"อุปกรณ์ที่สร้างจาก {item.l2complements.totemic_gold_ingot} มีคุณภาพเทียบเท่าเหล็กและมีความเข้ากันได้กับการร่ายมนตร์เหมือนทอง ในฐานะเครื่องมือมีความทนทานใกล้เคียงกับเพชร มีความเร็วในการขุดเหมือนทอง แต่ยังคงระดับการขุดเท่ากับเหล็ก เมื่อใช้ {item.l2complements.totemic_gold_ingot} เป็นวัสดุด้าม และใช้มรกตเป็นวัสดุหัว ทำให้มีความทนทานสูงขึ้น"
+		""
+		"เอฟเฟกต์เกราะชีวิต: ทุก ๆ 5 วินาที แต่ละชิ้นเกราะจะฟื้นฟู 1 พลังชีวิต"
+		""
+		"เอฟเฟกต์ร่วมของอุปกรณ์ชีวิต: เมื่อทนทานลดลง &aฟื้นฟูพลังชีวิตตามจำนวนที่เสียไป&r และยังกันผลกระทบจากความหิว การเหี่ยวเฉา และพิษ"
+		""
+		"ดังนั้น อุปกรณ์ชีวิตไม่เหมาะกับการใช้การร่ายมนตร์เสริมทนทาน"
+		"เกราะชีวิตสามารถใช้การร่ายมนตร์เสริมทนทานของเกราะเพื่อเพิ่มความทนทาน หรือใช้ {enchantment.l2complements.life_mending} การร่ายมนตร์ เพื่อสร้างวงจรการลดทนทาน-ฟื้นฟูเลือด-ฟื้นฟูทนทาน &6ทำให้ตราบใดที่ไม่ถูกทำลายด้วยการโจมตีเดียว ก็สามารถฟื้นทนทานเต็มได้&r เมื่อเพิ่ม {enchantment.l2complements.safeguard} การร่ายมนตร์ เข้าไป การถูกทำลายด้วยการโจมตีเดียวก็จะไม่เกิดขึ้นอีก ไม่ว่าทนทานจะลดลงมากแค่ไหนก็จะเหลือ 1 จุด และเมื่อฟื้นเลือดก็จะฟื้นทนทานเต็มด้วย {enchantment.l2complements.life_mending} สิ่งเดียวที่ต้องกังวลคือผลของยาอาจหยุดการฟื้นฟูเลือด"
+		"{@pagebreak}"
+		"{item.l2complements.totemic_gold_ingot} ที่ใช้สร้างเครื่องมือมีคุณภาพเทียบเท่าเหล็ก และมีความเข้ากันได้กับการร่ายมนตร์เหมือนทอง ในฐานะเครื่องมือมีความทนทานใกล้เคียงกับเพชร มีความเร็วในการขุดเหมือนทอง แต่ยังคงระดับการขุดเท่ากับเหล็ก"
+	]
+	quest.54931F97C140412D.quest_desc: ["บ่อน้ำพุร้อนบางครั้งจะเกิดขึ้นในโลกหลัก เมื่อพบแล้วสามารถใช้ได้ไม่จำกัด"]
+	quest.54931F97C140412D.title: "บ่อน้ำพุร้อน"
+	quest.552F937D15E04A15.quest_desc: [
+		"การยืนอยู่ในของเหลว &6{item.hotbath.honey_bath_bucket}&r จะฟื้นฟูพลังชีวิตในอัตรา 0.25 ต่อวินาที"
+		"การยืนอยู่ในของเหลว &6{item.hotbath.honey_bath_bucket}&r จะได้รับเอฟเฟกต์ช้า ระดับ 1 เป็นเวลา 10 วินาที"
+		"การยืนอยู่ในของเหลว &6{item.hotbath.honey_bath_bucket}&r เป็นเวลา 15 วินาที เอฟเฟกต์สถานะเชิงลบทั้งหมดจะถูกลบออก ยกเว้น &c{effect.minecraft.slowness}&r และ &c{effect.minecraft.unluck}&r."
+		"การยืนอยู่ในของเหลว &6{item.hotbath.honey_bath_bucket}&r จะฟื้นฟูค่าความหิวในอัตรา 1 ต่อทุก 4 วินาที"
+		"การยืนอยู่ในของเหลว &6{item.hotbath.honey_bath_bucket}&r เป็นเวลา 15 วินาที คุณจะได้รับเอฟเฟกต์ &6{effect.minecraft.absorption}&r ระดับ 2 ซึ่งมีผลนาน 20 วินาที."
+	]
+	quest.55A6F9F0BC4D0096.quest_desc: [""]
+	quest.56469F8456C022EF.quest_desc: ["อนุญาตให้ผู้เล่นกลับไปยังเตียงหรือจุดเกิดได้อย่างรวดเร็ว (ไม่สามารถใช้ได้ใน &dจุดจบ&r)"]
+	quest.5655FD8F2B8FB4D2.quest_desc: ["เมื่อกิน {item.umapyoi.hachimi_big} จะเพิ่มระดับอารมณ์ขึ้น 2 ระดับ และฟื้นฟูค่าความหิว 4 หน่วย พร้อมค่าความอิ่ม 7 หน่วย"]
+	quest.5655FD8F2B8FB4D2.quest_subtitle: "สามารถกินได้แม้ค่าความอิ่มเต็ม"
+	quest.568DB1FCA0026DB0.quest_desc: ["กล้องสามารถจับภาพเมดที่ถูกฝึกแล้วได้ ผู้เล่นสามารถคลิกขวาเมื่ออยู่ในระยะ 8 บล็อกจากเมดเพื่อจับ และสร้างเป็นรูปถ่าย"]
+	quest.591763149B3E9648.title: "เครื่องมือวิ่งสำรวจแผนที่"
+	quest.592017A5227B6679.quest_desc: [
+		"การใช้ &6{block.create_hypertube.hypertube}&r เชื่อมต่อกับ &a{block.create_hypertube.hypertube_entrance}&r และต่อเข้ากับ &c{create.display_source.kinetic_stress.current}&r สามารถสร้างอุโมงค์สำหรับการเคลื่อนที่ของผู้เล่นได้"
+		""
+		"ท่อชนิดนี้มีผลต่อเฟรมเรตค่อนข้างมาก กรุณาใช้ตามความเหมาะสม"
+	]
+	quest.592017A5227B6679.quest_subtitle: "วิธีการเคลื่อนที่ระยะสั้นที่ดูเท่"
+	quest.593E1782EC446B28.quest_desc: [
+		"{UmaMusu} เป็นไอเทมที่ &e&lเพิ่ม&r&r ค่าสถานะของผู้เล่นอย่างมาก"
+		"คุณยังสามารถฝึกฝน {UmaMusu} ที่ &eเพิ่มพลังโจมตีของผู้เล่นขึ้น 600%&r"
+		""
+		"คุณสามารถหาหนังสือ &2{book.umapyoi.trainers_manual.title}&r ได้ในหีบสมบัติของ {dimension.minecraft.the_end}"
+		"มันคือคู่มือการเล่นของม็อด “{itemGroup.umapyoi}”"
+		""
+		"แน่นอน คุณก็สามารถติดตามเควสนี้เพื่อเรียนรู้วิธีเล่น {UmaMusu} ได้เช่นกัน"
+	]
+	quest.5AD85A669E436FAD.quest_desc: ["&zบนโลกนี้ไม่มีสิ่งใดทำร้ายคุณได้อีกต่อไป&r"]
+	quest.5AD85A669E436FAD.quest_subtitle: "ผ่านความทุกข์ยาก สู่การหลุดพ้นจากทุกสิ่ง"
+	quest.5C9F0C22F503C49A.quest_desc: [
+		"คุณเคยเล่น 《{Terraria}》 ในโหมด &cระดับมาสเตอร์&r หรือไม่"
+		""
+		"&lมันต้องการให้คุณเลือกการเพิ่มพลังโจมตีและพลังชีวิตอย่างระมัดระวัง ใช้การควบคุมที่ยืดหยุ่น อาศัยความเข้าใจเกี่ยวกับมอนสเตอร์ และได้รับความช่วยเหลือจากยา buff จำนวนมากจึงจะสามารถผ่านครั้งแรกได้&r"
+		""
+		"ความยากของการผจญภัยในแพ็กนี้ถูกปรับให้ใกล้เคียงกับโหมด &cมาสเตอร์&r ของ 《{Terraria}》"
+		"หากคุณไม่เคยเล่นโหมด &cมาสเตอร์&r ของ 《{Terraria}》 ฉันแนะนำให้คุณเลือกความยาก &aโหมดง่าย&r และเปิดใช้งาน &aไม่ดรอปเมื่อเสียชีวิต&r เพื่อสัมผัสเนื้อหาการผจญภัย"
+		""
+		"คำสั่งเปิดใช้งานไม่ดรอปเมื่อเสียชีวิตมีดังนี้:"
+		"/gamerule keepInventory true"
+		""
+		"ก่อนการปล่อยแพ็กนี้ ได้มีการเปิดเซิร์ฟเวอร์ทดสอบ 3 ครั้ง โดยทดสอบในโหมดง่าย ปกติ และยาก ซึ่งทั้งหมดสามารถผ่านเนื้อหาการผจญภัยใน {dimension.minecraft.the_end} ได้"
+	]
+	quest.5C9F0C22F503C49A.title: "คำแนะนำเกี่ยวกับความยาก"
+	quest.5E7426AF846024EE.quest_desc: [
+		"{item.l2complements.poseidite_ingot} อุปกรณ์เมื่ออยู่ใต้น้ำจะเพิ่มเกราะ ความแข็งแกร่งของเกราะ ความเร็วในการเคลื่อนที่ และความเร็วในการว่ายน้ำ"
+		""
+		"หมวกและเกราะอกเมื่ออยู่ใต้น้ำจะให้เอฟเฟกต์ {block.minecraft.conduit} แก่ผู้เล่น"
+		""
+		"กางเกงและรองเท้าเมื่ออยู่ใต้น้ำจะให้เอฟเฟกต์พรของโลมาแก่ผู้เล่น"
+		""
+		"{@pagebreak}"
+		"เครื่องมือ {item.l2complements.poseidite_ingot} เมื่ออยู่ใต้น้ำจะเพิ่มความเสียหายการโจมตี 50% และความเร็วโจมตี 20% และยังเพิ่มความเสียหายต่อสิ่งมีชีวิตน้ำและสิ่งมีชีวิตที่กลัวน้ำอีก 100% (คูณ)"
+	]
+	quest.5F4BF0D8936B370B.quest_desc: [
+		"การ์ด {UmaMusu} ที่คราฟต์ด้วย &e{Umamusume Crystal}&r สามารถสุ่มได้ {UmaMusu} ระดับสูงกว่า"
+		"(การ์ด R{UmaMusu} สามารถสุ่มได้ SR{UmaMusu})"
+		"(การ์ด SR{UmaMusu} สามารถสุ่มได้ SSR{UmaMusu})"
+	]
+	quest.5F69670FBE1B5FE4.quest_desc: [
+		"สามารถคราฟภาพถ่ายร่วมกับ &6{item.minecraft.brown_dye}&r เพื่อให้ได้ภาพถ่ายสไตล์ย้อนยุค"
+		""
+		"ถือภาพถ่ายไว้ในช่องไอเท็มและย้ายไปที่ภาพถ่ายอื่นแล้วคลิกขวา สามารถซ้อนภาพถ่ายเข้าด้วยกันเพื่อสร้างเป็นกองภาพถ่าย"
+	]
+	quest.605639A83B5AE2B9.quest_desc: [
+		"เอฟเฟกต์เกราะ: ความเงียบ (&9เมื่อสวมใส่อุปกรณ์ที่มีเอฟเฟกต์ความเงียบครบ 4 ชิ้น การสั่นสะเทือนใด ๆ ที่ผู้เล่นสร้างขึ้นจะถูกยกเลิกร&r)"
+		""
+		"เมื่อสวมใส่เพียงชิ้นเดียว จะทำให้ผู้เล่นต้านทาน: ตาบอด ความมืด ความเหนื่อยล้าในการขุด อาการเวียนหัว ความช้า และความอ่อนแอ"
+		""
+		""
+		"{@pagebreak}"
+		"{item.l2complements.sculkium_ingot} เครื่องมือสามารถ &dทำลายบล็อกที่สามารถทำลายได้ด้วยความเร็วสูง&r โดยไม่สนใจความแข็งหรือระดับการขุด"
+		""
+		"การร่ายมนตร์ประสิทธิภาพสามารถเพิ่มความเร็วในการขุดได้มากขึ้น"
+		""
+		"&oเมื่อขุดบล็อก โปรดสังเกตเครื่องมือและระดับการขุดที่ต้องใช้ หากเครื่องมือไม่ถูกต้องหรือระดับการขุดไม่เพียงพอ จะไม่มีดรอป&r"
+	]
+	quest.605639A83B5AE2B9.quest_subtitle: "เกราะและเครื่องมือ"
+	quest.60BA9FC4C0678513.quest_desc: [
+		"&6{item.exposure.interplanar_projector}&r เป็นฟิลเตอร์พิเศษของ &6{item.exposure.camera}&r ที่สามารถถ่ายภาพจากอีกมิติหนึ่งและทำเป็นภาพถ่ายได้ (สามารถอัพโหลดภาพและทำเป็นภาพถ่ายได้)"
+		"โดยนำ &6{item.exposure.interplanar_projector}&r ไปเปลี่ยนชื่อที่ &6{block.minecraft.anvil}&r ให้เป็นเส้นทางไฟล์ภาพที่ต้องการ รองรับไฟล์ประเภท png, jpg, bmp, gif (แบบไม่เคลื่อนไหว) และรองรับภาพโปร่งใส (โดยที่พิกเซลในภาพต้องโปร่งใสทั้งหมด) ต้องระวังไว้ว่าการเปลี่ยนชื่อไอเท็มใน &6{block.minecraft.anvil}&r นั้นจำกัดด้านความยาว นอกจากนี้สามารถนำ url จากภาพในอินเทอร์เน็ตมาใส่ได้"
+		""
+		"หากการฉายภาพล้มเหลว จะไม่ทำให้ไอเท็มเสียหาย แต่จะเปลี่ยนกลายเป็น &6{item.exposure.interplanar_projector}&r ที่เสียแล้ว ซึ่งจะแสดงหน้าจอสีน้ำเงินพร้อมกับ Error ใน &6{item.exposure.camera}&r เครื่องฉายที่เสียหาย สามารถซ่อมได้โดยนำไปคราฟกับ &6{item.minecraft.ender_eye}&r"
+	]
+	quest.60F0E62C7A268D3D.quest_desc: [
+		"สามารถใช้ {item.l2hostility.miracle_powder} หรือ {item.l2hostility.chaos_ingot} เพื่อคราฟต์ &d{item.c6c.abyssal_ticket}&r"
+		"ใช้ &d{item.c6c.abyssal_ticket}&r ที่บ้านของ &c{entity.irons_spellbooks.fire_boss}&r เพื่อเปิด &d{Abyssal Carnival}&r"
+		"อาจดรอปอุปกรณ์ระดับ ปกติ, &bดี&r, &9หายาก&r, &dตำนาน&r, &6มหากาพย์&r, &zเทพนิยาย&r ที่ให้โบนัสค่าสถานะจำนวนมาก"
+		""
+		"เมื่อคุณทำการท้าทายสำเร็จและได้รับ &l&b{item.irons_spellbooks.arcane_rune}&r&r แล้ว คุณสามารถคราฟต์ {block.irons_spellbooks.cinderous_soul_rune} เพื่อเปิดการท้าทาย &d{Abyssal Carnival}&r ในโลกหลักได้"
+		""
+		"&o{Abyssal Carnival} ไม่ได้รับผลกระทบจาก {item.l2hostility.greed_of_nidhoggur}&r"
+		"&oความเสียหายเวทส่วนใหญ่ใน {Abyssal Carnival} ไม่สามารถกันได้ด้วย {item.l2hostility.ring_of_divinity}&r"
+		"&o{Abyssal Carnival} จะไม่สร้างบอสที่มี &4{trait.l2hostility.dispell}&r&o และ &4{trait.l2hostility.reprint}&r&o"
+		""
+		"ระดับความยาก: 350+"
+	]
+	quest.620DE65D4B2B3547.quest_desc: [
+		"เวอร์ชัน Nether ของ &c{block.farmersdelight.rich_soil_farmland}&r ต้องใช้เปลวไฟเปิด (&c{block.minecraft.fire}&r, &c{block.minecraft.lava}&r, &c{block.minecraft.torch}&r, &c{block.minecraft.lantern}&r, &c{block.minecraft.campfire}&r, &c{block.farmersdelight.stove}&r, &c{block.mynethersdelight.bullet_pepper}&r เป็นต้น) เพื่อให้ชุ่มชื้นแทนน้ำ"
+		""
+		"แต่ละแหล่งเปลวไฟสามารถให้ความชุ่มชื้นแก่ &c{block.mynethersdelight.resurgent_soil_farmland}&r ภายในพื้นที่ 17×9×17 บล็อกจากจุดศูนย์กลางของมัน"
+		""
+		"&c{block.mynethersdelight.resurgent_soil_farmland}&r ที่มีความชุ่มชื้นจะมีระดับแสง 10 ซึ่งเพียงพอสำหรับการเติบโตของพืชส่วนใหญ่"
+	]
+	quest.62F46A2AF56A5FD6.quest_desc: ["สามารถวางได้ ใช้เป็นขาตั้งของ &6{item.exposure.camera}&r และยังสามารถถือถ่ายภาพได้"]
+	quest.631002556817F054.quest_desc: ["เมื่อกิน {item.umapyoi.cupcake} จะเพิ่มระดับแรงจูงใจขึ้น 1 ระดับ และฟื้นฟูค่าความหิว 5 หน่วย พร้อมค่าความอิ่ม 6 หน่วย"]
+	quest.639AE612BBE4F363.quest_desc: [
+		"การใช้ &6{item.touhou_little_maid.smart_slab}&r เริ่มต้นสามารถปล่อยเมดที่ไม่มีเจ้าของออกมาได้"
+		""
+		"สามารถใช้ &d{block.minecraft.cake}&r เพื่อฝึกเมดที่ไม่มีเจ้าของ"
+		""
+		"ในโหมดผู้เล่นเดี่ยวสามารถเปลี่ยนโมเดลของเมดได้"
+		"ในเซิร์ฟเวอร์ ไม่สามารถเปลี่ยนโมเดลของเมดได้"
+		""
+		"การรวบรวมเมดที่แตกต่างกันจะได้รับบัฟที่แตกต่างกัน"
+		"การนับการรวบรวมจะอ้างอิงจากเมดที่ถูกฝึกในตอนนั้น"
+		""
+		"คุณยังสามารถแลกเปลี่ยนเมดที่ไม่มีเจ้าของกับเพื่อนในเซิร์ฟเวอร์ผ่าน &6{item.touhou_little_maid.smart_slab}&r ได้"
+	]
+	quest.6724A17ED66D090E.quest_desc: [
+		"สามารถใช้ในการขุดแร่ได้ไม่จำกัด"
+		"ค้นหา @ore ใน JEI เพื่อดูแร่ทั้งหมดและตำแหน่งที่พบ"
+	]
+	quest.67F1D38FF93B5199.title: "เข้าสู่ &4{dimension.minecraft.the_nether}&r"
+	quest.6802763D2F467790.quest_subtitle: "ความยากลำบาก800"
+	quest.6954E808A764BB6D.quest_desc: [
+		"&6{itemGroup.create_hypertube}&r มีวิธีการวางคล้ายกับ &6{block.create.track}&r เพียงสร้างเครือข่ายรางให้เรียบร้อยแล้วให้ &6{block.create_hypertube.hypertube_entrance}&r ทั้งสองด้านได้รับ &6{create.display_source.kinetic_stress.current}&r เพียงพอก็สามารถใช้งานได้"
+		"โดยค่าเริ่มต้น ผู้เล่นเพียงเข้าใกล้ &6{block.create_hypertube.hypertube_entrance}&r ก็สามารถเข้าสู่ท่อและเริ่มการเดินทางได้"
+		"การใช้ &6{item.create.wrench}&r สามารถปรับโหมดได้ ในโหมดปิดอัตโนมัติ การกด Shift จะช่วยหลีกเลี่ยงการเข้าสู่ท่อ; ในโหมดปิดด้วยมือ จะต้องกด Shift จึงจะสามารถเข้าไปได้"
+	]
+	quest.69F8F1E623EFEEF8.quest_desc: [
+		"ห้องทดสอบซ่อนอยู่ใต้ {biome.c6c.end_flower_forest}"
+		"นอกเหนือจากนี้ {biome.c6c.end_flower_forest} สงบสุข และไม่มีอันตรายพิเศษ"
+	]
+	quest.6B28FC5FC8BCAB87.quest_desc: ["ป้อนอาหารให้ผู้เล่นโดยอัตโนมัติเมื่อพวกเขากำลังสะพายเป้ที่ติดตั้งการอัปเกรดนี้"]
+	quest.6B453132CFF68D96.quest_desc: [
+		"ไอเท็มที่ใช้ในการอัญเชิญบอส &c{entity.irons_spellbooks.fire_boss}&r"
+		"มีโอกาส 1.5% ปรากฏในหีบสมบัติของ {dimension.minecraft.the_end}"
+		""
+		"คุณสามารถใช้มันในการสร้างแผนที่ เพื่อค้นหา &c{entity.irons_spellbooks.fire_boss}&r ใน &4{dimension.minecraft.the_nether}&r"
+		""
+		"ระดับความยาก: 250+"
+	]
+	quest.6DB3C1C6D21EA436.quest_desc: [
+		"“&l&eMechanomania&r&r” เป็นชุดม็อดที่ออกแบบมาสำหรับ: &aCreate Mod&r, &6การสร้าง&r, &cผู้เล่นสายผจญภัย&r และตั้งใจใช้สำหรับเซิร์ฟเวอร์ &bผู้เล่นหลายคน&r&dระยะยาว&r"
+		"เนื่องจากในช่วงแรกไม่มีวิธีการวาร์ป และเพื่อให้ได้ทรัพยากร คุณอาจต้องเดินทางไปยังไบโอมต่าง ๆ เพื่อสร้างเครื่องขุดและฟาร์มมอนสเตอร์ การเล่นคนเดียวอาจรู้สึกเหมือน &lถูกจองจำ&r"
+		""
+		"หากคุณเป็น &eผู้เล่นสายผจญภัย&r และมั่นใจในทักษะ PVE ของคุณ คุณสามารถไปอ่านบท “&dจุดสิ้นสุด - การต่อสู้และการผจญภัย&r” ได้โดยตรง"
+		""
+		"ขอบคุณ “JSI制作组” สำหรับการช่วยเหลือในการสร้างสมุดภารกิจของชุดม็อด หากไม่มีพวกเขา ฉันคงไม่สามารถทำสมุดภารกิจนี้เสร็จได้"
+		"ขอบคุณ “老King呀老King” สำหรับการทดสอบการเล่นและการโปรโมตชุดม็อด"
+		"ขอบคุณ NaraZX และ Staples17 สำหรับการสร้างแพตช์การแปล"
+		"                                                             -MoePus 2025.07.29"
+		""
+		"&a&lหน้าถัดไป&r&r"
+		""
+		"{@pagebreak}"
+		""
+		"&a&lคู่มือการเลือกการตั้งค่าเซิร์ฟเวอร์&r&r"
+		""
+		"13700K + 8GB รองรับผู้เล่นมากกว่า 8 คน"
+		"13900K + 16GB รองรับผู้เล่นมากกว่า 10 คน + DH"
+		"Xeon และ CPU ระดับเซิร์ฟเวอร์อื่น ๆ รองรับผู้เล่น 4 คน"
+		""
+		"หากเปิดใช้ DH เซิร์ฟเวอร์ต้องการหน่วยความจำอย่างน้อย 12GB!"
+		""
+		""
+		"{@pagebreak}"
+		""
+		"&a&lเกี่ยวกับ Shaders และการเรนเดอร์&r&r"
+		""
+		""
+		"Shaders ที่มีคำต่อท้าย &6Clrwl&r มีการปรับแต่งพิเศษสำหรับ Create Mod หากคุณใช้ Shaders อื่น ๆ อาจทำให้เฟรมเรตลดลง"
+		""
+		"หากคุณพบปัญหาที่หีบและส่วนประกอบของ Create Mod&c ไม่สามารถแสดงผลได้&r ให้ทำตามขั้นตอนด้านล่าง:"
+		"1. ตรวจสอบให้แน่ใจว่าคุณใช้การ์ดจอแยก"
+		"2. ตรวจสอบให้แน่ใจว่าไดรเวอร์การ์ดจอของคุณเป็นเวอร์ชันล่าสุด"
+		"3. รันคำสั่ง /flywheel backend instancing"
+		"4. รันคำสั่ง /flywheel backend off"
+		"เมื่อขั้นตอนใดขั้นตอนหนึ่งได้ผลแล้ว ไม่จำเป็นต้องทำขั้นตอนถัดไป"
+		"ปัญหานี้มักพบในการ์ดจอ Intel และการ์ดจอที่ใช้สถาปัตยกรรม AMD RDNA2"
+		""
+		"{@pagebreak}"
+		"&a&lC6C&r&r"
+		"ม็อด C6C เป็นโมดูลหลักที่ปรับแต่งเฉพาะของชุดม็อด โดยมีตัวเลือกการตั้งค่าในไฟล์ c6c-common.toml ซึ่งคุณสามารถแก้ไขได้ตามต้องการ"
+		"* อัตราการวางไข่ของมอนสเตอร์ในโอเวอร์เวิลด์"
+		"* อัตราการเกิดมอนสเตอร์ใน จุดสิ้นสุด"
+		"* ปิดการเปลี่ยนสกินเมดในสภาพแวดล้อมเซิร์ฟเวอร์"
+		"* การกระโดดสองครั้ง (Double jump)"
+		""
+		"{@pagebreak}"
+		"&a&lรายงานการแครช&r&r"
+		"หากคุณพบการแครชหรือปัญหาที่คล้ายกัน โปรดอัปโหลดรายงานการแครชไปที่"
+		"&ehttps://mclo.gs/&r"
+		"และส่งลิงก์ที่สร้างขึ้นให้กับผู้เขียน"
+	]
+	quest.6DB3C1C6D21EA436.title: "ยินดีต้อนรับสู่ &l&eMechanomania&r&r Modpack"
+	quest.6F343418CE247D0D.quest_desc: [
+		"ม้า: ความเร็วของม้ามากกว่าเวอร์ชันดั้งเดิมสองเท่า และสามารถเพิกเฉยต่อสิ่งกีดขวางส่วนใหญ่บนพื้นดิน วิ่งได้อย่างรวดเร็ว &c{item.horseman.copper_horn}&r สามารถเรียกม้าที่เชื่องแล้วได้"
+		""
+		"&c{item.usefulslime.slime_boots}&r และ &c{item.usefulslime.slime_sling}&r: ช่วยให้ผู้เล่นกระโดดสูงและเคลื่อนที่ได้รวดเร็ว"
+		""
+		"&c{@create_hypertube}&r: ช่วยให้ผู้เล่นเคลื่อนที่ได้อย่างรวดเร็วในระยะสั้นภายในฐาน"
+		""
+		"&c{item.c6c.recall_potion}&r: ช่วยให้ผู้เล่นกลับไปยังเตียงหรือจุดเกิดได้อย่างรวดเร็ว (ไม่สามารถใช้ใน จุดสิ้นสุด)"
+		""
+		"รถไฟ (ช่วงกลางเกม): สามารถเชื่อมต่อฐานที่อยู่ไกลและจุดทรัพยากร"
+		""
+		"&c{item.l2complements.fragile_warp_stone}&r (ช่วงกลางเกม): ช่วยให้ผู้เล่นวาร์ปไปยังตำแหน่งที่ทำเครื่องหมายไว้"
+		""
+		"&c{item.irons_spellbooks.hither_thither_wand}&r และ &c{block.irons_spellbooks.portal_frame}&r (ช่วงท้ายเกม): ช่วยให้ผู้เล่นวาร์ประหว่างสองจุดได้"
+	]
+	quest.6F343418CE247D0D.title: "เกี่ยวกับการเดินทางในโลก"
+	quest.6F4F862CB6AF1A4C.quest_desc: ["เมื่อกิน {item.umapyoi.hachimi_mid} จะเพิ่มระดับอารมณ์ขึ้น 1 ระดับ และฟื้นฟูค่าความหิว 2 หน่วย พร้อมค่าความอิ่ม 3 หน่วย"]
+	quest.6F4F862CB6AF1A4C.quest_subtitle: "สามารถกินได้แม้ค่าความอิ่มเต็ม"
+	quest.6FF2FBFB5A8D4C13.quest_desc: ["&oใน &c{dimension.minecraft.the_end}&r ความสามารถในการเคลื่อนที่ของไม้กวาดจะถูกจำกัดอย่างมาก สามารถปรับได้ผ่านไฟล์การตั้งค่า C6C&r"]
+	quest.6FF2FBFB5A8D4C13.quest_subtitle: "ต้องมีเมดนั่งไปกับคุณด้วยถึงจะใช้ได้"
+	quest.6FF2FBFB5A8D4C13.title: "ไม้กวาดบินได้"
+	quest.717036CE2862E3FF.quest_desc: ["เมื่อขุดบล็อกหรือโจมตีสิ่งมีชีวิต ให้เปลี่ยนเครื่องมือใดๆ ในมือหลักของผู้เล่นด้วยเครื่องมือหรืออาวุธที่ดีที่สุดที่มีอยู่"]
+	quest.7190D0D53DB975B2.quest_desc: [
+		"คุณสามารถดูบทอื่น ๆ ของ “{dimension.minecraft.the_end}” เพื่อวางแผนการผจญภัยของคุณ"
+		"เมื่อตัดสินใจแล้ว"
+		"ออกเดินทาง!"
+	]
+	quest.7199171C6EEE34F6.title: "พิมพ์เขียวโคลน"
+	quest.73983F6255308C0E.quest_desc: [
+		"การยืนอยู่ในของเหลว &6{item.hotbath.milk_bath_bucket}&r จะฟื้นฟูพลังชีวิตในอัตรา 0.25 ทุก ๆ 2 วินาที"
+		""
+		"การยืนอยู่ในของเหลว &6{item.hotbath.milk_bath_bucket}&r เป็นเวลา 15 วินาที จะลบเอฟเฟกต์สถานะเชิงลบทั้งหมด ยกเว้น &c{effect.minecraft.unluck}&r"
+		""
+		"การยืนอยู่ในของเหลว &6{item.hotbath.milk_bath_bucket}&r จะฟื้นฟูค่าความหิวในอัตรา 1 ต่อทุก 15 วินาที"
+	]
+	quest.74C40A81C9605AC0.quest_desc: [
+		"{End Deep Dark} ไบโอมถือว่าเป็นสถานที่ที่ &4อันตรายที่สุด&r ใน {dimension.minecraft.the_end}"
+		"มีสองมอนสเตอร์ &d{entity.minecraft.warden}&r และ &d{entity.irons_spellbooks.dead_king}&r อาศัยอยู่ที่นี่"
+		"แต่โชคดีที่พวกมันทั้งคู่ยังอยู่ในสภาวะหลับไหล"
+		"ตราบใดที่ไม่มีใครปลุกพวกมัน พวกมันก็จะหลับไหลตลอดไป"
+		""
+		"&d{entity.minecraft.warden}&r และ &d{entity.irons_spellbooks.dead_king}&r"
+		"ใครกันแน่คือเจ้าแห่งสกัลก์?"
+		""
+		"ระดับความยาก: 100+"
+	]
+	quest.74C40A81C9605AC0.title: "嘘！小点声！"
+	quest.74F2404B036CB503.quest_desc: [
+		"{Ancient City} บางครั้งจะปรากฏในไบโอมสกัลก์ของ {dimension.minecraft.the_end}"
+		""
+		"ที่นี่ซ่อนแร่มากมาย &cเนเธอไรต์&r รวมถึงวัตถุดิบสำหรับการคราฟต์มนต์ &dการผูกวิญญาณ&r คือ &d{item.minecraft.echo_shard}&r แต่ที่นี่ก็อันตรายมากกว่า"
+		""
+		"ระดับความยาก: 150+"
+	]
+	quest.74F2404B036CB503.title: "{Ancient City}"
+	quest.75BA253A92043A09.quest_desc: [
+		"นี่คือไบโอมแปลกประหลาดของเอนด์"
+		"เต็มไปด้วยสีเขียวทั่วทุกแห่ง"
+		"&d{entity.minecraft.enderman}&r และ &2{entity.minecraft.creeper}&r อาศัยอยู่ที่นี่"
+		"ที่นี่อุดมไปด้วย &a{item.kubejs.chlorophyte_ingot}&r ซึ่งสามารถใช้สร้างอุปกรณ์และไอเท็มใหม่ ๆ ได้หลากหลาย"
+		"หากคุณต้องการเอาชีวิตรอดบนเกาะนอกเอนด์ &a{item.kubejs.chlorophyte_ingot}&r เป็นสิ่งจำเป็น"
+		""
+		"ระดับความยาก: 20+"
+	]
+	quest.77305B767FC35FD7.quest_subtitle: "ไม่พูดมาก ไม่บ่นน้อย เริ่มต้มกันเลย"
+	quest.78158AE15F2A7180.quest_subtitle: "ความยากลำบาก300"
+	quest.7A3169F8A7713383.quest_desc: [
+		"เปลี่ยนกระเป๋าเป้สะพายหลังธรรมดาให้กลายเป็นเจ็ทแพ็คที่ใช้งานได้อย่างเต็มรูปแบบ พร้อมความสามารถในการบินและลอยตัว"
+		"ใช้ {item.create.copper_backtank}/{item.create.netherite_backtank} เป็นเชื้อเพลิง (ต้องอยู่ในกระเป๋าเป้)"
+	]
+	quest.7A9D46939AA33A20.title: "ปรับแต่งให้ละเอียดขึ้น"
+	quest.7ADA92302AD2425C.quest_desc: [
+		"&cตอนนี้ {สตรองโฮลด์} จะถูกสร้างขึ้นโดยตรงใต้พิกัด 0,0 ของโลกหลัก และจะเปิดประตูมิติไปยัง {dimension.minecraft.the_end} โดยอัตโนมัติ&r"
+		""
+		"&l&4{dimension.minecraft.the_end} มีความยากสูงมาก ขอแนะนำให้ไปแบบทีม&r&r"
+	]
+	quest.7ADA92302AD2425C.title: "ไปยัง {dimension.minecraft.the_end}"
+	quest.7B75EE328291ABCC.quest_desc: ["หวังว่าคุณจะสามารถฝึกฝน {UmaMusu} ที่แข็งแกร่งที่สุดได้!"]
+	quest.7CD24C618C37D5C2.quest_desc: [
+		"มีสองวิธีหลักในการได้มา &d{item.l2hostility.chaos_ingot}&r"
+		""
+		"1. ใช้สูตรคราฟต์ในการสร้าง"
+		"2. สร้าง &b{item.l2hostility.charm_of_looting_4}&r แล้วไปที่ &c{End City}&r เมื่อระดับความยากเกิน 200 ในตอนนั้น ชัลเกอร์จะมี {trait.l2hostility.dispell} ลักษณะเฉพาะ อย่างแน่นอน และมีโอกาสดรอป &d{item.l2hostility.chaos_ingot}&r"
+	]
+	quest.7D783507714BF010.quest_desc: [
+		"แท่นบูชาสามารถสร้างได้ด้วยขนแกะสีแดง (20 ชิ้น) และไม้โอ๊ก (18 ชิ้น) เมื่อสร้างเสร็จให้ใช้ไม้บูชาของโบรีคลิกขวาที่ตำแหน่งสีน้ำเงินตามภาพเพื่อสร้างแท่นบูชา โดยการใช้ &6{item.touhou_little_maid.power_point}&r ของผู้เล่นในการสังเคราะห์ไอเท็มและกระตุ้นเหตุการณ์ที่กำหนด นอกจากนี้ยังสามารถใช้เป็นพลังงานของ &6{block.touhou_little_maid.maid_beacon}&r ได้"
+		""
+		"ผู้เล่นสร้างตามภาพแล้ว คลิกขวาที่เสาเพื่อวางไอเท็ม กด Shift+คลิกขวาเพื่อหยิบออก วางถูกต้องแล้วจะใช้ &6{item.touhou_little_maid.power_point}&r ที่เพียงพอในการสังเคราะห์ไอเท็มหรือกระตุ้นเหตุการณ์ที่กำหนด"
+		""
+		"โปรดดูหนังสือสอน &6{patchouli.touhou_little_maid.book.name}&r ในหัวข้อ &6{patchouli.touhou_little_maid.book.entries.overview.multiblocks_altar.name}&r กดปุ่มรูปตาเพื่อสร้างภาพที่มองเห็นได้การฉายภาพ"
+		"{image:ftbquests:textures/nvpujitian.png width:160 height:120 align:center}"
+	]
+	quest.7D783507714BF010.title: "{touhou_little_maid.ponder.altar.header}"
+	quest.7DB3025A320096D6.quest_desc: [
+		"&c{End City}&r จะลอยอยู่เหนือหมู่เกาะใน &c{dimension.minecraft.the_end}&r"
+		"ระวังให้ดี อย่าเผลอก้าวพลาด! ด้านล่างคือเหวลึกสุดขอบฟ้า"
+		""
+		"ระดับความยาก: 50+"
+	]
+	quest.7DB3025A320096D6.title: "สถานที่ซากปรักหักพัง"
+	quest.7DF40621D9ECBE60.quest_desc: [
+		"ใช้งานได้ผลเมื่อสวมใส่ไว้ที่ด้านหลังของผู้เล่นหรือวางไว้บนพื้น"
+		"ดูดไอเทมในระยะ 5 บล็อกเข้ามาในกระเป๋า"
+	]
+	quest.7E563C97A327B537.quest_subtitle: "ความยากลำบาก600"
+	quest.7E8FD764CCC38327.quest_desc: [
+		"รางวัลถาวร [&aระยะการโต้ตอบกับเอนทิตี+1&r]"
+		""
+		"&oสามารถดูรายการที่สามารถเก็บสะสมและรางวัลทั้งหมดได้ในความสำเร็จ “&c{advancement.c6c.root}&r”&r"
+	]
+	quest.7EFEEF11A184A08E.quest_desc: [
+		"คราฟต์ &b{block.umapyoi.disassembly_block}&r"
+		""
+		"นำ {UmaMusu} ที่ไม่ต้องการใส่เข้าไป จะได้รับ &e{Umamusume Crystal}&r"
+	]
+	quest.7F438F9D2D109C6F.quest_desc: [
+		"รางวัลถาวร [&aการรักษาเกินขีดจำกัด+10%&r]："
+		"  ความเสียหายที่คุณสร้างได้ 10% จะถูกแปลงเป็น &6พลังชีวิตชั่วคราว&r ของคุณ"
+		""
+		"&oสามารถดูรายการที่สามารถเก็บสะสมและรางวัลทั้งหมดได้ในความสำเร็จ “&c{advancement.c6c.root}&r”&r"
+	]
+	quest.7F438F9D2D109C6F.quest_subtitle: "รวบรวมเมด &6{model.touhou_little_maid.saigyouji_yuyuko.name}&r และ &6{model.touhou_little_maid.konpaku_youmu.name}&r"
+	task.018D50BCD26EC52D.title: "เกี่ยวกับม้า"
+	task.079598ED34BDA743.title: "การใช้ JEI"
+	task.0C0C580E2F734E82.title: "สีเขียวทั่วทุกแห่ง"
+	task.0EC1C934EE7E9C9C.title: "เล่นหมากรุกกับเมด"
+	task.112CBA6D46832979.title: "\"ความเป็นศัตรู\""
+	task.13AB58A961702203.title: "อ่างน้ำร้อน"
+	task.14B8564808BA252E.title: "การส่งกำลัง"
+	task.1B22D77617B1FB2B.title: "เกราะหมาป่าที่ดีกว่า"
+	task.1E05D9F4697EBE41.title: "ตัวกรอง"
+	task.3056BA1F2A472133.title: "ยินดีต้อนรับสู่ชุดรวม Heart of Chimíng"
+	task.3A9D318495BFF9AE.title: "ออกเดินทาง"
+	task.3DCCCC14D391742B.title: "ดันเจี้ยน! ดันเจี้ยน!"
+	task.49D91506FB3FF564.title: "จับหรือชุบชีวิตเมด"
+	task.49FE4F7B204197F0.title: "เครื่องมือของเจ้านาย"
+	task.4A021CCA252DCB4E.title: "เจ้าแห่งสกัลก์"
+	task.4BEEA63B2528F8B9.title: "อุปกรณ์ช่วยงาน"
+	task.4C3F131687C993FF.title: "อุปกรณ์ส่งกำลัง"
+	task.596535A955251949.title: "简易抽屉升级"
+	task.5A4EC83AAAB86751.title: "สามารถค้นหา @delight ในช่องค้นหาของ JEI เพื่อดูอาหารทั้งหมด"
+	task.627EF049D666373E.title: "สถานที่ซากปรักหักพัง"
+	task.6517A277B3E3D931.title: "อุปกรณ์สร้าง &c{create.display_source.kinetic_stress.current}&r"
+	task.731A8373E429DB6E.title: "การตกแต่ง"
+	task.7CED1C11ECCA5318.title: "อุปกรณ์ส่งกำลังขั้นสูงกว่า"
+	task.7FBFB25DA5BBCF28.title: "{item.fxntstorage.backpack_blank_upgrade}"
+}

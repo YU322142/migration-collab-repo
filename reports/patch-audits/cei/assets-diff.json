@@ -1,0 +1,35 @@
+{
+    "tree":  "assets",
+    "count_242":  210,
+    "count_251":  219,
+    "only_242":  [
+
+                 ],
+    "only_251":  [
+                     "create_enchantment_industry\\blockstates\\blaze_composer.json",
+                     "create_enchantment_industry\\models\\block\\blaze\\composer_hat.json",
+                     "create_enchantment_industry\\models\\block\\blaze\\composer_hat_small.json",
+                     "create_enchantment_industry\\models\\item\\blaze_composer.json",
+                     "create_enchantment_industry\\models\\item\\incomplete_apotheotic_affix_template.json",
+                     "create_enchantment_industry\\models\\item\\incomplete_brass_affix_template.json",
+                     "create_enchantment_industry\\models\\item\\incomplete_crystal_affix_template.json",
+                     "create_enchantment_industry\\textures\\block\\composer_hat.png",
+                     "create_enchantment_industry\\textures\\block\\composer_hat_small.png"
+                 ],
+    "common_same":  197,
+    "common_changed":  [
+                           "create_enchantment_industry\\lang\\bg_bg.json",
+                           "create_enchantment_industry\\lang\\builtin\\interface.json",
+                           "create_enchantment_industry\\lang\\de_de.json",
+                           "create_enchantment_industry\\lang\\en_ud.json",
+                           "create_enchantment_industry\\lang\\en_us.json",
+                           "create_enchantment_industry\\lang\\es_es.json",
+                           "create_enchantment_industry\\lang\\es_mx.json",
+                           "create_enchantment_industry\\lang\\fr_fr.json",
+                           "create_enchantment_industry\\lang\\ja_jp.json",
+                           "create_enchantment_industry\\lang\\pt_br.json",
+                           "create_enchantment_industry\\lang\\ru_ru.json",
+                           "create_enchantment_industry\\lang\\tr_tr.json",
+                           "create_enchantment_industry\\lang\\zh_cn.json"
+                       ]
+}

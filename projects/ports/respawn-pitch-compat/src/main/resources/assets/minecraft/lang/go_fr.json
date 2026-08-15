@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Pouint d'orine minz a %s, %s, %s [%s, %s] en %s pour %s",
+  "commands.spawnpoint.success.multiple.new": "Pouint d'orine minz a %s, %s, %s, [%s, %s] en %s pour %s jouous"
+}

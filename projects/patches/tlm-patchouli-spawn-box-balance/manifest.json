@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "status": "current",
+  "created_at": "2026-08-14",
+  "side": "CLIENT",
+  "policy": "preserve_mechanomania_balance",
+  "supersedes": "outputs/patches/tlm-spawn-box-restore-20260814",
+  "server_changes": [],
+  "source_guards": {
+    "official_pack_sha256": "2B9C39579EA82A3D9C8C1A22029C7379D1BD240A1F4A08ABD70B03374E55617A",
+    "server_kubejs/server_scripts/maid.js": "FA458896BC728721995925563DD491F7ED54073FD1A94A5AE87004C66E4990F4",
+    "client_mods/touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar": "F6DB04195820C8508704277EA76D63723804FF236A7B780369BA59EBE5CD9C27",
+    "jar_spawn_maid_entry": "F536A1BB528B4F7A8458C88985601F06E5225D33B34ACDA6F7A061E6B47AF2B3",
+    "jar_multiblocks_altar_entry": "6DB3EA530DC9B745D5A31CDBB4CE34C3711B105F48F449E18AC69D692AF4F98E"
+  },
+  "artifacts": [
+    {
+      "path": "overlay/kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/maid/spawn_maid.json",
+      "bytes": 443,
+      "sha256": "2904581BFC4704CAF6829ADE482959E766B1A2EDA76C03FF3F23945E4625BD9C"
+    },
+    {
+      "path": "overlay/kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/overview/multiblocks_altar.json",
+      "bytes": 980,
+      "sha256": "39CBE907D067E08C6FAD58FBB9601339D8A6141B236BD1F62FFEFB1603F25D3A"
+    },
+    {
+      "path": "build_tlm_patchouli_balance_overlay.py",
+      "bytes": 6181,
+      "sha256": "BDDD6950FC5AE366A470CFF09FD15B5965546EAB1DD789117046731DFAD6DC90"
+    },
+    {
+      "path": "verify_tlm_patchouli_balance_fix.py",
+      "bytes": 15091,
+      "sha256": "CF4FE1DB893F3CFE4DE690887D3C6BE6F0482A6216FFD875E935A26BC0BED53C"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2341,
+      "sha256": "1BFA15A85E8ECA8E7AE2C25713CF27B329A02F3C7303593137877F88C8CFC449"
+    },
+    {
+      "path": "reports/exact-entry-diff.json",
+      "bytes": 2030,
+      "sha256": "C6E3EF183E709DDD8AE3C84B7A072777C23BAB8BEABD2CA326206A0F09118651"
+    },
+    {
+      "path": "reports/static-dual-side-verification.json",
+      "bytes": 9715,
+      "sha256": "D3FECB4BDA8299183E6667623E0B79120F826F5DCE2FD68A7E0AE0B4A4916288",
+      "result": "42/42 PASS"
+    }
+  ],
+  "test": {
+    "path": "outputs/tools/test_tlm_patchouli_balance_fix_20260814.py",
+    "bytes": 7795,
+    "sha256": "4484F3ABCA4AB9D9003687BBC4C499EE4BE37DFC712F005EA45E1B79A6BD026E",
+    "result": "8/8 PASS"
+  },
+  "runtime_gate_required": true
+}

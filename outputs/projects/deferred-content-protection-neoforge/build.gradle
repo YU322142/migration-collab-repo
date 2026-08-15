@@ -1,0 +1,69 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.95'
+}
+
+group = mod_group_id
+version = mod_version
+
+base {
+    archivesName = 'deferred-content-protection'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+dependencies {
+    testImplementation sourceSets.main.output
+}
+
+sourceSets {
+    test {
+        compileClasspath += sourceSets.main.compileClasspath
+        runtimeClasspath += sourceSets.main.compileClasspath
+    }
+}
+
+def tomlProperties = [
+        'loader_version_range', 'mod_license', 'mod_id', 'mod_version',
+        'mod_name', 'mod_authors', 'mod_description', 'neo_version_range',
+        'minecraft_version_range'
+].collectEntries { key -> [key, project.property(key).toString()] }
+
+tasks.named('processResources') {
+    inputs.properties(tomlProperties)
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand(tomlProperties)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('protectionContractTest', JavaExec) {
+    group = 'verification'
+    description = 'Verifies protected-carrier registration, interaction locks and recipe absence.'
+    dependsOn tasks.named('testClasses')
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'dev.migration.deferred_content_protection.ProtectionContractTest'
+    systemProperty 'projectDir', project.projectDir.absolutePath
+}
+
+tasks.named('check') {
+    dependsOn tasks.named('protectionContractTest')
+}
+
+tasks.named('jar') {
+    archiveFileName = "deferred-content-protection-${project.mod_version}.jar"
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}

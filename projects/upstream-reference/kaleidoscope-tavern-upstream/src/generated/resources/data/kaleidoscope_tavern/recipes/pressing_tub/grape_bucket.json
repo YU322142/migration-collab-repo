@@ -1,0 +1,8 @@
+{
+  "type": "kaleidoscope_tavern:pressing_tub",
+  "fluid": "kaleidoscope_tavern:grape_juice",
+  "fluid_amount": 125,
+  "ingredient": {
+    "tag": "forge:fruits/grapes"
+  }
+}

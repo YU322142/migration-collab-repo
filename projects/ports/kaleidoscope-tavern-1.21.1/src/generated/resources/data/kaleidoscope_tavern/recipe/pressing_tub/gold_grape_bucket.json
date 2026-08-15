@@ -1,0 +1,7 @@
+{
+  "type": "kaleidoscope_tavern:pressing_tub",
+  "fluid": "kaleidoscope_tavern:gold_grape_juice",
+  "ingredient": {
+    "item": "kaleidoscope_tavern:gold_grape"
+  }
+}

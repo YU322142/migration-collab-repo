@@ -1,0 +1,162 @@
+package com.github.ysbbbbbb.kaleidoscopetavern.datagen.model;
+
+import com.github.ysbbbbbb.kaleidoscopetavern.KaleidoscopeTavern;
+import com.github.ysbbbbbb.kaleidoscopetavern.block.properties.ConnectionType;
+import com.github.ysbbbbbb.kaleidoscopetavern.util.ColorUtils;
+import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.state.properties.RotationSegment;
+import net.neoforged.neoforge.client.model.generators.BlockModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.util.TransformationHelper;
+
+public class BlockModelGenerator extends BlockModelProvider {
+    public BlockModelGenerator(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, KaleidoscopeTavern.MOD_ID, existingFileHelper);
+    }
+
+    @Override
+    protected void registerModels() {
+        for (String color : ColorUtils.COLORS) {
+            sofa(color);
+            barStool(color);
+        }
+
+        sandwichBoardBase();
+        sandwichBoard("grass");
+        sandwichBoard("allium");
+        sandwichBoard("azure_bluet");
+        sandwichBoard("cornflower");
+        sandwichBoard("orchid");
+        sandwichBoard("peony");
+        sandwichBoard("pink_petals");
+        sandwichBoard("pitcher_plant");
+        sandwichBoard("poppy");
+        sandwichBoard("sunflower");
+        sandwichBoard("torchflower");
+        sandwichBoard("tulip");
+        sandwichBoard("wither_rose");
+
+        glassware("empty_glassware");
+        glassware("signature_cocktail");
+        glassware("mystery_cocktail");
+        glassware("white_lady");
+        glassware("emerald");
+        glassware("brass_heart");
+        glassware("godfather");
+        glassware("grasshopper");
+        glassware("screwdriver");
+        glassware("mojito");
+        glassware("allium_garden");
+        glassware("depth_charge");
+        glassware("nether_special");
+        glassware("bloody_mary");
+        glassware("sculk_special");
+
+        painting("ysbb");
+        painting("tartaric_acid");
+        painting("cr019");
+        painting("unknown");
+        painting("master_marisa");
+        painting("son_of_man");
+        painting("david");
+        painting("girl_with_pearl_earring");
+        painting("starry_night");
+        painting("van_gogh_self_portrait");
+        painting("father");
+        painting("great_wave");
+        painting("mona_lisa");
+        painting("mondrian");
+
+        cross("block/plant/wild_grapevine", modLoc("block/plant/wild_grapevine")).renderType("cutout");
+        cross("block/plant/wild_grapevine_plant", modLoc("block/plant/wild_grapevine_plant")).renderType("cutout");
+    }
+
+    private void sofa(String color) {
+        ResourceLocation texture = modLoc("block/deco/sofa/%s".formatted(color));
+        ResourceLocation particle = mcLoc("block/%s_wool".formatted(color));
+
+        for (ConnectionType type : ConnectionType.values()) {
+            String typeName = type.getSerializedName();
+            String name = "block/deco/sofa/%s/%s".formatted(color, typeName);
+            ResourceLocation parent = modLoc("block/deco/sofa/base/%s".formatted(typeName));
+            withExistingParent(name, parent)
+                    .texture("texture", texture)
+                    .texture("particle", particle);
+        }
+    }
+
+    private void barStool(String color) {
+        ResourceLocation texture = modLoc("block/deco/bar_stool/%s".formatted(color));
+        ResourceLocation particle = mcLoc("block/%s_wool".formatted(color));
+
+        String name = "block/deco/bar_stool/%s".formatted(color);
+        ResourceLocation parent = modLoc("block/deco/bar_stool/base");
+        withExistingParent(name, parent)
+                .texture("texture", texture)
+                .texture("particle", particle);
+    }
+
+    private void sandwichBoardBase() {
+        ResourceLocation bottomParent = modLoc("block/deco/sandwich_board/base");
+        ResourceLocation baseParent = modLoc("block/deco/sandwich_board/base_top");
+
+        int max = RotationSegment.getMaxSegmentIndex();
+
+        for (int i = 0; i <= max; i++) {
+            // 下半截（其他展板通用）
+            ResourceLocation bottom = modLoc("block/deco/sandwich_board/bottom/rot_%d".formatted(i));
+            withExistingParent(bottom.toString(), bottomParent)
+                    .rootTransforms()
+                    .origin(TransformationHelper.TransformOrigin.CENTER)
+                    .rotation(0, -i * 22.5f, 0, true)
+                    .end();
+
+            // 上半截
+            ResourceLocation base = modLoc("block/deco/sandwich_board/base/rot_%d".formatted(i));
+            withExistingParent(base.toString(), baseParent)
+                    .rootTransforms()
+                    .origin(TransformationHelper.TransformOrigin.CENTER)
+                    .rotation(0, -i * 22.5f, 0, true)
+                    .end();
+        }
+    }
+
+    private void sandwichBoard(String type) {
+        ResourceLocation texture = modLoc("block/deco/sandwich_board/%s".formatted(type));
+        ResourceLocation parent = modLoc("block/deco/sandwich_board/deco_top");
+
+        int max = RotationSegment.getMaxSegmentIndex();
+        for (int i = 0; i <= max; i++) {
+            ResourceLocation file = modLoc("block/deco/sandwich_board/%s/rot_%d".formatted(type, i));
+            withExistingParent(file.toString(), parent)
+                    .texture("layer1", texture)
+                    .rootTransforms()
+                    .origin(TransformationHelper.TransformOrigin.CENTER)
+                    .rotation(0, -i * 22.5f, 0, true)
+                    .end();
+        }
+    }
+
+    private void glassware(String type) {
+        ResourceLocation parent = modLoc("block/mixology/%s".formatted(type));
+        int max = RotationSegment.getMaxSegmentIndex();
+
+        for (int i = 0; i <= max; i++) {
+            ResourceLocation file = modLoc("block/mixology/%s/rot_%d".formatted(type, i));
+            withExistingParent(file.toString(), parent)
+                    .rootTransforms()
+                    .origin(TransformationHelper.TransformOrigin.CENTER)
+                    .rotation(0, -i * 22.5F, 0, true)
+                    .end();
+        }
+    }
+
+    private void painting(String type) {
+        ResourceLocation texture = modLoc("block/deco/painting/%s".formatted(type));
+        String name = "block/deco/painting/%s".formatted(type);
+        ResourceLocation parent = modLoc("block/deco/painting/base");
+        withExistingParent(name, parent)
+                .texture("texture", texture);
+    }
+}

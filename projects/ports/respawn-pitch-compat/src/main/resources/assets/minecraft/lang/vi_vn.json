@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Đã chỉnh điểm hồi sinh thành %s, %s, %s [%s, %s] trong %s cho %s",
+  "commands.spawnpoint.success.multiple.new": "Đã chỉnh điểm hồi sinh thành %s, %s, %s [%s, %s] trong %s cho %s người chơi"
+}

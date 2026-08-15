@@ -1,0 +1,13 @@
+{
+  "values": [
+    "#c:vegetables/chilipepper",
+    "#c:vegetables/tomato",
+    "#c:vegetables/lettuce",
+    "#c:vegetables/beetroot",
+    "#c:vegetables/onion",
+    {
+      "id": "#c:crops/cabbage",
+      "required": false
+    }
+  ]
+}

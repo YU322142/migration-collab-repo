@@ -1,0 +1,3 @@
+execute as @e[type=minecraft:item_frame,nbt={Item:{id:"minecraft:diamond_axe"}}] at @s if block ~ ~-1 ~ minecraft:hopper if score @s potted_farms_damage >= potted_farms_diamond potted_farms_damage run function potted_farms:eject_item
+execute as @e[type=minecraft:item_frame,nbt={Item:{id:"minecraft:diamond_axe"}}] at @s if block ~ ~-1 ~ minecraft:hopper run function potted_farms:pot_check
+schedule function potted_farms:check_diamond 15s replace

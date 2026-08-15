@@ -1,0 +1,41 @@
+{
+	id: "0DA6727500F2701E"
+	loot_size: 3
+	order_index: 0
+	rewards: [
+		{ id: "3BB827DE1C530138", item: { count: 1, id: "minecraft:bow" } }
+		{
+			count: 64
+			id: "767B6641CBBFE891"
+			item: {
+				count: 1
+				id: "minecraft:arrow"
+			}
+		}
+		{ id: "16A7A132CB7DFEE3", item: { count: 1, id: "minecraft:shield" } }
+		{
+			count: 5
+			id: "2215609665ECB748"
+			item: {
+				count: 1
+				id: "minecraft:iron_ingot"
+			}
+		}
+		{
+			count: 4
+			id: "43FA868879E2F462"
+			item: {
+				count: 1
+				id: "createages:andesite_machine"
+			}
+		}
+		{
+			count: 10
+			id: "04FE7D23B20F24E5"
+			item: {
+				count: 1
+				id: "minecraft:andesite"
+			}
+		}
+	]
+}

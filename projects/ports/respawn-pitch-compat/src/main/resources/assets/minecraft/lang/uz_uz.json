@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "%7$s uchun %6$s qayta tirilish nuqtasi %1$s, %2$s, %3$s [%4$s, %5$s] koordinatalariga o'rnatildi",
+  "commands.spawnpoint.success.multiple.new": "%7$s ta o'yinchi uchun %6$s qayta tirilish nuqtasi %1$s, %2$s, %3$s [%4$s, %5$s] koordinatalariga o'rnatildi"
+}

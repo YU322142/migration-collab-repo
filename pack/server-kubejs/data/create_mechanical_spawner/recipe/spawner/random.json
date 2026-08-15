@@ -1,0 +1,8 @@
+{
+  "type": "create_mechanical_spawner:spawner",
+  "input": {
+    "amount": 30,
+    "fluid": "create_mechanical_spawner:spawn_fluid_random"
+  },
+  "processingTime": 1500
+}

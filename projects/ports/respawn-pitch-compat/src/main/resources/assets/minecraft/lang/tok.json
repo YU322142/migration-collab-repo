@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "nanpa pi ma open li kama %s, %s, %s [%s, %s] lon ma %s tawa %s",
+  "commands.spawnpoint.success.multiple.new": "nanpa pi ma open li kama %s, %s, %s [%s, %s] lon ma %s tawa jan %s"
+}

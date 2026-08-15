@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:mangrove_planks"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "ultramarine:polished_mangrove_plank"
+    }
+  ]
+}

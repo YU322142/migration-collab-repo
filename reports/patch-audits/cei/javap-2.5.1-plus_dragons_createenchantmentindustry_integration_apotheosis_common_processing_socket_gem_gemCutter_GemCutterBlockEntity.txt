@@ -1,0 +1,1820 @@
+﻿Compiled from "GemCutterBlockEntity.java"
+public class plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.socket.gem.gemCutter.GemCutterBlockEntity extends com.simibubi.create.content.kinetics.base.KineticBlockEntity implements com.simibubi.create.api.equipment.goggles.IHaveGoggleInformation {
+  public static final int UNIT_PROCESSING_TIME;
+    descriptor: I
+
+  public static final int COMPLETION_TICKS;
+    descriptor: I
+
+  private static final int HELD_INPUT_TIMEOUT;
+    descriptor: I
+
+  public int processingTicks;
+    descriptor: I
+
+  public boolean powered;
+    descriptor: Z
+
+  public float chargingPercentage;
+    descriptor: F
+
+  private plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.socket.gem.gemCutter.GemCutterBlockEntity$ActiveCutting activeCutting;
+    descriptor: Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+
+  private plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.socket.gem.gemCutter.GemCutterBlockEntity$CuttingPreview heldPreview;
+    descriptor: Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+
+  private int heldPreviewTicks;
+    descriptor: I
+
+  private int heldInputTicks;
+    descriptor: I
+
+  static final boolean $assertionsDisabled;
+    descriptor: Z
+
+  public plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.socket.gem.gemCutter.GemCutterBlockEntity(net.minecraft.world.level.block.entity.BlockEntityType<?>, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    descriptor: (Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: aload_3
+       4: invokespecial #1                  // Method com/simibubi/create/content/kinetics/base/KineticBlockEntity."<init>":(Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+       7: aload_0
+       8: iconst_m1
+       9: putfield      #7                  // Field processingTicks:I
+      12: return
+
+  public void addBehaviours(java.util.List<com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour>);
+    descriptor: (Ljava/util/List;)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #13                 // Method com/simibubi/create/content/kinetics/base/KineticBlockEntity.addBehaviours:(Ljava/util/List;)V
+       5: new           #17                 // class plus/dragons/createenchantmentindustry/integration/apotheosis/common/kinetics/belt/lowerProcessingAppliance/LowerBeltProcessingBehaviour
+       8: dup
+       9: aload_0
+      10: invokespecial #19                 // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/kinetics/belt/lowerProcessingAppliance/LowerBeltProcessingBehaviour."<init>":(Lcom/simibubi/create/foundation/blockEntity/SmartBlockEntity;)V
+      13: aload_0
+      14: invokedynamic #22,  0             // InvokeDynamic #0:apply:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingCallback;
+      19: invokevirtual #26                 // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/kinetics/belt/lowerProcessingAppliance/LowerBeltProcessingBehaviour.whenItemEnters:(Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingCallback;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour;
+      22: aload_0
+      23: invokedynamic #30,  0             // InvokeDynamic #1:apply:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingCallback;
+      28: invokevirtual #31                 // Method com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour.whileItemHeld:(Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingCallback;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour;
+      31: astore_2
+      32: aload_1
+      33: aload_2
+      34: invokeinterface #36,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      39: pop
+      40: return
+
+  public void tick();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #42                 // Method com/simibubi/create/content/kinetics/base/KineticBlockEntity.tick:()V
+       4: aload_0
+       5: getfield      #46                 // Field level:Lnet/minecraft/world/level/Level;
+       8: getfield      #50                 // Field net/minecraft/world/level/Level.isClientSide:Z
+      11: ifeq          79
+      14: aload_0
+      15: getfield      #56                 // Field powered:Z
+      18: ifeq          48
+      21: aload_0
+      22: getfield      #59                 // Field chargingPercentage:F
+      25: fconst_1
+      26: fcmpg
+      27: ifge          48
+      30: aload_0
+      31: aload_0
+      32: getfield      #59                 // Field chargingPercentage:F
+      35: ldc           #63                 // float 0.025f
+      37: fadd
+      38: fconst_1
+      39: invokestatic  #64                 // Method java/lang/Math.min:(FF)F
+      42: putfield      #59                 // Field chargingPercentage:F
+      45: goto          79
+      48: aload_0
+      49: getfield      #56                 // Field powered:Z
+      52: ifne          79
+      55: aload_0
+      56: getfield      #59                 // Field chargingPercentage:F
+      59: fconst_0
+      60: fcmpl
+      61: ifle          79
+      64: aload_0
+      65: fconst_0
+      66: aload_0
+      67: getfield      #59                 // Field chargingPercentage:F
+      70: ldc           #63                 // float 0.025f
+      72: fsub
+      73: invokestatic  #70                 // Method java/lang/Math.max:(FF)F
+      76: putfield      #59                 // Field chargingPercentage:F
+      79: aload_0
+      80: getfield      #46                 // Field level:Lnet/minecraft/world/level/Level;
+      83: getfield      #50                 // Field net/minecraft/world/level/Level.isClientSide:Z
+      86: ifne          190
+      89: aload_0
+      90: invokevirtual #73                 // Method isVirtual:()Z
+      93: ifne          190
+      96: aload_0
+      97: invokevirtual #77                 // Method getExternalFluidTank:()Ljava/util/Optional;
+     100: astore_1
+     101: aload_1
+     102: invokevirtual #81                 // Method java/util/Optional.isEmpty:()Z
+     105: ifeq          127
+     108: aload_0
+     109: getfield      #56                 // Field powered:Z
+     112: ifeq          186
+     115: aload_0
+     116: iconst_0
+     117: putfield      #56                 // Field powered:Z
+     120: aload_0
+     121: invokevirtual #86                 // Method notifyUpdate:()V
+     124: goto          186
+     127: aload_1
+     128: invokevirtual #89                 // Method java/util/Optional.get:()Ljava/lang/Object;
+     131: checkcast     #93                 // class com/simibubi/create/content/fluids/tank/FluidTankBlockEntity
+     134: invokevirtual #95                 // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getTankInventory:()Lnet/neoforged/neoforge/fluids/capability/templates/FluidTank;
+     137: astore_2
+     138: aload_2
+     139: invokevirtual #99                 // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getFluid:()Lnet/neoforged/neoforge/fluids/FluidStack;
+     142: getstatic     #105                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/registry/CEIAXFluids.CRYSTAL_ESSENCE:Lcom/tterrag/registrate/util/entry/FluidEntry;
+     145: invokevirtual #111                // Method net/neoforged/neoforge/fluids/FluidStack.is:(Lnet/minecraft/core/Holder;)Z
+     148: ifeq          170
+     151: aload_0
+     152: getfield      #56                 // Field powered:Z
+     155: ifne          186
+     158: aload_0
+     159: iconst_1
+     160: putfield      #56                 // Field powered:Z
+     163: aload_0
+     164: invokevirtual #86                 // Method notifyUpdate:()V
+     167: goto          186
+     170: aload_0
+     171: getfield      #56                 // Field powered:Z
+     174: ifeq          186
+     177: aload_0
+     178: iconst_0
+     179: putfield      #56                 // Field powered:Z
+     182: aload_0
+     183: invokevirtual #86                 // Method notifyUpdate:()V
+     186: aload_0
+     187: invokevirtual #117                // Method tickHeldInputTimeouts:()V
+     190: aload_0
+     191: getfield      #7                  // Field processingTicks:I
+     194: iflt          274
+     197: aload_0
+     198: getfield      #56                 // Field powered:Z
+     201: ifeq          262
+     204: aload_0
+     205: getfield      #46                 // Field level:Lnet/minecraft/world/level/Level;
+     208: getfield      #50                 // Field net/minecraft/world/level/Level.isClientSide:Z
+     211: ifne          226
+     214: aload_0
+     215: invokevirtual #120                // Method hasValidActiveInput:()Z
+     218: ifne          226
+     221: aload_0
+     222: invokevirtual #123                // Method cancelProcessing:()V
+     225: return
+     226: aload_0
+     227: dup
+     228: getfield      #7                  // Field processingTicks:I
+     231: iconst_1
+     232: isub
+     233: putfield      #7                  // Field processingTicks:I
+     236: aload_0
+     237: getfield      #46                 // Field level:Lnet/minecraft/world/level/Level;
+     240: getfield      #50                 // Field net/minecraft/world/level/Level.isClientSide:Z
+     243: ifeq          274
+     246: aload_0
+     247: getfield      #7                  // Field processingTicks:I
+     250: bipush        25
+     252: if_icmple     274
+     255: aload_0
+     256: invokevirtual #126                // Method spawnParticles:()V
+     259: goto          274
+     262: aload_0
+     263: getfield      #7                  // Field processingTicks:I
+     266: iconst_m1
+     267: if_icmpeq     274
+     270: aload_0
+     271: invokevirtual #123                // Method cancelProcessing:()V
+     274: return
+
+  private java.util.Optional<com.simibubi.create.content.fluids.tank.FluidTankBlockEntity> getExternalFluidTank();
+    descriptor: ()Ljava/util/Optional;
+    Code:
+       0: getstatic     #129                // Field $assertionsDisabled:Z
+       3: ifne          21
+       6: aload_0
+       7: getfield      #46                 // Field level:Lnet/minecraft/world/level/Level;
+      10: ifnonnull     21
+      13: new           #132                // class java/lang/AssertionError
+      16: dup
+      17: invokespecial #134                // Method java/lang/AssertionError."<init>":()V
+      20: athrow
+      21: aload_0
+      22: getfield      #46                 // Field level:Lnet/minecraft/world/level/Level;
+      25: aload_0
+      26: getfield      #136                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+      29: iconst_2
+      30: invokevirtual #140                // Method net/minecraft/core/BlockPos.below:(I)Lnet/minecraft/core/BlockPos;
+      33: invokevirtual #146                // Method net/minecraft/world/level/Level.getBlockEntity:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/entity/BlockEntity;
+      36: astore_1
+      37: aload_1
+      38: instanceof    #93                 // class com/simibubi/create/content/fluids/tank/FluidTankBlockEntity
+      41: ifeq          57
+      44: aload_1
+      45: checkcast     #93                 // class com/simibubi/create/content/fluids/tank/FluidTankBlockEntity
+      48: astore_2
+      49: aload_2
+      50: invokevirtual #150                // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getControllerBE:()Lcom/simibubi/create/content/fluids/tank/FluidTankBlockEntity;
+      53: invokestatic  #154                // Method java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+      56: areturn
+      57: invokestatic  #158                // Method java/util/Optional.empty:()Ljava/util/Optional;
+      60: areturn
+
+  public com.simibubi.create.content.kinetics.belt.behaviour.BeltProcessingBehaviour$ProcessingResult onItemEnters(com.simibubi.create.content.kinetics.belt.transport.TransportedItemStack, com.simibubi.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour);
+    descriptor: (Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;Lcom/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+    Code:
+       0: aload_0
+       1: getfield      #46                 // Field level:Lnet/minecraft/world/level/Level;
+       4: astore_3
+       5: getstatic     #129                // Field $assertionsDisabled:Z
+       8: ifne          23
+      11: aload_3
+      12: ifnonnull     23
+      15: new           #132                // class java/lang/AssertionError
+      18: dup
+      19: invokespecial #134                // Method java/lang/AssertionError."<init>":()V
+      22: athrow
+      23: aload_2
+      24: getfield      #161                // Field com/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour.blockEntity:Lcom/simibubi/create/foundation/blockEntity/SmartBlockEntity;
+      27: invokevirtual #167                // Method com/simibubi/create/foundation/blockEntity/SmartBlockEntity.isVirtual:()Z
+      30: ifeq          37
+      33: getstatic     #170                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.PASS:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      36: areturn
+      37: aload_1
+      38: getfield      #176                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+      41: invokestatic  #182                // Method isUpgradableGem:(Lnet/minecraft/world/item/ItemStack;)Z
+      44: ifne          51
+      47: getstatic     #170                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.PASS:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      50: areturn
+      51: getstatic     #186                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      54: areturn
+
+  public com.simibubi.create.content.kinetics.belt.behaviour.BeltProcessingBehaviour$ProcessingResult onItemHeld(com.simibubi.create.content.kinetics.belt.transport.TransportedItemStack, com.simibubi.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour);
+    descriptor: (Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;Lcom/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+    Code:
+       0: aload_0
+       1: getfield      #46                 // Field level:Lnet/minecraft/world/level/Level;
+       4: astore_3
+       5: getstatic     #129                // Field $assertionsDisabled:Z
+       8: ifne          23
+      11: aload_3
+      12: ifnonnull     23
+      15: new           #132                // class java/lang/AssertionError
+      18: dup
+      19: invokespecial #134                // Method java/lang/AssertionError."<init>":()V
+      22: athrow
+      23: aload_0
+      24: aload_1
+      25: getfield      #176                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+      28: invokevirtual #189                // Method getCuttingContext:(Lnet/minecraft/world/item/ItemStack;)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;
+      31: astore        4
+      33: aload_0
+      34: aload         4
+      36: invokevirtual #193                // Method rememberHeldPreview:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;)V
+      39: aload         4
+      41: invokevirtual #197                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.status:()Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      44: getstatic     #203                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.ALREADY_PERFECT:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      47: if_acmpne     58
+      50: aload_0
+      51: invokevirtual #123                // Method cancelProcessing:()V
+      54: getstatic     #170                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.PASS:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      57: areturn
+      58: aload         4
+      60: invokevirtual #197                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.status:()Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      63: getstatic     #209                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.NOT_A_GEM:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      66: if_acmpne     77
+      69: aload_0
+      70: invokevirtual #123                // Method cancelProcessing:()V
+      73: getstatic     #170                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.PASS:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      76: areturn
+      77: aload_0
+      78: invokevirtual #212                // Method refreshHeldInput:()V
+      81: aload_0
+      82: getfield      #7                  // Field processingTicks:I
+      85: bipush        25
+      87: if_icmple     109
+      90: aload_0
+      91: aload_1
+      92: getfield      #176                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+      95: invokevirtual #215                // Method validateTransportedInput:(Lnet/minecraft/world/item/ItemStack;)Z
+      98: ifne          105
+     101: getstatic     #170                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.PASS:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+     104: areturn
+     105: getstatic     #186                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+     108: areturn
+     109: aload_0
+     110: getfield      #7                  // Field processingTicks:I
+     113: iconst_m1
+     114: if_icmpne     124
+     117: aload_0
+     118: aload         4
+     120: invokevirtual #218                // Method startProcessingIfReady:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+     123: areturn
+     124: aload_0
+     125: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+     128: ifnonnull     159
+     131: aload         4
+     133: invokevirtual #197                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.status:()Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     136: getstatic     #226                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.READY:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     139: if_acmpeq     150
+     142: aload_0
+     143: invokevirtual #123                // Method cancelProcessing:()V
+     146: getstatic     #186                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+     149: areturn
+     150: aload_0
+     151: aload         4
+     153: invokestatic  #229                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.from:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+     156: putfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+     159: aload_0
+     160: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+     163: astore        5
+     165: aload         5
+     167: aload_1
+     168: getfield      #176                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+     171: invokevirtual #235                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.matchesInput:(Lnet/minecraft/world/item/ItemStack;)Z
+     174: ifne          204
+     177: aload_0
+     178: invokevirtual #123                // Method cancelProcessing:()V
+     181: aload_1
+     182: getfield      #176                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+     185: invokestatic  #182                // Method isUpgradableGem:(Lnet/minecraft/world/item/ItemStack;)Z
+     188: ifeq          200
+     191: aload_0
+     192: aload         4
+     194: invokevirtual #218                // Method startProcessingIfReady:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+     197: goto          203
+     200: getstatic     #170                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.PASS:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+     203: areturn
+     204: aload         4
+     206: invokevirtual #197                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.status:()Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     209: getstatic     #226                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.READY:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     212: if_acmpne     232
+     215: aload_0
+     216: aload         4
+     218: invokevirtual #238                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.tank:()Ljava/util/Optional;
+     221: aload         5
+     223: invokevirtual #241                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.cost:()I
+     226: invokevirtual #245                // Method canPay:(Ljava/util/Optional;I)Z
+     229: ifne          240
+     232: aload_0
+     233: invokevirtual #123                // Method cancelProcessing:()V
+     236: getstatic     #186                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+     239: areturn
+     240: aload_1
+     241: invokevirtual #249                // Method com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.copy:()Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;
+     244: astore        6
+     246: aload         6
+     248: invokevirtual #253                // Method com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.clearFanProcessingData:()V
+     251: aconst_null
+     252: astore        7
+     254: aload         6
+     256: getfield      #176                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+     259: invokevirtual #256                // Method net/minecraft/world/item/ItemStack.getCount:()I
+     262: iconst_1
+     263: if_icmple     290
+     266: aload_1
+     267: invokevirtual #249                // Method com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.copy:()Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;
+     270: astore        7
+     272: aload         7
+     274: getfield      #176                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+     277: iconst_1
+     278: invokevirtual #261                // Method net/minecraft/world/item/ItemStack.shrink:(I)V
+     281: aload         6
+     283: getfield      #176                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+     286: iconst_1
+     287: invokevirtual #265                // Method net/minecraft/world/item/ItemStack.setCount:(I)V
+     290: aload         6
+     292: getfield      #176                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+     295: aload         5
+     297: invokevirtual #268                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.to:()Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+     300: invokestatic  #272                // Method dev/shadowsoffire/apotheosis/socket/gem/GemItem.setPurity:(Lnet/minecraft/world/item/ItemStack;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)V
+     303: aload_2
+     304: aload_1
+     305: aload         6
+     307: invokestatic  #278                // InterfaceMethod java/util/List.of:(Ljava/lang/Object;)Ljava/util/List;
+     310: aload         7
+     312: invokestatic  #281                // Method com/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour$TransportedResult.convertToAndLeaveHeld:(Ljava/util/List;Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;)Lcom/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour$TransportedResult;
+     315: invokevirtual #287                // Method com/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour.handleProcessingOnItem:(Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;Lcom/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour$TransportedResult;)V
+     318: aload_3
+     319: aconst_null
+     320: aload_0
+     321: getfield      #136                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+     324: invokevirtual #291                // Method net/minecraft/core/BlockPos.getX:()I
+     327: i2d
+     328: aload_0
+     329: getfield      #136                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+     332: invokevirtual #294                // Method net/minecraft/core/BlockPos.getY:()I
+     335: i2d
+     336: aload_0
+     337: getfield      #136                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+     340: invokevirtual #297                // Method net/minecraft/core/BlockPos.getZ:()I
+     343: i2d
+     344: getstatic     #300                // Field net/minecraft/sounds/SoundEvents.AMETHYST_CLUSTER_HIT:Lnet/minecraft/sounds/SoundEvent;
+     347: getstatic     #306                // Field net/minecraft/sounds/SoundSource.BLOCKS:Lnet/minecraft/sounds/SoundSource;
+     350: ldc_w         #312                // float 0.75f
+     353: ldc_w         #313                // float 0.9f
+     356: ldc_w         #314                // float 0.2f
+     359: aload_3
+     360: getfield      #315                // Field net/minecraft/world/level/Level.random:Lnet/minecraft/util/RandomSource;
+     363: invokeinterface #319,  1          // InterfaceMethod net/minecraft/util/RandomSource.nextFloat:()F
+     368: fmul
+     369: fadd
+     370: invokevirtual #325                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/player/Player;DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+     373: aload         4
+     375: invokevirtual #238                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.tank:()Ljava/util/Optional;
+     378: invokevirtual #89                 // Method java/util/Optional.get:()Ljava/lang/Object;
+     381: checkcast     #93                 // class com/simibubi/create/content/fluids/tank/FluidTankBlockEntity
+     384: invokevirtual #95                 // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getTankInventory:()Lnet/neoforged/neoforge/fluids/capability/templates/FluidTank;
+     387: aload         5
+     389: invokevirtual #241                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.cost:()I
+     392: getstatic     #329                // Field net/neoforged/neoforge/fluids/capability/IFluidHandler$FluidAction.EXECUTE:Lnet/neoforged/neoforge/fluids/capability/IFluidHandler$FluidAction;
+     395: invokevirtual #335                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.drain:(ILnet/neoforged/neoforge/fluids/capability/IFluidHandler$FluidAction;)Lnet/neoforged/neoforge/fluids/FluidStack;
+     398: pop
+     399: aload_0
+     400: invokevirtual #123                // Method cancelProcessing:()V
+     403: getstatic     #186                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+     406: areturn
+
+  private com.simibubi.create.content.kinetics.belt.behaviour.BeltProcessingBehaviour$ProcessingResult startProcessingIfReady(plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.socket.gem.gemCutter.GemCutterBlockEntity$CuttingContext);
+    descriptor: (Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+    Code:
+       0: aload_1
+       1: invokevirtual #197                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.status:()Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+       4: getstatic     #226                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.READY:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+       7: if_acmpeq     14
+      10: getstatic     #186                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      13: areturn
+      14: aload_0
+      15: aload_1
+      16: invokestatic  #229                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.from:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      19: putfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      22: aload_0
+      23: invokevirtual #212                // Method refreshHeldInput:()V
+      26: aload_0
+      27: sipush        200
+      30: putfield      #7                  // Field processingTicks:I
+      33: aload_0
+      34: invokevirtual #86                 // Method notifyUpdate:()V
+      37: getstatic     #186                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      40: areturn
+
+  private void rememberHeldPreview(plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.socket.gem.gemCutter.GemCutterBlockEntity$CuttingContext);
+    descriptor: (Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;)V
+    Code:
+       0: aload_1
+       1: invokevirtual #197                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.status:()Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+       4: getstatic     #209                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.NOT_A_GEM:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+       7: if_acmpeq     20
+      10: aload_1
+      11: invokevirtual #197                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.status:()Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      14: getstatic     #203                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.ALREADY_PERFECT:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      17: if_acmpne     25
+      20: aload_0
+      21: invokevirtual #339                // Method clearHeldPreview:()V
+      24: return
+      25: aload_1
+      26: invokestatic  #342                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview.from:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+      29: astore_2
+      30: aload_2
+      31: aload_0
+      32: getfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+      35: invokevirtual #351                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview.equals:(Ljava/lang/Object;)Z
+      38: ifne          45
+      41: iconst_1
+      42: goto          46
+      45: iconst_0
+      46: istore_3
+      47: aload_0
+      48: aload_2
+      49: putfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+      52: aload_0
+      53: iconst_3
+      54: putfield      #354                // Field heldPreviewTicks:I
+      57: aload_0
+      58: invokevirtual #212                // Method refreshHeldInput:()V
+      61: iload_3
+      62: ifeq          69
+      65: aload_0
+      66: invokevirtual #86                 // Method notifyUpdate:()V
+      69: return
+
+  private void refreshHeldInput();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: iconst_3
+       2: putfield      #357                // Field heldInputTicks:I
+       5: return
+
+  private void tickHeldInputTimeouts();
+    descriptor: ()V
+    Code:
+       0: iconst_0
+       1: istore_1
+       2: aload_0
+       3: getfield      #354                // Field heldPreviewTicks:I
+       6: ifle          37
+       9: aload_0
+      10: dup
+      11: getfield      #354                // Field heldPreviewTicks:I
+      14: iconst_1
+      15: isub
+      16: dup_x1
+      17: putfield      #354                // Field heldPreviewTicks:I
+      20: ifne          37
+      23: aload_0
+      24: getfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+      27: ifnull        37
+      30: aload_0
+      31: aconst_null
+      32: putfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+      35: iconst_1
+      36: istore_1
+      37: aload_0
+      38: getfield      #357                // Field heldInputTicks:I
+      41: ifle          54
+      44: aload_0
+      45: dup
+      46: getfield      #357                // Field heldInputTicks:I
+      49: iconst_1
+      50: isub
+      51: putfield      #357                // Field heldInputTicks:I
+      54: iload_1
+      55: ifeq          62
+      58: aload_0
+      59: invokevirtual #86                 // Method notifyUpdate:()V
+      62: return
+
+  private void clearHeldPreview();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: getfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+       4: ifnonnull     14
+       7: aload_0
+       8: getfield      #354                // Field heldPreviewTicks:I
+      11: ifeq          28
+      14: aload_0
+      15: aconst_null
+      16: putfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+      19: aload_0
+      20: iconst_0
+      21: putfield      #354                // Field heldPreviewTicks:I
+      24: aload_0
+      25: invokevirtual #86                 // Method notifyUpdate:()V
+      28: return
+
+  private boolean validateTransportedInput(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field processingTicks:I
+       4: ifge          9
+       7: iconst_1
+       8: ireturn
+       9: aload_0
+      10: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      13: ifnonnull     21
+      16: aload_1
+      17: invokestatic  #182                // Method isUpgradableGem:(Lnet/minecraft/world/item/ItemStack;)Z
+      20: ireturn
+      21: aload_0
+      22: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      25: aload_1
+      26: invokevirtual #235                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.matchesInput:(Lnet/minecraft/world/item/ItemStack;)Z
+      29: ifne          38
+      32: aload_0
+      33: invokevirtual #123                // Method cancelProcessing:()V
+      36: iconst_0
+      37: ireturn
+      38: iconst_1
+      39: ireturn
+
+  private boolean canPay(java.util.Optional<com.simibubi.create.content.fluids.tank.FluidTankBlockEntity>, int);
+    descriptor: (Ljava/util/Optional;I)Z
+    Code:
+       0: iload_2
+       1: ifle          11
+       4: aload_1
+       5: invokevirtual #81                 // Method java/util/Optional.isEmpty:()Z
+       8: ifeq          13
+      11: iconst_0
+      12: ireturn
+      13: aload_1
+      14: invokevirtual #89                 // Method java/util/Optional.get:()Ljava/lang/Object;
+      17: checkcast     #93                 // class com/simibubi/create/content/fluids/tank/FluidTankBlockEntity
+      20: invokevirtual #95                 // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getTankInventory:()Lnet/neoforged/neoforge/fluids/capability/templates/FluidTank;
+      23: astore_3
+      24: aload_3
+      25: invokevirtual #99                 // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getFluid:()Lnet/neoforged/neoforge/fluids/FluidStack;
+      28: getstatic     #105                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/registry/CEIAXFluids.CRYSTAL_ESSENCE:Lcom/tterrag/registrate/util/entry/FluidEntry;
+      31: invokevirtual #111                // Method net/neoforged/neoforge/fluids/FluidStack.is:(Lnet/minecraft/core/Holder;)Z
+      34: ifeq          57
+      37: aload_3
+      38: invokevirtual #360                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getFluidAmount:()I
+      41: iload_2
+      42: if_icmplt     57
+      45: aload_3
+      46: invokevirtual #363                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getCapacity:()I
+      49: iload_2
+      50: if_icmplt     57
+      53: iconst_1
+      54: goto          58
+      57: iconst_0
+      58: ireturn
+
+  private boolean hasValidActiveInput();
+    descriptor: ()Z
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field processingTicks:I
+       4: ifge          9
+       7: iconst_1
+       8: ireturn
+       9: aload_0
+      10: invokevirtual #366                // Method getDepotBlockEntity:()Ljava/util/Optional;
+      13: astore_1
+      14: aload_1
+      15: invokevirtual #81                 // Method java/util/Optional.isEmpty:()Z
+      18: ifeq          34
+      21: aload_0
+      22: getfield      #357                // Field heldInputTicks:I
+      25: ifle          32
+      28: iconst_1
+      29: goto          33
+      32: iconst_0
+      33: ireturn
+      34: aload_0
+      35: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      38: ifnonnull     74
+      41: aload_0
+      42: aload_1
+      43: invokevirtual #89                 // Method java/util/Optional.get:()Ljava/lang/Object;
+      46: checkcast     #369                // class com/simibubi/create/content/logistics/depot/DepotBlockEntity
+      49: invokevirtual #371                // Method getDepotInputStack:(Lcom/simibubi/create/content/logistics/depot/DepotBlockEntity;)Ljava/util/Optional;
+      52: invokedynamic #375,  0            // InvokeDynamic #2:apply:()Ljava/util/function/Function;
+      57: invokevirtual #378                // Method java/util/Optional.map:(Ljava/util/function/Function;)Ljava/util/Optional;
+      60: iconst_0
+      61: invokestatic  #382                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+      64: invokevirtual #388                // Method java/util/Optional.orElse:(Ljava/lang/Object;)Ljava/lang/Object;
+      67: checkcast     #383                // class java/lang/Boolean
+      70: invokevirtual #392                // Method java/lang/Boolean.booleanValue:()Z
+      73: ireturn
+      74: aload_0
+      75: aload_1
+      76: invokevirtual #89                 // Method java/util/Optional.get:()Ljava/lang/Object;
+      79: checkcast     #369                // class com/simibubi/create/content/logistics/depot/DepotBlockEntity
+      82: invokevirtual #371                // Method getDepotInputStack:(Lcom/simibubi/create/content/logistics/depot/DepotBlockEntity;)Ljava/util/Optional;
+      85: aload_0
+      86: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      89: dup
+      90: invokestatic  #395                // Method java/util/Objects.requireNonNull:(Ljava/lang/Object;)Ljava/lang/Object;
+      93: pop
+      94: invokedynamic #400,  0            // InvokeDynamic #3:apply:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;)Ljava/util/function/Function;
+      99: invokevirtual #378                // Method java/util/Optional.map:(Ljava/util/function/Function;)Ljava/util/Optional;
+     102: iconst_0
+     103: invokestatic  #382                // Method java/lang/Boolean.valueOf:(Z)Ljava/lang/Boolean;
+     106: invokevirtual #388                // Method java/util/Optional.orElse:(Ljava/lang/Object;)Ljava/lang/Object;
+     109: checkcast     #383                // class java/lang/Boolean
+     112: invokevirtual #392                // Method java/lang/Boolean.booleanValue:()Z
+     115: ireturn
+
+  private void cancelProcessing();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: getfield      #7                  // Field processingTicks:I
+       4: iconst_m1
+       5: if_icmpne     15
+       8: aload_0
+       9: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      12: ifnull        34
+      15: aload_0
+      16: iconst_m1
+      17: putfield      #7                  // Field processingTicks:I
+      20: aload_0
+      21: aconst_null
+      22: putfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      25: aload_0
+      26: iconst_0
+      27: putfield      #357                // Field heldInputTicks:I
+      30: aload_0
+      31: invokevirtual #86                 // Method notifyUpdate:()V
+      34: return
+
+  private plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.socket.gem.gemCutter.GemCutterBlockEntity$CuttingContext getCuttingContext(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;
+    Code:
+       0: aload_0
+       1: invokevirtual #77                 // Method getExternalFluidTank:()Ljava/util/Optional;
+       4: astore_2
+       5: aload_1
+       6: getstatic     #403                // Field dev/shadowsoffire/apotheosis/Apoth$Items.GEM:Lnet/minecraft/core/Holder;
+       9: invokevirtual #409                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/core/Holder;)Z
+      12: ifne          23
+      15: getstatic     #209                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.NOT_A_GEM:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      18: aload_2
+      19: invokestatic  #410                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.withTank:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;Ljava/util/Optional;)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;
+      22: areturn
+      23: aload_1
+      24: invokestatic  #414                // Method dev/shadowsoffire/apotheosis/socket/gem/GemItem.getPurity:(Lnet/minecraft/world/item/ItemStack;)Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      27: astore_3
+      28: aload_3
+      29: invokestatic  #418                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutting.canCut:(Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)Z
+      32: ifne          46
+      35: getstatic     #203                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.ALREADY_PERFECT:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      38: aload_2
+      39: aload_3
+      40: aload_3
+      41: iconst_0
+      42: invokestatic  #424                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.withGem:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;I)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;
+      45: areturn
+      46: aload_3
+      47: invokestatic  #428                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutting.resultPurity:(Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      50: astore        4
+      52: aload_3
+      53: invokestatic  #432                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutting.getCutCost:(Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)I
+      56: istore        5
+      58: aload_2
+      59: invokevirtual #81                 // Method java/util/Optional.isEmpty:()Z
+      62: ifeq          78
+      65: getstatic     #436                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.MISSING_TANK:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      68: aload_2
+      69: aload_3
+      70: aload         4
+      72: iload         5
+      74: invokestatic  #424                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.withGem:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;I)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;
+      77: areturn
+      78: aload_2
+      79: invokevirtual #89                 // Method java/util/Optional.get:()Ljava/lang/Object;
+      82: checkcast     #93                 // class com/simibubi/create/content/fluids/tank/FluidTankBlockEntity
+      85: invokevirtual #95                 // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getTankInventory:()Lnet/neoforged/neoforge/fluids/capability/templates/FluidTank;
+      88: astore        6
+      90: aload         6
+      92: invokevirtual #439                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.isEmpty:()Z
+      95: ifeq          111
+      98: getstatic     #440                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.EMPTY_TANK:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     101: aload_2
+     102: aload_3
+     103: aload         4
+     105: iload         5
+     107: invokestatic  #424                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.withGem:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;I)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;
+     110: areturn
+     111: aload         6
+     113: invokevirtual #99                 // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getFluid:()Lnet/neoforged/neoforge/fluids/FluidStack;
+     116: getstatic     #105                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/registry/CEIAXFluids.CRYSTAL_ESSENCE:Lcom/tterrag/registrate/util/entry/FluidEntry;
+     119: invokevirtual #111                // Method net/neoforged/neoforge/fluids/FluidStack.is:(Lnet/minecraft/core/Holder;)Z
+     122: ifne          138
+     125: getstatic     #443                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.WRONG_FLUID:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     128: aload_2
+     129: aload_3
+     130: aload         4
+     132: iload         5
+     134: invokestatic  #424                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.withGem:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;I)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;
+     137: areturn
+     138: iload         5
+     140: aload         6
+     142: invokevirtual #363                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getCapacity:()I
+     145: if_icmple     161
+     148: getstatic     #446                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.TANK_TOO_SMALL:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     151: aload_2
+     152: aload_3
+     153: aload         4
+     155: iload         5
+     157: invokestatic  #424                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.withGem:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;I)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;
+     160: areturn
+     161: iload         5
+     163: aload         6
+     165: invokevirtual #360                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getFluidAmount:()I
+     168: if_icmple     184
+     171: getstatic     #449                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.INSUFFICIENT_ESSENCE:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     174: aload_2
+     175: aload_3
+     176: aload         4
+     178: iload         5
+     180: invokestatic  #424                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.withGem:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;I)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;
+     183: areturn
+     184: getstatic     #226                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.READY:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     187: aload_2
+     188: aload_3
+     189: aload         4
+     191: iload         5
+     193: invokestatic  #424                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.withGem:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;I)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;
+     196: areturn
+
+  protected net.minecraft.world.phys.AABB createRenderBoundingBox();
+    descriptor: ()Lnet/minecraft/world/phys/AABB;
+    Code:
+       0: aload_0
+       1: invokespecial #452                // Method com/simibubi/create/content/kinetics/base/KineticBlockEntity.createRenderBoundingBox:()Lnet/minecraft/world/phys/AABB;
+       4: dconst_0
+       5: ldc2_w        #456                // double -1.0d
+       8: dconst_0
+       9: invokevirtual #458                // Method net/minecraft/world/phys/AABB.expandTowards:(DDD)Lnet/minecraft/world/phys/AABB;
+      12: areturn
+
+  private void spawnParticles();
+    descriptor: ()V
+    Code:
+       0: getstatic     #464                // Field net/minecraft/core/particles/ParticleTypes.FALLING_OBSIDIAN_TEAR:Lnet/minecraft/core/particles/SimpleParticleType;
+       3: astore_1
+       4: aload_0
+       5: getfield      #136                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+       8: invokestatic  #470                // Method net/createmod/catnip/math/VecHelper.getCenterOf:(Lnet/minecraft/core/Vec3i;)Lnet/minecraft/world/phys/Vec3;
+      11: astore_2
+      12: iconst_0
+      13: istore_3
+      14: iload_3
+      15: iconst_5
+      16: if_icmpge     68
+      19: aload_2
+      20: aload_0
+      21: getfield      #46                 // Field level:Lnet/minecraft/world/level/Level;
+      24: getfield      #315                // Field net/minecraft/world/level/Level.random:Lnet/minecraft/util/RandomSource;
+      27: ldc_w         #476                // float 0.1875f
+      30: invokestatic  #477                // Method net/createmod/catnip/math/VecHelper.offsetRandomly:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/util/RandomSource;F)Lnet/minecraft/world/phys/Vec3;
+      33: astore        4
+      35: aload_0
+      36: getfield      #46                 // Field level:Lnet/minecraft/world/level/Level;
+      39: aload_1
+      40: aload         4
+      42: getfield      #481                // Field net/minecraft/world/phys/Vec3.x:D
+      45: aload_2
+      46: getfield      #487                // Field net/minecraft/world/phys/Vec3.y:D
+      49: aload         4
+      51: getfield      #490                // Field net/minecraft/world/phys/Vec3.z:D
+      54: dconst_0
+      55: ldc2_w        #493                // double -20.0d
+      58: dconst_0
+      59: invokevirtual #495                // Method net/minecraft/world/level/Level.addParticle:(Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
+      62: iinc          3, 1
+      65: goto          14
+      68: return
+
+  protected void write(net.minecraft.nbt.CompoundTag, net.minecraft.core.HolderLookup$Provider, boolean);
+    descriptor: (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;Z)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: iload_3
+       4: invokespecial #499                // Method com/simibubi/create/content/kinetics/base/KineticBlockEntity.write:(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;Z)V
+       7: aload_1
+       8: ldc_w         #503                // String ProcessingTicks
+      11: aload_0
+      12: getfield      #7                  // Field processingTicks:I
+      15: invokevirtual #505                // Method net/minecraft/nbt/CompoundTag.putInt:(Ljava/lang/String;I)V
+      18: aload_1
+      19: ldc_w         #511                // String Powered
+      22: aload_0
+      23: getfield      #56                 // Field powered:Z
+      26: invokevirtual #513                // Method net/minecraft/nbt/CompoundTag.putBoolean:(Ljava/lang/String;Z)V
+      29: aload_0
+      30: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      33: ifnull        84
+      36: aload_1
+      37: ldc_w         #517                // String ActiveFromPurity
+      40: aload_0
+      41: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      44: invokevirtual #519                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.from:()Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      47: invokevirtual #521                // Method dev/shadowsoffire/apotheosis/socket/gem/Purity.name:()Ljava/lang/String;
+      50: invokevirtual #527                // Method net/minecraft/nbt/CompoundTag.putString:(Ljava/lang/String;Ljava/lang/String;)V
+      53: aload_1
+      54: ldc_w         #531                // String ActiveToPurity
+      57: aload_0
+      58: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      61: invokevirtual #268                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.to:()Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      64: invokevirtual #521                // Method dev/shadowsoffire/apotheosis/socket/gem/Purity.name:()Ljava/lang/String;
+      67: invokevirtual #527                // Method net/minecraft/nbt/CompoundTag.putString:(Ljava/lang/String;Ljava/lang/String;)V
+      70: aload_1
+      71: ldc_w         #533                // String ActiveCost
+      74: aload_0
+      75: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      78: invokevirtual #241                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.cost:()I
+      81: invokevirtual #505                // Method net/minecraft/nbt/CompoundTag.putInt:(Ljava/lang/String;I)V
+      84: iload_3
+      85: ifeq          171
+      88: aload_0
+      89: getfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+      92: ifnull        171
+      95: aload_1
+      96: ldc_w         #535                // String HeldPreviewStatus
+      99: aload_0
+     100: getfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+     103: invokevirtual #537                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview.status:()Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     106: invokevirtual #538                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.name:()Ljava/lang/String;
+     109: invokevirtual #527                // Method net/minecraft/nbt/CompoundTag.putString:(Ljava/lang/String;Ljava/lang/String;)V
+     112: aload_1
+     113: ldc_w         #539                // String HeldPreviewFromPurity
+     116: aload_0
+     117: getfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+     120: invokevirtual #541                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview.from:()Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+     123: invokevirtual #521                // Method dev/shadowsoffire/apotheosis/socket/gem/Purity.name:()Ljava/lang/String;
+     126: invokevirtual #527                // Method net/minecraft/nbt/CompoundTag.putString:(Ljava/lang/String;Ljava/lang/String;)V
+     129: aload_1
+     130: ldc_w         #542                // String HeldPreviewToPurity
+     133: aload_0
+     134: getfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+     137: invokevirtual #544                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview.to:()Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+     140: invokevirtual #521                // Method dev/shadowsoffire/apotheosis/socket/gem/Purity.name:()Ljava/lang/String;
+     143: invokevirtual #527                // Method net/minecraft/nbt/CompoundTag.putString:(Ljava/lang/String;Ljava/lang/String;)V
+     146: aload_1
+     147: ldc_w         #545                // String HeldPreviewCost
+     150: aload_0
+     151: getfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+     154: invokevirtual #547                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview.cost:()I
+     157: invokevirtual #505                // Method net/minecraft/nbt/CompoundTag.putInt:(Ljava/lang/String;I)V
+     160: aload_1
+     161: ldc_w         #548                // String HeldPreviewTicks
+     164: aload_0
+     165: getfield      #354                // Field heldPreviewTicks:I
+     168: invokevirtual #505                // Method net/minecraft/nbt/CompoundTag.putInt:(Ljava/lang/String;I)V
+     171: return
+
+  protected void read(net.minecraft.nbt.CompoundTag, net.minecraft.core.HolderLookup$Provider, boolean);
+    descriptor: (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;Z)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: iload_3
+       4: invokespecial #550                // Method com/simibubi/create/content/kinetics/base/KineticBlockEntity.read:(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;Z)V
+       7: aload_0
+       8: aload_1
+       9: ldc_w         #503                // String ProcessingTicks
+      12: invokevirtual #553                // Method net/minecraft/nbt/CompoundTag.contains:(Ljava/lang/String;)Z
+      15: ifeq          28
+      18: aload_1
+      19: ldc_w         #503                // String ProcessingTicks
+      22: invokevirtual #557                // Method net/minecraft/nbt/CompoundTag.getInt:(Ljava/lang/String;)I
+      25: goto          29
+      28: iconst_m1
+      29: putfield      #7                  // Field processingTicks:I
+      32: aload_0
+      33: getfield      #7                  // Field processingTicks:I
+      36: ifne          44
+      39: aload_0
+      40: iconst_m1
+      41: putfield      #7                  // Field processingTicks:I
+      44: aload_0
+      45: aload_1
+      46: ldc_w         #511                // String Powered
+      49: invokevirtual #561                // Method net/minecraft/nbt/CompoundTag.getBoolean:(Ljava/lang/String;)Z
+      52: putfield      #56                 // Field powered:Z
+      55: aload_0
+      56: aconst_null
+      57: putfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      60: aload_0
+      61: iconst_0
+      62: putfield      #357                // Field heldInputTicks:I
+      65: aload_0
+      66: getfield      #7                  // Field processingTicks:I
+      69: ifle          169
+      72: aload_1
+      73: ldc_w         #517                // String ActiveFromPurity
+      76: invokevirtual #553                // Method net/minecraft/nbt/CompoundTag.contains:(Ljava/lang/String;)Z
+      79: ifeq          169
+      82: aload_1
+      83: ldc_w         #531                // String ActiveToPurity
+      86: invokevirtual #553                // Method net/minecraft/nbt/CompoundTag.contains:(Ljava/lang/String;)Z
+      89: ifeq          169
+      92: aload_1
+      93: ldc_w         #517                // String ActiveFromPurity
+      96: invokevirtual #564                // Method net/minecraft/nbt/CompoundTag.getString:(Ljava/lang/String;)Ljava/lang/String;
+      99: invokestatic  #568                // Method purityByName:(Ljava/lang/String;)Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+     102: astore        4
+     104: aload_1
+     105: ldc_w         #531                // String ActiveToPurity
+     108: invokevirtual #564                // Method net/minecraft/nbt/CompoundTag.getString:(Ljava/lang/String;)Ljava/lang/String;
+     111: invokestatic  #568                // Method purityByName:(Ljava/lang/String;)Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+     114: astore        5
+     116: aload_1
+     117: ldc_w         #533                // String ActiveCost
+     120: invokevirtual #557                // Method net/minecraft/nbt/CompoundTag.getInt:(Ljava/lang/String;)I
+     123: istore        6
+     125: aload         4
+     127: ifnull        169
+     130: aload         5
+     132: ifnull        169
+     135: aload         4
+     137: aload         5
+     139: if_acmpeq     169
+     142: iload         6
+     144: ifle          169
+     147: aload_0
+     148: new           #230                // class plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting
+     151: dup
+     152: aload         4
+     154: aload         5
+     156: iload         6
+     158: invokespecial #572                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting."<init>":(Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;I)V
+     161: putfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+     164: aload_0
+     165: iconst_3
+     166: putfield      #357                // Field heldInputTicks:I
+     169: aload_0
+     170: aconst_null
+     171: putfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+     174: aload_0
+     175: iconst_0
+     176: putfield      #354                // Field heldPreviewTicks:I
+     179: iload_3
+     180: ifeq          317
+     183: aload_1
+     184: ldc_w         #535                // String HeldPreviewStatus
+     187: invokevirtual #553                // Method net/minecraft/nbt/CompoundTag.contains:(Ljava/lang/String;)Z
+     190: ifeq          317
+     193: aload_1
+     194: ldc_w         #539                // String HeldPreviewFromPurity
+     197: invokevirtual #553                // Method net/minecraft/nbt/CompoundTag.contains:(Ljava/lang/String;)Z
+     200: ifeq          317
+     203: aload_1
+     204: ldc_w         #542                // String HeldPreviewToPurity
+     207: invokevirtual #553                // Method net/minecraft/nbt/CompoundTag.contains:(Ljava/lang/String;)Z
+     210: ifeq          317
+     213: aload_1
+     214: ldc_w         #535                // String HeldPreviewStatus
+     217: invokevirtual #564                // Method net/minecraft/nbt/CompoundTag.getString:(Ljava/lang/String;)Ljava/lang/String;
+     220: invokestatic  #575                // Method cuttingStatusByName:(Ljava/lang/String;)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     223: astore        4
+     225: aload_1
+     226: ldc_w         #539                // String HeldPreviewFromPurity
+     229: invokevirtual #564                // Method net/minecraft/nbt/CompoundTag.getString:(Ljava/lang/String;)Ljava/lang/String;
+     232: invokestatic  #568                // Method purityByName:(Ljava/lang/String;)Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+     235: astore        5
+     237: aload_1
+     238: ldc_w         #542                // String HeldPreviewToPurity
+     241: invokevirtual #564                // Method net/minecraft/nbt/CompoundTag.getString:(Ljava/lang/String;)Ljava/lang/String;
+     244: invokestatic  #568                // Method purityByName:(Ljava/lang/String;)Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+     247: astore        6
+     249: aload_1
+     250: ldc_w         #545                // String HeldPreviewCost
+     253: invokevirtual #557                // Method net/minecraft/nbt/CompoundTag.getInt:(Ljava/lang/String;)I
+     256: istore        7
+     258: aload_1
+     259: ldc_w         #548                // String HeldPreviewTicks
+     262: invokevirtual #557                // Method net/minecraft/nbt/CompoundTag.getInt:(Ljava/lang/String;)I
+     265: istore        8
+     267: aload         4
+     269: ifnull        317
+     272: aload         5
+     274: ifnull        317
+     277: aload         6
+     279: ifnull        317
+     282: iload         7
+     284: ifle          317
+     287: iload         8
+     289: ifle          317
+     292: aload_0
+     293: new           #343                // class plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview
+     296: dup
+     297: aload         4
+     299: aload         5
+     301: aload         6
+     303: iload         7
+     305: invokespecial #579                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview."<init>":(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;I)V
+     308: putfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+     311: aload_0
+     312: iload         8
+     314: putfield      #354                // Field heldPreviewTicks:I
+     317: return
+
+  public boolean addToGoggleTooltip(java.util.List<net.minecraft.network.chat.Component>, boolean);
+    descriptor: (Ljava/util/List;Z)Z
+    Code:
+       0: ldc_w         #582                // String gui.goggles.gem_cutter
+       3: iconst_0
+       4: anewarray     #584                // class java/lang/Object
+       7: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      10: aload_1
+      11: invokevirtual #592                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+      14: aload_0
+      15: aload_1
+      16: invokevirtual #597                // Method addTankTooltip:(Ljava/util/List;)V
+      19: aload_0
+      20: getfield      #7                  // Field processingTicks:I
+      23: ifle          92
+      26: sipush        200
+      29: aload_0
+      30: getfield      #7                  // Field processingTicks:I
+      33: isub
+      34: i2f
+      35: ldc_w         #600                // float 100.0f
+      38: fmul
+      39: ldc_w         #601                // float 200.0f
+      42: fdiv
+      43: invokestatic  #602                // Method java/lang/Math.round:(F)I
+      46: istore_3
+      47: ldc_w         #606                // String gui.goggles.gem_cutter.processing
+      50: iconst_1
+      51: anewarray     #584                // class java/lang/Object
+      54: dup
+      55: iconst_0
+      56: iload_3
+      57: i2d
+      58: invokestatic  #608                // Method plus/dragons/createenchantmentindustry/util/CEILang.number:(D)Lnet/createmod/catnip/lang/LangBuilder;
+      61: ldc_w         #612                // String %
+      64: invokevirtual #614                // Method net/createmod/catnip/lang/LangBuilder.text:(Ljava/lang/String;)Lnet/createmod/catnip/lang/LangBuilder;
+      67: invokevirtual #618                // Method net/createmod/catnip/lang/LangBuilder.component:()Lnet/minecraft/network/chat/MutableComponent;
+      70: aastore
+      71: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      74: getstatic     #622                // Field net/minecraft/ChatFormatting.GREEN:Lnet/minecraft/ChatFormatting;
+      77: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      80: aload_1
+      81: invokevirtual #592                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+      84: aload_0
+      85: aload_1
+      86: invokevirtual #632                // Method addActiveCuttingTooltip:(Ljava/util/List;)V
+      89: goto          158
+      92: aload_0
+      93: invokevirtual #635                // Method getDepotInputStack:()Ljava/util/Optional;
+      96: astore_3
+      97: aload_3
+      98: invokevirtual #637                // Method java/util/Optional.isPresent:()Z
+     101: ifeq          119
+     104: aload_0
+     105: aload_1
+     106: aload_3
+     107: invokevirtual #89                 // Method java/util/Optional.get:()Ljava/lang/Object;
+     110: checkcast     #257                // class net/minecraft/world/item/ItemStack
+     113: invokevirtual #640                // Method addInputTooltip:(Ljava/util/List;Lnet/minecraft/world/item/ItemStack;)V
+     116: goto          158
+     119: aload_0
+     120: getfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+     123: ifnull        138
+     126: aload_0
+     127: aload_1
+     128: aload_0
+     129: getfield      #347                // Field heldPreview:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;
+     132: invokevirtual #644                // Method addHeldPreviewTooltip:(Ljava/util/List;Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;)V
+     135: goto          158
+     138: ldc_w         #648                // String gui.goggles.gem_cutter.waiting
+     141: iconst_0
+     142: anewarray     #584                // class java/lang/Object
+     145: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     148: getstatic     #650                // Field net/minecraft/ChatFormatting.GRAY:Lnet/minecraft/ChatFormatting;
+     151: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     154: aload_1
+     155: invokevirtual #592                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     158: iconst_1
+     159: ireturn
+
+  private void addActiveCuttingTooltip(java.util.List<net.minecraft.network.chat.Component>);
+    descriptor: (Ljava/util/List;)V
+    Code:
+       0: aload_0
+       1: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+       4: ifnonnull     8
+       7: return
+       8: aload_0
+       9: aload_1
+      10: invokestatic  #158                // Method java/util/Optional.empty:()Ljava/util/Optional;
+      13: aload_0
+      14: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      17: invokevirtual #519                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.from:()Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      20: aload_0
+      21: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      24: invokevirtual #268                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.to:()Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      27: aload_0
+      28: getfield      #222                // Field activeCutting:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting;
+      31: invokevirtual #241                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$ActiveCutting.cost:()I
+      34: getstatic     #622                // Field net/minecraft/ChatFormatting.GREEN:Lnet/minecraft/ChatFormatting;
+      37: invokevirtual #653                // Method addResultTooltip:(Ljava/util/List;Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;ILnet/minecraft/ChatFormatting;)V
+      40: return
+
+  private void addHeldPreviewTooltip(java.util.List<net.minecraft.network.chat.Component>, plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.socket.gem.gemCutter.GemCutterBlockEntity$CuttingPreview);
+    descriptor: (Ljava/util/List;Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview;)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokestatic  #158                // Method java/util/Optional.empty:()Ljava/util/Optional;
+       5: aload_2
+       6: invokevirtual #541                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview.from:()Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+       9: aload_2
+      10: invokevirtual #544                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview.to:()Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      13: aload_2
+      14: invokevirtual #547                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview.cost:()I
+      17: getstatic     #622                // Field net/minecraft/ChatFormatting.GREEN:Lnet/minecraft/ChatFormatting;
+      20: invokevirtual #653                // Method addResultTooltip:(Ljava/util/List;Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;ILnet/minecraft/ChatFormatting;)V
+      23: aload_0
+      24: aload_1
+      25: aload_2
+      26: invokevirtual #537                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview.status:()Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      29: invokestatic  #158                // Method java/util/Optional.empty:()Ljava/util/Optional;
+      32: aload_2
+      33: invokevirtual #547                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingPreview.cost:()I
+      36: invokevirtual #657                // Method addContextStatusTooltip:(Ljava/util/List;Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;Ljava/util/Optional;I)Z
+      39: pop
+      40: return
+
+  private java.util.Optional<net.minecraft.world.item.ItemStack> getDepotInputStack();
+    descriptor: ()Ljava/util/Optional;
+    Code:
+       0: aload_0
+       1: invokevirtual #366                // Method getDepotBlockEntity:()Ljava/util/Optional;
+       4: aload_0
+       5: invokedynamic #661,  0            // InvokeDynamic #4:apply:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity;)Ljava/util/function/Function;
+      10: invokevirtual #664                // Method java/util/Optional.flatMap:(Ljava/util/function/Function;)Ljava/util/Optional;
+      13: areturn
+
+  private java.util.Optional<com.simibubi.create.content.logistics.depot.DepotBlockEntity> getDepotBlockEntity();
+    descriptor: ()Ljava/util/Optional;
+    Code:
+       0: getstatic     #129                // Field $assertionsDisabled:Z
+       3: ifne          21
+       6: aload_0
+       7: getfield      #46                 // Field level:Lnet/minecraft/world/level/Level;
+      10: ifnonnull     21
+      13: new           #132                // class java/lang/AssertionError
+      16: dup
+      17: invokespecial #134                // Method java/lang/AssertionError."<init>":()V
+      20: athrow
+      21: aload_0
+      22: getfield      #46                 // Field level:Lnet/minecraft/world/level/Level;
+      25: aload_0
+      26: getfield      #136                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+      29: invokevirtual #667                // Method net/minecraft/core/BlockPos.below:()Lnet/minecraft/core/BlockPos;
+      32: invokevirtual #146                // Method net/minecraft/world/level/Level.getBlockEntity:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/entity/BlockEntity;
+      35: astore_1
+      36: aload_1
+      37: instanceof    #369                // class com/simibubi/create/content/logistics/depot/DepotBlockEntity
+      40: ifeq          53
+      43: aload_1
+      44: checkcast     #369                // class com/simibubi/create/content/logistics/depot/DepotBlockEntity
+      47: astore_2
+      48: aload_2
+      49: invokestatic  #154                // Method java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+      52: areturn
+      53: invokestatic  #158                // Method java/util/Optional.empty:()Ljava/util/Optional;
+      56: areturn
+
+  private java.util.Optional<net.minecraft.world.item.ItemStack> getDepotInputStack(com.simibubi.create.content.logistics.depot.DepotBlockEntity);
+    descriptor: (Lcom/simibubi/create/content/logistics/depot/DepotBlockEntity;)Ljava/util/Optional;
+    Code:
+       0: aload_1
+       1: invokevirtual #670                // Method com/simibubi/create/content/logistics/depot/DepotBlockEntity.getHeldItem:()Lnet/minecraft/world/item/ItemStack;
+       4: astore_2
+       5: aload_2
+       6: invokevirtual #674                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+       9: ifne          17
+      12: aload_2
+      13: invokestatic  #154                // Method java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+      16: areturn
+      17: invokestatic  #158                // Method java/util/Optional.empty:()Ljava/util/Optional;
+      20: areturn
+
+  private void addInputTooltip(java.util.List<net.minecraft.network.chat.Component>, net.minecraft.world.item.ItemStack);
+    descriptor: (Ljava/util/List;Lnet/minecraft/world/item/ItemStack;)V
+    Code:
+       0: aload_0
+       1: aload_2
+       2: invokevirtual #189                // Method getCuttingContext:(Lnet/minecraft/world/item/ItemStack;)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext;
+       5: astore_3
+       6: aload_3
+       7: invokevirtual #675                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.hasResult:()Z
+      10: ifeq          37
+      13: aload_0
+      14: aload_1
+      15: aload_2
+      16: invokestatic  #154                // Method java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+      19: aload_3
+      20: invokevirtual #678                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.from:()Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      23: aload_3
+      24: invokevirtual #679                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.to:()Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      27: aload_3
+      28: invokevirtual #680                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.cost:()I
+      31: getstatic     #622                // Field net/minecraft/ChatFormatting.GREEN:Lnet/minecraft/ChatFormatting;
+      34: invokevirtual #653                // Method addResultTooltip:(Ljava/util/List;Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;ILnet/minecraft/ChatFormatting;)V
+      37: aload_3
+      38: invokevirtual #197                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.status:()Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      41: getstatic     #226                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.READY:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      44: if_acmpne     48
+      47: return
+      48: aload_0
+      49: aload_1
+      50: aload_3
+      51: invokevirtual #197                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.status:()Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      54: aload_3
+      55: invokevirtual #238                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.tank:()Ljava/util/Optional;
+      58: aload_3
+      59: invokevirtual #680                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingContext.cost:()I
+      62: invokevirtual #657                // Method addContextStatusTooltip:(Ljava/util/List;Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;Ljava/util/Optional;I)Z
+      65: ifeq          69
+      68: return
+      69: ldc_w         #648                // String gui.goggles.gem_cutter.waiting
+      72: iconst_0
+      73: anewarray     #584                // class java/lang/Object
+      76: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      79: getstatic     #650                // Field net/minecraft/ChatFormatting.GRAY:Lnet/minecraft/ChatFormatting;
+      82: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      85: aload_1
+      86: invokevirtual #592                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+      89: return
+
+  private boolean addContextStatusTooltip(java.util.List<net.minecraft.network.chat.Component>, plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.socket.gem.gemCutter.GemCutterBlockEntity$CuttingStatus, java.util.Optional<com.simibubi.create.content.fluids.tank.FluidTankBlockEntity>, int);
+    descriptor: (Ljava/util/List;Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;Ljava/util/Optional;I)Z
+    Code:
+       0: aload_2
+       1: getstatic     #449                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.INSUFFICIENT_ESSENCE:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+       4: if_acmpne     77
+       7: aload_3
+       8: invokedynamic #681,  0            // InvokeDynamic #5:apply:()Ljava/util/function/Function;
+      13: invokevirtual #378                // Method java/util/Optional.map:(Ljava/util/function/Function;)Ljava/util/Optional;
+      16: aload_0
+      17: invokedynamic #682,  0            // InvokeDynamic #6:get:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity;)Ljava/util/function/Supplier;
+      22: invokevirtual #685                // Method java/util/Optional.orElseGet:(Ljava/util/function/Supplier;)Ljava/lang/Object;
+      25: checkcast     #689                // class java/lang/Integer
+      28: invokevirtual #691                // Method java/lang/Integer.intValue:()I
+      31: istore        5
+      33: ldc_w         #694                // String gui.goggles.gem_cutter.insufficient_essence
+      36: iconst_2
+      37: anewarray     #584                // class java/lang/Object
+      40: dup
+      41: iconst_0
+      42: iload         5
+      44: invokestatic  #696                // Method amount:(I)Lnet/createmod/catnip/lang/LangBuilder;
+      47: invokevirtual #618                // Method net/createmod/catnip/lang/LangBuilder.component:()Lnet/minecraft/network/chat/MutableComponent;
+      50: aastore
+      51: dup
+      52: iconst_1
+      53: iload         4
+      55: invokestatic  #696                // Method amount:(I)Lnet/createmod/catnip/lang/LangBuilder;
+      58: invokevirtual #618                // Method net/createmod/catnip/lang/LangBuilder.component:()Lnet/minecraft/network/chat/MutableComponent;
+      61: aastore
+      62: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      65: getstatic     #700                // Field net/minecraft/ChatFormatting.RED:Lnet/minecraft/ChatFormatting;
+      68: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      71: aload_1
+      72: invokevirtual #592                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+      75: iconst_1
+      76: ireturn
+      77: aload_2
+      78: getstatic     #446                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.TANK_TOO_SMALL:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+      81: if_acmpne     145
+      84: aload_3
+      85: invokedynamic #703,  0            // InvokeDynamic #7:apply:()Ljava/util/function/Function;
+      90: invokevirtual #378                // Method java/util/Optional.map:(Ljava/util/function/Function;)Ljava/util/Optional;
+      93: aload_0
+      94: invokedynamic #704,  0            // InvokeDynamic #8:get:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity;)Ljava/util/function/Supplier;
+      99: invokevirtual #685                // Method java/util/Optional.orElseGet:(Ljava/util/function/Supplier;)Ljava/lang/Object;
+     102: checkcast     #689                // class java/lang/Integer
+     105: invokevirtual #691                // Method java/lang/Integer.intValue:()I
+     108: istore        5
+     110: ldc_w         #705                // String gui.goggles.gem_cutter.max_cost_tank_too_small
+     113: iconst_1
+     114: anewarray     #584                // class java/lang/Object
+     117: dup
+     118: iconst_0
+     119: iload         4
+     121: iload         5
+     123: invokestatic  #707                // Method amount:(II)Lnet/createmod/catnip/lang/LangBuilder;
+     126: invokevirtual #618                // Method net/createmod/catnip/lang/LangBuilder.component:()Lnet/minecraft/network/chat/MutableComponent;
+     129: aastore
+     130: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     133: getstatic     #700                // Field net/minecraft/ChatFormatting.RED:Lnet/minecraft/ChatFormatting;
+     136: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     139: aload_1
+     140: invokevirtual #592                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     143: iconst_1
+     144: ireturn
+     145: aload_2
+     146: getstatic     #203                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.ALREADY_PERFECT:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     149: if_acmpne     174
+     152: ldc_w         #710                // String gui.goggles.gem_cutter.already_perfect
+     155: iconst_0
+     156: anewarray     #584                // class java/lang/Object
+     159: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     162: getstatic     #650                // Field net/minecraft/ChatFormatting.GRAY:Lnet/minecraft/ChatFormatting;
+     165: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     168: aload_1
+     169: invokevirtual #592                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     172: iconst_1
+     173: ireturn
+     174: aload_2
+     175: getstatic     #209                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.NOT_A_GEM:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     178: if_acmpne     203
+     181: ldc_w         #712                // String gui.goggles.gem_cutter.invalid_input
+     184: iconst_0
+     185: anewarray     #584                // class java/lang/Object
+     188: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     191: getstatic     #714                // Field net/minecraft/ChatFormatting.YELLOW:Lnet/minecraft/ChatFormatting;
+     194: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     197: aload_1
+     198: invokevirtual #592                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     201: iconst_1
+     202: ireturn
+     203: aload_2
+     204: getstatic     #436                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.MISSING_TANK:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     207: if_acmpeq     224
+     210: aload_2
+     211: getstatic     #440                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.EMPTY_TANK:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     214: if_acmpeq     224
+     217: aload_2
+     218: getstatic     #443                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.WRONG_FLUID:Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+     221: if_acmpne     226
+     224: iconst_1
+     225: ireturn
+     226: iconst_0
+     227: ireturn
+
+  private void addResultTooltip(java.util.List<net.minecraft.network.chat.Component>, java.util.Optional<net.minecraft.world.item.ItemStack>, dev.shadowsoffire.apotheosis.socket.gem.Purity, dev.shadowsoffire.apotheosis.socket.gem.Purity, int, net.minecraft.ChatFormatting);
+    descriptor: (Ljava/util/List;Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;ILnet/minecraft/ChatFormatting;)V
+    Code:
+       0: ldc_w         #717                // String gui.goggles.gem_cutter.result
+       3: iconst_0
+       4: anewarray     #584                // class java/lang/Object
+       7: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      10: aload_1
+      11: invokevirtual #592                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+      14: aload_0
+      15: aload_2
+      16: aload_3
+      17: aload         4
+      19: invokevirtual #719                // Method resultLine:(Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)Lnet/createmod/catnip/lang/LangBuilder;
+      22: aload         6
+      24: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      27: aload_1
+      28: iconst_1
+      29: invokevirtual #723                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+      32: ldc_w         #726                // String gui.goggles.gem_cutter.result_cost
+      35: iconst_1
+      36: anewarray     #584                // class java/lang/Object
+      39: dup
+      40: iconst_0
+      41: iload         5
+      43: invokestatic  #696                // Method amount:(I)Lnet/createmod/catnip/lang/LangBuilder;
+      46: invokevirtual #618                // Method net/createmod/catnip/lang/LangBuilder.component:()Lnet/minecraft/network/chat/MutableComponent;
+      49: aastore
+      50: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      53: getstatic     #650                // Field net/minecraft/ChatFormatting.GRAY:Lnet/minecraft/ChatFormatting;
+      56: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      59: aload_1
+      60: iconst_1
+      61: invokevirtual #723                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+      64: return
+
+  private net.createmod.catnip.lang.LangBuilder resultLine(java.util.Optional<net.minecraft.world.item.ItemStack>, dev.shadowsoffire.apotheosis.socket.gem.Purity, dev.shadowsoffire.apotheosis.socket.gem.Purity);
+    descriptor: (Ljava/util/Optional;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)Lnet/createmod/catnip/lang/LangBuilder;
+    Code:
+       0: aload_1
+       1: aload_3
+       2: aload_2
+       3: invokedynamic #728,  0            // InvokeDynamic #9:apply:(Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)Ljava/util/function/Function;
+       8: invokevirtual #378                // Method java/util/Optional.map:(Ljava/util/function/Function;)Ljava/util/Optional;
+      11: aload_2
+      12: aload_3
+      13: invokedynamic #731,  0            // InvokeDynamic #10:get:(Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)Ljava/util/function/Supplier;
+      18: invokevirtual #685                // Method java/util/Optional.orElseGet:(Ljava/util/function/Supplier;)Ljava/lang/Object;
+      21: checkcast     #593                // class net/createmod/catnip/lang/LangBuilder
+      24: areturn
+
+  private void addTankTooltip(java.util.List<net.minecraft.network.chat.Component>);
+    descriptor: (Ljava/util/List;)V
+    Code:
+       0: aload_0
+       1: invokevirtual #77                 // Method getExternalFluidTank:()Ljava/util/Optional;
+       4: astore_2
+       5: aload_2
+       6: invokevirtual #81                 // Method java/util/Optional.isEmpty:()Z
+       9: ifeq          33
+      12: ldc_w         #734                // String gui.goggles.gem_cutter.missing_tank
+      15: iconst_0
+      16: anewarray     #584                // class java/lang/Object
+      19: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      22: getstatic     #700                // Field net/minecraft/ChatFormatting.RED:Lnet/minecraft/ChatFormatting;
+      25: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      28: aload_1
+      29: invokevirtual #592                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+      32: return
+      33: aload_2
+      34: invokevirtual #89                 // Method java/util/Optional.get:()Ljava/lang/Object;
+      37: checkcast     #93                 // class com/simibubi/create/content/fluids/tank/FluidTankBlockEntity
+      40: invokevirtual #95                 // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getTankInventory:()Lnet/neoforged/neoforge/fluids/capability/templates/FluidTank;
+      43: astore_3
+      44: ldc_w         #736                // String gui.goggles.gem_cutter.tank
+      47: iconst_0
+      48: anewarray     #584                // class java/lang/Object
+      51: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      54: getstatic     #650                // Field net/minecraft/ChatFormatting.GRAY:Lnet/minecraft/ChatFormatting;
+      57: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      60: aload_1
+      61: invokevirtual #592                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+      64: aload_3
+      65: invokevirtual #439                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.isEmpty:()Z
+      68: ifeq          93
+      71: ldc_w         #738                // String gui.goggles.gem_cutter.empty_tank
+      74: iconst_0
+      75: anewarray     #584                // class java/lang/Object
+      78: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      81: getstatic     #714                // Field net/minecraft/ChatFormatting.YELLOW:Lnet/minecraft/ChatFormatting;
+      84: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      87: aload_1
+      88: iconst_1
+      89: invokevirtual #723                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+      92: return
+      93: aload_3
+      94: invokevirtual #99                 // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getFluid:()Lnet/neoforged/neoforge/fluids/FluidStack;
+      97: astore        4
+      99: aload_3
+     100: invokevirtual #360                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getFluidAmount:()I
+     103: aload_3
+     104: invokevirtual #363                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getCapacity:()I
+     107: invokestatic  #707                // Method amount:(II)Lnet/createmod/catnip/lang/LangBuilder;
+     110: astore        5
+     112: invokestatic  #740                // Method plus/dragons/createenchantmentindustry/util/CEILang.builder:()Lnet/createmod/catnip/lang/LangBuilder;
+     115: aload         4
+     117: invokevirtual #744                // Method net/neoforged/neoforge/fluids/FluidStack.getHoverName:()Lnet/minecraft/network/chat/Component;
+     120: invokevirtual #748                // Method net/createmod/catnip/lang/LangBuilder.add:(Lnet/minecraft/network/chat/Component;)Lnet/createmod/catnip/lang/LangBuilder;
+     123: ldc_w         #751                // String
+     126: invokevirtual #614                // Method net/createmod/catnip/lang/LangBuilder.text:(Ljava/lang/String;)Lnet/createmod/catnip/lang/LangBuilder;
+     129: aload         5
+     131: invokevirtual #753                // Method net/createmod/catnip/lang/LangBuilder.add:(Lnet/createmod/catnip/lang/LangBuilder;)Lnet/createmod/catnip/lang/LangBuilder;
+     134: aload         4
+     136: getstatic     #105                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/registry/CEIAXFluids.CRYSTAL_ESSENCE:Lcom/tterrag/registrate/util/entry/FluidEntry;
+     139: invokevirtual #111                // Method net/neoforged/neoforge/fluids/FluidStack.is:(Lnet/minecraft/core/Holder;)Z
+     142: ifeq          151
+     145: getstatic     #622                // Field net/minecraft/ChatFormatting.GREEN:Lnet/minecraft/ChatFormatting;
+     148: goto          154
+     151: getstatic     #700                // Field net/minecraft/ChatFormatting.RED:Lnet/minecraft/ChatFormatting;
+     154: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     157: aload_1
+     158: iconst_1
+     159: invokevirtual #723                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+     162: aload         4
+     164: getstatic     #105                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/registry/CEIAXFluids.CRYSTAL_ESSENCE:Lcom/tterrag/registrate/util/entry/FluidEntry;
+     167: invokevirtual #111                // Method net/neoforged/neoforge/fluids/FluidStack.is:(Lnet/minecraft/core/Holder;)Z
+     170: ifne          194
+     173: ldc_w         #756                // String gui.goggles.gem_cutter.wrong_fluid
+     176: iconst_0
+     177: anewarray     #584                // class java/lang/Object
+     180: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     183: getstatic     #700                // Field net/minecraft/ChatFormatting.RED:Lnet/minecraft/ChatFormatting;
+     186: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     189: aload_1
+     190: iconst_1
+     191: invokevirtual #723                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+     194: invokestatic  #758                // Method maxCutCost:()I
+     197: istore        6
+     199: aload_3
+     200: invokevirtual #363                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getCapacity:()I
+     203: iload         6
+     205: if_icmpge     244
+     208: ldc_w         #705                // String gui.goggles.gem_cutter.max_cost_tank_too_small
+     211: iconst_1
+     212: anewarray     #584                // class java/lang/Object
+     215: dup
+     216: iconst_0
+     217: iload         6
+     219: aload_3
+     220: invokevirtual #363                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getCapacity:()I
+     223: invokestatic  #707                // Method amount:(II)Lnet/createmod/catnip/lang/LangBuilder;
+     226: invokevirtual #618                // Method net/createmod/catnip/lang/LangBuilder.component:()Lnet/minecraft/network/chat/MutableComponent;
+     229: aastore
+     230: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     233: getstatic     #714                // Field net/minecraft/ChatFormatting.YELLOW:Lnet/minecraft/ChatFormatting;
+     236: invokevirtual #628                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     239: aload_1
+     240: iconst_1
+     241: invokevirtual #723                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+     244: return
+
+  private static int maxCutCost();
+    descriptor: ()I
+    Code:
+       0: iconst_0
+       1: istore_0
+       2: invokestatic  #761                // Method dev/shadowsoffire/apotheosis/socket/gem/Purity.values:()[Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+       5: astore_1
+       6: aload_1
+       7: arraylength
+       8: istore_2
+       9: iconst_0
+      10: istore_3
+      11: iload_3
+      12: iload_2
+      13: if_icmpge     45
+      16: aload_1
+      17: iload_3
+      18: aaload
+      19: astore        4
+      21: aload         4
+      23: invokestatic  #418                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutting.canCut:(Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)Z
+      26: ifeq          39
+      29: iload_0
+      30: aload         4
+      32: invokestatic  #432                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutting.getCutCost:(Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)I
+      35: invokestatic  #765                // Method java/lang/Math.max:(II)I
+      38: istore_0
+      39: iinc          3, 1
+      42: goto          11
+      45: iload_0
+      46: ireturn
+
+  private static net.createmod.catnip.lang.LangBuilder amount(int);
+    descriptor: (I)Lnet/createmod/catnip/lang/LangBuilder;
+    Code:
+       0: iload_0
+       1: i2d
+       2: invokestatic  #608                // Method plus/dragons/createenchantmentindustry/util/CEILang.number:(D)Lnet/createmod/catnip/lang/LangBuilder;
+       5: ldc_w         #768                // String  mB
+       8: invokevirtual #614                // Method net/createmod/catnip/lang/LangBuilder.text:(Ljava/lang/String;)Lnet/createmod/catnip/lang/LangBuilder;
+      11: areturn
+
+  private static net.createmod.catnip.lang.LangBuilder amount(int, int);
+    descriptor: (II)Lnet/createmod/catnip/lang/LangBuilder;
+    Code:
+       0: iload_0
+       1: invokestatic  #696                // Method amount:(I)Lnet/createmod/catnip/lang/LangBuilder;
+       4: ldc_w         #770                // String  /
+       7: invokevirtual #614                // Method net/createmod/catnip/lang/LangBuilder.text:(Ljava/lang/String;)Lnet/createmod/catnip/lang/LangBuilder;
+      10: iload_1
+      11: invokestatic  #696                // Method amount:(I)Lnet/createmod/catnip/lang/LangBuilder;
+      14: invokevirtual #753                // Method net/createmod/catnip/lang/LangBuilder.add:(Lnet/createmod/catnip/lang/LangBuilder;)Lnet/createmod/catnip/lang/LangBuilder;
+      17: areturn
+
+  public static boolean isUpgradableGem(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_0
+       1: getstatic     #403                // Field dev/shadowsoffire/apotheosis/Apoth$Items.GEM:Lnet/minecraft/core/Holder;
+       4: invokevirtual #409                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/core/Holder;)Z
+       7: ifne          12
+      10: iconst_0
+      11: ireturn
+      12: aload_0
+      13: invokestatic  #414                // Method dev/shadowsoffire/apotheosis/socket/gem/GemItem.getPurity:(Lnet/minecraft/world/item/ItemStack;)Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      16: getstatic     #772                // Field dev/shadowsoffire/apotheosis/socket/gem/Purity.PERFECT:Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      19: if_acmpeq     26
+      22: iconst_1
+      23: goto          27
+      26: iconst_0
+      27: ireturn
+
+  private static dev.shadowsoffire.apotheosis.socket.gem.Purity purityByName(java.lang.String);
+    descriptor: (Ljava/lang/String;)Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+    Code:
+       0: aload_0
+       1: invokestatic  #776                // Method dev/shadowsoffire/apotheosis/socket/gem/Purity.valueOf:(Ljava/lang/String;)Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+       4: areturn
+       5: astore_1
+       6: aconst_null
+       7: areturn
+    Exception table:
+       from    to  target type
+           0     4     5   Class java/lang/IllegalArgumentException
+
+  private static plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.socket.gem.gemCutter.GemCutterBlockEntity$CuttingStatus cuttingStatusByName(java.lang.String);
+    descriptor: (Ljava/lang/String;)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+    Code:
+       0: aload_0
+       1: invokestatic  #780                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus.valueOf:(Ljava/lang/String;)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity$CuttingStatus;
+       4: areturn
+       5: astore_1
+       6: aconst_null
+       7: areturn
+    Exception table:
+       from    to  target type
+           0     4     5   Class java/lang/IllegalArgumentException
+
+  private static net.createmod.catnip.lang.LangBuilder lambda$resultLine$7(dev.shadowsoffire.apotheosis.socket.gem.Purity, dev.shadowsoffire.apotheosis.socket.gem.Purity);
+    descriptor: (Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)Lnet/createmod/catnip/lang/LangBuilder;
+    Code:
+       0: ldc_w         #782                // String gui.goggles.gem_cutter.result_purity
+       3: iconst_2
+       4: anewarray     #584                // class java/lang/Object
+       7: dup
+       8: iconst_0
+       9: aload_0
+      10: invokevirtual #784                // Method dev/shadowsoffire/apotheosis/socket/gem/Purity.toComponent:()Lnet/minecraft/network/chat/MutableComponent;
+      13: aastore
+      14: dup
+      15: iconst_1
+      16: aload_1
+      17: invokevirtual #784                // Method dev/shadowsoffire/apotheosis/socket/gem/Purity.toComponent:()Lnet/minecraft/network/chat/MutableComponent;
+      20: aastore
+      21: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      24: areturn
+
+  private static net.createmod.catnip.lang.LangBuilder lambda$resultLine$6(dev.shadowsoffire.apotheosis.socket.gem.Purity, dev.shadowsoffire.apotheosis.socket.gem.Purity, net.minecraft.world.item.ItemStack);
+    descriptor: (Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;Lnet/minecraft/world/item/ItemStack;)Lnet/createmod/catnip/lang/LangBuilder;
+    Code:
+       0: aload_2
+       1: invokevirtual #787                // Method net/minecraft/world/item/ItemStack.copy:()Lnet/minecraft/world/item/ItemStack;
+       4: astore_3
+       5: aload_3
+       6: iconst_1
+       7: invokevirtual #265                // Method net/minecraft/world/item/ItemStack.setCount:(I)V
+      10: aload_3
+      11: aload_0
+      12: invokestatic  #272                // Method dev/shadowsoffire/apotheosis/socket/gem/GemItem.setPurity:(Lnet/minecraft/world/item/ItemStack;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)V
+      15: ldc_w         #789                // String gui.goggles.gem_cutter.result_line
+      18: iconst_3
+      19: anewarray     #584                // class java/lang/Object
+      22: dup
+      23: iconst_0
+      24: aload_3
+      25: invokevirtual #791                // Method net/minecraft/world/item/ItemStack.getHoverName:()Lnet/minecraft/network/chat/Component;
+      28: aastore
+      29: dup
+      30: iconst_1
+      31: aload_1
+      32: invokevirtual #784                // Method dev/shadowsoffire/apotheosis/socket/gem/Purity.toComponent:()Lnet/minecraft/network/chat/MutableComponent;
+      35: aastore
+      36: dup
+      37: iconst_2
+      38: aload_0
+      39: invokevirtual #784                // Method dev/shadowsoffire/apotheosis/socket/gem/Purity.toComponent:()Lnet/minecraft/network/chat/MutableComponent;
+      42: aastore
+      43: invokestatic  #586                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      46: areturn
+
+  private java.lang.Integer lambda$addContextStatusTooltip$5();
+    descriptor: ()Ljava/lang/Integer;
+    Code:
+       0: aload_0
+       1: invokevirtual #77                 // Method getExternalFluidTank:()Ljava/util/Optional;
+       4: invokedynamic #792,  0            // InvokeDynamic #11:apply:()Ljava/util/function/Function;
+       9: invokevirtual #378                // Method java/util/Optional.map:(Ljava/util/function/Function;)Ljava/util/Optional;
+      12: iconst_0
+      13: invokestatic  #793                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      16: invokevirtual #388                // Method java/util/Optional.orElse:(Ljava/lang/Object;)Ljava/lang/Object;
+      19: checkcast     #689                // class java/lang/Integer
+      22: areturn
+
+  private static java.lang.Integer lambda$addContextStatusTooltip$4(com.simibubi.create.content.fluids.tank.FluidTankBlockEntity);
+    descriptor: (Lcom/simibubi/create/content/fluids/tank/FluidTankBlockEntity;)Ljava/lang/Integer;
+    Code:
+       0: aload_0
+       1: invokevirtual #95                 // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getTankInventory:()Lnet/neoforged/neoforge/fluids/capability/templates/FluidTank;
+       4: invokevirtual #363                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getCapacity:()I
+       7: invokestatic  #793                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      10: areturn
+
+  private static java.lang.Integer lambda$addContextStatusTooltip$3(com.simibubi.create.content.fluids.tank.FluidTankBlockEntity);
+    descriptor: (Lcom/simibubi/create/content/fluids/tank/FluidTankBlockEntity;)Ljava/lang/Integer;
+    Code:
+       0: aload_0
+       1: invokevirtual #95                 // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getTankInventory:()Lnet/neoforged/neoforge/fluids/capability/templates/FluidTank;
+       4: invokevirtual #363                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getCapacity:()I
+       7: invokestatic  #793                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      10: areturn
+
+  private java.lang.Integer lambda$addContextStatusTooltip$2();
+    descriptor: ()Ljava/lang/Integer;
+    Code:
+       0: aload_0
+       1: invokevirtual #77                 // Method getExternalFluidTank:()Ljava/util/Optional;
+       4: invokedynamic #796,  0            // InvokeDynamic #12:apply:()Ljava/util/function/Function;
+       9: invokevirtual #378                // Method java/util/Optional.map:(Ljava/util/function/Function;)Ljava/util/Optional;
+      12: iconst_0
+      13: invokestatic  #793                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      16: invokevirtual #388                // Method java/util/Optional.orElse:(Ljava/lang/Object;)Ljava/lang/Object;
+      19: checkcast     #689                // class java/lang/Integer
+      22: areturn
+
+  private static java.lang.Integer lambda$addContextStatusTooltip$1(com.simibubi.create.content.fluids.tank.FluidTankBlockEntity);
+    descriptor: (Lcom/simibubi/create/content/fluids/tank/FluidTankBlockEntity;)Ljava/lang/Integer;
+    Code:
+       0: aload_0
+       1: invokevirtual #95                 // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getTankInventory:()Lnet/neoforged/neoforge/fluids/capability/templates/FluidTank;
+       4: invokevirtual #360                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getFluidAmount:()I
+       7: invokestatic  #793                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      10: areturn
+
+  private static java.lang.Integer lambda$addContextStatusTooltip$0(com.simibubi.create.content.fluids.tank.FluidTankBlockEntity);
+    descriptor: (Lcom/simibubi/create/content/fluids/tank/FluidTankBlockEntity;)Ljava/lang/Integer;
+    Code:
+       0: aload_0
+       1: invokevirtual #95                 // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getTankInventory:()Lnet/neoforged/neoforge/fluids/capability/templates/FluidTank;
+       4: invokevirtual #360                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getFluidAmount:()I
+       7: invokestatic  #793                // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+      10: areturn
+
+  static {};
+    descriptor: ()V
+    Code:
+       0: ldc           #8                  // class plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity
+       2: invokevirtual #797                // Method java/lang/Class.desiredAssertionStatus:()Z
+       5: ifne          12
+       8: iconst_1
+       9: goto          13
+      12: iconst_0
+      13: putstatic     #129                // Field $assertionsDisabled:Z
+      16: return
+}

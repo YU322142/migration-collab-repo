@@ -1,0 +1,18 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "ultramarine:tall_clay_vase"
+    },
+    {
+      "item": "minecraft:blue_dye"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:tall_blue_porcelain_vase"
+    }
+  ]
+}

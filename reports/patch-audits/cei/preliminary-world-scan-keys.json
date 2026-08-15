@@ -1,0 +1,69 @@
+{
+    "status":  "PRELIMINARY_NO_GO_FOR_251_TO_242_DOWNGRADE_IF_251_CONTENT_WAS_SAVED",
+    "jar_242":  {
+                    "path":  "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\create-enchantment-industry-2.4.2.jar",
+                    "bytes":  1283517,
+                    "sha256":  "81F192BB53888E01F87A82EAAC2F261C93715F2221DBCF5D8A8D414F912F75EF"
+                },
+    "jar_251":  {
+                    "path":  "D:\\Trans\\migration-audit-work\\mechanomania-attempt2-compat-backup-20260814\\runtime\\create-enchantment-industry-2.5.1.jar",
+                    "bytes":  1573096,
+                    "sha256":  "0D27024C0F8E94261689EB198D96003BA5A1697D4478B41E298BCA707CEAE988"
+                },
+    "only_251_registry_ids":  {
+                                  "block":  [
+                                                "create_enchantment_industry:blaze_composer"
+                                            ],
+                                  "block_entity":  [
+                                                       "create_enchantment_industry:blaze_composer"
+                                                   ],
+                                  "items":  [
+                                                "create_enchantment_industry:blaze_composer",
+                                                "create_enchantment_industry:incomplete_brass_affix_template",
+                                                "create_enchantment_industry:incomplete_crystal_affix_template",
+                                                "create_enchantment_industry:incomplete_apotheotic_affix_template"
+                                            ],
+                                  "data_components":  [
+                                                          "create_enchantment_industry:affix_template",
+                                                          "create_enchantment_industry:overlimit_affixes"
+                                                      ],
+                                  "custom_stats":  [
+                                                       "create_enchantment_industry:compose_affix"
+                                                   ]
+                              },
+    "new_nbt_keys":  [
+                         "ActiveAffix",
+                         "ActiveCost",
+                         "ActiveFromLevel",
+                         "ActiveFromPurity",
+                         "ActiveToLevel",
+                         "ActiveToPurity",
+                         "BlazeComposerMode",
+                         "ForgingMode",
+                         "HeldPreviewAffix",
+                         "HeldPreviewCost",
+                         "HeldPreviewFromLevel",
+                         "HeldPreviewFromPurity",
+                         "HeldPreviewStatus",
+                         "HeldPreviewTicks",
+                         "HeldPreviewToLevel",
+                         "HeldPreviewToPurity",
+                         "Operation",
+                         "PendingBlockedSuperOperation",
+                         "PendingBlockedSuperPenalty",
+                         "SuperUnlocked"
+                     ],
+    "critical_notes":  [
+                           "2.5.1 can attach create_enchantment_industry:overlimit_affixes to arbitrary Apotheosis gear; 2.4.2 has no component registration and native affix level is capped at 2.0, so downgrade loses/invalidates true over-limit levels.",
+                           "Existing brass/crystal/apotheotic affix-template item IDs are reused, but 2.5.1 adds create_enchantment_industry:affix_template component; 2.4.2 cannot decode/use that component.",
+                           "2.5.1 adds blaze_composer block, block entity, item and persistent NBT; all are absent in 2.4.2.",
+                           "Forger 2.5.1 writes top-level ForgingMode and Inventory.Operation; 2.4.2 reads legacy Inventory.Mode, so non-legacy mode state silently defaults to MERGE/0.",
+                           "No CEI DataFixer/missing-mapping/remap hook found."
+                       ],
+    "safe_unchanged":  [
+                           "Base CEI and Apothic block/item registries unchanged",
+                           "All fluid registry source identical",
+                           "Recipe type/serializer registries identical",
+                           "No custom entity or menu registry found"
+                       ]
+}

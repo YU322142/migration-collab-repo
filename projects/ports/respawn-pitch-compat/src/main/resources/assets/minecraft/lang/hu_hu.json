@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "%7$s kezdési pontja a(z) %6$s dimenzió %s, %s, %s [%s, %s] koordinátáira állítva",
+  "commands.spawnpoint.success.multiple.new": "%7$s játékos kezdési pontja a(z) %6$s dimenzió %s, %s, %s [%s, %s] koordinátáira állítva"
+}

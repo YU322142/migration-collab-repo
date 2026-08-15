@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "ultramarine:varnished_rosewood"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:varnished_rosewood_bracket"
+    }
+  ]
+}

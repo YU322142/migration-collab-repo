@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "نقطه احضار دنیا تنظیم شد در %s، %s، %s، [%s، %s] در %s برای %s",
+  "commands.spawnpoint.success.multiple.new": "نقطه احضار دنیا تنظیم شد در %s، %s، %s، [%s، %s] در %s برای %s بازیکن"
+}

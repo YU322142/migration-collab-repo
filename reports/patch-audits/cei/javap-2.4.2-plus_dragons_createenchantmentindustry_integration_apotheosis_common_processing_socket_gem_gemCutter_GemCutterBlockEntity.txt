@@ -1,0 +1,500 @@
+﻿Compiled from "GemCutterBlockEntity.java"
+public class plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.socket.gem.gemCutter.GemCutterBlockEntity extends com.simibubi.create.content.kinetics.base.KineticBlockEntity {
+  public static final int UNIT_PROCESSING_TIME;
+    descriptor: I
+
+  public int processingTicks;
+    descriptor: I
+
+  public boolean powered;
+    descriptor: Z
+
+  public float chargingPercentage;
+    descriptor: F
+
+  static final boolean $assertionsDisabled;
+    descriptor: Z
+
+  public plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.socket.gem.gemCutter.GemCutterBlockEntity(net.minecraft.world.level.block.entity.BlockEntityType<?>, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    descriptor: (Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: aload_3
+       4: invokespecial #1                  // Method com/simibubi/create/content/kinetics/base/KineticBlockEntity."<init>":(Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+       7: return
+
+  public void addBehaviours(java.util.List<com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour>);
+    descriptor: (Ljava/util/List;)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #7                  // Method com/simibubi/create/content/kinetics/base/KineticBlockEntity.addBehaviours:(Ljava/util/List;)V
+       5: new           #11                 // class plus/dragons/createenchantmentindustry/integration/apotheosis/common/kinetics/belt/lowerProcessingAppliance/LowerBeltProcessingBehaviour
+       8: dup
+       9: aload_0
+      10: invokespecial #13                 // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/kinetics/belt/lowerProcessingAppliance/LowerBeltProcessingBehaviour."<init>":(Lcom/simibubi/create/foundation/blockEntity/SmartBlockEntity;)V
+      13: aload_0
+      14: invokedynamic #16,  0             // InvokeDynamic #0:apply:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingCallback;
+      19: invokevirtual #20                 // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/kinetics/belt/lowerProcessingAppliance/LowerBeltProcessingBehaviour.whenItemEnters:(Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingCallback;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour;
+      22: aload_0
+      23: invokedynamic #24,  0             // InvokeDynamic #1:apply:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingCallback;
+      28: invokevirtual #25                 // Method com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour.whileItemHeld:(Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingCallback;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour;
+      31: astore_2
+      32: aload_1
+      33: aload_2
+      34: invokeinterface #30,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      39: pop
+      40: return
+
+  public void tick();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #36                 // Method com/simibubi/create/content/kinetics/base/KineticBlockEntity.tick:()V
+       4: aload_0
+       5: getfield      #40                 // Field level:Lnet/minecraft/world/level/Level;
+       8: getfield      #46                 // Field net/minecraft/world/level/Level.isClientSide:Z
+      11: ifeq          79
+      14: aload_0
+      15: getfield      #52                 // Field powered:Z
+      18: ifeq          48
+      21: aload_0
+      22: getfield      #55                 // Field chargingPercentage:F
+      25: fconst_1
+      26: fcmpg
+      27: ifge          48
+      30: aload_0
+      31: aload_0
+      32: getfield      #55                 // Field chargingPercentage:F
+      35: ldc           #59                 // float 0.025f
+      37: fadd
+      38: fconst_1
+      39: invokestatic  #60                 // Method java/lang/Math.min:(FF)F
+      42: putfield      #55                 // Field chargingPercentage:F
+      45: goto          79
+      48: aload_0
+      49: getfield      #52                 // Field powered:Z
+      52: ifne          79
+      55: aload_0
+      56: getfield      #55                 // Field chargingPercentage:F
+      59: fconst_0
+      60: fcmpl
+      61: ifle          79
+      64: aload_0
+      65: fconst_0
+      66: aload_0
+      67: getfield      #55                 // Field chargingPercentage:F
+      70: ldc           #59                 // float 0.025f
+      72: fsub
+      73: invokestatic  #66                 // Method java/lang/Math.max:(FF)F
+      76: putfield      #55                 // Field chargingPercentage:F
+      79: aload_0
+      80: getfield      #40                 // Field level:Lnet/minecraft/world/level/Level;
+      83: getfield      #46                 // Field net/minecraft/world/level/Level.isClientSide:Z
+      86: ifne          186
+      89: aload_0
+      90: invokevirtual #69                 // Method isVirtual:()Z
+      93: ifne          186
+      96: aload_0
+      97: invokevirtual #73                 // Method getExternalFluidTank:()Ljava/util/Optional;
+     100: astore_1
+     101: aload_1
+     102: invokevirtual #77                 // Method java/util/Optional.isEmpty:()Z
+     105: ifeq          127
+     108: aload_0
+     109: getfield      #52                 // Field powered:Z
+     112: ifeq          186
+     115: aload_0
+     116: iconst_0
+     117: putfield      #52                 // Field powered:Z
+     120: aload_0
+     121: invokevirtual #82                 // Method notifyUpdate:()V
+     124: goto          186
+     127: aload_1
+     128: invokevirtual #85                 // Method java/util/Optional.get:()Ljava/lang/Object;
+     131: checkcast     #89                 // class com/simibubi/create/content/fluids/tank/FluidTankBlockEntity
+     134: invokevirtual #91                 // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getTankInventory:()Lnet/neoforged/neoforge/fluids/capability/templates/FluidTank;
+     137: astore_2
+     138: aload_2
+     139: invokevirtual #95                 // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getFluid:()Lnet/neoforged/neoforge/fluids/FluidStack;
+     142: getstatic     #101                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/registry/CEIAXFluids.CRYSTAL_ESSENCE:Lcom/tterrag/registrate/util/entry/FluidEntry;
+     145: invokevirtual #107                // Method net/neoforged/neoforge/fluids/FluidStack.is:(Lnet/minecraft/core/Holder;)Z
+     148: ifeq          170
+     151: aload_0
+     152: getfield      #52                 // Field powered:Z
+     155: ifne          186
+     158: aload_0
+     159: iconst_1
+     160: putfield      #52                 // Field powered:Z
+     163: aload_0
+     164: invokevirtual #82                 // Method notifyUpdate:()V
+     167: goto          186
+     170: aload_0
+     171: getfield      #52                 // Field powered:Z
+     174: ifeq          186
+     177: aload_0
+     178: iconst_0
+     179: putfield      #52                 // Field powered:Z
+     182: aload_0
+     183: invokevirtual #82                 // Method notifyUpdate:()V
+     186: aload_0
+     187: getfield      #113                // Field processingTicks:I
+     190: iflt          248
+     193: aload_0
+     194: getfield      #52                 // Field powered:Z
+     197: ifeq          236
+     200: aload_0
+     201: dup
+     202: getfield      #113                // Field processingTicks:I
+     205: iconst_1
+     206: isub
+     207: putfield      #113                // Field processingTicks:I
+     210: aload_0
+     211: getfield      #40                 // Field level:Lnet/minecraft/world/level/Level;
+     214: getfield      #46                 // Field net/minecraft/world/level/Level.isClientSide:Z
+     217: ifeq          248
+     220: aload_0
+     221: getfield      #113                // Field processingTicks:I
+     224: bipush        25
+     226: if_icmple     248
+     229: aload_0
+     230: invokevirtual #117                // Method spawnParticles:()V
+     233: goto          248
+     236: aload_0
+     237: getfield      #113                // Field processingTicks:I
+     240: ifeq          248
+     243: aload_0
+     244: iconst_0
+     245: putfield      #113                // Field processingTicks:I
+     248: return
+
+  private java.util.Optional<com.simibubi.create.content.fluids.tank.FluidTankBlockEntity> getExternalFluidTank();
+    descriptor: ()Ljava/util/Optional;
+    Code:
+       0: getstatic     #120                // Field $assertionsDisabled:Z
+       3: ifne          21
+       6: aload_0
+       7: getfield      #40                 // Field level:Lnet/minecraft/world/level/Level;
+      10: ifnonnull     21
+      13: new           #123                // class java/lang/AssertionError
+      16: dup
+      17: invokespecial #125                // Method java/lang/AssertionError."<init>":()V
+      20: athrow
+      21: aload_0
+      22: getfield      #40                 // Field level:Lnet/minecraft/world/level/Level;
+      25: aload_0
+      26: getfield      #127                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+      29: iconst_2
+      30: invokevirtual #131                // Method net/minecraft/core/BlockPos.below:(I)Lnet/minecraft/core/BlockPos;
+      33: invokevirtual #137                // Method net/minecraft/world/level/Level.getBlockEntity:(Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/level/block/entity/BlockEntity;
+      36: astore_1
+      37: aload_1
+      38: instanceof    #89                 // class com/simibubi/create/content/fluids/tank/FluidTankBlockEntity
+      41: ifeq          57
+      44: aload_1
+      45: checkcast     #89                 // class com/simibubi/create/content/fluids/tank/FluidTankBlockEntity
+      48: astore_2
+      49: aload_2
+      50: invokevirtual #141                // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getControllerBE:()Lcom/simibubi/create/content/fluids/tank/FluidTankBlockEntity;
+      53: invokestatic  #145                // Method java/util/Optional.of:(Ljava/lang/Object;)Ljava/util/Optional;
+      56: areturn
+      57: invokestatic  #149                // Method java/util/Optional.empty:()Ljava/util/Optional;
+      60: areturn
+
+  public com.simibubi.create.content.kinetics.belt.behaviour.BeltProcessingBehaviour$ProcessingResult onItemEnters(com.simibubi.create.content.kinetics.belt.transport.TransportedItemStack, com.simibubi.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour);
+    descriptor: (Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;Lcom/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+    Code:
+       0: aload_0
+       1: getfield      #40                 // Field level:Lnet/minecraft/world/level/Level;
+       4: astore_3
+       5: getstatic     #120                // Field $assertionsDisabled:Z
+       8: ifne          23
+      11: aload_3
+      12: ifnonnull     23
+      15: new           #123                // class java/lang/AssertionError
+      18: dup
+      19: invokespecial #125                // Method java/lang/AssertionError."<init>":()V
+      22: athrow
+      23: aload_2
+      24: getfield      #152                // Field com/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour.blockEntity:Lcom/simibubi/create/foundation/blockEntity/SmartBlockEntity;
+      27: invokevirtual #158                // Method com/simibubi/create/foundation/blockEntity/SmartBlockEntity.isVirtual:()Z
+      30: ifeq          37
+      33: getstatic     #161                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.PASS:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      36: areturn
+      37: aload_1
+      38: getfield      #167                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+      41: invokestatic  #173                // Method isUpgradableGem:(Lnet/minecraft/world/item/ItemStack;)Z
+      44: ifne          51
+      47: getstatic     #161                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.PASS:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      50: areturn
+      51: getstatic     #177                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      54: areturn
+
+  public com.simibubi.create.content.kinetics.belt.behaviour.BeltProcessingBehaviour$ProcessingResult onItemHeld(com.simibubi.create.content.kinetics.belt.transport.TransportedItemStack, com.simibubi.create.content.kinetics.belt.behaviour.TransportedItemStackHandlerBehaviour);
+    descriptor: (Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;Lcom/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour;)Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+    Code:
+       0: aload_0
+       1: getfield      #40                 // Field level:Lnet/minecraft/world/level/Level;
+       4: astore_3
+       5: getstatic     #120                // Field $assertionsDisabled:Z
+       8: ifne          23
+      11: aload_3
+      12: ifnonnull     23
+      15: new           #123                // class java/lang/AssertionError
+      18: dup
+      19: invokespecial #125                // Method java/lang/AssertionError."<init>":()V
+      22: athrow
+      23: aload_0
+      24: getfield      #113                // Field processingTicks:I
+      27: iconst_m1
+      28: if_icmpeq     44
+      31: aload_0
+      32: getfield      #113                // Field processingTicks:I
+      35: bipush        25
+      37: if_icmpeq     44
+      40: getstatic     #177                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      43: areturn
+      44: aload_0
+      45: invokevirtual #73                 // Method getExternalFluidTank:()Ljava/util/Optional;
+      48: astore        4
+      50: aload         4
+      52: invokevirtual #77                 // Method java/util/Optional.isEmpty:()Z
+      55: ifeq          62
+      58: getstatic     #177                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      61: areturn
+      62: aload         4
+      64: invokevirtual #85                 // Method java/util/Optional.get:()Ljava/lang/Object;
+      67: checkcast     #89                 // class com/simibubi/create/content/fluids/tank/FluidTankBlockEntity
+      70: invokevirtual #91                 // Method com/simibubi/create/content/fluids/tank/FluidTankBlockEntity.getTankInventory:()Lnet/neoforged/neoforge/fluids/capability/templates/FluidTank;
+      73: astore        5
+      75: aload         5
+      77: invokevirtual #95                 // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getFluid:()Lnet/neoforged/neoforge/fluids/FluidStack;
+      80: getstatic     #101                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/registry/CEIAXFluids.CRYSTAL_ESSENCE:Lcom/tterrag/registrate/util/entry/FluidEntry;
+      83: invokevirtual #107                // Method net/neoforged/neoforge/fluids/FluidStack.is:(Lnet/minecraft/core/Holder;)Z
+      86: ifne          93
+      89: getstatic     #177                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+      92: areturn
+      93: aload_1
+      94: getfield      #167                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+      97: invokestatic  #180                // Method dev/shadowsoffire/apotheosis/socket/gem/GemItem.getPurity:(Lnet/minecraft/world/item/ItemStack;)Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+     100: astore        6
+     102: aload         6
+     104: getstatic     #186                // Field dev/shadowsoffire/apotheosis/socket/gem/Purity.PERFECT:Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+     107: if_acmpne     114
+     110: getstatic     #161                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.PASS:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+     113: areturn
+     114: aload         6
+     116: invokestatic  #192                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutting.getCutCost:(Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)I
+     119: istore        7
+     121: iload         7
+     123: aload         5
+     125: invokevirtual #198                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getCapacity:()I
+     128: if_icmpgt     141
+     131: iload         7
+     133: aload         5
+     135: invokevirtual #202                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.getFluidAmount:()I
+     138: if_icmple     145
+     141: getstatic     #177                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+     144: areturn
+     145: aload_0
+     146: getfield      #113                // Field processingTicks:I
+     149: iconst_m1
+     150: if_icmpne     168
+     153: aload_0
+     154: sipush        200
+     157: putfield      #113                // Field processingTicks:I
+     160: aload_0
+     161: invokevirtual #82                 // Method notifyUpdate:()V
+     164: getstatic     #177                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+     167: areturn
+     168: aload_1
+     169: invokevirtual #205                // Method com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.copy:()Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;
+     172: astore        8
+     174: aload         8
+     176: invokevirtual #209                // Method com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.clearFanProcessingData:()V
+     179: aconst_null
+     180: astore        9
+     182: aload         8
+     184: getfield      #167                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+     187: invokevirtual #212                // Method net/minecraft/world/item/ItemStack.getCount:()I
+     190: iconst_1
+     191: if_icmple     218
+     194: aload_1
+     195: invokevirtual #205                // Method com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.copy:()Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;
+     198: astore        9
+     200: aload         9
+     202: getfield      #167                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+     205: iconst_1
+     206: invokevirtual #217                // Method net/minecraft/world/item/ItemStack.shrink:(I)V
+     209: aload         8
+     211: getfield      #167                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+     214: iconst_1
+     215: invokevirtual #221                // Method net/minecraft/world/item/ItemStack.setCount:(I)V
+     218: aload         8
+     220: getfield      #167                // Field com/simibubi/create/content/kinetics/belt/transport/TransportedItemStack.stack:Lnet/minecraft/world/item/ItemStack;
+     223: aload         6
+     225: invokevirtual #224                // Method dev/shadowsoffire/apotheosis/socket/gem/Purity.next:()Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+     228: invokestatic  #228                // Method dev/shadowsoffire/apotheosis/socket/gem/GemItem.setPurity:(Lnet/minecraft/world/item/ItemStack;Ldev/shadowsoffire/apotheosis/socket/gem/Purity;)V
+     231: aload_2
+     232: aload_1
+     233: aload         8
+     235: invokestatic  #232                // InterfaceMethod java/util/List.of:(Ljava/lang/Object;)Ljava/util/List;
+     238: aload         9
+     240: invokestatic  #235                // Method com/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour$TransportedResult.convertToAndLeaveHeld:(Ljava/util/List;Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;)Lcom/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour$TransportedResult;
+     243: invokevirtual #241                // Method com/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour.handleProcessingOnItem:(Lcom/simibubi/create/content/kinetics/belt/transport/TransportedItemStack;Lcom/simibubi/create/content/kinetics/belt/behaviour/TransportedItemStackHandlerBehaviour$TransportedResult;)V
+     246: aload_3
+     247: aconst_null
+     248: aload_0
+     249: getfield      #127                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+     252: invokevirtual #245                // Method net/minecraft/core/BlockPos.getX:()I
+     255: i2d
+     256: aload_0
+     257: getfield      #127                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+     260: invokevirtual #248                // Method net/minecraft/core/BlockPos.getY:()I
+     263: i2d
+     264: aload_0
+     265: getfield      #127                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+     268: invokevirtual #251                // Method net/minecraft/core/BlockPos.getZ:()I
+     271: i2d
+     272: getstatic     #254                // Field net/minecraft/sounds/SoundEvents.AMETHYST_CLUSTER_HIT:Lnet/minecraft/sounds/SoundEvent;
+     275: getstatic     #260                // Field net/minecraft/sounds/SoundSource.BLOCKS:Lnet/minecraft/sounds/SoundSource;
+     278: ldc_w         #266                // float 0.75f
+     281: ldc_w         #267                // float 0.9f
+     284: ldc_w         #268                // float 0.2f
+     287: aload_3
+     288: getfield      #269                // Field net/minecraft/world/level/Level.random:Lnet/minecraft/util/RandomSource;
+     291: invokeinterface #273,  1          // InterfaceMethod net/minecraft/util/RandomSource.nextFloat:()F
+     296: fmul
+     297: fadd
+     298: invokevirtual #279                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/player/Player;DDDLnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+     301: aload         5
+     303: iload         7
+     305: getstatic     #283                // Field net/neoforged/neoforge/fluids/capability/IFluidHandler$FluidAction.EXECUTE:Lnet/neoforged/neoforge/fluids/capability/IFluidHandler$FluidAction;
+     308: invokevirtual #289                // Method net/neoforged/neoforge/fluids/capability/templates/FluidTank.drain:(ILnet/neoforged/neoforge/fluids/capability/IFluidHandler$FluidAction;)Lnet/neoforged/neoforge/fluids/FluidStack;
+     311: pop
+     312: aload_0
+     313: invokevirtual #82                 // Method notifyUpdate:()V
+     316: getstatic     #177                // Field com/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult.HOLD:Lcom/simibubi/create/content/kinetics/belt/behaviour/BeltProcessingBehaviour$ProcessingResult;
+     319: areturn
+
+  protected net.minecraft.world.phys.AABB createRenderBoundingBox();
+    descriptor: ()Lnet/minecraft/world/phys/AABB;
+    Code:
+       0: aload_0
+       1: invokespecial #293                // Method com/simibubi/create/content/kinetics/base/KineticBlockEntity.createRenderBoundingBox:()Lnet/minecraft/world/phys/AABB;
+       4: dconst_0
+       5: ldc2_w        #297                // double -1.0d
+       8: dconst_0
+       9: invokevirtual #299                // Method net/minecraft/world/phys/AABB.expandTowards:(DDD)Lnet/minecraft/world/phys/AABB;
+      12: areturn
+
+  private void spawnParticles();
+    descriptor: ()V
+    Code:
+       0: getstatic     #305                // Field net/minecraft/core/particles/ParticleTypes.FALLING_OBSIDIAN_TEAR:Lnet/minecraft/core/particles/SimpleParticleType;
+       3: astore_1
+       4: aload_0
+       5: getfield      #127                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+       8: invokestatic  #311                // Method net/createmod/catnip/math/VecHelper.getCenterOf:(Lnet/minecraft/core/Vec3i;)Lnet/minecraft/world/phys/Vec3;
+      11: astore_2
+      12: iconst_0
+      13: istore_3
+      14: iload_3
+      15: iconst_5
+      16: if_icmpge     68
+      19: aload_2
+      20: aload_0
+      21: getfield      #40                 // Field level:Lnet/minecraft/world/level/Level;
+      24: getfield      #269                // Field net/minecraft/world/level/Level.random:Lnet/minecraft/util/RandomSource;
+      27: ldc_w         #317                // float 0.1875f
+      30: invokestatic  #318                // Method net/createmod/catnip/math/VecHelper.offsetRandomly:(Lnet/minecraft/world/phys/Vec3;Lnet/minecraft/util/RandomSource;F)Lnet/minecraft/world/phys/Vec3;
+      33: astore        4
+      35: aload_0
+      36: getfield      #40                 // Field level:Lnet/minecraft/world/level/Level;
+      39: aload_1
+      40: aload         4
+      42: getfield      #322                // Field net/minecraft/world/phys/Vec3.x:D
+      45: aload_2
+      46: getfield      #328                // Field net/minecraft/world/phys/Vec3.y:D
+      49: aload         4
+      51: getfield      #331                // Field net/minecraft/world/phys/Vec3.z:D
+      54: dconst_0
+      55: ldc2_w        #334                // double -20.0d
+      58: dconst_0
+      59: invokevirtual #336                // Method net/minecraft/world/level/Level.addParticle:(Lnet/minecraft/core/particles/ParticleOptions;DDDDDD)V
+      62: iinc          3, 1
+      65: goto          14
+      68: return
+
+  protected void write(net.minecraft.nbt.CompoundTag, net.minecraft.core.HolderLookup$Provider, boolean);
+    descriptor: (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;Z)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: iload_3
+       4: invokespecial #340                // Method com/simibubi/create/content/kinetics/base/KineticBlockEntity.write:(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;Z)V
+       7: aload_1
+       8: ldc_w         #344                // String ProcessingTicks
+      11: aload_0
+      12: getfield      #113                // Field processingTicks:I
+      15: invokevirtual #346                // Method net/minecraft/nbt/CompoundTag.putInt:(Ljava/lang/String;I)V
+      18: aload_1
+      19: ldc_w         #352                // String Powered
+      22: aload_0
+      23: getfield      #52                 // Field powered:Z
+      26: invokevirtual #354                // Method net/minecraft/nbt/CompoundTag.putBoolean:(Ljava/lang/String;Z)V
+      29: return
+
+  protected void read(net.minecraft.nbt.CompoundTag, net.minecraft.core.HolderLookup$Provider, boolean);
+    descriptor: (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;Z)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: iload_3
+       4: invokespecial #358                // Method com/simibubi/create/content/kinetics/base/KineticBlockEntity.read:(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;Z)V
+       7: aload_0
+       8: aload_1
+       9: ldc_w         #344                // String ProcessingTicks
+      12: invokevirtual #361                // Method net/minecraft/nbt/CompoundTag.getInt:(Ljava/lang/String;)I
+      15: putfield      #113                // Field processingTicks:I
+      18: aload_0
+      19: aload_1
+      20: ldc_w         #352                // String Powered
+      23: invokevirtual #365                // Method net/minecraft/nbt/CompoundTag.getBoolean:(Ljava/lang/String;)Z
+      26: putfield      #52                 // Field powered:Z
+      29: return
+
+  public static boolean isUpgradableGem(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_0
+       1: getstatic     #369                // Field dev/shadowsoffire/apotheosis/Apoth$Items.GEM:Lnet/minecraft/core/Holder;
+       4: invokevirtual #375                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/core/Holder;)Z
+       7: ifne          12
+      10: iconst_0
+      11: ireturn
+      12: aload_0
+      13: invokestatic  #180                // Method dev/shadowsoffire/apotheosis/socket/gem/GemItem.getPurity:(Lnet/minecraft/world/item/ItemStack;)Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      16: getstatic     #186                // Field dev/shadowsoffire/apotheosis/socket/gem/Purity.PERFECT:Ldev/shadowsoffire/apotheosis/socket/gem/Purity;
+      19: if_acmpeq     26
+      22: iconst_1
+      23: goto          27
+      26: iconst_0
+      27: ireturn
+
+  static {};
+    descriptor: ()V
+    Code:
+       0: ldc           #41                 // class plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/socket/gem/gemCutter/GemCutterBlockEntity
+       2: invokevirtual #376                // Method java/lang/Class.desiredAssertionStatus:()Z
+       5: ifne          12
+       8: iconst_1
+       9: goto          13
+      12: iconst_0
+      13: putstatic     #120                // Field $assertionsDisabled:Z
+      16: return
+}

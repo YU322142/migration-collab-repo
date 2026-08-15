@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.migration.heightmap_384_to_544_compat.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ChunkAccessMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

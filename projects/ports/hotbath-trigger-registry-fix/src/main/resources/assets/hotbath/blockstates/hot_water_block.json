@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "hotbath:block/hot_water_block"
+    }
+  }
+}

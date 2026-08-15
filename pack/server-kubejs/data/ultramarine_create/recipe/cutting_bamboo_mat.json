@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:bamboo_mosaic"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:bamboo_mat"
+    }
+  ]
+}

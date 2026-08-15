@@ -1,0 +1,190 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "022F1E7B0C05C13B"
+	group: "6B9D1AFD3E45FF4E"
+	icon: {
+		id: "cataclysm:ignitium_helmet"
+	}
+	id: "022F1E7B0C05C13B"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			id: "43104742822CBF0C"
+			tasks: [{
+				entity: "cataclysm:the_harbinger"
+				id: "0F1034E7CB14081B"
+				type: "kill"
+				value: 1L
+			}]
+			x: -9.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["43104742822CBF0C"]
+			id: "53C8715D423D1CFA"
+			tasks: [{
+				id: "053CCD8CCB99C6D9"
+				item: { count: 1, id: "c6c:curse_of_timid" }
+				type: "item"
+			}]
+			x: -9.5d
+			y: 1.0d
+		}
+		{
+			id: "4564BE69E51A90A4"
+			tasks: [{
+				entity: "cataclysm:netherite_monstrosity"
+				id: "70444CEC2BA3B9E3"
+				type: "kill"
+				value: 1L
+			}]
+			x: -8.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["4564BE69E51A90A4"]
+			id: "455F1311DEBC1513"
+			tasks: [{
+				id: "7EBDC267B30B61AC"
+				item: { count: 1, id: "cataclysm:netherite_effigy" }
+				type: "item"
+			}]
+			x: -8.0d
+			y: 1.0d
+		}
+		{
+			id: "253789D53CF7F585"
+			tasks: [{
+				entity: "cataclysm:ender_guardian"
+				id: "0869166FC89AE977"
+				type: "kill"
+				value: 1L
+			}]
+			x: -6.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["253789D53CF7F585"]
+			id: "3C9CCD2D34590B95"
+			tasks: [{
+				id: "6693BA0F005A64E9"
+				item: { count: 1, id: "c6c:ring_of_the_colossus" }
+				type: "item"
+			}]
+			x: -6.5d
+			y: 1.0d
+		}
+		{
+			id: "35C67C49516C597B"
+			tasks: [{
+				entity: "cataclysm:ancient_remnant"
+				id: "61E3634135D524BB"
+				type: "kill"
+				value: 1L
+			}]
+			x: -5.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["35C67C49516C597B"]
+			id: "5D115FA1FE1E3ACE"
+			tasks: [{
+				id: "21B38EE4349B30BA"
+				item: { count: 1, id: "cataclysm:sandstorm_in_a_bottle" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 1.0d
+		}
+		{
+			id: "78158AE15F2A7180"
+			tasks: [{
+				entity: "cataclysm:the_leviathan"
+				id: "1B114D897D0CE589"
+				type: "kill"
+				value: 1L
+			}]
+			x: -3.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["78158AE15F2A7180"]
+			id: "1B12439D9234C7E1"
+			tasks: [{
+				id: "148FF9696AC10C8C"
+				item: { components: { "irons_spellbooks:spell_container": { data: [{ id: "irons_spellbooks:teleport", index: 0, level: 3, locked: 1b }], maxSpells: 1, mustEquip: 0b, spellWheel: 1b } }, count: 1, id: "irons_spellbooks:hither_thither_wand" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: 1.0d
+		}
+		{
+			id: "7E563C97A327B537"
+			tasks: [{
+				entity: "cataclysm:scylla"
+				id: "68BCF481A6C0AA0D"
+				type: "kill"
+				value: 1L
+			}]
+			x: -2.0d
+			y: -0.5d
+		}
+		{
+			id: "4A85185CDE1A7AD2"
+			tasks: [{
+				entity: "cataclysm:maledictus"
+				id: "522E9D1FF4F31785"
+				type: "kill"
+				value: 1L
+			}]
+			x: -0.5d
+			y: -0.5d
+		}
+		{
+			id: "6802763D2F467790"
+			tasks: [{
+				entity: "cataclysm:ignis"
+				id: "0AB871D8777F7983"
+				type: "kill"
+				value: 1L
+			}]
+			x: 1.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["7E563C97A327B537"]
+			id: "5AF768446E1A718E"
+			tasks: [{
+				id: "1654ACE8CAFA5335"
+				item: { count: 1, id: "c6c:utility_belt" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["4A85185CDE1A7AD2"]
+			id: "1C19D46A1861EB57"
+			tasks: [{
+				id: "77D702AE770E5A9D"
+				item: { components: { "irons_jewelry:jewelry_data": { parts: { "irons_jewelry:band_barbed": "irons_jewelry:cursium", "irons_jewelry:gem_band_barbed": "irons_jewelry:ruby" }, pattern: "irons_jewelry:barbed_band" } }, count: 1, id: "irons_jewelry:ring" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["6802763D2F467790"]
+			id: "735A97463A4E635D"
+			tasks: [{
+				id: "0C62A462C6492D77"
+				item: { count: 1, id: "cataclysm:ignitium_upgrade_smithing_template" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.0d
+		}
+	]
+}

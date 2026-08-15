@@ -1,0 +1,15 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "minecraft:breeze_rod"
+    }
+  ],
+  "processing_time": 400,
+  "results": [
+    {
+      "chance": 0.5,
+      "id": "l2complements:storm_core"
+    }
+  ]
+}

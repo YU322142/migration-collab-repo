@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:bookshelf"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:bookshelf"
+    }
+  ]
+}

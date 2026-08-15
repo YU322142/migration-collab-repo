@@ -1,0 +1,12 @@
+{
+  "attribute.name.waypoint_receive_range": "Waypoint Receive Range",
+  "attribute.name.waypoint_transmit_range": "Waypoint Transmit Range",
+  "commands.waypoint.invalid": "The selected entity cannot be used as a waypoint",
+  "commands.waypoint.list.empty": "There are no active waypoints in this dimension",
+  "commands.waypoint.modify.color": "Waypoint color updated",
+  "commands.waypoint.modify.color.reset": "Waypoint color reset",
+  "commands.waypoint.modify.style": "Waypoint style updated",
+  "argument.hexcolor.invalid": "Invalid hex color: %s",
+  "gamerule.minecraft:fire_spread_radius_around_player": "Fire spread radius around player",
+  "gamerule.minecraft:locator_bar": "Show locator bar"
+}

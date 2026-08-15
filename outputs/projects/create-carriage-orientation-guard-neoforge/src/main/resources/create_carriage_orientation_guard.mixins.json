@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.migration.create_carriage_orientation_guard.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "OrientedContraptionEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

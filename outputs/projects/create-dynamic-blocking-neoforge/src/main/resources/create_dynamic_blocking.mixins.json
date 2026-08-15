@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.antigravity.create_dynamic_blocking.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "NavigationMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

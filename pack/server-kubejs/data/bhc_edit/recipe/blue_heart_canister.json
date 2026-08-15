@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "bhc:blue_heart_canister",
+  "ingredients": [
+    {
+      "item": "bhc:green_heart_canister"
+    },
+    {
+      "item": "bhc:blue_heart"
+    },
+    {
+      "item": "l2complements:eternium_ingot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "bhc:blue_heart_canister"
+  }
+}

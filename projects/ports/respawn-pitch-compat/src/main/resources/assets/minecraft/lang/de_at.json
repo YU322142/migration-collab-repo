@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Spawnpunkt is auf %s, %s, %s [%s, %s] in %s fia %s gsetzt woan",
+  "commands.spawnpoint.success.multiple.new": "Spawnpunkt is auf %s, %s, %s [%s, %s] in %s fia %s spiela gsetzt woan"
+}

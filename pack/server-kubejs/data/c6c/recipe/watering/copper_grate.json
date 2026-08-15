@@ -1,0 +1,18 @@
+{
+  "type": "c6c:watering",
+  "ingredients": [
+    {
+      "item": "minecraft:copper_grate"
+    },
+    {
+      "type": "neoforge:tag",
+      "amount": 250,
+      "tag": "c:water"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:exposed_copper_grate"
+    }
+  ]
+}

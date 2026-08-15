@@ -1,0 +1,43 @@
+{
+  "schema": 1,
+  "date": "2026-08-12",
+  "status": "HANDOFF_CONTENT_FROZEN_PENDING_MANIFEST",
+  "original_input": {
+    "path": "D:\\Down\\20260811.zip",
+    "bytes": 7838147411,
+    "sha256": "9723FE28BC1B98D6ECE96A4063532BB2A533A038E7B3E457D50CF658E2495021",
+    "policy": "IMMUTABLE_READ_ONLY"
+  },
+  "base_staging": {
+    "path": "D:\\Trans\\migration-audit-work\\cutover-staging-incoming-20260811-candidate13-20260812",
+    "policy": "FROZEN_BASE_DO_NOT_MODIFY",
+    "note": "The handoff copy supersedes this base by replacing create_tracks.dat and restoring immersive_paintings_cache."
+  },
+  "release_base": {
+    "path": "D:\\Trans\\migration-audit-work\\final-mod-bundles-candidate14-r3-20260812",
+    "ready_sha256": "66778B3F91842D0AB6CC291D03AD9538AB12447F63340E6144747C4DAE819C24",
+    "server_bundle_sha256": "32EE13FBECD61CF8B04EA390D409D7F0B2D5FD3CB1AA37D180A75141E0FFEC28",
+    "client_bundle_sha256": "FCBEFE432E802CA8834ADFEA8D360764F33697D84B690C53D085CBD3DCDE0E76",
+    "pair_sha256": "D1B98FA225DD9DBE27499C36A8761A72449C50A43A250DBDCA32A348C21959C7",
+    "snapshot_counts_are_permanent_caps": false
+  },
+  "handoff_corrections": {
+    "create_tracks_sha256": "009E73D8607C88BD8C8E424FD2E855A9B1C531C305373FA0FFE979021A85C27C",
+    "create_tracks_normalized_train_count": 4,
+    "immersive_paintings_index_sha256": "FB0A3F6A32E4E614BD0559B3EC52239F71A2DF9C1FB37BE2741C60E5D062C0C4",
+    "immersive_paintings_file_count": 174,
+    "immersive_paintings_tree_sha256": "E61E30BB3BF856C90FCBFF3F113B9F513DE2E8732EFFD335C957882F7AD0B98F"
+  },
+  "runtime_evidence": {
+    "candidate14_attempt3_status": "PASS_BEFORE_LATER_MANUAL_FAILURE",
+    "candidate14_attempt3_report": "04-reports-and-docs/evidence/candidate14-r3-release-gate-attempt3-20260812.json",
+    "later_manual_client_crash_sha256": "CF9E5274723242157C1C35CDA9B636A1F89EB39927CAD652664F28D397440D49",
+    "overall_release_status": "HANDOFF_ONLY_NOT_PRODUCTION_GO"
+  },
+  "forbidden_as_conversion_input": [
+    "manual-test-candidate14-r3-manual-20260812",
+    "manual-test-candidate14-r3-runtime-attempt*",
+    "client-gate-*",
+    "all Java-started or server-saved candidate worlds"
+  ]
+}

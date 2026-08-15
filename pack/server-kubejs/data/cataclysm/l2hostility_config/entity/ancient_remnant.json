@@ -1,0 +1,26 @@
+{
+  "list": [
+    {
+      "attackScale": 0.01,
+      "blacklist": ["l2hostility:levitation", "l2hostility:moonwalk"],
+      "difficulty": {
+        "apply_chance": 0.0,
+        "base": 200,
+        "min": 200,
+        "scale": 0.0,
+        "suppression": 0.0,
+        "trait_chance": 0.0,
+        "variation": 0.0
+      },
+      "entities": "cataclysm:ancient_remnant",
+      "healthScale": 0.01,
+      "items": [],
+      "maxLevel": 200,
+      "maxTraitCount": 0,
+      "minSpawnLevel": 0,
+      "specialConditions": [],
+      "traits": [
+      ]
+    }
+  ]
+}

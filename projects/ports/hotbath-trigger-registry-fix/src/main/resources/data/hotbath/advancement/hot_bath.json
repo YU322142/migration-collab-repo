@@ -1,0 +1,41 @@
+{
+  "display": {
+    "icon": {
+      "id": "hotbath:hot_water_bucket"
+    },
+    "title": {
+      "translate": "hotbath.advancement.hot_bath"
+    },
+    "description": {
+      "translate": "hotbath.advancement.hot_bath.desc"
+    },
+    "background": "minecraft:textures/block/stone.png",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "hotbath:hot_water_bucket"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "hotbath:honey_bath_bucket",
+      "hotbath:milk_bath_bucket",
+      "hotbath:rose_bath_bucket",
+      "hotbath:peony_bath_bucket",
+      "hotbath:herbal_bath_bucket"
+    ],
+    "experience": 10
+  }
+}

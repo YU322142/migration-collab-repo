@@ -1,0 +1,150 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ $# -ne 3 ]]; then
+  echo "usage: $0 <target-id> <version> <changelog-file>" >&2
+  exit 64
+fi
+
+target_id=$1
+version=$2
+changelog_file=$3
+[[ "$version" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]] || { echo "invalid release version: $version" >&2; exit 64; }
+[[ -f "$changelog_file" ]] || { echo "missing changelog: $changelog_file" >&2; exit 66; }
+./scripts/release/validate-changelog.sh "$changelog_file"
+
+target=$(./scripts/release/validate-targets.sh --approved "$target_id")
+
+: "${MODRINTH_TOKEN:?MODRINTH_TOKEN must be set}"
+: "${MODRINTH_PROJECT_ID:?MODRINTH_PROJECT_ID must be set}"
+[[ "$MODRINTH_PROJECT_ID" =~ ^[0-9A-Za-z]{8}$ ]] || { echo "MODRINTH_PROJECT_ID must be the stable eight-character project ID" >&2; exit 64; }
+
+jar=$(jq -r --arg version "$version" '.artifact | gsub("%VERSION%"; $version)' <<<"$target")
+loader=$(jq -r '.loader' <<<"$target")
+minecraft_version=$(jq -r '.game_version' <<<"$target")
+[[ -f "$jar" ]] || { echo "missing release artifact: $jar" >&2; exit 66; }
+
+case "$loader" in
+  forge) loader_name=Forge ;;
+  fabric) loader_name=Fabric ;;
+  neoforge) loader_name=NeoForge ;;
+  *) echo "unsupported release loader: $loader" >&2; exit 65 ;;
+esac
+display_name="TrueUUID ${version} for ${loader_name} ${minecraft_version}"
+
+umask 077
+version_number="${version}+${target_id}"
+user_agent="YuWan-030/TrueUUID/${version} (https://github.com/YuWan-030/TrueUUID)"
+encoded_version=$(jq -rn --arg value "$version_number" '$value | @uri')
+existing=$(curl --silent --show-error \
+  --proto '=https' \
+  --tlsv1.2 \
+  --connect-timeout 10 \
+  --max-time 30 \
+  --header "User-Agent: ${user_agent}" \
+  --header "Authorization: ${MODRINTH_TOKEN}" \
+  --write-out $'\n%{http_code}' \
+  "https://api.modrinth.com/v2/project/${MODRINTH_PROJECT_ID}/version/${encoded_version}")
+existing_status=${existing##*$'\n'}
+existing_body=${existing%$'\n'*}
+
+case "$existing_status" in
+  200)
+    jar_sha512=$(sha512sum "$jar")
+    jar_sha512=${jar_sha512%% *}
+    if ! jq -e \
+      --arg project_id "$MODRINTH_PROJECT_ID" \
+      --arg version_number "$version_number" \
+      --arg display_name "$display_name" \
+      --arg loader "$loader" \
+      --arg minecraft_version "$minecraft_version" \
+      --arg sha512 "$jar_sha512" \
+      --rawfile changelog "$changelog_file" \
+      '.project_id == $project_id and
+       .version_number == $version_number and
+       .name == $display_name and
+       .changelog == $changelog and
+       (.loaders | index($loader)) != null and
+       (.game_versions | index($minecraft_version)) != null and
+       any(.files[]; .primary == true and .hashes.sha512 == $sha512)' \
+      <<<"$existing_body" >/dev/null; then
+      echo "existing Modrinth version does not match the release artifact and changelog" >&2
+      exit 73
+    fi
+    echo "Modrinth already has the identical ${target_id} artifact."
+    exit 0
+    ;;
+  404) ;;
+  *)
+    echo "Modrinth preflight failed with HTTP ${existing_status}" >&2
+    exit 69
+    ;;
+esac
+
+metadata=$(jq -cn \
+  --arg project_id "$MODRINTH_PROJECT_ID" \
+  --arg display_name "$display_name" \
+  --arg target_id "$target_id" \
+  --arg version "$version" \
+  --arg loader "$loader" \
+  --arg minecraft_version "$minecraft_version" \
+  --rawfile changelog "$changelog_file" \
+  '{
+    name: $display_name,
+    version_number: ($version + "+" + $target_id),
+    changelog: $changelog,
+    dependencies: [],
+    game_versions: [$minecraft_version],
+    version_type: "release",
+    loaders: [$loader],
+    featured: true,
+    status: "listed",
+    project_id: $project_id,
+    file_parts: ["file"],
+    primary_file: "file",
+    environment: "client_and_server"
+  }')
+
+jar_sha512=$(sha512sum "$jar")
+jar_sha512=${jar_sha512%% *}
+publish_response=$(curl --silent --show-error \
+  --proto '=https' \
+  --tlsv1.2 \
+  --connect-timeout 10 \
+  --max-time 300 \
+  --header "User-Agent: ${user_agent}" \
+  --header "Authorization: ${MODRINTH_TOKEN}" \
+  --form-string "data=${metadata}" \
+  --form "file=@${jar}" \
+  --write-out $'\n%{http_code}' \
+  https://api.modrinth.com/v2/version)
+publish_status=${publish_response##*$'\n'}
+publish_body=${publish_response%$'\n'*}
+
+if [[ "$publish_status" != 200 ]]; then
+  echo "Modrinth publish failed with HTTP ${publish_status}" >&2
+  jq -r '.description // .error // "No structured API error returned."' \
+    <<<"$publish_body" >&2 2>/dev/null || true
+  exit 69
+fi
+if ! jq -e \
+  --arg project_id "$MODRINTH_PROJECT_ID" \
+  --arg version_number "$version_number" \
+  --arg display_name "$display_name" \
+  --arg loader "$loader" \
+  --arg minecraft_version "$minecraft_version" \
+  --arg sha512 "$jar_sha512" \
+  --rawfile changelog "$changelog_file" \
+  '.project_id == $project_id and
+   .version_number == $version_number and
+   .name == $display_name and
+   .changelog == $changelog and
+   (.loaders | index($loader)) != null and
+   (.game_versions | index($minecraft_version)) != null and
+   any(.files[]; .primary == true and .hashes.sha512 == $sha512)' \
+  <<<"$publish_body" >/dev/null; then
+  echo "Modrinth returned a version that does not match the requested target artifact." >&2
+  exit 73
+fi
+
+echo "Published ${target_id} to Modrinth."

@@ -1,0 +1,13 @@
+{
+  "type": "create:haunting",
+  "ingredients": [
+    {
+      "item": "c6c:malefic_pendant"
+    }
+  ],
+  "results": [
+    {
+      "id": "l2hostility:divinity_cross"
+    }
+  ]
+}

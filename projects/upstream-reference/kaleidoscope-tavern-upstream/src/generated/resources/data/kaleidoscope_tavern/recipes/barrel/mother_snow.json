@@ -1,0 +1,16 @@
+{
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_tavern:ice_grape_juice",
+  "ingredients": [
+    {
+      "item": "minecraft:ice"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_tavern:mother_snow"
+  },
+  "unit_time": 2400
+}

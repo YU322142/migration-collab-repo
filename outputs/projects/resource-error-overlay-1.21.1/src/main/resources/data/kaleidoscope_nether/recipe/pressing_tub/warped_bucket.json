@@ -1,0 +1,14 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "kaleidoscope_nether_equivalence"
+    }
+  ],
+  "type": "kaleidoscope_tavern:pressing_tub",
+  "fluid": "kaleidoscope_nether:warped_juice",
+  "fluid_amount": 125,
+  "ingredient": {
+    "item": "kaleidoscope_nether:warped_fruit"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "c:dyes/red"
+    },
+    {
+      "tag": "c:dyes/green"
+    },
+    {
+      "tag": "c:dyes/white"
+    },
+    {
+      "tag": "c:dyes/black"
+    },
+    {
+      "item": "ultramarine:zhaotou_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:cyan_and_white_decorated_pillar"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:zhaotou_template"
+    }
+  ]
+}

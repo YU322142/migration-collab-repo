@@ -1,0 +1,2 @@
+Summary for D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\instances\Mechanomania-Ultimate-Aeronautics-1.1.11.1\minecraft\mods\create-enchantment-industry-2.4.2.jar
+Decompiled with CFR 0.152

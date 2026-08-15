@@ -1,0 +1,10 @@
+{
+    "type":  "neoforge:add_spawns",
+    "biomes":  "#minecraft:spawns_nautilus_frequently",
+    "spawners":  {
+                     "type":  "minecraft:nautilus",
+                     "weight":  5,
+                     "minCount":  1,
+                     "maxCount":  1
+                 }
+}

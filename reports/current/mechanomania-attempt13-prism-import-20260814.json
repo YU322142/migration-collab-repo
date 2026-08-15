@@ -1,0 +1,108 @@
+{
+    "schema":  1,
+    "status":  "IMPORTED_PRISM_INSTANCE",
+    "attempt":  13,
+    "imported_at_utc":  "2026-08-14T10:40:39.1610848Z",
+    "ready_for_manual_launch":  true,
+    "source_client_root":  "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814",
+    "source_prepare_report":  "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-prepare-20260814.json",
+    "source_prepare_report_sha256":  "4BA50238E24F4055DBF219103D3394B254D512B131B2BE0808C067BA8D9C8F86",
+    "source_unchanged_during_copy":  true,
+    "gate":  {
+                 "status":  "PASS",
+                 "path":  "D:\\Trans\\migration-audit-work\\mechanomania-startup-gate-attempt13-20260814.json",
+                 "sha256":  "22E4BEE1EB6B3DE909650D02A980C9591679FC144E49D82828822EA7C7FAE425",
+                 "import_allowed":  true,
+                 "completed_at_utc":  "2026-08-14T10:35:12+00:00",
+                 "report_last_write_utc":  "2026-08-14T10:35:12.6005175Z",
+                 "source_latest_write_utc":  "2026-08-14T10:31:06.6396222Z",
+                 "client_active_jars":  247,
+                 "ports_closed":  true
+             },
+    "source_template_instance":  "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Candidate14-r3-NeoForge-1.21.1-20260812",
+    "source_template_unchanged":  true,
+    "instance_name":  "动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814",
+    "instance_path":  "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814",
+    "minecraft_path":  "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft",
+    "copied_mutable_directories":  [
+                                       "config",
+                                       "configureddefaults",
+                                       "data",
+                                       "defaultconfigs",
+                                       "kubejs",
+                                       "ldlib2",
+                                       "local",
+                                       "mods",
+                                       "patchouli_books",
+                                       "resourcepacks",
+                                       "schematics",
+                                       "shaderpacks",
+                                       "tlm_custom_pack",
+                                       "xaero",
+                                       "XaeroWaypoints_BACKUP240807"
+                                   ],
+    "excluded_runtime_directories":  [
+                                         ".cache",
+                                         ".mixin.out",
+                                         ".sable",
+                                         "cache",
+                                         "crash-reports",
+                                         "downloads",
+                                         "journeymap",
+                                         "logs",
+                                         "natives",
+                                         "saves",
+                                         "screenshots",
+                                         "server-resource-packs",
+                                         "server-resource-packs-cache"
+                                     ],
+    "copy_snapshot":  {
+                          "directories":  487,
+                          "files":  2907,
+                          "bytes":  718178751,
+                          "tree_sha256":  "1003DC2BB80E9378DB317D951562688F7329FA5C92A873323D04B14AC31B88B1"
+                      },
+    "mods":  {
+                 "active_jar_count":  247,
+                 "bytes":  483155548,
+                 "required_fix_locks":  12,
+                 "permanent_mod_count_cap":  false
+             },
+    "mcmodsync":  {
+                      "active_mods":  0,
+                      "active_config":  0,
+                      "policy":  "GLOBALLY_DISABLED"
+                  },
+    "local_resource_pack":  {
+                                "file":  "migration-local-resources-mc1.21.1.zip",
+                                "bytes":  110377999,
+                                "sha256":  "614ABDF34F7CFDB7974474A645BFA71CC4CA2E67F609983616E61474A57E3364",
+                                "copied_with_all_resourcepacks":  true
+                            },
+    "shared_junction_targets":  {
+                                    "assets":  "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\assets",
+                                    "libraries":  "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\libraries",
+                                    "versions":  "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\1.21.11\\minecraft\\versions"
+                                },
+    "server":  {
+                   "address":  "127.0.0.1:12341",
+                   "acceptTextures":  false,
+                   "auto_join":  false,
+                   "servers_dat_sha256":  "E41F2145BFC4C2DD41C742114004EF9B1450693B609DE41EEC8C827510E2C528",
+                   "options_sha256":  "FBB2565D613BC95D2D58C1993F1020582E8ADFCF842B4715BD8E7299BFD48EB3",
+                   "production_server_configuration_modified":  false
+               },
+    "memory":  {
+                   "minimum_mb":  2048,
+                   "maximum_mb":  4096
+               },
+    "instance_cfg_sha256":  "A66E9AD3046E500CB5F374600D93B0F75EA162D4462312DCE2325C752E64792E",
+    "mmc_pack_sha256":  "9A49193F9EAE979493CC926C665B2FEC4BA3DE16145C43EBD80C8E4AF0C5C71C",
+    "minecraft":  "1.21.1",
+    "neoforge":  "21.1.241",
+    "permanent_mod_count_cap":  false,
+    "java_started_by_importer":  false,
+    "prism_started_by_importer":  false,
+    "automatic_server_join":  false,
+    "manual_action":  "Refresh Prism if it is already open, then manually launch this new instance when the server test is ready."
+}

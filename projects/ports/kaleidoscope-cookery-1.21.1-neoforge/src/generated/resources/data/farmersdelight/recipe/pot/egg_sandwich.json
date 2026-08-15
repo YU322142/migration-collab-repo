@@ -1,0 +1,25 @@
+{
+    "type":  "kaleidoscope_cookery:pot",
+    "carrier":  {
+                    "item":  "minecraft:bread"
+                },
+    "ingredients":  [
+                        {
+                            "tag":  "c:eggs"
+                        },
+                        {
+                            "tag":  "c:eggs"
+                        }
+                    ],
+    "result":  {
+                   "id":  "farmersdelight:egg_sandwich"
+               },
+    "stir_fry_count":  3,
+    "time":  200,
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "farmersdelight"
+                                }
+                            ]
+}

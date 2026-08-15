@@ -1,0 +1,22 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "type": "fluid_stack",
+      "amount": 500,
+      "fluid": "create:honey"
+    },
+    {
+      "tag": "c:sugar"
+    },
+    {
+      "tag": "c:sugar"
+    }
+  ],
+  "results": [
+    {
+    "count": 1,
+    "id": "umapyoi:hachimi_big"
+  }
+  ]
+}

@@ -1,0 +1,6 @@
+#Can the track spawner work
+enableTrackSpawner = false
+#Can the track spawner be generated
+generateTrackSpawner = false
+#Use the track spawner,(true) or place rails during world generation.(false)
+placeTracksUsingTrackSpawner = false

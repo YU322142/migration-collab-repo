@@ -1,0 +1,1 @@
+execute as @s if data entity @s Item.components."minecraft:damage" run damage @s 0execute as @s run scoreboard players reset @s mining_quarries_damage

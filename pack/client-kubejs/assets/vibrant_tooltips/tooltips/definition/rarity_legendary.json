@@ -1,0 +1,8 @@
+{
+  "priority": 200,
+  "style": "vibrant_tooltips:rarity/legendary",
+  "filter": {
+    "type": "obscure_tooltips:rarity",
+    "rarity": "legendary"
+  }
+}

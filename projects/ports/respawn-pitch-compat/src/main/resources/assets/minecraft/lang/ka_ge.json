@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "დაყენებულია გაცოცხლების წერტილი %s, %s, %s [%s, %s] %s-ში %s-სთვის",
+  "commands.spawnpoint.success.multiple.new": "დაყენებულია გაცოცხლების წერტილი კოორდინატებზე %s, %s, %s [%s, %s] %s-ში %s მოთამაშესთვის"
+}

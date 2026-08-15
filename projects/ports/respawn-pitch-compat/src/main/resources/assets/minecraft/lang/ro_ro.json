@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "A fost setat punctul de reînviere la %s, %s, %s [%s, %s] în %s pentru %s",
+  "commands.spawnpoint.success.multiple.new": "A fost setat punctul de reînviere la %s, %s, %s [%s, %s] în %s pentru %s jucători"
+}

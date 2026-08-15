@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Impostato il punto di generazione di %7$s in %1$s, %2$s, %3$s [%4$s, %5$s] nella dimensione %6$s",
+  "commands.spawnpoint.success.multiple.new": "Impostato il punto di generazione di %7$s giocatori in %1$s, %2$s, %3$s [%4$s, %5$s] nella dimensione %6$s"
+}

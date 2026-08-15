@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "kaleidoscope_cookery:oil"
+    },
+    {
+      "type": "fluid_tag",
+      "fluid_tag": "c:ethanol",
+      "amount": 100
+    }
+  ],
+  "results": [
+    {
+      "id": "createdieselgenerators:biodiesel",
+      "amount": 200
+    }
+  ]
+}

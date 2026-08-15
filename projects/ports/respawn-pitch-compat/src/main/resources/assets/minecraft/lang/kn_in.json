@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Set spawn point to %s, %s, %s [%s, %s] in %s for %s",
+  "commands.spawnpoint.success.multiple.new": "Set spawn point to %s, %s, %s [%s, %s] in %s for %s players"
+}

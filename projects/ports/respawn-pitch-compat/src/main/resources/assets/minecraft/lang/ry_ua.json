@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Місто спавна покладено на %s, %s, %s [%s, %s] у %s діля %s",
+  "commands.spawnpoint.success.multiple.new": "Місто спавна покладено на %s, %s, %s [%s, %s] у %s діля %s бавлячув"
+}

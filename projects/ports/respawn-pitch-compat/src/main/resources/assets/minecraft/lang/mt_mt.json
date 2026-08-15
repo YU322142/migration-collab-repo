@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Il-punt ta' nisel ġie ssettjat għal %s, %s, %s [%s, %s] f' %s għal %s",
+  "commands.spawnpoint.success.multiple.new": "Punt tat-tfaċċar sar %s, %s, %s [%s, %s] fi %s għal %s lagħba"
+}

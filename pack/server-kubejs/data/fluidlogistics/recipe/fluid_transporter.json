@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "fluidlogistics:feature_enabled",
+      "feature": "fluidlogistics:fluid_transporter"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "createages:brass_machine"
+    },
+    "B": {
+      "item": "createages:copper_machine"
+    },
+    "C": {
+      "item": "create:smart_chute"
+    }
+  },
+  "pattern": [
+    "A",
+    "B",
+    "C"
+  ],
+  "result": {
+    "count": 1,
+    "id": "fluidlogistics:fluid_transporter"
+  }
+}

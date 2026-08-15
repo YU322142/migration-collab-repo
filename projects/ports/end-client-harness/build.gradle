@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev' version '2.0.95'
+}
+
+group = 'com.bmt.audit'
+version = '1.0'
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+
+    runs {
+        client {
+            client()
+            gameDirectory = project.file('run/client')
+            programArguments.addAll(
+                    '--username', 'EndAudit',
+                    '--quickPlayMultiplayer', '127.0.0.1:10939',
+                    '--width', '1280',
+                    '--height', '720'
+            )
+        }
+
+        configureEach {
+            jvmArguments = [
+                    '-Xmx3G',
+                    '-XX:+IgnoreUnrecognizedVMOptions',
+                    '-XX:+AllowEnhancedClassRedefinition'
+            ]
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.INFO
+        }
+    }
+}

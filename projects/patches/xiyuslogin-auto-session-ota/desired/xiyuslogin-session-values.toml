@@ -1,0 +1,3 @@
+# Declarative desired values only. Do not replace the complete server config with this file.
+enableIpSession = true
+ipSessionDurationSeconds = 86400

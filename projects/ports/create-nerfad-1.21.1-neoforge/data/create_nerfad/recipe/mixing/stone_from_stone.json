@@ -1,0 +1,24 @@
+﻿{
+    "type":  "create:mixing",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:cobblestone"
+                        },
+                        {
+                            "type":  "neoforge:single",
+                            "amount":  50,
+                            "fluid":  "minecraft:lava"
+                        },
+                        {
+                            "type":  "neoforge:single",
+                            "amount":  250,
+                            "fluid":  "minecraft:water"
+                        }
+                    ],
+    "results":  [
+                    {
+                        "count":  10,
+                        "id":  "minecraft:stone"
+                    }
+                ]
+}

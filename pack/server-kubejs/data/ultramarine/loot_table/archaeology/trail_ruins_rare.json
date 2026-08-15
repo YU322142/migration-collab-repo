@@ -1,0 +1,64 @@
+{
+  "type": "minecraft:archaeology",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "ultramarine:blue_and_white_porcelain_piece",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultramarine:jade",
+          "weight": 15
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultramarine:jade_block"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultramarine:tall_blue_and_white_porcelain_vase",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultramarine:blue_and_white_porcelain_plate",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultramarine:painting_scroll",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultramarine:imperial_jade_seal"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultramarine:bronze_ding"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultramarine:clay_doll_male",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultramarine:clay_doll_female",
+          "weight": 10
+        },
+        {
+          "type": "minecraft:item",
+          "name": "ultramarine:jade_pendant",
+          "weight": 2
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "ultramarine:archaeology/trail_ruins_rare"
+}

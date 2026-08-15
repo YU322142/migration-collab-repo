@@ -1,0 +1,11 @@
+{
+  "schema": 1,
+  "mod_id": "waypoint_fire_equivalence",
+  "minecraft_version": "1.21.1",
+  "capabilities": [
+    "canonical_waypoint_attributes",
+    "canonical_locator_bar_rule",
+    "canonical_fire_spread_radius_rule",
+    "legacy_1_21_1_rule_migration"
+  ]
+}

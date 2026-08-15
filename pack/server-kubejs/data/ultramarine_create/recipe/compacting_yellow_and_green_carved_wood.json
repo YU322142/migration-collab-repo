@@ -1,0 +1,30 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "item": "ultramarine:yellow_dye_powder"
+    },
+    {
+      "tag": "c:dyes/green"
+    },
+    {
+      "tag": "c:dyes/green"
+    },
+    {
+      "item": "ultramarine:carved_wood_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:yellow_and_green_carved_wood"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:carved_wood_template"
+    }
+  ]
+}

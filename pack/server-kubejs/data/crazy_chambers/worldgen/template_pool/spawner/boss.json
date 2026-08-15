@@ -1,0 +1,34 @@
+{
+  "name": "crazy_chambers:spawner/boss",
+  "fallback": "minecraft:empty",
+  "elements": [
+    
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/boss",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/boss_2",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:spawner/boss_3",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

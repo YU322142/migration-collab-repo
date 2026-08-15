@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "ตั้งจุดเกิดโลกเป็น %s, %s, %s [%s, %s] ใน %s สำหรับ %s",
+  "commands.spawnpoint.success.multiple.new": "ตั้งจุดเกิดโลกเป็น %s, %s, %s [%s, %s] ใน %s สำหรับผู้เล่น %s คน"
+}

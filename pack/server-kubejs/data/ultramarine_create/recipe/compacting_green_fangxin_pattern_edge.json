@@ -1,0 +1,33 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "ultramarine:polished_planks"
+    },
+    {
+      "item": "ultramarine:black_dye_powder"
+    },
+    {
+      "item": "ultramarine:light_blue_dye_powder"
+    },
+    {
+      "item": "ultramarine:brown_dye_powder"
+    },
+    {
+      "tag": "c:dyes/green"
+    },
+    {
+      "item": "ultramarine:fangxin_edge_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:green_fangxin_pattern_edge"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:fangxin_edge_template"
+    }
+  ]
+}

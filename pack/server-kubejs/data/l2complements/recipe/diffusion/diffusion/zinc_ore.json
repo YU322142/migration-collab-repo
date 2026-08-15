@@ -1,0 +1,6 @@
+{
+  "type": "l2complements:diffusion",
+  "base": "minecraft:stone",
+  "ingredient": "create:zinc_block",
+  "result": "create:zinc_ore"
+}

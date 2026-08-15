@@ -1,0 +1,165 @@
+{
+	"homepage": "https://www.curseforge.com/minecraft/mc-mods/toms-storage",
+	"promos": {
+		"1.20.2-latest": "1.6.12",
+		"1.20.4-latest": "1.6.13",
+		"1.20.5-latest": "1.6.13",
+		"1.20.6-latest": "1.6.17",
+		"1.21-latest": "2.0.12",
+		"1.21.1-latest": "2.4.1",
+		"1.21.3-latest": "2.1.1",
+		"1.21.4-latest": "2.3.3",
+		"1.21.5-latest": "2.4.3",
+		"1.21.6-latest": "2.4.1",
+		"1.21.7-latest": "2.5.2",
+		"1.21.8-latest": "2.6.0",
+		"1.21.10-latest": "2.7.1",
+		"1.21.11-latest": "2.8.1",
+		"26.1-latest": "2.9.3",
+		"26.1.1-latest": "2.9.3",
+		"26.1.2-latest": "2.10.1",
+		"26.2-latest": "2.11.1"
+	},
+	"26.2": {
+		"2.11.1": "Fix items not disappearing from terminals until re-opening\nFix JEI/REI/EMI recipes showing missing items (Closes #769)",
+		"2.11.0": "Improve terminal performance (Closes #532)\nAdded more sorting options (#640)\n- Space Efficiency (Stack count)\n- Item ID\n- Creative Tab Order\nUpdated Brazilian and Russian translations (#728, #741)\n\nFix crash with Polymer (Closes #767)",
+		"2.10.1": "Fixed JEI not working",
+		"2.10.0": "26.2 port"
+	},
+	"26.1.2": {
+		"2.10.1": "Fix items not disappearing from terminals until re-opening\nFix JEI/REI/EMI recipes showing missing items (Closes #769)",
+		"2.10.0": "Improve terminal performance (Closes #532)\nAdded more sorting options (#640)\n- Space Efficiency (Stack count)\n- Item ID\n- Creative Tab Order\nUpdated Brazilian and Russian translations (#728, #741)\n\nFix crash with Polymer (Closes #767)",
+		"2.9.5": "Updated Trinkets compat\nFixed crash with Puzzleslib",
+		"2.9.4": "Fix crash on new NeoForge version",
+		"2.9.3": "Fix crash if sophisticatedcore is installed, but not sophisticatedstorage"
+	},
+	"26.1.1": {
+		"2.9.3": "Fix crash if sophisticatedcore is installed, but not sophisticatedstorage",
+		"2.9.2": "Added JEI integration"
+	},
+	"26.1": {
+		"2.9.3": "Fix crash if sophisticatedcore is installed, but not sophisticatedstorage",
+		"2.9.2": "Added JEI integration",
+		"2.9.1": "Fix painted blocks color on NeoForge\nAdded Jade support",
+		"2.9.0": "26.1 update"
+	},
+	"1.21.11": {
+		"2.8.1": "Fix sophisticated storage compat",
+		"2.8.0": "Added Sophisticated Storage compat for detecting multiblock inventories (#306, Closes #648)\nFixed Inventory Configurator bug with multiblock inventories\nFixed onlyTrimsConnect (Closes #692)\nImproved French translations (#695)\nIncrease Level Emitter limit to signed int limit 2.1B (Closes #671)",
+		"2.7.3": "JEI support on 1.21.11 (Closes #688)",
+		"2.7.2": "Fixed crash on NeoForge (Closes #673, #571)\nMade painted blocks scrapable with axes and added missing item cleaning recipes (Closes #663)\nAdded Inventory Hopper information to TOP and Jade (Closes #679)",
+		"2.7.1": "Fixed crash with Wireless Terminal and Inventory Configurator (Closes #677)",
+		"2.7.0": "1.21.11 port"
+	},
+	"1.21.10": {
+		"2.7.1": "Fix sophisticated storage compat",
+		"2.7.0": "Added Sophisticated Storage compat for detecting multiblock inventories (#306, Closes #648)\nFixed Inventory Configurator bug with multiblock inventories\nFixed onlyTrimsConnect (Closes #692)\nImproved French translations (#695)\nIncrease Level Emitter limit to signed int limit 2.1B (Closes #671)",
+		"2.6.3": "Fixed crash on NeoForge (Closes #673, #571)\nMade painted blocks scrapable with axes and added missing item cleaning recipes (Closes #663)\nAdded Inventory Hopper information to TOP and Jade (Closes #679)",
+		"2.6.2": "Fixed search bar on 1.21.10+",
+		"2.6.1": "Fixed items initially not loading when ghost mode is enabled (#637)\nUpdate description for advanced wireless terminal (Closes #639)\nFixed crash with Blur+ (Closes #619)\nFixed recipe book position (Closes #613)\nFix painted blocks not rendering correctly on 1.21.5+\nFix Jade tooltip on Inventory Connector on 1.21.8+ (Closes #666)\nFix terminal popup menu not rendering on 1.21.8+",
+		"2.6.0": "1.21.10 port"
+	},
+	"1.21.8": {
+		"2.6.0": "Added Sophisticated Storage compat for detecting multiblock inventories (#306, Closes #648)\nFixed Inventory Configurator bug with multiblock inventories\nFixed onlyTrimsConnect (Closes #692)\nImproved French translations (#695)\nIncrease Level Emitter limit to signed int limit 2.1B (Closes #671)",
+		"2.5.3": "Fixed crash on NeoForge (Closes #673, #571)\nMade painted blocks scrapable with axes and added missing item cleaning recipes (Closes #663)\nAdded Inventory Hopper information to TOP and Jade (Closes #679)",
+		"2.5.2": "Fixed items initially not loading when ghost mode is enabled (#637)\nUpdate description for advanced wireless terminal (Closes #639)\nFixed crash with Blur+ (Closes #619)\nFixed recipe book position (Closes #613)\nFix painted blocks not rendering correctly on 1.21.5+\nFix Jade tooltip on Inventory Connector on 1.21.8+ (Closes #666)\nFix terminal popup menu not rendering on 1.21.8+",
+		"2.5.1": "Added configurable hopper cooldown (#597)\nFixed crash with inventory proxy (Closes #609)\nFixed crash with legendary tooltips (Closes #603)\nFixed crash with REI on 1.21.6+ (Closes #610)"
+	},
+	"1.21.7": {
+		"2.5.2": "Fixed items initially not loading when ghost mode is enabled (#637)\nUpdate description for advanced wireless terminal (Closes #639)\nFixed crash with Blur+ (Closes #619)\nFixed recipe book position (Closes #613)\nFix painted blocks not rendering correctly on 1.21.5+\nFix Jade tooltip on Inventory Connector on 1.21.8+ (Closes #666)\nFix terminal popup menu not rendering on 1.21.8+",
+		"2.5.1": "Added configurable hopper cooldown (#597)\nFixed crash with inventory proxy (Closes #609)\nFixed crash with legendary tooltips (Closes #603)\nFixed crash with REI on 1.21.6+ (Closes #610)",
+		"2.5.0": "1.21.7 port"
+	},
+	"1.21.6": {
+		"2.4.1": "Fixed JEI/REI/EMI overlapping with some parts of the menus in the mod (Closes #594)\nFixed missing lang entry for inventory configurator (Closes #596)\nFixed JEI integration on 1.21.4 (Closes #599)\nFixed inventory cable connector linking menu not working on 1.21.6 (Closes #600)\nFixed crash with NeoForge 21.6.16-beta\nUpdated Russian translations (#598)",
+		"2.4.0": "1.21.6 port"
+	},
+	"1.21.5": {
+		"2.4.3": "Fixed items initially not loading when ghost mode is enabled (#637)\nUpdate description for advanced wireless terminal (Closes #639)\nFixed crash with Blur+ (Closes #619)\nFixed recipe book position (Closes #613)\nFix painted blocks not rendering correctly on 1.21.5+",
+		"2.4.2": "Added configurable hopper cooldown (#597)\nFixed crash with inventory proxy (Closes #609)\nFixed crash with legendary tooltips (Closes #603)\nFixed crash with REI on 1.21.6+ (Closes #610)",
+		"2.4.1": "Fixed JEI/REI/EMI overlapping with some parts of the menus in the mod (Closes #594)\nFixed missing lang entry for inventory configurator (Closes #596)\nFixed JEI integration on 1.21.4 (Closes #599)\nUpdated Russian translations (#598)",
+		"2.4.0": "Fixed occasional crash on NeoForge (Closes #571)\nAdded HUD information to the configurator (#306)\nAdded Multiblock Inventory API (#306)\nAdded debounce to the Inventory Configurator actions (#306)",
+		"2.3.2": "Updated Chinese translations (#576)\nFixed inventory hopper drops filter item on 1.21.5 (Closes #582)\nFixed crash with tag filter and Inventory Sorter (Closes #578)\nFixed recipe book on 1.21.4+ (Closes #564)\nFixed crafting placer breaking the recipe (Closes #581)",
+		"2.3.1": "Added: inventory configurators highlight painted blocks (Closes #496)\nAdded storage system information to the terminal UI (Closes #435)\nImproved inventory configurator in-game description\nFixed framed inventory cable connectors missing tool tags\nFixed filing cabinets on fabric (#566, Closes #547)\nFixed beacon indicator not showing if beacon level 0 is required (Closes #546)\nFixed recipe book ghost items rendering in the wrong place\nFixed painted inventory trim name breaking (Closes #565)\nFixed REI not working on NeoForge (Closes #473)\nFixed terminal settings buttons not cycling in reverse with shift held (Closes #313)\nFixed tall terminal UI overlapping with jei search bar (Closes #479)\nFixed polymorph button breaking with tall terminal",
+		"2.3.0": "1.21.5 port"
+	},
+	"1.21.4": {
+		"2.3.3": "Fixed items initially not loading when ghost mode is enabled (#637)\nUpdate description for advanced wireless terminal (Closes #639)\nFixed crash with Blur+ (Closes #619)\nFixed recipe book position (Closes #613)",
+		"2.3.2": "Added configurable hopper cooldown (#597)\nFixed crash with inventory proxy (Closes #609)\nFixed crash with legendary tooltips (Closes #603)\nFixed crash with REI on 1.21.6+ (Closes #610)",
+		"2.3.1": "Fixed JEI/REI/EMI overlapping with some parts of the menus in the mod (Closes #594)\nFixed missing lang entry for inventory configurator (Closes #596)\nFixed JEI integration on 1.21.4 (Closes #599)\nUpdated Russian translations (#598)",
+		"2.3.0": "Fixed occasional crash on NeoForge (Closes #571)\nAdded HUD information to the configurator (#306)\nAdded Multiblock Inventory API (#306)\nAdded debounce to the Inventory Configurator actions (#306)",
+		"2.2.4": "Updated Chinese translations (#576)\nFixed crash with tag filter and Inventory Sorter (Closes #578)\nFixed recipe book on 1.21.4+ (Closes #564)\nFixed crafting placer breaking the recipe (Closes #581)",
+		"2.2.3": "Added: inventory configurators highlight painted blocks (Closes #496)\nAdded storage system information to the terminal UI (Closes #435)\nImproved inventory configurator in-game description\nFixed framed inventory cable connectors missing tool tags\nFixed filing cabinets on fabric (#566, Closes #547)\nFixed beacon indicator not showing if beacon level 0 is required (Closes #546)\nFixed recipe book ghost items rendering in the wrong place\nFixed painted inventory trim name breaking (Closes #565)\nFixed REI not working on NeoForge (Closes #473)\nFixed terminal settings buttons not cycling in reverse with shift held (Closes #313)\nFixed tall terminal UI overlapping with jei search bar (Closes #479)\nFixed polymorph button breaking with tall terminal",
+		"2.2.2": "Fixed crash with Inventory Sorter (Closes #487)\nFixed polymorph compat not working (Closes #542)\nFixed level emitter not updating on configuration change",
+		"2.2.1": "Updated Chinese translations (#519)\nReplaced the framed inventory cable connector item model (#523)\nFixed world hang on Fabric (Closes #524)\nFixed inventory proxy causing crashes in some cases (#520)\nFixed crafting terminal losing items (Closes #498)\nFixed the level emitter model on 1.21.4",
+		"2.2.0": "Add config option to blacklist certain blocks/mods (Closes #507)\nRewritten JEI/REI/EMI recipe integrations (Closes #466)\nFixed crash with 0 size inventories (Closes #516)\nFixed Inventory Cable Connector (Framed) xraying on 1.21.4 (Closes #518)\nFixed Paint Kit item name breaking (Closes #517)\nFixed missing texture warnings",		
+		"2.1.3": "Updated ViveCraft support to 1.2.0",
+		"2.1.2": "1.21.4 port"
+	},
+	"1.21.3": {
+		"2.1.1": "Added French translations (#489)\nFixed crash on 1.21.3",
+		"2.1.0": "1.21.3 port"
+	},
+	"1.21.1": {
+		"2.4.1": "Fix items not disappearing from terminals until re-opening\nFix JEI/REI/EMI recipes showing missing items (Closes #769)",
+		"2.4.0": "Improve terminal performance (Closes #532)\nAdded more sorting options (#640)\n- Space Efficiency (Stack count)\n- Item ID\n- Creative Tab Order\nUpdated Brazilian and Russian translations (#728, #741)\n\nFix crash with Polymer (Closes #767)",
+		"2.3.2": "Fix crash if sophisticatedcore is installed, but not sophisticatedstorage",
+		"2.3.1": "Fix sophisticated storage compat",
+		"2.3.0": "Added Sophisticated Storage compat for detecting multiblock inventories (#306, Closes #648)\nFixed Inventory Configurator bug with multiblock inventories\nFixed onlyTrimsConnect (Closes #692)\nImproved French translations (#695)\nIncrease Level Emitter limit to signed int limit 2.1B (Closes #671)",
+		"2.2.3": "Fixed items initially not loading when ghost mode is enabled (#637)\nUpdate description for advanced wireless terminal (Closes #639)\nFixed crash with Blur+ (Closes #619)\nFixed recipe book position (Closes #613)",
+		"2.2.2": "Added configurable hopper cooldown (#597)\nFixed crash with inventory proxy (Closes #609)\nFixed crash with legendary tooltips (Closes #603)\nFixed crash with REI on 1.21.6+ (Closes #610)",
+		"2.2.1": "Fixed JEI/REI/EMI overlapping with some parts of the menus in the mod (Closes #594)\nFixed missing lang entry for inventory configurator (Closes #596)\nUpdated Russian translations (#598)",
+		"2.2.0": "Fixed occasional crash on NeoForge (Closes #571)\nAdded HUD information to the configurator (#306)\nAdded Multiblock Inventory API (#306)\nAdded debounce to the Inventory Configurator actions (#306)",
+		"2.1.4": "Updated Chinese translations (#576)\nFixed crash with tag filter and Inventory Sorter (Closes #578)",
+		"2.1.3": "Added: inventory configurators highlight painted blocks (Closes #496)\nAdded storage system information to the terminal UI (Closes #435)\nImproved inventory configurator in-game description\nFixed framed inventory cable connectors missing tool tags\nFixed filing cabinets on fabric (#566, Closes #547)\nFixed beacon indicator not showing if beacon level 0 is required (Closes #546)\nFixed inventory interface not working in some cases (Closes #478)\nFixed REI not working on NeoForge (Closes #473)\nFixed terminal settings buttons not cycling in reverse with shift held (Closes #313)\nFixed tall terminal UI overlapping with jei search bar (Closes #479)\nFixed polymorph button breaking with tall terminal",
+		"2.1.2": "Fixed crash with Inventory Sorter (Closes #487)\nFixed polymorph compat not working (Closes #542)\nFixed level emitter not updating on configuration change",
+		"2.1.1": "Updated Chinese translations (#519)\nReplaced the framed inventory cable connector item model (#523)\nFixed world hang on Fabric (Closes #524)\nFixed inventory proxy causing crashes in some cases (#520)\nFixed crafting terminal losing items (Closes #498)",
+		"2.1.0": "Add config option to blacklist certain blocks/mods (Closes #507)\nRewritten JEI/REI/EMI recipe integrations (Closes #466)\nFixed crash with 0 size inventories (Closes #516)",
+		"2.0.12": "Updated ViveCraft support to 1.2.0",
+		"2.0.11": "Added French translations (#489)",
+		"2.0.10": "Fixed wireless terminal highlighting with ViveCraft\nAdded Japanese translations (#461)",
+		"2.0.9": "Fixed terminal search keep not working\nFixed drawer like blocks not working\nFixed curios not working"
+	},
+	"1.21": {
+		"2.0.12": "Updated ViveCraft support to 1.2.0",
+		"2.0.11": "Added French translations (#489)",
+		"2.0.10": "Fixed wireless terminal highlighting with ViveCraft\nAdded Japanese translations (#461)",
+		"2.0.9": "Fixed terminal search keep not working\nFixed drawer like blocks not working\nFixed curios not working",
+		"2.0.8": "Fixed version number on NeoForge\nFixed Pull from Inventory not working",
+		"2.0.7": "Added Smart Search option to toggle EMI craftable item list (previously disabled due to lag)\nAdded Component search with `$` (#417)\nAdded Jade/TheOneProbe support",
+		"2.0.6": "Added Polymorph support\nAdded content tooltips for item filters\nImproved inventory configurator\nImproved performance on NeoForge\nFiling Cabinet now drops it's content when broken\nFixed inventory cable connector missing the correct tool\nFixed inventory cable connectors breaking the inventory network in some cases\nFixed inventory cable connectors loosing filters\nFixed advanced terminal keybind not working on NeoForge\nFixed terminal syncing JEI/REI/EMI in some cases, when sync is turned off\nFixed the recipe book in the crafting terminal\nFixed JEI show recipes is in the wrong place",
+		"2.0.5": "Fixed crash with inventory interface\nFixed inventory interface not working in some cases\nFixed level emitter not working in some cases",
+		"2.0.4": "Added Inventory Proxy\nFixed storage terminals not connecting to inventory cables\nFixed Framed Inventor Cable Connector painting not working\nFixed Advanced Terminal not working across dimensions\nFixed Advanced Terminal range is doubled",
+		"2.0.3": "Fixed inventory cable connector showing access denied message incorrectly\nFixed crash with inventory cable connectors on inventory connectors\nFixed deadlock with polymorphic item filter\nFixed configs missing localizations\nFixed existing localizations not loading",
+		"2.0.2": "Added Inventory Cable connectors\nFixed inventory configurator menu not updating the filter\nImproved advanced wireless terminal description\nFixed inventory cable network leaking memory",
+		"2.0.1": "Fixed dupe bug with crafting terminal\nFixed missing recipes, tags, and loot tables\nFixed recipe book in the crafting terminal not filling in the recipe\nRemoved debug barrier item from the storage terminal\nFixed EMI crafting not working",
+		"2.0.0": "2.0.0 rewrite initial release"
+	},
+	"1.20.6": {
+		"1.6.17": "Added NBT/component and tag search",
+		"1.6.16": "Added JEI Compat\nFixed dupe bug with Tag Item Filter",
+		"1.6.15": "Fixed storage terminal screens background",
+		"1.6.14": "Fixed chunks failing to save\nEMI, REI, Curios support",
+		"1.6.13": "NeoForge 20.5.14-beta port"
+	},
+	"1.20.5": {
+		"1.6.13": "NeoForge 20.5.14-beta port",
+		"1.6.12": "1.20.5 port"
+	},
+	"1.20.4": {
+		"1.6.13": "Added NBT/component and tag search\nFixed dark terminal background on 1.20.4",
+		"1.6.12": "Fixed dupe bug with Tag Item Filter",
+		"1.6.11": "Fixed crash with Inventory Hopper\nUpdated Chinese Translations",
+		"1.6.10": "Added JEI support",
+		"1.6.9": "20.4.70-beta port\nAdded curios, EMI, REI support",
+		"1.6.8": "1.20.4 port"
+	},
+	"1.20.2": {
+		"1.6.12": "Added NBT/component and tag search",
+		"1.6.11": "Fixed dupe bug with Tag Item Filter",
+		"1.6.10": "Fixed crash with Inventory Hopper\nUpdated Chinese Translations",
+		"1.6.9": "Added curios support",
+		"1.6.8": "NeoForge 20.2.59-beta port",
+		"1.6.7": "NeoForge port"
+	}
+}

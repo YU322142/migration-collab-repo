@@ -1,0 +1,14 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    { "item": "ultramarine:unfired_roof_tile" },
+    { "item": "ultramarine:gray_dye_powder" }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:gray_roof_tile"
+    }
+  ]
+}

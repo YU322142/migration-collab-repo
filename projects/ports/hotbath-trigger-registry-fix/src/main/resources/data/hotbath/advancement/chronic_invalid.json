@@ -1,0 +1,28 @@
+{
+  "id": "hotbath:chronic_invalid",
+  "display": {
+    "icon": {
+      "id": "hotbath:herbal_bath_bucket"
+    },
+    "title": {
+      "translate": "hotbath.advancement.chronic_invalid"
+    },
+    "description": {
+      "translate": "hotbath.advancement.chronic_invalid.desc"
+    },
+    "background": "minecraft:textures/block/stone.png",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "hotbath:hot_bath",
+  "criteria": {
+    "code_triggered": {
+      "trigger": "hotbath:chronic_invalid"
+    }
+  },
+  "rewards": {
+    "experience": 100
+  }
+}

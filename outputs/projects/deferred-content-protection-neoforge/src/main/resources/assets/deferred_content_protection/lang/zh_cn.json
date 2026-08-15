@@ -1,0 +1,5 @@
+{
+  "deferred_content_protection.protected": "迁移保护中：完整玩法将在后续 OTA 更新中补回。",
+  "deferred_content_protection.blocked": "迁移保护物品：为防止数据丢失，本操作暂时禁用。",
+  "deferred_content_protection.horse_locked": "这匹马携带受保护的迁移数据，物品栏暂时锁定。"
+}

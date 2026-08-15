@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "%7$s валли %6$s-ра чӗрӗлӳ вырӑнне %1$s, %2$s, %3$s [%4$s, %5$s] вырӑнӗнче палӑртнӑ",
+  "commands.spawnpoint.success.multiple.new": "%7$s вӑйӑҫӑ валли %6$s-ра чӗрӗлӳ вырӑнне %1$s, %2$s, %3$s [%4$s, %5$s] вырӑнӗнче палӑртнӑ"
+}

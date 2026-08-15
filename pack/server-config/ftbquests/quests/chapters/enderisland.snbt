@@ -1,0 +1,78 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "enderisland"
+	group: "6B9D1AFD3E45FF4E"
+	icon: {
+		id: "minecraft:purpur_pillar"
+	}
+	id: "273D877EDE86BEE7"
+	images: [{
+		height: 10.24d
+		image: "ftbquests:textures/end_islands.png"
+		rotation: 0.0d
+		width: 21.36d
+		x: -0.5d
+		y: 1.0d
+	}]
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "7DB3025A320096D6"
+			tasks: [{
+				id: "627EF049D666373E"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7DB3025A320096D6"]
+			id: "2DACA9D43F90D423"
+			tasks: [
+				{
+					id: "43D6CD68C3ABB4F5"
+					item: { components: { "patchouli:book": "umapyoi:trainers_manual" }, count: 1, id: "patchouli:guide_book" }
+					type: "item"
+				}
+				{
+					id: "5FE5B696F45D1A9E"
+					item: { count: 1, id: "umapyoi:blank_ticket" }
+					type: "item"
+				}
+				{
+					id: "4C1D0833BBD44A29"
+					item: { count: 1, id: "umapyoi:jewel" }
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["7DB3025A320096D6"]
+			icon: {
+				id: "minecraft:elytra"
+			}
+			id: "4B3863244FB807C3"
+			tasks: [{
+				id: "23B811C7D55ECDF1"
+				item: { components: { "minecraft:potion_contents": { potion: "apothic_attributes:flying" } }, count: 1, id: "minecraft:potion" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			id: "7CD24C618C37D5C2"
+			tasks: [{
+				id: "77D9B940E09477F8"
+				item: { count: 1, id: "l2hostility:chaos_ingot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.5d
+		}
+	]
+}

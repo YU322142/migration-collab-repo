@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "generated_on": "2026-08-15",
+  "status": "HEIGHT_OVERLAY_STATIC_PASS__SAME_WORLD_TRANSITION_BLOCKED",
+  "production_release_status": "BLOCKED_FAIL_CLOSED",
+  "scope": {
+    "changes_world_files": false,
+    "starts_minecraft": false,
+    "replace_files": [
+      "kubejs/data/minecraft/dimension_type/overworld.json"
+    ],
+    "delete_files_with_hash_guard": [
+      "kubejs/data/minecraft/worldgen/dimension_type/overworld.json"
+    ],
+    "forbidden_mutations": [
+      "world/**",
+      "**/region/*.mca",
+      "**/entities/*.mca",
+      "**/poi/*.mca",
+      "level.dat",
+      "server.properties",
+      "kubejs/data/minecraft/dimension/overworld.json",
+      "kubejs/data/minecraft/worldgen/noise_settings/overworld.json"
+    ]
+  },
+  "overworld_height": {
+    "effective_registry_path": "kubejs/data/minecraft/dimension_type/overworld.json",
+    "invalid_stale_path": "kubejs/data/minecraft/worldgen/dimension_type/overworld.json",
+    "min_y": -64,
+    "height": 544,
+    "logical_height": 544,
+    "max_build_y_inclusive": 479,
+    "first_rejected_y": 480,
+    "natural_noise_min_y": -64,
+    "natural_noise_height": 384,
+    "natural_terrain_max_y_inclusive": 319,
+    "upper_build_air_layer": "320..479"
+  },
+  "deployment": {
+    "dedicated_server": "Merge kubejs/** into the stopped server only after the OTA preimage gate passes.",
+    "client": "Ship the same KubeJS data file to the final client so its integrated singleplayer server uses the same 544-height dimension type.",
+    "mcmodsync": "Keep MCModSync disabled during validation. Restore it only in the final client distribution and do not let it downgrade this overlay or the future transition mod.",
+    "stale_path_removal": "Delete only through .ota-delete-list.json after the recorded preimage SHA-256 matches."
+  },
+  "source_locks": {
+    "current_server_root": "D:/Trans/migration-audit-work/mechanomania-attempt13-zip-ota-20260815/mechanomania-matched-runtime-attempt13-20260814",
+    "active_overworld_dimension_type_sha256": "389447CD8C9AFC38E3B3DC509409443E0E7C97F9EE90DAA298FECFC7C8806B49",
+    "invalid_stale_dimension_type_sha256": "F037D47507D099F2BC74D1D6093E3D580EE8E62312AD15F41B46DF4EA801A817",
+    "overworld_dimension_sha256": "FF2B47B821AE51E7455F66E2DF4EFA6A18873A713ED31C34D939D73EC5A27E6C",
+    "overworld_noise_settings_sha256": "402E2754B4361CE21D3B77928199C4762A6A86CC2A2824518337EF4AD68F6DFD",
+    "frontier_dimension_type_sha256": "F924479545C2B69BC3EB8C05D2B495CA609E727802C48FB4A88790035D0A6D26",
+    "frontier_dimension_sha256": "4B71A4C234DD9372F05D037AF2C133252027BF48A64021699B2B85CDACBF602A",
+    "frontier_noise_settings_sha256": "FAAD0612FE7D3555F7CD4A970336A83EA9CBAF59F81AECE1102F965687478E16",
+    "validated_v_height_file_sha256": "7DDDEBFD2936BFEAAC9FC00B792838EEF99B6E5D98FD29DA38530D4E35046E1C"
+  },
+  "protected_zone": {
+    "dimension": "minecraft:overworld",
+    "center": {
+      "x": 10192,
+      "z": -1574
+    },
+    "freeze_radius_blocks": 1536,
+    "strict_intersecting_chunks": 29305,
+    "terrain_and_biome_slots": "Use the already generated and frozen V donor slots through the slot-level OTA tool.",
+    "entities_mca": "Keep C byte-identical.",
+    "outside_selected_slots": "Keep C byte-identical.",
+    "overlay_effect": "The height file changes registry bounds only; it does not regenerate, replace, or decorate any chunk."
+  },
+  "same_overworld_transition": {
+    "activation": "BLOCKED",
+    "requires_both_side_neoforge_mod": true,
+    "not_implemented_by_this_overlay": true,
+    "frozen_mask": "All occupied chunks in the final stopped C snapshot UNION the strict 29,305 protected-zone chunks.",
+    "bands_in_blocks_from_frozen_mask": {
+      "write_fence_and_boundary_anchor": "inside F and all cross-boundary writes",
+      "vanilla_apron": "0..1024",
+      "continuous_blend": "1024..4096",
+      "full_mechanomania_tectonic": ">=4096"
+    },
+    "required_components": [
+      "Immutable frozen-mask manifest bound to the final stopped C snapshot SHA set",
+      "Offline boundary-condition atlas derived from final C heightmaps, fluids and biome cells",
+      "Custom distance_to_frozen_mask density-function codec",
+      "544-height composite NoiseBasedChunkGenerator using vanilla 384-height density padded with air and the isolated Tectonic 544-height density",
+      "Coordinate-aware biome source and spatial gates for carvers, features, ores and structures",
+      "World-generation write fence that rejects any placement into F",
+      "Deterministic registry and artifact hashes shared by server and client"
+    ],
+    "release_gates": {
+      "transition_mod_built_and_source_archived": "PENDING",
+      "frozen_mask_manifest_from_final_c": "PENDING",
+      "boundary_condition_atlas_from_final_c": "PENDING",
+      "registry_codec_load_two_restarts": "PENDING",
+      "protected_v_slots_match_manifest": "PENDING",
+      "all_existing_c_slots_byte_identical_after_dry_run": "PENDING",
+      "boundary_height_fluid_biome_structure_audit": "PENDING",
+      "far_field_full_tectonic_semantic_audit": "PENDING",
+      "server_client_handshake_and_singleplayer": "PENDING",
+      "rollback_cas_negative_tests": "PENDING"
+    },
+    "safe_fallback": "Keep the current Overworld generator vanilla-compatible and use the already namespace-isolated mechanomania_frontier:frontier dimension for complete Tectonic terrain. This fallback is safe but does not satisfy the requested same-Overworld far field."
+  }
+}

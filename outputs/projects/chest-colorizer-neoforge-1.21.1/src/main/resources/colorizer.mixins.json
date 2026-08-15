@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.immortaldevs.colorizer.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "net.immortaldevs.colorizer.ColorizerMixinPlugin",
+  "client": [
+    "BlockMixin",
+    "ChestRendererMixin",
+    "ItemMixin",
+    "SectionCompilerMixin",
+    "sodium.LevelSliceMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

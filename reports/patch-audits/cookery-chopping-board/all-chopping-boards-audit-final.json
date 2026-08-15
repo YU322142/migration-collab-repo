@@ -1,0 +1,299 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "world": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world",
+  "target_id": "kaleidoscope_cookery:chopping_board",
+  "workers": 12,
+  "region_files": 1981,
+  "chunks": 1382351,
+  "block_entities": 237399,
+  "empty_region_placeholders": 94,
+  "match_count": 9,
+  "exact_empty_air_count": 9,
+  "air_nonempty_or_progress_count": 0,
+  "missing_model_count": 0,
+  "matches": [
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -423,
+        "x": -244,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -420,
+        "x": -244,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -427,
+        "x": -241,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -424,
+        "x": -241,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -421,
+        "x": -241,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 912,
+      "value": {
+        "CurrentCutStack": {},
+        "z": -63,
+        "x": -246,
+        "ResultItem": {},
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 64,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-7.-4.mca",
+      "slot": 88,
+      "value": {
+        "z": -2001,
+        "x": -3190,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 102,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.2.-10.mca",
+      "slot": 55,
+      "value": {
+        "CurrentCutStack": {},
+        "z": -5102,
+        "x": 1405,
+        "ResultItem": {},
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 67,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.53.-26.mca",
+      "slot": 876,
+      "value": {
+        "CurrentCutStack": {},
+        "z": -12875,
+        "x": 27332,
+        "ResultItem": {},
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 62,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0
+      }
+    }
+  ],
+  "exact_empty_air": [
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -423,
+        "x": -244,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -420,
+        "x": -244,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -427,
+        "x": -241,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -424,
+        "x": -241,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 176,
+      "value": {
+        "z": -421,
+        "x": -241,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 65,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "slot": 912,
+      "value": {
+        "CurrentCutStack": {},
+        "z": -63,
+        "x": -246,
+        "ResultItem": {},
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 64,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-7.-4.mca",
+      "slot": 88,
+      "value": {
+        "z": -2001,
+        "x": -3190,
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 102,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0,
+        "components": {}
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.2.-10.mca",
+      "slot": 55,
+      "value": {
+        "CurrentCutStack": {},
+        "z": -5102,
+        "x": 1405,
+        "ResultItem": {},
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 67,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0
+      }
+    },
+    {
+      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.53.-26.mca",
+      "slot": 876,
+      "value": {
+        "CurrentCutStack": {},
+        "z": -12875,
+        "x": 27332,
+        "ResultItem": {},
+        "MaxCutCount": 0,
+        "id": "kaleidoscope_cookery:chopping_board",
+        "y": 62,
+        "CurrentCutCount": 0,
+        "ModelId": "minecraft:air",
+        "keepPacked": 0
+      }
+    }
+  ],
+  "air_nonempty_or_progress": [],
+  "missing_model": [],
+  "errors": [],
+  "failures": []
+}

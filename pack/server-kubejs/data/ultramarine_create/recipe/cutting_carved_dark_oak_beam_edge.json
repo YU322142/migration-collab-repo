@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:stripped_dark_oak_log"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:carved_dark_oak_beam_edge"
+    }
+  ]
+}

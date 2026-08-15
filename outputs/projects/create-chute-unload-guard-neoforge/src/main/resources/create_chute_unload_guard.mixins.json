@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.migration.create_chute_unload_guard.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ChuteBlockEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

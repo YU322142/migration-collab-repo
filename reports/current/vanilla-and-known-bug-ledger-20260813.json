@@ -1,0 +1,1308 @@
+{
+  "schema": 1,
+  "ledger_id": "vanilla-and-known-bug-ledger-20260813",
+  "generated_date": "2026-08-13",
+  "status": "NO_GO_FINAL_RUNTIME_GATES_PENDING",
+  "scope": {
+    "source_version": "Minecraft 1.21.11 Fabric",
+    "target_version": "Minecraft 1.21.1 NeoForge 21.1.241",
+    "mode": "existing-evidence-only",
+    "world_rescan_performed": false,
+    "java_started": false,
+    "source_modified": false,
+    "staging_modified": false,
+    "release_modified": false
+  },
+  "classification_definitions": {
+    "fixed": "修复实现与定向证据已闭环；合入最终大包后仍必须做回归，不能把历史 PASS 当作新包 PASS。",
+    "data_safe_gameplay_runtime_pending": "注册/载体/转换/保护层已防止静默丢数据，但完整玩法或真实多人/音画实测尚未闭环。",
+    "unfinished": "尚缺可发布的有界实现、映射或幂等修复；发布门禁保持阻断。"
+  },
+  "summary": {
+    "new_vanilla_identifiers": {
+      "seen": 50,
+      "functional_backport_present": 49,
+      "protected_carrier_only": 1,
+      "classification_counts": {
+        "fixed": 39,
+        "data_safe_gameplay_runtime_pending": 11
+      }
+    },
+    "latest_dryrun": {
+      "players": 112,
+      "entities": 73117,
+      "region_files": 5727,
+      "player_item_stacks_scanned": 2444,
+      "entity_item_stacks_scanned": 33231,
+      "block_entity_item_stacks_scanned": 2282,
+      "trial_spawner_conversions": 8705,
+      "attribute_aliases": 211551,
+      "item_component_aliases": 2278,
+      "unsupported_player_items": 0,
+      "unsupported_entity_items": 0,
+      "unsupported_entities": 0,
+      "unsupported_equipment": 0,
+      "unsupported_attributes": 0,
+      "unsupported_game_rules": 0,
+      "unsupported_create_fluids": 0,
+      "malformed_players": 0,
+      "malformed_regions": 0,
+      "qualification": "5 个 source-present Create schematic 在该 dry-run 目标中缺外部依赖，另有 3 个 source-inherited missing；已单列 unfinished，不能写成全局零 blocker。"
+    },
+    "villagers": {
+      "source_villagers": 1216,
+      "trades": 927,
+      "duplicate_uuids": 0,
+      "final_deep_compare_pending_newest": 23
+    },
+    "known_issue_rows": 20,
+    "known_issue_classification_counts": {
+      "data_safe_gameplay_runtime_pending": 7,
+      "fixed": 10,
+      "unfinished": 3
+    },
+    "blocking_release_gates": 7
+  },
+  "evidence_locks": [
+    {
+      "path": "D:\\Trans\\migration-audit-work\\feature-id-audit.json",
+      "bytes": 12460,
+      "sha256": "F7101938CF6C14972D4217E93E55D898C3C65820290961EB5F49F89AE26866DA"
+    },
+    {
+      "path": "outputs/incoming-20260811-world-dryrun-candidate13-20260812.json",
+      "bytes": 105873429,
+      "sha256": "CD34C9AE8B8EB4E0EF74836CFF594615EE0F20D8E043533643F85C7CC3ABD244"
+    },
+    {
+      "path": "D:\\Trans\\migration-audit-work\\incoming-20260811-villagers-source-baseline-20260812.json",
+      "bytes": 2033500,
+      "sha256": "07DA5802FD834049D76B5EF860CA3192303BD00692AF08D70E50B146C1DB51F8"
+    },
+    {
+      "path": "outputs/nautilus-body-lifecycle-smoke-20260809.md",
+      "bytes": 3741,
+      "sha256": "FBC85CBC142FAA79F0A15B769253F775C73D19DE96D24749D7BF7323C2990670"
+    },
+    {
+      "path": "outputs/happyghast-stat-audit-20260811.json",
+      "bytes": 545030,
+      "sha256": "3D19A428DBB972BBCD925B70C748650DF093F1DA9549C46CE048A375FE543E39"
+    },
+    {
+      "path": "outputs/waypoint-fire-engineering-closure-20260809.md",
+      "bytes": 12438,
+      "sha256": "7F8D9145470D790137A24CAF4E16DBD7DDF0F138466D5EBC97259A5DD62ED21C"
+    },
+    {
+      "path": "outputs/waypoint-op-join-gate-20260811.json",
+      "bytes": 3323,
+      "sha256": "B6227801A6B2E456087B7078905B91B65B812828B071075368157018CB77BA93"
+    },
+    {
+      "path": "outputs/candidate14-netherite-horse-armor-ledger-baseline-20260812.json",
+      "bytes": 3020,
+      "sha256": "671C3EABE08F5536DCECF2127AFE0D8A65BB47EF76CEA874266B682BA615695F"
+    },
+    {
+      "path": "outputs/candidate14-deferred-item-ledger-current-20260812.json",
+      "bytes": 2518,
+      "sha256": "EC3BC83BEAF885ADBC23C4763F4D4B25D3AC99CBE319F9F313F615E790CB219C"
+    },
+    {
+      "path": "outputs/candidate13-scarecrow-compat-build-audit-20260812.json",
+      "bytes": 6580,
+      "sha256": "95EBDA34D33D1E21E6A3ECA8169E656335E2774D438DD5708E98DEAF818E307B"
+    },
+    {
+      "path": "outputs/create-carriage-orientation-guard-p02-audit-20260813.md",
+      "bytes": 3827,
+      "sha256": "564B0AF0E84C100B8876B872260F7D1AAB8C98E810350E274340011435A62B91"
+    },
+    {
+      "path": "outputs/candidate11-chute-guard-stress-20260811.json",
+      "bytes": 29008,
+      "sha256": "C06B099824E6CA6A176DD60CF96D9D5093CADF66A0323AE9E685CB5AE356B38B"
+    },
+    {
+      "path": "outputs/candidate14-server-recipe-book-stale-allowlist-20260812.json",
+      "bytes": 4785,
+      "sha256": "D4EB4F372F79E4B1C546C6979EBAC181DFA3EFFA03B718228818E6E759E4FF70"
+    },
+    {
+      "path": "outputs/candidate14-server-recipe-book-stale-compat-20260812.md",
+      "bytes": 2078,
+      "sha256": "8B1C5ACD968BF68F430F71753BD829DB73CD20A1A81154068C09FEF676836ADA"
+    },
+    {
+      "path": "outputs/known-minor-errors-candidate11-candidate8n-20260812.md",
+      "bytes": 8051,
+      "sha256": "E92C53F8261D66DB5071187F5E0E8064699D7152299CC03434251C4E803EDEC3"
+    },
+    {
+      "path": "outputs/candidate13-resource-closure-20260812/build-report.json",
+      "bytes": 3686,
+      "sha256": "D1147E82D3B9438C609299B557BF5FB64ADB5BD7330296D9D8C1F169B4C3876E"
+    },
+    {
+      "path": "outputs/immersive-paintings-render-closure-20260810.md",
+      "bytes": 3211,
+      "sha256": "EDDA098852CE99F05DBF88B2DFD8628813CE4D936E80465DB8228E785DDE6D6D"
+    },
+    {
+      "path": "outputs/candidate14-ota-repairability-contract-20260812.json",
+      "bytes": 29322,
+      "sha256": "99CF24314AA87EEA54C544EB54B7D49192BFD4A7CCAF4C3AED7C2958367A2750"
+    },
+    {
+      "path": "outputs/candidate14-ota-repairability-validation-20260812.json",
+      "bytes": 651,
+      "sha256": "4F86BFC2C8E99CBC4D5C7663BA3F0C04BD410A431440E143792CB21E47240B13"
+    },
+    {
+      "path": "outputs/incoming-20260811-create-fluid-source-audit-v3.json",
+      "bytes": 541159,
+      "sha256": "554601BFD4E1FFE64CC504C6912C42016AD2CA49FED5D95CCE6B98A513D39A71"
+    },
+    {
+      "path": "outputs/migration-current-status-and-todo-20260813.md",
+      "bytes": 5375,
+      "sha256": "514016C7DC13A6155ABF4B818F02F0C3BCC9F0A7EBFBE7027075EF080ED3FA2F"
+    },
+    {
+      "path": "outputs/player-item-components-audit-20260809.md",
+      "bytes": 14701,
+      "sha256": "5A477D85D3FF21F25FC1B6B2F6DC28750683E95A753E2641C077DB98F099E2EC"
+    },
+    {
+      "path": "outputs/tools/convert_world_nbt.py",
+      "bytes": 234274,
+      "sha256": "9ED51DF76AFE74D811F973169C2A26A4AEFEC2ECE22ABE33F2FAC00ADA078307"
+    },
+    {
+      "path": "outputs/tools/convert_create_saveddata.py",
+      "bytes": 91100,
+      "sha256": "E0A5D46760DA52AC5F33A9B4DEAA13D639C5DA91E71C6261D82CBE555621174A"
+    }
+  ],
+  "new_vanilla_identifiers": [
+    {
+      "id": "minecraft:leaf_litter",
+      "source_chunk_presence": 123162,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:wildflowers",
+      "source_chunk_presence": 51610,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:firefly_bush",
+      "source_chunk_presence": 7087,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:tall_dry_grass",
+      "source_chunk_presence": 6510,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:short_dry_grass",
+      "source_chunk_presence": 6505,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_garden",
+      "source_chunk_presence": 1728,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_leaves",
+      "source_chunk_presence": 1720,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_log",
+      "source_chunk_presence": 1570,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:dried_ghast",
+      "source_chunk_presence": 507,
+      "coverage": "functional_backport_present",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "cluster": "happy_ghast",
+      "note": "兼容实现与统计 ID 已进入候选；真实骑乘、相机、声音、渲染和多人矩阵待实测。"
+    },
+    {
+      "id": "minecraft:cactus_flower",
+      "source_chunk_presence": 455,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:creaking_heart",
+      "source_chunk_presence": 131,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_planks",
+      "source_chunk_presence": 116,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:nautilus_shell",
+      "source_chunk_presence": 57,
+      "coverage": "functional_backport_present",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "cluster": "nautilus",
+      "note": "注册/存档与 BODY 生命周期有证据；完整交互、生成、音画和多人矩阵待实测。"
+    },
+    {
+      "id": "minecraft:golden_spear",
+      "source_chunk_presence": 51,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:copper_leggings",
+      "source_chunk_presence": 40,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:copper_helmet",
+      "source_chunk_presence": 39,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:copper_chestplate",
+      "source_chunk_presence": 36,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_fence",
+      "source_chunk_presence": 31,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:copper_boots",
+      "source_chunk_presence": 28,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:nautilus",
+      "source_chunk_presence": 23,
+      "coverage": "functional_backport_present",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "cluster": "nautilus",
+      "note": "注册/存档与 BODY 生命周期有证据；完整交互、生成、音画和多人矩阵待实测。"
+    },
+    {
+      "id": "minecraft:pale_oak_trapdoor",
+      "source_chunk_presence": 21,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:zombie_nautilus",
+      "source_chunk_presence": 18,
+      "coverage": "functional_backport_present",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "cluster": "nautilus",
+      "note": "注册/存档与 BODY 生命周期有证据；完整交互、生成、音画和多人矩阵待实测。"
+    },
+    {
+      "id": "minecraft:pale_oak_wall_sign",
+      "source_chunk_presence": 14,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_slab",
+      "source_chunk_presence": 12,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:iron_spear",
+      "source_chunk_presence": 12,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_fence_gate",
+      "source_chunk_presence": 12,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_sapling",
+      "source_chunk_presence": 11,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_button",
+      "source_chunk_presence": 8,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_door",
+      "source_chunk_presence": 6,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_sign",
+      "source_chunk_presence": 6,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:copper_nautilus_armor",
+      "source_chunk_presence": 5,
+      "coverage": "functional_backport_present",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "cluster": "nautilus",
+      "note": "注册/存档与 BODY 生命周期有证据；完整交互、生成、音画和多人矩阵待实测。"
+    },
+    {
+      "id": "minecraft:stripped_pale_oak_log",
+      "source_chunk_presence": 5,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:happy_ghast",
+      "source_chunk_presence": 4,
+      "coverage": "functional_backport_present",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "cluster": "happy_ghast",
+      "note": "兼容实现与统计 ID 已进入候选；真实骑乘、相机、声音、渲染和多人矩阵待实测。"
+    },
+    {
+      "id": "minecraft:shelf",
+      "source_chunk_presence": 4,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_shelf",
+      "source_chunk_presence": 4,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:stone_spear",
+      "source_chunk_presence": 4,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_boat",
+      "source_chunk_presence": 4,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pink_harness",
+      "source_chunk_presence": 3,
+      "coverage": "functional_backport_present",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "cluster": "happy_ghast",
+      "note": "兼容实现与统计 ID 已进入候选；真实骑乘、相机、声音、渲染和多人矩阵待实测。"
+    },
+    {
+      "id": "minecraft:copper_axe",
+      "source_chunk_presence": 3,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_stairs",
+      "source_chunk_presence": 2,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:diamond_spear",
+      "source_chunk_presence": 2,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:iron_nautilus_armor",
+      "source_chunk_presence": 2,
+      "coverage": "functional_backport_present",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "cluster": "nautilus",
+      "note": "注册/存档与 BODY 生命周期有证据；完整交互、生成、音画和多人矩阵待实测。"
+    },
+    {
+      "id": "minecraft:resin_clump",
+      "source_chunk_presence": 2,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:blue_harness",
+      "source_chunk_presence": 1,
+      "coverage": "functional_backport_present",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "cluster": "happy_ghast",
+      "note": "兼容实现与统计 ID 已进入候选；真实骑乘、相机、声音、渲染和多人矩阵待实测。"
+    },
+    {
+      "id": "minecraft:netherite_horse_armor",
+      "source_chunk_presence": 1,
+      "coverage": "protected_carrier_only",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "cluster": "netherite_horse_armor",
+      "note": "载体与操作防呆已存在；完整模型、配方和装备玩法尚未实现。"
+    },
+    {
+      "id": "minecraft:pale_oak_pressure_plate",
+      "source_chunk_presence": 1,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:pale_oak_hanging_sign",
+      "source_chunk_presence": 1,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:copper_shovel",
+      "source_chunk_presence": 1,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    },
+    {
+      "id": "minecraft:diamond_nautilus_armor",
+      "source_chunk_presence": 1,
+      "coverage": "functional_backport_present",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "cluster": "nautilus",
+      "note": "注册/存档与 BODY 生命周期有证据；完整交互、生成、音画和多人矩阵待实测。"
+    },
+    {
+      "id": "minecraft:netherite_spear",
+      "source_chunk_presence": 1,
+      "coverage": "functional_backport_present",
+      "classification": "fixed",
+      "cluster": "content_backport",
+      "note": "存在功能性 backport；仍必须在最终合包中重做注册表、资源与保存重启门禁。"
+    }
+  ],
+  "items": [
+    {
+      "id": "vanilla.new_registry_ids",
+      "title": "50 个 1.21.1 后新增原版 ID",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "evidence": [
+        "D:\\Trans\\migration-audit-work\\feature-id-audit.json",
+        "outputs/migration-current-status-and-todo-20260813.md"
+      ],
+      "accomplished": [
+        "识别到 50/50 个实际出现 ID",
+        "49/50 有功能性 backport",
+        "1/50 由安全载体保活"
+      ],
+      "remaining": [
+        "最终合包注册表 dump",
+        "双轮保存重启",
+        "四个玩法簇的人工矩阵"
+      ],
+      "artifact_sha256": null,
+      "ota": {
+        "class": "both_side_mod_update",
+        "delivery": "成对更新 backport/兼容 JAR；客户端由 MCModSync 退出后更新，服务端短停同步替换",
+        "world_mutation_allowed": false,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "50 个 ID 全部可解析",
+        "没有 Invalid item/entity/block",
+        "安全载体与完整实现不得共存"
+      ]
+    },
+    {
+      "id": "vanilla.nautilus",
+      "title": "Nautilus / Zombie Nautilus",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "evidence": [
+        "outputs/nautilus-body-lifecycle-smoke-20260809.md",
+        "outputs/incoming-20260811-world-dryrun-candidate13-20260812.json"
+      ],
+      "accomplished": [
+        "canonical ID 与资源存在",
+        "BODY 装备即时替换/清空/保存重启与属性生命周期通过",
+        "最新 dry-run 的实体/装备未知项为 0"
+      ],
+      "remaining": [
+        "41 个源实体逐个对账",
+        "GUI/交互/骑乘冲刺/繁殖/自然生成/僵尸骑手/掉落/发射器/剪切",
+        "声音/渲染/多人同步"
+      ],
+      "artifact_sha256": "01EBD831AC5D12D60965168EE10887FB9DE81CE660341F420D0C51E9A1E33415",
+      "ota": {
+        "class": "both_side_mod_update",
+        "delivery": "发布新的 Nautilus 成对 JAR；若需要改旧 NBT，另附幂等 server datafix 与 sidecar",
+        "world_mutation_allowed": true,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "41/41 fixture 通过",
+        "两名真实客户端通过",
+        "保存重启后 BODY/乘客/Owner/Brain 不漂移"
+      ]
+    },
+    {
+      "id": "vanilla.happy_ghast",
+      "title": "Happy Ghast",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "evidence": [
+        "outputs/happyghast-stat-audit-20260811.json",
+        "outputs/migration-current-status-and-todo-20260813.md"
+      ],
+      "accomplished": [
+        "兼容 JAR 已进入基线",
+        "happy_ghast_one_cm 统计 ID 已识别",
+        "存档 ID 不因缺注册表被静默丢弃"
+      ],
+      "remaining": [
+        "真实多人骑乘",
+        "相机/家锚/声音/模型/动画",
+        "运行时注册表 dump 与保存重启"
+      ],
+      "artifact_sha256": "36C1CE14EE18B81C04654F1A6956F2257B7DEAC07746E960475AAF5C6F25A579",
+      "ota": {
+        "class": "both_side_mod_update",
+        "delivery": "成对替换 Happy Ghast 兼容 JAR，客户端通过 MCModSync，服务端短停同步",
+        "world_mutation_allowed": false,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "注册表 dump 含实体与统计 ID",
+        "两客户端骑乘/重连/维度切换",
+        "无 passenger/owner/stat 丢失"
+      ]
+    },
+    {
+      "id": "vanilla.locator_bar",
+      "title": "Locator Bar / Waypoint 显示语义",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "evidence": [
+        "outputs/waypoint-fire-engineering-closure-20260809.md",
+        "outputs/waypoint-op-join-gate-20260811.json"
+      ],
+      "accomplished": [
+        "服务端规则、属性跟踪、颜色/位置语义和保存重启已有 smoke",
+        "高权限命令树修复并真实入服 PASS"
+      ],
+      "remaining": [
+        "官方数据驱动 waypoint_style_asset 与 sprites",
+        "双真实客户端、GUI scale、shader/resource pack",
+        "Geyser/Bedrock 路径与像素对比"
+      ],
+      "artifact_sha256": "86A85C0447315AC17D373E3708425CEB8450D9D0CB1FD9C7ABDC82CE8D8E5B92",
+      "ota": {
+        "class": "both_side_mod_update",
+        "delivery": "成对更新 Waypoint 兼容 JAR；纯 sprite 修复可走客户端资源 overlay",
+        "world_mutation_allowed": false,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "双客户端 add/update/remove/reconnect/dimension matrix",
+        "不同缩放与 spectator/invisibility/team matrix",
+        "无非官方协议漂移"
+      ]
+    },
+    {
+      "id": "vanilla.netherite_horse_armor",
+      "title": "Netherite Horse Armor",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "evidence": [
+        "outputs/candidate14-netherite-horse-armor-ledger-baseline-20260812.json",
+        "outputs/candidate14-deferred-item-ledger-current-20260812.json"
+      ],
+      "accomplished": [
+        "源与 staging 的同一匹马/同一物品已锁定",
+        "保护载体阻止危险操作与静默吞物",
+        "稳定 owner UUID、栈哈希和路径别名已记录"
+      ],
+      "remaining": [
+        "完整物品模型/配方/属性/装备交互",
+        "两轮运行后栈与 owner 精确对账",
+        "用完整实现替换载体"
+      ],
+      "artifact_sha256": "1C7C4B2A76978C563C18EE05ABA9292099E6B15BA920CF2699904068F0B1104B",
+      "ota": {
+        "class": "both_side_mod_update",
+        "delivery": "先成对发布完整实现，再短停服务端；同一次 release 原子移除保护载体，禁止二者共存",
+        "world_mutation_allowed": false,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "round1/round2 owner UUID 与 stack hash 不变",
+        "完整装备/卸下/死亡掉落/漏斗等防呆矩阵",
+        "carrier_and_full_implementation_never_coexist"
+      ]
+    },
+    {
+      "id": "converter.player_attributes",
+      "title": "玩家专属属性 namespace 与全量属性迁移",
+      "classification": "fixed",
+      "evidence": [
+        "outputs/known-minor-errors-candidate11-candidate8n-20260812.md",
+        "outputs/incoming-20260811-world-dryrun-candidate13-20260812.json",
+        "outputs/tools/convert_world_nbt.py"
+      ],
+      "accomplished": [
+        "7 个 player.* namespace 修正",
+        "211,551 条属性别名转换",
+        "unsupported_attributes=0"
+      ],
+      "remaining": [
+        "最终合包 fresh conversion 后注册表/保存重启复验"
+      ],
+      "artifact_sha256": null,
+      "ota": {
+        "class": "server_only_data_migration",
+        "delivery": "停服副本上执行当前幂等转换器；客户端无单独修复动作",
+        "world_mutation_allowed": true,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "unsupported_attributes=0",
+        "七个错误 generic.* 计数为 0",
+        "二次转换无变化"
+      ]
+    },
+    {
+      "id": "converter.trial_spawner",
+      "title": "Trial Spawner Not-a-map 崩溃链",
+      "classification": "fixed",
+      "evidence": [
+        "outputs/incoming-20260811-world-dryrun-candidate13-20260812.json",
+        "outputs/candidate11-chute-guard-stress-20260811.json"
+      ],
+      "accomplished": [
+        "8,705 个配置已结构转换",
+        "最新 dry-run malformed/unsupported region 为 0",
+        "旧 stress 报告中的 Not a map 根因已纳入转换"
+      ],
+      "remaining": [
+        "最终新合包 round1/round2 加载实际试炼区块"
+      ],
+      "artifact_sha256": null,
+      "ota": {
+        "class": "server_only_data_migration",
+        "delivery": "停服副本执行幂等 NBT 转换；需要客户端内容变更时再成对发版",
+        "world_mutation_allowed": true,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "日志无 TrialSpawner Not a map",
+        "强制加载代表性区块",
+        "保存重启后配置结构不漂移"
+      ]
+    },
+    {
+      "id": "server.recipe_book",
+      "title": "玩家 Recipe Book 陈旧 ID",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "evidence": [
+        "outputs/candidate14-server-recipe-book-stale-allowlist-20260812.json",
+        "outputs/candidate14-server-recipe-book-stale-compat-20260812.md"
+      ],
+      "accomplished": [
+        "精确锁定 62 行/41 ID",
+        "确认是 ServerRecipeBook 原生 removed-now 自清理，不是物品/实体拒载"
+      ],
+      "remaining": [
+        "fresh runtime 第一轮精确命中",
+        "优雅保存停服",
+        "第二轮必须为 0"
+      ],
+      "artifact_sha256": null,
+      "ota": {
+        "class": "server_only_data_migration",
+        "delivery": "无需客户端 OTA；服务器短停运行原生 load/save，自清理必须受 exact allowlist 约束",
+        "world_mutation_allowed": true,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "round1 multiset SHA 精确",
+        "round2 zero",
+        "任何新 ID/格式/普通 Server thread ERROR 阻断"
+      ]
+    },
+    {
+      "id": "server.map_banner",
+      "title": "地图旗帜字段 Not a list: null",
+      "classification": "unfinished",
+      "evidence": [
+        "outputs/known-minor-errors-candidate11-candidate8n-20260812.md",
+        "outputs/candidate14-ota-repairability-contract-20260812.json"
+      ],
+      "accomplished": [
+        "已定位为 4 条持久化地图旗帜字段",
+        "修复边界限定为字段级，禁止删除整个地图记录"
+      ],
+      "remaining": [
+        "实现 fail-closed 字段规范化",
+        "保留 map ID、装饰和未知 payload",
+        "幂等夹具、回滚与运行时验证"
+      ],
+      "artifact_sha256": null,
+      "ota": {
+        "class": "server_only_data_migration",
+        "delivery": "服务端短停执行字段级 datafix，写 ledger/sidecar；MCModSync 不能单独修复",
+        "world_mutation_allowed": true,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "4/4 规范化",
+        "地图 ID/装饰/payload hash 不变",
+        "二次运行 no-op",
+        "实机查看地图"
+      ]
+    },
+    {
+      "id": "create.fluids",
+      "title": "Create 流体单位与 potion 小误差",
+      "classification": "fixed",
+      "evidence": [
+        "outputs/incoming-20260811-create-fluid-source-audit-v3.json",
+        "outputs/incoming-20260811-world-dryrun-candidate13-20260812.json"
+      ],
+      "accomplished": [
+        "744 个流体栈已审计",
+        "Create milk 规范为 minecraft:milk",
+        "两条 810 源单位按用户接受策略各转 8 mB，单条误差 +0.5 mB",
+        "unsupported_create_fluids=0"
+      ],
+      "remaining": [
+        "最终 fresh conversion 二次幂等",
+        "代表性管道/容器/药水流体运行验证"
+      ],
+      "artifact_sha256": null,
+      "ota": {
+        "class": "server_only_data_migration",
+        "delivery": "停服副本执行当前 Create saved-data/NBT 转换器；如 codec 改变则成对发兼容 JAR",
+        "world_mutation_allowed": true,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "unsupported_create_fluids=0",
+        "仅允许已审计的两条 nearest conversion",
+        "二次转换 no-op"
+      ]
+    },
+    {
+      "id": "kaleidoscope.scarecrow",
+      "title": "Cookery Scarecrow 旧库存 codec 崩溃",
+      "classification": "fixed",
+      "evidence": [
+        "outputs/candidate13-scarecrow-compat-build-audit-20260812.json"
+      ],
+      "accomplished": [
+        "旧 HandItems/ArmorItems list 转 ItemStackHandler",
+        "slot-3 dragon head 与 UUID/坐标证据锁定",
+        "幂等、错误类型 fail-closed",
+        "隔离构建与单元测试通过"
+      ],
+      "remaining": [
+        "最终合包加入精确 JAR",
+        "真实区块加载、保存重启与交互验收"
+      ],
+      "artifact_sha256": "E06FCFEA1FF76FB22EAD50964C18F22657971E42B6E82F0A2FE844C2F048B463",
+      "ota": {
+        "class": "both_side_mod_update",
+        "delivery": "成对发布 Scarecrow compat JAR；不离线重写整个实体",
+        "world_mutation_allowed": false,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "实体不再拒载",
+        "slot 0..3 物品逐项不变",
+        "保存重启后 handler 结构稳定"
+      ]
+    },
+    {
+      "id": "waypoint.command_tree",
+      "title": "Waypoint 高权限命令树缺参数导致无法入服",
+      "classification": "fixed",
+      "evidence": [
+        "outputs/waypoint-op-join-gate-20260811.json",
+        "outputs/waypoint-fire-engineering-closure-20260809.md"
+      ],
+      "accomplished": [
+        "命令参数注册完成",
+        "permission level 4 真实入服及颜色命令 PASS",
+        "服务端规则保存重启 smoke"
+      ],
+      "remaining": [
+        "在 Mechanomania 最终合包重复高权限入服"
+      ],
+      "artifact_sha256": "86A85C0447315AC17D373E3708425CEB8450D9D0CB1FD9C7ABDC82CE8D8E5B92",
+      "ota": {
+        "class": "both_side_mod_update",
+        "delivery": "成对发布锁定 Waypoint JAR",
+        "world_mutation_allowed": false,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "OP4 join",
+        "命令执行成功",
+        "无命令树同步异常"
+      ]
+    },
+    {
+      "id": "create.chute_unload",
+      "title": "Create Chute 客户端区块卸载竞态",
+      "classification": "fixed",
+      "evidence": [
+        "outputs/candidate11-chute-guard-stress-20260811.json",
+        "outputs/migration-current-status-and-todo-20260813.md"
+      ],
+      "accomplished": [
+        "BOTH-side unload guard 已构建并进入后续基线",
+        "旧 stress round1 已进服；该报告 NO_GO 原因是独立 TrialSpawner 错误，不是 chute guard 失效"
+      ],
+      "remaining": [
+        "最终合包双轮飞行/传送/卸载回归"
+      ],
+      "artifact_sha256": "AC51AEFDDA8437D777B5C8B3E285E9036676D854F7958C6B882807C15BE0910A",
+      "ota": {
+        "class": "both_side_mod_update",
+        "delivery": "成对发布 Create chute guard",
+        "world_mutation_allowed": false,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "无 chute unload NPE/crash",
+        "快速区块卸载/重载",
+        "两轮客户端日志无 Render/System fatal"
+      ]
+    },
+    {
+      "id": "create.carriage_orientation",
+      "title": "Create carriage 小写方向导致 DOWN/崩溃",
+      "classification": "fixed",
+      "evidence": [
+        "outputs/create-carriage-orientation-guard-p02-audit-20260813.md",
+        "outputs/tools/convert_create_saveddata.py"
+      ],
+      "accomplished": [
+        "根因锁定为 case-sensitive enum fallback",
+        "转换器规范化 InitialOrientation",
+        "p0.2 BOTH-side 只读保护，双构建哈希一致",
+        "4 个 carriage 与 16 个 controls 静态对账"
+      ],
+      "remaining": [
+        "从权威源 fresh conversion",
+        "最终 create_tracks.dat 方向全为合法水平大写",
+        "崩溃列车坐标实机加载/驾驶/保存重启"
+      ],
+      "artifact_sha256": "805D6841BD30B514A059B21BEE4B6C70E183CB379CA286032975DCB961D6D74E",
+      "ota": {
+        "class": "both_side_mod_update",
+        "delivery": "服务端先用当前转换器生成新副本，并成对发布 p0.2 guard",
+        "world_mutation_allowed": true,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "4/4 InitialOrientation 大写且水平",
+        "(-98.5,63,-97.7625) 附近列车通过",
+        "round2 无 DOWN/getCounterClockWise 崩溃"
+      ]
+    },
+    {
+      "id": "immersive_paintings.orientation",
+      "title": "Immersive Paintings Rotation/VRotation 冲突",
+      "classification": "fixed",
+      "evidence": [
+        "outputs/immersive-paintings-render-closure-20260810.md"
+      ],
+      "accomplished": [
+        "标量旋转迁移到 VRotation",
+        "127/127 bounded attached entities retained",
+        "两轮 reload/save/stop 通过"
+      ],
+      "remaining": [
+        "最终大合包在真实原画附近重复观察与保存重启"
+      ],
+      "artifact_sha256": "AF4D838434302FF65F676D3A4BE8682666E0CCF95392FCFFFBE33E00D79D8D86",
+      "ota": {
+        "class": "both_side_mod_update",
+        "delivery": "成对发布 patched Immersive Paintings JAR",
+        "world_mutation_allowed": false,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "画框方向/旋转不漂移",
+        "实体不消失",
+        "客户端截图与日志通过"
+      ]
+    },
+    {
+      "id": "immersive_paintings.cache",
+      "title": "Immersive Paintings 图片缓存迁移",
+      "classification": "data_safe_gameplay_runtime_pending",
+      "evidence": [
+        "outputs/migration-current-status-and-todo-20260813.md",
+        "outputs/immersive-paintings-render-closure-20260810.md"
+      ],
+      "accomplished": [
+        "缓存已纳入迁移白名单",
+        "权威集合记录为 87 原图 + 87 缩略图",
+        "组装脚本已有复制/完整性门禁"
+      ],
+      "remaining": [
+        "最终 release 实际携带 87+87",
+        "服务器提供图片且客户端真实显示",
+        "炸服/重启后缓存与实体引用保持"
+      ],
+      "artifact_sha256": null,
+      "ota": {
+        "class": "server_only_data_migration",
+        "delivery": "服务端短停复制权威缓存并做清单校验；客户端渲染 JAR 可成对 OTA",
+        "world_mutation_allowed": true,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "87 original + 87 thumbnails",
+        "零缺图/HTTP/cache error",
+        "重启前后文件清单与画面一致"
+      ]
+    },
+    {
+      "id": "client.resource_assets",
+      "title": "Yuushya / creaking / dragon-tea / blowgun 资源缺失",
+      "classification": "fixed",
+      "evidence": [
+        "outputs/candidate13-resource-closure-20260812/build-report.json",
+        "outputs/known-minor-errors-candidate11-candidate8n-20260812.md",
+        "outputs/immersive-paintings-render-closure-20260810.md"
+      ],
+      "accomplished": [
+        "432 条 form=2 警告有 bounded alias",
+        "5 个坏模型与 23 类贴图引用已定点处理",
+        "creaking_heart 非法 active 状态从派生包移除",
+        "dragon-tea 144 状态与 3 个 blowgun 模型闭环"
+      ],
+      "remaining": [
+        "最终 Mechanomania 合包重新做资源加载",
+        "真实客户端截图",
+        "不把整合包标题/托管 UI 带回"
+      ],
+      "artifact_sha256": "BCCB7D7CF8019D8895A081D563E578712D7CDF93DA0AD9EAFB31067439C62862",
+      "ota": {
+        "class": "client_only_ota",
+        "delivery": "客户端退出后由 MCModSync 更新资源 overlay JAR；不覆盖用户原资源包 ZIP",
+        "world_mutation_allowed": false,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "零 missing model/texture in audited set",
+        "零 Render-thread ERROR/FATAL",
+        "截图检查沉浸画框与代表方块"
+      ]
+    },
+    {
+      "id": "server.advancement_unlocks",
+      "title": "陈旧 Advancement 解锁 ID",
+      "classification": "unfinished",
+      "evidence": [
+        "outputs/known-minor-errors-candidate11-candidate8n-20260812.md",
+        "outputs/candidate14-ota-repairability-contract-20260812.json"
+      ],
+      "accomplished": [
+        "已识别为玩家解锁等价问题，不与物品/区块丢失混淆",
+        "禁止删除整个 advancement/player 文件"
+      ],
+      "remaining": [
+        "建立 exact source-to-target ID map",
+        "无等价项形成有界 waiver",
+        "两轮保存重启与 UI 对账"
+      ],
+      "artifact_sha256": null,
+      "ota": {
+        "class": "server_only_data_migration",
+        "delivery": "服务端短停运行幂等 advancement datafix；MCModSync 不能单独修复",
+        "world_mutation_allowed": true,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "每个旧 ID 都映射或显式 waiver",
+        "玩家进度文件其余字段不变",
+        "第二轮 no-op"
+      ]
+    },
+    {
+      "id": "create.schematic_dependencies",
+      "title": "Create schematic 外部文件依赖",
+      "classification": "unfinished",
+      "evidence": [
+        "outputs/incoming-20260811-world-dryrun-candidate13-20260812.json",
+        "outputs/player-item-components-audit-20260809.md"
+      ],
+      "accomplished": [
+        "5 个源中存在的 schematic 已被 dry-run 定位为目标依赖缺失",
+        "另有 3 个源端本就缺失的引用被区分为 inherited state"
+      ],
+      "remaining": [
+        "最终组装必须复制源中存在的 5 个外部 NBT",
+        "保留 3 个 inherited missing 引用，不伪造内容",
+        "Schematicannon/物品实机打开"
+      ],
+      "artifact_sha256": null,
+      "ota": {
+        "class": "server_only_data_migration",
+        "delivery": "服务器短停复制外部 schematic 目录并锁定哈希；不通过客户端 OTA 猜测文件",
+        "world_mutation_allowed": true,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "5 个 available dependencies 全部存在",
+        "3 个 inherited missing 仍有 ledger",
+        "无新 missing schematic blocker"
+      ]
+    },
+    {
+      "id": "cctweaked.lifecycle_guard",
+      "title": "CC:Tweaked 冷启动/停服超时",
+      "classification": "fixed",
+      "evidence": [
+        "outputs/migration-current-status-and-todo-20260813.md"
+      ],
+      "accomplished": [
+        "受限 startup/shutdown guard 已进入基线",
+        "未放宽普通 Lua 运行超时"
+      ],
+      "remaining": [
+        "最终合包两轮启动/保存/停服与电脑外设检查"
+      ],
+      "artifact_sha256": "6744626E2B43643E9F28C9159FABD7A6A53CDCDEB83AE8252C266F7E987F84F7",
+      "ota": {
+        "class": "both_side_mod_update",
+        "delivery": "成对发布受限 guard",
+        "world_mutation_allowed": false,
+        "requires_new_release_lock": true,
+        "requires_rollback_path": true
+      },
+      "release_gate": [
+        "冷启动和优雅停服无超时",
+        "普通 Lua timeout 策略未被放宽",
+        "电脑数据跨重启保留"
+      ]
+    }
+  ],
+  "release_gates": [
+    {
+      "id": "gate.fresh_authority_conversion",
+      "status": "pending",
+      "blocking": true,
+      "requirements": [
+        "从权威 stopped source 用当前 convert_world_nbt.py 与 convert_create_saveddata.py 重建唯一副本",
+        "转换 marker 绑定当前脚本哈希，不接受旧 marker",
+        "不从运行过的测试世界反向取数"
+      ]
+    },
+    {
+      "id": "gate.static_ledger_and_bundle",
+      "status": "pending",
+      "blocking": true,
+      "requirements": [
+        "新 release lock/manifests 包含所有 required guard/backport/resource artifacts",
+        "server/client side policy 与哈希完全匹配",
+        "保护载体与完整 Netherite Horse Armor 实现不得共存"
+      ]
+    },
+    {
+      "id": "gate.two_round_runtime",
+      "status": "pending",
+      "blocking": true,
+      "requirements": [
+        "round1 启动、OP4 真入服、关键坐标/实体/方块实体加载、save-all flush、优雅停服",
+        "round2 重启重复入服与加载",
+        "unknown registry、Invalid item、TrialSpawner Not a map、scarecrow codec、Create carriage/chute crash 为 0",
+        "recipe-book round1 精确 62/41，round2 为 0"
+      ]
+    },
+    {
+      "id": "gate.real_client_gameplay_matrix",
+      "status": "pending",
+      "blocking": true,
+      "requirements": [
+        "Nautilus、Happy Ghast、Locator Bar、Netherite Horse Armor 分项人工测试",
+        "两名真实客户端、重连、维度切换、不同 GUI scale",
+        "渲染/声音/交互/多人同步均留日志与截图证据"
+      ]
+    },
+    {
+      "id": "gate.paintings_and_resources",
+      "status": "pending",
+      "blocking": true,
+      "requirements": [
+        "Immersive Paintings cache 87 原图 + 87 缩略图",
+        "真实图片显示、方向与重启保持",
+        "审计范围内缺模型/贴图和 Render-thread ERROR/FATAL 为 0"
+      ]
+    },
+    {
+      "id": "gate_unfinished_data_repairs",
+      "status": "pending",
+      "blocking": true,
+      "requirements": [
+        "4 条 map banner 字段级修复完成且幂等",
+        "advancement 旧 ID 映射/waiver 完整",
+        "5 个现存 Create schematic 外部文件复制，3 个继承缺失仅记录不伪造"
+      ]
+    },
+    {
+      "id": "gate.ota_repairability",
+      "status": "pending",
+      "blocking": true,
+      "requirements": [
+        "每个已知问题具有稳定 ID、OTA class、回滚路径和新 release lock",
+        "客户端 JAR/overlay 可由 MCModSync 在退出后更新",
+        "服务端 JAR 和世界/player NBT 不冒充 MCModSync 热更新",
+        "任何未分类 P0/P1 错误均 NO_GO"
+      ]
+    }
+  ],
+  "ota_policy": {
+    "client_only_ota": "客户端退出后更新 client-only JAR/resource overlay；不覆盖用户资源包 ZIP 与 servers.dat。",
+    "both_side_mod_update": "客户端由 MCModSync 更新，服务端必须短停并同步替换；发布新的 paired release lock。",
+    "server_only_data_migration": "服务器短停，在世界副本执行幂等 datafix，写 ledger/sidecar 并保留回滚；MCModSync 不能改世界/player NBT。",
+    "unknown_error_rule": "任何不在总账或批准 allowlist 中的 P0/P1 错误都阻断发布。"
+  },
+  "invariants": {
+    "production_ports_unchanged": {
+      "server": 25566,
+      "rcon": 25575,
+      "query": 25565
+    },
+    "production_server_properties_unchanged": true,
+    "source_and_existing_terrain_never_overwritten": true,
+    "unknown_payloads_preserved_or_sidecarred": true,
+    "no_silent_item_entity_map_or_chunk_deletion": true,
+    "one_authoritative_conversion_and_one_release_lock": true,
+    "no_test_world_as_conversion_baseline": true
+  }
+}

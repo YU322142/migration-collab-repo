@@ -1,0 +1,28 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "tag": "c:crops/carrot"
+    },
+    {
+      "tag": "c:crops/wheat"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:sugar"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 250,
+      "fluid": "minecraft:milk"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "umapyoi:cupcake"
+    }
+  ]
+}

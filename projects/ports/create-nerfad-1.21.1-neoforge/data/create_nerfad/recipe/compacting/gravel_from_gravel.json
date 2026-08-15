@@ -1,0 +1,25 @@
+﻿{
+    "type":  "create:compacting",
+    "heat_requirement":  "heated",
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:gravel"
+                        },
+                        {
+                            "type":  "neoforge:single",
+                            "amount":  200,
+                            "fluid":  "minecraft:lava"
+                        },
+                        {
+                            "type":  "neoforge:single",
+                            "amount":  250,
+                            "fluid":  "minecraft:water"
+                        }
+                    ],
+    "results":  [
+                    {
+                        "count":  64,
+                        "id":  "minecraft:gravel"
+                    }
+                ]
+}

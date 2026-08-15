@@ -1,0 +1,6 @@
+{
+  "values": [
+    { "id": "#c:foods/meat/raw", "required": false },
+    { "id": "#c:foods/meat/cooked", "required": false }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "c:dyes/green"
+    },
+    {
+      "item": "ultramarine:yellow_dye_powder"
+    },
+    {
+      "item": "ultramarine:light_blue_dye_powder"
+    },
+    {
+      "item": "ultramarine:black_dye_powder"
+    },
+    {
+      "item": "ultramarine:gutou_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:green_blue_black_gutou"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:gutou_template"
+    }
+  ]
+}

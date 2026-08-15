@@ -1,0 +1,318 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "storage"
+	group: ""
+	icon: {
+		id: "fxntstorage:backpack"
+	}
+	id: "0BE61D98EC2E6FEF"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			id: "20932F8EF6B8079F"
+			size: 1.5d
+			tasks: [{
+				id: "6064B7D609820625"
+				item: { count: 1, id: "fxntstorage:backpack" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["20932F8EF6B8079F"]
+			id: "09D0347F6E78E24C"
+			size: 1.5d
+			tasks: [{
+				id: "517298F3CA14F8FF"
+				item: { count: 1, id: "fxntstorage:andesite_backpack" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1935B4E78CA9A3F5"]
+			id: "0836F22449A86704"
+			size: 1.5d
+			tasks: [{
+				id: "1D10C0509BCFA2E2"
+				item: { count: 1, id: "fxntstorage:brass_backpack" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0836F22449A86704"]
+			id: "0F23B9317763B185"
+			size: 1.5d
+			tasks: [{
+				id: "0E4AD1DFC81CA8AA"
+				item: { count: 1, id: "fxntstorage:hardened_backpack" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["09D0347F6E78E24C"]
+			id: "1935B4E78CA9A3F5"
+			size: 1.5d
+			tasks: [{
+				id: "1A799CF55F8058A9"
+				item: { count: 1, id: "fxntstorage:copper_backpack" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: -0.5d
+		}
+		{
+			id: "20F9E4DE109479C0"
+			size: 1.5d
+			tasks: [{
+				id: "41D6A21093743570"
+				item: { count: 1, id: "fxntstorage:cardboard_storage_box" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: -6.5d
+		}
+		{
+			id: "702CB70EBD37F818"
+			size: 1.5d
+			tasks: [{
+				id: "33D36CC5479D95DF"
+				item: { count: 1, id: "fxntstorage:storage_box" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -6.5d
+		}
+		{
+			id: "59E5B2E6D939EA20"
+			size: 1.5d
+			tasks: [{
+				id: "3E735E9D9E575E89"
+				item: { count: 1, id: "fxntstorage:andesite_storage_box" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -6.5d
+		}
+		{
+			id: "3B8917D63F205F35"
+			size: 1.5d
+			tasks: [{
+				id: "7FCF0C5F414296EF"
+				item: { count: 1, id: "fxntstorage:copper_storage_box" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: -5.0d
+		}
+		{
+			id: "55413DBB6D11223B"
+			size: 1.5d
+			tasks: [{
+				id: "7736D6F997588C71"
+				item: { count: 1, id: "fxntstorage:brass_storage_box" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -5.0d
+		}
+		{
+			id: "09EDC78020BC08EF"
+			size: 1.5d
+			tasks: [{
+				id: "4619E7692CF2573C"
+				item: { count: 1, id: "fxntstorage:hardened_storage_box" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["0E0AA6FDAB840DA8"]
+			id: "4D6BD2E4119C8D9A"
+			tasks: [{
+				id: "6B479AA23E369E8F"
+				item: { count: 1, id: "fxntstorage:storage_box_capacity_upgrade" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["0E0AA6FDAB840DA8"]
+			id: "3BC395D185D213A8"
+			tasks: [{
+				id: "3B1FDCA394948B36"
+				item: { count: 1, id: "fxntstorage:storage_box_void_upgrade" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 2.5d
+		}
+		{
+			id: "2FA91387415235DC"
+			shape: "square"
+			size: 1.5d
+			tasks: [{
+				id: "44A5989328B89D2C"
+				item: { count: 1, id: "fxntstorage:backpack_blank_upgrade" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["388B206050E58077"]
+			id: "7DF40621D9ECBE60"
+			tasks: [{
+				id: "42935360329CFB22"
+				item: { count: 1, id: "fxntstorage:backpack_magnet_upgrade" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["388B206050E58077"]
+			id: "3282EB41DB52504C"
+			tasks: [{
+				id: "6692AB27D8ADDB5C"
+				item: { count: 1, id: "fxntstorage:backpack_pickblock_upgrade" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["388B206050E58077"]
+			id: "7A3169F8A7713383"
+			tasks: [{
+				id: "267C53421544CCAD"
+				item: { count: 1, id: "fxntstorage:backpack_flight_upgrade" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["388B206050E58077"]
+			id: "2CCE21B461C8DF85"
+			tasks: [{
+				id: "2108024593133656"
+				item: { count: 1, id: "fxntstorage:backpack_itempickup_upgrade" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["388B206050E58077"]
+			id: "1B12A06587207CCB"
+			tasks: [{
+				id: "453ACD90038C323D"
+				item: { count: 1, id: "fxntstorage:backpack_refill_upgrade" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["388B206050E58077"]
+			id: "6B28FC5FC8BCAB87"
+			tasks: [{
+				id: "2C51CCDF22B29F20"
+				item: { count: 1, id: "fxntstorage:backpack_feeder_upgrade" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["388B206050E58077"]
+			id: "717036CE2862E3FF"
+			tasks: [{
+				id: "3181025163C9C5EB"
+				item: { count: 1, id: "fxntstorage:backpack_toolswap_upgrade" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["388B206050E58077"]
+			id: "0F5E82B5594F0725"
+			tasks: [{
+				id: "6CF596C9CED74F91"
+				item: { count: 1, id: "fxntstorage:backpack_falldamage_upgrade" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["2FA91387415235DC"]
+			id: "388B206050E58077"
+			tasks: [{
+				id: "7FBFB25DA5BBCF28"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"2FA91387415235DC"
+				"3049C9B19197AC8E"
+			]
+			id: "0E0AA6FDAB840DA8"
+			tasks: [{
+				id: "596535A955251949"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			id: "3049C9B19197AC8E"
+			shape: "rsquare"
+			size: 1.5d
+			tasks: [{
+				id: "626DE185B1B85BAD"
+				item: { count: 1, id: "fxntstorage:oak_simple_storage_box" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.5d
+		}
+		{
+			id: "604E3A1C6360D0AD"
+			size: 1.5d
+			tasks: [{
+				id: "6C04C560CE2E9925"
+				item: { count: 1, id: "fxntstorage:storage_controller" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 4.0d
+		}
+		{
+			id: "78A87D7101557554"
+			size: 1.5d
+			tasks: [{
+				id: "3601B9F30C89DB09"
+				item: { count: 1, id: "fxntstorage:storage_interface" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 4.0d
+		}
+	]
+}

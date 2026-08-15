@@ -1,0 +1,46 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.95'
+}
+
+group = mod_group_id
+version = mod_version
+
+base {
+    archivesName = 'nautilus-equivalence'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+def tomlProperties = [
+    'loader_version_range', 'mod_license', 'mod_id', 'mod_version',
+    'mod_name', 'mod_authors', 'mod_description', 'neo_version_range',
+    'minecraft_version_range'
+].collectEntries { key -> [key, project.property(key).toString()] }
+
+tasks.named('processResources') {
+    inputs.properties(tomlProperties)
+    exclude 'vb-all/**'
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand(tomlProperties)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.named('jar') {
+    archiveFileName = "nautilus-equivalence-${project.mod_version}.jar"
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}

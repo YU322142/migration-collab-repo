@@ -1,0 +1,28 @@
+{
+    "type":  "kaleidoscope_cookery:pot",
+    "carrier":  {
+                    "tag":  "c:cooked_rice"
+                },
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:beetroot"
+                        },
+                        {
+                            "tag":  "c:raw_mutton"
+                        },
+                        {
+                            "tag":  "c:crops/tomato"
+                        }
+                    ],
+    "result":  {
+                   "id":  "farmersdelight:roasted_mutton_chops"
+               },
+    "stir_fry_count":  3,
+    "time":  200,
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "farmersdelight"
+                                }
+                            ]
+}

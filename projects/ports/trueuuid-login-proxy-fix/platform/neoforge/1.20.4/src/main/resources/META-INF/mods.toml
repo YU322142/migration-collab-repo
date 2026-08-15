@@ -1,0 +1,34 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+displayURL="https://github.com/YuWan-030/TrueUUID"
+logoFile="trueuuid-banner.png"
+authors="${mod_authors}"
+description='''${mod_description}'''
+
+[[mixins]]
+config="trueuuid.mixins.json"
+
+[[dependencies.${mod_id}]]
+modId="neoforge"
+type="required"
+versionRange="${neoforge_version_range}"
+ordering="NONE"
+side="BOTH"
+
+# 1.20.4-era NeoForge still uses META-INF/mods.toml, but its FML parser rejects
+# the older mandatory=true dependency field and requires type="required".
+# 1.20.4 is protocol 765, shared with 1.20.3;
+# see the widen note in build.gradle and target-matrix.md. See also
+# docs/architecture/version-consolidation-roadmap.md.
+[[dependencies.${mod_id}]]
+modId="minecraft"
+type="required"
+versionRange="${minecraft_version_range}"
+ordering="NONE"
+side="BOTH"

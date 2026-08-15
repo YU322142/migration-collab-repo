@@ -1,0 +1,210 @@
+{
+	consume_items: false
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "enderwarped"
+	group: "6B9D1AFD3E45FF4E"
+	icon: {
+		id: "minecraft:warped_nylium"
+	}
+	id: "07793F365C646741"
+	images: [{
+		height: 10.24d
+		image: "ftbquests:textures/end_warped.png"
+		rotation: 0.0d
+		width: 21.38d
+		x: 0.0d
+		y: 0.5d
+	}]
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["75BA253A92043A09"]
+			icon: {
+				id: "kubejs:warped_stem_chlorophyte"
+			}
+			id: "4EE2DA5EC1E8572B"
+			tasks: [{
+				id: "0512FB273C9A35F6"
+				observe_type: 0
+				timer: 0L
+				to_observe: "kubejs:warped_stem_chlorophyte"
+				type: "observation"
+			}]
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			id: "75BA253A92043A09"
+			optional: true
+			tasks: [{
+				id: "0C0C580E2F734E82"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4EE2DA5EC1E8572B"]
+			id: "1E997C93EDDBD107"
+			rewards: [
+				{
+					id: "7C30955C2C78C229"
+					item: {
+						count: 1
+						id: "irons_spellbooks:timeless_slurry"
+					}
+					type: "item"
+				}
+				{
+					id: "148237168F56E44E"
+					item: {
+						count: 1
+						id: "irons_spellbooks:timeless_slurry"
+					}
+					type: "item"
+				}
+				{
+					id: "41F3B78D4A68AF74"
+					item: {
+						count: 1
+						id: "irons_spellbooks:timeless_slurry"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "2C0BE5EBCD4F6941"
+				item: { count: 1, id: "kubejs:chlorophyte_ingot" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["1E997C93EDDBD107"]
+			id: "6D19AEF98157A88F"
+			rewards: [{
+				count: 3
+				id: "5DCB2596441CA373"
+				item: {
+					count: 1
+					id: "l2complements:totemic_apple"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "78B918C42C50B970"
+				item: { count: 1, id: "l2complements:totemic_gold_ingot" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1E997C93EDDBD107"]
+			id: "3DBA88AAE97C7DE8"
+			rewards: [{
+				count: 3
+				id: "24EA2187C8203DD8"
+				item: {
+					count: 1
+					id: "minecraft:turtle_egg"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "278AB38ECCF9EE35"
+				item: { count: 1, id: "l2complements:poseidite_ingot" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1E997C93EDDBD107"]
+			id: "5395E96E8A3E615F"
+			rewards: [{
+				count: 3
+				id: "3E002BDB450360C0"
+				item: {
+					count: 1
+					id: "ends_delight:grilled_shulker"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "74154742DF4CCF9A"
+				item: { count: 1, id: "l2complements:shulkerate_ingot" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["1E997C93EDDBD107"]
+			id: "76FC432622253D0B"
+			rewards: [{
+				count: 3
+				id: "4C7D50B7E25E989B"
+				item: {
+					count: 1
+					id: "l2complements:void_eye"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "56AC1A7F05027D9B"
+				item: { count: 1, id: "l2complements:sculkium_ingot" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6D19AEF98157A88F"]
+			id: "548EEBA7C16661D6"
+			tasks: [{
+				id: "2AB4FEAECEDACF94"
+				item: { count: 1, id: "l2complements:totemic_gold_chestplate" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["3DBA88AAE97C7DE8"]
+			id: "5E7426AF846024EE"
+			tasks: [{
+				id: "450105128C4BDDDB"
+				item: { count: 1, id: "l2complements:poseidite_chestplate" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["5395E96E8A3E615F"]
+			id: "29641835AFA986E4"
+			tasks: [{
+				id: "007AE4E5074F9E55"
+				item: { count: 1, id: "l2complements:shulkerate_chestplate" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["76FC432622253D0B"]
+			id: "605639A83B5AE2B9"
+			tasks: [{
+				id: "6D84C76FF242D49B"
+				item: { count: 1, id: "l2complements:sculkium_chestplate" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 5.0d
+		}
+	]
+}

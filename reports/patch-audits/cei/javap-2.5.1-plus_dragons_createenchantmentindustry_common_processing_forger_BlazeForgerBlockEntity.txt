@@ -1,0 +1,1581 @@
+﻿Compiled from "BlazeForgerBlockEntity.java"
+public class plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerBlockEntity extends plus.dragons.createenchantmentindustry.common.fluids.experience.BlazeExperienceBlockEntity implements net.minecraft.world.Clearable {
+  public static final int FORGING_TIME;
+    descriptor: I
+
+  protected plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerMode mode;
+    descriptor: Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+
+  protected boolean special;
+    descriptor: Z
+
+  protected boolean cursed;
+    descriptor: Z
+
+  protected int processingTime;
+    descriptor: I
+
+  protected final plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerInventory inventory;
+    descriptor: Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+
+  protected plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerModeBehaviour modeSelector;
+    descriptor: Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerModeBehaviour;
+
+  protected plus.dragons.createdragonsplus.common.advancements.AdvancementBehaviour advancement;
+    descriptor: Lplus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour;
+
+  public plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerBlockEntity(net.minecraft.world.level.block.entity.BlockEntityType<?>, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+    descriptor: (Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: aload_3
+       4: invokespecial #1                  // Method plus/dragons/createenchantmentindustry/common/fluids/experience/BlazeExperienceBlockEntity."<init>":(Lnet/minecraft/world/level/block/entity/BlockEntityType;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)V
+       7: aload_0
+       8: getstatic     #7                  // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.MERGE:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      11: putfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      14: aload_0
+      15: iconst_m1
+      16: putfield      #18                 // Field processingTime:I
+      19: aload_0
+      20: new           #22                 // class plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory
+      23: dup
+      24: aload_0
+      25: invokespecial #24                 // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory."<init>":(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;)V
+      28: putfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      31: return
+
+  public net.neoforged.neoforge.fluids.capability.IFluidHandler getFluidHandler(net.minecraft.core.Direction);
+    descriptor: (Lnet/minecraft/core/Direction;)Lnet/neoforged/neoforge/fluids/capability/IFluidHandler;
+    Code:
+       0: aload_1
+       1: getstatic     #31                 // Field net/minecraft/core/Direction.DOWN:Lnet/minecraft/core/Direction;
+       4: if_acmpeq     11
+       7: aload_1
+       8: ifnonnull     26
+      11: aload_0
+      12: invokevirtual #37                 // Method isRemoved:()Z
+      15: ifne          26
+      18: aload_0
+      19: getfield      #41                 // Field tanks:Lplus/dragons/createdragonsplus/common/fluids/tank/FluidTankBehaviour;
+      22: invokevirtual #45                 // Method plus/dragons/createdragonsplus/common/fluids/tank/FluidTankBehaviour.getCapability:()Lnet/neoforged/neoforge/fluids/capability/IFluidHandler;
+      25: areturn
+      26: aconst_null
+      27: areturn
+
+  public void addBehaviours(java.util.List<com.simibubi.create.foundation.blockEntity.behaviour.BlockEntityBehaviour>);
+    descriptor: (Ljava/util/List;)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokespecial #51                 // Method plus/dragons/createenchantmentindustry/common/fluids/experience/BlazeExperienceBlockEntity.addBehaviours:(Ljava/util/List;)V
+       5: aload_0
+       6: new           #55                 // class plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerModeBehaviour
+       9: dup
+      10: aload_0
+      11: new           #57                 // class plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity$ModeTransform
+      14: dup
+      15: invokespecial #59                 // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity$ModeTransform."<init>":()V
+      18: invokespecial #62                 // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerModeBehaviour."<init>":(Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity;Lcom/simibubi/create/foundation/blockEntity/behaviour/ValueBoxTransform;)V
+      21: putfield      #65                 // Field modeSelector:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerModeBehaviour;
+      24: aload_0
+      25: new           #69                 // class plus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour
+      28: dup
+      29: aload_0
+      30: invokespecial #71                 // Method plus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour."<init>":(Lcom/simibubi/create/foundation/blockEntity/SmartBlockEntity;)V
+      33: putfield      #74                 // Field advancement:Lplus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour;
+      36: aload_1
+      37: aload_0
+      38: getfield      #65                 // Field modeSelector:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerModeBehaviour;
+      41: invokeinterface #78,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      46: pop
+      47: aload_1
+      48: aload_0
+      49: getfield      #74                 // Field advancement:Lplus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour;
+      52: invokeinterface #78,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      57: pop
+      58: return
+
+  protected plus.dragons.createdragonsplus.common.fluids.tank.ConfigurableFluidTank createNormalTank(java.util.function.Consumer<net.neoforged.neoforge.fluids.FluidStack>);
+    descriptor: (Ljava/util/function/Consumer;)Lplus/dragons/createdragonsplus/common/fluids/tank/ConfigurableFluidTank;
+    Code:
+       0: new           #84                 // class plus/dragons/createdragonsplus/common/fluids/tank/ConfigurableFluidTank
+       3: dup
+       4: invokestatic  #86                 // Method plus/dragons/createenchantmentindustry/config/CEIConfig.fluids:()Lplus/dragons/createenchantmentindustry/config/CEIFluidsConfig;
+       7: getfield      #92                 // Field plus/dragons/createenchantmentindustry/config/CEIFluidsConfig.blazeForgerFluidCapacity:Lnet/createmod/catnip/config/ConfigBase$ConfigInt;
+      10: invokevirtual #98                 // Method net/createmod/catnip/config/ConfigBase$ConfigInt.get:()Ljava/lang/Object;
+      13: checkcast     #104                // class java/lang/Integer
+      16: invokevirtual #106                // Method java/lang/Integer.intValue:()I
+      19: aload_1
+      20: invokespecial #110                // Method plus/dragons/createdragonsplus/common/fluids/tank/ConfigurableFluidTank."<init>":(ILjava/util/function/Consumer;)V
+      23: invokedynamic #113,  0            // InvokeDynamic #0:test:()Ljava/util/function/Predicate;
+      28: invokevirtual #117                // Method plus/dragons/createdragonsplus/common/fluids/tank/ConfigurableFluidTank.allowInsertion:(Ljava/util/function/Predicate;)Lplus/dragons/createdragonsplus/common/fluids/tank/ConfigurableFluidTank;
+      31: areturn
+
+  protected plus.dragons.createdragonsplus.common.fluids.tank.ConfigurableFluidTank createSpecialTank(java.util.function.Consumer<net.neoforged.neoforge.fluids.FluidStack>);
+    descriptor: (Ljava/util/function/Consumer;)Lplus/dragons/createdragonsplus/common/fluids/tank/ConfigurableFluidTank;
+    Code:
+       0: new           #84                 // class plus/dragons/createdragonsplus/common/fluids/tank/ConfigurableFluidTank
+       3: dup
+       4: invokestatic  #86                 // Method plus/dragons/createenchantmentindustry/config/CEIConfig.fluids:()Lplus/dragons/createenchantmentindustry/config/CEIFluidsConfig;
+       7: getfield      #92                 // Field plus/dragons/createenchantmentindustry/config/CEIFluidsConfig.blazeForgerFluidCapacity:Lnet/createmod/catnip/config/ConfigBase$ConfigInt;
+      10: invokevirtual #98                 // Method net/createmod/catnip/config/ConfigBase$ConfigInt.get:()Ljava/lang/Object;
+      13: checkcast     #104                // class java/lang/Integer
+      16: invokevirtual #106                // Method java/lang/Integer.intValue:()I
+      19: aload_1
+      20: invokespecial #110                // Method plus/dragons/createdragonsplus/common/fluids/tank/ConfigurableFluidTank."<init>":(ILjava/util/function/Consumer;)V
+      23: invokevirtual #121                // Method plus/dragons/createdragonsplus/common/fluids/tank/ConfigurableFluidTank.forbidInsertion:()Lplus/dragons/createdragonsplus/common/fluids/tank/ConfigurableFluidTank;
+      26: areturn
+
+  public boolean isActive();
+    descriptor: ()Z
+    Code:
+       0: aload_0
+       1: getfield      #18                 // Field processingTime:I
+       4: ifle          11
+       7: iconst_1
+       8: goto          12
+      11: iconst_0
+      12: ireturn
+
+  protected dev.engine_room.flywheel.lib.model.baked.PartialModel getHatModel(com.simibubi.create.content.processing.burner.BlazeBurnerBlock$HeatLevel);
+    descriptor: (Lcom/simibubi/create/content/processing/burner/BlazeBurnerBlock$HeatLevel;)Ldev/engine_room/flywheel/lib/model/baked/PartialModel;
+    Code:
+       0: aload_1
+       1: getstatic     #125                // Field com/simibubi/create/content/processing/burner/BlazeBurnerBlock$HeatLevel.FADING:Lcom/simibubi/create/content/processing/burner/BlazeBurnerBlock$HeatLevel;
+       4: invokevirtual #131                // Method com/simibubi/create/content/processing/burner/BlazeBurnerBlock$HeatLevel.isAtLeast:(Lcom/simibubi/create/content/processing/burner/BlazeBurnerBlock$HeatLevel;)Z
+       7: ifeq          16
+      10: getstatic     #135                // Field plus/dragons/createenchantmentindustry/client/model/CEIPartialModels.BLAZE_FORGER_HAT:Ldev/engine_room/flywheel/lib/model/baked/PartialModel;
+      13: goto          19
+      16: getstatic     #141                // Field plus/dragons/createenchantmentindustry/client/model/CEIPartialModels.BLAZE_FORGER_HAT_SMALL:Ldev/engine_room/flywheel/lib/model/baked/PartialModel;
+      19: areturn
+
+  public void write(net.minecraft.nbt.CompoundTag, net.minecraft.core.HolderLookup$Provider, boolean);
+    descriptor: (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;Z)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: iload_3
+       4: invokespecial #144                // Method plus/dragons/createenchantmentindustry/common/fluids/experience/BlazeExperienceBlockEntity.write:(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;Z)V
+       7: aload_1
+       8: ldc           #148                // String ProcessingTime
+      10: aload_0
+      11: getfield      #18                 // Field processingTime:I
+      14: invokevirtual #150                // Method net/minecraft/nbt/CompoundTag.putInt:(Ljava/lang/String;I)V
+      17: aload_1
+      18: ldc           #156                // String ForgingMode
+      20: aload_0
+      21: getfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      24: invokevirtual #158                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.ordinal:()I
+      27: invokevirtual #150                // Method net/minecraft/nbt/CompoundTag.putInt:(Ljava/lang/String;I)V
+      30: aload_1
+      31: ldc           #161                // String Inventory
+      33: aload_0
+      34: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      37: aload_2
+      38: invokevirtual #163                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.serializeNBT:(Lnet/minecraft/core/HolderLookup$Provider;)Lnet/minecraft/nbt/CompoundTag;
+      41: invokevirtual #167                // Method net/minecraft/nbt/CompoundTag.put:(Ljava/lang/String;Lnet/minecraft/nbt/Tag;)Lnet/minecraft/nbt/Tag;
+      44: pop
+      45: return
+
+  protected void read(net.minecraft.nbt.CompoundTag, net.minecraft.core.HolderLookup$Provider, boolean);
+    descriptor: (Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;Z)V
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: iload_3
+       4: invokespecial #171                // Method plus/dragons/createenchantmentindustry/common/fluids/experience/BlazeExperienceBlockEntity.read:(Lnet/minecraft/nbt/CompoundTag;Lnet/minecraft/core/HolderLookup$Provider;Z)V
+       7: aload_0
+       8: aload_1
+       9: ldc           #148                // String ProcessingTime
+      11: invokevirtual #174                // Method net/minecraft/nbt/CompoundTag.getInt:(Ljava/lang/String;)I
+      14: putfield      #18                 // Field processingTime:I
+      17: aload_1
+      18: ldc           #156                // String ForgingMode
+      20: iconst_3
+      21: invokevirtual #180                // Method net/minecraft/nbt/CompoundTag.contains:(Ljava/lang/String;I)Z
+      24: ifeq          51
+      27: aload_0
+      28: getstatic     #184                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.BY_ID:Ljava/util/function/IntFunction;
+      31: aload_1
+      32: ldc           #156                // String ForgingMode
+      34: invokevirtual #174                // Method net/minecraft/nbt/CompoundTag.getInt:(Ljava/lang/String;)I
+      37: invokeinterface #188,  2          // InterfaceMethod java/util/function/IntFunction.apply:(I)Ljava/lang/Object;
+      42: checkcast     #8                  // class plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode
+      45: putfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      48: goto          84
+      51: aload_1
+      52: ldc           #161                // String Inventory
+      54: invokevirtual #194                // Method net/minecraft/nbt/CompoundTag.getCompound:(Ljava/lang/String;)Lnet/minecraft/nbt/CompoundTag;
+      57: astore        4
+      59: aload         4
+      61: ldc           #198                // String Mode
+      63: iconst_3
+      64: invokevirtual #180                // Method net/minecraft/nbt/CompoundTag.contains:(Ljava/lang/String;I)Z
+      67: ifeq          84
+      70: aload_0
+      71: aload         4
+      73: ldc           #198                // String Mode
+      75: invokevirtual #174                // Method net/minecraft/nbt/CompoundTag.getInt:(Ljava/lang/String;)I
+      78: invokestatic  #200                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.fromLegacyOperation:(I)Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      81: putfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      84: aload_0
+      85: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      88: aload_2
+      89: aload_1
+      90: ldc           #161                // String Inventory
+      92: invokevirtual #194                // Method net/minecraft/nbt/CompoundTag.getCompound:(Ljava/lang/String;)Lnet/minecraft/nbt/CompoundTag;
+      95: invokevirtual #204                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.deserializeNBT:(Lnet/minecraft/core/HolderLookup$Provider;Lnet/minecraft/nbt/CompoundTag;)V
+      98: return
+
+  public void initialize();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #208                // Method plus/dragons/createenchantmentindustry/common/fluids/experience/BlazeExperienceBlockEntity.initialize:()V
+       4: return
+
+  public void destroy();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #211                // Method plus/dragons/createenchantmentindustry/common/fluids/experience/BlazeExperienceBlockEntity.destroy:()V
+       4: aload_0
+       5: getfield      #214                // Field level:Lnet/minecraft/world/level/Level;
+       8: ifnull        26
+      11: aload_0
+      12: getfield      #214                // Field level:Lnet/minecraft/world/level/Level;
+      15: aload_0
+      16: getfield      #218                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+      19: aload_0
+      20: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      23: invokestatic  #222                // Method com/simibubi/create/foundation/item/ItemHelper.dropContents:(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/neoforged/neoforge/items/IItemHandler;)V
+      26: return
+
+  public void tick();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: invokespecial #228                // Method plus/dragons/createenchantmentindustry/common/fluids/experience/BlazeExperienceBlockEntity.tick:()V
+       4: iconst_0
+       5: istore_1
+       6: aload_0
+       7: invokevirtual #231                // Method getHeatLevelFromBlock:()Lcom/simibubi/create/content/processing/burner/BlazeBurnerBlock$HeatLevel;
+      10: getstatic     #235                // Field com/simibubi/create/content/processing/burner/BlazeBurnerBlock$HeatLevel.SEETHING:Lcom/simibubi/create/content/processing/burner/BlazeBurnerBlock$HeatLevel;
+      13: if_acmpne     20
+      16: iconst_1
+      17: goto          21
+      20: iconst_0
+      21: istore_2
+      22: aload_0
+      23: getfield      #238                // Field special:Z
+      26: iload_2
+      27: if_icmpeq     37
+      30: aload_0
+      31: iload_2
+      32: putfield      #238                // Field special:Z
+      35: iconst_1
+      36: istore_1
+      37: aload_0
+      38: invokevirtual #242                // Method getStrikePos:()Lnet/minecraft/core/BlockPos;
+      41: astore_3
+      42: iload_2
+      43: ifeq          61
+      46: aload_0
+      47: getfield      #218                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+      50: aload_3
+      51: invokestatic  #246                // Method plus/dragons/createenchantmentindustry/util/BlazeLightningHelper.isStrikeBlocked:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/core/BlockPos;)Z
+      54: ifeq          61
+      57: iconst_1
+      58: goto          62
+      61: iconst_0
+      62: istore        4
+      64: aload_0
+      65: getfield      #252                // Field cursed:Z
+      68: iload         4
+      70: if_icmpeq     81
+      73: aload_0
+      74: iload         4
+      76: putfield      #252                // Field cursed:Z
+      79: iconst_1
+      80: istore_1
+      81: aload_0
+      82: getfield      #214                // Field level:Lnet/minecraft/world/level/Level;
+      85: invokevirtual #255                // Method net/minecraft/world/level/Level.isClientSide:()Z
+      88: ifeq          208
+      91: aload_0
+      92: invokevirtual #260                // Method isVirtual:()Z
+      95: ifeq          208
+      98: iload_1
+      99: ifeq          113
+     102: aload_0
+     103: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+     106: invokevirtual #263                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.updateResult:()V
+     109: aload_0
+     110: invokevirtual #266                // Method notifyUpdate:()V
+     113: aload_0
+     114: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+     117: invokevirtual #269                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getExperienceCost:()I
+     120: istore        5
+     122: iload         5
+     124: ifle          194
+     127: aload_0
+     128: iload         5
+     130: iload_2
+     131: iconst_1
+     132: invokevirtual #272                // Method consumeExperience:(IZZ)Z
+     135: ifeq          194
+     138: aload_0
+     139: getfield      #18                 // Field processingTime:I
+     142: ifge          152
+     145: aload_0
+     146: bipush        50
+     148: putfield      #18                 // Field processingTime:I
+     151: return
+     152: aload_0
+     153: getfield      #18                 // Field processingTime:I
+     156: ifle          170
+     159: aload_0
+     160: dup
+     161: getfield      #18                 // Field processingTime:I
+     164: iconst_1
+     165: isub
+     166: putfield      #18                 // Field processingTime:I
+     169: return
+     170: aload_0
+     171: iload         5
+     173: iload_2
+     174: iconst_0
+     175: invokevirtual #272                // Method consumeExperience:(IZZ)Z
+     178: pop
+     179: aload_0
+     180: iconst_m1
+     181: putfield      #18                 // Field processingTime:I
+     184: aload_0
+     185: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+     188: invokevirtual #276                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.applyResult:()V
+     191: goto          207
+     194: aload_0
+     195: getfield      #18                 // Field processingTime:I
+     198: iconst_m1
+     199: if_icmpeq     207
+     202: aload_0
+     203: iconst_m1
+     204: putfield      #18                 // Field processingTime:I
+     207: return
+     208: aload_0
+     209: getfield      #214                // Field level:Lnet/minecraft/world/level/Level;
+     212: astore        6
+     214: aload         6
+     216: instanceof    #279                // class net/minecraft/server/level/ServerLevel
+     219: ifeq          232
+     222: aload         6
+     224: checkcast     #279                // class net/minecraft/server/level/ServerLevel
+     227: astore        5
+     229: goto          233
+     232: return
+     233: iload_1
+     234: ifeq          248
+     237: aload_0
+     238: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+     241: invokevirtual #263                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.updateResult:()V
+     244: aload_0
+     245: invokevirtual #266                // Method notifyUpdate:()V
+     248: aload_0
+     249: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+     252: invokevirtual #269                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getExperienceCost:()I
+     255: istore        6
+     257: iload         6
+     259: ifle          445
+     262: aload_0
+     263: iload         6
+     265: iload_2
+     266: iconst_1
+     267: invokevirtual #272                // Method consumeExperience:(IZZ)Z
+     270: ifeq          445
+     273: aload_0
+     274: getfield      #18                 // Field processingTime:I
+     277: ifge          292
+     280: aload_0
+     281: sipush        200
+     284: putfield      #18                 // Field processingTime:I
+     287: aload_0
+     288: invokevirtual #266                // Method notifyUpdate:()V
+     291: return
+     292: aload_0
+     293: getfield      #18                 // Field processingTime:I
+     296: ifle          314
+     299: aload_0
+     300: dup
+     301: getfield      #18                 // Field processingTime:I
+     304: iconst_1
+     305: isub
+     306: putfield      #18                 // Field processingTime:I
+     309: aload_0
+     310: invokevirtual #266                // Method notifyUpdate:()V
+     313: return
+     314: iload_2
+     315: ifeq          378
+     318: iload         4
+     320: ifne          378
+     323: aload_0
+     324: aload         5
+     326: aload_3
+     327: invokevirtual #281                // Method strikeLightning:(Lnet/minecraft/server/level/ServerLevel;Lnet/minecraft/core/BlockPos;)Z
+     330: ifeq          378
+     333: aload_0
+     334: getfield      #74                 // Field advancement:Lplus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour;
+     337: getstatic     #285                // Field plus/dragons/createenchantmentindustry/common/registry/CEIAdvancements.OSHA_VIOLATION:Lplus/dragons/createdragonsplus/common/advancements/CDPAdvancement;
+     340: invokevirtual #291                // Method plus/dragons/createdragonsplus/common/advancements/CDPAdvancement.builtinTrigger:()Lplus/dragons/createdragonsplus/common/advancements/criterion/BuiltinTrigger;
+     343: invokevirtual #297                // Method plus/dragons/createdragonsplus/common/advancements/AdvancementBehaviour.trigger:(Lplus/dragons/createdragonsplus/common/advancements/criterion/BuiltinTrigger;)V
+     346: aload         5
+     348: aload_0
+     349: getfield      #218                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+     352: iconst_0
+     353: invokevirtual #301                // Method net/minecraft/server/level/ServerLevel.destroyBlock:(Lnet/minecraft/core/BlockPos;Z)Z
+     356: pop
+     357: aload         5
+     359: aload_0
+     360: getfield      #218                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+     363: getstatic     #305                // Field com/simibubi/create/AllBlocks.LIT_BLAZE_BURNER:Lcom/tterrag/registrate/util/entry/BlockEntry;
+     366: invokevirtual #311                // Method com/tterrag/registrate/util/entry/BlockEntry.getDefaultState:()Lnet/minecraft/world/level/block/state/BlockState;
+     369: invokevirtual #317                // Method net/minecraft/server/level/ServerLevel.setBlockAndUpdate:(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Z
+     372: pop
+     373: aload_0
+     374: invokevirtual #321                // Method setRemoved:()V
+     377: return
+     378: aload_0
+     379: iload         6
+     381: iload_2
+     382: iconst_0
+     383: invokevirtual #272                // Method consumeExperience:(IZZ)Z
+     386: pop
+     387: aload_0
+     388: iconst_m1
+     389: putfield      #18                 // Field processingTime:I
+     392: aload_0
+     393: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+     396: invokevirtual #276                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.applyResult:()V
+     399: aload_0
+     400: invokevirtual #266                // Method notifyUpdate:()V
+     403: aload_0
+     404: getfield      #214                // Field level:Lnet/minecraft/world/level/Level;
+     407: aconst_null
+     408: aload_0
+     409: getfield      #218                // Field worldPosition:Lnet/minecraft/core/BlockPos;
+     412: getstatic     #324                // Field net/minecraft/sounds/SoundEvents.ANVIL_USE:Lnet/minecraft/sounds/SoundEvent;
+     415: getstatic     #330                // Field net/minecraft/sounds/SoundSource.BLOCKS:Lnet/minecraft/sounds/SoundSource;
+     418: fconst_1
+     419: aload_0
+     420: getfield      #214                // Field level:Lnet/minecraft/world/level/Level;
+     423: getfield      #336                // Field net/minecraft/world/level/Level.random:Lnet/minecraft/util/RandomSource;
+     426: invokeinterface #340,  1          // InterfaceMethod net/minecraft/util/RandomSource.nextFloat:()F
+     431: ldc_w         #346                // float 0.1f
+     434: fmul
+     435: ldc_w         #347                // float 0.9f
+     438: fadd
+     439: invokevirtual #348                // Method net/minecraft/world/level/Level.playSound:(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/core/BlockPos;Lnet/minecraft/sounds/SoundEvent;Lnet/minecraft/sounds/SoundSource;FF)V
+     442: goto          462
+     445: aload_0
+     446: getfield      #18                 // Field processingTime:I
+     449: iconst_m1
+     450: if_icmpeq     462
+     453: aload_0
+     454: iconst_m1
+     455: putfield      #18                 // Field processingTime:I
+     458: aload_0
+     459: invokevirtual #266                // Method notifyUpdate:()V
+     462: return
+
+  public plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerMode getMode();
+    descriptor: ()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+       4: areturn
+
+  public void setMode(plus.dragons.createenchantmentindustry.common.processing.forger.BlazeForgerMode);
+    descriptor: (Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;)V
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+       4: aload_1
+       5: if_acmpne     9
+       8: return
+       9: aload_0
+      10: aload_1
+      11: putfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      14: aload_0
+      15: iconst_m1
+      16: putfield      #18                 // Field processingTime:I
+      19: aload_0
+      20: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      23: invokevirtual #263                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.updateResult:()V
+      26: aload_0
+      27: invokevirtual #266                // Method notifyUpdate:()V
+      30: return
+
+  public net.minecraft.world.item.ItemStack insertItem(net.minecraft.world.item.ItemStack, boolean);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/world/item/ItemStack;
+    Code:
+       0: aload_1
+       1: astore_3
+       2: aload_0
+       3: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+       6: invokevirtual #352                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.hasRemainingOutput:()Z
+       9: ifeq          14
+      12: aload_1
+      13: areturn
+      14: aload_1
+      15: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      18: ifne          32
+      21: aload_0
+      22: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      25: iconst_0
+      26: aload_1
+      27: iload_2
+      28: invokevirtual #360                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.insertItem:(ILnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/world/item/ItemStack;
+      31: astore_1
+      32: aload_1
+      33: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      36: ifne          50
+      39: aload_0
+      40: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      43: iconst_1
+      44: aload_1
+      45: iload_2
+      46: invokevirtual #360                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.insertItem:(ILnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/world/item/ItemStack;
+      49: astore_1
+      50: iload_2
+      51: ifne          84
+      54: aload_3
+      55: invokevirtual #364                // Method net/minecraft/world/item/ItemStack.getCount:()I
+      58: aload_1
+      59: invokevirtual #364                // Method net/minecraft/world/item/ItemStack.getCount:()I
+      62: if_icmpne     73
+      65: aload_3
+      66: aload_1
+      67: invokestatic  #367                // Method net/minecraft/world/item/ItemStack.isSameItemSameComponents:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
+      70: ifne          84
+      73: aload_0
+      74: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      77: invokevirtual #263                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.updateResult:()V
+      80: aload_0
+      81: invokevirtual #266                // Method notifyUpdate:()V
+      84: aload_1
+      85: areturn
+
+  public net.minecraft.world.item.ItemStack extractItem(boolean);
+    descriptor: (Z)Lnet/minecraft/world/item/ItemStack;
+    Code:
+       0: aload_0
+       1: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+       4: invokevirtual #371                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getSlots:()I
+       7: iconst_1
+       8: isub
+       9: istore_2
+      10: iload_2
+      11: iflt          60
+      14: aload_0
+      15: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      18: iload_2
+      19: iconst_1
+      20: iload_1
+      21: invokevirtual #374                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.extractItem:(IIZ)Lnet/minecraft/world/item/ItemStack;
+      24: astore_3
+      25: aload_3
+      26: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      29: ifne          54
+      32: iload_1
+      33: ifne          52
+      36: iload_2
+      37: iconst_2
+      38: if_icmpge     52
+      41: aload_0
+      42: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      45: invokevirtual #263                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.updateResult:()V
+      48: aload_0
+      49: invokevirtual #266                // Method notifyUpdate:()V
+      52: aload_3
+      53: areturn
+      54: iinc          2, -1
+      57: goto          10
+      60: getstatic     #378                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      63: areturn
+
+  public net.minecraft.world.item.ItemStack insertAutomationItem(net.minecraft.world.item.ItemStack, boolean);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/world/item/ItemStack;
+    Code:
+       0: aload_1
+       1: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+       4: ifne          24
+       7: aload_0
+       8: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      11: invokevirtual #352                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.hasRemainingOutput:()Z
+      14: ifne          24
+      17: aload_0
+      18: invokevirtual #382                // Method hasRecoverableAutomationInput:()Z
+      21: ifeq          26
+      24: aload_1
+      25: areturn
+      26: aload_0
+      27: aload_1
+      28: invokevirtual #385                // Method getAutomationInsertionSlot:(Lnet/minecraft/world/item/ItemStack;)I
+      31: istore_3
+      32: iload_3
+      33: ifge          38
+      36: aload_1
+      37: areturn
+      38: aload_1
+      39: invokevirtual #389                // Method net/minecraft/world/item/ItemStack.copy:()Lnet/minecraft/world/item/ItemStack;
+      42: astore        4
+      44: aload_0
+      45: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      48: iload_3
+      49: aload_1
+      50: iload_2
+      51: invokevirtual #360                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.insertItem:(ILnet/minecraft/world/item/ItemStack;Z)Lnet/minecraft/world/item/ItemStack;
+      54: astore        5
+      56: iload_2
+      57: ifne          81
+      60: aload         4
+      62: aload         5
+      64: invokestatic  #393                // Method insertedAny:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
+      67: ifeq          81
+      70: aload_0
+      71: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      74: invokevirtual #263                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.updateResult:()V
+      77: aload_0
+      78: invokevirtual #266                // Method notifyUpdate:()V
+      81: aload         5
+      83: areturn
+
+  public net.minecraft.world.item.ItemStack extractAutomationItem(int, int, boolean);
+    descriptor: (IIZ)Lnet/minecraft/world/item/ItemStack;
+    Code:
+       0: iload_1
+       1: iflt          8
+       4: iload_2
+       5: ifgt          12
+       8: getstatic     #378                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      11: areturn
+      12: iload_1
+      13: iconst_2
+      14: if_icmpge     30
+      17: aload_0
+      18: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      21: iload_1
+      22: iconst_2
+      23: iadd
+      24: iload_2
+      25: iload_3
+      26: invokevirtual #374                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.extractItem:(IIZ)Lnet/minecraft/world/item/ItemStack;
+      29: areturn
+      30: iload_1
+      31: iconst_2
+      32: isub
+      33: istore        4
+      35: iload         4
+      37: iconst_1
+      38: if_icmpgt     50
+      41: aload_0
+      42: iload         4
+      44: invokevirtual #396                // Method isRecoverableAutomationInput:(I)Z
+      47: ifne          54
+      50: getstatic     #378                // Field net/minecraft/world/item/ItemStack.EMPTY:Lnet/minecraft/world/item/ItemStack;
+      53: areturn
+      54: aload_0
+      55: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      58: iload         4
+      60: iload_2
+      61: iload_3
+      62: invokevirtual #374                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.extractItem:(IIZ)Lnet/minecraft/world/item/ItemStack;
+      65: astore        5
+      67: iload_3
+      68: ifne          90
+      71: aload         5
+      73: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      76: ifne          90
+      79: aload_0
+      80: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      83: invokevirtual #263                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.updateResult:()V
+      86: aload_0
+      87: invokevirtual #266                // Method notifyUpdate:()V
+      90: aload         5
+      92: areturn
+
+  public int getAutomationSlotCount();
+    descriptor: ()I
+    Code:
+       0: iconst_4
+       1: ireturn
+
+  private int getAutomationInsertionSlot(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)I
+    Code:
+       0: getstatic     #400                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity$1.$SwitchMap$plus$dragons$createenchantmentindustry$common$processing$forger$BlazeForgerMode:[I
+       3: aload_0
+       4: getfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+       7: invokevirtual #158                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.ordinal:()I
+      10: iaload
+      11: tableswitch   { // 1 to 3
+
+                     1: 46
+
+                     2: 53
+
+                     3: 117
+               default: 36
+          }
+      36: new           #406                // class java/lang/MatchException
+      39: dup
+      40: aconst_null
+      41: aconst_null
+      42: invokespecial #408                // Method java/lang/MatchException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+      45: athrow
+      46: aload_0
+      47: invokevirtual #411                // Method firstEmptyInputSlot:()I
+      50: goto          178
+      53: aload_0
+      54: aload_1
+      55: invokevirtual #414                // Method isForgingAddition:(Lnet/minecraft/world/item/ItemStack;)Z
+      58: ifeq          83
+      61: aload_0
+      62: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      65: iconst_1
+      66: invokevirtual #418                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getStackInSlot:(I)Lnet/minecraft/world/item/ItemStack;
+      69: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      72: ifeq          79
+      75: iconst_1
+      76: goto          178
+      79: iconst_m1
+      80: goto          178
+      83: aload_0
+      84: aload_1
+      85: invokevirtual #422                // Method isForgingTarget:(Lnet/minecraft/world/item/ItemStack;)Z
+      88: ifeq          113
+      91: aload_0
+      92: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      95: iconst_0
+      96: invokevirtual #418                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getStackInSlot:(I)Lnet/minecraft/world/item/ItemStack;
+      99: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+     102: ifeq          109
+     105: iconst_0
+     106: goto          178
+     109: iconst_m1
+     110: goto          178
+     113: iconst_m1
+     114: goto          178
+     117: aload_0
+     118: aload_1
+     119: invokevirtual #425                // Method isBlankMatchingTemplate:(Lnet/minecraft/world/item/ItemStack;)Z
+     122: ifeq          147
+     125: aload_0
+     126: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+     129: iconst_1
+     130: invokevirtual #418                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getStackInSlot:(I)Lnet/minecraft/world/item/ItemStack;
+     133: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+     136: ifeq          143
+     139: iconst_1
+     140: goto          178
+     143: iconst_m1
+     144: goto          178
+     147: aload_0
+     148: aload_1
+     149: invokevirtual #428                // Method isExtractingSource:(Lnet/minecraft/world/item/ItemStack;)Z
+     152: ifeq          177
+     155: aload_0
+     156: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+     159: iconst_0
+     160: invokevirtual #418                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getStackInSlot:(I)Lnet/minecraft/world/item/ItemStack;
+     163: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+     166: ifeq          173
+     169: iconst_0
+     170: goto          178
+     173: iconst_m1
+     174: goto          178
+     177: iconst_m1
+     178: ireturn
+
+  private int firstEmptyInputSlot();
+    descriptor: ()I
+    Code:
+       0: aload_0
+       1: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+       4: iconst_0
+       5: invokevirtual #418                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getStackInSlot:(I)Lnet/minecraft/world/item/ItemStack;
+       8: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      11: ifeq          16
+      14: iconst_0
+      15: ireturn
+      16: aload_0
+      17: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      20: iconst_1
+      21: invokevirtual #418                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getStackInSlot:(I)Lnet/minecraft/world/item/ItemStack;
+      24: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      27: ifeq          32
+      30: iconst_1
+      31: ireturn
+      32: iconst_m1
+      33: ireturn
+
+  private boolean hasRecoverableAutomationInput();
+    descriptor: ()Z
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: invokevirtual #396                // Method isRecoverableAutomationInput:(I)Z
+       5: ifne          16
+       8: aload_0
+       9: iconst_1
+      10: invokevirtual #396                // Method isRecoverableAutomationInput:(I)Z
+      13: ifeq          20
+      16: iconst_1
+      17: goto          21
+      20: iconst_0
+      21: ireturn
+
+  private boolean isRecoverableAutomationInput(int);
+    descriptor: (I)Z
+    Code:
+       0: aload_0
+       1: getfield      #18                 // Field processingTime:I
+       4: ifge          17
+       7: aload_0
+       8: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      11: invokevirtual #352                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.hasRemainingOutput:()Z
+      14: ifeq          19
+      17: iconst_0
+      18: ireturn
+      19: aload_0
+      20: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      23: iload_1
+      24: invokevirtual #418                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getStackInSlot:(I)Lnet/minecraft/world/item/ItemStack;
+      27: astore_2
+      28: aload_2
+      29: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      32: ifeq          37
+      35: iconst_0
+      36: ireturn
+      37: aload_0
+      38: iload_1
+      39: aload_2
+      40: invokevirtual #431                // Method isExpectedAutomationInput:(ILnet/minecraft/world/item/ItemStack;)Z
+      43: ifne          48
+      46: iconst_1
+      47: ireturn
+      48: aload_0
+      49: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      52: iconst_0
+      53: invokevirtual #418                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getStackInSlot:(I)Lnet/minecraft/world/item/ItemStack;
+      56: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      59: ifne          96
+      62: aload_0
+      63: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      66: iconst_1
+      67: invokevirtual #418                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getStackInSlot:(I)Lnet/minecraft/world/item/ItemStack;
+      70: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+      73: ifne          96
+      76: aload_0
+      77: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+      80: invokevirtual #435                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getLastResult:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+      83: invokevirtual #439                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.status:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Status;
+      86: getstatic     #445                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Status.INVALID:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Status;
+      89: if_acmpne     96
+      92: iconst_1
+      93: goto          97
+      96: iconst_0
+      97: ireturn
+
+  private boolean isExpectedAutomationInput(int, net.minecraft.world.item.ItemStack);
+    descriptor: (ILnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: getstatic     #400                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerBlockEntity$1.$SwitchMap$plus$dragons$createenchantmentindustry$common$processing$forger$BlazeForgerMode:[I
+       3: aload_0
+       4: getfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+       7: invokevirtual #158                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.ordinal:()I
+      10: iaload
+      11: tableswitch   { // 1 to 3
+
+                     1: 46
+
+                     2: 54
+
+                     3: 74
+               default: 36
+          }
+      36: new           #406                // class java/lang/MatchException
+      39: dup
+      40: aconst_null
+      41: aconst_null
+      42: invokespecial #408                // Method java/lang/MatchException."<init>":(Ljava/lang/String;Ljava/lang/Throwable;)V
+      45: athrow
+      46: aload_0
+      47: aload_2
+      48: invokevirtual #451                // Method isMergeInput:(Lnet/minecraft/world/item/ItemStack;)Z
+      51: goto          91
+      54: iload_1
+      55: ifne          66
+      58: aload_0
+      59: aload_2
+      60: invokevirtual #422                // Method isForgingTarget:(Lnet/minecraft/world/item/ItemStack;)Z
+      63: goto          91
+      66: aload_0
+      67: aload_2
+      68: invokevirtual #414                // Method isForgingAddition:(Lnet/minecraft/world/item/ItemStack;)Z
+      71: goto          91
+      74: iload_1
+      75: ifne          86
+      78: aload_0
+      79: aload_2
+      80: invokevirtual #428                // Method isExtractingSource:(Lnet/minecraft/world/item/ItemStack;)Z
+      83: goto          91
+      86: aload_0
+      87: aload_2
+      88: invokevirtual #425                // Method isBlankMatchingTemplate:(Lnet/minecraft/world/item/ItemStack;)Z
+      91: ireturn
+
+  private boolean isMergeInput(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_1
+       1: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+       4: ifne          19
+       7: aload_0
+       8: aload_1
+       9: invokevirtual #454                // Method isBlankTemplate:(Lnet/minecraft/world/item/ItemStack;)Z
+      12: ifne          19
+      15: iconst_1
+      16: goto          20
+      19: iconst_0
+      20: ireturn
+
+  private boolean isForgingAddition(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #457                // Method isFilledMatchingTemplate:(Lnet/minecraft/world/item/ItemStack;)Z
+       5: ifeq          10
+       8: iconst_1
+       9: ireturn
+      10: aload_1
+      11: getstatic     #460                // Field net/minecraft/world/item/Items.ENCHANTED_BOOK:Lnet/minecraft/world/item/Item;
+      14: invokevirtual #466                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/world/item/Item;)Z
+      17: ifeq          31
+      20: aload_1
+      21: invokestatic  #470                // Method hasEnchantments:(Lnet/minecraft/world/item/ItemStack;)Z
+      24: ifeq          31
+      27: iconst_1
+      28: goto          32
+      31: iconst_0
+      32: ireturn
+
+  private boolean isForgingTarget(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_1
+       1: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+       4: ifne          31
+       7: aload_1
+       8: invokevirtual #473                // Method net/minecraft/world/item/ItemStack.getItem:()Lnet/minecraft/world/item/Item;
+      11: instanceof    #477                // class plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem
+      14: ifne          31
+      17: aload_1
+      18: getstatic     #460                // Field net/minecraft/world/item/Items.ENCHANTED_BOOK:Lnet/minecraft/world/item/Item;
+      21: invokevirtual #466                // Method net/minecraft/world/item/ItemStack.is:(Lnet/minecraft/world/item/Item;)Z
+      24: ifne          31
+      27: iconst_1
+      28: goto          32
+      31: iconst_0
+      32: ireturn
+
+  private boolean isExtractingSource(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_1
+       1: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+       4: ifne          26
+       7: aload_0
+       8: aload_1
+       9: invokevirtual #454                // Method isBlankTemplate:(Lnet/minecraft/world/item/ItemStack;)Z
+      12: ifne          26
+      15: aload_1
+      16: invokestatic  #470                // Method hasEnchantments:(Lnet/minecraft/world/item/ItemStack;)Z
+      19: ifeq          26
+      22: iconst_1
+      23: goto          27
+      26: iconst_0
+      27: ireturn
+
+  private boolean isBlankMatchingTemplate(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #479                // Method isTemplateMatchingMode:(Lnet/minecraft/world/item/ItemStack;)Z
+       5: ifeq          19
+       8: aload_1
+       9: invokestatic  #470                // Method hasEnchantments:(Lnet/minecraft/world/item/ItemStack;)Z
+      12: ifne          19
+      15: iconst_1
+      16: goto          20
+      19: iconst_0
+      20: ireturn
+
+  private boolean isFilledMatchingTemplate(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #479                // Method isTemplateMatchingMode:(Lnet/minecraft/world/item/ItemStack;)Z
+       5: ifeq          19
+       8: aload_1
+       9: invokestatic  #470                // Method hasEnchantments:(Lnet/minecraft/world/item/ItemStack;)Z
+      12: ifeq          19
+      15: iconst_1
+      16: goto          20
+      19: iconst_0
+      20: ireturn
+
+  private boolean isBlankTemplate(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_1
+       1: invokevirtual #473                // Method net/minecraft/world/item/ItemStack.getItem:()Lnet/minecraft/world/item/Item;
+       4: instanceof    #477                // class plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem
+       7: ifeq          21
+      10: aload_1
+      11: invokestatic  #470                // Method hasEnchantments:(Lnet/minecraft/world/item/ItemStack;)Z
+      14: ifne          21
+      17: iconst_1
+      18: goto          22
+      21: iconst_0
+      22: ireturn
+
+  private boolean isTemplateMatchingMode(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_1
+       1: invokevirtual #473                // Method net/minecraft/world/item/ItemStack.getItem:()Lnet/minecraft/world/item/Item;
+       4: astore_3
+       5: aload_3
+       6: instanceof    #477                // class plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem
+       9: ifeq          32
+      12: aload_3
+      13: checkcast     #477                // class plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem
+      16: astore_2
+      17: aload_2
+      18: invokevirtual #482                // Method plus/dragons/createenchantmentindustry/common/processing/enchanter/EnchantingTemplateItem.isSpecial:()Z
+      21: aload_0
+      22: getfield      #238                // Field special:Z
+      25: if_icmpne     32
+      28: iconst_1
+      29: goto          33
+      32: iconst_0
+      33: ireturn
+
+  private static boolean hasEnchantments(net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_0
+       1: invokestatic  #485                // Method net/minecraft/world/item/enchantment/EnchantmentHelper.getEnchantmentsForCrafting:(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+       4: invokevirtual #491                // Method net/minecraft/world/item/enchantment/ItemEnchantments.isEmpty:()Z
+       7: ifne          14
+      10: iconst_1
+      11: goto          15
+      14: iconst_0
+      15: ireturn
+
+  private static boolean insertedAny(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+    descriptor: (Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
+    Code:
+       0: aload_0
+       1: invokevirtual #364                // Method net/minecraft/world/item/ItemStack.getCount:()I
+       4: aload_1
+       5: invokevirtual #364                // Method net/minecraft/world/item/ItemStack.getCount:()I
+       8: if_icmpne     19
+      11: aload_0
+      12: aload_1
+      13: invokestatic  #367                // Method net/minecraft/world/item/ItemStack.isSameItemSameComponents:(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/item/ItemStack;)Z
+      16: ifne          23
+      19: iconst_1
+      20: goto          24
+      23: iconst_0
+      24: ireturn
+
+  public boolean addToGoggleTooltip(java.util.List<net.minecraft.network.chat.Component>, boolean);
+    descriptor: (Ljava/util/List;Z)Z
+    Code:
+       0: aload_0
+       1: aload_1
+       2: iload_2
+       3: invokespecial #494                // Method plus/dragons/createenchantmentindustry/common/fluids/experience/BlazeExperienceBlockEntity.addToGoggleTooltip:(Ljava/util/List;Z)Z
+       6: istore_3
+       7: aload_0
+       8: getfield      #238                // Field special:Z
+      11: ifeq          33
+      14: aload_0
+      15: getfield      #252                // Field cursed:Z
+      18: ifeq          27
+      21: getstatic     #498                // Field net/minecraft/ChatFormatting.RED:Lnet/minecraft/ChatFormatting;
+      24: goto          36
+      27: getstatic     #504                // Field net/minecraft/ChatFormatting.BLUE:Lnet/minecraft/ChatFormatting;
+      30: goto          36
+      33: getstatic     #507                // Field net/minecraft/ChatFormatting.GOLD:Lnet/minecraft/ChatFormatting;
+      36: astore        4
+      38: ldc_w         #510                // String generic.unit.millibuckets
+      41: iconst_0
+      42: anewarray     #512                // class java/lang/Object
+      45: invokestatic  #514                // Method com/simibubi/create/foundation/utility/CreateLang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      48: astore        5
+      50: ldc_w         #520                // String gui.goggles.forging.blaze_mode
+      53: iconst_1
+      54: anewarray     #512                // class java/lang/Object
+      57: dup
+      58: iconst_0
+      59: aload_0
+      60: getfield      #238                // Field special:Z
+      63: ifeq          72
+      66: ldc_w         #522                // String super
+      69: goto          75
+      72: ldc_w         #524                // String normal
+      75: invokedynamic #526,  0            // InvokeDynamic #1:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+      80: iconst_0
+      81: anewarray     #512                // class java/lang/Object
+      84: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      87: aload         4
+      89: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      92: aastore
+      93: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      96: aload_1
+      97: invokevirtual #539                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     100: ldc_w         #542                // String gui.goggles.forging.mode
+     103: iconst_1
+     104: anewarray     #512                // class java/lang/Object
+     107: dup
+     108: iconst_0
+     109: aload_0
+     110: getfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     113: invokevirtual #544                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.getSerializedName:()Ljava/lang/String;
+     116: invokedynamic #548,  0            // InvokeDynamic #2:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+     121: iconst_0
+     122: anewarray     #512                // class java/lang/Object
+     125: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     128: getstatic     #549                // Field net/minecraft/ChatFormatting.AQUA:Lnet/minecraft/ChatFormatting;
+     131: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     134: aastore
+     135: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     138: aload_1
+     139: invokevirtual #539                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     142: aload_0
+     143: aload_1
+     144: invokevirtual #552                // Method addSuperLightningTooltip:(Ljava/util/List;)V
+     147: aload_0
+     148: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+     151: invokevirtual #352                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.hasRemainingOutput:()Z
+     154: ifeq          179
+     157: ldc_w         #555                // String gui.goggles.forging.output_blocked
+     160: iconst_0
+     161: anewarray     #512                // class java/lang/Object
+     164: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     167: getstatic     #557                // Field net/minecraft/ChatFormatting.YELLOW:Lnet/minecraft/ChatFormatting;
+     170: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     173: aload_1
+     174: invokevirtual #539                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     177: iconst_1
+     178: ireturn
+     179: aload_0
+     180: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+     183: invokevirtual #435                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.getLastResult:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result;
+     186: astore        6
+     188: aload         6
+     190: invokevirtual #439                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.status:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Status;
+     193: getstatic     #560                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Status.EMPTY_INPUT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Status;
+     196: if_acmpne     207
+     199: aload_0
+     200: aload_1
+     201: invokevirtual #563                // Method addModeHelp:(Ljava/util/List;)V
+     204: goto          786
+     207: aload         6
+     209: invokevirtual #439                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.status:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Status;
+     212: getstatic     #566                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Status.INCOMPLETE_INPUT:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Status;
+     215: if_acmpne     253
+     218: aload_0
+     219: aload_1
+     220: invokevirtual #563                // Method addModeHelp:(Ljava/util/List;)V
+     223: invokestatic  #569                // Method plus/dragons/createenchantmentindustry/util/CEILang.builder:()Lnet/createmod/catnip/lang/LangBuilder;
+     226: aload         6
+     228: invokevirtual #573                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.failure:()Lnet/minecraft/network/chat/Component;
+     231: invokeinterface #577,  1          // InterfaceMethod net/minecraft/network/chat/Component.copy:()Lnet/minecraft/network/chat/MutableComponent;
+     236: invokevirtual #582                // Method net/createmod/catnip/lang/LangBuilder.add:(Lnet/minecraft/network/chat/MutableComponent;)Lnet/createmod/catnip/lang/LangBuilder;
+     239: getstatic     #557                // Field net/minecraft/ChatFormatting.YELLOW:Lnet/minecraft/ChatFormatting;
+     242: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     245: aload_1
+     246: iconst_1
+     247: invokevirtual #585                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+     250: goto          786
+     253: aload         6
+     255: invokevirtual #439                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.status:()Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Status;
+     258: getstatic     #445                // Field plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Status.INVALID:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Status;
+     261: if_acmpne     387
+     264: invokestatic  #569                // Method plus/dragons/createenchantmentindustry/util/CEILang.builder:()Lnet/createmod/catnip/lang/LangBuilder;
+     267: aload         6
+     269: invokevirtual #573                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.failure:()Lnet/minecraft/network/chat/Component;
+     272: invokeinterface #577,  1          // InterfaceMethod net/minecraft/network/chat/Component.copy:()Lnet/minecraft/network/chat/MutableComponent;
+     277: invokevirtual #582                // Method net/createmod/catnip/lang/LangBuilder.add:(Lnet/minecraft/network/chat/MutableComponent;)Lnet/createmod/catnip/lang/LangBuilder;
+     280: getstatic     #498                // Field net/minecraft/ChatFormatting.RED:Lnet/minecraft/ChatFormatting;
+     283: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     286: aload_1
+     287: invokevirtual #539                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     290: aload         6
+     292: invokevirtual #588                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.rejectedEnchantments:()Ljava/util/List;
+     295: invokeinterface #592,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+     300: ifne          786
+     303: ldc_w         #593                // String gui.goggles.forging.rejected_enchantments
+     306: iconst_0
+     307: anewarray     #512                // class java/lang/Object
+     310: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     313: getstatic     #557                // Field net/minecraft/ChatFormatting.YELLOW:Lnet/minecraft/ChatFormatting;
+     316: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     319: aload_1
+     320: invokevirtual #539                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     323: aload         6
+     325: invokevirtual #588                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.rejectedEnchantments:()Ljava/util/List;
+     328: invokeinterface #595,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+     333: astore        7
+     335: aload         7
+     337: invokeinterface #599,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     342: ifeq          384
+     345: aload         7
+     347: invokeinterface #604,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     352: checkcast     #578                // class net/minecraft/network/chat/Component
+     355: astore        8
+     357: invokestatic  #569                // Method plus/dragons/createenchantmentindustry/util/CEILang.builder:()Lnet/createmod/catnip/lang/LangBuilder;
+     360: aload         8
+     362: invokeinterface #577,  1          // InterfaceMethod net/minecraft/network/chat/Component.copy:()Lnet/minecraft/network/chat/MutableComponent;
+     367: invokevirtual #582                // Method net/createmod/catnip/lang/LangBuilder.add:(Lnet/minecraft/network/chat/MutableComponent;)Lnet/createmod/catnip/lang/LangBuilder;
+     370: getstatic     #557                // Field net/minecraft/ChatFormatting.YELLOW:Lnet/minecraft/ChatFormatting;
+     373: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     376: aload_1
+     377: iconst_1
+     378: invokevirtual #585                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+     381: goto          335
+     384: goto          786
+     387: aload         6
+     389: invokevirtual #607                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.valid:()Z
+     392: ifeq          786
+     395: iconst_1
+     396: istore_3
+     397: aload         6
+     399: invokevirtual #610                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.experienceCost:()I
+     402: istore        7
+     404: ldc_w         #613                // String gui.goggles.forging.cost
+     407: iconst_1
+     408: anewarray     #512                // class java/lang/Object
+     411: dup
+     412: iconst_0
+     413: iload         7
+     415: i2d
+     416: invokestatic  #615                // Method plus/dragons/createenchantmentindustry/util/CEILang.number:(D)Lnet/createmod/catnip/lang/LangBuilder;
+     419: aload         5
+     421: invokevirtual #619                // Method net/createmod/catnip/lang/LangBuilder.add:(Lnet/createmod/catnip/lang/LangBuilder;)Lnet/createmod/catnip/lang/LangBuilder;
+     424: aload         4
+     426: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     429: aastore
+     430: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     433: aload_1
+     434: invokevirtual #539                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     437: ldc_w         #622                // String gui.goggles.forging.result
+     440: iconst_0
+     441: anewarray     #512                // class java/lang/Object
+     444: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     447: aload_1
+     448: invokevirtual #539                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     451: aload_0
+     452: aload_1
+     453: aload         6
+     455: invokevirtual #624                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.primaryOutput:()Lnet/minecraft/world/item/ItemStack;
+     458: invokevirtual #627                // Method addOutputStack:(Ljava/util/List;Lnet/minecraft/world/item/ItemStack;)V
+     461: aload_0
+     462: aload_1
+     463: aload         6
+     465: invokevirtual #631                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.secondaryOutput:()Lnet/minecraft/world/item/ItemStack;
+     468: invokevirtual #627                // Method addOutputStack:(Ljava/util/List;Lnet/minecraft/world/item/ItemStack;)V
+     471: aload         6
+     473: invokevirtual #634                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.overCap:()Z
+     476: ifeq          500
+     479: ldc_w         #637                // String gui.goggles.forging.over_cap
+     482: iconst_0
+     483: anewarray     #512                // class java/lang/Object
+     486: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     489: getstatic     #504                // Field net/minecraft/ChatFormatting.BLUE:Lnet/minecraft/ChatFormatting;
+     492: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     495: aload_1
+     496: iconst_1
+     497: invokevirtual #585                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+     500: aload         6
+     502: invokevirtual #639                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.conflicting:()Z
+     505: ifeq          529
+     508: ldc_w         #642                // String gui.goggles.forging.conflicting
+     511: iconst_0
+     512: anewarray     #512                // class java/lang/Object
+     515: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     518: getstatic     #504                // Field net/minecraft/ChatFormatting.BLUE:Lnet/minecraft/ChatFormatting;
+     521: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     524: aload_1
+     525: iconst_1
+     526: invokevirtual #585                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+     529: aload         6
+     531: invokevirtual #644                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.repairCostPenalty:()Z
+     534: ifeq          594
+     537: ldc_w         #647                // String gui.goggles.forging.repair_cost_penalty
+     540: iconst_2
+     541: anewarray     #512                // class java/lang/Object
+     544: dup
+     545: iconst_0
+     546: aload         6
+     548: invokevirtual #649                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.repairCostBefore:()I
+     551: i2d
+     552: invokestatic  #615                // Method plus/dragons/createenchantmentindustry/util/CEILang.number:(D)Lnet/createmod/catnip/lang/LangBuilder;
+     555: getstatic     #652                // Field net/minecraft/ChatFormatting.GRAY:Lnet/minecraft/ChatFormatting;
+     558: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     561: aastore
+     562: dup
+     563: iconst_1
+     564: aload         6
+     566: invokevirtual #655                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.repairCostAfter:()I
+     569: i2d
+     570: invokestatic  #615                // Method plus/dragons/createenchantmentindustry/util/CEILang.number:(D)Lnet/createmod/catnip/lang/LangBuilder;
+     573: getstatic     #498                // Field net/minecraft/ChatFormatting.RED:Lnet/minecraft/ChatFormatting;
+     576: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     579: aastore
+     580: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     583: getstatic     #498                // Field net/minecraft/ChatFormatting.RED:Lnet/minecraft/ChatFormatting;
+     586: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     589: aload_1
+     590: iconst_1
+     591: invokevirtual #585                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+     594: aload         6
+     596: invokevirtual #658                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.lostEnchantments:()Ljava/util/List;
+     599: invokeinterface #592,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+     604: ifne          688
+     607: ldc_w         #661                // String gui.goggles.forging.lost_enchantments
+     610: iconst_0
+     611: anewarray     #512                // class java/lang/Object
+     614: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     617: getstatic     #557                // Field net/minecraft/ChatFormatting.YELLOW:Lnet/minecraft/ChatFormatting;
+     620: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     623: aload_1
+     624: invokevirtual #539                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     627: aload         6
+     629: invokevirtual #658                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory$Result.lostEnchantments:()Ljava/util/List;
+     632: invokeinterface #595,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+     637: astore        8
+     639: aload         8
+     641: invokeinterface #599,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     646: ifeq          688
+     649: aload         8
+     651: invokeinterface #604,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     656: checkcast     #578                // class net/minecraft/network/chat/Component
+     659: astore        9
+     661: invokestatic  #569                // Method plus/dragons/createenchantmentindustry/util/CEILang.builder:()Lnet/createmod/catnip/lang/LangBuilder;
+     664: aload         9
+     666: invokeinterface #577,  1          // InterfaceMethod net/minecraft/network/chat/Component.copy:()Lnet/minecraft/network/chat/MutableComponent;
+     671: invokevirtual #582                // Method net/createmod/catnip/lang/LangBuilder.add:(Lnet/minecraft/network/chat/MutableComponent;)Lnet/createmod/catnip/lang/LangBuilder;
+     674: getstatic     #557                // Field net/minecraft/ChatFormatting.YELLOW:Lnet/minecraft/ChatFormatting;
+     677: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     680: aload_1
+     681: iconst_1
+     682: invokevirtual #585                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+     685: goto          639
+     688: aload_0
+     689: getfield      #238                // Field special:Z
+     692: ifeq          702
+     695: aload_0
+     696: invokevirtual #663                // Method getSpecialExperience:()I
+     699: goto          706
+     702: aload_0
+     703: invokevirtual #666                // Method getTotalExperience:()I
+     706: istore        8
+     708: iload         8
+     710: iload         7
+     712: if_icmpge     786
+     715: aload_0
+     716: getfield      #238                // Field special:Z
+     719: ifeq          728
+     722: ldc_w         #669                // String gui.goggles.forging.insufficient_super_experience
+     725: goto          731
+     728: ldc_w         #671                // String gui.goggles.forging.insufficient_experience
+     731: iconst_2
+     732: anewarray     #512                // class java/lang/Object
+     735: dup
+     736: iconst_0
+     737: iload         8
+     739: i2d
+     740: invokestatic  #615                // Method plus/dragons/createenchantmentindustry/util/CEILang.number:(D)Lnet/createmod/catnip/lang/LangBuilder;
+     743: aload         5
+     745: invokevirtual #619                // Method net/createmod/catnip/lang/LangBuilder.add:(Lnet/createmod/catnip/lang/LangBuilder;)Lnet/createmod/catnip/lang/LangBuilder;
+     748: aload         4
+     750: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     753: aastore
+     754: dup
+     755: iconst_1
+     756: iload         7
+     758: i2d
+     759: invokestatic  #615                // Method plus/dragons/createenchantmentindustry/util/CEILang.number:(D)Lnet/createmod/catnip/lang/LangBuilder;
+     762: aload         5
+     764: invokevirtual #619                // Method net/createmod/catnip/lang/LangBuilder.add:(Lnet/createmod/catnip/lang/LangBuilder;)Lnet/createmod/catnip/lang/LangBuilder;
+     767: aload         4
+     769: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     772: aastore
+     773: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     776: getstatic     #498                // Field net/minecraft/ChatFormatting.RED:Lnet/minecraft/ChatFormatting;
+     779: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     782: aload_1
+     783: invokevirtual #539                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+     786: iload_3
+     787: ireturn
+
+  private void addModeHelp(java.util.List<net.minecraft.network.chat.Component>);
+    descriptor: (Ljava/util/List;)V
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+       4: invokevirtual #544                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.getSerializedName:()Ljava/lang/String;
+       7: invokedynamic #673,  0            // InvokeDynamic #3:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+      12: iconst_0
+      13: anewarray     #512                // class java/lang/Object
+      16: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      19: getstatic     #652                // Field net/minecraft/ChatFormatting.GRAY:Lnet/minecraft/ChatFormatting;
+      22: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      25: aload_1
+      26: iconst_1
+      27: invokevirtual #585                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+      30: ldc_w         #674                // String gui.goggles.forging.requires
+      33: iconst_0
+      34: anewarray     #512                // class java/lang/Object
+      37: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      40: aload_1
+      41: invokevirtual #539                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+      44: ldc_w         #676                // String gui.goggles.forging.requires.first
+      47: iconst_1
+      48: anewarray     #512                // class java/lang/Object
+      51: dup
+      52: iconst_0
+      53: aload_0
+      54: getfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+      57: invokevirtual #544                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.getSerializedName:()Ljava/lang/String;
+      60: invokedynamic #678,  0            // InvokeDynamic #4:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+      65: iconst_0
+      66: anewarray     #512                // class java/lang/Object
+      69: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      72: invokevirtual #679                // Method net/createmod/catnip/lang/LangBuilder.component:()Lnet/minecraft/network/chat/MutableComponent;
+      75: aastore
+      76: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      79: getstatic     #652                // Field net/minecraft/ChatFormatting.GRAY:Lnet/minecraft/ChatFormatting;
+      82: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      85: aload_1
+      86: iconst_1
+      87: invokevirtual #585                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+      90: ldc_w         #682                // String gui.goggles.forging.requires.second
+      93: iconst_1
+      94: anewarray     #512                // class java/lang/Object
+      97: dup
+      98: iconst_0
+      99: aload_0
+     100: getfield      #13                 // Field mode:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode;
+     103: invokevirtual #544                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerMode.getSerializedName:()Ljava/lang/String;
+     106: invokedynamic #684,  0            // InvokeDynamic #5:makeConcatWithConstants:(Ljava/lang/String;)Ljava/lang/String;
+     111: iconst_0
+     112: anewarray     #512                // class java/lang/Object
+     115: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     118: invokevirtual #679                // Method net/createmod/catnip/lang/LangBuilder.component:()Lnet/minecraft/network/chat/MutableComponent;
+     121: aastore
+     122: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+     125: getstatic     #652                // Field net/minecraft/ChatFormatting.GRAY:Lnet/minecraft/ChatFormatting;
+     128: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+     131: aload_1
+     132: iconst_1
+     133: invokevirtual #585                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+     136: return
+
+  private void addSuperLightningTooltip(java.util.List<net.minecraft.network.chat.Component>);
+    descriptor: (Ljava/util/List;)V
+    Code:
+       0: aload_0
+       1: getfield      #238                // Field special:Z
+       4: ifeq          34
+       7: aload_0
+       8: getfield      #252                // Field cursed:Z
+      11: ifeq          34
+      14: ldc_w         #685                // String gui.goggles.forging.blocked_super_penalty
+      17: iconst_0
+      18: anewarray     #512                // class java/lang/Object
+      21: invokestatic  #530                // Method plus/dragons/createenchantmentindustry/util/CEILang.translate:(Ljava/lang/String;[Ljava/lang/Object;)Lnet/createmod/catnip/lang/LangBuilder;
+      24: getstatic     #498                // Field net/minecraft/ChatFormatting.RED:Lnet/minecraft/ChatFormatting;
+      27: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      30: aload_1
+      31: invokevirtual #539                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;)V
+      34: return
+
+  private void addOutputStack(java.util.List<net.minecraft.network.chat.Component>, net.minecraft.world.item.ItemStack);
+    descriptor: (Ljava/util/List;Lnet/minecraft/world/item/ItemStack;)V
+    Code:
+       0: aload_2
+       1: invokevirtual #355                // Method net/minecraft/world/item/ItemStack.isEmpty:()Z
+       4: ifeq          8
+       7: return
+       8: aload_2
+       9: invokestatic  #687                // Method plus/dragons/createenchantmentindustry/util/CEILang.item:(Lnet/minecraft/world/item/ItemStack;)Lnet/createmod/catnip/lang/LangBuilder;
+      12: getstatic     #652                // Field net/minecraft/ChatFormatting.GRAY:Lnet/minecraft/ChatFormatting;
+      15: invokevirtual #533                // Method net/createmod/catnip/lang/LangBuilder.style:(Lnet/minecraft/ChatFormatting;)Lnet/createmod/catnip/lang/LangBuilder;
+      18: aload_1
+      19: iconst_1
+      20: invokevirtual #585                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+      23: aload_2
+      24: invokestatic  #485                // Method net/minecraft/world/item/enchantment/EnchantmentHelper.getEnchantmentsForCrafting:(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/enchantment/ItemEnchantments;
+      27: astore_3
+      28: aload_3
+      29: invokevirtual #491                // Method net/minecraft/world/item/enchantment/ItemEnchantments.isEmpty:()Z
+      32: ifne          55
+      35: aload_3
+      36: aload_0
+      37: getfield      #214                // Field level:Lnet/minecraft/world/level/Level;
+      40: invokestatic  #691                // InterfaceMethod net/minecraft/world/item/Item$TooltipContext.of:(Lnet/minecraft/world/level/Level;)Lnet/minecraft/world/item/Item$TooltipContext;
+      43: aload_1
+      44: invokedynamic #697,  0            // InvokeDynamic #6:accept:(Ljava/util/List;)Ljava/util/function/Consumer;
+      49: getstatic     #701                // Field net/minecraft/world/item/TooltipFlag.NORMAL:Lnet/minecraft/world/item/TooltipFlag$Default;
+      52: invokevirtual #707                // Method net/minecraft/world/item/enchantment/ItemEnchantments.addToTooltip:(Lnet/minecraft/world/item/Item$TooltipContext;Ljava/util/function/Consumer;Lnet/minecraft/world/item/TooltipFlag;)V
+      55: return
+
+  public void clearContent();
+    descriptor: ()V
+    Code:
+       0: aload_0
+       1: getfield      #27                 // Field inventory:Lplus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory;
+       4: invokevirtual #711                // Method plus/dragons/createenchantmentindustry/common/processing/forger/BlazeForgerInventory.clear:()V
+       7: return
+
+  private static void lambda$addOutputStack$1(java.util.List, net.minecraft.network.chat.Component);
+    descriptor: (Ljava/util/List;Lnet/minecraft/network/chat/Component;)V
+    Code:
+       0: invokestatic  #569                // Method plus/dragons/createenchantmentindustry/util/CEILang.builder:()Lnet/createmod/catnip/lang/LangBuilder;
+       3: aload_1
+       4: invokevirtual #714                // Method net/createmod/catnip/lang/LangBuilder.add:(Lnet/minecraft/network/chat/Component;)Lnet/createmod/catnip/lang/LangBuilder;
+       7: aload_0
+       8: iconst_2
+       9: invokevirtual #585                // Method net/createmod/catnip/lang/LangBuilder.forGoggles:(Ljava/util/List;I)V
+      12: return
+
+  private static boolean lambda$createNormalTank$0(net.neoforged.neoforge.fluids.FluidStack);
+    descriptor: (Lnet/neoforged/neoforge/fluids/FluidStack;)Z
+    Code:
+       0: aload_0
+       1: getstatic     #717                // Field plus/dragons/createenchantmentindustry/common/registry/CEIFluids.EXPERIENCE:Lcom/tterrag/registrate/util/entry/FluidEntry;
+       4: invokevirtual #723                // Method net/neoforged/neoforge/fluids/FluidStack.is:(Lnet/minecraft/core/Holder;)Z
+       7: ireturn
+}

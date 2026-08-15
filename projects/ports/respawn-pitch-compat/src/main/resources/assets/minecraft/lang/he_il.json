@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "נקודת התחדשות נקבעה ל %s, %s, %s [%s, %s] ב%s עבור %s",
+  "commands.spawnpoint.success.multiple.new": "נקודת התחדשות נקבעה ל %s, %s, %s [%s, %s] ב%s עבור %s שחקנים"
+}

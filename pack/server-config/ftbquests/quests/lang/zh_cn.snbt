@@ -1,0 +1,984 @@
+{
+	chapter.022F1E7B0C05C13B.title: "灾变"
+	chapter.05D37BDE6DDB3CF4.title: "“恶意”降临"
+	chapter.07793F365C646741.title: "末地诡异群系"
+	chapter.07D198D3DDD33F05.title: "马娘"
+	chapter.0BE61D98EC2E6FEF.title: "储物收纳"
+	chapter.1505E388615EF814.title: "合金冶炼炉"
+	chapter.1B463ED58F5BC382.title: "珠宝\\&首饰"
+	chapter.2712B84FC95D24A9.title: "重度机械症"
+	chapter.273D877EDE86BEE7.title: "末地群岛"
+	chapter.30CF816281C9CC36.title: "车万女仆"
+	chapter.3C805D6AA3D59793.title: "末地冰刺"
+	chapter.4350B63C95F47CFF.title: "末地花林"
+	chapter.4B14987D9F164B1A.title: "农夫乐事"
+	chapter.610239010B9C08DD.title: "深渊派对"
+	chapter.640A5F4C7DC06EDE.title: "安山时代"
+	chapter.700A1A40AA9B1D69.title: "生活质量小工具"
+	chapter.7519FE5CE0D0A541.title: "末地深暗群系"
+	chapter.771ACE65A798117A.title: "黄铜革命"
+	chapter_group.08701E4938C3D337.title: "其他模组"
+	chapter_group.2195A9D3E7D1D788.title: "主世界-养老生活"
+	chapter_group.6B9D1AFD3E45FF4E.title: "末地-战斗与冒险"
+	quest.000EAE75E8F04497.quest_desc: [
+		"使用时首先需要在左边栏位内放入已冲洗的黑白胶卷或已冲洗的彩色胶卷，分别可以打印出黑白照片和彩色照片。"
+		""
+		"点击左/右侧位置可以选择前/后一张底片，点击当前底片或对其向上滚动滚轮可以放大查看该底片。"
+		""
+		"放入纸和染料后，点击打印按钮即可开始打印过程，此时暗房纹理上的红色指示灯会亮起，打印黑白照片需要消耗一张纸和一个黑色染料；打印彩色照片则需要消耗一张纸和四种染料各一个，同时花费更长的时间。"
+	]
+	quest.000EAE75E8F04497.quest_subtitle: "打印出你的照片！"
+	quest.023C81F541EAFB0D.quest_desc: [
+		"恭喜你击杀了{dimension.minecraft.the_end}的奴仆-&d{entity.minecraft.ender_dragon}&r"
+		"现在，{dimension.minecraft.the_end}外岛有更强大的怪物等着你"
+	]
+	quest.02C7A69D089135C3.title: "传输装置"
+	quest.05254E5479383C89.title: "动力源"
+	quest.053B7489051084E1.quest_desc: [
+		"站在玫瑰浴汤中会以0.25/秒的速度恢复生命值，"
+		"站在玫瑰浴汤中15秒后可移除不祥之兆幕以及所有的负面状态效果。"
+		"站在玫瑰浴汤中15秒后可获得1级的力量的效果，持续时间20秒。"
+	]
+	quest.06486C7C061D349B.quest_desc: [
+		"击败&d{entity.minecraft.ender_dragon}&r后生成的&5{block.minecraft.end_gateway}&r"
+		"会将玩家传送至外岛的&d随机地点&r"
+		"{dimension.minecraft.the_end}外岛会产出珍贵的道具："
+		"- &6{item.minecraft.potion.effect.apothic_attributes.flying}&r"
+		"- &6{block.minecraft.netherite_block}&r"
+		"- &2{item.kubejs.chlorophyte_ingot}&r"
+		"- &2{item.umapyoi.jewel}"
+		""
+		"但是"
+		"由于玩家难以前往上次的死亡地点"
+		"掉落的道具几乎等于永久消失。"
+		""
+		"&o&5{block.minecraft.end_gateway}&r具有5分钟冷却时间，在冷却时间内进入，不会刷新出口地点，并会刷新冷却时间，方便组队探险&r"
+		"&o下界与{dimension.minecraft.the_end}没有玩家间伤害&r"
+	]
+	quest.06486C7C061D349B.title: "外岛"
+	quest.068BF44B149A3415.quest_desc: ["下界版有机肥料，只能在下界转化为复生沃土。"]
+	quest.0878F69BAFB5F301.quest_desc: [
+		"奖励永久 [&6{effect.kaleidoscope_cookery.vigor}&r] BUFF: "
+		"  玩家疾跑时不会消耗饱和度"
+		""
+		""
+		"&o可在成就“&c{advancement.c6c.root}&r”中查看所有可收集项目与奖励&r"
+	]
+	quest.0878F69BAFB5F301.quest_subtitle: "收集所有类型的&6{model.geckolib.zhiban.name}&r女仆"
+	quest.0BDB2241B517EC3E.quest_desc: [
+		"放置墨水，墨水的品质决定卷轴的品质。"
+		""
+		"放置纸，书写一张卷轴需要消耗一张纸。"
+		""
+		"放置材料，材料决定法术学派。"
+		""
+		"放置材料后，会显示出可撰写的法术。部分法术可能会显示问号图样，尝试使用更高等级的墨水来撰写。"
+		""
+		"撰写完毕的卷轴位于此处。注意，只有鼠标左键将其拿出才会消耗原材料。"
+		""
+		"可撰写法术卷轴"
+		"法术卷轴也可以从战利品箱中获得或击杀死者之王"
+		"也可以与流浪商人/火焰术士/药剂师交易获得"
+	]
+	quest.0C04B0D91BB46687.quest_desc: [""]
+	quest.0C04B0D91BB46687.quest_subtitle: "将其放在马娘服饰栏位"
+	quest.0C04B0D91BB46687.title: "为你的马娘穿上新衣"
+	quest.0D10CBCC2332A0A0.quest_desc: ["&e&l同纬度&r&r中远距自动化离物流帮手"]
+	quest.0D70527CD0560FA3.quest_desc: [
+		"{dimension.minecraft.the_end}外岛会生成具有&d恶意&r的怪物"
+		"&l随着玩家对怪物的击杀&r"
+		"怪物的属性会变得更加强大"
+		"同时会逐渐开始具有{词条}"
+		"如："
+		"- &d{trait.l2hostility.blindness}&r"
+		"- &d{trait.l2hostility.levitation}&r"
+		""
+		"                                 -->下一页"
+		"{@pagebreak}"
+		"你可以随时在物品栏上方的难度页面查看当前难度等级"
+		"注意不要让难度超出你的能力太多！"
+		"在你受到生命威胁前，寻找传送门撤离{dimension.minecraft.the_end}外岛"
+		"下次重新进入{dimension.minecraft.the_end}外岛时"
+		"怪物强度会自动重新调整"
+		""
+		"若玩家死亡"
+		"怪物强度会下降一个档次"
+		""
+		"&o&l{dimension.minecraft.the_end}无法使用&5{item.c6c.recall_potion}&r&r&r"
+	]
+	quest.0E0AA6FDAB840DA8.title: "简易储物箱升级"
+	quest.0E98873F2A744F77.title: "你的第一个机器"
+	quest.0EAED4471D8CE8AC.quest_desc: [
+		"Shift右键相机可以打开相机的内部GUI来安装所需的组件，包括胶卷，闪光灯，长焦镜头和滤镜。也可以直接拿相应的物品右键相机完成安装或替换组件。"
+		"（如果相机放置在三脚架上，请离得稍微远一些再Shift右键，以免触发carryon的抱起）"
+		""
+		"胶卷:各种未被清洗的胶卷"
+		"闪光灯:红石灯"
+		"镜头:望远镜"
+		"滤镜:各种染色玻璃板/位面投影器"
+	]
+	quest.0EAED4471D8CE8AC.quest_subtitle: "记录美好瞬间"
+	quest.0EC90EBB03243D94.quest_desc: [
+		"野火灯笼会检测周围半径为16格的球中各个方块的亮度，若某方块的亮度小于7，狂野闪耀之灯会尝试在其周围放置亮度为 11 的隐形光源。"
+		""
+		"为了达到最大效益，较理想的照明方式是每隔 30 个方块左右放置一个野火灯笼。"
+	]
+	quest.0F5E82B5594F0725.quest_desc: ["防止玩家在背着背包时受到坠落伤害。"]
+	quest.114E23CD35C37E9B.quest_desc: ["甜纸杯蛋糕食用后可提升两级干劲等级并恢复7点饥饿值和9点饱和度。"]
+	quest.1169390015BB59F9.title: "工程师必备"
+	quest.1171B51ED997D998.quest_desc: [
+		"奖励永久“&a{effect.minecraft.luck}&r”BUFF"
+		""
+		"你可以在游戏界面按[&bL&r]打开成就页面"
+		""
+		"找到“&c{advancement.c6c.root}&r”，查看目前女仆的收集进度"
+	]
+	quest.1171B51ED997D998.quest_subtitle: "收集第一个女仆"
+	quest.121E38D67771FEB0.quest_desc: [
+		"你可以自定义你的傀儡。"
+		"并为他们穿上合适的装备"
+	]
+	quest.121E38D67771FEB0.title: "傀儡装配"
+	quest.12B2B927FFFFD3F1.quest_desc: [
+		"自然生成于结构远古战场,炽焰术士塔中也会生成"
+		""
+		"需要钻石镐或以上挖掘等级来破坏，如果挖掘等级不足不会掉落物品并且生成远古骑士。"
+		""
+		"破坏后掉落大量铁粒，金粒，0-1个灰烬源质，低概率掉落一个下界合金碎片；"
+		""
+		"破坏后原地生成敌对生物远古骑士。"
+	]
+	quest.12B2B927FFFFD3F1.title: "散落的盔甲"
+	quest.136C3B3FEB2ED0CC.quest_desc: [
+		"&4注意：&r"
+		"如果你安装了YSM mod，可能&d会导致物品栏无法显示玩家护甲&r"
+		""
+		"解决办法： "
+		"* 在饰品栏中关闭马娘的显示"
+		""
+		"或"
+		""
+		"* 在Alt+Y打开YSM页面"
+		"右上角扳手处选择“阻止渲染玩家自身模型”"
+	]
+	quest.136C3B3FEB2ED0CC.title: "YSM"
+	quest.13B1E27BAA44F3B8.quest_desc: [
+		"由于主世界刷怪上限较低，不满足制作刷怪塔条件。玩家可以自己制作刷怪笼，此刷怪笼可以直接把怪物战利品刷到箱子里，低卡顿。"
+		"与正常刷怪塔相同，不同的群系可刷新的怪物不同（&a刷怪种类与原版一致&r）"
+		""
+		"通入&d{block.create_mechanical_spawner.spawn_fluid_random}&r开始刷怪"
+		""
+		"&a&l有下一页！&r&r"
+		"{@pagebreak}"
+		""
+		"&l刷怪群系参考&r"
+		"流浪者：雪原、冰刺之地、冻河、冻洋、冰冻深海"
+		"尸壳：沙漠"
+		"岩浆怪：玄武岩三角洲、下界荒地"
+	]
+	quest.14C82B046FCA091C.title: "区块加载"
+	quest.1534B59AA6AB4BD9.title: "非常用传动装置"
+	quest.1566785ABC7FC6BC.quest_subtitle: "多方块结构打包器"
+	quest.1637D39489C22EB9.title: "结构指南针"
+	quest.17E8B04D5E517FFD.quest_desc: [
+		"站在中草药浴汤中会以0.25/2秒的速度恢复生命值。"
+		"站在中草药浴汤中15秒后可移除所有的负面状态效果。"
+		"站在中草药浴汤中5秒后可获得1级的抗性提升的效果，持续时间10秒。"
+		"亡灵生物站在中草药浴汤中会以0.5/秒的速度损失生命。"
+	]
+	quest.18DE4FF6E70319A5.quest_desc: [
+		"物品栏中，鼠标悬停在任意物品上时"
+		"R键(Recipes)：显示物品配方"
+		"U键(Uses)：显示物品用途"
+		"A键：收藏某个物品以便今后再次查看配方"
+	]
+	quest.18DE4FF6E70319A5.title: "获取物品配方"
+	quest.1A84011D71AF4A87.quest_desc: [
+		"一旦你拥有了&e金色马娘水晶&r"
+		"你就可以制作&e{block.umapyoi.uma_pedestal}&r"
+		""
+		"只有用它才可以召唤SSR马娘与SSR支援卡"
+	]
+	quest.1B12A06587207CCB.quest_desc: ["从背包中补充主要手持物品或副手物品（如果有）"]
+	quest.1B7A31081B34C2D0.quest_desc: [
+		"你可以使用&d技能书&r在技能学习台&a培育&r马娘"
+		""
+		"经过&a培育&r的马娘属性会获得大幅提升！"
+		""
+		"技能书可以在末地的箱子里找到"
+	]
+	quest.1BBF920628E5D7D8.quest_desc: [
+		"制作一个&6{block.kaleidoscope_doll.doll_machine}&r来抽奖获取女仆"
+		""
+		"每次抽奖有100%概率获得一个玩偶，"
+		"有12%概率获得装有女仆的&6{item.touhou_little_maid.smart_slab}&r"
+	]
+	quest.1E997C93EDDBD107.quest_desc: [
+		"你获得了&a{item.kubejs.chlorophyte_ingot}&r"
+		"它可以用于制作以下锭"
+		""
+		"这些锭可以用于制作{l2complements.title}的装备。这些装备均具有强力的效果或套装效果"
+		""
+		"&d&l也有以下两种方式获得{l2complements.title}装备：&r&r"
+		"* 直接升级&b钻石·下界合金&r装备"
+		"* 使用&e{item.irons_spellbooks.timeless_slurry}&r升级下界合金装备"
+	]
+	quest.1F18639774CCF28E.quest_desc: [
+		"对着{block.umapyoi.silver_uma_pedestal}使用&d{item.umapyoi.blank_ticket}&r（注意副手需要为空）"
+		"你就可以获得&e{item.umapyoi.blank_uma_soul}&r"
+		""
+		"随后将&e{item.umapyoi.blank_uma_soul}&r放置于&b{block.umapyoi.three_goddess}&r中，获得&b{item.umapyoi.uma_soul}&r"
+		""
+		"在饰品栏装备&b{item.umapyoi.uma_soul}&r后，你就可以获得&6属性提升&r！"
+	]
+	quest.1F829C67174A4944.quest_desc: [""]
+	quest.20C36E1FC5B0C4EF.title: "接下来你可以做电梯来装饰你的房子了"
+	quest.2105773288B818A7.title: "高级物流"
+	quest.21A14597E092B4EC.title: "火车运输包裹"
+	quest.225EE2F819DD7B94.quest_desc: ["食用后均恢复 2 点饥饿值和 2.4 点饱和度，同时恢复行动力上限百分比的行动力。"]
+	quest.23C25A1C2A64D98A.quest_desc: [
+		"首先使用&d{entity.minecraft.ender_dragon}&r掉落的{block.minecraft.dragon_head}制作一个&b{block.alloy_smelter.forge_controller_tier3}"
+		"它可以提高你的矿石产量，更重要的是，它可以熔炼消化{dimension.minecraft.the_end}外岛的各种产物"
+	]
+	quest.245F475CE17B31BE.title: "建筑帮手"
+	quest.2513F6677A477C78.quest_desc: [
+		"要塞会直接生成在坐标0，0处地下。并且自动开启末地传送门。"
+		""
+		"你可以直接前往末地开始冒险。"
+		""
+		"由于末地难度极高，建议组队前往"
+	]
+	quest.253789D53CF7F585.quest_desc: [
+		"位于&5末地&r的&d&l废弃堡垒&r&r内"
+		"结构名：cataclysm:ruined_citadel"
+	]
+	quest.253789D53CF7F585.quest_subtitle: "难度100"
+	quest.254B565D5CB0CD9D.quest_desc: [
+		"不同的矿石会密集的分布在不同的群系中。"
+		"比如平原会存在大量铁矿石矿脉，风袭丘陵会存在大量&c{block.kubejs.compressed_tuff}&r矿脉。"
+		"部分矿脉需要在寒冷群系开采的&b{block.kubejs.coolant}&r才能进行开采。"
+		"&c铜&r与&c锌&r可以通过粉碎&c{block.kubejs.compressed_tuff}&r获得"
+		""
+		"几乎可以开采到一切矿石。"
+		"&d在JEI搜索&a@ore&r获取所有矿脉信息&r"
+	]
+	quest.2765F1D3D9529A27.quest_desc: ["站在温泉浴中15秒可获得20秒的迅捷1效果"]
+	quest.2813FF8C41AFEF22.quest_desc: ["你可以在这里找到大量&5{block.irons_spellbooks.brazier_soul}&r"]
+	quest.2813FF8C41AFEF22.title: "静谧冰园"
+	quest.295B71FE3F4848D6.quest_desc: [
+		"奖励永久[&a{effect.farmersdelight.nourishment}&r]BUFF: "
+		"  未受到伤害时，&d&l不再消耗饥饿值与饱食度&r&r"
+		""
+		""
+		"&o可在成就“&c{advancement.c6c.root}&r”中查看所有可收集项目与奖励&r"
+	]
+	quest.295B71FE3F4848D6.quest_subtitle: "收集所有类型的酒狐女仆"
+	quest.29641835AFA986E4.quest_desc: [
+		"极高耐久，不易损坏。"
+		""
+		"一次最多受到1点耐久损耗。"
+		""
+		"玩家隐身时，护甲会一起隐身。"
+		""
+		"{@pagebreak}"
+		"玩家隐身时，工具会一起隐身。"
+		""
+		"攻击范围和挖掘范围+1"
+	]
+	quest.29641835AFA986E4.quest_subtitle: "防具与工具"
+	quest.298F765A538085EE.quest_desc: ["食用皇家青汁后会补满行动力，并恢复2点饥饿值和3点饱和度，但会降低一级干劲等级。"]
+	quest.2B4E14697A217391.quest_desc: [
+		"奖励永久[&a触及距离+1&r]"
+		""
+		"&o可在成就“&c{advancement.c6c.root}&r”中查看所有可收集项目与奖励&r"
+	]
+	quest.2B4E14697A217391.quest_subtitle: "收集5名女仆"
+	quest.2B88D9C4FF3F9C1E.quest_desc: [
+		"制作一个&6{block.irons_jewelry.jewelcrafting_station}&r"
+		"你可以用它制作各种饰品，提升你的&6各项属性&r"
+	]
+	quest.2CC6203A4CCE5D19.quest_desc: [
+		"女仆会卖萌，会做菜，还会摇手摇曲柄，根据好感度，可任意提供4096-65536 &c{create.display_source.kinetic_stress.current}&r"
+		""
+		"女仆还有收集玩法，&c奖励玩家属性、永远不会饥饿等强力BUFF&r。请参考任务书“车万女仆章节”"
+	]
+	quest.2CCE21B461C8DF85.quest_desc: [
+		"类似于磁铁升级，但相对范围有限；"
+		"玩家捡取物品将存入物品栏中的背包而不是物品栏本身。"
+	]
+	quest.2DACA9D43F90D423.quest_desc: [
+		"{itemGroup.umapyoi}的道具是末地最重要的产出之一"
+		""
+		"经过训练的{item.umapyoi.uma_soul}可以&c大幅提升你的各项属性&r"
+		"请参考其它mod中的{itemGroup.umapyoi}章节"
+		""
+		"注意&e{book.umapyoi.trainers_manual.title}&r不要丢，它可以合成一张&d{item.umapyoi.blank_ticket}&r"
+	]
+	quest.2F179AA3C20F87C6.quest_desc: [
+		"当水，或岩浆满足10,000格时，&6{block.create.hose_pulley}&r会将其视作无限流体，可以无限抽取"
+		""
+		"放置流体时，&6{block.create.hose_pulley}&r需要在目标流体液平面上方。"
+		"抽取流体时，&6{block.create.hose_pulley}&r需要在目标流体底部。"
+	]
+	quest.315C4FF982B23FBE.quest_desc: ["将&7{block.umapyoi.silver_uma_pedestal}&r与&b{block.umapyoi.three_goddess}&r放置于世界中"]
+	quest.324AB45A0A0B05A4.quest_desc: [""]
+	quest.324AB45A0A0B05A4.title: "群系指南针"
+	quest.3282EB41DB52504C.quest_desc: [""]
+	quest.3370CAF47A5F8EBD.quest_desc: [
+		"你需要准备4个&a{item.umapyoi.jewel}&r"
+		"以合成&7{block.umapyoi.silver_uma_pedestal}&r与&b{block.umapyoi.three_goddess}&r"
+	]
+	quest.3454BE7CF82A56B4.quest_desc: ["这是&d{entity.irons_spellbooks.dead_king}&r的掉落物之一"]
+	quest.356B1B423D318A77.quest_desc: [
+		"你可以在末地或下界的各种遗迹中获得全新的首饰卷轴"
+		"学习它们"
+		"你可以制作更强力的首饰"
+	]
+	quest.35BFF10E665799C5.quest_desc: ["你需要使用{item.irons_spellbooks.mithril_ingot}才能制作15分钟的{item.minecraft.potion.effect.apothic_attributes.flying}"]
+	quest.35C67C49516C597B.quest_desc: [
+		"位于&a主世界&r的&e&l被诅咒的金字塔&r&r内"
+		"结构名：cataclysm:cursed_pyramid"
+	]
+	quest.35C67C49516C597B.quest_subtitle: "难度200"
+	quest.35FAF22E1BE9187F.quest_desc: [
+		"你可以使用&d支援卡&r在训练设施终端&a训练&r马娘"
+		""
+		"经过&a训练&r的马娘属性会获得大幅提升！"
+		""
+		"在&7{block.umapyoi.silver_uma_pedestal}&r或&6{block.umapyoi.uma_pedestal}上放置一本书之后"
+		"即可使用&d{item.umapyoi.blank_ticket}&r召唤&d支援卡&r"
+	]
+	quest.379E53FBABC20CC3.quest_desc: [
+		"你可以利用&a{item.kubejs.chlorophyte_ingot}&r制作全新的装备，利用“&c{itemGroup.umapyoi}&r”与“&c饰品&r”提升玩家属性。"
+		""
+		"&l你可以使用快捷键&r &6Shift + X&r &l分享你获得的宝物&r"
+		""
+		"&d你可以制作一本&a{patchouli.l2hostility.title}&r&d，其中有各种敌人/&6&l词条&r&r&d的应对方案&r"
+		""
+		"如果你需要更详细的流程推荐，请查看下一页"
+		""
+		""
+		"{@pagebreak}"
+		""
+		"你可以前往{dimension.minecraft.the_end}诡异群系，挖掘一些{item.kubejs.chlorophyte_ingot}制作{item.kubejs.chlorophyte_sword}，它比钻石剑攻击力更高，距离更远（参考{dimension.minecraft.the_end}诡异章节）"
+		""
+		"随后，前往{dimension.minecraft.the_end}城搜刮宝箱，制作“&c{itemGroup.umapyoi}&r”与“&c饰品&r”，提升玩家自身属性。（参考{dimension.minecraft.the_end}群岛章节）"
+		"绝大部分饰品死亡不掉落。每一次{dimension.minecraft.the_end}的冒险都能为你提供成长。"
+		""
+		"随后前往{dimension.minecraft.the_end}深暗群系，找到古城，利用搜刮到的物资制作“&d灵魂绑定附魔&r”。（一本就够了，你可以用机械动力复印附魔书无限制作）"
+		""
+		"随后在{dimension.minecraft.the_end}深暗群系挑战不死之王。以学习魔法。"
+		""
+		"最后前往{dimension.minecraft.the_end}花林的试炼大厅，获取{l2hostility.title}的词条，制作（本章节任务书）下方的道具。"
+		""
+		"当你可以轻松剿灭300级的怪物时，你可以尝试在{dimension.minecraft.the_end}生存的更久一些，直到遇到具有“{trait.l2hostility.killer_aura}”与“{trait.l2hostility.ragnarok}”的怪物。"
+		""
+		"“{trait.l2hostility.killer_aura}”会每隔一段时间，对附近的玩家造成大量魔法穿甲伤害"
+		""
+		"“{trait.l2hostility.ragnarok}”会在击中玩家后封印玩家的饰品。（除背包及{itemGroup.umapyoi}饰品）。你需要像吃食物一样使用被封印的饰品以解除封印。"
+		"制作一个“{item.l2hostility.pocket_of_restoration}”，它会自动帮你解除“{trait.l2hostility.ragnarok}”的封印，以大幅缓解与“{trait.l2hostility.ragnarok}”战斗的压力。"
+		""
+		"请以击杀“{trait.l2hostility.ragnarok}”怪物作为目标，进行努力吧。"
+	]
+	quest.379E53FBABC20CC3.title: "推荐发育路线"
+	quest.38014DB8FC25BED2.quest_desc: [
+		"手持绳子右击绳子会在下方放置新的绳子；"
+		""
+		"手持绳子潜行右击绳子可以在玩家准星指定的面放置新的绳子；"
+		""
+		"空手潜行右击绳子可以将绳子回收到玩家背包，回收从绳子最底端开始；"
+		""
+		"两个相邻的绳子会在视觉上连在一起。"
+		""
+		"如果钟直接位于绳子的上方，则可以右击这些绳子（距离钟最远24格）以敲钟。钟正下方的绳子将在视觉上与钟连接。"
+	]
+	quest.38014DB8FC25BED2.quest_subtitle: "按住空格可以攀爬"
+	quest.393188CC2575E3CF.quest_desc: [
+		"它可以帮你增产矿物"
+		"同时，具有一些独特的配方"
+		""
+		"你需要按照&2多方块结构&r搭建这个合金冶炼炉"
+		"不要担心，我为你准备了&b蓝图&r(alloy_smelter.nbt)"
+		""
+		"你也可以参考左侧示意图进行搭建"
+		"如果你需要&6自动化&r，可以参考右侧示意图"
+		""
+		"控制器两侧可以进入冶炼原料，正面进入燃料，下方可以放置漏斗获取产物"
+		""
+		"&d一级冶炼炉使用：红砖&r"
+		"&d二级冶炼炉使用：磨制黑石砖&r"
+		"&d三级冶炼炉使用：末地石砖&r"
+	]
+	quest.3DBA88AAE97C7DE8.quest_desc: ["僵尸转换的溺尸太概率会携带三叉戟，可用于制作{item.l2complements.poseidite_ingot}"]
+	quest.3DD1B51E6A581AA1.quest_desc: [
+		"沃土耕地由锄头右键沃土得来，不会因为踩踏退化为沃土方块，无法被精准采集获取，采集会掉落沃土方块。"
+		""
+		"对种植在上面的农作物提供额外的随机刻更新以及几率增加生长幅度的效果，运气好的话，刚种上作物就连着长两次，然后作物就长好了，湿润的沃土耕地效果更为明显。"
+	]
+	quest.3E3B9BAC8D0CC46C.quest_desc: ["玩家(包括生物)从高处摔落至安全网上方不会受到摔落伤害，而是会再次弹起（参考原版粘液块）。按住潜行键可以避免弹起。"]
+	quest.3EB7A495A8443564.quest_desc: [
+		"前往试炼大厅挑战&2{block.minecraft.trial_spawner}&r"
+		"成功后它可能会喷出0-100级的“恶意”词条"
+		""
+		"如果你拥有&5不详之兆&r..."
+		"它就会转变为&d不祥的{block.minecraft.trial_spawner}&r"
+		"同时有概率喷出0-299级的所有“恶意”词条"
+		""
+		"难度等级：150+"
+	]
+	quest.3EB7A495A8443564.title: "词条！词条！"
+	quest.4136927C252AD534.quest_desc: [
+		"使用斧头右键原木获得去皮原木"
+		"再使用安山合金右键去皮原木获得安山机壳"
+	]
+	quest.41602D65D7AC69EB.quest_subtitle: "可在战利品箱中获得"
+	quest.41602D65D7AC69EB.title: "更多狼铠"
+	quest.41A7BD9935057245.quest_desc: [
+		"手持马娘之魂右键点击马娘雕像，即可展示马娘静态模型。"
+		""
+		"对已展示的马娘雕像再次右键点击即可卸下马娘之魂。"
+	]
+	quest.41A7BD9935057245.quest_subtitle: "展示你的马娘"
+	quest.420F2FE9D30CFFC3.quest_desc: [
+		"奖励永久[&a挖掘速度+30%&r]"
+		""
+		"&o可在成就“&c{advancement.c6c.root}&r”中查看所有可收集项目与奖励&r"
+	]
+	quest.420F2FE9D30CFFC3.quest_subtitle: "收集20名女仆"
+	quest.43104742822CBF0C.quest_desc: [
+		"位于&a主世界&r的&8&l古代工厂&r&r内"
+		"结构名：cataclysm:ancient_factory"
+	]
+	quest.43104742822CBF0C.quest_subtitle: "难度10"
+	quest.43292FFEA3A7B2B4.quest_desc: ["如果不了解机器如何工作。请在物品栏，对着机械动力元件长按[&bW&r]进入思索"]
+	quest.43292FFEA3A7B2B4.quest_subtitle: "机械动力第一步"
+	quest.4564BE69E51A90A4.quest_desc: [
+		"位于&4下界&r的&l&c灵魂锻造厂&r&r内"
+		"结构名：cataclysm:soul_black_smith"
+	]
+	quest.4564BE69E51A90A4.quest_subtitle: "难度50"
+	quest.473CA38006F3C4A4.quest_desc: ["一旦你制作出30分钟的{item.minecraft.potion.effect.apothic_attributes.flying}，你就可以利用它合成{item.minecraft.elytra}"]
+	quest.488961A673AFA318.quest_desc: [
+		"极小概率在战利品箱中获得"
+		""
+		"女仆死后会掉落&c{item.touhou_little_maid.film}&r"
+		""
+		"可以放在&6{block.touhou_little_maid.shrine}&r里通过消耗玩家生命值复活，也可以在仪式中复活"
+	]
+	quest.48EF078682A042D6.title: "全民制作人"
+	quest.492D4709E52D0C97.quest_desc: ["食用后均恢复 2 点饥饿值和 2.4 点饱和度，同时恢复行动力上限百分比的行动力。"]
+	quest.49C7F3D4FE51C089.quest_subtitle: "可让玩家在两点之间进行传送"
+	quest.49C7F3D4FE51C089.title: "传送门"
+	quest.4A85185CDE1A7AD2.quest_desc: [
+		"位于&a主世界&r的&3&l苦寒监牢&r&r内"
+		"结构名：cataclysm:frosted_prison"
+	]
+	quest.4A85185CDE1A7AD2.quest_subtitle: "难度600"
+	quest.4AF0160AB01B5304.quest_desc: [
+		"站在牡丹浴汤中会以0.25/2秒的速度恢复生命值。"
+		"站在牡丹浴汤15秒后可移除不祥之兆暴以及所有的负面状态效果。"
+		"站在牡丹浴汤15秒后可获得0.05点的击退抗性，持续时间30秒。"
+		"站在牡丹浴汤15秒后可提高10%的攻击速度，持续时间15秒。"
+		"浸泡总次数达到50次后的每次浸泡可获得1级的幸运效果，持续时间45秒。"
+	]
+	quest.4B3863244FB807C3.quest_desc: [
+		"&6{item.minecraft.potion.effect.apothic_attributes.flying}&r"
+		""
+		"它将取代末地船中鞘翅的生成。"
+		"说实话创造飞行可比鞘翅好用多了"
+		"如果你想体验鞘翅的感觉，也可以使用两瓶&d三十&r分钟{item.minecraft.potion.effect.apothic_attributes.flying}合成鞘翅"
+		""
+		"末地船中所有道具生成概率："
+		"- &d八分钟{item.minecraft.potion.effect.apothic_attributes.flying}&r 33.3%"
+		"- 强力急迫药水 33.3%"
+		"- &c{block.minecraft.netherite_block}&r 16.7%"
+		"- {block.minecraft.diamond_block} 8.6%"
+		"- &e{book.umapyoi.trainers_manual.title}&r 8.6%"
+		"- 其它"
+	]
+	quest.4CB753DB3E3039CD.quest_desc: [
+		"将你的&e马娘之魂&r放入{block.umapyoi.register_lectern}"
+		""
+		"你的马娘属性将会&6大幅提升&r"
+		"同时，你会获得一个马娘的意志"
+	]
+	quest.4D76E3D866F31784.quest_desc: [
+		"可以在玩家间快速邮寄物品。"
+		"摆放并命名一个&e信箱&r，即可使用&b邮箱&r将物品邮寄到对应的&e信箱&r"
+		""
+		"不允许运送容器，或NBT较大的物品"
+	]
+	quest.4D967AC9E5045DDB.quest_desc: [
+		"烟药竹无法自然生成，需采集烟药秆底部获得。"
+		""
+		"顶端结爆弹椒的烟药秆自然生成于绯红森林内，结椒时发出弩弦声，触碰或破坏爆弹椒会爆炸（烟药竹上的爆弹椒威力更大，可炸掉自身）。"
+		""
+		"破坏非底部烟药秆会掉落木棍；种植爆弹椒生成的新烟药秆需底部粗壮后才能采到烟药竹，破坏烟药竹任意部分均掉落烟药竹。"
+	]
+	quest.4E221A3F92D840AB.quest_desc: [
+		"你可以使用&2特雷森训练员手册&r合成&d{item.umapyoi.blank_ticket}&r"
+		""
+		"这是接下来要用到的重要道具"
+	]
+	quest.4E6B6B368A8A4EA6.quest_desc: [
+		"制作一个&e{item.pandora.pandora_bracelet}&r，与一个&a{item.l2hostility.charm_of_looting_1}&r"
+		"将&a{item.l2hostility.charm_of_looting_1}&r放入&e{item.pandora.pandora_bracelet}&r中"
+		"击败敌人后就能获得更多战利品（具体可以查看JEI）"
+		"制作更多的宝珠以获得更多，更优秀的战利品"
+	]
+	quest.4EE2DA5EC1E8572B.quest_desc: [
+		"{block.kubejs.warped_stem_chlorophyte}隐藏在诡异森林的{block.minecraft.warped_stem}中"
+		"它十分坚硬，难以用斧头开采。"
+		"但是它抗爆炸十分脆弱，你可以使用&cTNT&r或勾引&2{entity.minecraft.creeper}&r在它附近爆炸"
+		"它会直接掉落&a{item.kubejs.chlorophyte_ingot}&r"
+	]
+	quest.4EE2DA5EC1E8572B.title: "观察{block.kubejs.warped_stem_chlorophyte}"
+	quest.4F64FB65FFEA050C.quest_subtitle: "现在开始打胶"
+	quest.4FC1C7D438B19492.quest_desc: [
+		"收集两个马娘的意志，并将它们放置于三女神像中"
+		""
+		"马娘的意志将作为种马，培育下一代马娘"
+		""
+		"种马越强力，培育出的下一代马娘能力越强"
+	]
+	quest.4FD79173051DDEB8.quest_desc: ["食用后均恢复 2 点饥饿值和 2.4 点饱和度，同时恢复行动力上限百分比的行动力。"]
+	quest.5083B5F89464A522.quest_desc: [
+		"在末地冰刺偶尔能找到一些废弃的教堂"
+		"冰霜蜘蛛在这里安家产卵，陷入冬眠"
+		"要是你&c破坏掉&r冰霜蜘蛛卵外的冰霜保护层"
+		"就会惊醒&l冰霜蜘蛛&r守护者"
+		""
+		"小心！它们十分危险！"
+		"但是报酬也十分丰厚，&l冰霜蜘蛛&r有概率携带&b稀有装备&r以及&4{item.irons_spellbooks.cinderous_soulcaller}&r"
+		"击败它们，取得奖赏！"
+		""
+		"难度等级：200+"
+	]
+	quest.513BC9A3564D299E.quest_subtitle: "可配合底盘或强力胶使用，工作时使方块实体化"
+	quest.51793B81F3FE45CE.quest_desc: ["在白天，自动的与村民无限制的进行交易。"]
+	quest.5283E81D31BE83AB.quest_desc: [
+		"该武器通常情况下无法造成伤害，仅能造成击退。"
+		"对节肢生物有伤害"
+	]
+	quest.5283E81D31BE83AB.quest_subtitle: "一秒六棍"
+	quest.52A28F0788814240.quest_desc: [
+		"这是&d{entity.irons_spellbooks.dead_king}&r最&l重要&r的掉落物！"
+		""
+		"它将指引你前往魔法的大道"
+		"你需要先在末地找到一个&5{block.irons_spellbooks.brazier_soul}&r"
+	]
+	quest.534C36E4439EB3C7.quest_subtitle: "在中国象棋中下赢女仆"
+	quest.53C14996CDBA5DC2.quest_desc: [
+		"将{item.irons_spellbooks.chained_book}丢入&5{block.irons_spellbooks.brazier_soul}&r中"
+		"你会获得一张随机的&d魔法卷轴&r"
+		"将它装备于你的饰品栏，它将会在你攻击时自动释放"
+		""
+		"&o注意！&d魔法卷轴&r死亡掉落！&r"
+	]
+	quest.53C14996CDBA5DC2.title: "观察“{block.irons_spellbooks.brazier_soul}”"
+	quest.548EEBA7C16661D6.quest_desc: [
+		"{item.l2complements.totemic_gold_ingot}制作的装备具有钻石质的品质和金制品的附魔亲和度。作为工具时耐久接近钻石制品，有类似金制品的挖掘速度，但是还是钻石质的挖掘等级。{item.l2complements.totemic_gold_ingot}制作工具时作为手柄材料，而头部材料使用绿宝石所以耐久比较高。"
+		""
+		"生命护甲效果：每5秒，每件护甲回复1生命值"
+		""
+		"生命装备的共同效果：耐久损耗时，&a回复同等血量&r，免疫饥饿、凋零、中毒效果"
+		""
+		"因此，生命装备不适合使用耐久附魔。生命护甲可以使用护甲耐久附魔来提高耐用性，或者使用{enchantment.l2complements.life_mending}附魔达成损耗耐久-回血-恢复耐久的循环，&6使其只要不被一击破坏就能回满耐久&r。再加上{enchantment.l2complements.safeguard}附魔之后，一击破坏也不再会发生，不论受到多少耐久损耗都能保留1点耐久，然后回血时通过{enchantment.l2complements.life_mending}回复满耐久。唯一需要担心的只有被药水效果阻止回血的问题。"
+		"{@pagebreak}"
+		"{item.l2complements.totemic_gold_ingot}制作的工具具有钻石质的品质和金制品的附魔亲和度。作为工具时耐久接近钻石制品，有类似金制品的挖掘速度，但是还是钻石质的挖掘等级。"
+	]
+	quest.54931F97C140412D.quest_desc: ["温泉偶尔会生成在主世界中，一旦找到，就可以无限获得"]
+	quest.54931F97C140412D.title: "温泉"
+	quest.552F937D15E04A15.quest_desc: [
+		"站在蜂蜜浴汤中会以0.25/秒的速度恢复生命值。"
+		"站在蜂蜜浴汤中会获得1级的缓慢，持续时间10秒。"
+		"站在蜂蜜浴汤中15秒后可移除除了缓慢与霉运之外的所有负面状态效果。"
+		"站在蜂蜜浴汤中会以1/4秒的速度回复饥饿值。"
+		"站在蜂蜜浴汤中15秒后可获得2级的伤害吸收的效果，持续时间20秒。"
+	]
+	quest.55A6F9F0BC4D0096.quest_desc: [""]
+	quest.56469F8456C022EF.quest_desc: [
+		"使用后可以回到床边或出生点"
+		""
+		"&d末地&r无法使用"
+	]
+	quest.5655FD8F2B8FB4D2.quest_desc: ["究极蜂蜜特饮食用后可提升两级心情等级并恢复4点饥饿值和7点饱和度。"]
+	quest.5655FD8F2B8FB4D2.quest_subtitle: "可在满饱食度时食用"
+	quest.568DB1FCA0026DB0.quest_desc: ["相机可以捕获已驯服的女仆，玩家在距离女仆 8 格以内右击以捕捉，并形成一张照片。"]
+	quest.591763149B3E9648.title: "跑图利器"
+	quest.592017A5227B6679.quest_desc: [
+		"使用&6超级管道块&r链接&a入口块&r，并接通应力，可以制作一条供玩家移动的隧道。"
+		""
+		"此管道对帧率压力较大，请酌情使用"
+	]
+	quest.592017A5227B6679.quest_subtitle: "一种帅气的短距离移动方式"
+	quest.593E1782EC446B28.quest_desc: [
+		"马娘，是一个&e&l大幅&r&r提升玩家各项属性的道具"
+		"你可以培养出&e增加600%玩家攻击力&r的马娘"
+		""
+		"你可以在末地的宝箱中寻找到&2特雷森训练员手册&r"
+		"它是“马娘”模组的玩法教学"
+		""
+		"当然，你也可以追随本任务书学习马娘的玩法"
+	]
+	quest.5AD85A669E436FAD.quest_desc: ["&z这世上再也没有什么能伤害到你&r"]
+	quest.5AD85A669E436FAD.quest_subtitle: "苦尽甘来，超脱万物"
+	quest.5C9F0C22F503C49A.quest_desc: [
+		"您游玩过《泰拉瑞亚》&c大师难&r度么"
+		""
+		"&l它要求您谨慎的选择攻击与血量的增益，使用灵活的操作，利用对怪物的了解，并在大量buff药的帮助下才能完成初次通关&r"
+		""
+		"本整合包冒险内容的难度正是在与《泰拉瑞亚》&c大师&r难度看齐"
+		"如果您从未玩过《泰拉瑞亚》&c大师&r难度，我建议您游戏难度选择&a简单模式&r，并开启&a死亡不掉落&r体验冒险内容"
+		""
+		"开启死亡不掉落指令如下："
+		"/gamerule keepInventory true"
+		""
+		"本整合包发布前已开服3次分别测试了简单，普通，困难难度。均可以通关{dimension.minecraft.the_end}冒险内容。"
+	]
+	quest.5C9F0C22F503C49A.title: "难度提示"
+	quest.5E7426AF846024EE.quest_desc: [
+		"{item.l2complements.poseidite_ingot}装备在水下时增加护甲，盔甲韧性，移动速度，和游泳速度。"
+		""
+		"头盔和胸甲在水下时给予玩家{block.minecraft.conduit}效果。"
+		""
+		"护腿和靴子在水下时给予玩家海豚恩惠效果。"
+		""
+		"{@pagebreak}"
+		"{item.l2complements.poseidite_ingot}工具在水下提升50%攻击伤害和20%攻击速度，并且对水生生物和怕水生物额外提升100%伤害（乘算）。"
+	]
+	quest.5F4BF0D8936B370B.quest_desc: [
+		"使用&e马娘水晶&r制作的马娘券可以抽到更高级别的马娘"
+		"（R马娘券可以抽到SR马娘）"
+		"（SR马娘券可以抽到SSR马娘）"
+	]
+	quest.5F69670FBE1B5FE4.quest_desc: [
+		"将照片与棕色染料合成得到，风格较为复古的照片。"
+		""
+		"在物品栏中拿起照片并移动到到其他照片上点击右键，可以将照片叠放在一起形成一叠照片。"
+	]
+	quest.605639A83B5AE2B9.quest_desc: [
+		"防具效果：沉默（&9穿着4件带有沉默效果的装备时，玩家发出的任何震动都会被抵消&r）"
+		""
+		"装备其中一件时，免疫：失明，黑暗，挖掘疲劳，反胃，缓慢，虚弱。"
+		""
+		""
+		"{@pagebreak}"
+		"幽匿工具能&d以较快的速度破坏任何可破坏的方块&r，无视硬度和挖掘等级。"
+		""
+		"附魔效率能进一步提升挖掘速度。"
+		""
+		"&o挖掘方块时请注意方块所需要的工具和挖掘等级。如果工具不对或者挖掘等级不够，不会有掉落物。&r"
+	]
+	quest.605639A83B5AE2B9.quest_subtitle: "防具与工具"
+	quest.60BA9FC4C0678513.quest_desc: [
+		"位面投影器是一种特殊的相机滤镜，可以捕获来自另一位面的图像将其制成照片（可以把本地图像上传并拍摄成照片）。"
+		"首先将位面投影器用铁砧等方式重命名为本地图片的文件路径，如：D:/Images/cat.jpg，支持png、jpg、bmp、gif（不会动）等主流图片类型，支持透明图像（前提是像素需要完全透明）。需要注意铁砧内物品重命名有长度限制。也可以被命名为url路径时，支持从网络获取图片。"
+		""
+		"投影失败不会消耗投影器，而是变为损坏的位面投影器，在相机中显示一张蓝屏界面提示错误代码，损坏的投影器可以与末影之眼合成来修复。"
+	]
+	quest.60F0E62C7A268D3D.quest_desc: [
+		"可以使用奇迹粉末或混沌锭制作&d{item.c6c.abyssal_ticket}&r"
+		"在&c{entity.irons_spellbooks.fire_boss}&r老家使用&d{item.c6c.abyssal_ticket}&r可以开启&d深渊派对&r"
+		"可能掉落普通，&b优秀&r，&9稀有&r，&d传奇&r，&6传说&r，&z神话&r级别的装备，提供大量属性加成"
+		""
+		"一旦完成挑战且获得&l&b奥术符文&r&r后，你就可以制作炽魂符文，在主世界开启&d深渊派对&r挑战"
+		""
+		"&o深渊派对不受{item.l2hostility.greed_of_nidhoggur}影响&r"
+		"&o深渊派对的大部分魔法伤害不受{item.l2hostility.ring_of_divinity}免疫&r"
+		"&o深渊派对不会生成&4破魔&r&o，&4复印&r&o的BOSS&r"
+		""
+		"难度等级: 350+"
+	]
+	quest.620DE65D4B2B3547.quest_desc: [
+		"下界版沃土耕地，需要用明火（火焰、岩浆、火把、灯笼、营火、炉灶、爆弹椒等）来湿润而非水。"
+		""
+		"每个明火可湿润以自身为中心17×9×17的复生沃土耕地。"
+		""
+		"湿润的复生沃土耕地光照等级为10，可满足大部分作物的生长亮度。"
+	]
+	quest.62F46A2AF56A5FD6.quest_desc: ["可放置，作为相机的架子，当然也可以手持拍照"]
+	quest.631002556817F054.quest_desc: ["原味纸杯蛋糕食用后可提升一级干劲等级并恢复5点饥饿值和6点饱和度。"]
+	quest.639AE612BBE4F363.quest_desc: [
+		"使用初始&6{item.touhou_little_maid.smart_slab}&r可以释放出一个无主的女仆"
+		""
+		"可以使用&d{block.minecraft.cake}&r驯服无主的女仆"
+		""
+		"单人模式下可以更换女仆的模型"
+		"在服务器中，不可以更换女仆的模型"
+		""
+		"收集不同的女仆组合，可以获得不同的buff"
+		"统计收集以驯服时的女仆为准"
+		""
+		"你也可以与服务器的伙伴通过&6{item.touhou_little_maid.smart_slab}&r交换未认主的女仆"
+	]
+	quest.6724A17ED66D090E.quest_desc: [
+		"可用于无限开采矿物"
+		"在JEI搜索@ore 可以看到所有矿脉，与其分布地点"
+	]
+	quest.67F1D38FF93B5199.title: "进入&4{dimension.minecraft.the_nether}&r"
+	quest.6802763D2F467790.quest_desc: [
+		"位于&a下界&r的&6&l烈焰竞技场&r&r内"
+		"结构名：cataclysm:burning_arena"
+	]
+	quest.6802763D2F467790.quest_subtitle: "难度800"
+	quest.6954E808A764BB6D.quest_desc: [
+		"&6{itemGroup.create_hypertube}&r放置方式类似于&6{block.create.track}&r，只需创建好轨道网络后给两端的&6{block.create_hypertube.hypertube_entrance}&r提供足够的&6{create.display_source.kinetic_stress.current}&r便可投入使用。"
+		"默认情况下，玩家只需靠近&6{block.create_hypertube.hypertube_entrance}&r便可进入其中开始你的旅程。"
+		"使用&6{item.create.wrench}&r可调整其模式，在自动关闭模式下，潜行便可避免进入超级管道;在手动关闭模式下，则在潜行状态下才可进入。"
+	]
+	quest.69F8F1E623EFEEF8.quest_desc: [
+		"试炼大厅潜藏在{biome.c6c.end_flower_forest}的地下"
+		"除此之外，{biome.c6c.end_flower_forest}宁静祥和，并没有特别的危险"
+	]
+	quest.6A76D1EBB43A2451.quest_desc: [
+		"可以将法术卷轴敲在武器上，使玩家在手持该武器时可以释放该法术"
+		""
+		"将卷轴与对应等级墨水合成一个高一级的卷轴"
+	]
+	quest.6B28FC5FC8BCAB87.quest_desc: ["当玩家携带加装有该升级的背包时自动喂食。"]
+	quest.6B453132CFF68D96.quest_desc: [
+		"BOSS&c{entity.irons_spellbooks.fire_boss}&r的召唤物"
+		"以1.5%的概率在末地的宝箱中出现"
+		""
+		"你可以用它制作一个地图，在&4下界&r寻找&c{entity.irons_spellbooks.fire_boss}&r之所在"
+		""
+		"难度等级：250+"
+	]
+	quest.6D54EE1C48F02762.quest_desc: [
+		"可用于编辑玩家的法术书内含的法术。"
+		"同一种法术无法被重复嵌入法术书中。"
+	]
+	quest.6DB3C1C6D21EA436.quest_desc: [
+		"“&l&e重度机械症&r&r”是一款面向：&a机械动力&r，&6建筑&r，&c冒险玩家&r，为&b多人&r&d长期&r服务器设计的整合包"
+		"由于前期没有传送手段，并且为了获取资源，你可能需要前往不同的群系修筑矿机，刷怪点。单人游玩可能会十分&l坐牢&r。"
+		""
+		"如果你是&e冒险玩家&r，并且对PVE技术较有自信，你可以直接前往阅览“&d末地-战斗与冒险&r”章节。"
+		""
+		"感谢“JSI制作组”对整合包任务书制作提供的帮助。没有他们我无法完成这个任务书。"
+		"感谢“老King呀老King”为整合包试玩及宣发。"
+		"感谢NaraZX与Staples17与炜尔制作的汉化补丁。"
+		"感谢ティオムTEOM制作的英文与泰文本地化。"
+		"感谢Zryuman制作的群青\\&机械动力兼容数据包"
+		"                                                             -MoePus 2025.07.29"
+		""
+		"&a&l有下一页！请务必看！&r&r"
+		""
+		"{@pagebreak}"
+		""
+		"&a&l开服服务器配置选择指南&r&r"
+		""
+		"13700K+8G可带8名以上玩家"
+		"13900K+16G可带10名以上玩家+地平线"
+		"Xeon等服务器专用CPU可带4名玩家"
+		""
+		"若启用地平线，服务器需要至少12G内存！"
+		""
+		"&a&l关于备份&r&r"
+		""
+		"整合包自带自动备份，在simplebackups目录下。备份形式是增量备份。"
+		"如果存档损坏请恢复备份文件。"
+		""
+		"{@pagebreak}"
+		""
+		"&a&l关于光影与渲染&r&r"
+		""
+		"整合包自带3款光影"
+		"&cComplementary&r光影画面清晰明亮，适合大部分生存玩家"
+		"&cphoton&r光影很漂亮，但是与强力胶，粒子效果等不太兼容"
+		"&cBliss&r光影远景效果极佳，但是对配置要求较高"
+		""
+		"名称后缀带&6Clrwl&r的光影包含了对机械动力的专属优化，如果你使用其他光影可能会遇到帧率降低的情况"
+		""
+		"如果你遇到了箱子，机械动力原件&c无法显示&r的问题，按照以下步骤操作："
+		"1. 确保你使用了独立显卡"
+		"2. 确保你的显卡驱动是最新"
+		"3. 执行指令 /flywheel backend instancing"
+		"4. 执行指令 /flywheel backend off"
+		"一旦一个步骤生效，就无需执行下一个步骤。"
+		"此问题常见于Intel显卡与AMD RNDA2架构显卡。"
+		""
+		"{@pagebreak}"
+		"&a&l关于地平线&r&r"
+		"为保证绝大部分玩家的体验。整合包不自带地平线模组。"
+		"但是自带了最低配置运行地平线的配置文件，单人模式你只需要安装地平线模组就可以畅玩地平线"
+		"如果你是服主。我近期会发布服务器地平线教程。你可以到我的主页寻找教程参考。(&6点击下面那颗星星&r)"
+		""
+		"游玩服务器推荐至少分配&b4G&r内存"
+		"游玩单人模式推荐至少分配&b10G&r内存"
+		""
+		"{@pagebreak}"
+		"&a&lC6C&r&r"
+		"C6C模组是整合包魔改核心模组，它提供了一些配置，在c6c-common.toml中，请按需修改"
+		"* 主世界刷怪量"
+		"* 末地刷怪量"
+		"* 禁止服务器环境下修改女仆皮肤"
+		"* 二段跳"
+		""
+		"{@pagebreak}"
+		"&a&l汇报崩溃&r&r"
+		"如果你遇到了崩溃等问题，请上传崩溃报告到"
+		"&ehttps://mclo.gs/&r"
+		"并把生成的链接发送给作者"
+	]
+	quest.6DB3C1C6D21EA436.title: "欢迎来到重度机械症整合包"
+	quest.6F343418CE247D0D.quest_desc: [
+		"马：马的速度是原版的2倍，而且可以无视大部分地形障碍，健步如飞。铜质号角可以召唤驯服的马匹"
+		""
+		"史莱姆鞋子与弹弓：可以让玩家超级起跳，并快速移动"
+		""
+		"超级管道：可以让玩家在基地内短距离快速移动"
+		""
+		"回归药水：可以让玩家快速回到床边或出生点（无法在末地使用）"
+		""
+		"火车（中期）：可以链接远距离的基地与资源点"
+		""
+		"脆弱的传送石（中期）：可以让玩家传送到指定的标记后的地点"
+		""
+		"此呼彼应法杖与传送门框架（后期）：可以让玩家在两点之间传送"
+	]
+	quest.6F343418CE247D0D.title: "关于跑图"
+	quest.6F4F862CB6AF1A4C.quest_desc: ["蜂蜜特饮食用后可以提升一级心情等级并恢复2点饥饿值和3点饱和度。"]
+	quest.6F4F862CB6AF1A4C.quest_subtitle: "可在饱食度满时食用"
+	quest.6FF2FBFB5A8D4C13.quest_desc: ["&o&c{dimension.minecraft.the_end}&r中，扫帚的移动能力会被严重限制，可通过C6C配置文件调整&r"]
+	quest.6FF2FBFB5A8D4C13.quest_subtitle: "需要有女仆和你一起坐才可以"
+	quest.6FF2FBFB5A8D4C13.title: "可以飞的扫帚"
+	quest.717036CE2862E3FF.quest_desc: ["在挖掘方块或攻击实体时，将玩家主手中的任何工具换成最佳可用工具或武器。"]
+	quest.7190D0D53DB975B2.quest_desc: [
+		"你可以看看“{dimension.minecraft.the_end}”的其它章节，决定你的探险计划"
+		"决定后"
+		"出发！"
+	]
+	quest.7199171C6EEE34F6.title: "克隆蓝图"
+	quest.73983F6255308C0E.quest_desc: [
+		"站在牛奶浴汤中会以0.25/2秒的速度恢复生命值。"
+		""
+		"站在牛奶浴汤中15秒后可移除除了霉运之外的所有负面状态效果。"
+		""
+		"站在牛奶浴汤中会以1/15秒的速度回复饥饿值。"
+	]
+	quest.74C40A81C9605AC0.quest_desc: [
+		"末地幽匿群系绝对是末地&4最危险&r的地方"
+		"两个怪物，&d{entity.minecraft.warden}&r与&d{entity.irons_spellbooks.dead_king}&r栖息在这里"
+		"不过还好，它们两个都处于沉睡状态"
+		"只要没有人将它们惊醒，它会永远的沉睡下去"
+		""
+		"&d{entity.minecraft.warden}&r与&d{entity.irons_spellbooks.dead_king}&r"
+		"到底谁才是幽匿之主？"
+		""
+		"难度等级：100+"
+	]
+	quest.74C40A81C9605AC0.title: "嘘！小点声！"
+	quest.74F2404B036CB503.quest_desc: [
+		"古城偶尔会出现在末地深暗群系"
+		""
+		"这里藏有大量&c下界合金&r，以及制作&d灵魂绑定&r附魔的原材料&d回响碎片&r。但是，也更加危险"
+		""
+		"难度等级：150+"
+	]
+	quest.74F2404B036CB503.title: "古城"
+	quest.75BA253A92043A09.quest_desc: [
+		"这里是末地诡异群系"
+		"满眼都是绿油油的"
+		"&d{entity.minecraft.enderman}&r与&2{entity.minecraft.creeper}&r在这里栖息"
+		"这里盛产&a{item.kubejs.chlorophyte_ingot}&r，可以制作各种全新的装备，与道具"
+		"如果你想在末地外岛生存下去，&a{item.kubejs.chlorophyte_ingot}&r必不可少"
+		""
+		"难度等级：20+"
+	]
+	quest.77305B767FC35FD7.quest_subtitle: "多了不说，少了不唠，直接开造"
+	quest.78158AE15F2A7180.quest_desc: [
+		"位于&a主世界&r的&1&l沉沦之城&r&r内"
+		"结构名：cataclysm:sunken_city"
+	]
+	quest.78158AE15F2A7180.quest_subtitle: "难度300"
+	quest.7A3169F8A7713383.quest_desc: [
+		"将任何背包变成具有飞行和悬停能力的功能齐全的喷气背包；"
+		"使用铜背罐/下界合金背罐作为燃料（必须在背包内）。"
+	]
+	quest.7A9D46939AA33A20.title: "更精致"
+	quest.7ADA92302AD2425C.quest_desc: [
+		"&c现在，要塞直接在主世界坐标0,0处的地下生成，并且自动打开通向{dimension.minecraft.the_end}的传送门&r"
+		""
+		"&l&4{dimension.minecraft.the_end}难度极高，建议组队前往。&r&r"
+	]
+	quest.7ADA92302AD2425C.title: "前往{dimension.minecraft.the_end}"
+	quest.7B75EE328291ABCC.quest_desc: ["希望你能培育出最强力的马娘！"]
+	quest.7CD24C618C37D5C2.quest_desc: [
+		"主要有两种方式入手&d{item.l2hostility.chaos_ingot}&r"
+		""
+		"1. 使用合成配方制作"
+		"2. 制作一个&b{item.l2hostility.charm_of_looting_4}&r， 在200级以上难度时前往末地城。此时潜影贝必定携带破魔词条，有概率掉落&d{item.l2hostility.chaos_ingot}&r"
+	]
+	quest.7D783507714BF010.quest_desc: [
+		"祭坛可用红色羊毛（20 个）和橡木（18 个）建造，建造完成后用博丽的御币右击下图蓝色位置生成祭坛，通过消耗玩家的 &6{item.touhou_little_maid.power_point}&r  来合成物品和触发指定事件也可以用来当作 &6{block.touhou_little_maid.maid_beacon}&r 的能量。"
+		""
+		"玩家按照下图建造后，右击御柱放置物品，Shift+右键取下物品，放置正确后消耗足够的 &6{item.touhou_little_maid.power_point}&r 直接合成物品或触发指定事件。"
+		""
+		"请查看教学书&6{patchouli.touhou_little_maid.book.name}&r里&6{patchouli.touhou_little_maid.book.entries.overview.multiblocks_altar.name}&r的条目，点击眼睛按钮可以生成可视化投影。"
+		"{image:ftbquests:textures/nvpujitian.png width:160 height:120 align:center}"
+	]
+	quest.7D783507714BF010.title: "{touhou_little_maid.ponder.altar.header}"
+	quest.7DB3025A320096D6.quest_desc: [
+		"末地城会漂浮在末地群岛上方"
+		"小心，千万不要失足！下方就是万丈深渊"
+		""
+		"难度等级：50+"
+	]
+	quest.7DB3025A320096D6.title: "遗迹所在"
+	quest.7DF40621D9ECBE60.quest_desc: [
+		"佩戴在玩家的背上或放在地板上时有效；"
+		"将物品从最多5个方块外拉入背包的主存储槽。"
+	]
+	quest.7E563C97A327B537.quest_desc: [
+		"位于&a主世界&r的&b&l卫城&r&r内"
+		"结构名：cataclysm:acropolis"
+	]
+	quest.7E563C97A327B537.quest_subtitle: "难度600"
+	quest.7E8FD764CCC38327.quest_desc: [
+		"奖励永久[&a实体交互距离+1&r]"
+		""
+		"&o可在成就“&c{advancement.c6c.root}&r”中查看所有可收集项目与奖励&r"
+	]
+	quest.7EFEEF11A184A08E.quest_desc: [
+		"制作一个&b{block.umapyoi.disassembly_block}&r"
+		""
+		"将不需要的马娘放入其中，可以获得&e马娘水晶&r"
+	]
+	quest.7F438F9D2D109C6F.quest_desc: [
+		"奖励永久[&a过量治疗+10%&r]："
+		"  你造成的伤害的10%将转化为你的&6临时生命&r"
+		""
+		"&o可在成就“&c{advancement.c6c.root}&r”中查看所有可收集项目与奖励&r"
+	]
+	quest.7F438F9D2D109C6F.quest_subtitle: "收集&6{model.touhou_little_maid.saigyouji_yuyuko.name}&r与&6{model.touhou_little_maid.konpaku_youmu.name}&r女仆"
+	task.018D50BCD26EC52D.title: "关于马"
+	task.079598ED34BDA743.title: "JEI的使用"
+	task.07BD684C5841D867.title: "末地！"
+	task.0C0C580E2F734E82.title: "绿油油的"
+	task.0EC1C934EE7E9C9C.title: "与女仆下棋"
+	task.112CBA6D46832979.title: "\"恶意\""
+	task.13AB58A961702203.title: "热水浴"
+	task.14B8564808BA252E.title: "传输"
+	task.1A0E470B8AAAA037.title: "实用工具"
+	task.1AA1A41B0F9286FD.title: "观察散落的盔甲"
+	task.1B22D77617B1FB2B.title: "更好的狼铠"
+	task.1C7B52B2D8C27CA5.title: "女仆饰品"
+	task.1E05D9F4697EBE41.title: "过滤器"
+	task.3056BA1F2A472133.title: "欢迎来到重度机械症整合包"
+	task.3A9D318495BFF9AE.title: "出发"
+	task.3DCCCC14D391742B.title: "地牢！地牢！"
+	task.49D91506FB3FF564.title: "捕获或复活女仆"
+	task.49FE4F7B204197F0.title: "主人工具"
+	task.4A021CCA252DCB4E.title: "幽匿之王"
+	task.4BEEA63B2528F8B9.title: "辅助工作装置"
+	task.4C3F131687C993FF.title: "传动装置"
+	task.596535A955251949.title: "简易抽屉升级"
+	task.5A4EC83AAAB86751.title: "可在JEI搜索框中搜索@delight查看所有食物"
+	task.627EF049D666373E.title: "遗迹所载"
+	task.6517A277B3E3D931.title: "应力产生装置"
+	task.731A8373E429DB6E.title: "装饰"
+	task.763F25EE5DE39431.title: "终极目标女仆控"
+	task.7CED1C11ECCA5318.title: "更高级的传输装置"
+	task.7FBFB25DA5BBCF28.title: "背包升级"
+}

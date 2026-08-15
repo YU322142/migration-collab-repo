@@ -1,0 +1,43 @@
+{
+    "type":  "kaleidoscope_cookery:pot",
+    "carrier":  {
+                    "item":  "minecraft:bowl"
+                },
+    "ingredients":  [
+                        {
+                            "item":  "farmersdelight:onion"
+                        },
+                        {
+                            "tag":  "c:eggs"
+                        },
+                        {
+                            "tag":  "c:bread"
+                        },
+                        {
+                            "item":  "minecraft:carrot"
+                        },
+                        {
+                            "item":  "minecraft:carrot"
+                        },
+                        {
+                            "item":  "minecraft:chicken"
+                        },
+                        {
+                            "item":  "minecraft:potato"
+                        },
+                        {
+                            "item":  "minecraft:potato"
+                        }
+                    ],
+    "result":  {
+                   "id":  "farmersdelight:roast_chicken"
+               },
+    "stir_fry_count":  3,
+    "time":  200,
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "farmersdelight"
+                                }
+                            ]
+}

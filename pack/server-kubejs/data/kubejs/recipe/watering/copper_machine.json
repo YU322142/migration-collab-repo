@@ -1,0 +1,18 @@
+{
+  "type": "c6c:watering",
+  "ingredients": [
+    {
+      "item": "create:copper_casing"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 1000,
+      "fluid": "kubejs:kelp_gel"
+    }
+  ],
+  "results": [
+    {
+      "id": "createages:copper_machine"
+    }
+  ]
+}

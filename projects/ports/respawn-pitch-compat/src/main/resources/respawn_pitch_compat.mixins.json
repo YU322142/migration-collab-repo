@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.bmt.respawnpitchcompat.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ServerPlayerMixin",
+    "SetSpawnCommandMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

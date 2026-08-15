@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Τέθηκε το σημείο γέννησης στη θέση %s, %s, %s [%s, %s] στη διάσταση %s για τον παίκτη %s",
+  "commands.spawnpoint.success.multiple.new": "Τέθηκε το σημείο γέννησης στη θέση %s, %s, %s [%s, %s] στη διάσταση %s για %s παίκτες"
+}

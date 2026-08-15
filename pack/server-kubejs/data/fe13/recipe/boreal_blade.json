@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  V",
+    " I ",
+    "W  "
+  ],
+  "key": {
+    "V": {
+      "item": "irons_spellbooks:icy_fang"
+    },
+    "W": {
+      "item": "irons_spellbooks:weapon_parts"
+    },
+    "I": {
+      "item": "minecraft:ice"
+    }
+  },
+  "result": {
+    "id": "irons_spellbooks:boreal_blade",
+    "count": 1
+  }
+}

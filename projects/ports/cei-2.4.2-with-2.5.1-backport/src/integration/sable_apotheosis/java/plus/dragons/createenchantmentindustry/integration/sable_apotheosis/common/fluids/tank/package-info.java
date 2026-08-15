@@ -1,0 +1,8 @@
+@ParametersAreNonnullByDefault
+@MethodsReturnNonnullByDefault
+@FieldsAreNonnullByDefault
+package plus.dragons.createenchantmentindustry.integration.sable_apotheosis.common.fluids.tank;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+import net.minecraft.FieldsAreNonnullByDefault;
+import net.minecraft.MethodsReturnNonnullByDefault;

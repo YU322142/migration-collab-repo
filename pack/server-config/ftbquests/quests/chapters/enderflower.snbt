@@ -1,0 +1,43 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "enderflower"
+	group: "6B9D1AFD3E45FF4E"
+	icon: {
+		id: "minecraft:flowering_azalea_leaves"
+	}
+	id: "4350B63C95F47CFF"
+	images: [{
+		height: 10.24d
+		image: "ftbquests:textures/end_flower_forest.png"
+		rotation: 0.0d
+		width: 21.36d
+		x: 0.0d
+		y: 0.5d
+	}]
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			id: "69F8F1E623EFEEF8"
+			tasks: [{
+				id: "3DCCCC14D391742B"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "l2hostility:repelling"
+			}
+			id: "3EB7A495A8443564"
+			tasks: [{
+				id: "0E9FA802CB92EB90"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 2.0d
+		}
+	]
+}

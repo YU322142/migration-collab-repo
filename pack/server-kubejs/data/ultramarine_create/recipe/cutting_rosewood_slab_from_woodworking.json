@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "ultramarine:rosewood_planks"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "ultramarine:rosewood_slab"
+    }
+  ]
+}

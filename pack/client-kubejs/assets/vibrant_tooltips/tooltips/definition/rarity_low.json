@@ -1,0 +1,17 @@
+{
+  "priority": 100,
+  "style": "vibrant_tooltips:rarity/low",
+  "filter": {
+    "type": "obscure_tooltips:any_of",
+    "terms": [
+      {
+        "type": "obscure_tooltips:rarity",
+        "rarity": "rare"
+      },
+      {
+        "type": "obscure_tooltips:rarity",
+        "rarity": "uncommon"
+      }
+    ]
+  }
+}

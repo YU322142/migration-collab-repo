@@ -1,0 +1,19 @@
+{
+    "type":  "kaleidoscope_cookery:pot",
+    "ingredients":  [
+                        {
+                            "item":  "farmersdelight:bacon"
+                        }
+                    ],
+    "result":  {
+                   "id":  "farmersdelight:cooked_bacon"
+               },
+    "stir_fry_count":  3,
+    "time":  200,
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "farmersdelight"
+                                }
+                            ]
+}

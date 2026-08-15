@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Reaperejo de %7$s estas ŝanĝita al %1$s, %2$s, %3$s [%4$s, %5$s] en %6$s",
+  "commands.spawnpoint.success.multiple.new": "Reaperejo de %7$s ludantoj estas ŝanĝita al %1$s, %2$s, %3$s [%4$s, %5$s] en %6$s"
+}

@@ -1,0 +1,214 @@
+[
+    {
+        "file":  "common\\fluids\\experience\\BlazeExperienceBlockEntity.java",
+        "keys_242":  [
+                         "isCreative"
+                     ],
+        "keys_251":  [
+                         "isCreative"
+                     ],
+        "only_242":  [
+
+                     ],
+        "only_251":  [
+
+                     ]
+    },
+    {
+        "file":  "common\\processing\\classic_enchanter\\ClassicBlazeEnchanterBlockEntity.java",
+        "keys_242":  [
+                         "HeldItem",
+                         "ProcessingTime"
+                     ],
+        "keys_251":  [
+                         "HeldItem",
+                         "ProcessingTime"
+                     ],
+        "only_242":  [
+
+                     ],
+        "only_251":  [
+
+                     ]
+    },
+    {
+        "file":  "common\\processing\\classic_enchanter\\ClassicEnchanterBehaviour.java",
+        "keys_242":  [
+
+                     ],
+        "keys_251":  [
+
+                     ],
+        "only_242":  [
+
+                     ],
+        "only_251":  [
+
+                     ]
+    },
+    {
+        "file":  "common\\processing\\enchanter\\BlazeEnchanterBlockEntity.java",
+        "keys_242":  [
+                         "HeldItem",
+                         "ProcessingTime",
+                         "Seed"
+                     ],
+        "keys_251":  [
+                         "HeldItem",
+                         "ProcessingTime",
+                         "Seed"
+                     ],
+        "only_242":  [
+
+                     ],
+        "only_251":  [
+
+                     ]
+    },
+    {
+        "file":  "common\\processing\\enchanter\\EnchanterBehaviour.java",
+        "keys_242":  [
+
+                     ],
+        "keys_251":  [
+
+                     ],
+        "only_242":  [
+
+                     ],
+        "only_251":  [
+
+                     ]
+    },
+    {
+        "file":  "common\\processing\\forger\\BlazeForgerBlockEntity.java",
+        "keys_242":  [
+                         "Inventory",
+                         "ProcessingTime"
+                     ],
+        "keys_251":  [
+                         "ForgingMode",
+                         "Inventory",
+                         "Mode",
+                         "ProcessingTime"
+                     ],
+        "only_242":  [
+
+                     ],
+        "only_251":  [
+                         "ForgingMode",
+                         "Mode"
+                     ]
+    },
+    {
+        "file":  "common\\processing\\forger\\BlazeForgerInventory.java",
+        "keys_242":  [
+                         "Conflicting",
+                         "Cost",
+                         "Mode",
+                         "OverCap"
+                     ],
+        "keys_251":  [
+                         "Conflicting",
+                         "Cost",
+                         "Mode",
+                         "Operation",
+                         "OverCap"
+                     ],
+        "only_242":  [
+
+                     ],
+        "only_251":  [
+                         "Operation"
+                     ]
+    },
+    {
+        "file":  "integration\\apotheosis\\common\\processing\\affix\\affixEnhancer\\AffixAugmentorBlockEntity.java",
+        "keys_242":  [
+                         "Powered",
+                         "ProcessingTicks"
+                     ],
+        "keys_251":  [
+                         "ActiveAffix",
+                         "ActiveCost",
+                         "ActiveFromLevel",
+                         "ActiveToLevel",
+                         "HeldPreviewAffix",
+                         "HeldPreviewCost",
+                         "HeldPreviewFromLevel",
+                         "HeldPreviewStatus",
+                         "HeldPreviewTicks",
+                         "HeldPreviewToLevel",
+                         "Powered",
+                         "ProcessingTicks"
+                     ],
+        "only_242":  [
+
+                     ],
+        "only_251":  [
+                         "ActiveAffix",
+                         "ActiveCost",
+                         "ActiveFromLevel",
+                         "ActiveToLevel",
+                         "HeldPreviewAffix",
+                         "HeldPreviewCost",
+                         "HeldPreviewFromLevel",
+                         "HeldPreviewStatus",
+                         "HeldPreviewTicks",
+                         "HeldPreviewToLevel"
+                     ]
+    },
+    {
+        "file":  "integration\\apotheosis\\common\\processing\\socket\\gem\\gemCutter\\GemCutterBlockEntity.java",
+        "keys_242":  [
+                         "Powered",
+                         "ProcessingTicks"
+                     ],
+        "keys_251":  [
+                         "ActiveCost",
+                         "ActiveFromPurity",
+                         "ActiveToPurity",
+                         "HeldPreviewCost",
+                         "HeldPreviewFromPurity",
+                         "HeldPreviewStatus",
+                         "HeldPreviewTicks",
+                         "HeldPreviewToPurity",
+                         "Powered",
+                         "ProcessingTicks"
+                     ],
+        "only_242":  [
+
+                     ],
+        "only_251":  [
+                         "ActiveCost",
+                         "ActiveFromPurity",
+                         "ActiveToPurity",
+                         "HeldPreviewCost",
+                         "HeldPreviewFromPurity",
+                         "HeldPreviewStatus",
+                         "HeldPreviewTicks",
+                         "HeldPreviewToPurity"
+                     ]
+    },
+    {
+        "file":  "integration\\apothic_enchanting\\common\\processing\\infuser\\InfuserBlockEntity.java",
+        "keys_242":  [
+                         "InfusionStats",
+                         "ProcessingTicks",
+                         "Running",
+                         "Ticks"
+                     ],
+        "keys_251":  [
+                         "InfusionStats",
+                         "ProcessingTicks",
+                         "Running",
+                         "Ticks"
+                     ],
+        "only_242":  [
+
+                     ],
+        "only_251":  [
+
+                     ]
+    }
+]

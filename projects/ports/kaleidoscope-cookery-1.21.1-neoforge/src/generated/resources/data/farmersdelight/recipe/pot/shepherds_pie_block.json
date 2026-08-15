@@ -1,0 +1,43 @@
+{
+    "type":  "kaleidoscope_cookery:pot",
+    "carrier":  {
+                    "item":  "minecraft:bowl"
+                },
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:potato"
+                        },
+                        {
+                            "item":  "minecraft:potato"
+                        },
+                        {
+                            "tag":  "c:milk"
+                        },
+                        {
+                            "tag":  "c:raw_mutton"
+                        },
+                        {
+                            "tag":  "c:raw_mutton"
+                        },
+                        {
+                            "tag":  "c:raw_mutton"
+                        },
+                        {
+                            "tag":  "c:crops/onion"
+                        },
+                        {
+                            "tag":  "c:crops/onion"
+                        }
+                    ],
+    "result":  {
+                   "id":  "farmersdelight:shepherds_pie_block"
+               },
+    "stir_fry_count":  3,
+    "time":  200,
+    "neoforge:conditions":  [
+                                {
+                                    "type":  "neoforge:mod_loaded",
+                                    "modid":  "farmersdelight"
+                                }
+                            ]
+}

@@ -1,0 +1,163 @@
+package com.tom.storagemod.block.entity;
+
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.state.BlockState;
+
+import com.tom.storagemod.Content;
+import com.tom.storagemod.block.AbstractInventoryHopperBlock;
+import com.tom.storagemod.inventory.IInventoryAccess;
+import com.tom.storagemod.inventory.IInventoryAccess.IInventoryChangeTracker;
+import com.tom.storagemod.inventory.InventorySlot;
+import com.tom.storagemod.inventory.StoredItemStack;
+import com.tom.storagemod.inventory.filter.ItemPredicate;
+import com.tom.storagemod.item.IItemFilter;
+import com.tom.storagemod.Config;
+import com.tom.storagemod.util.BlockFaceReference;
+
+public class BasicInventoryHopperBlockEntity extends AbstractInventoryHopperBlockEntity {
+	private ItemStack filter = ItemStack.EMPTY;
+	private int cooldown;
+	private long topChange, bottomChange;
+	public int waiting = 0;
+	private ItemPredicate filterPred;
+	private InventorySlot topSlot;
+	private InventorySlot bottomSlot;
+
+	public BasicInventoryHopperBlockEntity(BlockPos pos, BlockState state) {
+		super(Content.basicInvHopperBE.get(), pos, state);
+	}
+
+	@Override
+	public void saveAdditional(CompoundTag compound, HolderLookup.Provider provider) {
+		super.saveAdditional(compound, provider);
+		ItemStack is = getFilter();
+		if (!is.isEmpty())
+			compound.put("Filter", is.save(provider, new CompoundTag()));
+	}
+
+	@Override
+	public void loadAdditional(CompoundTag nbtIn, HolderLookup.Provider provider) {
+		super.loadAdditional(nbtIn, provider);
+		this.filter = ItemStack.parseOptional(provider, nbtIn.getCompound("Filter"));
+	}
+
+	public void setFilter(ItemStack filter) {
+		this.filter = filter;
+		if (this.filter.isEmpty())filterPred = null;
+		else if (this.filter.getItem() instanceof IItemFilter i) {
+			filterPred = i.createFilter(BlockFaceReference.touching(level, worldPosition, getBlockState().getValue(AbstractInventoryHopperBlock.FACING)), filter);
+		} else {
+			filterPred = s -> ItemStack.isSameItemSameComponents(s.getStack(), filter);
+		}
+		waiting = 0;
+		setChanged();
+	}
+
+	public ItemStack getFilter() {
+		return filter;
+	}
+
+	@Override
+	public void updateServer() {
+		if(!filter.isEmpty() && filterPred == null)setFilter(filter);//update predicate
+		BlockState state = level.getBlockState(worldPosition);
+		Direction facing = state.getValue(AbstractInventoryHopperBlock.FACING);
+		IInventoryAccess top = topCache.getAccess(level, worldPosition.relative(facing.getOpposite()));
+		IInventoryAccess bottom = bottomCache.getAccess(level, worldPosition.relative(facing));
+		boolean topNet = topCache.isNetwork();
+		if (!topCache.isValid() || !bottomCache.isValid())return;
+		if (!topNet && !bottomCache.isNetwork())return;
+		int baseCd = Math.max(1, Config.get().basicHopperCooldown);
+		int midCd = Math.max(1, baseCd * 4 / 10);
+		int fastCd = Math.max(1, baseCd / 10);
+		if (cooldown > 0) {
+			cooldown--;
+			return;
+		}
+		boolean hasFilter = filterPred != null;
+		if (topNet && !hasFilter)return;
+		if (!isEnabled())return;
+
+		IInventoryChangeTracker tt = top.tracker();
+		long t = tt.getChangeTracker(level);
+		boolean topChanged = topChange != t;
+		if (topChanged) {
+			topChange = t;
+			waiting = 0;
+			topSlot = null;
+			bottomSlot = null;
+		} else {
+			cooldown = midCd;
+		}
+		if (waiting == 1)return;
+
+		IInventoryChangeTracker bt = bottom.tracker();
+		long b = bt.getChangeTracker(level);
+		boolean bottomChanged = bottomChange != b;
+		if (bottomChanged) {
+			bottomChange = b;
+			waiting = 0;
+			bottomSlot = null;
+		} else {
+			cooldown = midCd;
+		}
+		if (waiting == 2)return;
+
+		// Both sides unchanged and blocked: stay idle without slot scans.
+		if (!topChanged && !bottomChanged && waiting == 1)return;
+
+		boolean topWasNull = topSlot == null;
+		if(hasFilter)filterPred.updateState();
+		if (topSlot == null || waiting == 3)
+			topSlot = tt.findSlotAfter(topSlot, hasFilter ? filterPred : (s -> true), false, true);
+
+		if (topSlot == null) {
+			if(topWasNull) {
+				waiting = 1;
+				cooldown = baseCd;
+			} else {
+				cooldown = midCd;
+			}
+			return;
+		}
+
+		ItemStack is = topSlot.getStack();
+		if (is.isEmpty()) {
+			topSlot = null;
+			waiting = 3;
+			cooldown = fastCd;
+			return;
+		}
+		StoredItemStack st = new StoredItemStack(is);
+		if(hasFilter && !filterPred.test(st)) {
+			waiting = 3;
+			cooldown = fastCd;
+			return;
+		}
+
+		// Reuse destination slot while bottom inventory is unchanged.
+		if (bottomSlot == null || bottomChanged || waiting == 3) {
+			bottomSlot = bt.findSlotDest(st);
+		}
+		if (bottomSlot == null) {
+			// Keep scanning other source slots; destination may accept a different item.
+			waiting = 3;
+			cooldown = baseCd;
+			return;
+		}
+
+		if (topSlot.transferTo(1, bottomSlot)) {
+			waiting = 0;
+			cooldown = baseCd;
+		} else {
+			// Destination rejected this stack; rescan both sides next attempt.
+			bottomSlot = null;
+			waiting = 3;
+			cooldown = baseCd;
+		}
+	}
+}

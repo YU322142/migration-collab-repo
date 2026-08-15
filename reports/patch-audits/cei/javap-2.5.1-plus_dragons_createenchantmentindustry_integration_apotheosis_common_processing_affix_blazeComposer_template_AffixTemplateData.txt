@@ -1,0 +1,266 @@
+﻿Compiled from "AffixTemplateData.java"
+public final class plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateData extends java.lang.Record {
+  private final dev.shadowsoffire.placebo.reload.DynamicHolder<dev.shadowsoffire.apotheosis.loot.LootRarity> rarity;
+    descriptor: Ldev/shadowsoffire/placebo/reload/DynamicHolder;
+
+  private final java.util.List<plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateEntry> entries;
+    descriptor: Ljava/util/List;
+
+  private static final int MAX_ENTRIES;
+    descriptor: I
+
+  public static final com.mojang.serialization.Codec<plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateData> CODEC;
+    descriptor: Lcom/mojang/serialization/Codec;
+
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateData> STREAM_CODEC;
+    descriptor: Lnet/minecraft/network/codec/StreamCodec;
+
+  public plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateData(dev.shadowsoffire.placebo.reload.DynamicHolder<dev.shadowsoffire.apotheosis.loot.LootRarity>, java.util.List<plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateEntry>);
+    descriptor: (Ldev/shadowsoffire/placebo/reload/DynamicHolder;Ljava/util/List;)V
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Record."<init>":()V
+       4: aload_2
+       5: invokestatic  #7                  // Method normalizeEntries:(Ljava/util/List;)Ljava/util/List;
+       8: astore_2
+       9: aload_0
+      10: aload_1
+      11: putfield      #13                 // Field rarity:Ldev/shadowsoffire/placebo/reload/DynamicHolder;
+      14: aload_0
+      15: aload_2
+      16: putfield      #17                 // Field entries:Ljava/util/List;
+      19: return
+
+  public static plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateData single(dev.shadowsoffire.placebo.reload.DynamicHolder<dev.shadowsoffire.apotheosis.loot.LootRarity>, plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateEntry);
+    descriptor: (Ldev/shadowsoffire/placebo/reload/DynamicHolder;Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry;)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateData;
+    Code:
+       0: new           #8                  // class plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateData
+       3: dup
+       4: aload_0
+       5: aload_1
+       6: invokestatic  #21                 // InterfaceMethod java/util/List.of:(Ljava/lang/Object;)Ljava/util/List;
+       9: invokespecial #27                 // Method "<init>":(Ldev/shadowsoffire/placebo/reload/DynamicHolder;Ljava/util/List;)V
+      12: areturn
+
+  public boolean isBound();
+    descriptor: ()Z
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field rarity:Ldev/shadowsoffire/placebo/reload/DynamicHolder;
+       4: invokevirtual #30                 // Method dev/shadowsoffire/placebo/reload/DynamicHolder.isBound:()Z
+       7: ifeq          36
+      10: aload_0
+      11: getfield      #17                 // Field entries:Ljava/util/List;
+      14: invokeinterface #36,  1           // InterfaceMethod java/util/List.stream:()Ljava/util/stream/Stream;
+      19: invokedynamic #40,  0             // InvokeDynamic #0:test:()Ljava/util/function/Predicate;
+      24: invokeinterface #44,  2           // InterfaceMethod java/util/stream/Stream.allMatch:(Ljava/util/function/Predicate;)Z
+      29: ifeq          36
+      32: iconst_1
+      33: goto          37
+      36: iconst_0
+      37: ireturn
+
+  public boolean isEmpty();
+    descriptor: ()Z
+    Code:
+       0: aload_0
+       1: getfield      #17                 // Field entries:Ljava/util/List;
+       4: invokeinterface #50,  1           // InterfaceMethod java/util/List.isEmpty:()Z
+       9: ireturn
+
+  public int size();
+    descriptor: ()I
+    Code:
+       0: aload_0
+       1: getfield      #17                 // Field entries:Ljava/util/List;
+       4: invokeinterface #53,  1           // InterfaceMethod java/util/List.size:()I
+       9: ireturn
+
+  public java.util.Optional<plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateEntry> get(dev.shadowsoffire.placebo.reload.DynamicHolder<dev.shadowsoffire.apotheosis.affix.Affix>);
+    descriptor: (Ldev/shadowsoffire/placebo/reload/DynamicHolder;)Ljava/util/Optional;
+    Code:
+       0: aload_0
+       1: getfield      #17                 // Field entries:Ljava/util/List;
+       4: invokeinterface #36,  1           // InterfaceMethod java/util/List.stream:()Ljava/util/stream/Stream;
+       9: aload_1
+      10: invokedynamic #57,  0             // InvokeDynamic #1:test:(Ldev/shadowsoffire/placebo/reload/DynamicHolder;)Ljava/util/function/Predicate;
+      15: invokeinterface #60,  2           // InterfaceMethod java/util/stream/Stream.filter:(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      20: invokeinterface #64,  1           // InterfaceMethod java/util/stream/Stream.findFirst:()Ljava/util/Optional;
+      25: areturn
+
+  public boolean contains(dev.shadowsoffire.placebo.reload.DynamicHolder<dev.shadowsoffire.apotheosis.affix.Affix>);
+    descriptor: (Ldev/shadowsoffire/placebo/reload/DynamicHolder;)Z
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #68                 // Method get:(Ldev/shadowsoffire/placebo/reload/DynamicHolder;)Ljava/util/Optional;
+       5: invokevirtual #72                 // Method java/util/Optional.isPresent:()Z
+       8: ireturn
+
+  public plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateData withEntries(java.util.List<plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateEntry>);
+    descriptor: (Ljava/util/List;)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateData;
+    Code:
+       0: new           #8                  // class plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateData
+       3: dup
+       4: aload_0
+       5: getfield      #13                 // Field rarity:Ldev/shadowsoffire/placebo/reload/DynamicHolder;
+       8: aload_1
+       9: invokespecial #27                 // Method "<init>":(Ldev/shadowsoffire/placebo/reload/DynamicHolder;Ljava/util/List;)V
+      12: areturn
+
+  private static java.util.List<plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateEntry> normalizeEntries(java.util.List<plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateEntry>);
+    descriptor: (Ljava/util/List;)Ljava/util/List;
+    Code:
+       0: aload_0
+       1: invokeinterface #50,  1           // InterfaceMethod java/util/List.isEmpty:()Z
+       6: ifeq          13
+       9: invokestatic  #77                 // InterfaceMethod java/util/List.of:()Ljava/util/List;
+      12: areturn
+      13: new           #80                 // class java/util/LinkedHashMap
+      16: dup
+      17: invokespecial #82                 // Method java/util/LinkedHashMap."<init>":()V
+      20: astore_1
+      21: aload_0
+      22: invokeinterface #36,  1           // InterfaceMethod java/util/List.stream:()Ljava/util/stream/Stream;
+      27: invokedynamic #83,  0             // InvokeDynamic #2:apply:()Ljava/util/function/Function;
+      32: invokestatic  #87                 // InterfaceMethod java/util/Comparator.comparing:(Ljava/util/function/Function;)Ljava/util/Comparator;
+      35: invokeinterface #93,  2           // InterfaceMethod java/util/stream/Stream.sorted:(Ljava/util/Comparator;)Ljava/util/stream/Stream;
+      40: aload_1
+      41: invokedynamic #97,  0             // InvokeDynamic #3:accept:(Ljava/util/LinkedHashMap;)Ljava/util/function/Consumer;
+      46: invokeinterface #101,  2          // InterfaceMethod java/util/stream/Stream.forEach:(Ljava/util/function/Consumer;)V
+      51: new           #105                // class java/util/ArrayList
+      54: dup
+      55: aload_1
+      56: invokevirtual #107                // Method java/util/LinkedHashMap.values:()Ljava/util/Collection;
+      59: invokespecial #111                // Method java/util/ArrayList."<init>":(Ljava/util/Collection;)V
+      62: invokestatic  #114                // InterfaceMethod java/util/List.copyOf:(Ljava/util/Collection;)Ljava/util/List;
+      65: areturn
+
+  public final java.lang.String toString();
+    descriptor: ()Ljava/lang/String;
+    Code:
+       0: aload_0
+       1: invokedynamic #200,  0            // InvokeDynamic #7:toString:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateData;)Ljava/lang/String;
+       6: areturn
+
+  public final int hashCode();
+    descriptor: ()I
+    Code:
+       0: aload_0
+       1: invokedynamic #204,  0            // InvokeDynamic #7:hashCode:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateData;)I
+       6: ireturn
+
+  public final boolean equals(java.lang.Object);
+    descriptor: (Ljava/lang/Object;)Z
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokedynamic #208,  0            // InvokeDynamic #7:equals:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateData;Ljava/lang/Object;)Z
+       7: ireturn
+
+  public dev.shadowsoffire.placebo.reload.DynamicHolder<dev.shadowsoffire.apotheosis.loot.LootRarity> rarity();
+    descriptor: ()Ldev/shadowsoffire/placebo/reload/DynamicHolder;
+    Code:
+       0: aload_0
+       1: getfield      #13                 // Field rarity:Ldev/shadowsoffire/placebo/reload/DynamicHolder;
+       4: areturn
+
+  public java.util.List<plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateEntry> entries();
+    descriptor: ()Ljava/util/List;
+    Code:
+       0: aload_0
+       1: getfield      #17                 // Field entries:Ljava/util/List;
+       4: areturn
+
+  private static void lambda$normalizeEntries$3(java.util.LinkedHashMap, plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateEntry);
+    descriptor: (Ljava/util/LinkedHashMap;Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry;)V
+    Code:
+       0: aload_1
+       1: invokevirtual #118                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry.affix:()Ldev/shadowsoffire/placebo/reload/DynamicHolder;
+       4: invokevirtual #124                // Method dev/shadowsoffire/placebo/reload/DynamicHolder.getId:()Lnet/minecraft/resources/ResourceLocation;
+       7: astore_2
+       8: aload_0
+       9: aload_2
+      10: invokevirtual #128                // Method java/util/LinkedHashMap.get:(Ljava/lang/Object;)Ljava/lang/Object;
+      13: checkcast     #119                // class plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry
+      16: astore_3
+      17: aload_3
+      18: ifnonnull     31
+      21: aload_0
+      22: aload_2
+      23: aload_1
+      24: invokevirtual #131                // Method java/util/LinkedHashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      27: pop
+      28: goto          53
+      31: aload_0
+      32: aload_2
+      33: aload_3
+      34: aload_1
+      35: aload_3
+      36: invokevirtual #135                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry.level:()F
+      39: aload_1
+      40: invokevirtual #135                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry.level:()F
+      43: invokestatic  #139                // Method java/lang/Math.max:(FF)F
+      46: invokevirtual #145                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry.mergeMetadata:(Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry;F)Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry;
+      49: invokevirtual #131                // Method java/util/LinkedHashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      52: pop
+      53: return
+
+  private static net.minecraft.resources.ResourceLocation lambda$normalizeEntries$2(plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateEntry);
+    descriptor: (Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry;)Lnet/minecraft/resources/ResourceLocation;
+    Code:
+       0: aload_0
+       1: invokevirtual #118                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry.affix:()Ldev/shadowsoffire/placebo/reload/DynamicHolder;
+       4: invokevirtual #124                // Method dev/shadowsoffire/placebo/reload/DynamicHolder.getId:()Lnet/minecraft/resources/ResourceLocation;
+       7: areturn
+
+  private static boolean lambda$get$1(dev.shadowsoffire.placebo.reload.DynamicHolder, plus.dragons.createenchantmentindustry.integration.apotheosis.common.processing.affix.blazeComposer.template.AffixTemplateEntry);
+    descriptor: (Ldev/shadowsoffire/placebo/reload/DynamicHolder;Lplus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry;)Z
+    Code:
+       0: aload_1
+       1: invokevirtual #118                // Method plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry.affix:()Ldev/shadowsoffire/placebo/reload/DynamicHolder;
+       4: aload_0
+       5: invokevirtual #149                // Method dev/shadowsoffire/placebo/reload/DynamicHolder.equals:(Ljava/lang/Object;)Z
+       8: ireturn
+
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+    descriptor: (Lcom/mojang/serialization/codecs/RecordCodecBuilder$Instance;)Lcom/mojang/datafixers/kinds/App;
+    Code:
+       0: aload_0
+       1: getstatic     #153                // Field dev/shadowsoffire/apotheosis/loot/RarityRegistry.INSTANCE:Ldev/shadowsoffire/apotheosis/loot/RarityRegistry;
+       4: invokevirtual #159                // Method dev/shadowsoffire/apotheosis/loot/RarityRegistry.holderCodec:()Lcom/mojang/serialization/Codec;
+       7: ldc           #163                // String rarity
+       9: invokeinterface #164,  2          // InterfaceMethod com/mojang/serialization/Codec.fieldOf:(Ljava/lang/String;)Lcom/mojang/serialization/MapCodec;
+      14: invokedynamic #170,  0            // InvokeDynamic #4:apply:()Ljava/util/function/Function;
+      19: invokevirtual #171                // Method com/mojang/serialization/MapCodec.forGetter:(Ljava/util/function/Function;)Lcom/mojang/serialization/codecs/RecordCodecBuilder;
+      22: getstatic     #177                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry.CODEC:Lcom/mojang/serialization/Codec;
+      25: invokeinterface #181,  1          // InterfaceMethod com/mojang/serialization/Codec.listOf:()Lcom/mojang/serialization/Codec;
+      30: ldc           #184                // String entries
+      32: invokeinterface #164,  2          // InterfaceMethod com/mojang/serialization/Codec.fieldOf:(Ljava/lang/String;)Lcom/mojang/serialization/MapCodec;
+      37: invokedynamic #185,  0            // InvokeDynamic #5:apply:()Ljava/util/function/Function;
+      42: invokevirtual #171                // Method com/mojang/serialization/MapCodec.forGetter:(Ljava/util/function/Function;)Lcom/mojang/serialization/codecs/RecordCodecBuilder;
+      45: invokevirtual #186                // Method com/mojang/serialization/codecs/RecordCodecBuilder$Instance.group:(Lcom/mojang/datafixers/kinds/App;Lcom/mojang/datafixers/kinds/App;)Lcom/mojang/datafixers/Products$P2;
+      48: aload_0
+      49: invokedynamic #192,  0            // InvokeDynamic #6:apply:()Ljava/util/function/BiFunction;
+      54: invokevirtual #195                // Method com/mojang/datafixers/Products$P2.apply:(Lcom/mojang/datafixers/kinds/Applicative;Ljava/util/function/BiFunction;)Lcom/mojang/datafixers/kinds/App;
+      57: areturn
+
+  static {};
+    descriptor: ()V
+    Code:
+       0: invokedynamic #211,  0            // InvokeDynamic #8:apply:()Ljava/util/function/Function;
+       5: invokestatic  #212                // Method com/mojang/serialization/codecs/RecordCodecBuilder.create:(Ljava/util/function/Function;)Lcom/mojang/serialization/Codec;
+       8: putstatic     #218                // Field CODEC:Lcom/mojang/serialization/Codec;
+      11: getstatic     #153                // Field dev/shadowsoffire/apotheosis/loot/RarityRegistry.INSTANCE:Ldev/shadowsoffire/apotheosis/loot/RarityRegistry;
+      14: invokevirtual #219                // Method dev/shadowsoffire/apotheosis/loot/RarityRegistry.holderStreamCodec:()Lnet/minecraft/network/codec/StreamCodec;
+      17: invokedynamic #170,  0            // InvokeDynamic #4:apply:()Ljava/util/function/Function;
+      22: getstatic     #223                // Field plus/dragons/createenchantmentindustry/integration/apotheosis/common/processing/affix/blazeComposer/template/AffixTemplateEntry.STREAM_CODEC:Lnet/minecraft/network/codec/StreamCodec;
+      25: sipush        256
+      28: invokestatic  #227                // InterfaceMethod net/minecraft/network/codec/ByteBufCodecs.list:(I)Lnet/minecraft/network/codec/StreamCodec$CodecOperation;
+      31: invokeinterface #233,  2          // InterfaceMethod net/minecraft/network/codec/StreamCodec.apply:(Lnet/minecraft/network/codec/StreamCodec$CodecOperation;)Lnet/minecraft/network/codec/StreamCodec;
+      36: invokedynamic #185,  0            // InvokeDynamic #5:apply:()Ljava/util/function/Function;
+      41: invokedynamic #192,  0            // InvokeDynamic #6:apply:()Ljava/util/function/BiFunction;
+      46: invokestatic  #238                // InterfaceMethod net/minecraft/network/codec/StreamCodec.composite:(Lnet/minecraft/network/codec/StreamCodec;Ljava/util/function/Function;Lnet/minecraft/network/codec/StreamCodec;Ljava/util/function/Function;Ljava/util/function/BiFunction;)Lnet/minecraft/network/codec/StreamCodec;
+      49: putstatic     #242                // Field STREAM_CODEC:Lnet/minecraft/network/codec/StreamCodec;
+      52: return
+}

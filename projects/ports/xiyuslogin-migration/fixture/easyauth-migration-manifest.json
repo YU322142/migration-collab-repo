@@ -1,0 +1,18 @@
+{
+  "source": "D:\\Trans\\20260807\\EasyAuth\\easyauth.db",
+  "sourceSha256": "76aac02903784f38d9b78ef948b77e97cfde665fe24b9ac26e679f23dffc2b06",
+  "records": 49,
+  "hashes": {
+    "bcrypt": 29,
+    "empty": 20
+  },
+  "uuidPresent": 34,
+  "plaintextStored": false,
+  "notes": [
+    "BCrypt hashes remain usable for first-login verification.",
+    "Empty-password records are never authenticated on offline-mode servers.",
+    "The original EasyAuth SQLite database is read-only and unchanged."
+  ],
+  "output": "D:\\Trans\\migration-audit-work\\XiyusLogin-migration\\fixture\\world\\xiyus_player_data.json",
+  "outputSha256": "34395e81b92ea990385e03960ea0f95158234c2660ad134ecc3d319d64652cb2"
+}

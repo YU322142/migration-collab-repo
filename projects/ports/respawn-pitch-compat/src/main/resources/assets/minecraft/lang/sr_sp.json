@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Постави тачку реинкарнације на %s, %s, %s [%s, %s] у %s за %s",
+  "commands.spawnpoint.success.multiple.new": "Постави тачку реинкарнације на %s, %s, %s [%s, %s] у %s за %s играча"
+}

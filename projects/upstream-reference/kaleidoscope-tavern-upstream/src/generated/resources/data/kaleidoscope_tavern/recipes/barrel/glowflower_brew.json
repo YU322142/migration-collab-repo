@@ -1,0 +1,16 @@
+{
+  "type": "kaleidoscope_tavern:barrel",
+  "carrier": {
+    "item": "kaleidoscope_tavern:empty_bottle"
+  },
+  "fluid": "kaleidoscope_tavern:glow_berries_juice",
+  "ingredients": [
+    {
+      "item": "minecraft:glowstone_dust"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_tavern:glowflower_brew"
+  },
+  "unit_time": 2400
+}

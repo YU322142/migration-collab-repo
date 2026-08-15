@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:planks"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "ultramarine:wooden_parts"
+    }
+  ]
+}

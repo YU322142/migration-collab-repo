@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "ultramarine:gilded_dark_oak"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "ultramarine:gilded_dark_oak_slab"
+    }
+  ]
+}

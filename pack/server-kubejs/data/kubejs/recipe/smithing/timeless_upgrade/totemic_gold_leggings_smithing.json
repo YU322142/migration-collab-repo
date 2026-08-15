@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "l2complements:totemic_gold_ingot"
+  },
+  "base": {
+    "item": "minecraft:netherite_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "l2complements:totemic_gold_leggings"
+  },
+  "template": {
+    "item": "irons_spellbooks:timeless_slurry"
+  }
+}

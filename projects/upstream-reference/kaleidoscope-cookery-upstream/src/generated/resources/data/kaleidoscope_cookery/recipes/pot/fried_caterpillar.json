@@ -1,0 +1,22 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "kaleidoscope_cookery:caterpillars"
+    },
+    {
+      "tag": "kaleidoscope_cookery:caterpillars"
+    },
+    {
+      "tag": "kaleidoscope_cookery:caterpillars"
+    }
+  ],
+  "result": {
+    "item": "kaleidoscope_cookery:fried_caterpillar"
+  },
+  "stir_fry_count": 3,
+  "time": 200
+}

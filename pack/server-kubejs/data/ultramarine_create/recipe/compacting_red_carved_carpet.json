@@ -1,0 +1,27 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:red_wool"
+    },
+    {
+      "tag": "c:dyes/yellow"
+    },
+    {
+      "item": "ultramarine:gold_dye_powder"
+    },
+    {
+      "item": "ultramarine:carved_wool_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:red_carved_carpet"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:carved_wool_template"
+    }
+  ]
+}

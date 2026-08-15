@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Mängjä %6$s tegünemiskotussõs dimensioonin %5$s om noq %1$s, %2$s, %3$s [%4$s]",
+  "commands.spawnpoint.success.multiple.new": "%7$s mängjä tegünemiskotussõs dimensioonin %6$s om noq %1$s, %2$s, %3$s [%4$s, %5$s]"
+}

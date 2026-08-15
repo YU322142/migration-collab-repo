@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "minecraft:planks"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:large_wooden_gualuo"
+    }
+  ]
+}

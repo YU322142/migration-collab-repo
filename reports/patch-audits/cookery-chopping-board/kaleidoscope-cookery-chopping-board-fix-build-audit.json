@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "status": "PASS",
+  "purpose": "kaleidoscope_cookery_chopping_board_empty_model_crash_fix",
+  "old": {
+    "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
+    "bytes": 5574913,
+    "sha256": "A061FB1E953AD815144304F7567B30876DBBC07B8565069871771F0AAEB63D3F",
+    "entries": 5587,
+    "duplicates": [],
+    "bad_crc_entry": null
+  },
+  "build1": {
+    "path": "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\repro-build1-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar",
+    "bytes": 5575319,
+    "sha256": "694CE1506E81FBD8F52146CCEAC0F0844268E614CD8B18F4A81D1A58AC391542",
+    "entries": 5587,
+    "duplicates": [],
+    "bad_crc_entry": null
+  },
+  "build2": {
+    "path": "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\repro-build2-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar",
+    "bytes": 5575319,
+    "sha256": "694CE1506E81FBD8F52146CCEAC0F0844268E614CD8B18F4A81D1A58AC391542",
+    "entries": 5587,
+    "duplicates": [],
+    "bad_crc_entry": null
+  },
+  "entry_sets_equal": true,
+  "changed_entries": [
+    "META-INF/MANIFEST.MF",
+    "META-INF/neoforge.mods.toml",
+    "com/github/ysbbbbbb/kaleidoscopecookery/blockentity/kitchen/ChoppingBoardBlockEntity.class",
+    "com/github/ysbbbbbb/kaleidoscopecookery/client/render/block/ChoppingBoardBlockEntityRender.class"
+  ],
+  "expected_changed_entries": [
+    "META-INF/MANIFEST.MF",
+    "META-INF/neoforge.mods.toml",
+    "com/github/ysbbbbbb/kaleidoscopecookery/blockentity/kitchen/ChoppingBoardBlockEntity.class",
+    "com/github/ysbbbbbb/kaleidoscopecookery/client/render/block/ChoppingBoardBlockEntityRender.class"
+  ],
+  "build_payloads_equal": true,
+  "build_archives_byte_identical": true,
+  "failures": []
+}

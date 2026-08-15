@@ -1,0 +1,278 @@
+{
+  "schema": 1,
+  "policy_id": "advancement-1.21.11-to-1.21.1-20260813",
+  "source_version": "Minecraft 1.21.11 Fabric",
+  "target_version": "Minecraft 1.21.1 NeoForge",
+  "expected_rule_count": 49,
+  "rules": [
+    {
+      "old_id": "create:recipes/misc/crafting/tree_fertilizer",
+      "action": "map",
+      "target_id": "create:recipes/misc/crafting/appliances/tree_fertilizer",
+      "reason": "Create 6.0.10 moved the equivalent recipe advancement under appliances; has_item semantics are unchanged."
+    },
+    {
+      "old_id": "create_enchantment_industry:recipes/misc/mechanical_grindstone",
+      "action": "map",
+      "target_id": "create_enchantment_industry:recipes/mechanical_grindstone",
+      "reason": "Create Enchantment Industry 2.5.1 moved the equivalent advancement; the andesite criterion is unchanged."
+    },
+    {
+      "old_id": "minecraft:recipes/building_blocks/dried_ghast",
+      "action": "sidecar",
+      "reason": "The target backport supplies the recipe but no loadable advancement at this ID; retain complete progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/building_blocks/waxed_copper_bars_from_honeycomb",
+      "action": "sidecar",
+      "reason": "No proven 1.21.1 advancement and recipe equivalent exists; mapping to an unwaxed or differently shaped recipe would be lossy."
+    },
+    {
+      "old_id": "minecraft:recipes/building_blocks/waxed_oxidized_copper_chain_from_honeycomb",
+      "action": "sidecar",
+      "reason": "No proven 1.21.1 advancement and recipe equivalent exists; mapping to an unwaxed or differently oxidized recipe would be lossy."
+    },
+    {
+      "old_id": "minecraft:recipes/combat/netherite_horse_armor_smithing",
+      "action": "sidecar",
+      "reason": "The final functional Netherite Horse Armor recipe implementation is not yet registry-proven; preserve the unlock until that artifact is installed."
+    },
+    {
+      "old_id": "minecraft:recipes/combat/saddle",
+      "action": "sidecar",
+      "reason": "Minecraft 1.21.1 has no equivalent vanilla saddle recipe advancement."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/cherry_shelf",
+      "action": "sidecar",
+      "reason": "The target backport supplies the recipe but no loadable advancement at this ID; retain complete progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/jungle_shelf",
+      "action": "sidecar",
+      "reason": "The target backport supplies the recipe but no loadable advancement at this ID; retain complete progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/oak_shelf",
+      "action": "sidecar",
+      "reason": "The target backport supplies the recipe but no loadable advancement at this ID; retain complete progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_black_bed",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_black_bed",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_black_carpet",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_black_carpet",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_blue_bed",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_blue_bed",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_blue_carpet",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_blue_carpet",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_brown_bed",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_brown_bed",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_brown_carpet",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_brown_carpet",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_gray_bed",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_gray_bed",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_gray_carpet",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_gray_carpet",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_green_bed",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_green_bed",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_green_carpet",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_green_carpet",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_light_gray_bed",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_light_gray_bed",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_light_gray_carpet",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_light_gray_carpet",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_orange_bed",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_orange_bed",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_orange_carpet",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_orange_carpet",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_purple_bed",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_purple_bed",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_purple_carpet",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_purple_carpet",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_red_bed",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_red_bed",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_red_carpet",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_red_carpet",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_white_bed",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_white_bed",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_white_carpet",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_white_carpet",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_yellow_bed",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_yellow_bed",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/decorations/dye_yellow_carpet",
+      "action": "map",
+      "target_id": "minecraft:recipes/building_blocks/dye_yellow_carpet",
+      "reason": "The 1.21.1 server data contains the same dye recipe advancement under building_blocks."
+    },
+    {
+      "old_id": "minecraft:recipes/misc/copper_ingot_from_nuggets",
+      "action": "sidecar",
+      "reason": "No target recipe or advancement with equivalent 1.21.11 semantics is registered."
+    },
+    {
+      "old_id": "minecraft:recipes/tools/black_bundle",
+      "action": "sidecar",
+      "reason": "The target backport supplies the colored bundle recipe but not this loadable advancement; preserve progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/tools/blue_bundle",
+      "action": "sidecar",
+      "reason": "The target backport supplies the colored bundle recipe but not this loadable advancement; preserve progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/tools/brown_bundle",
+      "action": "sidecar",
+      "reason": "The target backport supplies the colored bundle recipe but not this loadable advancement; preserve progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/tools/bundle",
+      "action": "sidecar",
+      "reason": "The equivalent 1.21.1 definition is inside an optional built-in bundle pack that is not enabled in the audited target; do not assume feature activation."
+    },
+    {
+      "old_id": "minecraft:recipes/tools/gray_bundle",
+      "action": "sidecar",
+      "reason": "The target backport supplies the colored bundle recipe but not this loadable advancement; preserve progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/tools/green_bundle",
+      "action": "sidecar",
+      "reason": "The target backport supplies the colored bundle recipe but not this loadable advancement; preserve progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/tools/light_gray_bundle",
+      "action": "sidecar",
+      "reason": "The target backport supplies the colored bundle recipe but not this loadable advancement; preserve progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/tools/orange_bundle",
+      "action": "sidecar",
+      "reason": "The target backport supplies the colored bundle recipe but not this loadable advancement; preserve progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/tools/purple_bundle",
+      "action": "sidecar",
+      "reason": "The target backport supplies the colored bundle recipe but not this loadable advancement; preserve progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/tools/red_bundle",
+      "action": "sidecar",
+      "reason": "The target backport supplies the colored bundle recipe but not this loadable advancement; preserve progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/tools/white_bundle",
+      "action": "sidecar",
+      "reason": "The target backport supplies the colored bundle recipe but not this loadable advancement; preserve progress for a later definition restoration."
+    },
+    {
+      "old_id": "minecraft:recipes/tools/yellow_bundle",
+      "action": "sidecar",
+      "reason": "The target backport supplies the colored bundle recipe but not this loadable advancement; preserve progress for a later definition restoration."
+    },
+    {
+      "old_id": "wooltostring:recipes/misc/wool",
+      "action": "sidecar",
+      "reason": "The target mod changed namespace and collapsed recipe structure; an exact one-to-one advancement equivalent is not proven."
+    },
+    {
+      "old_id": "wooltostring:recipes/misc/wool_carpets",
+      "action": "sidecar",
+      "reason": "The target mod changed namespace and collapsed recipe structure; an exact one-to-one advancement equivalent is not proven."
+    },
+    {
+      "old_id": "yuushya:recipes/bismuth_crystal",
+      "action": "sidecar",
+      "reason": "The target Yuushya recipe exists but its advancement definition is absent; preserve progress for an OTA-safe definition restoration."
+    },
+    {
+      "old_id": "yuushya:recipes/pictor",
+      "action": "sidecar",
+      "reason": "The target Yuushya recipe exists but its advancement definition is absent; preserve progress for an OTA-safe definition restoration."
+    }
+  ]
+}

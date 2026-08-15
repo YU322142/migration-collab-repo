@@ -1,0 +1,17 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "l2hostility:chaos_ingot"
+    },
+    {
+      "item": "kubejs:ticket"
+    }
+  ],
+  "results": [
+    {
+      "chance": 0.1,
+      "id": "c6c:abyssal_ticket"
+    }
+  ]
+}

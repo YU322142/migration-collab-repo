@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "%7$s之生處既爲%6$s之%1$s, %2$s, %3$s [%4$s, %5$s]",
+  "commands.spawnpoint.success.multiple.new": "%7$s戲者之生處既爲%6$s之%1$s, %2$s, %3$s [%4$s, %5$s]"
+}

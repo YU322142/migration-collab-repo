@@ -1,0 +1,12 @@
+{
+  "enabled": false,
+  "port": 7903,
+  "validator": {
+    "uuids": [],
+    "if": {
+      "password": "CHANGE_ME_LOCAL_ONLY",
+      "type": "password"
+    },
+    "type": "if"
+  }
+}

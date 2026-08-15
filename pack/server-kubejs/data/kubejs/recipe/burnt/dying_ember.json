@@ -1,0 +1,11 @@
+{
+  "type": "l2complements:burnt",
+  "chance": 16,
+  "ingredient": {
+    "item": "create:blaze_burner"
+  },
+  "result": {
+    "count": 1,
+    "id": "cataclysm:dying_ember"
+  }
+}

@@ -1,0 +1,87 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.95'
+}
+
+group = mod_group_id
+version = mod_version
+
+base {
+    archivesName = 'create-dynamic-blocking'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+def createJar = file(project.create_jar)
+def sourceReferenceJar = file(project.source_reference_jar)
+
+dependencies {
+    compileOnly files(createJar)
+}
+
+def sha256 = { File input ->
+    def digest = java.security.MessageDigest.getInstance('SHA-256')
+    input.withInputStream { stream ->
+        byte[] buffer = new byte[8192]
+        for (int read = stream.read(buffer); read >= 0; read = stream.read(buffer)) {
+            if (read > 0) digest.update(buffer, 0, read)
+        }
+    }
+    digest.digest().collect { String.format('%02X', it) }.join()
+}
+
+tasks.register('verifyInputs') {
+    doLast {
+        assert createJar.isFile(): "Missing Create JAR: ${createJar}"
+        assert sha256(createJar).equalsIgnoreCase(project.create_sha256):
+                "Create SHA-256 mismatch: ${sha256(createJar)}"
+        assert sourceReferenceJar.isFile(): "Missing source reference JAR: ${sourceReferenceJar}"
+        assert sha256(sourceReferenceJar).equalsIgnoreCase(project.source_reference_sha256):
+                "Source reference SHA-256 mismatch: ${sha256(sourceReferenceJar)}"
+    }
+}
+
+def tomlProperties = [
+    'loader_version_range', 'mod_license', 'mod_id', 'mod_version',
+    'mod_name', 'mod_authors', 'mod_description', 'neo_version_range',
+    'minecraft_version_range', 'create_version_range'
+].collectEntries { key -> [key, project.property(key).toString()] }
+
+tasks.named('processResources') {
+    inputs.properties(tomlProperties)
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand(tomlProperties)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    dependsOn tasks.named('verifyInputs')
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('paritySemanticsTest', JavaExec) {
+    group = 'verification'
+    description = 'Runs source-equivalent braking and scan-distance boundary checks.'
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = 'com.antigravity.create_dynamic_blocking.DynamicBlockingParityTest'
+}
+
+tasks.named('check') {
+    dependsOn tasks.named('paritySemanticsTest')
+}
+
+tasks.named('jar') {
+    dependsOn tasks.named('verifyInputs')
+    archiveFileName = "create-dynamic-blocking-${project.mod_version}.jar"
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}

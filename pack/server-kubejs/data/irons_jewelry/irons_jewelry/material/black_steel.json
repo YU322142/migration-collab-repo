@@ -1,0 +1,37 @@
+{
+  "descriptionId": "material.irons_jewelry.black_steel",
+  "ingredient": {
+    "item": "cataclysm:black_steel_ingot"
+  },
+  "materialType": [
+    "metal"
+  ],
+  "paletteLocation": "irons_jewelry:palettes/black_steel",
+  "quality": 1.8,
+  "bonusParameters": {
+    "irons_jewelry:attribute": {
+      "attribute": "apothic_attributes:cold_damage",
+      "amount": 0.5,
+      "operation": "add_value"
+    },
+    "irons_jewelry:positive_effect": {
+      "effect": "minecraft:regeneration"
+    },
+    "irons_jewelry:negative_effect": {
+      "effect": "cataclysm:bone_fracture"
+    },
+    "irons_jewelry:action": {
+      "targetSelf": true,
+      "action": {
+        "type": "irons_jewelry:apply_effect",
+        "duration": 20,
+        "amplifier": {
+          "base": 0,
+          "scalar": 1,
+          "max": 2
+        },
+        "effect": "minecraft:speed"
+      }
+    }
+  }
+}

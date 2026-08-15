@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "ultramarine:rosewood_planks"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:rosewood_fence"
+    }
+  ]
+}

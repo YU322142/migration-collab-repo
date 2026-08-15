@@ -1,0 +1,234 @@
+{
+  "schema": 1,
+  "verdict": "PASS",
+  "policy": "preserve_mechanomania_balance",
+  "side_projection": {
+    "server": {
+      "action": "UNCHANGED",
+      "maid_js_removal": "PRESERVED"
+    },
+    "client": {
+      "action": "OVERLAY",
+      "files": [
+        "kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/maid/spawn_maid.json",
+        "kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/overview/multiblocks_altar.json"
+      ]
+    }
+  },
+  "server_root": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt9-20260814",
+  "client_root": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt9-20260814",
+  "official_pack": "<WORKSPACE>\\outputs\\Mechanomania-Ultimate-Aeronautics-1.1.11.2.zip",
+  "overlay_root": "<WORKSPACE>\\outputs\\patches\\tlm-patchouli-spawn-box-balance-fix-20260814\\overlay",
+  "checks": [
+    {
+      "name": "server_root_exists",
+      "passed": true,
+      "detail": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt9-20260814"
+    },
+    {
+      "name": "client_root_exists",
+      "passed": true,
+      "detail": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt9-20260814"
+    },
+    {
+      "name": "official_pack_exists",
+      "passed": true,
+      "detail": "<WORKSPACE>\\outputs\\Mechanomania-Ultimate-Aeronautics-1.1.11.2.zip"
+    },
+    {
+      "name": "overlay_root_exists",
+      "passed": true,
+      "detail": "<WORKSPACE>\\outputs\\patches\\tlm-patchouli-spawn-box-balance-fix-20260814\\overlay"
+    },
+    {
+      "name": "server_maid_js_exists",
+      "passed": true,
+      "detail": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt9-20260814\\kubejs\\server_scripts\\maid.js"
+    },
+    {
+      "name": "server_balance_script_provenance",
+      "passed": true,
+      "detail": "expected=FA458896BC728721995925563DD491F7ED54073FD1A94A5AE87004C66E4990F4 actual=FA458896BC728721995925563DD491F7ED54073FD1A94A5AE87004C66E4990F4"
+    },
+    {
+      "name": "server_balance_removal_preserved",
+      "passed": true,
+      "detail": "touhou_little_maid:altar_recipe/spawn_box remains intentionally removed"
+    },
+    {
+      "name": "official_pack_provenance",
+      "passed": true,
+      "detail": "expected=2B9C39579EA82A3D9C8C1A22029C7379D1BD240A1F4A08ABD70B03374E55617A actual=2B9C39579EA82A3D9C8C1A22029C7379D1BD240A1F4A08ABD70B03374E55617A"
+    },
+    {
+      "name": "official_pack_maid_js_exists",
+      "passed": true,
+      "detail": "overrides/kubejs/server_scripts/maid.js"
+    },
+    {
+      "name": "official_pack_maid_js_provenance",
+      "passed": true,
+      "detail": "FA458896BC728721995925563DD491F7ED54073FD1A94A5AE87004C66E4990F4"
+    },
+    {
+      "name": "official_pack_intentional_removal",
+      "passed": true,
+      "detail": "touhou_little_maid:altar_recipe/spawn_box"
+    },
+    {
+      "name": "official_pack_existing_multiblocks_override",
+      "passed": true,
+      "detail": "overrides/kubejs/data/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/overview/multiblocks_altar.json"
+    },
+    {
+      "name": "official_pack_spawn_maid_override_is_missing",
+      "passed": true,
+      "detail": "overrides/kubejs/data/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/maid/spawn_maid.json"
+    },
+    {
+      "name": "client_tlm_jar_exists",
+      "passed": true,
+      "detail": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt9-20260814\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar"
+    },
+    {
+      "name": "client_tlm_jar_provenance",
+      "passed": true,
+      "detail": "expected=F6DB04195820C8508704277EA76D63723804FF236A7B780369BA59EBE5CD9C27 actual=F6DB04195820C8508704277EA76D63723804FF236A7B780369BA59EBE5CD9C27"
+    },
+    {
+      "name": "jar_recipe_id_occurrence_scope",
+      "passed": true,
+      "detail": "actual=assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/maid/spawn_maid.json,assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/overview/multiblocks_altar.json,data/touhou_little_maid/advancement/base/spawn_maid.json"
+    },
+    {
+      "name": "upstream_recipe_still_exists",
+      "passed": true,
+      "detail": "data/touhou_little_maid/recipe/altar_recipe/spawn_box.json"
+    },
+    {
+      "name": "upstream_recipe_provenance",
+      "passed": true,
+      "detail": "expected=0D8BAB9F3AC09A5CAA7AB78AAC7BA0607D831C4453F8C149C97BCC8C14E5A97A actual=0D8BAB9F3AC09A5CAA7AB78AAC7BA0607D831C4453F8C149C97BCC8C14E5A97A"
+    },
+    {
+      "name": "advancement_reference_preserved",
+      "passed": true,
+      "detail": "data/touhou_little_maid/advancement/base/spawn_maid.json"
+    },
+    {
+      "name": "maid/spawn_maid.json:source_provenance",
+      "passed": true,
+      "detail": "expected=F536A1BB528B4F7A8458C88985601F06E5225D33B34ACDA6F7A061E6B47AF2B3 actual=F536A1BB528B4F7A8458C88985601F06E5225D33B34ACDA6F7A061E6B47AF2B3"
+    },
+    {
+      "name": "maid/spawn_maid.json:single_exact_page_selected",
+      "passed": true,
+      "detail": "index=2 page={\"recipe_id\": \"touhou_little_maid:altar_recipe/spawn_box\", \"type\": \"altar_recipe\"}"
+    },
+    {
+      "name": "maid/spawn_maid.json:overlay_exists",
+      "passed": true,
+      "detail": "<WORKSPACE>\\outputs\\patches\\tlm-patchouli-spawn-box-balance-fix-20260814\\overlay\\kubejs\\assets\\touhou_little_maid\\patchouli_books\\memorizable_gensokyo\\en_us\\entries\\maid\\spawn_maid.json"
+    },
+    {
+      "name": "maid/spawn_maid.json:exact_structural_diff",
+      "passed": true,
+      "detail": "only the selected stale page may differ"
+    },
+    {
+      "name": "maid/spawn_maid.json:metadata_unchanged",
+      "passed": true,
+      "detail": "all non-page fields are byte-semantically unchanged"
+    },
+    {
+      "name": "maid/spawn_maid.json:one_page_removed",
+      "passed": true,
+      "detail": "before=3 after=2"
+    },
+    {
+      "name": "maid/spawn_maid.json:no_stale_recipe_reference",
+      "passed": true,
+      "detail": "touhou_little_maid:altar_recipe/spawn_box"
+    },
+    {
+      "name": "overview/multiblocks_altar.json:source_provenance",
+      "passed": true,
+      "detail": "expected=6DB3EA530DC9B745D5A31CDBB4CE34C3711B105F48F449E18AC69D692AF4F98E actual=6DB3EA530DC9B745D5A31CDBB4CE34C3711B105F48F449E18AC69D692AF4F98E"
+    },
+    {
+      "name": "overview/multiblocks_altar.json:single_exact_page_selected",
+      "passed": true,
+      "detail": "index=4 page={\"recipe_id\": \"touhou_little_maid:altar_recipe/spawn_box\", \"type\": \"altar_recipe\"}"
+    },
+    {
+      "name": "overview/multiblocks_altar.json:overlay_exists",
+      "passed": true,
+      "detail": "<WORKSPACE>\\outputs\\patches\\tlm-patchouli-spawn-box-balance-fix-20260814\\overlay\\kubejs\\assets\\touhou_little_maid\\patchouli_books\\memorizable_gensokyo\\en_us\\entries\\overview\\multiblocks_altar.json"
+    },
+    {
+      "name": "overview/multiblocks_altar.json:exact_structural_diff",
+      "passed": true,
+      "detail": "only the selected stale page may differ"
+    },
+    {
+      "name": "overview/multiblocks_altar.json:metadata_unchanged",
+      "passed": true,
+      "detail": "all non-page fields are byte-semantically unchanged"
+    },
+    {
+      "name": "overview/multiblocks_altar.json:one_page_removed",
+      "passed": true,
+      "detail": "before=6 after=5"
+    },
+    {
+      "name": "overview/multiblocks_altar.json:no_stale_recipe_reference",
+      "passed": true,
+      "detail": "touhou_little_maid:altar_recipe/spawn_box"
+    },
+    {
+      "name": "client_overlay_scope_exactly_two_assets",
+      "passed": true,
+      "detail": "actual=kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/maid/spawn_maid.json,kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/overview/multiblocks_altar.json"
+    },
+    {
+      "name": "server_projection_unchanged",
+      "passed": true,
+      "detail": "server changes=[]"
+    },
+    {
+      "name": "official_multiblocks_intent_preserved",
+      "passed": true,
+      "detail": "client asset overlay mirrors the official semantic edit"
+    },
+    {
+      "name": "reborn_maid_page_preserved",
+      "passed": true,
+      "detail": "reborn_maid remains visible"
+    },
+    {
+      "name": "attempt9_client_not_modified",
+      "passed": true,
+      "detail": "none"
+    },
+    {
+      "name": "client_kubejs_asset_layer_exists",
+      "passed": true,
+      "detail": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt9-20260814\\kubejs\\assets"
+    },
+    {
+      "name": "client_has_no_server_maid_script",
+      "passed": true,
+      "detail": "client remains free of dedicated-server scripts"
+    },
+    {
+      "name": "attempt9_client_log_exists",
+      "passed": true,
+      "detail": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt9-20260814\\logs\\latest.log"
+    },
+    {
+      "name": "attempt9_two_render_errors_reproduced",
+      "passed": true,
+      "detail": "expected=2 actual=2"
+    }
+  ]
+}

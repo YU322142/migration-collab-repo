@@ -1,0 +1,16 @@
+{
+  "name": "crazy_chambers:ominous",
+  "fallback": "minecraft:empty",
+  "elements": [
+    
+    {
+      "weight": 10,
+      "element": {
+        "location": "crazy_chambers:ominous",
+        "processors": "minecraft:empty",
+		"projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

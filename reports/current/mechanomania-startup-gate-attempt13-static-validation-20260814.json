@@ -1,0 +1,690 @@
+{
+  "schema": 1,
+  "status": "PASS_STATIC",
+  "mode": "validate-only",
+  "runtime": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814",
+  "client": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814",
+  "blockers": [],
+  "data": {
+    "status": "PASS_LOCKED_WITH_EXPLICIT_SUPERSESSION",
+    "report": {
+      "path": "D:\\Trans\\migration-audit-work\\attempt13-data-resource-apply-20260814.json",
+      "bytes": 9104,
+      "sha256": "1D009ED48FD8752AF2D4FFD4D04D013D6B0D2B4315DF73FC906F78EB159631A8"
+    },
+    "runtime": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814",
+    "client": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814",
+    "source_rows": 18,
+    "target_operations": 29,
+    "operations_by_kind": {
+      "jar": 22,
+      "loose": 7
+    },
+    "operations_by_side": {
+      "client": 11,
+      "server": 18
+    },
+    "superseded_relatives": [
+      "DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+      "tracks-neoforge-1.21.1-1.0.1.jar"
+    ],
+    "installed_targets": [
+      {
+        "kind": "jar",
+        "side": "server",
+        "relative": "biomespy-neoforge-1.21.1-1.3.3.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\biomespy-neoforge-1.21.1-1.3.3.jar",
+          "bytes": 38355,
+          "sha256": "5CDF106229E3D6B368B80FCFB1048BC632565E5F94F21D08F5CE713992B27648"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "client",
+        "relative": "biomespy-neoforge-1.21.1-1.3.3.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\biomespy-neoforge-1.21.1-1.3.3.jar",
+          "bytes": 38355,
+          "sha256": "5CDF106229E3D6B368B80FCFB1048BC632565E5F94F21D08F5CE713992B27648"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "server",
+        "relative": "cmpackagecouriers-neoforge-2.3.0.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\cmpackagecouriers-neoforge-2.3.0.jar",
+          "bytes": 284554,
+          "sha256": "9F9658C5E2036CD3862E263A7B4C625291CC1E0479650BD657DB7595807094A0"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "client",
+        "relative": "cmpackagecouriers-neoforge-2.3.0.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\cmpackagecouriers-neoforge-2.3.0.jar",
+          "bytes": 284554,
+          "sha256": "9F9658C5E2036CD3862E263A7B4C625291CC1E0479650BD657DB7595807094A0"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "server",
+        "relative": "create_compressed-2.2.0-neoforge-1.21.1.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\create_compressed-2.2.0-neoforge-1.21.1.jar",
+          "bytes": 158857,
+          "sha256": "B4CE8B8031EF9917835E71EE6BFE05DC8150EA27D78CD7C50F1873EB290A4880"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "client",
+        "relative": "create_compressed-2.2.0-neoforge-1.21.1.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\create_compressed-2.2.0-neoforge-1.21.1.jar",
+          "bytes": 158857,
+          "sha256": "B4CE8B8031EF9917835E71EE6BFE05DC8150EA27D78CD7C50F1873EB290A4880"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "server",
+        "relative": "create_connected-1.3.2-mc1.21.1.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\create_connected-1.3.2-mc1.21.1.jar",
+          "bytes": 6773076,
+          "sha256": "1D58A593B4FAA692DBD74C99C12A7FAC3AC82828A86F5CA3FCE5B15AA7C7859C"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "client",
+        "relative": "create_connected-1.3.2-mc1.21.1.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\create_connected-1.3.2-mc1.21.1.jar",
+          "bytes": 6773076,
+          "sha256": "1D58A593B4FAA692DBD74C99C12A7FAC3AC82828A86F5CA3FCE5B15AA7C7859C"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "server",
+        "relative": "createadditionallogistics-1.21.1-1.4.5.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\createadditionallogistics-1.21.1-1.4.5.jar",
+          "bytes": 952653,
+          "sha256": "6C06FF35A0BF8F0714026547F6587DC3BDC80199023E48C9B03AF2652BBC95C0"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "client",
+        "relative": "createadditionallogistics-1.21.1-1.4.5.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\createadditionallogistics-1.21.1-1.4.5.jar",
+          "bytes": 952653,
+          "sha256": "6C06FF35A0BF8F0714026547F6587DC3BDC80199023E48C9B03AF2652BBC95C0"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "server",
+        "relative": "createdeco-2.1.3.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\createdeco-2.1.3.jar",
+          "bytes": 3323409,
+          "sha256": "508451F42357F3C61CB0A2FC1AE2DB9465A6C7EB490D2EFFCAFFBE465E0A1CA6"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "client",
+        "relative": "createdeco-2.1.3.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\createdeco-2.1.3.jar",
+          "bytes": 3323409,
+          "sha256": "508451F42357F3C61CB0A2FC1AE2DB9465A6C7EB490D2EFFCAFFBE465E0A1CA6"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "server",
+        "relative": "creategearsandtavern-1.1.6.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\creategearsandtavern-1.1.6.jar",
+          "bytes": 724827,
+          "sha256": "CD58B8F99D6C8085A66B3ED17A6DC3F469A3C517D36A5C7571B83A76A0FFDCEC"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "client",
+        "relative": "creategearsandtavern-1.1.6.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\creategearsandtavern-1.1.6.jar",
+          "bytes": 724827,
+          "sha256": "CD58B8F99D6C8085A66B3ED17A6DC3F469A3C517D36A5C7571B83A76A0FFDCEC"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "server",
+        "relative": "DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "base_artifact": {
+          "bytes": 945261,
+          "sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39"
+        },
+        "state": "SUPERSEDED_BY_LOCKED_FOLLOWUP"
+      },
+      {
+        "kind": "jar",
+        "side": "client",
+        "relative": "DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "base_artifact": {
+          "bytes": 945261,
+          "sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39"
+        },
+        "state": "SUPERSEDED_BY_LOCKED_FOLLOWUP"
+      },
+      {
+        "kind": "jar",
+        "side": "server",
+        "relative": "irons_spellbooks-1.21.1-3.15.6.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\irons_spellbooks-1.21.1-3.15.6.jar",
+          "bytes": 13584342,
+          "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "client",
+        "relative": "irons_spellbooks-1.21.1-3.15.6.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\irons_spellbooks-1.21.1-3.15.6.jar",
+          "bytes": 13584342,
+          "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "server",
+        "relative": "railways-0.2.1+neoforge-mc1.21.1.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\railways-0.2.1+neoforge-mc1.21.1.jar",
+          "bytes": 12120869,
+          "sha256": "BEB9032A5377CFCEE27D79E2DD6DFA2DE7ABCF049ABE4817C3ADF618B44ED671"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "client",
+        "relative": "railways-0.2.1+neoforge-mc1.21.1.jar",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\railways-0.2.1+neoforge-mc1.21.1.jar",
+          "bytes": 12120869,
+          "sha256": "BEB9032A5377CFCEE27D79E2DD6DFA2DE7ABCF049ABE4817C3ADF618B44ED671"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "jar",
+        "side": "server",
+        "relative": "tracks-neoforge-1.21.1-1.0.1.jar",
+        "base_artifact": {
+          "bytes": 165882,
+          "sha256": "B5022C73AE4A36E8798D1E57D8128EB42DA2964C6E38C722D2AD7CCD2FF443E5"
+        },
+        "state": "SUPERSEDED_BY_LOCKED_FOLLOWUP"
+      },
+      {
+        "kind": "jar",
+        "side": "client",
+        "relative": "tracks-neoforge-1.21.1-1.0.1.jar",
+        "base_artifact": {
+          "bytes": 165882,
+          "sha256": "B5022C73AE4A36E8798D1E57D8128EB42DA2964C6E38C722D2AD7CCD2FF443E5"
+        },
+        "state": "SUPERSEDED_BY_LOCKED_FOLLOWUP"
+      },
+      {
+        "kind": "loose",
+        "side": "server",
+        "relative": "kubejs/data/c6c/worldgen/biome/end_cherry_grove.json",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\data\\c6c\\worldgen\\biome\\end_cherry_grove.json",
+          "bytes": 3044,
+          "sha256": "1D14AE63D90486CCF44D556873E5318074E3724FC5396C88321C74F951324D16"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "loose",
+        "side": "server",
+        "relative": "kubejs/data/minecraft/worldgen/biome/beach.json",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\data\\minecraft\\worldgen\\biome\\beach.json",
+          "bytes": 3609,
+          "sha256": "55E1A803A7AAC7AD368A56B19201B02389897BC6868E546C5FFC0B8FFEF2CA79"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "loose",
+        "side": "server",
+        "relative": "kubejs/data/minecraft/worldgen/biome/desert.json",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\data\\minecraft\\worldgen\\biome\\desert.json",
+          "bytes": 5421,
+          "sha256": "22BCCC525B6B38B1D5EA18F34A84CF4E8E101C6F381434029B64D5E9A4886C37"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "loose",
+        "side": "server",
+        "relative": "kubejs/data/minecraft/worldgen/biome/mangrove_swamp.json",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\data\\minecraft\\worldgen\\biome\\mangrove_swamp.json",
+          "bytes": 4819,
+          "sha256": "C738825E86A5D3936E46C91BF5D42630428FAA1983E0C4370AA7DDD3D6C90CEA"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "loose",
+        "side": "server",
+        "relative": "kubejs/data/minecraft/worldgen/biome/swamp.json",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\data\\minecraft\\worldgen\\biome\\swamp.json",
+          "bytes": 4947,
+          "sha256": "A8D30AF46FA92FCD477A040FB8F4412610FF84FFB1103E37E5AAC0D3013A428C"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "loose",
+        "side": "server",
+        "relative": "kubejs/data/minecraft/worldgen/biome/wooded_badlands.json",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\data\\minecraft\\worldgen\\biome\\wooded_badlands.json",
+          "bytes": 4749,
+          "sha256": "B6162FAD5087E3379C68EB1099D934F9532C87BCD49A5CCE68BB815315750EB1"
+        },
+        "state": "INSTALLED_EXACT"
+      },
+      {
+        "kind": "loose",
+        "side": "server",
+        "relative": "kubejs/data/touhou_little_maid/curios/entities/curios.json",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\data\\touhou_little_maid\\curios\\entities\\curios.json",
+          "bytes": 188,
+          "sha256": "46ED1A691F1B9751DAA0328AB5573EA8926032605BF2A9635A5037EFC190009E"
+        },
+        "state": "INSTALLED_EXACT"
+      }
+    ]
+  },
+  "content": {
+    "status": "PASS_LOCKED_AND_REHASHED",
+    "report": {
+      "path": "D:\\Trans\\migration-audit-work\\attempt13-content-repairs-apply-20260814.json",
+      "bytes": 10581,
+      "sha256": "2397D46351318A1995E252053E32F9C1E4D61886761091F78A61F4D6140645EB"
+    },
+    "policy": {
+      "spawn_box_recipe_removed": true,
+      "maid_js_unchanged": true,
+      "tlm_patch_side": "CLIENT",
+      "yuushya_patch_side": "BOTH",
+      "mcmodsync_globally_disabled": true
+    },
+    "yuushya": "yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar",
+    "maid_js": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\server_scripts\\maid.js",
+      "bytes": 119,
+      "sha256": "FA458896BC728721995925563DD491F7ED54073FD1A94A5AE87004C66E4990F4"
+    },
+    "core_repairs": {
+      "status": "PASS_LOCKED_AND_REHASHED",
+      "report": {
+        "path": "D:\\Trans\\migration-audit-work\\attempt13-core-fixes-apply-20260814.json",
+        "bytes": 12791,
+        "sha256": "B49659E08861A62576053C7693BDAB3EFDD39B65F074C1E2AAA47F72FB16678F"
+      },
+      "policy": {
+        "mcmodsync_globally_disabled": true,
+        "server_memory_mb": 4096,
+        "client_memory_mb": 4096,
+        "java_started": false,
+        "minecraft_started": false,
+        "world_modified": false
+      },
+      "installed": {
+        "status": "PASS_INSTALLED",
+        "operations": [
+          {
+            "side": "server",
+            "artifact": {
+              "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\mineastr-neoforge-1.21.1-0.6.26.jar",
+              "bytes": 257982,
+              "sha256": "0264D729A3343BE1645B5AFE16C15A7A57C7E89A9405FA67EC80EE06D4A148D8"
+            }
+          },
+          {
+            "side": "client",
+            "artifact": {
+              "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\mineastr-neoforge-1.21.1-0.6.26.jar",
+              "bytes": 257982,
+              "sha256": "0264D729A3343BE1645B5AFE16C15A7A57C7E89A9405FA67EC80EE06D4A148D8"
+            }
+          },
+          {
+            "side": "server",
+            "artifact": {
+              "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
+              "bytes": 1111051,
+              "sha256": "673FECBFFAD26BB6D025FB5F60560CF6340E542BDF091D8D66074490515292F3"
+            }
+          },
+          {
+            "side": "server",
+            "artifact": {
+              "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\backport-1.5-cat-serializer-fix.1.jar",
+              "bytes": 15336561,
+              "sha256": "34291AF9D81B6AEE0780F5F511B2A9594664F36906AED40687DF1C7009E68B1D"
+            }
+          },
+          {
+            "side": "client",
+            "artifact": {
+              "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\backport-1.5-cat-serializer-fix.1.jar",
+              "bytes": 15336561,
+              "sha256": "34291AF9D81B6AEE0780F5F511B2A9594664F36906AED40687DF1C7009E68B1D"
+            }
+          },
+          {
+            "side": "server",
+            "artifact": {
+              "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+              "bytes": 712893,
+              "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A"
+            }
+          },
+          {
+            "side": "client",
+            "artifact": {
+              "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+              "bytes": 712893,
+              "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A"
+            }
+          },
+          {
+            "side": "server",
+            "artifact": {
+              "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\worldedit-mod-7.3.8-direction-property-fix.1.jar",
+              "bytes": 6264309,
+              "sha256": "8EB5E39AA914EB1B09307B6C004478BD1263655FCCA880580673481EBFEF9283"
+            }
+          },
+          {
+            "side": "client",
+            "artifact": {
+              "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\worldedit-mod-7.3.8-direction-property-fix.1.jar",
+              "bytes": 6264309,
+              "sha256": "8EB5E39AA914EB1B09307B6C004478BD1263655FCCA880580673481EBFEF9283"
+            }
+          },
+          {
+            "side": "server",
+            "artifact": {
+              "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\create-enchantment-industry-2.4.2-cei251-backport.1.jar",
+              "bytes": 1575446,
+              "sha256": "5B2C3BE95385DBF93000759DB604AB4C71224D7455C437C1B4650D91FAC669EB"
+            }
+          },
+          {
+            "side": "client",
+            "artifact": {
+              "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\create-enchantment-industry-2.4.2-cei251-backport.1.jar",
+              "bytes": 1575446,
+              "sha256": "5B2C3BE95385DBF93000759DB604AB4C71224D7455C437C1B4650D91FAC669EB"
+            }
+          }
+        ],
+        "counts": {
+          "server_jars": 236,
+          "client_jars": 247
+        },
+        "mcmodsync": {
+          "server_hits": [],
+          "client_hits": [],
+          "globally_disabled": true
+        }
+      }
+    },
+    "tlm_patch": {
+      "status": "PASS_LOCKED_AND_REHASHED",
+      "report": {
+        "path": "D:\\Trans\\migration-audit-work\\attempt13-tlm-patchouli-jar-apply-20260814.json",
+        "bytes": 2836,
+        "sha256": "BA36A5AB43513D8D6CBAEF1D2380BEA56DB3C27C6B6CF7922DD22A7BA1FAE20D"
+      },
+      "patched_jar_sha256": "32BE64DD058B7A91F90107972D104BDC0946D858E690D4C72032F64873F9B15B",
+      "loose_overlays": "ABSENT_BOTH_SIDES",
+      "recipe_resource_preserved": true,
+      "advancement_resource_preserved": true,
+      "jar_checks": [
+        {
+          "side": "server",
+          "artifact": {
+            "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+            "bytes": 24411246,
+            "sha256": "32BE64DD058B7A91F90107972D104BDC0946D858E690D4C72032F64873F9B15B"
+          },
+          "duplicate_entries": false
+        },
+        {
+          "side": "client",
+          "artifact": {
+            "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+            "bytes": 24411246,
+            "sha256": "32BE64DD058B7A91F90107972D104BDC0946D858E690D4C72032F64873F9B15B"
+          },
+          "duplicate_entries": false
+        }
+      ]
+    },
+    "happyghast_repair": {
+      "status": "PASS_LOCKED_AND_REHASHED",
+      "report": {
+        "path": "D:\\Trans\\migration-audit-work\\attempt13-happyghast-duplicate-repair-20260814.json",
+        "bytes": 8780,
+        "sha256": "3BB132384394B7B217E422C8A7B18FDAE5DBB125091F013EB47668F462FB9EA8"
+      },
+      "post_scan": {
+        "region_files": 1501,
+        "uuid_count": 146277,
+        "duplicate_count": 0,
+        "duplicates": {},
+        "parse_errors": []
+      },
+      "region": {
+        "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\entities\\r.-1.-1.mca",
+        "bytes": 1101824,
+        "sha256": "9A28D945D5E0EDCF882ECD76D35EB6037071655BD2A8AFD651E96379130DA887"
+      },
+      "rollback_backup": "D:\\Trans\\migration-audit-work\\attempt13-happyghast-duplicate-backup-20260814\\entities\\r.-1.-1.mca"
+    },
+    "mcmodsync": {
+      "server": {
+        "root": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814",
+        "scanned_entries": 12243,
+        "matches": [],
+        "globally_disabled": true
+      },
+      "client": {
+        "root": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814",
+        "scanned_entries": 12981,
+        "matches": [],
+        "globally_disabled": true
+      }
+    }
+  },
+  "followup": {
+    "status": "PASS_LOCKED_AND_REHASHED",
+    "report": {
+      "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-postverify-20260814.json",
+      "bytes": 9104,
+      "sha256": "18C51798F064F08544D288080FE3273F696D1773F3380FD211811F992FBEB40F"
+    },
+    "apply_report": {
+      "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-apply-20260814.json",
+      "bytes": 17636,
+      "sha256": "FE71B842AB644D14E4FA8F99BDCE4627EFD55C1ACAD4DF5D5CE0149088732476"
+    },
+    "installed_targets": [
+      {
+        "key": "client_dnt",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+          "bytes": 945155,
+          "sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E"
+        }
+      },
+      {
+        "key": "server_dnt",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+          "bytes": 945155,
+          "sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E"
+        }
+      },
+      {
+        "key": "client_tracks",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\tracks-neoforge-1.21.1-1.0.1.jar",
+          "bytes": 165818,
+          "sha256": "3119FA84955907FD734EF77F2296EC2E546F4442BC3AE13B04046C5D71F61CCF"
+        }
+      },
+      {
+        "key": "server_tracks",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\tracks-neoforge-1.21.1-1.0.1.jar",
+          "bytes": 165818,
+          "sha256": "3119FA84955907FD734EF77F2296EC2E546F4442BC3AE13B04046C5D71F61CCF"
+        }
+      },
+      {
+        "key": "client_irons_spellbooks",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\irons_spellbooks-1.21.1-3.15.6.jar",
+          "bytes": 13584342,
+          "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB"
+        }
+      },
+      {
+        "key": "server_irons_spellbooks",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\irons_spellbooks-1.21.1-3.15.6.jar",
+          "bytes": 13584342,
+          "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB"
+        }
+      }
+    ],
+    "debug_loot_absent": true,
+    "mcmodsync_globally_disabled": true
+  },
+  "server_mods": {
+    "root": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814",
+    "active_jar_count": 236,
+    "mineastr": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\mineastr-neoforge-1.21.1-0.6.26.jar",
+      "bytes": 257982,
+      "sha256": "0264D729A3343BE1645B5AFE16C15A7A57C7E89A9405FA67EC80EE06D4A148D8"
+    },
+    "yacl": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
+      "bytes": 1111051,
+      "sha256": "673FECBFFAD26BB6D025FB5F60560CF6340E542BDF091D8D66074490515292F3"
+    },
+    "content_backport": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\backport-1.5-cat-serializer-fix.1.jar",
+      "bytes": 15336561,
+      "sha256": "34291AF9D81B6AEE0780F5F511B2A9594664F36906AED40687DF1C7009E68B1D"
+    },
+    "hotbath_registry_fix": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+      "bytes": 712893,
+      "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A"
+    },
+    "worldedit_direction_property_fix": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\worldedit-mod-7.3.8-direction-property-fix.1.jar",
+      "bytes": 6264309,
+      "sha256": "8EB5E39AA914EB1B09307B6C004478BD1263655FCCA880580673481EBFEF9283"
+    },
+    "cei_compatibility": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\create-enchantment-industry-2.4.2-cei251-backport.1.jar",
+      "bytes": 1575446,
+      "sha256": "5B2C3BE95385DBF93000759DB604AB4C71224D7455C437C1B4650D91FAC669EB"
+    },
+    "mcmodsync_active": false
+  },
+  "client_mods": {
+    "root": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814",
+    "active_jar_count": 247,
+    "mineastr": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\mineastr-neoforge-1.21.1-0.6.26.jar",
+      "bytes": 257982,
+      "sha256": "0264D729A3343BE1645B5AFE16C15A7A57C7E89A9405FA67EC80EE06D4A148D8"
+    },
+    "yacl": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
+      "bytes": 1111051,
+      "sha256": "673FECBFFAD26BB6D025FB5F60560CF6340E542BDF091D8D66074490515292F3"
+    },
+    "content_backport": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\backport-1.5-cat-serializer-fix.1.jar",
+      "bytes": 15336561,
+      "sha256": "34291AF9D81B6AEE0780F5F511B2A9594664F36906AED40687DF1C7009E68B1D"
+    },
+    "hotbath_registry_fix": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+      "bytes": 712893,
+      "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A"
+    },
+    "worldedit_direction_property_fix": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\worldedit-mod-7.3.8-direction-property-fix.1.jar",
+      "bytes": 6264309,
+      "sha256": "8EB5E39AA914EB1B09307B6C004478BD1263655FCCA880580673481EBFEF9283"
+    },
+    "cei_compatibility": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\create-enchantment-industry-2.4.2-cei251-backport.1.jar",
+      "bytes": 1575446,
+      "sha256": "5B2C3BE95385DBF93000759DB604AB4C71224D7455C437C1B4650D91FAC669EB"
+    },
+    "mcmodsync_active": false
+  }
+}

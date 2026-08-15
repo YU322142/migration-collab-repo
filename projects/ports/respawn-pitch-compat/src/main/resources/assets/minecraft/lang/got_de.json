@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "𐍃𐍄𐌰𐌸 𐌲𐌰𐌵𐌹𐍅𐌴𐌹𐌽𐌰𐌹𐍃 𐍃𐌰𐍄𐌾𐌰𐌽 𐌳𐌿 %s, %s, %s [%s, %s] 𐌹𐌽 %s 𐍆𐌰𐌿𐍂 %s",
+  "commands.spawnpoint.success.multiple.new": "𐍃𐍄𐌰𐌸 𐌲𐌰𐌵𐌹𐍅𐌴𐌹𐌽𐌰𐌹𐍃 𐍃𐌰𐍄𐌾𐌰𐌽 𐌳𐌿 %s, %s, %s [%s, %s] 𐌹𐌽 %s 𐍆𐌰𐌿𐍂 𐍃𐍀𐌹𐌻𐍉𐌽𐌳𐍃 %s"
+}

@@ -1,0 +1,116 @@
+{
+  "schema": 1,
+  "status": "PASS_STATIC_BUILD_AND_CONTRACTS_AWAITING_DISPOSABLE_STARTUP_GATE",
+  "generated_at_utc": "2026-08-14T05:15:16Z",
+  "scope": "Hot Bath 1.21.1-3.0.0 advancement trigger duplicate-registration compatibility fix",
+  "root_cause": {
+    "class": "com.crabmod.hotbath.registers.ExtraEventsRegister",
+    "method": "registerAdvancementTrigger(Lnet/neoforged/neoforge/registries/RegisterEvent;)V",
+    "fault": "The unguarded SubscribeEvent listener ran for every RegisterEvent and called CriteriaTriggers.register four times on every invocation.",
+    "first_duplicate_id": "hotbath:foot_health",
+    "attempt4_failed_invocations": 156,
+    "inferred_total_invocations": 157,
+    "world_load_reached": false
+  },
+  "fix": {
+    "strategy": "deterministic overlay on the exact released JAR",
+    "guard": "if (!event.getRegistryKey().equals(Registries.TRIGGER_TYPE)) return;",
+    "version": "1.21.1-3.0.0-registry-fix.1",
+    "side": "BOTH",
+    "registration_ids": [
+      "hotbath:foot_health",
+      "hotbath:milk_skin",
+      "hotbath:chronic_invalid",
+      "hotbath:rose_body_fragrance"
+    ]
+  },
+  "source": {
+    "path": "D:\\Trans\\migration-audit-work\\hotbath-300-trigger-fix-source-20260814",
+    "official_base_commit": "5e382931c20744b2ffe43abc26b917e59f7a21cd",
+    "compatibility_commit": "bdc4d7cafb1de80650fedf1e62ded60c0dce06ff",
+    "branch": "codex/hotbath-3.0.0-trigger-fix",
+    "working_tree_clean": true
+  },
+  "original": {
+    "path": "D:\\Trans\\migration-audit-work\\hotbath-300-trigger-fix-source-20260814\\reference\\hotbath-1.21.1-3.0.0.jar",
+    "bytes": 712727,
+    "sha256": "93EE276A0BD10D23101AE2EA7982933347D99B4FA9CD8B7E015F813BA6CF11AA",
+    "entries": 383,
+    "files": 337,
+    "classes": 74,
+    "target_class_sha256": "76288919209422FC4F0CBF526CF66EB3154873ADF7D13F730BB9548D3FB1ACD3"
+  },
+  "artifact": {
+    "path": "D:\\Trans\\migration-audit-work\\hotbath-300-trigger-fix-artifacts-20260814\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+    "name": "hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+    "bytes": 712893,
+    "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A",
+    "entries": 383,
+    "files": 337,
+    "classes": 74,
+    "target_class_sha256": "C8C7948B4143F1A42AF3A0FDCF1CE74A1C087DA5DD83C0AABEEBF95396D0D0F5"
+  },
+  "zip_equivalence": {
+    "entry_set_identical": true,
+    "unchanged_file_entries": 334,
+    "changed_entries": [
+      "com/crabmod/hotbath/registers/ExtraEventsRegister.class",
+      "META-INF/MANIFEST.MF",
+      "META-INF/neoforge.mods.toml"
+    ],
+    "duplicate_entries": 0,
+    "all_crc_reads_passed": true
+  },
+  "rejected_nonfinal_build": {
+    "reason": "A full source rebuild changed a released gameplay resource and was rejected instead of weakening the equivalence contract.",
+    "entry": "assets/hotbath/particles/steam_particle.json",
+    "original_bytes": 492,
+    "rebuilt_bytes": 507
+  },
+  "clean_checks": [
+    {
+      "build": "A",
+      "command": "gradlew.bat clean check --no-daemon --no-build-cache",
+      "result": "PASS",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "jar_path": "D:\\Trans\\migration-audit-work\\hotbath-300-trigger-fix-artifacts-20260814\\build-a\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+      "bytes": 712893,
+      "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A"
+    },
+    {
+      "build": "B",
+      "command": "gradlew.bat clean check --no-daemon --no-build-cache",
+      "result": "PASS",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "jar_path": "D:\\Trans\\migration-audit-work\\hotbath-300-trigger-fix-artifacts-20260814\\build-b\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+      "bytes": 712893,
+      "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A"
+    }
+  ],
+  "reproducible": true,
+  "contracts": {
+    "asm_registry_key_guard": "PASS",
+    "asm_guard_dominates_all_four_register_calls": "PASS",
+    "four_unique_registration_ids_preserved": "PASS",
+    "advancement_json_ids_and_triggers_preserved": "PASS",
+    "all_other_classes_byte_identical": "PASS",
+    "all_gameplay_resources_byte_identical": "PASS",
+    "zip_crc_and_duplicate_entry_check": "PASS",
+    "both_side_metadata": "PASS"
+  },
+  "mutations": {
+    "attempt4": false,
+    "staging": false,
+    "production": false,
+    "minecraft_started": false
+  },
+  "deployment_contract": {
+    "install_same_jar_on_server_and_client": true,
+    "old_and_fixed_jars_must_not_coexist": true,
+    "next_step": "Install atomically into a fresh disposable attempt and run the locked startup/join gate."
+  }
+}

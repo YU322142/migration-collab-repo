@@ -1,0 +1,195 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "farmerdelight"
+	group: ""
+	icon: {
+		id: "farmersdelight:stove"
+	}
+	id: "4B14987D9F164B1A"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			id: "126A8DC0C48DF4FC"
+			size: 2.0d
+			tasks: [
+				{
+					id: "413334BBE628F9EA"
+					item: { count: 1, id: "farmersdelight:cutting_board" }
+					type: "item"
+				}
+				{
+					id: "56DBB5A03677C326"
+					item: { count: 1, id: "farmersdelight:iron_knife" }
+					type: "item"
+				}
+			]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["12602CB3F8A50309"]
+			id: "15FA4B15D2DAA054"
+			tasks: [{
+				id: "5CCAB02CED7E7E50"
+				item: { count: 1, id: "farmersdelight:stove" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["15FA4B15D2DAA054"]
+			id: "45581809D17355DA"
+			tasks: [{
+				id: "7B5CA51ECC285A88"
+				item: { count: 1, id: "farmersdelight:cooking_pot" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["15FA4B15D2DAA054"]
+			id: "02627E4CE53F3D39"
+			tasks: [{
+				id: "1925A20AEB9EB37D"
+				item: { count: 1, id: "farmersdelight:skillet" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["126A8DC0C48DF4FC"]
+			id: "03F6F59DD48C044C"
+			tasks: [{
+				id: "094CFD8372949C87"
+				item: { count: 1, id: "farmersdelight:bamboo_basket" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["126A8DC0C48DF4FC"]
+			id: "289AC5F1C59A3DA6"
+			tasks: [{
+				id: "186E678AD54AD206"
+				item: { count: 1, id: "farmersdelight:organic_compost" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["289AC5F1C59A3DA6"]
+			id: "3DD1B51E6A581AA1"
+			tasks: [{
+				id: "12D3888C4717E0C5"
+				item: { count: 1, id: "farmersdelight:rich_soil" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["126A8DC0C48DF4FC"]
+			id: "12602CB3F8A50309"
+			tasks: [{
+				id: "55AFF394B6E54B67"
+				item: { count: 1, id: "minecraft:campfire" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["38014DB8FC25BED2"]
+			id: "3E3B9BAC8D0CC46C"
+			tasks: [{
+				id: "020E766337913D02"
+				item: { count: 1, id: "farmersdelight:safety_net" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["126A8DC0C48DF4FC"]
+			id: "38014DB8FC25BED2"
+			tasks: [{
+				id: "432A73ED293AF9FF"
+				item: { count: 1, id: "farmersdelight:rope" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["126A8DC0C48DF4FC"]
+			id: "405DDD076D4F06E9"
+			tasks: [{
+				id: "3FD239B1488B8C2A"
+				item: { count: 1, id: "minecraft:stone_hoe" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["126A8DC0C48DF4FC"]
+			id: "068BF44B149A3415"
+			tasks: [{
+				id: "2EE1C77CE52B3722"
+				item: { count: 1, id: "mynethersdelight:letios_compost" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["068BF44B149A3415"]
+			id: "620DE65D4B2B3547"
+			tasks: [
+				{
+					id: "3768311B520EE898"
+					item: { count: 1, id: "mynethersdelight:resurgent_soil" }
+					type: "item"
+				}
+				{
+					id: "2AB766AC6DA7C79B"
+					item: { count: 1, id: "mynethersdelight:resurgent_soil_farmland" }
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["126A8DC0C48DF4FC"]
+			id: "4D967AC9E5045DDB"
+			tasks: [{
+				id: "70784ECF3CFB8B76"
+				item: { count: 1, id: "mynethersdelight:powder_cannon" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"02627E4CE53F3D39"
+				"45581809D17355DA"
+			]
+			id: "77305B767FC35FD7"
+			tasks: [{
+				id: "5A4EC83AAAB86751"
+				type: "checkmark"
+			}]
+			x: 7.0d
+			y: 0.0d
+		}
+	]
+}

@@ -1,0 +1,667 @@
+{
+  "replace": false,
+  "trades": [
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:adv_low_health_heal"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:adv_low_health_buff"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:basic_pace"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:big_eater"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:cooldown"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:deep_breaths"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:dig_speed"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:dirt_runner"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:divine_speed"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:heart_and_soul"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:inquisitive_mind"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:last_leg"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:low_health_buff"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:low_health_heal"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:mountain_climber"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:nutritional_supplements"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:rapid"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:serene"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:snow_runner"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:steel_will"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:top_umamusme"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "components": {
+          "umapyoi:data_location": {
+            "name":"umapyoi:turf_runner"
+          }
+        },
+        "count": 1,
+        "id": "umapyoi:skill_book"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "umapyoi:crystal_rainbow"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 150,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "id": "crystal_gold"
+      },
+      "payment_item": {
+        "count": {
+          "max": 3,
+          "min": 1
+        },
+        "id": "umapyoi:blank_ticket"
+      },
+      "secondary_payment_item": {
+        "count": {
+          "max": 16,
+          "min": 12
+        },
+        "id": "umapyoi:jewel"
+      }
+    }
+  ]
+}

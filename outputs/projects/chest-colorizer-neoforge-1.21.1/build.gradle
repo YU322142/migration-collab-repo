@@ -1,0 +1,142 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.95'
+}
+
+group = mod_group_id
+version = mod_version
+
+base {
+    archivesName = 'chest-colorizer-neoforge'
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+
+    runs {
+        client {
+            client()
+            gameDirectory = project.file('run/client')
+            programArguments.addAll('--username', 'ColorizerAudit', '--width', '1280', '--height', '720')
+        }
+        server {
+            server()
+            gameDirectory = project.file('run/server')
+            programArgument '--nogui'
+        }
+    }
+}
+
+sourceSets.test {
+    compileClasspath += sourceSets.main.compileClasspath
+    runtimeClasspath += sourceSets.main.compileClasspath
+}
+
+def sourceReferenceJar = file(project.source_reference_jar)
+def oldReferenceJar = file(project.old_reference_jar)
+
+def sha256 = { File input ->
+    def digest = java.security.MessageDigest.getInstance('SHA-256')
+    input.withInputStream { stream ->
+        byte[] buffer = new byte[8192]
+        for (int read = stream.read(buffer); read >= 0; read = stream.read(buffer)) {
+            if (read > 0) digest.update(buffer, 0, read)
+        }
+    }
+    digest.digest().collect { String.format('%02X', it) }.join()
+}
+
+tasks.register('verifyInputs') {
+    doLast {
+        assert sourceReferenceJar.isFile(): "Missing v1.6.1 reference JAR: ${sourceReferenceJar}"
+        assert sha256(sourceReferenceJar).equalsIgnoreCase(project.source_reference_sha256):
+                "v1.6.1 reference SHA-256 mismatch: ${sha256(sourceReferenceJar)}"
+        assert oldReferenceJar.isFile(): "Missing v1.3.1 reference JAR: ${oldReferenceJar}"
+        assert sha256(oldReferenceJar).equalsIgnoreCase(project.old_reference_sha256):
+                "v1.3.1 reference SHA-256 mismatch: ${sha256(oldReferenceJar)}"
+
+        def readAssetMap = { File jarFile ->
+            def assets = [:]
+            new java.util.zip.ZipFile(jarFile).withCloseable { zip ->
+                zip.entries().each { entry ->
+                    if (!entry.directory && entry.name.startsWith('assets/colorizer/')) {
+                        assets[entry.name] = zip.getInputStream(entry).bytes
+                    }
+                }
+            }
+            assets
+        }
+        def sourceAssets = readAssetMap(sourceReferenceJar)
+        def oldAssets = readAssetMap(oldReferenceJar)
+        assert sourceAssets.keySet() == oldAssets.keySet():
+                'Official v1.3.1 and v1.6.1 colorizer asset sets differ'
+        sourceAssets.each { path, bytes ->
+            assert Arrays.equals(bytes, oldAssets[path]): "Official asset changed between v1.3.1 and v1.6.1: ${path}"
+        }
+
+        def localRoot = file('src/main/resources')
+        def localAssets = [:]
+        fileTree(dir: new File(localRoot, 'assets/colorizer')).files.each { localFile ->
+            def path = localRoot.toPath().relativize(localFile.toPath()).toString().replace('\\', '/')
+            localAssets[path] = localFile.bytes
+        }
+        assert sourceAssets.keySet() == localAssets.keySet():
+                "Port asset set differs from official v1.6.1: missing=${sourceAssets.keySet() - localAssets.keySet()}, extra=${localAssets.keySet() - sourceAssets.keySet()}"
+        sourceAssets.each { path, bytes ->
+            assert Arrays.equals(bytes, localAssets[path]): "Port asset bytes differ from official v1.6.1: ${path}"
+        }
+    }
+}
+
+def tomlProperties = [
+        'loader_version_range', 'mod_license', 'mod_id', 'mod_version',
+        'mod_name', 'mod_authors', 'mod_description', 'neo_version_range',
+        'minecraft_version_range'
+].collectEntries { key -> [key, project.property(key).toString()] }
+
+tasks.named('processResources') {
+    dependsOn tasks.named('verifyInputs')
+    inputs.properties(tomlProperties)
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand(tomlProperties)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    dependsOn tasks.named('verifyInputs')
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('paritySemanticsTest', JavaExec) {
+    group = 'verification'
+    description = 'Runs CSV upgrade, color-map, and source behavior parity checks.'
+    classpath = files(sourceSets.test.output, sourceSets.main.output, sourceSets.main.compileClasspath)
+    mainClass = 'net.immortaldevs.colorizer.ColorizerParityTest'
+    def temporaryDirectory = layout.buildDirectory.dir('parity-test-tmp')
+    doFirst {
+        temporaryDirectory.get().asFile.mkdirs()
+    }
+    systemProperty 'java.io.tmpdir', temporaryDirectory.get().asFile.absolutePath
+}
+
+tasks.named('check') {
+    dependsOn tasks.named('paritySemanticsTest')
+}
+
+tasks.named('test', Test) {
+    failOnNoDiscoveredTests = false
+}
+
+tasks.named('jar') {
+    dependsOn tasks.named('verifyInputs')
+    archiveFileName = "chest-colorizer-${project.mod_version}-neoforge.jar"
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}

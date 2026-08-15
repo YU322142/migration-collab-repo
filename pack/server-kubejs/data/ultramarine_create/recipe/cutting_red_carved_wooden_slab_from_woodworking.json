@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "item": "ultramarine:red_carved_wood"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "ultramarine:red_carved_wooden_slab"
+    }
+  ]
+}

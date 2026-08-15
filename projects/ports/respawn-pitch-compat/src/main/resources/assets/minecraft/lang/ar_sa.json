@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "تم تعيين نقطة الظهور إلى ‎%s، %s، %s ‎[%s، %s] في ‎%s لـ ‎%s.",
+  "commands.spawnpoint.success.multiple.new": "ضع نقطة الإحياء في %s, %s, %s, في %s من أجل %s"
+}

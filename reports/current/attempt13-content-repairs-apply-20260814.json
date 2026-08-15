@@ -1,0 +1,199 @@
+{
+  "schema": 1,
+  "status": "PASS_APPLIED",
+  "generated_at_utc": "2026-08-14T10:15:50+00:00",
+  "policy": {
+    "spawn_box_recipe_removed": true,
+    "maid_js_unchanged": true,
+    "tlm_patch_side": "CLIENT",
+    "yuushya_patch_side": "BOTH",
+    "mcmodsync_globally_disabled": true
+  },
+  "before": {
+    "server": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814",
+    "client": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814",
+    "yuushya": {
+      "server": {
+        "state": "original",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\yuushya-1.21.0-neoforge-2.3.0.jar",
+          "bytes": 28197448,
+          "sha256": "C410C51E1ECDD9D3FF55EB34B84D71DA761A8990EC0993A766C9BA40E8C360E8"
+        }
+      },
+      "client": {
+        "state": "original",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\yuushya-1.21.0-neoforge-2.3.0.jar",
+          "bytes": 28197448,
+          "sha256": "C410C51E1ECDD9D3FF55EB34B84D71DA761A8990EC0993A766C9BA40E8C360E8"
+        }
+      }
+    },
+    "yuushya_patched_source": {
+      "path": "D:\\Trans\\migration-audit-work\\yuushya-230-patchouli-fix-artifacts-20260814\\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar",
+      "bytes": 28197402,
+      "sha256": "31DFFD39D1FED94F2088405AF3B8DC862E363BA389015780355571ECCA4A813D"
+    },
+    "tlm": {
+      "server": {
+        "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+        "bytes": 24408776,
+        "sha256": "F6DB04195820C8508704277EA76D63723804FF236A7B780369BA59EBE5CD9C27"
+      },
+      "client": {
+        "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+        "bytes": 24408776,
+        "sha256": "F6DB04195820C8508704277EA76D63723804FF236A7B780369BA59EBE5CD9C27"
+      }
+    },
+    "maid_js": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\server_scripts\\maid.js",
+      "bytes": 119,
+      "sha256": "FA458896BC728721995925563DD491F7ED54073FD1A94A5AE87004C66E4990F4"
+    },
+    "tlm_manifest": {
+      "path": "<WORKSPACE>\\outputs\\patches\\tlm-patchouli-spawn-box-balance-fix-20260814\\manifest.json",
+      "bytes": 2421,
+      "sha256": "FCCD33E1B0AE4B4EF7FBB5132D870504CC00F94880556FCE92E4518600B1A040"
+    },
+    "tlm_overlay_sources": [
+      {
+        "relative": "kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/maid/spawn_maid.json",
+        "path": "<WORKSPACE>\\outputs\\patches\\tlm-patchouli-spawn-box-balance-fix-20260814\\overlay\\kubejs\\assets\\touhou_little_maid\\patchouli_books\\memorizable_gensokyo\\en_us\\entries\\maid\\spawn_maid.json",
+        "bytes": 443,
+        "sha256": "2904581BFC4704CAF6829ADE482959E766B1A2EDA76C03FF3F23945E4625BD9C"
+      },
+      {
+        "relative": "kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/overview/multiblocks_altar.json",
+        "path": "<WORKSPACE>\\outputs\\patches\\tlm-patchouli-spawn-box-balance-fix-20260814\\overlay\\kubejs\\assets\\touhou_little_maid\\patchouli_books\\memorizable_gensokyo\\en_us\\entries\\overview\\multiblocks_altar.json",
+        "bytes": 980,
+        "sha256": "39CBE907D067E08C6FAD58FBB9601339D8A6141B236BD1F62FFEFB1603F25D3A"
+      }
+    ],
+    "client_overlay": [
+      {
+        "relative": "kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/maid/spawn_maid.json",
+        "state": "absent"
+      },
+      {
+        "relative": "kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/overview/multiblocks_altar.json",
+        "state": "absent"
+      }
+    ],
+    "mcmodsync_active": false
+  },
+  "application": {
+    "mode": "apply",
+    "changed": [
+      {
+        "side": "server",
+        "kind": "jar",
+        "target": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar",
+        "backup": "D:\\Trans\\migration-audit-work\\attempt13-content-repairs-backup-20260814\\server\\mods\\yuushya-1.21.0-neoforge-2.3.0.jar"
+      },
+      {
+        "side": "client",
+        "kind": "jar",
+        "target": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar",
+        "backup": "D:\\Trans\\migration-audit-work\\attempt13-content-repairs-backup-20260814\\client\\mods\\yuushya-1.21.0-neoforge-2.3.0.jar"
+      },
+      {
+        "side": "client",
+        "kind": "overlay",
+        "target": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\kubejs\\assets\\touhou_little_maid\\patchouli_books\\memorizable_gensokyo\\en_us\\entries\\maid\\spawn_maid.json"
+      },
+      {
+        "side": "client",
+        "kind": "overlay",
+        "target": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\kubejs\\assets\\touhou_little_maid\\patchouli_books\\memorizable_gensokyo\\en_us\\entries\\overview\\multiblocks_altar.json"
+      }
+    ],
+    "backup_root": "D:\\Trans\\migration-audit-work\\attempt13-content-repairs-backup-20260814"
+  },
+  "after": {
+    "server": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814",
+    "client": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814",
+    "yuushya": {
+      "server": {
+        "state": "patched",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar",
+          "bytes": 28197402,
+          "sha256": "31DFFD39D1FED94F2088405AF3B8DC862E363BA389015780355571ECCA4A813D"
+        }
+      },
+      "client": {
+        "state": "patched",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar",
+          "bytes": 28197402,
+          "sha256": "31DFFD39D1FED94F2088405AF3B8DC862E363BA389015780355571ECCA4A813D"
+        }
+      }
+    },
+    "yuushya_patched_source": {
+      "path": "D:\\Trans\\migration-audit-work\\yuushya-230-patchouli-fix-artifacts-20260814\\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar",
+      "bytes": 28197402,
+      "sha256": "31DFFD39D1FED94F2088405AF3B8DC862E363BA389015780355571ECCA4A813D"
+    },
+    "tlm": {
+      "server": {
+        "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+        "bytes": 24408776,
+        "sha256": "F6DB04195820C8508704277EA76D63723804FF236A7B780369BA59EBE5CD9C27"
+      },
+      "client": {
+        "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+        "bytes": 24408776,
+        "sha256": "F6DB04195820C8508704277EA76D63723804FF236A7B780369BA59EBE5CD9C27"
+      }
+    },
+    "maid_js": {
+      "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\kubejs\\server_scripts\\maid.js",
+      "bytes": 119,
+      "sha256": "FA458896BC728721995925563DD491F7ED54073FD1A94A5AE87004C66E4990F4"
+    },
+    "tlm_manifest": {
+      "path": "<WORKSPACE>\\outputs\\patches\\tlm-patchouli-spawn-box-balance-fix-20260814\\manifest.json",
+      "bytes": 2421,
+      "sha256": "FCCD33E1B0AE4B4EF7FBB5132D870504CC00F94880556FCE92E4518600B1A040"
+    },
+    "tlm_overlay_sources": [
+      {
+        "relative": "kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/maid/spawn_maid.json",
+        "path": "<WORKSPACE>\\outputs\\patches\\tlm-patchouli-spawn-box-balance-fix-20260814\\overlay\\kubejs\\assets\\touhou_little_maid\\patchouli_books\\memorizable_gensokyo\\en_us\\entries\\maid\\spawn_maid.json",
+        "bytes": 443,
+        "sha256": "2904581BFC4704CAF6829ADE482959E766B1A2EDA76C03FF3F23945E4625BD9C"
+      },
+      {
+        "relative": "kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/overview/multiblocks_altar.json",
+        "path": "<WORKSPACE>\\outputs\\patches\\tlm-patchouli-spawn-box-balance-fix-20260814\\overlay\\kubejs\\assets\\touhou_little_maid\\patchouli_books\\memorizable_gensokyo\\en_us\\entries\\overview\\multiblocks_altar.json",
+        "bytes": 980,
+        "sha256": "39CBE907D067E08C6FAD58FBB9601339D8A6141B236BD1F62FFEFB1603F25D3A"
+      }
+    ],
+    "client_overlay": [
+      {
+        "relative": "kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/maid/spawn_maid.json",
+        "state": "patched",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\kubejs\\assets\\touhou_little_maid\\patchouli_books\\memorizable_gensokyo\\en_us\\entries\\maid\\spawn_maid.json",
+          "bytes": 443,
+          "sha256": "2904581BFC4704CAF6829ADE482959E766B1A2EDA76C03FF3F23945E4625BD9C"
+        }
+      },
+      {
+        "relative": "kubejs/assets/touhou_little_maid/patchouli_books/memorizable_gensokyo/en_us/entries/overview/multiblocks_altar.json",
+        "state": "patched",
+        "artifact": {
+          "path": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\kubejs\\assets\\touhou_little_maid\\patchouli_books\\memorizable_gensokyo\\en_us\\entries\\overview\\multiblocks_altar.json",
+          "bytes": 980,
+          "sha256": "39CBE907D067E08C6FAD58FBB9601339D8A6141B236BD1F62FFEFB1603F25D3A"
+        }
+      }
+    ],
+    "mcmodsync_active": false
+  },
+  "expected_yuushya_state": "patched"
+}

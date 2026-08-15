@@ -1,0 +1,27 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "item": "minecraft:blue_wool"
+    },
+    {
+      "tag": "c:dyes/white"
+    },
+    {
+      "item": "ultramarine:light_blue_dye_powder"
+    },
+    {
+      "item": "ultramarine:carved_wool_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:blue_carved_carpet"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:carved_wool_template"
+    }
+  ]
+}

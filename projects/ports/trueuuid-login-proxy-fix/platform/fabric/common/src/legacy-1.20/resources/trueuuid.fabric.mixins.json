@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "cn.alini.trueuuid.fabric.mixin",
+  "compatibilityLevel": "JAVA_${java_version}",
+  "mixins": [
+    "server.ServerLoginNetworkHandlerMixin"
+  ],
+  "client": [
+    "client.PauseScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

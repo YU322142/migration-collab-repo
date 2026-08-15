@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Einstiegspunkt von %7$s wurde auf (%1$s, %2$s, %3$s) [%4$s, %5$s] in %6$s gesetzt",
+  "commands.spawnpoint.success.multiple.new": "Einstiegspunkt von %7$s Spielern wurde auf (%1$s, %2$s, %3$s) [%4$s, %5$s] in %6$s gesetzt"
+}

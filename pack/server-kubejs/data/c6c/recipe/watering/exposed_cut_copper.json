@@ -1,0 +1,18 @@
+{
+  "type": "c6c:watering",
+  "ingredients": [
+    {
+      "item": "minecraft:exposed_cut_copper"
+    },
+    {
+      "type": "neoforge:tag",
+      "amount": 250,
+      "tag": "c:water"
+    }
+  ],
+  "results": [
+    {
+      "id": "minecraft:weathered_cut_copper"
+    }
+  ]
+}

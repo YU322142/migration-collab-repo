@@ -1,0 +1,8 @@
+@ParametersAreNonnullByDefault
+@MethodsReturnNonnullByDefault
+@FieldsAreNonnullByDefault
+package plus.dragons.createenchantmentindustry.integration.apotheosis.client.registry;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+import net.minecraft.FieldsAreNonnullByDefault;
+import net.minecraft.MethodsReturnNonnullByDefault;

@@ -1,0 +1,567 @@
+{
+  "schema": 2,
+  "status": "PASS_PREFLIGHT",
+  "release_kind": "MECHANOMANIA_ATTEMPT13_IMMUTABLE_RELEASE",
+  "generated_at_utc": "2026-08-14T11:16:33+00:00",
+  "runtime_go": true,
+  "builder_started_java": false,
+  "builder_started_minecraft": false,
+  "builder_touched_prism": false,
+  "source_gate": {
+    "path": "D:\\Trans\\migration-audit-work\\mechanomania-startup-gate-attempt13-20260814.json",
+    "bytes": 40426,
+    "sha256": "22E4BEE1EB6B3DE909650D02A980C9591679FC144E49D82828822EA7C7FAE425",
+    "status": "PASS",
+    "blockers": []
+  },
+  "base_release": {
+    "root": "D:\\Trans\\migration-audit-work\\mechanomania-matched-release-v2-20260813",
+    "ready_sha256": "AE84FE740B74D50A937284A7916E460ED55580EF1B4B794D8107562133D7F236",
+    "release_lock_sha256": "AE84FE740B74D50A937284A7916E460ED55580EF1B4B794D8107562133D7F236"
+  },
+  "evidence_reports": [
+    {
+      "name": "data_resource",
+      "path": "D:\\Trans\\migration-audit-work\\attempt13-data-resource-apply-20260814.json",
+      "bytes": 9104,
+      "sha256": "1D009ED48FD8752AF2D4FFD4D04D013D6B0D2B4315DF73FC906F78EB159631A8"
+    },
+    {
+      "name": "content",
+      "path": "D:\\Trans\\migration-audit-work\\attempt13-content-repairs-apply-20260814.json",
+      "bytes": 10581,
+      "sha256": "2397D46351318A1995E252053E32F9C1E4D61886761091F78A61F4D6140645EB"
+    },
+    {
+      "name": "core",
+      "path": "D:\\Trans\\migration-audit-work\\attempt13-core-fixes-apply-20260814.json",
+      "bytes": 12791,
+      "sha256": "B49659E08861A62576053C7693BDAB3EFDD39B65F074C1E2AAA47F72FB16678F"
+    },
+    {
+      "name": "tlm",
+      "path": "D:\\Trans\\migration-audit-work\\attempt13-tlm-patchouli-jar-apply-20260814.json",
+      "bytes": 2836,
+      "sha256": "BA36A5AB43513D8D6CBAEF1D2380BEA56DB3C27C6B6CF7922DD22A7BA1FAE20D"
+    },
+    {
+      "name": "happyghast",
+      "path": "D:\\Trans\\migration-audit-work\\attempt13-happyghast-duplicate-repair-20260814.json",
+      "bytes": 8780,
+      "sha256": "3BB132384394B7B217E422C8A7B18FDAE5DBB125091F013EB47668F462FB9EA8"
+    },
+    {
+      "name": "followup_postverify",
+      "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-postverify-20260814.json",
+      "bytes": 9104,
+      "sha256": "18C51798F064F08544D288080FE3273F696D1773F3380FD211811F992FBEB40F"
+    },
+    {
+      "name": "followup_apply",
+      "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-apply-20260814.json",
+      "bytes": 17636,
+      "sha256": "FE71B842AB644D14E4FA8F99BDCE4627EFD55C1ACAD4DF5D5CE0149088732476"
+    }
+  ],
+  "source_roots": {
+    "server": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814",
+    "client": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814"
+  },
+  "target": {
+    "minecraft": "1.21.1",
+    "neoforge": "21.1.241",
+    "mechanomania": "1.1.11.2"
+  },
+  "checks": {
+    "jar_crc": "PASS",
+    "jar_duplicate_zip_entries": 0,
+    "duplicate_top_level_mod_ids": 0,
+    "dependency_closure": {
+      "server": {
+        "status": "PASS",
+        "top_level_mod_ids": 236,
+        "nested_mod_ids": 109,
+        "virtual_dependency_ids": [
+          "fabric-api",
+          "fabricloader"
+        ],
+        "dependencies_checked": 725,
+        "missing_required": 0,
+        "incompatible_present": 0,
+        "duplicate_top_level_mod_ids": 0
+      },
+      "client": {
+        "status": "PASS",
+        "top_level_mod_ids": 247,
+        "nested_mod_ids": 110,
+        "virtual_dependency_ids": [
+          "fabric-api",
+          "fabricloader"
+        ],
+        "dependencies_checked": 779,
+        "missing_required": 0,
+        "incompatible_present": 0,
+        "duplicate_top_level_mod_ids": 0
+      }
+    },
+    "both_filename_hash_identity": {
+      "status": "PASS_WITH_LOCKED_SERVER_RESOURCE_SANITIZATION",
+      "locked_side_divergent_files": [
+        "CreateDragonsPlus-1.11.4.jar",
+        "kaleidoscope_nether-1.1.2-neoforge+mc1.21.1.jar"
+      ],
+      "unreviewed_mismatches": []
+    },
+    "known_fixed_jars": {
+      "mineastr-neoforge-1.21.1-0.6.26.jar": {
+        "expected_sha256": "0264D729A3343BE1645B5AFE16C15A7A57C7E89A9405FA67EC80EE06D4A148D8",
+        "sides": {
+          "server": {
+            "bytes": 257982,
+            "sha256": "0264D729A3343BE1645B5AFE16C15A7A57C7E89A9405FA67EC80EE06D4A148D8"
+          },
+          "client": {
+            "bytes": 257982,
+            "sha256": "0264D729A3343BE1645B5AFE16C15A7A57C7E89A9405FA67EC80EE06D4A148D8"
+          }
+        },
+        "status": "BOTH_EXACT"
+      },
+      "yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar": {
+        "expected_sha256": "673FECBFFAD26BB6D025FB5F60560CF6340E542BDF091D8D66074490515292F3",
+        "sides": {
+          "server": {
+            "bytes": 1111051,
+            "sha256": "673FECBFFAD26BB6D025FB5F60560CF6340E542BDF091D8D66074490515292F3"
+          },
+          "client": {
+            "bytes": 1111051,
+            "sha256": "673FECBFFAD26BB6D025FB5F60560CF6340E542BDF091D8D66074490515292F3"
+          }
+        },
+        "status": "BOTH_EXACT"
+      },
+      "backport-1.5-cat-serializer-fix.1.jar": {
+        "expected_sha256": "34291AF9D81B6AEE0780F5F511B2A9594664F36906AED40687DF1C7009E68B1D",
+        "sides": {
+          "server": {
+            "bytes": 15336561,
+            "sha256": "34291AF9D81B6AEE0780F5F511B2A9594664F36906AED40687DF1C7009E68B1D"
+          },
+          "client": {
+            "bytes": 15336561,
+            "sha256": "34291AF9D81B6AEE0780F5F511B2A9594664F36906AED40687DF1C7009E68B1D"
+          }
+        },
+        "status": "BOTH_EXACT"
+      },
+      "hotbath-1.21.1-3.0.0-registry-fix.1.jar": {
+        "expected_sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A",
+        "sides": {
+          "server": {
+            "bytes": 712893,
+            "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A"
+          },
+          "client": {
+            "bytes": 712893,
+            "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A"
+          }
+        },
+        "status": "BOTH_EXACT"
+      },
+      "worldedit-mod-7.3.8-direction-property-fix.1.jar": {
+        "expected_sha256": "8EB5E39AA914EB1B09307B6C004478BD1263655FCCA880580673481EBFEF9283",
+        "sides": {
+          "server": {
+            "bytes": 6264309,
+            "sha256": "8EB5E39AA914EB1B09307B6C004478BD1263655FCCA880580673481EBFEF9283"
+          },
+          "client": {
+            "bytes": 6264309,
+            "sha256": "8EB5E39AA914EB1B09307B6C004478BD1263655FCCA880580673481EBFEF9283"
+          }
+        },
+        "status": "BOTH_EXACT"
+      },
+      "create-enchantment-industry-2.4.2-cei251-backport.1.jar": {
+        "expected_sha256": "5B2C3BE95385DBF93000759DB604AB4C71224D7455C437C1B4650D91FAC669EB",
+        "sides": {
+          "server": {
+            "bytes": 1575446,
+            "sha256": "5B2C3BE95385DBF93000759DB604AB4C71224D7455C437C1B4650D91FAC669EB"
+          },
+          "client": {
+            "bytes": 1575446,
+            "sha256": "5B2C3BE95385DBF93000759DB604AB4C71224D7455C437C1B4650D91FAC669EB"
+          }
+        },
+        "status": "BOTH_EXACT"
+      },
+      "create-carriage-orientation-guard-1.0.0+neoforge.1.21.1-p0.2.jar": {
+        "expected_sha256": "805D6841BD30B514A059B21BEE4B6C70E183CB379CA286032975DCB961D6D74E",
+        "sides": {
+          "server": {
+            "bytes": 6288,
+            "sha256": "805D6841BD30B514A059B21BEE4B6C70E183CB379CA286032975DCB961D6D74E"
+          },
+          "client": {
+            "bytes": 6288,
+            "sha256": "805D6841BD30B514A059B21BEE4B6C70E183CB379CA286032975DCB961D6D74E"
+          }
+        },
+        "status": "BOTH_EXACT"
+      },
+      "yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar": {
+        "expected_sha256": "31DFFD39D1FED94F2088405AF3B8DC862E363BA389015780355571ECCA4A813D",
+        "sides": {
+          "server": {
+            "bytes": 28197402,
+            "sha256": "31DFFD39D1FED94F2088405AF3B8DC862E363BA389015780355571ECCA4A813D"
+          },
+          "client": {
+            "bytes": 28197402,
+            "sha256": "31DFFD39D1FED94F2088405AF3B8DC862E363BA389015780355571ECCA4A813D"
+          }
+        },
+        "status": "BOTH_EXACT"
+      },
+      "touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar": {
+        "expected_sha256": "32BE64DD058B7A91F90107972D104BDC0946D858E690D4C72032F64873F9B15B",
+        "sides": {
+          "server": {
+            "bytes": 24411246,
+            "sha256": "32BE64DD058B7A91F90107972D104BDC0946D858E690D4C72032F64873F9B15B"
+          },
+          "client": {
+            "bytes": 24411246,
+            "sha256": "32BE64DD058B7A91F90107972D104BDC0946D858E690D4C72032F64873F9B15B"
+          }
+        },
+        "status": "BOTH_EXACT"
+      },
+      "DnT-ancient-city-overhaul-v2 [NeoForge].jar": {
+        "expected_sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E",
+        "sides": {
+          "server": {
+            "bytes": 945155,
+            "sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E"
+          },
+          "client": {
+            "bytes": 945155,
+            "sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E"
+          }
+        },
+        "status": "BOTH_EXACT"
+      },
+      "tracks-neoforge-1.21.1-1.0.1.jar": {
+        "expected_sha256": "3119FA84955907FD734EF77F2296EC2E546F4442BC3AE13B04046C5D71F61CCF",
+        "sides": {
+          "server": {
+            "bytes": 165818,
+            "sha256": "3119FA84955907FD734EF77F2296EC2E546F4442BC3AE13B04046C5D71F61CCF"
+          },
+          "client": {
+            "bytes": 165818,
+            "sha256": "3119FA84955907FD734EF77F2296EC2E546F4442BC3AE13B04046C5D71F61CCF"
+          }
+        },
+        "status": "BOTH_EXACT"
+      },
+      "irons_spellbooks-1.21.1-3.15.6.jar": {
+        "expected_sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB",
+        "sides": {
+          "server": {
+            "bytes": 13584342,
+            "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB"
+          },
+          "client": {
+            "bytes": 13584342,
+            "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB"
+          }
+        },
+        "status": "BOTH_EXACT"
+      },
+      "CreateDragonsPlus-1.11.4.jar": {
+        "expected_sha256_by_side": {
+          "server": "123A7636377C64B9A92C3712D6572C6D69BE69FD892FEFF44034AB5B738F972B",
+          "client": "80687F22DAA95FA6240631097688F1E0295A5D31473D9AA56A14D360D863E98B"
+        },
+        "sides": {
+          "server": {
+            "bytes": 1024746,
+            "sha256": "123A7636377C64B9A92C3712D6572C6D69BE69FD892FEFF44034AB5B738F972B"
+          },
+          "client": {
+            "bytes": 1029344,
+            "sha256": "80687F22DAA95FA6240631097688F1E0295A5D31473D9AA56A14D360D863E98B"
+          }
+        },
+        "status": "LOCKED_SERVER_RESOURCE_SANITIZATION_DIVERGENCE"
+      },
+      "kaleidoscope_nether-1.1.2-neoforge+mc1.21.1.jar": {
+        "expected_sha256_by_side": {
+          "server": "490D90CCACA95F97C469D55136AC0F231681BC9DC6C335A5B20BAEF704C191FE",
+          "client": "4698B09F9A3EDD84AB37A9506C3B88C7B59E947B21AE894C477998421335FFB6"
+        },
+        "sides": {
+          "server": {
+            "bytes": 1019472,
+            "sha256": "490D90CCACA95F97C469D55136AC0F231681BC9DC6C335A5B20BAEF704C191FE"
+          },
+          "client": {
+            "bytes": 1018826,
+            "sha256": "4698B09F9A3EDD84AB37A9506C3B88C7B59E947B21AE894C477998421335FFB6"
+          }
+        },
+        "status": "LOCKED_SERVER_RESOURCE_SANITIZATION_DIVERGENCE"
+      }
+    },
+    "mod_lineage": {
+      "server": {
+        "base_unchanged": 215,
+        "controlled_fixed_or_added": 21,
+        "controlled_fixed_or_added_files": [
+          "backport-1.5-cat-serializer-fix.1.jar",
+          "biomespy-neoforge-1.21.1-1.3.3.jar",
+          "cmpackagecouriers-neoforge-2.3.0.jar",
+          "create-enchantment-industry-2.4.2-cei251-backport.1.jar",
+          "create_compressed-2.2.0-neoforge-1.21.1.jar",
+          "create_connected-1.3.2-mc1.21.1.jar",
+          "createadditionallogistics-1.21.1-1.4.5.jar",
+          "createdeco-2.1.3.jar",
+          "CreateDragonsPlus-1.11.4.jar",
+          "creategearsandtavern-1.1.6.jar",
+          "DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+          "hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+          "irons_spellbooks-1.21.1-3.15.6.jar",
+          "kaleidoscope_nether-1.1.2-neoforge+mc1.21.1.jar",
+          "mineastr-neoforge-1.21.1-0.6.26.jar",
+          "railways-0.2.1+neoforge-mc1.21.1.jar",
+          "touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+          "tracks-neoforge-1.21.1-1.0.1.jar",
+          "worldedit-mod-7.3.8-direction-property-fix.1.jar",
+          "yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
+          "yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar"
+        ],
+        "replaced_base_files": [
+          "backport-1.5.jar",
+          "create-enchantment-industry-2.5.1.jar",
+          "hotbath-1.21.1-3.0.0.jar",
+          "mineastr-0.6.25.jar",
+          "worldedit-mod-7.3.8.jar",
+          "yuushya-1.21.0-neoforge-2.3.0.jar"
+        ],
+        "unknown_deltas": 0
+      },
+      "client": {
+        "base_unchanged": 229,
+        "controlled_fixed_or_added": 18,
+        "controlled_fixed_or_added_files": [
+          "backport-1.5-cat-serializer-fix.1.jar",
+          "biomespy-neoforge-1.21.1-1.3.3.jar",
+          "cmpackagecouriers-neoforge-2.3.0.jar",
+          "create-enchantment-industry-2.4.2-cei251-backport.1.jar",
+          "create_compressed-2.2.0-neoforge-1.21.1.jar",
+          "create_connected-1.3.2-mc1.21.1.jar",
+          "createadditionallogistics-1.21.1-1.4.5.jar",
+          "createdeco-2.1.3.jar",
+          "creategearsandtavern-1.1.6.jar",
+          "DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+          "hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+          "irons_spellbooks-1.21.1-3.15.6.jar",
+          "mineastr-neoforge-1.21.1-0.6.26.jar",
+          "railways-0.2.1+neoforge-mc1.21.1.jar",
+          "touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+          "tracks-neoforge-1.21.1-1.0.1.jar",
+          "worldedit-mod-7.3.8-direction-property-fix.1.jar",
+          "yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar"
+        ],
+        "replaced_base_files": [
+          "backport-1.5.jar",
+          "create-enchantment-industry-2.5.1.jar",
+          "hotbath-1.21.1-3.0.0.jar",
+          "mineastr-0.6.25.jar",
+          "worldedit-mod-7.3.8.jar",
+          "yuushya-1.21.0-neoforge-2.3.0.jar"
+        ],
+        "unknown_deltas": 0
+      }
+    },
+    "maid_js": {
+      "bytes": 119,
+      "sha256": "FA458896BC728721995925563DD491F7ED54073FD1A94A5AE87004C66E4990F4",
+      "unchanged": true
+    },
+    "tlm_balance_and_patchouli": {
+      "status": "PASS_BALANCE_RULE_PRESERVED",
+      "sides": {
+        "server": {
+          "jar_sha256": "32BE64DD058B7A91F90107972D104BDC0946D858E690D4C72032F64873F9B15B",
+          "loose_overlay_count": 0
+        },
+        "client": {
+          "jar_sha256": "32BE64DD058B7A91F90107972D104BDC0946D858E690D4C72032F64873F9B15B",
+          "loose_overlay_count": 0
+        }
+      },
+      "spawn_box_recipe_removed_by_maid_js": true,
+      "recipe_resource_preserved_in_jar": true,
+      "advancement_resource_preserved_in_jar": true,
+      "stale_patchouli_reference_count": 0
+    },
+    "tlm_loose_overlays": 0,
+    "debug_iron_loot_override": "ABSENT",
+    "mcmodsync": {
+      "server_path_hits": [],
+      "client_path_hits": [],
+      "mod_id_hits": 0,
+      "globally_absent": true
+    },
+    "overlay_delta_from_v2": {
+      "server": {
+        "base_rows": 4287,
+        "published_rows": 4285,
+        "changed_from_v2": 18,
+        "changed_paths": [
+          "config/c2me.toml",
+          "config/computercraft-server.toml",
+          "config/create_dragons_plus-server.toml",
+          "config/create_enchantment_industry-server.toml",
+          "config/irons_spellbooks-server.toml",
+          "config/jade/sort-order.json",
+          "config/kaleidoscope_cookery-common.toml",
+          "config/kaleidoscope_tavern-common.toml",
+          "config/lithium.properties",
+          "config/packetfixer.properties",
+          "config/worldedit/worldedit.properties",
+          "kubejs/data/c6c/worldgen/biome/end_cherry_grove.json",
+          "kubejs/data/minecraft/worldgen/biome/beach.json",
+          "kubejs/data/minecraft/worldgen/biome/desert.json",
+          "kubejs/data/minecraft/worldgen/biome/mangrove_swamp.json",
+          "kubejs/data/minecraft/worldgen/biome/swamp.json",
+          "kubejs/data/minecraft/worldgen/biome/wooded_badlands.json",
+          "kubejs/data/touhou_little_maid/curios/entities/curios.json"
+        ],
+        "removed_paths": [
+          "kubejs/data/irons_spellbooks/loot_table/test/ring_gen_break_me.json"
+        ],
+        "policy_excluded_paths": [
+          ".sable/natives/sable_rapier_x86_64_windows.dll"
+        ],
+        "added_paths": [],
+        "zip_files_crc_checked": 0,
+        "zip_entries_checked": 0,
+        "zip_duplicate_entries": 0
+      },
+      "client": {
+        "base_rows": 2605,
+        "published_rows": 2605,
+        "changed_from_v2": 27,
+        "changed_paths": [
+          "config/c2me.toml",
+          "config/create_dragons_plus-common.toml",
+          "config/fabric/indigo-renderer.properties",
+          "config/ferritecore-mixin.toml",
+          "config/flywheel-client.toml",
+          "config/fml.toml",
+          "config/ftblibrary-client.snbt",
+          "config/iris.properties",
+          "config/jade/hide-entities.json",
+          "config/jade/plugins.json",
+          "config/jade/sort-order.json",
+          "config/jei/ingredient-list-mod-sort-order.ini",
+          "config/jei/jei-client.ini",
+          "config/jei/jei-colors.ini",
+          "config/jei/jei-debug.ini",
+          "config/jei/jei-mod-id-format.ini",
+          "config/jei/recipe-category-sort-order.ini",
+          "config/kaleidoscope_cookery-common.toml",
+          "config/kaleidoscope_tavern-common.toml",
+          "config/lithium.properties",
+          "config/modernfix-mixins.properties",
+          "config/neoforge-client.toml",
+          "config/packetfixer.properties",
+          "config/sodium-fingerprint.json",
+          "config/sodium-options.json",
+          "config/xaero/lib/common.cfg",
+          "config/xaero/world-map/client.cfg"
+        ],
+        "removed_paths": [],
+        "policy_excluded_paths": [
+          ".sable/natives/sable_rapier_x86_64_windows.dll"
+        ],
+        "added_paths": [
+          "resourcepacks/migration-local-resources-mc1.21.1.zip"
+        ],
+        "zip_files_crc_checked": 540,
+        "zip_entries_checked": 20013,
+        "zip_duplicate_entries": 0
+      }
+    },
+    "world_files_copied": 0,
+    "server_properties_copied": 0,
+    "logs_crash_saves_natives_cache_copied": 0,
+    "title_ui": "PRESERVE_CURRENT_ATTEMPT13_CUSTOM_STATE_NO_FURTHER_PURIFICATION"
+  },
+  "selection": {
+    "server_mod_files": 236,
+    "client_mod_files": 247,
+    "server_overlay_files": 4285,
+    "client_overlay_files": 2605,
+    "counts_are_snapshot_observations_not_permanent_caps": true
+  },
+  "extension_policy": {
+    "permanent_file_count_cap": false,
+    "permanent_mod_allowlist": false,
+    "future_mods_allowed": true,
+    "future_datapacks_allowed": true,
+    "future_client_only_ota_allowed": true,
+    "future_release_rule": "regenerate new manifests/release-lock and rerun dependency, registry, startup, join, and gameplay gates",
+    "current_mcmodsync_installation": "ABSENT_BOTH_SIDES",
+    "server_mcmodsync_policy": "DO_NOT_INSTALL"
+  },
+  "external_state_contract": {
+    "world": {
+      "copied": false,
+      "rule": "Use the authoritative Attempt13-repaired converted world in place.",
+      "happyghast_report": {
+        "name": "happyghast",
+        "path": "D:\\Trans\\migration-audit-work\\attempt13-happyghast-duplicate-repair-20260814.json",
+        "bytes": 8780,
+        "sha256": "3BB132384394B7B217E422C8A7B18FDAE5DBB125091F013EB47668F462FB9EA8"
+      },
+      "gate_region_sha256": "9A28D945D5E0EDCF882ECD76D35EB6037071655BD2A8AFD651E96379130DA887"
+    },
+    "server_properties": {
+      "copied": false,
+      "production_identity": {
+        "server_properties_path": "D:\\Trans\\migration-handoff-20260812\\02-latest\\converted-staging\\server.properties",
+        "server_properties_sha256": "A71887512304BB526A125BD4F2CC835502456A3C8CB407AE73C8D02F1442552C",
+        "level_dat_path": "D:\\Trans\\migration-handoff-20260812\\02-latest\\converted-staging\\world\\level.dat",
+        "level_dat_sha256": "C35D75EF337BB6E1BC12A801F2881A02CA9C9B865C22B0EB6FEBDB588B693269",
+        "ports": {
+          "server_port": 25566,
+          "rcon_port": 25575,
+          "query_port": 25565
+        },
+        "configuration_copied_into_release": false
+      },
+      "rule": "Keep the authoritative production server.properties and port values unchanged."
+    },
+    "immersive_paintings_cache": {
+      "copied": false,
+      "gate_observed": {
+        "files": 174,
+        "bytes": 33150491
+      },
+      "rule": "Runtime cache is intentionally external to this immutable release."
+    }
+  },
+  "installation_contract": {
+    "mods": "Install each side's complete manifest; counts are versioned snapshot facts only.",
+    "overlay": "Apply each side's overlay manifest exactly, respecting merge_mode.",
+    "world": "Never replace the authoritative converted world with this release.",
+    "server_properties": "Never replace the production server.properties with this release.",
+    "mcmodsync": "Do not install on either side for this release."
+  }
+}

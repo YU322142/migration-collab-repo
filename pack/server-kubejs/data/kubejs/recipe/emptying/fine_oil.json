@@ -1,0 +1,17 @@
+{
+  "type": "create:emptying",
+  "ingredients": [
+    {
+      "item": "kubejs:oiled_lapis"
+    }
+  ],
+  "results": [
+    {
+      "id": "createdieselgenerators:asphalt_block"
+    },
+    {
+      "amount": 600,
+      "id": "kubejs:fine_oil"
+    }
+  ]
+}

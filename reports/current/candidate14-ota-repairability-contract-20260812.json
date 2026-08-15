@@ -1,0 +1,344 @@
+{
+  "schema": 1,
+  "contract_id": "candidate14-ota-repairability-20260812",
+  "generated_date": "2026-08-12",
+  "status": "PASS_REPAIRABILITY_CONTRACT",
+  "deployment_status": "INDEPENDENT_RUNTIME_GATE_PENDING",
+  "purpose": "Every known deferred or non-P0 migration defect must have a versioned repair route. An unclassified runtime error is a release blocker.",
+  "runtime": {
+    "minecraft": "1.21.1",
+    "loader": "NeoForge",
+    "loader_version": "21.1.241",
+    "bundle_revision": "candidate14-r3",
+    "authoritative_ready_sha256": "66778B3F91842D0AB6CC291D03AD9538AB12447F63340E6144747C4DAE819C24"
+  },
+  "repairability_classes": {
+    "client_only_ota": {
+      "meaning": "A client JAR or client-side overlay is delivered by MCModSync after the game exits.",
+      "mcmodsync_alone": true,
+      "requires_client_exit": true,
+      "requires_server_short_shutdown": false,
+      "world_data_migration": false,
+      "allowed_artifacts": ["client_only_mod_jar", "client_resource_overlay_jar"],
+      "forbidden_shortcut": "Do not replace the user-selected local resource pack or servers.dat."
+    },
+    "both_side_mod_update": {
+      "meaning": "A compatible server JAR and matching client JAR are released under one versioned lock.",
+      "mcmodsync_alone": false,
+      "requires_client_exit": true,
+      "requires_server_short_shutdown": true,
+      "world_data_migration": false,
+      "allowed_artifacts": ["server_mod_jar", "client_mod_jar", "paired_release_lock"],
+      "forbidden_shortcut": "Do not hot-unload Java mods and do not run carrier and full implementation together."
+    },
+    "server_only_data_migration": {
+      "meaning": "A server release and an idempotent, ledgered migration repair persisted world/player data.",
+      "mcmodsync_alone": false,
+      "requires_client_exit": false,
+      "requires_server_short_shutdown": true,
+      "world_data_migration": true,
+      "allowed_artifacts": ["server_mod_jar", "versioned_datafix", "migration_sidecar", "world_snapshot"],
+      "forbidden_shortcut": "MCModSync cannot mutate world NBT, player files, recipe books, advancements, or server JARs."
+    }
+  },
+  "known_error_coverage": [
+    {
+      "id": "server.recipebook.unrecognized_ids",
+      "title": "Unrecognized recipe-book IDs on player load",
+      "priority": "P0",
+      "state": "reviewed_native_self_cleanup_pending_fresh_two_round_gate",
+      "class": "server_only_data_migration",
+      "affected_side": "server",
+      "mcmodsync_alone": false,
+      "evidence": [
+        {"path": "outputs/candidate14-r3-release-gate-20260812.json", "kind": "runtime_gate"},
+        {"path": "outputs/known-minor-errors-candidate11-candidate8n-20260812.md", "kind": "audit"},
+        {"path": "outputs/candidate14-server-recipe-book-stale-allowlist-20260812.json", "kind": "reviewed_native_cleanup_sidecar"}
+      ],
+      "stable_identity": {
+        "key": "player_uuid + recipe_id",
+        "id_namespace": "recipe registry ID",
+        "sidecar": ".migration-ledger/recipebook-unrecognized.v1.jsonl"
+      },
+      "ota_route": {
+        "delivery": "server_native_canonical_load_save_cleanup_then_followup_datafix_if_drift",
+        "artifact_kind": "reviewed_stale_only_sidecar_and_optional_server_datafix",
+        "requires_client_exit": false,
+        "requires_server_short_shutdown": true,
+        "world_mutation_allowed": true,
+        "world_snapshot_required": true
+      },
+      "repair_contract": {
+        "preconditions": ["Frozen world snapshot", "Complete player UUID inventory", "Immutable reviewed first-round multiset of 62 lines / 41 IDs", "Target recipe registry lock"],
+        "actions": ["Allow only the exact reviewed ServerRecipeBook line shape and ID multiset during the first fresh round", "Let the target server perform its native canonical load/save cleanup", "Require zero such lines on the second round", "If the multiset drifts or survives restart, use an idempotent mapped datafix with sidecar instead of broad allowlisting"],
+        "postconditions": ["First fresh round exactly matches the reviewed multiset", "Second round has zero reviewed stale recipe lines", "No other ServerRecipeBook error", "Inventory and item payload hashes unchanged"],
+        "idempotency_marker": "migration.candidate14.recipebook.v1/<player_uuid>/<input_sha256>",
+        "rollback": ["Restore world/player snapshot", "Restore migration sidecar and release lock"]
+      },
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": [], "counterpart_required": false},
+      "startup_blockers": ["first-round multiset mismatch", "reviewed stale recipe appears on second round", "sidecar/hash mismatch", "unclassified recipe error"]
+    },
+    {
+      "id": "server.advancements.unrecognized_ids",
+      "title": "Missing advancement IDs in player progress",
+      "priority": "P1",
+      "state": "deferred",
+      "class": "server_only_data_migration",
+      "affected_side": "server",
+      "mcmodsync_alone": false,
+      "evidence": [{"path": "outputs/known-minor-errors-candidate11-candidate8n-20260812.md", "kind": "audit"}],
+      "stable_identity": {"key": "player_uuid + advancement_id", "id_namespace": "advancement ID", "sidecar": ".migration-ledger/advancement-unrecognized.v1.jsonl"},
+      "ota_route": {"delivery": "server_release_bundle_plus_data_migration", "artifact_kind": "server_datafix_mod", "requires_client_exit": false, "requires_server_short_shutdown": true, "world_mutation_allowed": true, "world_snapshot_required": true},
+      "repair_contract": {
+        "preconditions": ["World snapshot", "Advancement registry lock"],
+        "actions": ["Map equivalent advancement IDs", "Preserve unmapped progress in sidecar", "Never delete the whole progress file"],
+        "postconditions": ["No invalid advancement load entries", "Every removed entry is ledgered", "Known valid progress remains byte/semantic equivalent"],
+        "idempotency_marker": "migration.candidate14.advancement.v1/<player_uuid>/<input_sha256>",
+        "rollback": ["Restore player snapshot", "Revert server release to prior catalog-version"]
+      },
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": [], "counterpart_required": false},
+      "startup_blockers": ["progress file mutation without sidecar", "unmapped advancement silently discarded"]
+    },
+    {
+      "id": "server.map_banner.null_list",
+      "title": "Map banner field decodes as null instead of a list",
+      "priority": "P1",
+      "state": "deferred",
+      "class": "server_only_data_migration",
+      "affected_side": "server",
+      "mcmodsync_alone": false,
+      "evidence": [{"path": "outputs/known-minor-errors-candidate11-candidate8n-20260812.md", "kind": "audit"}],
+      "stable_identity": {"key": "dimension + map_id + banner_index", "id_namespace": "minecraft map/banner NBT", "sidecar": ".migration-ledger/map-banner.v1.jsonl"},
+      "ota_route": {"delivery": "server_release_bundle_plus_data_migration", "artifact_kind": "server_datafix_mod", "requires_client_exit": false, "requires_server_short_shutdown": true, "world_mutation_allowed": true, "world_snapshot_required": true},
+      "repair_contract": {
+        "preconditions": ["Read-only map/banner scan", "Snapshot of affected map data"],
+        "actions": ["Normalize only null banner list fields to the target schema", "Keep map IDs, decorations, colors, and payload sidecar"],
+        "postconditions": ["No 'Not a list: null' for audited maps", "Map decoration count and semantic hashes preserved"],
+        "idempotency_marker": "migration.candidate14.map-banner.v1/<map_id>/<input_sha256>",
+        "rollback": ["Restore map snapshot", "Remove only the new migration marker after rollback" ]
+      },
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": [], "counterpart_required": false},
+      "startup_blockers": ["map record deletion", "banner payload hash mismatch"]
+    },
+    {
+      "id": "minecraft.netherite_horse_armor.registry_and_gameplay",
+      "title": "Netherite horse armor carrier and future full gameplay",
+      "priority": "P0",
+      "state": "guarded_deferred",
+      "class": "both_side_mod_update",
+      "affected_side": "both",
+      "mcmodsync_alone": false,
+      "evidence": [
+        {"path": "outputs/candidate14-netherite-horse-armor-ledger-baseline-20260812.json", "kind": "ledger"},
+        {"path": "outputs/tools/deferred-content-protection-audit-20260812.json", "kind": "build_audit"},
+        {"path": "outputs/deferred-content-first-release-policy-20260812.json", "kind": "guard_policy"}
+      ],
+      "stable_identity": {
+        "registry_id": "minecraft:netherite_horse_armor",
+        "owner_uuid": "00000000-0000-4000-8000-000000000002",
+        "ledger_key": "item_id + owner_uuid + file + mca_slot + nbt_path",
+        "allowed_path_alias": "equipment.body -> body_armor_item",
+        "sidecar": ".migration-ledger/netherite-horse-armor.v1.jsonl"
+      },
+      "ota_route": {"delivery": "paired_server_client_release", "artifact_kind": "both_side_mod_jars", "requires_client_exit": true, "requires_server_short_shutdown": true, "world_mutation_allowed": true, "world_snapshot_required": true},
+      "repair_contract": {
+        "preconditions": ["Three-stage ledger: source, staging, runtime", "New carrier/full implementation passes isolated read/save/restart tests", "Exact same registry ID"],
+        "actions": ["Publish matching server/client JARs under a new catalog-version", "Stop server briefly", "Replace carrier only after snapshot and validation", "Never load carrier and full implementation together"],
+        "postconditions": ["One instance remains for the known horse", "Canonical stack SHA is unchanged", "Equip/use/drop/automation regression gate passes", "Two restart checkpoints match"],
+        "idempotency_marker": "migration.candidate14.netherite-horse-armor.v1/<input_sha256>",
+        "rollback": ["Restore prior server/client JAR lock", "Restore world snapshot and ledger", "Retain failed transaction/recovery marker"]
+      },
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": ["deferred_content_protection"], "counterpart_required": true},
+      "startup_blockers": ["registry ID changed", "carrier/full implementation coexistence", "ledger count/hash/path mismatch", "invalid item or codec error"]
+    },
+    {
+      "id": "kaleidoscope_cookery.scarecrow.legacy_codec",
+      "title": "Legacy Scarecrow inventory codec slot crash",
+      "priority": "P0",
+      "state": "fixed_in_candidate14_r3",
+      "class": "both_side_mod_update",
+      "affected_side": "both",
+      "mcmodsync_alone": false,
+      "evidence": [{"path": "outputs/candidate13-scarecrow-compat-build-audit-20260812.json", "kind": "build_audit"}],
+      "stable_identity": {"mod_id": "kaleidoscope_cookery", "entity_id": "kaleidoscope_cookery:scarecrow", "schema_alias": "legacy List ArmorItems/HandItems", "sidecar": ".migration-ledger/scarecrow.v1.jsonl"},
+      "ota_route": {"delivery": "paired_server_client_release", "artifact_kind": "both_side_mod_jars", "requires_client_exit": true, "requires_server_short_shutdown": true, "world_mutation_allowed": false, "world_snapshot_required": true},
+      "repair_contract": {"preconditions": ["Compat JAR hash lock", "Entity-load smoke test"], "actions": ["Update matching client/server compat JAR", "Decode legacy lists without out-of-range slot access"], "postconditions": ["Scarecrow loads and saves", "No entity rejection or inventory loss"], "idempotency_marker": "compat.kaleidoscope-cookery.scarecrow.v1/<jar_sha256>", "rollback": ["Restore previous paired JAR lock", "Restore world snapshot if runtime save occurred"]},
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": ["kaleidoscope_cookery_scarecrow_compat"], "counterpart_required": true},
+      "startup_blockers": ["Scarecrow entity rejection", "slot codec exception", "unpaired client/server compat JAR"]
+    },
+    {
+      "id": "converter.player_attributes.generic_namespace",
+      "title": "Old converted player attributes used generic namespace",
+      "priority": "P1",
+      "state": "fixed_in_converter_repair_alias",
+      "class": "server_only_data_migration",
+      "affected_side": "server",
+      "mcmodsync_alone": false,
+      "evidence": [{"path": "outputs/known-minor-errors-candidate11-candidate8n-20260812.md", "kind": "audit"}],
+      "stable_identity": {"key": "player_uuid + attribute_id", "id_namespace": "minecraft:player.*", "sidecar": ".migration-ledger/player-attributes.v1.jsonl"},
+      "ota_route": {"delivery": "server_release_bundle_plus_data_migration", "artifact_kind": "server_datafix_mod_or_offline_repair", "requires_client_exit": false, "requires_server_short_shutdown": true, "world_mutation_allowed": true, "world_snapshot_required": true},
+      "repair_contract": {"preconditions": ["Input player file hash", "Canonical 1.21.1 attribute registry"], "actions": ["Repair only the seven known generic aliases", "Preserve values, modifiers, UUIDs, and all unrelated attributes"], "postconditions": ["All seven map to minecraft:player.*", "No unsupported attributes", "Second run changes zero records"], "idempotency_marker": "migration.candidate14.player-attributes.v1/<input_sha256>", "rollback": ["Restore player snapshot", "Retain pre/post ledger"]},
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": [], "counterpart_required": false},
+      "startup_blockers": ["attribute value loss", "unknown attribute after repair", "non-idempotent second run"]
+    },
+    {
+      "id": "client.yuushya.invalid_models",
+      "title": "Five Yuushya model JSON files fail validation",
+      "priority": "P1",
+      "state": "deferred",
+      "class": "client_only_ota",
+      "affected_side": "client",
+      "mcmodsync_alone": true,
+      "evidence": [{"path": "outputs/known-minor-errors-candidate11-candidate8n-20260812.md", "kind": "client_audit"}],
+      "stable_identity": {"asset_namespace": "yuushya", "asset_keys": ["models/easel_hitbox_rotated.json", "models/easel_hitbox.json", "models/flooring_water_half.json", "models/roof/roof/tile1_lp_none_hitbox.json", "models/tanghulu_bunch_hitbox.json"], "sidecar": ".modsync/asset-repair-ledger.jsonl"},
+      "ota_route": {"delivery": "mcmodsync_client_catalog", "artifact_kind": "client_resource_overlay_jar", "requires_client_exit": true, "requires_server_short_shutdown": false, "world_mutation_allowed": false, "world_snapshot_required": false},
+      "repair_contract": {"preconditions": ["Overlay JAR passes ZIP/JSON/resource validation", "Catalog SHA and version lock"], "actions": ["Add/replace only the named overlay resources", "Keep original local resource pack untouched"], "postconditions": ["Client resource reload has no hard model errors", "No unrelated asset deletion"], "idempotency_marker": "asset-overlay.yuushya.models.v1/<jar_sha256>", "rollback": ["MCModSync backup restore", "Publish prior catalog-version"]},
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": ["yuushya"], "counterpart_required": false},
+      "startup_blockers": ["overlay hash mismatch", "asset path escapes JAR namespace", "hard model validation error after update"]
+    },
+    {
+      "id": "client.yuushya.form2_blockstates",
+      "title": "Yuushya form=2 blockstate variants missing",
+      "priority": "P1",
+      "state": "deferred",
+      "class": "client_only_ota",
+      "affected_side": "client",
+      "mcmodsync_alone": true,
+      "evidence": [{"path": "outputs/known-minor-errors-candidate11-candidate8n-20260812.md", "kind": "client_audit"}],
+      "stable_identity": {"asset_namespace": "yuushya", "asset_key_pattern": "blockstates/*audio*_blindwall*.json:form=2", "sidecar": ".modsync/asset-repair-ledger.jsonl"},
+      "ota_route": {"delivery": "mcmodsync_client_catalog", "artifact_kind": "client_resource_overlay_jar", "requires_client_exit": true, "requires_server_short_shutdown": false, "world_mutation_allowed": false, "world_snapshot_required": false},
+      "repair_contract": {"preconditions": ["Enumerated 432 missing legal variants", "Overlay does not alter block IDs"], "actions": ["Add aliases or valid fallback models for each enumerated state"], "postconditions": ["All 432 states resolve", "No blockstate registry or world NBT mutation"], "idempotency_marker": "asset-overlay.yuushya.form2.v1/<jar_sha256>", "rollback": ["Restore prior client backup", "Republish previous immutable catalog"]},
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": ["yuushya"], "counterpart_required": false},
+      "startup_blockers": ["unresolved form=2 state", "overlay modifies server data"]
+    },
+    {
+      "id": "client.yuushya.texture_references",
+      "title": "Yuushya missing or mistyped texture references",
+      "priority": "P1",
+      "state": "deferred",
+      "class": "client_only_ota",
+      "affected_side": "client",
+      "mcmodsync_alone": true,
+      "evidence": [{"path": "outputs/known-minor-errors-candidate11-candidate8n-20260812.md", "kind": "client_audit"}],
+      "stable_identity": {"asset_namespace": "yuushya", "asset_key_pattern": "textures/*", "sidecar": ".modsync/asset-repair-ledger.jsonl"},
+      "ota_route": {"delivery": "mcmodsync_client_catalog", "artifact_kind": "client_resource_overlay_jar", "requires_client_exit": true, "requires_server_short_shutdown": false, "world_mutation_allowed": false, "world_snapshot_required": false},
+      "repair_contract": {"preconditions": ["Each texture alias is evidence-backed", "Overlay resource hash lock"], "actions": ["Correct only named references, including trailing-underscore typo", "Do not rewrite world or local ZIP"], "postconditions": ["No missing texture in the audited set", "Unrelated texture paths unchanged"], "idempotency_marker": "asset-overlay.yuushya.textures.v1/<jar_sha256>", "rollback": ["MCModSync backup restore", "Prior catalog-version"]},
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": ["yuushya"], "counterpart_required": false},
+      "startup_blockers": ["missing texture remains", "resource overlay overwrites user pack"]
+    },
+    {
+      "id": "client.creaking_heart.active_property",
+      "title": "Local resource pack uses absent 1.21.1 active property",
+      "priority": "P1",
+      "state": "deferred",
+      "class": "client_only_ota",
+      "affected_side": "client",
+      "mcmodsync_alone": true,
+      "evidence": [{"path": "outputs/known-minor-errors-candidate11-candidate8n-20260812.md", "kind": "client_audit"}],
+      "stable_identity": {"asset_namespace": "minecraft", "asset_key": "blockstates/creaking_heart.json", "sidecar": ".modsync/asset-repair-ledger.jsonl"},
+      "ota_route": {"delivery": "mcmodsync_client_catalog", "artifact_kind": "client_resource_overlay_jar", "requires_client_exit": true, "requires_server_short_shutdown": false, "world_mutation_allowed": false, "world_snapshot_required": false},
+      "repair_contract": {"preconditions": ["Local pack remains user-owned", "Overlay has legal 1.21.1 state set"], "actions": ["Overlay the state file in a client JAR", "Keep syncResourcePacks=false and do not replace the ZIP"], "postconditions": ["Legal blockstate resolves", "User pack remains byte-identical"], "idempotency_marker": "asset-overlay.creaking-heart.v1/<jar_sha256>", "rollback": ["Restore client JAR backup", "Republish prior catalog-version"]},
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": [], "counterpart_required": false},
+      "startup_blockers": ["remote resource pack accepted", "local ZIP changed by updater", "invalid blockstate after overlay"]
+    },
+    {
+      "id": "client.render.blackout_or_blindness_effect",
+      "title": "Severe client render blackout / blindness-like effect",
+      "priority": "P0",
+      "state": "watchlist",
+      "class": "client_only_ota",
+      "affected_side": "client",
+      "mcmodsync_alone": true,
+      "evidence": [{"path": "user_reported:client_render_screenshot_2026-08-12", "kind": "user_reported"}],
+      "stable_identity": {"key": "client_render_signature + mod/catalog_version", "sidecar": ".modsync/render-regression-ledger.jsonl"},
+      "ota_route": {"delivery": "mcmodsync_client_catalog", "artifact_kind": "client_compatibility_mod_jar", "requires_client_exit": true, "requires_server_short_shutdown": false, "world_mutation_allowed": false, "world_snapshot_required": false},
+      "repair_contract": {"preconditions": ["Repro screenshot and client log", "Shader/resource diff"], "actions": ["Ship a client-only render compatibility JAR or resource overlay", "Never alter server world data to hide a render fault"], "postconditions": ["Join/render/restart screenshot gate passes", "No new Render thread ERROR"], "idempotency_marker": "client-render-fix.v1/<jar_sha256>", "rollback": ["MCModSync backup restore", "Prior catalog-version"]},
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": [], "counterpart_required": false},
+      "startup_blockers": ["blackout persists in canary", "client Render thread ERROR", "resource pack silently replaced"]
+    },
+    {
+      "id": "both.connector.nonexistent_locator",
+      "title": "Connector generated nonexistent refmap locator warning",
+      "priority": "P2",
+      "state": "deferred_nonfatal",
+      "class": "both_side_mod_update",
+      "affected_side": "both",
+      "mcmodsync_alone": false,
+      "evidence": [{"path": "outputs/known-minor-errors-candidate11-candidate8n-20260812.md", "kind": "audit"}],
+      "stable_identity": {"mod_id": "connector", "key": "generated locator / refmap", "sidecar": ".migration-ledger/connector.v1.jsonl"},
+      "ota_route": {"delivery": "paired_server_client_release", "artifact_kind": "both_side_mod_jars", "requires_client_exit": true, "requires_server_short_shutdown": true, "world_mutation_allowed": false, "world_snapshot_required": true},
+      "repair_contract": {"preconditions": ["Matching Connector and dependency lock", "Startup/join regression gate"], "actions": ["Upgrade or replace Connector in both sides", "Keep absent optional mods out of the runtime"], "postconditions": ["Warning absent or explicitly allowlisted with no gameplay impact", "Join and restart remain clean"], "idempotency_marker": "compat.connector.v1/<paired_release_sha256>", "rollback": ["Restore prior paired release", "Retain old catalog-version"]},
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": ["connector"], "counterpart_required": true},
+      "startup_blockers": ["unpaired Connector versions", "new fatal mixin/loader error"]
+    },
+    {
+      "id": "both.optional_mixin_refmap_targets",
+      "title": "Missing optional Mixin targets/refmaps",
+      "priority": "P2",
+      "state": "deferred_nonfatal",
+      "class": "both_side_mod_update",
+      "affected_side": "both",
+      "mcmodsync_alone": false,
+      "evidence": [{"path": "outputs/known-minor-errors-candidate11-candidate8n-20260812.md", "kind": "audit"}],
+      "stable_identity": {"key": "mod_id + mixin_config + target_class", "sidecar": ".migration-ledger/mixin-refmap.v1.jsonl"},
+      "ota_route": {"delivery": "paired_server_client_release", "artifact_kind": "both_side_mod_jars", "requires_client_exit": true, "requires_server_short_shutdown": true, "world_mutation_allowed": false, "world_snapshot_required": false},
+      "repair_contract": {"preconditions": ["Exact target-mod inventory", "Mixin load audit"], "actions": ["Publish corrected paired JARs or narrow optional injections", "Do not suppress an actual crash marker"], "postconditions": ["Only absent optional targets remain allowlisted", "No server/client startup crash"], "idempotency_marker": "compat.mixin-refmap.v1/<paired_release_sha256>", "rollback": ["Restore prior paired JAR set", "Republish previous catalog-version"]},
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": [], "counterpart_required": true},
+      "startup_blockers": ["unallowlisted Mixin ERROR", "side mismatch"]
+    },
+    {
+      "id": "server.mineastr.astrbot_integration",
+      "title": "MineAstr live AstrBot/permission integration not yet proven",
+      "priority": "P1",
+      "state": "deferred_acceptance",
+      "class": "server_only_data_migration",
+      "affected_side": "server",
+      "mcmodsync_alone": false,
+      "evidence": [{"path": "outputs/candidate14-first-release-mod-policy-20260812.json", "kind": "release_policy"}],
+      "stable_identity": {"mod_id": "mineastr", "key": "account_uuid + external_binding_id", "sidecar": ".migration-ledger/mineastr-bindings.v1.jsonl"},
+      "ota_route": {"delivery": "server_release_bundle_plus_data_migration", "artifact_kind": "server_mod_jar_and_config_migration", "requires_client_exit": false, "requires_server_short_shutdown": true, "world_mutation_allowed": true, "world_snapshot_required": true},
+      "repair_contract": {"preconditions": ["Protocol and permission contract", "Encrypted binding/config backup"], "actions": ["Upgrade server MineAstr bridge and migrate bindings idempotently", "Preserve account UUIDs and permissions in sidecar"], "postconditions": ["Controlled AstrBot/QQ/Discord integration tests pass", "No binding or whitelist loss"], "idempotency_marker": "migration.candidate14.mineastr.v1/<input_sha256>", "rollback": ["Restore server JAR/config and binding snapshot", "Revert catalog-version"]},
+      "dependencies": {"minecraft": "1.21.1", "loader": "NeoForge 21.1.241", "required_mod_ids": ["mineastr"], "counterpart_required": false},
+      "startup_blockers": ["binding sidecar missing", "permission/account mismatch", "external protocol migration not acknowledged"]
+    }
+  ],
+  "global_invariants": {
+    "source_data_never_deleted": true,
+    "unknown_payloads_preserved_in_sidecar": true,
+    "stable_registry_ids_never_reused": true,
+    "stable_mod_ids_never_reused": true,
+    "every_data_migration_has_idempotency_marker": true,
+    "every_data_migration_has_world_snapshot": true,
+    "every_ota_release_has_immutable_catalog_version": true,
+    "every_ota_release_has_sha256_and_md5_per_object": true,
+    "every_ota_release_has_independent_catalog_sha256": true,
+    "rollback_keeps_prior_catalog_and_backups": true,
+    "carrier_and_full_implementation_never_coexist": true,
+    "resource_pack_ota": false,
+    "server_list_ota": false,
+    "production_server_properties_byte_identical": true,
+    "unknown_error_policy": "NO_GO_AND_STARTUP_BLOCKED_UNTIL_CLASSIFIED"
+  },
+  "mcmodsync_capability_audit": {
+    "version": "1.9.1",
+    "sha256": "2DD2BEC977B8669D0EF6C90FC54A06021DC0998E903B583517052B1B5CDA25AA",
+    "repository_commit": "9c1e8b13f5662eb389e73adc94a9a71fcb542bc9",
+    "supports": ["client JAR add", "client JAR upgrade", "managed client JAR removal with backup", "hash validation", "transaction rollback", "immutable catalog-version selection"],
+    "does_not_support": ["server Java mod hot reload", "server JAR deployment", "world/player NBT migration", "recipe-book migration", "advancement migration", "resource-pack replacement under this policy", "servers.dat mutation under this policy"],
+    "implementation_limits": ["The client accepts HTTP/redirects unless the controlled publication infrastructure rejects them", "Manifest hashes are not a digital signature", "A process exit code of zero is not proof that startup was allowed"],
+    "remote_enablement_status": "BLOCKED_UNTIL_CONTROLLED_HTTPS_CONFIG_AND_CANARY"
+  },
+  "release_gate_contract": {
+    "required_before_activation": ["Every known error has exactly one repairability class", "No class contradiction (server/data issue cannot claim MCModSync alone)", "Static artifact and dependency hashes pass", "Data migration dry-run is idempotent", "Rollback rehearsal retains source/staging and sidecars", "Runtime gate has no unclassified P0/P1 marker"],
+    "startup_block_markers": ["STARTUP_BLOCKED", "RECOVERY_REQUIRED", "UNCLASSIFIED_OTA_ERROR", "MIGRATION_LEDGER_MISMATCH", "CATALOG_HASH_MISMATCH", "SIDE_COMPATIBILITY_MISMATCH"],
+    "activation_rule": "A new release may add, upgrade, or remove mods only through a new READY/manifests/release-lock and a new catalog-version; current 54-file count is not a permanent cap.",
+    "unknown_issue_rule": "Any runtime error not present in known_error_coverage or an approved allowlist fails the gate and must be classified before publication."
+  },
+  "evidence_locks": {
+    "readiness_json": "outputs/candidate14-mcmodsync-ota-readiness-20260812.json",
+    "first_release_policy_json": "outputs/candidate14-first-release-mod-policy-20260812.json",
+    "deferred_item_ledger_json": "outputs/candidate14-deferred-item-ledger-current-20260812.json",
+    "deferred_guard_audit_json": "outputs/tools/deferred-content-protection-audit-20260812.json",
+    "production_properties_sha256": "A71887512304BB526A125BD4F2CC835502456A3C8CB407AE73C8D02F1442552C"
+  }
+}

@@ -1,0 +1,388 @@
+{
+  "variants": {
+    "facing=east,rotation=0,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_4"
+    },
+    "facing=east,rotation=0,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_4"
+    },
+    "facing=east,rotation=1,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_1"
+    },
+    "facing=east,rotation=1,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_1"
+    },
+    "facing=east,rotation=10,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_10"
+    },
+    "facing=east,rotation=10,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_10"
+    },
+    "facing=east,rotation=11,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_11"
+    },
+    "facing=east,rotation=11,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_11"
+    },
+    "facing=east,rotation=12,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_12"
+    },
+    "facing=east,rotation=12,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_12"
+    },
+    "facing=east,rotation=13,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_13"
+    },
+    "facing=east,rotation=13,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_13"
+    },
+    "facing=east,rotation=14,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_14"
+    },
+    "facing=east,rotation=14,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_14"
+    },
+    "facing=east,rotation=15,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_15"
+    },
+    "facing=east,rotation=15,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_15"
+    },
+    "facing=east,rotation=2,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_2"
+    },
+    "facing=east,rotation=2,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_2"
+    },
+    "facing=east,rotation=3,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_3"
+    },
+    "facing=east,rotation=3,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_3"
+    },
+    "facing=east,rotation=4,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_4"
+    },
+    "facing=east,rotation=4,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_4"
+    },
+    "facing=east,rotation=5,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_5"
+    },
+    "facing=east,rotation=5,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_5"
+    },
+    "facing=east,rotation=6,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_6"
+    },
+    "facing=east,rotation=6,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_6"
+    },
+    "facing=east,rotation=7,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_7"
+    },
+    "facing=east,rotation=7,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_7"
+    },
+    "facing=east,rotation=8,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_8"
+    },
+    "facing=east,rotation=8,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_8"
+    },
+    "facing=east,rotation=9,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_9"
+    },
+    "facing=east,rotation=9,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_9"
+    },
+    "facing=north,rotation=0,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_0"
+    },
+    "facing=north,rotation=0,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_0"
+    },
+    "facing=north,rotation=1,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_1"
+    },
+    "facing=north,rotation=1,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_1"
+    },
+    "facing=north,rotation=10,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_10"
+    },
+    "facing=north,rotation=10,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_10"
+    },
+    "facing=north,rotation=11,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_11"
+    },
+    "facing=north,rotation=11,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_11"
+    },
+    "facing=north,rotation=12,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_12"
+    },
+    "facing=north,rotation=12,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_12"
+    },
+    "facing=north,rotation=13,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_13"
+    },
+    "facing=north,rotation=13,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_13"
+    },
+    "facing=north,rotation=14,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_14"
+    },
+    "facing=north,rotation=14,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_14"
+    },
+    "facing=north,rotation=15,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_15"
+    },
+    "facing=north,rotation=15,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_15"
+    },
+    "facing=north,rotation=2,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_2"
+    },
+    "facing=north,rotation=2,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_2"
+    },
+    "facing=north,rotation=3,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_3"
+    },
+    "facing=north,rotation=3,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_3"
+    },
+    "facing=north,rotation=4,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_4"
+    },
+    "facing=north,rotation=4,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_4"
+    },
+    "facing=north,rotation=5,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_5"
+    },
+    "facing=north,rotation=5,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_5"
+    },
+    "facing=north,rotation=6,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_6"
+    },
+    "facing=north,rotation=6,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_6"
+    },
+    "facing=north,rotation=7,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_7"
+    },
+    "facing=north,rotation=7,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_7"
+    },
+    "facing=north,rotation=8,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_8"
+    },
+    "facing=north,rotation=8,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_8"
+    },
+    "facing=north,rotation=9,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_9"
+    },
+    "facing=north,rotation=9,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_9"
+    },
+    "facing=south,rotation=0,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_8"
+    },
+    "facing=south,rotation=0,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_8"
+    },
+    "facing=south,rotation=1,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_1"
+    },
+    "facing=south,rotation=1,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_1"
+    },
+    "facing=south,rotation=10,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_10"
+    },
+    "facing=south,rotation=10,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_10"
+    },
+    "facing=south,rotation=11,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_11"
+    },
+    "facing=south,rotation=11,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_11"
+    },
+    "facing=south,rotation=12,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_12"
+    },
+    "facing=south,rotation=12,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_12"
+    },
+    "facing=south,rotation=13,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_13"
+    },
+    "facing=south,rotation=13,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_13"
+    },
+    "facing=south,rotation=14,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_14"
+    },
+    "facing=south,rotation=14,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_14"
+    },
+    "facing=south,rotation=15,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_15"
+    },
+    "facing=south,rotation=15,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_15"
+    },
+    "facing=south,rotation=2,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_2"
+    },
+    "facing=south,rotation=2,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_2"
+    },
+    "facing=south,rotation=3,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_3"
+    },
+    "facing=south,rotation=3,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_3"
+    },
+    "facing=south,rotation=4,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_4"
+    },
+    "facing=south,rotation=4,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_4"
+    },
+    "facing=south,rotation=5,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_5"
+    },
+    "facing=south,rotation=5,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_5"
+    },
+    "facing=south,rotation=6,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_6"
+    },
+    "facing=south,rotation=6,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_6"
+    },
+    "facing=south,rotation=7,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_7"
+    },
+    "facing=south,rotation=7,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_7"
+    },
+    "facing=south,rotation=8,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_8"
+    },
+    "facing=south,rotation=8,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_8"
+    },
+    "facing=south,rotation=9,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_9"
+    },
+    "facing=south,rotation=9,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_9"
+    },
+    "facing=west,rotation=0,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_12"
+    },
+    "facing=west,rotation=0,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_12"
+    },
+    "facing=west,rotation=1,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_1"
+    },
+    "facing=west,rotation=1,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_1"
+    },
+    "facing=west,rotation=10,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_10"
+    },
+    "facing=west,rotation=10,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_10"
+    },
+    "facing=west,rotation=11,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_11"
+    },
+    "facing=west,rotation=11,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_11"
+    },
+    "facing=west,rotation=12,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_12"
+    },
+    "facing=west,rotation=12,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_12"
+    },
+    "facing=west,rotation=13,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_13"
+    },
+    "facing=west,rotation=13,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_13"
+    },
+    "facing=west,rotation=14,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_14"
+    },
+    "facing=west,rotation=14,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_14"
+    },
+    "facing=west,rotation=15,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_15"
+    },
+    "facing=west,rotation=15,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_15"
+    },
+    "facing=west,rotation=2,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_2"
+    },
+    "facing=west,rotation=2,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_2"
+    },
+    "facing=west,rotation=3,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_3"
+    },
+    "facing=west,rotation=3,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_3"
+    },
+    "facing=west,rotation=4,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_4"
+    },
+    "facing=west,rotation=4,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_4"
+    },
+    "facing=west,rotation=5,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_5"
+    },
+    "facing=west,rotation=5,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_5"
+    },
+    "facing=west,rotation=6,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_6"
+    },
+    "facing=west,rotation=6,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_6"
+    },
+    "facing=west,rotation=7,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_7"
+    },
+    "facing=west,rotation=7,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_7"
+    },
+    "facing=west,rotation=8,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_8"
+    },
+    "facing=west,rotation=8,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_8"
+    },
+    "facing=west,rotation=9,waterlogged=false": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_9"
+    },
+    "facing=west,rotation=9,waterlogged=true": {
+      "model": "kaleidoscope_tavern:block/mixology/bloody_mary/rot_9"
+    }
+  }
+}

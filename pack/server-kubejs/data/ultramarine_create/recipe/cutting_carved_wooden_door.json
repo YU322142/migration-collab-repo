@@ -1,0 +1,14 @@
+{
+  "type": "create:cutting",
+  "ingredients": [
+    {
+      "tag": "ultramarine_create:wood_cutting_source"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:carved_wooden_door"
+    }
+  ]
+}

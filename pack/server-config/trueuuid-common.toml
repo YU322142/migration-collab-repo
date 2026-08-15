@@ -1,0 +1,38 @@
+[auth]
+	# Default: 30000
+	# Range: 1000 ~ 600000
+	timeoutMs = 30000
+	#false: 超时踢出 / Kick on timeout. true: 超时放行为离线 / Allow offline fallback on timeout.
+	allowOfflineOnTimeout = false
+	#false: 失败时踢出 / Kick on failure. true: 鉴权失败放行为离线 / Allow offline fallback on authentication failure.
+	allowOfflineOnFailure = true
+	#Kick message on authentication timeout. Use a trueuuid.* translation key for client-side localization, or enter plain text to force a custom server message.
+	timeoutKickMessage = "trueuuid.disconnect.timeout"
+	offlineFallbackMessage = "trueuuid.chat.offline_fallback"
+	offlineShortSubtitle = "trueuuid.subtitle.offline"
+	onlineShortSubtitle = "trueuuid.subtitle.online"
+	#是否在玩家进服后显示登录状态提示。/ Show join feedback after a player joins. 关闭后不再发送正版/皮肤站/离线/单人模式 Title，也不发送离线兜底聊天提示；不影响皮肤刷新和鉴权逻辑。/ When disabled, no premium/skin-site/offline/single-player Title or offline fallback chat message is sent; authentication and skin refresh are unchanged.
+	showJoinFeedback = true
+	#一旦该名字成功验证过正版/皮肤站，后续鉴权失败时禁止以离线身份进入。/ Once a name has been verified as premium/skin-site, deny later offline fallback for that name.
+	knownPremiumDenyOffline = true
+	#仅对从未验证为正版/皮肤站的新名字允许离线兜底。/ Only allow offline fallback for names that have never been verified as premium/skin-site.
+	allowOfflineForUnknownOnly = true
+	#启用调试日志输出。/ Enable debug logging.
+	debug = false
+	#Mojang 会话服务器地址，可改为反代地址。/ Mojang Session Server endpoint. You may change this to a reverse proxy if needed.
+	mojangReverseProxy = "https://sessionserver.mojang.com"
+
+	[auth.recentIpGrace]
+		#启用“退出后同 IP 短时重连”容错，只在玩家退出后的 TTL 秒内临时沿用上次认证来源。/ Enable short same-IP reconnect grace after logout, reusing the last verified identity only within the TTL window.
+		enabled = true
+		#退出游戏后允许同 IP 容错重连的秒数。默认 10 秒，避免长期误导为皮肤站/正版登录。/ Same-IP grace seconds after logout. Default is 10 seconds to avoid long-lived misleading premium/skin-site identity.
+		# Default: 10
+		# Range: 1 ~ 60
+		ttlSeconds = 10
+
+	[auth.yggdrasil]
+		#Whitelist for authlib-injector/Yggdrasil skin-site domains. / authlib-injector/Yggdrasil 皮肤站域名白名单。
+		#Empty by default: trust any skin-site URL reported by the client. / 留空表示信任客户端上报的任何皮肤站 URL。
+		#When configured, only skin-site hosts matching a whitelist entry are accepted. / 配置后，只有主机名匹配白名单条目的皮肤站才会被接受。
+		#Example: ["littleskin.cn", "skin.example.com"] / 示例: ["littleskin.cn", "skin.example.com"]
+		apiRootWhitelist = []

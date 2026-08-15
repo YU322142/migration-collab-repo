@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "%7$s оонньоччуга %6$s тиллэн кэлии сирэ %1$s, %2$s, %3$s [%4$s, %5$s] туруорулунна",
+  "commands.spawnpoint.success.multiple.new": "%7$s оонньоччуларга %6$s тиллэн кэлии сирэ %1$s, %2$s, %3$s [%4$s, %5$s] туруорулунна"
+}

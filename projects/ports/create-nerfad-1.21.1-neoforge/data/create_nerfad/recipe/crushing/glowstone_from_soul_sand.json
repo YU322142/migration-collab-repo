@@ -1,0 +1,30 @@
+﻿{
+    "type":  "create:crushing",
+    "processing_time":  150,
+    "results":  [
+                    {
+                        "count":  1,
+                        "id":  "minecraft:glowstone_dust"
+                    },
+                    {
+                        "chance":  0.1,
+                        "count":  1,
+                        "id":  "minecraft:quartz"
+                    },
+                    {
+                        "chance":  0.5,
+                        "count":  1,
+                        "id":  "minecraft:glowstone_dust"
+                    },
+                    {
+                        "chance":  0.01,
+                        "count":  1,
+                        "id":  "minecraft:netherite_scrap"
+                    }
+                ],
+    "ingredients":  [
+                        {
+                            "item":  "minecraft:soul_sand"
+                        }
+                    ]
+}

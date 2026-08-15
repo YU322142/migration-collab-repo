@@ -1,0 +1,67 @@
+import java.security.MessageDigest
+
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev' version '2.0.95'
+}
+
+group = 'com.bmt'
+version = mod_version
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+}
+
+def officialEndJar = file(project.official_end_jar)
+def cookeryJar = file(project.cookery_jar)
+
+dependencies {
+    compileOnly files(officialEndJar)
+    compileOnly files(cookeryJar)
+}
+
+def sha256 = { File input ->
+    MessageDigest digest = MessageDigest.getInstance('SHA-256')
+    input.withInputStream { stream ->
+        byte[] buffer = new byte[8192]
+        for (int read = stream.read(buffer); read >= 0; read = stream.read(buffer)) {
+            if (read > 0) digest.update(buffer, 0, read)
+        }
+    }
+    digest.digest().collect { String.format('%02x', it) }.join()
+}
+
+tasks.register('verifyInputs') {
+    doLast {
+        assert officialEndJar.isFile(): "Missing official baseline: ${officialEndJar}"
+        assert cookeryJar.isFile(): "Missing Cookery build: ${cookeryJar}"
+        assert sha256(officialEndJar) == project.official_end_sha256
+        assert sha256(cookeryJar) == project.cookery_sha256
+    }
+}
+
+tasks.named('compileJava') {
+    dependsOn tasks.named('verifyInputs')
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('assembleFork', Zip) {
+    dependsOn tasks.named('classes'), tasks.named('verifyInputs')
+    archiveFileName = "kaleidoscope_end-${project.mod_version}.jar"
+    destinationDirectory = layout.buildDirectory.dir('libs')
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+
+    // Overlay entries are first so only the audited classes/resources replace the baseline.
+    from(sourceSets.main.output)
+    from(zipTree(officialEndJar)) {
+        exclude 'META-INF/*.SF', 'META-INF/*.RSA', 'META-INF/*.DSA'
+    }
+}
+
+tasks.named('assemble') {
+    dependsOn tasks.named('assembleFork')
+}

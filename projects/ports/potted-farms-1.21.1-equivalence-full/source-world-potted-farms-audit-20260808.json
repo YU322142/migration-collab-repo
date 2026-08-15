@@ -1,0 +1,123 @@
+{
+  "world": "D:\\Trans\\20260807\\world",
+  "read_only": true,
+  "entity_region_failures": [],
+  "item_frame_count": 73,
+  "axe_item_frames": 0,
+  "operational_potted_farm_structures": 0,
+  "farms": [],
+  "named_persistent_data": {
+    "level.dat": [
+      {
+        "path": "Data.ScheduledEvents[0].Callback.Name",
+        "value": "potted_farms:check_wood"
+      },
+      {
+        "path": "Data.ScheduledEvents[0].Name",
+        "value": "potted_farms:check_wood"
+      },
+      {
+        "path": "Data.ScheduledEvents[1].Callback.Name",
+        "value": "potted_farms:check_diamond"
+      },
+      {
+        "path": "Data.ScheduledEvents[1].Name",
+        "value": "potted_farms:check_diamond"
+      },
+      {
+        "path": "Data.ScheduledEvents[2].Callback.Name",
+        "value": "potted_farms:check_netherite"
+      },
+      {
+        "path": "Data.ScheduledEvents[2].Name",
+        "value": "potted_farms:check_netherite"
+      },
+      {
+        "path": "Data.ScheduledEvents[3].Callback.Name",
+        "value": "potted_farms:check_gold"
+      },
+      {
+        "path": "Data.ScheduledEvents[3].Name",
+        "value": "potted_farms:check_gold"
+      },
+      {
+        "path": "Data.ScheduledEvents[4].Callback.Name",
+        "value": "potted_farms:check_iron"
+      },
+      {
+        "path": "Data.ScheduledEvents[4].Name",
+        "value": "potted_farms:check_iron"
+      },
+      {
+        "path": "Data.ScheduledEvents[5].Callback.Name",
+        "value": "potted_farms:check_stone"
+      },
+      {
+        "path": "Data.ScheduledEvents[5].Name",
+        "value": "potted_farms:check_stone"
+      },
+      {
+        "path": "Data.DataPacks.Enabled[18]",
+        "value": "mr_potted_farms"
+      }
+    ],
+    "data/scoreboard.dat": [
+      {
+        "path": "data.PlayerScores[0].Objective",
+        "value": "potted_farms_damage"
+      },
+      {
+        "path": "data.PlayerScores[0].Name",
+        "value": "potted_farms_stone"
+      },
+      {
+        "path": "data.PlayerScores[1].Objective",
+        "value": "potted_farms_damage"
+      },
+      {
+        "path": "data.PlayerScores[1].Name",
+        "value": "potted_farms_iron"
+      },
+      {
+        "path": "data.PlayerScores[2].Objective",
+        "value": "potted_farms_damage"
+      },
+      {
+        "path": "data.PlayerScores[2].Name",
+        "value": "potted_farms_gold"
+      },
+      {
+        "path": "data.PlayerScores[3].Objective",
+        "value": "potted_farms_damage"
+      },
+      {
+        "path": "data.PlayerScores[3].Name",
+        "value": "potted_farms_diamond"
+      },
+      {
+        "path": "data.PlayerScores[4].Objective",
+        "value": "potted_farms_damage"
+      },
+      {
+        "path": "data.PlayerScores[4].Name",
+        "value": "potted_farms_netherite"
+      },
+      {
+        "path": "data.PlayerScores[5].Objective",
+        "value": "potted_farms_damage"
+      },
+      {
+        "path": "data.PlayerScores[5].Name",
+        "value": "potted_farms_wood"
+      },
+      {
+        "path": "data.Objectives[0].DisplayName",
+        "value": "potted_farms_damage"
+      },
+      {
+        "path": "data.Objectives[0].Name",
+        "value": "potted_farms_damage"
+      }
+    ]
+  }
+}

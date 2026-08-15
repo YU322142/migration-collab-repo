@@ -1,0 +1,8 @@
+{
+  "priority": 100,
+  "style": "vibrant_tooltips:rarity/epic",
+  "filter": {
+    "type": "obscure_tooltips:rarity",
+    "rarity": "epic"
+  }
+}

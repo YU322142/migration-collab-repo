@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.migration.cctweakedguard.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ServerContextMixin",
+    "TimeoutStateMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

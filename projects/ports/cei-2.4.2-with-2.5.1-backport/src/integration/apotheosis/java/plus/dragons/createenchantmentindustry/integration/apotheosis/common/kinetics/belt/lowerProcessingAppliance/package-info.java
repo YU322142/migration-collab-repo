@@ -1,0 +1,8 @@
+@FieldsAreNonnullByDefault
+@MethodsReturnNonnullByDefault
+@ParametersAreNonnullByDefault
+package plus.dragons.createenchantmentindustry.integration.apotheosis.common.kinetics.belt.lowerProcessingAppliance;
+
+import javax.annotation.ParametersAreNonnullByDefault;
+import net.minecraft.FieldsAreNonnullByDefault;
+import net.minecraft.MethodsReturnNonnullByDefault;

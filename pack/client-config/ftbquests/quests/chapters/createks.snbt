@@ -1,0 +1,189 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "createks"
+	group: ""
+	icon: {
+		id: "minecraft:grass_block"
+	}
+	id: "2712B84FC95D24A9"
+	images: [{
+		click: "https://space.bilibili.com/263315/dynamic"
+		height: 2.0d
+		hover: ["作者主页"]
+		image: "farmersdelight:textures/particle/star.png"
+		rotation: 0.0d
+		width: 2.0d
+		x: 0.0d
+		y: 3.0d
+	}]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "6DB3C1C6D21EA436"
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "0086D35C4A906E13"
+					table_id: 983599415479660574L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "228D63C5D1484E30"
+					table_id: 983599415479660574L
+					type: "choice"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "2C98C8A788C3A398"
+					table_id: 983599415479660574L
+					type: "choice"
+				}
+			]
+			shape: "gear"
+			size: 3.0d
+			tasks: [{
+				dimension: "minecraft:overworld"
+				icon: {
+					id: "minecraft:grass_block"
+				}
+				id: "3056BA1F2A472133"
+				type: "dimension"
+			}]
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6DB3C1C6D21EA436"]
+			icon: {
+				id: "minecraft:saddle"
+			}
+			id: "6F343418CE247D0D"
+			rewards: [
+				{
+					id: "5437B5FD10C9FEF0"
+					item: {
+						count: 1
+						id: "minecraft:saddle"
+					}
+					type: "item"
+				}
+				{
+					id: "167E0DCB89FCBB57"
+					item: {
+						components: {
+							"minecraft:instrument": "minecraft:seek_goat_horn"
+						}
+						count: 1
+						id: "horseman:copper_horn"
+					}
+					type: "item"
+				}
+				{
+					id: "7CD80EB803441693"
+					item: {
+						count: 1
+						id: "usefulslime:slime_sling"
+					}
+					type: "item"
+				}
+				{
+					id: "43F128810FBFD0E1"
+					item: {
+						count: 1
+						id: "usefulslime:slime_boots"
+					}
+					type: "item"
+				}
+			]
+			tasks: [{
+				id: "018D50BCD26EC52D"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6DB3C1C6D21EA436"]
+			icon: {
+				id: "touhou_little_maid:maid_spawn_egg"
+			}
+			id: "2CC6203A4CCE5D19"
+			tasks: [{
+				advancement: "c6c:collector_novice"
+				criterion: ""
+				id: "13161B80B40FE6D0"
+				type: "advancement"
+			}]
+			x: -4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6DB3C1C6D21EA436"]
+			icon: {
+				id: "createoreexcavation:drilling_machine"
+			}
+			id: "254B565D5CB0CD9D"
+			rewards: [{
+				id: "68BA539C0DD94E94"
+				item: {
+					count: 1
+					id: "kubejs:coolant_bucket"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "6AD5E0AB54A7A084"
+				item: { count: 1, id: "createoreexcavation:drilling_machine" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["6DB3C1C6D21EA436"]
+			icon: {
+				id: "minecraft:zombie_head"
+			}
+			id: "13B1E27BAA44F3B8"
+			rewards: [{
+				id: "7617CA264A99B211"
+				item: {
+					count: 1
+					id: "create_mechanical_spawner:spawn_fluid_random_bucket"
+				}
+				type: "item"
+			}]
+			tasks: [{
+				id: "5B7CC0A2905FFB8A"
+				item: { count: 1, id: "create_mechanical_spawner:mechanical_spawner" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6DB3C1C6D21EA436"]
+			id: "51793B81F3FE45CE"
+			tasks: [{
+				id: "3D05DD6521A594E8"
+				item: { count: 1, id: "trading_floor:trading_depot" }
+				type: "item"
+			}]
+			x: 3.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6DB3C1C6D21EA436"]
+			id: "18DE4FF6E70319A5"
+			tasks: [{
+				id: "079598ED34BDA743"
+				type: "checkmark"
+			}]
+			x: -3.0d
+			y: -2.5d
+		}
+	]
+}

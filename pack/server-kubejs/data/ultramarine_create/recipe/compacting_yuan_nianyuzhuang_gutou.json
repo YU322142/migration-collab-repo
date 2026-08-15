@@ -1,0 +1,33 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "minecraft:logs"
+    },
+    {
+      "tag": "c:dyes/blue"
+    },
+    {
+      "tag": "c:dyes/green"
+    },
+    {
+      "tag": "c:dyes/brown"
+    },
+    {
+      "tag": "c:dyes/blue"
+    },
+    {
+      "item": "ultramarine:gutou_template"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "ultramarine:yuan_nianyuzhuang_gutou"
+    },
+    {
+      "chance": 1.0,
+      "id": "ultramarine:gutou_template"
+    }
+  ]
+}

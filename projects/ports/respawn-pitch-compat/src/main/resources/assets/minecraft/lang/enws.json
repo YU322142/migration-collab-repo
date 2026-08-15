@@ -1,0 +1,4 @@
+{
+  "commands.spawnpoint.success.single.new": "Setteth spawn pointeth to %s, %s, %s [%s, %s] in %s f'r %s",
+  "commands.spawnpoint.success.multiple.new": "Setteth spawn pointeth to %s, %s, %s [%s, %s] in %s f'r %s playeth'rs"
+}

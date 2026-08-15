@@ -1,0 +1,35 @@
+{
+  "type": "create:mixing",
+  "heat_requirement": "heated",
+  "ingredients": [
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "item": "minecraft:dried_kelp"
+    },
+    {
+      "type": "fluid_stack",
+      "amount": 500,
+      "fluid": "minecraft:water"
+    }
+  ],
+  "results": [
+    {
+      "amount": 1000,
+      "id": "kubejs:kelp_gel"
+    }
+  ]
+}

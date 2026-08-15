@@ -1,0 +1,59 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "3C805D6AA3D59793"
+	group: "6B9D1AFD3E45FF4E"
+	icon: {
+		id: "minecraft:snow_block"
+	}
+	id: "3C805D6AA3D59793"
+	images: [{
+		height: 10.24d
+		image: "ftbquests:textures/end_ice_spike.png"
+		rotation: 0.0d
+		width: 21.36d
+		x: 0.0d
+		y: 0.0d
+	}]
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			id: "2813FF8C41AFEF22"
+			tasks: [{
+				id: "1BA0B1A944DE3E06"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -1.0d
+		}
+		{
+			id: "5083B5F89464A522"
+			tasks: [{
+				entity: "irons_spellbooks:ice_spider"
+				icon: {
+					components: {
+						"irons_spellbooks:spell_container": {
+							data: [{
+								id: "irons_spellbooks:frostbite"
+								index: 0
+								level: 3
+								locked: 1b
+							}]
+							maxSpells: 1
+							mustEquip: 0b
+							spellWheel: 1b
+						}
+						"minecraft:damage": 1523
+					}
+					id: "irons_spellbooks:boreal_blade"
+				}
+				id: "55CFCF4CCE2BB817"
+				type: "kill"
+				value: 1L
+			}]
+			x: 0.0d
+			y: 1.0d
+		}
+	]
+}
