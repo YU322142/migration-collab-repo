@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "status": "READY_FOR_DISPOSABLE_DYNAMIC_TEST",
+  "base_jar_sha256": "AF4D838434302FF65F676D3A4BE8682666E0CCF95392FCFFFBE33E00D79D8D86",
+  "mineastr_jar_sha256": "0C449AEE1BCB2A05F11C5A662C9F245FA9246514388CAE8E086C296D6643B574",
+  "upstream_commit": "3337fb1bde2368d8903a5768d38b5095c5618ef7",
+  "whitelist": [
+    "net/conczin/immersive_paintings/ClientPaintingManager.class",
+    "net/conczin/immersive_paintings/neoforge/ClientNeoForge.class",
+    "net/conczin/immersive_paintings/neoforge/compat/MineAstrImageCodec.class",
+    "net/conczin/immersive_paintings/neoforge/compat/MineAstrTranslationCompat.class",
+    "net/conczin/immersive_paintings/neoforge/compat/MineAstrTranslationCompat$TranslationKey.class",
+    "net/conczin/immersive_paintings/neoforge/compat/MineAstrTranslationCompat$Translation.class",
+    "net/conczin/immersive_paintings/neoforge/compat/MineAstrTranslationCompat$TranslationCache.class"
+  ],
+  "non_whitelist_policy": "byte-identical-to-base",
+  "world_touched": false,
+  "active_client_or_server_touched": false,
+  "mcmodsync_enabled": false
+}

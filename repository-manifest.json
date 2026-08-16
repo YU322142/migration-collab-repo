@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-15T15:59:00+00:00",
+  "generated_at": "2026-08-16T01:33:42.562711+00:00",
   "self_excluded": "repository-manifest.json",
   "files": [
     {
@@ -20,13 +20,13 @@
     },
     {
       "path": "artifacts/EXTERNAL-ARTIFACTS.json",
-      "bytes": 1877,
-      "sha256": "17D09ECEF3BA9D27EF2E215069F1B732C62AC1A258167CCC1C38B30AD43F3104"
+      "bytes": 2251,
+      "sha256": "ECE155D276FD2CD2F96492E7FEA8F0A508818AAC3BE85781FBAE51814E3191E5"
     },
     {
       "path": "artifacts/EXTERNAL-ARTIFACTS.md",
-      "bytes": 1696,
-      "sha256": "EDD7997A80149E746C46BB00916CE8EF5150974F8EC25AEE6045F10CDB1A3481"
+      "bytes": 2019,
+      "sha256": "A8C5C62D7A772E250A4AD00D2BA98EE430DF1580230A08AC54197A6467AC9899"
     },
     {
       "path": "artifacts/mcmodsync-disabled/classification-source.json",
@@ -26892,6 +26892,66 @@
       "path": "pack/worldgen-height-544-overlay/README.md",
       "bytes": 2116,
       "sha256": "7E8FB3745A2117A73E0F4BE3F265F44981B2E6F873F6BDD41142A1172B3B091E"
+    },
+    {
+      "path": "projects/patches/immersive-paintings-mineastr-compat/ARTIFACT-REFERENCE.md",
+      "bytes": 618,
+      "sha256": "233F5035FE039E7DB8FA61CE408CEC833E0E73D83C6255C3F993803C150D53F5"
+    },
+    {
+      "path": "projects/patches/immersive-paintings-mineastr-compat/AUDIT.md",
+      "bytes": 1373,
+      "sha256": "BA40BD86034AE4F5EF8F9979B814C5673A34AD1C02335D50C6B07D586EE76156"
+    },
+    {
+      "path": "projects/patches/immersive-paintings-mineastr-compat/overlay-manifest.json",
+      "bytes": 1095,
+      "sha256": "7F212A05B667BF7142145696040A28058170313A86021DB68E63D12FBB02AE21"
+    },
+    {
+      "path": "projects/patches/immersive-paintings-mineastr-compat/README.md",
+      "bytes": 2362,
+      "sha256": "66E4F5DFB278F3CCBBB5CDBBB350A4A7742F2A6BBD1489290E4ED6168BFAB477"
+    },
+    {
+      "path": "projects/patches/immersive-paintings-mineastr-compat/source/common/src/main/java/net/conczin/immersive_paintings/ClientPaintingManager.java",
+      "bytes": 11247,
+      "sha256": "B62AB6089737F68B5250229CD3E4B0A2E851449FA4F3C9EDAF9535FC2E1F3155"
+    },
+    {
+      "path": "projects/patches/immersive-paintings-mineastr-compat/source/neoforge/build.gradle",
+      "bytes": 2038,
+      "sha256": "05AF11907B99553B2339A3677A61D9EF8514C3EE10FE9D61AA1931E5FAB7A74D"
+    },
+    {
+      "path": "projects/patches/immersive-paintings-mineastr-compat/source/neoforge/src/main/java/net/conczin/immersive_paintings/neoforge/ClientNeoForge.java",
+      "bytes": 2041,
+      "sha256": "90640E2560507FD95C75993B13521A5DABB4DD274E17D9C92E784B78CD56BC3A"
+    },
+    {
+      "path": "projects/patches/immersive-paintings-mineastr-compat/source/neoforge/src/main/java/net/conczin/immersive_paintings/neoforge/compat/MineAstrImageCodec.java",
+      "bytes": 5025,
+      "sha256": "6C3D95FE93A33C4AB54A1DE73AF79C9DED4CD9CC739C65D069780BE7E4F3AD10"
+    },
+    {
+      "path": "projects/patches/immersive-paintings-mineastr-compat/source/neoforge/src/main/java/net/conczin/immersive_paintings/neoforge/compat/MineAstrTranslationCompat.java",
+      "bytes": 20939,
+      "sha256": "E4984067F24B43A8B8F814200003448F2A15613AB921B53C641BCA844A119E16"
+    },
+    {
+      "path": "projects/patches/immersive-paintings-mineastr-compat/source/neoforge/src/test/java/net/conczin/immersive_paintings/neoforge/compat/MineAstrTranslationCompatTest.java",
+      "bytes": 3152,
+      "sha256": "7A0AF08EF0739B5F6AEED61659D7C0C674348A3EFC88ADB31BE565832DDF32BD"
+    },
+    {
+      "path": "projects/patches/immersive-paintings-mineastr-compat/tools/build_immersive_paintings_mineastr_overlay.py",
+      "bytes": 4882,
+      "sha256": "2FC783728E93E3F7A9E0DFF97369734DD6863592264067D476062F4A36F21C6B"
+    },
+    {
+      "path": "projects/patches/immersive-paintings-mineastr-compat/tools/verify_immersive_paintings_mineastr_overlay.py",
+      "bytes": 4956,
+      "sha256": "509F2136B4AAC09A03D15F9FA8F107DC5EA70082FDE243C0717D519C60450F89"
     },
     {
       "path": "projects/patches/tlm-patchouli-spawn-box-balance/build_tlm_patchouli_balance_overlay.py",

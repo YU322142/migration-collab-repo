@@ -37,6 +37,12 @@
       "path": "D:\\Trans\\migration-audit-work\\mineastr-0.6.27-upgrade-20260815\\mineastr-neoforge-1.21.1-0.6.27.jar",
       "sha256": "0C449AEE1BCB2A05F11C5A662C9F245FA9246514388CAE8E086C296D6643B574",
       "status": "BOTH_SIDE_CANDIDATE"
+    },
+    {
+      "name": "immersive_paintings_mineastr_overlay",
+      "path": "D:\\Trans\\migration-audit-work\\immersive-paintings-mineastr-fix-artifacts-20260816\\immersive_paintings-neoforge-1.21.1-0.7.8-migration.2.jar",
+      "sha256": "13BE228AACDDBADEF680EE3FB989CCCF3029689DE2ECB09F1B2429189CE21E69",
+      "status": "DETACHED_CANDIDATE_DISPOSABLE_TEST_REQUIRED"
     }
   ]
 }
