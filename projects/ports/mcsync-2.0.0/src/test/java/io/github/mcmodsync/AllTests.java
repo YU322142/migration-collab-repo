@@ -45,6 +45,7 @@ public final class AllTests {
         testChinaApiMirrorPresetsRemainExplicitThirdPartyCandidates();
         testReleaseSequenceAntiDowngradeGate();
         testStructuredConfigMutationEngine();
+        testV5AtomicReleaseTransactionAndOwnership();
         testManifestGenerationAndParsing();
         testFabricModIdAndV1Compatibility();
         testNeoForgeMetadataAndUniversalBootstrap();
@@ -423,6 +424,123 @@ public final class AllTests {
                 """.formatted(operationJson);
         return ReleaseManifestV5.parse(manifest.getBytes(StandardCharsets.UTF_8))
                 .configOperations().getFirst();
+    }
+
+    private void testV5AtomicReleaseTransactionAndOwnership() throws Exception {
+        Path root = Files.createTempDirectory("mcsync-v5-transaction-");
+        try {
+            byte[] firstMod = "first-mod".getBytes(StandardCharsets.UTF_8);
+            byte[] secondMod = "second-mod".getBytes(StandardCharsets.UTF_8);
+            Files.createDirectories(root.resolve("config"));
+            Files.writeString(root.resolve("config/gameplay.toml"),
+                    "# local comment\n[balance]\nenabled = false\nuserChoice = 42\n",
+                    StandardCharsets.UTF_8);
+
+            ReleaseManifestV5 first = transactionManifest(
+                    10,
+                    "tx-10",
+                    List.of(fileJson("mods/old.jar", firstMod)),
+                    """
+                    [{
+                      "path":"config/gameplay.toml","op":"config-set","format":"toml",
+                      "key":"balance.enabled","valueType":"boolean","expected":false,"desired":true,
+                      "missingPolicy":"block","conflictPolicy":"replace-if-expected"
+                    }]
+                    """);
+            ReleaseTransactionEngine engine = new ReleaseTransactionEngine(root, 2);
+            ReleaseTransactionEngine.Result firstResult = engine.apply(
+                    first, Hashing.sha256(first.serialize()),
+                    entry -> entry.path().equals("mods/old.jar") ? firstMod : null);
+            check(firstResult.changed() && firstResult.installed() == 2 && firstResult.configChanged() == 1,
+                    "首个 v5 事务应同时提交模组与配置键");
+            check(Arrays.equals(Files.readAllBytes(root.resolve("mods/old.jar")), firstMod),
+                    "v5 事务应写入已校验模组");
+            String configured = Files.readString(root.resolve("config/gameplay.toml"));
+            check(configured.contains("enabled = true") && configured.contains("userChoice = 42"),
+                    "v5 配置事务应保留用户配置并修改目标键");
+            check(Files.isRegularFile(firstResult.receipt()), "成功事务必须生成可审计 receipt");
+
+            ReleaseManifestV5 second = transactionManifest(
+                    11,
+                    "tx-11",
+                    List.of(fileJson("mods/new.jar", secondMod)),
+                    "[]");
+            ReleaseTransactionEngine.Result secondResult = engine.apply(
+                    second, Hashing.sha256(second.serialize()), entry -> secondMod);
+            check(secondResult.removed() == 1 && !Files.exists(root.resolve("mods/old.jar")),
+                    "managed 范围内的旧受管文件应按 ownership 哈希移除");
+            check(Arrays.equals(Files.readAllBytes(root.resolve("mods/new.jar")), secondMod),
+                    "下一发布应原子安装新文件");
+
+            Files.writeString(root.resolve("mods/new.jar"), "user-modified", StandardCharsets.UTF_8);
+            byte[] thirdMod = "third-mod".getBytes(StandardCharsets.UTF_8);
+            ReleaseManifestV5 third = transactionManifest(
+                    12,
+                    "tx-12",
+                    List.of(fileJson("mods/third.jar", thirdMod)),
+                    "[]");
+            engine.apply(third, Hashing.sha256(third.serialize()), entry -> thirdMod);
+            check(Files.readString(root.resolve("mods/new.jar")).equals("user-modified"),
+                    "用户修改过的旧受管文件不得被 ownership 清理覆盖");
+
+            ReleaseManifestV5 failed = transactionManifest(
+                    13,
+                    "tx-13",
+                    List.of(fileJson("mods/bad.jar", "expected".getBytes(StandardCharsets.UTF_8))),
+                    "[]");
+            expectIoFailure(() -> engine.apply(
+                    failed, Hashing.sha256(failed.serialize()),
+                    entry -> "wrong".getBytes(StandardCharsets.UTF_8)));
+            check(new ReleaseSequenceGate(root.resolve(".modsync")).read().releaseSequence() == 12,
+                    "下载或验签失败不得推进防降级序号");
+            check(!Files.exists(root.resolve("mods/bad.jar")), "失败事务不得留下半成品");
+
+            ReleaseManifestV5 forbidden = transactionManifest(
+                    13,
+                    "tx-forbidden",
+                    List.of(fileJson("saves/world/level.dat", thirdMod)),
+                    "[]");
+            expectIoFailure(() -> engine.apply(
+                    forbidden, Hashing.sha256(forbidden.serialize()), entry -> thirdMod));
+            pass("v5 release transaction is atomic, ownership-aware, and save-state safe");
+        } finally {
+            deleteTree(root);
+        }
+    }
+
+    private static ReleaseManifestV5 transactionManifest(
+            long sequence,
+            String releaseId,
+            List<String> files,
+            String configOperations) {
+        String json = """
+                {
+                  "schema":5,
+                  "releaseId":"%s",
+                  "releaseSequence":%d,
+                  "minimumMCSyncVersion":"2.0.0",
+                  "managedScopes":[
+                    {"path":"mods","policy":"managed"},
+                    {"path":"config","policy":"additive"}
+                  ],
+                  "files":[%s],
+                  "configOperations":%s
+                }
+                """.formatted(releaseId, sequence, String.join(",", files), configOperations);
+        return ReleaseManifestV5.parse(json.getBytes(StandardCharsets.UTF_8));
+    }
+
+    private static String fileJson(String path, byte[] bytes) {
+        return """
+                {
+                  "path":"%s","sha256":"%s","size":%d,"kind":"%s",
+                  "required":true,"restartRequired":true,"side":["client"]
+                }
+                """.formatted(
+                path,
+                Hashing.sha256(bytes),
+                bytes.length,
+                path.startsWith("mods/") ? "mod" : "support");
     }
 
     private void testManifestGenerationAndParsing() throws Exception {
