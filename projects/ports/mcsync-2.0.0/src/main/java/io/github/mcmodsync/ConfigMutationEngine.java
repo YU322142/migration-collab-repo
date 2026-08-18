@@ -245,6 +245,15 @@ final class ConfigMutationEngine {
         if (!present) {
             return new Decision(true, "created");
         }
+        if (operation.operation().equals("config-set") && semanticEquals(previous, operation.desired())) {
+            return new Decision(false, "already-desired");
+        }
+        if (operation.operation().equals("config-merge")
+                && previous instanceof Map<?, ?> previousMap
+                && operation.desired() instanceof Map<?, ?> desiredMap
+                && containsDesired(castMap(previousMap), castMap(desiredMap))) {
+            return new Decision(false, "already-desired");
+        }
         if (expectedMatches(previous, operation.expected())) {
             return new Decision(true, "matched-expected");
         }
@@ -270,6 +279,18 @@ final class ConfigMutationEngine {
             return leftNumber.compareTo(rightNumber) == 0;
         }
         return Objects.equals(left, right);
+    }
+
+    private static boolean containsDesired(Map<String, Object> current, Map<String, Object> desired) {
+        for (Map.Entry<String, Object> entry : desired.entrySet()) {
+            Object actual = current.get(entry.getKey());
+            if (actual instanceof Map<?, ?> actualMap && entry.getValue() instanceof Map<?, ?> wantedMap) {
+                if (!containsDesired(castMap(actualMap), castMap(wantedMap))) return false;
+            } else if (!semanticEquals(actual, entry.getValue())) {
+                return false;
+            }
+        }
+        return true;
     }
 
     private static Object parseScalar(String text, String type, String format) {

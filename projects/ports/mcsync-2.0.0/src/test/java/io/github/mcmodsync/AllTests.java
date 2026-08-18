@@ -46,6 +46,7 @@ public final class AllTests {
         testReleaseSequenceAntiDowngradeGate();
         testStructuredConfigMutationEngine();
         testV5AtomicReleaseTransactionAndOwnership();
+        testV5CoordinatorDownloadsBeforeStartupAndBecomesIdempotent();
         testManifestGenerationAndParsing();
         testFabricModIdAndV1Compatibility();
         testNeoForgeMetadataAndUniversalBootstrap();
@@ -379,7 +380,7 @@ public final class AllTests {
         ReleaseManifestV5.ConfigOperation keepLocal = configOperation("""
                 {
                   "path":"config/example.toml","op":"config-set","format":"toml",
-                  "key":"enabled","valueType":"boolean","expected":false,"desired":true,
+                  "key":"enabled","valueType":"boolean","expected":false,"desired":false,
                   "missingPolicy":"block","conflictPolicy":"keep-local"
                 }
                 """);
@@ -541,6 +542,49 @@ public final class AllTests {
                 Hashing.sha256(bytes),
                 bytes.length,
                 path.startsWith("mods/") ? "mod" : "support");
+    }
+
+    private void testV5CoordinatorDownloadsBeforeStartupAndBecomesIdempotent() throws Exception {
+        Path root = Files.createTempDirectory("mcsync-v5-http-");
+        HttpServer server = null;
+        try {
+            byte[] mod = "v5-http-mod".getBytes(StandardCharsets.UTF_8);
+            ReleaseManifestV5 manifest = transactionManifest(
+                    20, "http-20", List.of(fileJson("mods/demo.jar", mod)), "[]");
+            byte[] manifestBytes = manifest.serialize();
+            AtomicInteger manifestRequests = new AtomicInteger();
+            AtomicInteger fileRequests = new AtomicInteger();
+            server = HttpServer.create(new InetSocketAddress(InetAddress.getLoopbackAddress(), 0), 0);
+            server.createContext("/release/manifest.json", exchange -> {
+                manifestRequests.incrementAndGet();
+                respond(exchange, 200, manifestBytes, null);
+            });
+            server.createContext("/release/mods/demo.jar", exchange -> {
+                fileRequests.incrementAndGet();
+                respond(exchange, 200, mod, null);
+            });
+            server.start();
+            URI uri = URI.create("http://127.0.0.1:" + server.getAddress().getPort()
+                    + "/release/manifest.json");
+            ModSyncConfig runtimeConfig = config(root, uri, false, false);
+            SyncResult applied = ModSyncCoordinator.synchronize(runtimeConfig, message -> { }, SyncObserver.NONE);
+            check(applied.status() == SyncResult.Status.UPDATED
+                            && Arrays.equals(Files.readAllBytes(root.resolve("mods/demo.jar")), mod),
+                    "启动辅助进程应在游戏加载前完成 v5 文件下载与提交");
+            check(fileRequests.get() == 1, "首次 v5 发布只应下载一次目标文件");
+
+            SyncProbeResult probe = ModSyncCoordinator.probe(runtimeConfig, message -> { }, SyncObserver.NONE);
+            check(probe.status() == SyncProbeResult.Status.UP_TO_DATE,
+                    "同一 releaseSequence 完成后再次启动应幂等通过");
+            SyncResult repeated = ModSyncCoordinator.synchronize(runtimeConfig, message -> { }, SyncObserver.NONE);
+            check(repeated.status() == SyncResult.Status.UNCHANGED && fileRequests.get() == 1,
+                    "幂等启动不得重新下载已正确安装的文件");
+            check(manifestRequests.get() == 3, "每次启动检查都应重新取得小型清单以发现 OTA");
+            pass("v5 coordinator downloads pre-start and remains idempotent");
+        } finally {
+            if (server != null) server.stop(0);
+            deleteTree(root);
+        }
     }
 
     private void testManifestGenerationAndParsing() throws Exception {

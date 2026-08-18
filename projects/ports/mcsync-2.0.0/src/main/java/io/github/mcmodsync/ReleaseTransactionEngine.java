@@ -34,6 +34,35 @@ final class ReleaseTransactionEngine {
         this.fileOperations = new FileOperations(fileOperationRetries);
     }
 
+    boolean needsApply(ReleaseManifestV5 manifest, String manifestSha256) throws IOException {
+        Files.createDirectories(state);
+        ManagedPathPolicy paths = new ManagedPathPolicy(root, manifest.managedScopes());
+        ReleaseSequenceGate.Decision decision = new ReleaseSequenceGate(state).validate(manifest, manifestSha256);
+        if (decision.newRelease()) return true;
+        LinkedHashSet<String> desiredPaths = new LinkedHashSet<>();
+        for (ReleaseManifestV5.FileEntry entry : manifest.files()) {
+            if (!appliesToClient(entry.side())) continue;
+            desiredPaths.add(entry.path());
+            Path target = paths.resolve(entry.path(), true);
+            if (!Files.isRegularFile(target) || Files.size(target) != entry.size()
+                    || !Hashing.sha256(target).equals(entry.sha256())) return true;
+        }
+        for (ReleaseManifestV5.ConfigOperation operation : manifest.configOperations()) {
+            if (!appliesToClientConfig(operation.side()) || !operation.phase().equals("prelaunch")) continue;
+            Path target = paths.resolve(operation.path(), true);
+            if (operation.operation().equals("file-replace")) continue;
+            byte[] base = Files.isRegularFile(target) ? Files.readAllBytes(target) : emptyDocument(operation.format());
+            if (ConfigMutationEngine.apply(base, operation).changed()) return true;
+            desiredPaths.add(operation.path());
+        }
+        for (Map.Entry<String, String> previous : new ReleaseOwnershipLedger(state).read().entrySet()) {
+            if (desiredPaths.contains(previous.getKey()) || !paths.isManaged(previous.getKey())) continue;
+            Path target = paths.resolve(previous.getKey(), true);
+            if (Files.isRegularFile(target) && Hashing.sha256(target).equals(previous.getValue())) return true;
+        }
+        return false;
+    }
+
     Result apply(
             ReleaseManifestV5 manifest,
             String manifestSha256,
@@ -63,7 +92,17 @@ final class ReleaseTransactionEngine {
         for (ReleaseManifestV5.FileEntry entry : manifest.files()) {
             if (!appliesToClient(entry.side())) continue;
             paths.resolve(entry.path(), true);
-            byte[] bytes = provider.fetch(entry);
+            byte[] bytes;
+            if (entry.download().type().equals("manual")) {
+                Path local = paths.resolve(entry.path(), true);
+                if (!Files.isRegularFile(local) || Files.size(local) != entry.size()
+                        || !Hashing.sha256(local).equals(entry.sha256())) {
+                    continue;
+                }
+                bytes = Files.readAllBytes(local);
+            } else {
+                bytes = provider.fetch(entry);
+            }
             if (bytes.length != entry.size()) throw new IOException("下载文件大小不匹配: " + entry.path());
             String hash = Hashing.sha256(bytes);
             if (!hash.equals(entry.sha256())) throw new IOException("下载文件 SHA256 不匹配: " + entry.path());
