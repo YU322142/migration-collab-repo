@@ -5,6 +5,7 @@ import java.net.URI;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -15,6 +16,7 @@ record ReleaseManifestV5(
         String releaseId,
         long releaseSequence,
         String minimumMcsyncVersion,
+        List<ManagedScope> managedScopes,
         List<FileEntry> files,
         List<ConfigOperation> configOperations) {
 
@@ -33,10 +35,20 @@ record ReleaseManifestV5(
     private static final Set<String> ENDPOINT_PURPOSES = Set.of("file", "api");
     private static final Set<String> ENDPOINT_REGIONS = Set.of("global", "cn");
     private static final Set<String> CONFIG_OPERATIONS = Set.of("config-set", "config-merge", "file-replace");
-    private static final Set<String> CONFIG_FORMATS = Set.of("toml", "json", "properties", "text", "binary");
-    private static final Set<String> CONFLICT_POLICIES = Set.of("fail", "keep-local", "replace-if-expected");
+    private static final Set<String> CONFIG_FORMATS = Set.of(
+            "toml", "json", "json5", "properties", "snbt", "text", "binary");
+    private static final Set<String> VALUE_TYPES = Set.of(
+            "boolean", "integer", "decimal", "string", "array", "object", "binary");
+    private static final Set<String> MISSING_POLICIES = Set.of("create", "skip", "block");
+    private static final Set<String> CONFLICT_POLICIES = Set.of(
+            "block", "keep-local", "report", "force", "replace-if-expected");
+    private static final Set<String> CONFIG_SIDES = Set.of(
+            "client", "integrated_server", "dedicated_server", "both");
+    private static final Set<String> APPLY_PHASES = Set.of("prelaunch", "first-install");
+    private static final Set<String> SCOPE_POLICIES = Set.of("managed", "additive", "first-install");
 
     ReleaseManifestV5 {
+        managedScopes = List.copyOf(managedScopes);
         files = List.copyOf(files);
         configOperations = List.copyOf(configOperations);
     }
@@ -47,6 +59,9 @@ record ReleaseManifestV5(
         }
         Object parsed = StrictJson.parse(new String(bytes, StandardCharsets.UTF_8));
         Map<String, Object> root = object(parsed, "root");
+        requireOnlyKeys(root, "root", Set.of(
+                "schema", "releaseId", "releaseSequence", "minimumMCSyncVersion",
+                "managedScopes", "files", "configOperations"));
         if (integer(root, "schema") != SCHEMA) {
             throw new IllegalArgumentException("MCSync 2.0 只接受 schema=5 的结构化清单");
         }
@@ -63,10 +78,25 @@ record ReleaseManifestV5(
             throw new IllegalArgumentException("minimumMCSyncVersion 过长");
         }
 
+        List<ManagedScope> managedScopes = new ArrayList<>();
+        Set<String> normalizedScopes = new HashSet<>();
+        for (Object value : optionalArray(root, "managedScopes")) {
+            Map<String, Object> scope = object(value, "managedScopes[]");
+            requireOnlyKeys(scope, "managedScopes[]", Set.of("path", "policy"));
+            String path = safeRelativePath(string(scope, "path"));
+            if (!normalizedScopes.add(path.toLowerCase(Locale.ROOT))) {
+                throw new IllegalArgumentException("清单包含重复受管范围: " + path);
+            }
+            String policy = oneOf(string(scope, "policy"), SCOPE_POLICIES, "managedScopes.policy");
+            managedScopes.add(new ManagedScope(path, policy));
+        }
+
         List<FileEntry> files = new ArrayList<>();
         Set<String> normalizedPaths = new HashSet<>();
         for (Object value : array(root, "files")) {
             Map<String, Object> file = object(value, "files[]");
+            requireOnlyKeys(file, "files[]", Set.of(
+                    "path", "sha256", "size", "kind", "required", "restartRequired", "side", "download"));
             String path = safeRelativePath(string(file, "path"));
             if (!normalizedPaths.add(path.toLowerCase(Locale.ROOT))) {
                 throw new IllegalArgumentException("清单包含重复文件路径: " + path);
@@ -96,27 +126,63 @@ record ReleaseManifestV5(
         List<ConfigOperation> configOperations = new ArrayList<>();
         for (Object value : optionalArray(root, "configOperations")) {
             Map<String, Object> operation = object(value, "configOperations[]");
+            requireOnlyKeys(operation, "configOperations[]", Set.of(
+                    "path", "op", "format", "key", "valueType", "expected", "desired",
+                    "missingPolicy", "conflictPolicy", "side", "phase", "restartRequired"));
             String path = safeRelativePath(string(operation, "path"));
-            String type = oneOf(string(operation, "operation"), CONFIG_OPERATIONS, "配置 operation");
+            String type = oneOf(string(operation, "op"), CONFIG_OPERATIONS, "配置 op");
             String format = oneOf(string(operation, "format"), CONFIG_FORMATS, "配置 format");
             String key = optionalString(operation, "key");
             if (!type.equals("file-replace") && key.isBlank()) {
                 throw new IllegalArgumentException(type + " 必须声明 key");
             }
+            String valueType = oneOf(
+                    optionalString(operation, "valueType", type.equals("file-replace") ? "binary" : "string"),
+                    VALUE_TYPES,
+                    "配置 valueType");
+            String missingPolicy = oneOf(
+                    optionalString(operation, "missingPolicy", "block"),
+                    MISSING_POLICIES,
+                    "配置 missingPolicy");
             String conflictPolicy = oneOf(
-                    optionalString(operation, "conflictPolicy", "replace-if-expected"),
+                    optionalString(operation, "conflictPolicy", "block"),
                     CONFLICT_POLICIES,
                     "配置 conflictPolicy");
+            Set<String> side = stringSet(operation, "side", Set.of("both"), CONFIG_SIDES);
+            String phase = oneOf(
+                    optionalString(operation, "phase", "prelaunch"),
+                    APPLY_PHASES,
+                    "配置 phase");
             boolean restartRequired = bool(operation, "restartRequired", true);
             Object expected = operation.get("expected");
             Object desired = operation.get("desired");
             if (!operation.containsKey("desired")) {
                 throw new IllegalArgumentException("配置操作缺少 desired: " + path + "#" + key);
             }
+            validateConfigOperation(type, format, valueType, expected, desired, path, key);
             configOperations.add(new ConfigOperation(
-                    path, type, format, key, expected, desired, conflictPolicy, restartRequired));
+                    path, type, format, key, valueType, expected, desired, missingPolicy,
+                    conflictPolicy, side, phase, restartRequired));
         }
-        return new ReleaseManifestV5(releaseId, sequence, minimumVersion, files, configOperations);
+        return new ReleaseManifestV5(
+                releaseId, sequence, minimumVersion, managedScopes, files, configOperations);
+    }
+
+    byte[] serialize() {
+        Map<String, Object> root = new LinkedHashMap<>();
+        root.put("schema", SCHEMA);
+        root.put("releaseId", releaseId);
+        root.put("releaseSequence", releaseSequence);
+        root.put("minimumMCSyncVersion", minimumMcsyncVersion);
+        root.put("managedScopes", managedScopes.stream().map(scope -> Map.of(
+                "path", scope.path(),
+                "policy", scope.policy())).toList());
+        root.put("files", files.stream().map(ReleaseManifestV5::fileJson).toList());
+        root.put("configOperations", configOperations.stream().map(ReleaseManifestV5::configJson).toList());
+        return (StrictJson.stringify(root) + "\n").getBytes(StandardCharsets.UTF_8);
+    }
+
+    record ManagedScope(String path, String policy) {
     }
 
     record FileEntry(
@@ -159,10 +225,17 @@ record ReleaseManifestV5(
             String operation,
             String format,
             String key,
+            String valueType,
             Object expected,
             Object desired,
+            String missingPolicy,
             String conflictPolicy,
+            Set<String> side,
+            String phase,
             boolean restartRequired) {
+        ConfigOperation {
+            side = Set.copyOf(side);
+        }
     }
 
     private static String safeRelativePath(String value) {
@@ -184,6 +257,8 @@ record ReleaseManifestV5(
             return new DownloadSource("publisher-hosted", "", "", null, "redistributable", List.of());
         }
         Map<String, Object> source = object(raw, "download");
+        requireOnlyKeys(source, "download", Set.of(
+                "type", "projectId", "versionId", "fileId", "distributionPolicy", "endpoints"));
         String type = oneOf(string(source, "type"), DOWNLOAD_SOURCE_TYPES, "download.type");
         String projectId = optionalString(source, "projectId");
         String versionId = optionalString(source, "versionId");
@@ -195,6 +270,8 @@ record ReleaseManifestV5(
         List<DownloadEndpoint> endpoints = new ArrayList<>();
         for (Object value : optionalArray(source, "endpoints")) {
             Map<String, Object> endpoint = object(value, "download.endpoints[]");
+            requireOnlyKeys(endpoint, "download.endpoints[]", Set.of(
+                    "url", "role", "purpose", "region", "priority", "thirdParty"));
             URI uri = secureUri(string(endpoint, "url"));
             String role = oneOf(string(endpoint, "role"), ENDPOINT_ROLES, "download.endpoint.role");
             String purpose = oneOf(
@@ -255,6 +332,104 @@ record ReleaseManifestV5(
         return new DownloadSource(type, projectId, versionId, fileId, distributionPolicy, endpoints);
     }
 
+    private static Map<String, Object> fileJson(FileEntry file) {
+        Map<String, Object> result = new LinkedHashMap<>();
+        result.put("path", file.path());
+        result.put("sha256", file.sha256());
+        result.put("size", file.size());
+        result.put("kind", file.kind());
+        result.put("required", file.required());
+        result.put("restartRequired", file.restartRequired());
+        result.put("side", file.side().stream().sorted().toList());
+        DownloadSource source = file.download();
+        Map<String, Object> download = new LinkedHashMap<>();
+        download.put("type", source.type());
+        download.put("distributionPolicy", source.distributionPolicy());
+        if (!source.projectId().isBlank()) {
+            download.put("projectId", source.projectId());
+        }
+        if (!source.versionId().isBlank()) {
+            download.put("versionId", source.versionId());
+        }
+        if (source.fileId() != null) {
+            download.put("fileId", source.fileId());
+        }
+        if (!source.endpoints().isEmpty()) {
+            download.put("endpoints", source.endpoints().stream().map(endpoint -> Map.of(
+                    "url", endpoint.uri().toASCIIString(),
+                    "role", endpoint.role(),
+                    "purpose", endpoint.purpose(),
+                    "region", endpoint.region(),
+                    "priority", endpoint.priority(),
+                    "thirdParty", endpoint.thirdParty())).toList());
+        }
+        result.put("download", download);
+        return result;
+    }
+
+    private static Map<String, Object> configJson(ConfigOperation operation) {
+        Map<String, Object> result = new LinkedHashMap<>();
+        result.put("path", operation.path());
+        result.put("op", operation.operation());
+        result.put("format", operation.format());
+        if (!operation.key().isBlank()) {
+            result.put("key", operation.key());
+        }
+        result.put("valueType", operation.valueType());
+        result.put("expected", operation.expected());
+        result.put("desired", operation.desired());
+        result.put("missingPolicy", operation.missingPolicy());
+        result.put("conflictPolicy", operation.conflictPolicy());
+        result.put("side", operation.side().stream().sorted().toList());
+        result.put("phase", operation.phase());
+        result.put("restartRequired", operation.restartRequired());
+        return result;
+    }
+
+    private static void validateConfigOperation(
+            String operation,
+            String format,
+            String valueType,
+            Object expected,
+            Object desired,
+            String path,
+            String key) {
+        if (!operation.equals("file-replace") && Set.of("json5", "snbt", "text", "binary").contains(format)) {
+            throw new IllegalArgumentException(
+                    format + " 暂不支持可靠键级编辑，只能使用带前像约束的 file-replace: " + path);
+        }
+        if (operation.equals("file-replace") && !key.isBlank()) {
+            throw new IllegalArgumentException("file-replace 不能声明结构化 key: " + path);
+        }
+        if (!operation.equals("file-replace") && !matchesValueType(desired, valueType)) {
+            throw new IllegalArgumentException("配置 desired 与 valueType 不匹配: " + path + "#" + key);
+        }
+        if (expected instanceof List<?> values) {
+            for (Object value : values) {
+                if (!matchesValueType(value, valueType)) {
+                    throw new IllegalArgumentException("配置 expected 与 valueType 不匹配: " + path + "#" + key);
+                }
+            }
+        } else if (expected != null && !matchesValueType(expected, valueType)) {
+            throw new IllegalArgumentException("配置 expected 与 valueType 不匹配: " + path + "#" + key);
+        }
+    }
+
+    private static boolean matchesValueType(Object value, String valueType) {
+        if (value == null) {
+            return true;
+        }
+        return switch (valueType) {
+            case "boolean" -> value instanceof Boolean;
+            case "integer" -> value instanceof BigDecimal number && number.scale() <= 0;
+            case "decimal" -> value instanceof BigDecimal;
+            case "string", "binary" -> value instanceof String;
+            case "array" -> value instanceof List<?>;
+            case "object" -> value instanceof Map<?, ?>;
+            default -> false;
+        };
+    }
+
     private static String defaultDistributionPolicy(String type) {
         return switch (type) {
             case "publisher-hosted" -> "redistributable";
@@ -305,6 +480,14 @@ record ReleaseManifestV5(
         @SuppressWarnings("unchecked")
         Map<String, Object> typed = (Map<String, Object>) map;
         return typed;
+    }
+
+    private static void requireOnlyKeys(Map<String, Object> object, String field, Set<String> allowed) {
+        for (String key : object.keySet()) {
+            if (!allowed.contains(key)) {
+                throw new IllegalArgumentException(field + " 包含未知字段: " + key);
+            }
+        }
     }
 
     private static List<Object> array(Map<String, Object> object, String field) {

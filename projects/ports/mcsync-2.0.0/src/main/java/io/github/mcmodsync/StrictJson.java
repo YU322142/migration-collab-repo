@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 /** Minimal strict JSON reader used by the signed MCSync release manifest. */
 final class StrictJson {
@@ -24,6 +25,86 @@ final class StrictJson {
             throw reader.error("JSON 尾部存在多余内容");
         }
         return value;
+    }
+
+    static String stringify(Object value) {
+        StringBuilder output = new StringBuilder();
+        writeValue(output, value);
+        return output.toString();
+    }
+
+    private static void writeValue(StringBuilder output, Object value) {
+        if (value == null) {
+            output.append("null");
+        } else if (value instanceof String text) {
+            writeString(output, text);
+        } else if (value instanceof Boolean bool) {
+            output.append(bool);
+        } else if (value instanceof BigDecimal number) {
+            output.append(number.stripTrailingZeros().toPlainString());
+        } else if (value instanceof Byte || value instanceof Short || value instanceof Integer
+                || value instanceof Long || value instanceof java.math.BigInteger) {
+            output.append(value);
+        } else if (value instanceof Float || value instanceof Double) {
+            throw new IllegalArgumentException("JSON 浮点输出必须使用 BigDecimal，避免非确定性表示");
+        } else if (value instanceof Map<?, ?> map) {
+            output.append('{');
+            boolean first = true;
+            TreeMap<String, Object> sorted = new TreeMap<>();
+            for (Map.Entry<?, ?> entry : map.entrySet()) {
+                if (!(entry.getKey() instanceof String key)) {
+                    throw new IllegalArgumentException("JSON 对象键必须是字符串");
+                }
+                sorted.put(key, entry.getValue());
+            }
+            for (Map.Entry<String, Object> entry : sorted.entrySet()) {
+                if (!first) {
+                    output.append(',');
+                }
+                first = false;
+                writeString(output, entry.getKey());
+                output.append(':');
+                writeValue(output, entry.getValue());
+            }
+            output.append('}');
+        } else if (value instanceof Iterable<?> values) {
+            output.append('[');
+            boolean first = true;
+            for (Object item : values) {
+                if (!first) {
+                    output.append(',');
+                }
+                first = false;
+                writeValue(output, item);
+            }
+            output.append(']');
+        } else {
+            throw new IllegalArgumentException("不支持的 JSON 值类型: " + value.getClass().getName());
+        }
+    }
+
+    private static void writeString(StringBuilder output, String value) {
+        output.append('"');
+        for (int index = 0; index < value.length(); index++) {
+            char current = value.charAt(index);
+            switch (current) {
+                case '"' -> output.append("\\\"");
+                case '\\' -> output.append("\\\\");
+                case '\b' -> output.append("\\b");
+                case '\f' -> output.append("\\f");
+                case '\n' -> output.append("\\n");
+                case '\r' -> output.append("\\r");
+                case '\t' -> output.append("\\t");
+                default -> {
+                    if (current < 0x20) {
+                        output.append("\\u").append(String.format(java.util.Locale.ROOT, "%04x", (int) current));
+                    } else {
+                        output.append(current);
+                    }
+                }
+            }
+        }
+        output.append('"');
     }
 
     private Object readValue() {

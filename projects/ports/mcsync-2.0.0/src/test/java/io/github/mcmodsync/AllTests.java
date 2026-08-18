@@ -44,6 +44,7 @@ public final class AllTests {
         testV5CustomBuildUsesPublisherHostedDistribution();
         testChinaApiMirrorPresetsRemainExplicitThirdPartyCandidates();
         testReleaseSequenceAntiDowngradeGate();
+        testStructuredConfigMutationEngine();
         testManifestGenerationAndParsing();
         testFabricModIdAndV1Compatibility();
         testNeoForgeMetadataAndUniversalBootstrap();
@@ -128,9 +129,10 @@ public final class AllTests {
                   "configOperations": [
                     {
                       "path": "config/example-common.toml",
-                      "operation": "config-set",
+                      "op": "config-set",
                       "format": "toml",
                       "key": "features.safeMode",
+                      "valueType": "boolean",
                       "expected": false,
                       "desired": true,
                       "conflictPolicy": "replace-if-expected",
@@ -144,12 +146,18 @@ public final class AllTests {
         check(parsed.files().getFirst().path().equals("mods/example-1.0.jar"), "v5 文件路径应精确解析");
         check(parsed.configOperations().getFirst().key().equals("features.safeMode"),
                 "v5 应支持精确到配置键的 OTA");
+        ReleaseManifestV5 roundTrip = ReleaseManifestV5.parse(parsed.serialize());
+        check(roundTrip.equals(parsed), "v5 清单规范序列化后应无语义漂移");
+        check(Arrays.equals(parsed.serialize(), roundTrip.serialize()), "v5 规范 JSON 输出必须确定性一致");
 
         expectFailure(() -> ReleaseManifestV5.parse(manifestText
                 .replace("mods/example-1.0.jar", "../outside.jar")
                 .getBytes(StandardCharsets.UTF_8)));
         expectFailure(() -> ReleaseManifestV5.parse(manifestText
                 .replace("\"releaseSequence\": 2000001,", "\"releaseSequence\": 2000001,\n  \"releaseSequence\": 2000002,")
+                .getBytes(StandardCharsets.UTF_8)));
+        expectFailure(() -> ReleaseManifestV5.parse(manifestText
+                .replace("\"schema\": 5,", "\"schema\": 5,\n  \"typoField\": true,")
                 .getBytes(StandardCharsets.UTF_8)));
         pass("v5 release manifest parsing, config operations, and unsafe-input rejection");
     }
@@ -313,6 +321,108 @@ public final class AllTests {
                 }
                 """.formatted(releaseId, sequence);
         return ReleaseManifestV5.parse(json.getBytes(StandardCharsets.UTF_8));
+    }
+
+    private void testStructuredConfigMutationEngine() {
+        ReleaseManifestV5.ConfigOperation toml = configOperation("""
+                {
+                  "path":"config/example-common.toml","op":"config-set","format":"toml",
+                  "key":"features.safeMode","valueType":"boolean","expected":false,"desired":true,
+                  "missingPolicy":"block","conflictPolicy":"replace-if-expected"
+                }
+                """);
+        byte[] tomlInput = "# user note\r\n[features]\r\nsafeMode = false # keep this\r\nvolume = 7\r\n"
+                .getBytes(StandardCharsets.UTF_8);
+        ConfigMutationEngine.MutationResult tomlResult = ConfigMutationEngine.apply(tomlInput, toml);
+        String tomlOutput = new String(tomlResult.bytes(), StandardCharsets.UTF_8);
+        check(tomlResult.changed(), "TOML 精确键更新应报告 changed");
+        check(tomlOutput.equals("# user note\r\n[features]\r\nsafeMode = true # keep this\r\nvolume = 7\r\n"),
+                "TOML 更新必须保留注释、换行和无关配置");
+
+        ReleaseManifestV5.ConfigOperation json = configOperation("""
+                {
+                  "path":"kubejs/config/common.json","op":"config-merge","format":"json",
+                  "key":"server.features","valueType":"object","expected":{"existing":1},
+                  "desired":{"enabled":true,"nested":{"limit":8}},
+                  "missingPolicy":"create","conflictPolicy":"replace-if-expected"
+                }
+                """);
+        ConfigMutationEngine.MutationResult jsonResult = ConfigMutationEngine.apply(
+                "{\"server\":{\"features\":{\"existing\":1},\"local\":\"keep\"}}"
+                        .getBytes(StandardCharsets.UTF_8), json);
+        @SuppressWarnings("unchecked")
+        Map<String, Object> jsonRoot = (Map<String, Object>) StrictJson.parse(
+                new String(jsonResult.bytes(), StandardCharsets.UTF_8));
+        @SuppressWarnings("unchecked")
+        Map<String, Object> server = (Map<String, Object>) jsonRoot.get("server");
+        check(server.get("local").equals("keep"), "JSON merge 必须保留相邻本地配置");
+        @SuppressWarnings("unchecked")
+        Map<String, Object> features = (Map<String, Object>) server.get("features");
+        check(features.containsKey("existing") && features.get("enabled").equals(Boolean.TRUE),
+                "JSON merge 应保留旧对象并合入目标键");
+
+        ReleaseManifestV5.ConfigOperation properties = configOperation("""
+                {
+                  "path":"modsync.properties","op":"config-set","format":"properties",
+                  "key":"requestTimeoutSeconds","valueType":"integer","expected":60,"desired":90,
+                  "missingPolicy":"block","conflictPolicy":"replace-if-expected"
+                }
+                """);
+        ConfigMutationEngine.MutationResult propertiesResult = ConfigMutationEngine.apply(
+                "# local\nrequestTimeoutSeconds=60\nlanguage=zh_cn"
+                        .getBytes(StandardCharsets.UTF_8), properties);
+        check(new String(propertiesResult.bytes(), StandardCharsets.UTF_8)
+                        .equals("# local\nrequestTimeoutSeconds=90\nlanguage=zh_cn"),
+                "properties 更新必须保留无关行且不凭空增加末尾换行");
+
+        ReleaseManifestV5.ConfigOperation keepLocal = configOperation("""
+                {
+                  "path":"config/example.toml","op":"config-set","format":"toml",
+                  "key":"enabled","valueType":"boolean","expected":false,"desired":true,
+                  "missingPolicy":"block","conflictPolicy":"keep-local"
+                }
+                """);
+        byte[] localBytes = "enabled = true\n".getBytes(StandardCharsets.UTF_8);
+        ConfigMutationEngine.MutationResult kept = ConfigMutationEngine.apply(localBytes, keepLocal);
+        check(!kept.changed() && Arrays.equals(kept.bytes(), localBytes)
+                        && kept.outcome().equals("kept-local"),
+                "用户已修改的配置在 keep-local 策略下必须原样保留");
+
+        ReleaseManifestV5.ConfigOperation missingSkip = configOperation("""
+                {
+                  "path":"config/example.toml","op":"config-set","format":"toml",
+                  "key":"missing","valueType":"boolean","expected":false,"desired":true,
+                  "missingPolicy":"skip","conflictPolicy":"block"
+                }
+                """);
+        ConfigMutationEngine.MutationResult skipped = ConfigMutationEngine.apply(localBytes, missingSkip);
+        check(!skipped.changed() && skipped.outcome().equals("skipped-missing"),
+                "missingPolicy=skip 不得创建未知配置键");
+
+        expectFailure(() -> ConfigMutationEngine.apply(
+                "enabled = true\nenabled = false\n".getBytes(StandardCharsets.UTF_8), keepLocal));
+        expectFailure(() -> ConfigMutationEngine.apply(new byte[]{(byte) 0xC3, (byte) 0x28}, keepLocal));
+        pass("structured config OTA preserves local data and fails closed on ambiguity");
+    }
+
+    private static ReleaseManifestV5.ConfigOperation configOperation(String operationJson) {
+        String manifest = """
+                {
+                  "schema":5,
+                  "releaseId":"config-test",
+                  "releaseSequence":1,
+                  "minimumMCSyncVersion":"2.0.0",
+                  "files":[{
+                    "path":"mods/anchor.jar",
+                    "sha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                    "size":1,
+                    "kind":"mod"
+                  }],
+                  "configOperations":[%s]
+                }
+                """.formatted(operationJson);
+        return ReleaseManifestV5.parse(manifest.getBytes(StandardCharsets.UTF_8))
+                .configOperations().getFirst();
     }
 
     private void testManifestGenerationAndParsing() throws Exception {
