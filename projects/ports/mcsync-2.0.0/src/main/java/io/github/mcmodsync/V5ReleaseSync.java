@@ -41,7 +41,7 @@ final class V5ReleaseSync {
         } catch (IllegalArgumentException failure) {
             throw new IOException("MCSync v5 清单无效: " + failure.getMessage(), failure);
         }
-        if (compareVersions(BuildInfo.VERSION, manifest.minimumMcsyncVersion()) < 0) {
+        if (VersionOrder.compare(BuildInfo.VERSION, manifest.minimumMcsyncVersion()) < 0) {
             throw new IOException("该发布要求 MCSync >= " + manifest.minimumMcsyncVersion()
                     + "，当前为 " + BuildInfo.VERSION);
         }
@@ -69,24 +69,4 @@ final class V5ReleaseSync {
         return new SyncResult(SyncResult.Status.UPDATED, result.installed(), result.removed(), 0);
     }
 
-    private static int compareVersions(String left, String right) {
-        String[] leftParts = left.split("[.-]");
-        String[] rightParts = right.split("[.-]");
-        int count = Math.max(leftParts.length, rightParts.length);
-        for (int index = 0; index < count; index++) {
-            int leftValue = index < leftParts.length ? numeric(leftParts[index]) : 0;
-            int rightValue = index < rightParts.length ? numeric(rightParts[index]) : 0;
-            int compared = Integer.compare(leftValue, rightValue);
-            if (compared != 0) return compared;
-        }
-        return 0;
-    }
-
-    private static int numeric(String value) {
-        try {
-            return Integer.parseInt(value.replaceAll("\\D.*$", ""));
-        } catch (NumberFormatException ignored) {
-            return 0;
-        }
-    }
 }

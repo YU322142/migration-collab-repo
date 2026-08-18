@@ -47,6 +47,7 @@ public final class AllTests {
         testStructuredConfigMutationEngine();
         testV5AtomicReleaseTransactionAndOwnership();
         testV5CoordinatorDownloadsBeforeStartupAndBecomesIdempotent();
+        testV5PublisherProjectBuildsDeterministicRelease();
         testManifestGenerationAndParsing();
         testFabricModIdAndV1Compatibility();
         testNeoForgeMetadataAndUniversalBootstrap();
@@ -583,6 +584,59 @@ public final class AllTests {
             pass("v5 coordinator downloads pre-start and remains idempotent");
         } finally {
             if (server != null) server.stop(0);
+            deleteTree(root);
+        }
+    }
+
+    private void testV5PublisherProjectBuildsDeterministicRelease() throws Exception {
+        Path root = Files.createTempDirectory("mcsync-v5-publisher-");
+        try {
+            byte[] custom = "custom-build".getBytes(StandardCharsets.UTF_8);
+            byte[] upstream = "upstream-build".getBytes(StandardCharsets.UTF_8);
+            Files.createDirectories(root.resolve("mods"));
+            Files.write(root.resolve("mods/custom.jar"), custom);
+            Files.write(root.resolve("mods/upstream.jar"), upstream);
+            Path project = root.resolve("publisher-project.json");
+            Files.writeString(project, """
+                    {
+                      "schema":1,"releaseId":"publisher-1","releaseSequence":100,
+                      "minimumMCSyncVersion":"2.0.0",
+                      "managedScopes":[{"path":"mods","policy":"managed"}],
+                      "files":[
+                        {
+                          "path":"mods/custom.jar","kind":"mod","required":true,
+                          "restartRequired":true,"side":["client"],
+                          "download":{"type":"publisher-hosted","distributionPolicy":"redistributable"}
+                        },
+                        {
+                          "path":"mods/upstream.jar","kind":"mod","required":true,
+                          "restartRequired":true,"side":["client"],
+                          "download":{
+                            "type":"direct","distributionPolicy":"upstream-only",
+                            "endpoints":[{
+                              "url":"https://downloads.example.invalid/upstream.jar",
+                              "role":"official","purpose":"file","region":"global","priority":100
+                            }]
+                          }
+                        }
+                      ],
+                      "configOperations":[]
+                    }
+                    """, StandardCharsets.UTF_8);
+            Path output = root.resolve("release");
+            PublisherProjectV5.Publication publication = PublisherProjectV5.publish(root, project, output);
+            check(publication.hostedFiles() == 1, "发布器只应复制允许二次分发的 publisher-hosted 文件");
+            check(Arrays.equals(Files.readAllBytes(output.resolve("mods/custom.jar")), custom),
+                    "自制/适配模组应被复制到发布目录");
+            check(!Files.exists(output.resolve("mods/upstream.jar")),
+                    "upstream-only 模组不得被发布器二次打包");
+            ReleaseManifestV5 generated = ReleaseManifestV5.parse(Files.readAllBytes(publication.manifestPath()));
+            check(generated.files().get(0).sha256().equals(Hashing.sha256(custom))
+                            && generated.files().get(1).sha256().equals(Hashing.sha256(upstream)),
+                    "发布器必须锁定所有本地验证文件的精确 SHA256");
+            check(Files.isRegularFile(publication.reportPath()), "发布器应输出机器可读审计报告");
+            pass("v5 publisher project separates redistributable and upstream-only files");
+        } finally {
             deleteTree(root);
         }
     }

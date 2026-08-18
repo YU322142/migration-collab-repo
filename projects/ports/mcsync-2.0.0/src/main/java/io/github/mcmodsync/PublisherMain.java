@@ -94,6 +94,35 @@ public final class PublisherMain {
                 return 1;
             }
         }
+        if (arguments.length >= 1 && arguments[0].equals("--publish-v5")) {
+            if (arguments.length != 4) {
+                printUsage();
+                return 2;
+            }
+            try {
+                PublisherProjectV5.Publication publication = PublisherProjectV5.publish(
+                        Path.of(arguments[1]), Path.of(arguments[2]), Path.of(arguments[3]));
+                System.out.println("MCSync v5 release generated: " + publication.manifestPath());
+                return 0;
+            } catch (Exception failure) {
+                System.err.println("MCSync v5 release generation failed: " + failure.getMessage());
+                return 1;
+            }
+        }
+        if (arguments.length >= 1 && arguments[0].equals("--v5-template")) {
+            if (arguments.length != 2) {
+                printUsage();
+                return 2;
+            }
+            try {
+                PublisherProjectV5.writeTemplate(Path.of(arguments[1]));
+                System.out.println("MCSync v5 publisher project template generated: " + arguments[1]);
+                return 0;
+            } catch (Exception failure) {
+                System.err.println("Template generation failed: " + failure.getMessage());
+                return 1;
+            }
+        }
         if (arguments.length >= 1 && arguments[0].equals("--serverlist")) {
             if (arguments.length < 2 || arguments.length > 3) {
                 printUsage();
@@ -254,6 +283,8 @@ public final class PublisherMain {
                 "Keep previous types, platforms, names and descriptions while refreshing current JAR hashes and versions"));
         JButton generateButton = new JButton(text(
                 "编辑必须/推荐模组并生成清单", "Edit required/recommended mods and generate catalog"));
+        JButton v5Button = new JButton(text(
+                "生成 MCSync v5 OTA 发布…", "Build MCSync v5 OTA release…"));
         JButton resourcePackButton = new JButton(text(
                 "为资源包生成 resourcepacks.txt…", "Generate resourcepacks.txt…"));
         JButton serverListButton = new JButton(text(
@@ -287,6 +318,7 @@ public final class PublisherMain {
         form.add(loadPreviousCatalog, constraints);
 
         JPanel actions = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        actions.add(v5Button);
         actions.add(serverListButton);
         actions.add(resourcePackButton);
         actions.add(generateButton);
@@ -431,6 +463,59 @@ public final class PublisherMain {
                                 cause.getMessage(),
                                 text("生成失败", "Generation failed"),
                                 JOptionPane.ERROR_MESSAGE);
+                    }
+                }
+            }.execute();
+        });
+
+        v5Button.addActionListener(event -> {
+            Path gameRoot;
+            try {
+                Path selected = Path.of(directoryField.getText()).toAbsolutePath().normalize();
+                gameRoot = selected.getFileName() != null && selected.getFileName().toString().equalsIgnoreCase("mods")
+                        ? selected.getParent() : selected;
+                if (gameRoot == null || !Files.isDirectory(gameRoot)) throw new IllegalArgumentException();
+            } catch (Exception failure) {
+                JOptionPane.showMessageDialog(frame,
+                        text("请先选择客户端的 mods 目录或游戏根目录。", "Choose the client mods or game root first."),
+                        text("缺少目录", "Missing directory"), JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+            JFileChooser projectChooser = new JFileChooser(gameRoot.toFile());
+            projectChooser.setDialogTitle(text("选择 v5 发布项目 JSON", "Choose the v5 publisher project JSON"));
+            projectChooser.setFileFilter(new FileNameExtensionFilter("JSON", "json"));
+            if (projectChooser.showOpenDialog(frame) != JFileChooser.APPROVE_OPTION) return;
+            JFileChooser outputChooser = new JFileChooser(gameRoot.toFile());
+            outputChooser.setDialogTitle(text("选择空的发布输出目录", "Choose an empty release output directory"));
+            outputChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+            if (outputChooser.showSaveDialog(frame) != JFileChooser.APPROVE_OPTION) return;
+            Path project = projectChooser.getSelectedFile().toPath();
+            Path output = outputChooser.getSelectedFile().toPath();
+            Path finalGameRoot = gameRoot;
+            v5Button.setEnabled(false);
+            log.append("\nMCSync v5: " + project + " -> " + output + "\n");
+            new SwingWorker<PublisherProjectV5.Publication, Void>() {
+                @Override
+                protected PublisherProjectV5.Publication doInBackground() throws Exception {
+                    return PublisherProjectV5.publish(finalGameRoot, project, output);
+                }
+
+                @Override
+                protected void done() {
+                    v5Button.setEnabled(true);
+                    try {
+                        PublisherProjectV5.Publication publication = get();
+                        log.append(text("v5 发布完成：", "v5 release completed: ")
+                                + publication.manifestPath() + "\n");
+                        JOptionPane.showMessageDialog(frame,
+                                text("v5 OTA 发布目录已生成，并完成哈希与分发策略校验。",
+                                        "The v5 OTA release directory was generated and validated."),
+                                text("发布完成", "Release complete"), JOptionPane.INFORMATION_MESSAGE);
+                    } catch (Exception failure) {
+                        Throwable cause = failure.getCause() == null ? failure : failure.getCause();
+                        log.append(text("v5 发布失败：", "v5 release failed: ") + cause.getMessage() + "\n");
+                        JOptionPane.showMessageDialog(frame, cause.getMessage(),
+                                text("发布失败", "Release failed"), JOptionPane.ERROR_MESSAGE);
                     }
                 }
             }.execute();
@@ -646,6 +731,12 @@ public final class PublisherMain {
         System.out.println(text(
                 "  java -jar MCSync.jar --upgrade-v2 <mods目录> [mods.txt输出路径]",
                 "  java -jar MCSync.jar --upgrade-v2 <mods-directory> [mods.txt-output]"));
+        System.out.println(text(
+                "  java -jar MCSync.jar --v5-template <项目JSON输出路径>",
+                "  java -jar MCSync.jar --v5-template <publisher-project-json-output>"));
+        System.out.println(text(
+                "  java -jar MCSync.jar --publish-v5 <游戏根目录> <项目JSON> <空输出目录>",
+                "  java -jar MCSync.jar --publish-v5 <game-root> <project-json> <empty-output-directory>"));
         System.out.println(text(
                 "  语言：-Dmodsync.language=zh_cn 或 -Dmodsync.language=en_us",
                 "  Language: -Dmodsync.language=zh_cn or -Dmodsync.language=en_us"));

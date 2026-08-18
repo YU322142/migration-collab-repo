@@ -147,6 +147,17 @@ final class ReleaseTransactionEngine {
             if (!Hashing.sha256(staged).equals(desiredHashes.get(entry.getKey()))) {
                 throw new IOException("暂存后复核失败: " + entry.getKey());
             }
+            if (entry.getKey().toLowerCase(java.util.Locale.ROOT).endsWith(".jar")
+                    && ModMetadata.readModId(staged).equals(BuildInfo.TECHNICAL_MOD_ID)) {
+                String candidateVersion = ModMetadata.readVersion(staged);
+                if (candidateVersion.isBlank()) {
+                    throw new IOException("MCSync 自更新候选缺少可读版本元数据");
+                }
+                if (VersionOrder.compare(candidateVersion, BuildInfo.VERSION) < 0) {
+                    throw new IOException("拒绝通过 v5 发布降级 MCSync: " + candidateVersion
+                            + " < " + BuildInfo.VERSION);
+                }
+            }
         }
 
         List<BackupEntry> backups = new ArrayList<>();
