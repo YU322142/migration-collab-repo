@@ -53,12 +53,14 @@ final class ManagedPathPolicy {
     }
 
     boolean isManaged(String relative) {
-        return scopes.stream().anyMatch(scope -> scope.policy().equals("managed") && within(scope.path(), relative));
+        return policyFor(relative).equals("managed");
     }
 
     String policyFor(String relative) {
         return scopes.stream()
                 .filter(scope -> within(scope.path(), relative))
+                .sorted(java.util.Comparator.comparingInt(
+                        (ReleaseManifestV5.ManagedScope scope) -> scope.path().length()).reversed())
                 .map(ReleaseManifestV5.ManagedScope::policy)
                 .findFirst()
                 .orElse("additive");

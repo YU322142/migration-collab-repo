@@ -56,6 +56,7 @@ final class PublisherProjectV5 {
         List<Object> files = array(source.get("files"), "files");
         ArrayList<Object> generatedFiles = new ArrayList<>();
         LinkedHashMap<String, Path> localFiles = new LinkedHashMap<>();
+        PublisherPlatformResolver platformResolver = new PublisherPlatformResolver();
         for (Object raw : files) {
             Map<String, Object> file = object(raw, "files[]");
             requireKeys(file.keySet(), FILE_KEYS, "files[]");
@@ -65,9 +66,25 @@ final class PublisherProjectV5 {
             if (!Files.isRegularFile(local, LinkOption.NOFOLLOW_LINKS)) {
                 throw new IOException("发布项目中的文件不存在或不是普通文件: " + relative);
             }
+            byte[] localBytes = Files.readAllBytes(local);
+            if ((relative.startsWith("config/") || relative.startsWith("defaultconfigs/")
+                    || relative.startsWith("kubejs/config/"))
+                    && SensitiveDataPolicy.looksLikeCredentialDocument(localBytes)) {
+                throw new IOException("检测到可能含凭据的配置文件，禁止整文件进入发布目录；请改用非敏感键级 OTA: " + relative);
+            }
             LinkedHashMap<String, Object> generated = new LinkedHashMap<>(file);
-            generated.put("sha256", Hashing.sha256(local));
-            generated.put("size", Files.size(local));
+            if (generated.get("download") instanceof Map<?, ?> download) {
+                @SuppressWarnings("unchecked")
+                Map<String, Object> typedDownload = (Map<String, Object>) download;
+                try {
+                    generated.put("download", platformResolver.resolve(typedDownload));
+                } catch (InterruptedException interrupted) {
+                    Thread.currentThread().interrupt();
+                    throw new IOException("解析平台固定下载地址时被中断", interrupted);
+                }
+            }
+            generated.put("sha256", Hashing.sha256(localBytes));
+            generated.put("size", localBytes.length);
             generatedFiles.add(generated);
             localFiles.put(relative, local);
         }
@@ -99,8 +116,8 @@ final class PublisherProjectV5 {
         report.put("schema", 1);
         report.put("status", "PASS");
         report.put("generatedAt", Instant.now().toString());
-        report.put("sourceRoot", root.toString());
-        report.put("project", project.toString());
+        report.put("sourceRoot", "<local-game-root>");
+        report.put("project", project.getFileName().toString());
         report.put("releaseId", manifest.releaseId());
         report.put("releaseSequence", manifest.releaseSequence());
         report.put("manifestSha256", Hashing.sha256(manifestPath));

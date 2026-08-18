@@ -124,11 +124,12 @@ record ReleaseManifestV5(
         }
 
         List<ConfigOperation> configOperations = new ArrayList<>();
+        Set<String> configTargets = new HashSet<>();
         for (Object value : optionalArray(root, "configOperations")) {
             Map<String, Object> operation = object(value, "configOperations[]");
             requireOnlyKeys(operation, "configOperations[]", Set.of(
                     "path", "op", "format", "key", "valueType", "expected", "desired",
-                    "missingPolicy", "conflictPolicy", "side", "phase", "restartRequired"));
+                    "expectedSha256", "missingPolicy", "conflictPolicy", "side", "phase", "restartRequired"));
             String path = safeRelativePath(string(operation, "path"));
             String type = oneOf(string(operation, "op"), CONFIG_OPERATIONS, "配置 op");
             String format = oneOf(string(operation, "format"), CONFIG_FORMATS, "配置 format");
@@ -136,6 +137,13 @@ record ReleaseManifestV5(
             if (!type.equals("file-replace") && key.isBlank()) {
                 throw new IllegalArgumentException(type + " 必须声明 key");
             }
+            if (!type.equals("file-replace")) SensitiveDataPolicy.rejectSensitiveConfigKey(key);
+            String configTarget = (path + "#" + (type.equals("file-replace") ? "<file>" : key))
+                    .toLowerCase(Locale.ROOT);
+            if (!configTargets.add(configTarget)) {
+                throw new IllegalArgumentException("清单包含重复配置操作目标: " + path + "#" + key);
+            }
+            String expectedSha256 = optionalString(operation, "expectedSha256").toLowerCase(Locale.ROOT);
             String valueType = oneOf(
                     optionalString(operation, "valueType", type.equals("file-replace") ? "binary" : "string"),
                     VALUE_TYPES,
@@ -159,9 +167,9 @@ record ReleaseManifestV5(
             if (!operation.containsKey("desired")) {
                 throw new IllegalArgumentException("配置操作缺少 desired: " + path + "#" + key);
             }
-            validateConfigOperation(type, format, valueType, expected, desired, path, key);
+            validateConfigOperation(type, format, valueType, expected, desired, expectedSha256, path, key);
             configOperations.add(new ConfigOperation(
-                    path, type, format, key, valueType, expected, desired, missingPolicy,
+                    path, type, format, key, valueType, expected, desired, expectedSha256, missingPolicy,
                     conflictPolicy, side, phase, restartRequired));
         }
         return new ReleaseManifestV5(
@@ -228,6 +236,7 @@ record ReleaseManifestV5(
             String valueType,
             Object expected,
             Object desired,
+            String expectedSha256,
             String missingPolicy,
             String conflictPolicy,
             Set<String> side,
@@ -378,6 +387,7 @@ record ReleaseManifestV5(
         result.put("valueType", operation.valueType());
         result.put("expected", operation.expected());
         result.put("desired", operation.desired());
+        if (!operation.expectedSha256().isBlank()) result.put("expectedSha256", operation.expectedSha256());
         result.put("missingPolicy", operation.missingPolicy());
         result.put("conflictPolicy", operation.conflictPolicy());
         result.put("side", operation.side().stream().sorted().toList());
@@ -392,6 +402,7 @@ record ReleaseManifestV5(
             String valueType,
             Object expected,
             Object desired,
+            String expectedSha256,
             String path,
             String key) {
         if (!operation.equals("file-replace") && Set.of("json5", "snbt", "text", "binary").contains(format)) {
@@ -400,6 +411,13 @@ record ReleaseManifestV5(
         }
         if (operation.equals("file-replace") && !key.isBlank()) {
             throw new IllegalArgumentException("file-replace 不能声明结构化 key: " + path);
+        }
+        if (operation.equals("file-replace")
+                && !(expectedSha256.equals("absent") || SHA256.matcher(expectedSha256).matches())) {
+            throw new IllegalArgumentException("file-replace 必须声明 64 位 expectedSha256 或 absent: " + path);
+        }
+        if (!operation.equals("file-replace") && !expectedSha256.isBlank()) {
+            throw new IllegalArgumentException("只有 file-replace 可以声明 expectedSha256: " + path);
         }
         if (!operation.equals("file-replace") && !matchesValueType(desired, valueType)) {
             throw new IllegalArgumentException("配置 desired 与 valueType 不匹配: " + path + "#" + key);

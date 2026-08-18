@@ -4,6 +4,7 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpServer;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.URI;
@@ -43,6 +44,8 @@ public final class AllTests {
         testV5PlatformDownloadSourcesAndMirrorTrustBoundary();
         testV5CustomBuildUsesPublisherHostedDistribution();
         testChinaApiMirrorPresetsRemainExplicitThirdPartyCandidates();
+        testPublisherResolvesCurseForgeWithoutLeakingCredentials();
+        testV5MirrorHashFailureFallsBackToOfficialCandidate();
         testReleaseSequenceAntiDowngradeGate();
         testStructuredConfigMutationEngine();
         testV5AtomicReleaseTransactionAndOwnership();
@@ -111,6 +114,76 @@ public final class AllTests {
         pass("MCSync branding preserves the legacy technical upgrade identity");
     }
 
+    private void testPublisherResolvesCurseForgeWithoutLeakingCredentials() throws Exception {
+        HttpServer server = HttpServer.create(new InetSocketAddress(InetAddress.getLoopbackAddress(), 0), 0);
+        try {
+            server.createContext("/v1/mods/238222/files/987654/download-url", exchange ->
+                    respond(exchange, 200,
+                            "{\"data\":\"https://cdn.example.invalid/files/fixed.jar\"}"
+                                    .getBytes(StandardCharsets.UTF_8),
+                            "application/json"));
+            server.start();
+            String base = "http://127.0.0.1:" + server.getAddress().getPort() + "/v1/";
+            Map<String, Object> resolved = new PublisherPlatformResolver(HttpClient.newHttpClient()).resolve(Map.of(
+                    "type", "curseforge",
+                    "projectId", "238222",
+                    "fileId", new BigDecimal("987654"),
+                    "distributionPolicy", "upstream-only",
+                    "endpoints", List.of(Map.of(
+                            "url", base,
+                            "role", "mirror",
+                            "purpose", "api",
+                            "region", "cn",
+                            "priority", new BigDecimal("10"),
+                            "thirdParty", true))));
+            String serialized = StrictJson.stringify(resolved);
+            check(serialized.contains("https://cdn.example.invalid/files/fixed.jar")
+                            && !serialized.toLowerCase(Locale.ROOT).contains("api-key")
+                            && !serialized.toLowerCase(Locale.ROOT).contains("x-api-key"),
+                    "发布器应把固定 fileId 解析成无凭据下载候选，绝不把 API key 写进清单");
+            pass("publisher resolves CurseForge file IDs without leaking credentials");
+        } finally {
+            server.stop(0);
+        }
+    }
+
+    private void testV5MirrorHashFailureFallsBackToOfficialCandidate() throws Exception {
+        Path root = Files.createTempDirectory("mcsync-v5-source-fallback-");
+        HttpServer server = HttpServer.create(new InetSocketAddress(InetAddress.getLoopbackAddress(), 0), 0);
+        try {
+            byte[] expected = "official-fixed-build".getBytes(StandardCharsets.UTF_8);
+            AtomicInteger mirrorRequests = new AtomicInteger();
+            AtomicInteger officialRequests = new AtomicInteger();
+            server.createContext("/mirror.jar", exchange -> {
+                mirrorRequests.incrementAndGet();
+                respond(exchange, 200, "corrupted-mirror".getBytes(StandardCharsets.UTF_8), null);
+            });
+            server.createContext("/official.jar", exchange -> {
+                officialRequests.incrementAndGet();
+                respond(exchange, 200, expected, null);
+            });
+            server.start();
+            String base = "http://127.0.0.1:" + server.getAddress().getPort();
+            ReleaseManifestV5.FileEntry entry = new ReleaseManifestV5.FileEntry(
+                    "mods/fixed.jar", Hashing.sha256(expected), expected.length, "mod", true, true,
+                    Set.of("client"),
+                    new ReleaseManifestV5.DownloadSource(
+                            "direct", "", "", null, "upstream-only", List.of(
+                            new ReleaseManifestV5.DownloadEndpoint(
+                                    URI.create(base + "/mirror.jar"), "mirror", "file", "cn", 10, true),
+                            new ReleaseManifestV5.DownloadEndpoint(
+                                    URI.create(base + "/official.jar"), "official", "file", "global", 100, false))));
+            ModSyncConfig config = config(root, URI.create(base + "/manifest.json"), false, false);
+            byte[] actual = new ReleaseArtifactResolver(config, message -> { }).fetch(entry);
+            check(Arrays.equals(actual, expected) && mirrorRequests.get() == 1 && officialRequests.get() == 1,
+                    "镜像返回错误内容时必须由 SHA256 拒绝并回退官方固定候选");
+            pass("v5 mirror hash failures fall back to the official candidate");
+        } finally {
+            server.stop(0);
+            deleteTree(root);
+        }
+    }
+
     private void testV5ReleaseManifestParsingAndValidation() {
         String manifestText = """
                 {
@@ -161,6 +234,14 @@ public final class AllTests {
                 .getBytes(StandardCharsets.UTF_8)));
         expectFailure(() -> ReleaseManifestV5.parse(manifestText
                 .replace("\"schema\": 5,", "\"schema\": 5,\n  \"typoField\": true,")
+                .getBytes(StandardCharsets.UTF_8)));
+        expectFailure(() -> ReleaseManifestV5.parse(manifestText
+                .replace("features.safeMode", "security.apiToken")
+                .getBytes(StandardCharsets.UTF_8)));
+        expectFailure(() -> ReleaseManifestV5.parse(manifestText
+                .replace("\"configOperations\": [", "\"configOperations\": [{"
+                        + "\"path\":\"kubejs/startup_scripts/a.js\",\"op\":\"file-replace\","
+                        + "\"format\":\"text\",\"desired\":\"from-file-entry\"},")
                 .getBytes(StandardCharsets.UTF_8)));
         pass("v5 release manifest parsing, config operations, and unsafe-input rejection");
     }
@@ -527,6 +608,50 @@ public final class AllTests {
             });
             check(Files.readString(root.resolve("options.txt")).equals("user-options") && fetched.get() == 1,
                     "first-install 文件已存在时必须保留且不得下载覆盖");
+
+            Path script = root.resolve("kubejs/startup_scripts/controlled.js");
+            Files.createDirectories(script.getParent());
+            byte[] oldScript = "old-script\n".getBytes(StandardCharsets.UTF_8);
+            byte[] newScript = "new-script\n".getBytes(StandardCharsets.UTF_8);
+            Files.write(script, oldScript);
+            ReleaseManifestV5 fileReplace = ReleaseManifestV5.parse(("""
+                    {
+                      "schema":5,"releaseId":"tx-file-replace","releaseSequence":14,
+                      "minimumMCSyncVersion":"2.0.0",
+                      "managedScopes":[{"path":"kubejs","policy":"additive"}],
+                      "files":[%s],
+                      "configOperations":[{
+                        "path":"kubejs/startup_scripts/controlled.js","op":"file-replace","format":"text",
+                        "valueType":"binary","expectedSha256":"%s","desired":"from-file-entry",
+                        "missingPolicy":"block","conflictPolicy":"replace-if-expected"
+                      }]
+                    }
+                    """).formatted(
+                    fileJson("kubejs/startup_scripts/controlled.js", newScript), Hashing.sha256(oldScript))
+                    .getBytes(StandardCharsets.UTF_8));
+            engine.apply(fileReplace, Hashing.sha256(fileReplace.serialize()), entry -> newScript);
+            check(Arrays.equals(Files.readAllBytes(script), newScript),
+                    "file-replace 只有在旧 SHA 前像精确匹配时才应提交");
+
+            ReleaseManifestV5 wrongPreimage = ReleaseManifestV5.parse(("""
+                    {
+                      "schema":5,"releaseId":"tx-file-replace-wrong","releaseSequence":15,
+                      "minimumMCSyncVersion":"2.0.0",
+                      "managedScopes":[{"path":"kubejs","policy":"additive"}],
+                      "files":[%s],
+                      "configOperations":[{
+                        "path":"kubejs/startup_scripts/controlled.js","op":"file-replace","format":"text",
+                        "valueType":"binary","expectedSha256":"%s","desired":"from-file-entry"
+                      }]
+                    }
+                    """).formatted(
+                    fileJson("kubejs/startup_scripts/controlled.js", oldScript), Hashing.sha256(oldScript))
+                    .getBytes(StandardCharsets.UTF_8));
+            expectIoFailure(() -> engine.apply(
+                    wrongPreimage, Hashing.sha256(wrongPreimage.serialize()), entry -> oldScript));
+            check(Arrays.equals(Files.readAllBytes(script), newScript)
+                            && new ReleaseSequenceGate(root.resolve(".modsync")).read().releaseSequence() == 14,
+                    "file-replace 前像不符必须保持当前文件并禁止推进发布序号");
             pass("v5 release transaction is atomic, ownership-aware, and save-state safe");
         } finally {
             deleteTree(root);

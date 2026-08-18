@@ -122,6 +122,12 @@ final class ReleaseTransactionEngine {
                 if (!desired.containsKey(operation.path())) {
                     throw new IOException("file-replace 缺少同路径文件条目: " + operation.path());
                 }
+                boolean exists = Files.isRegularFile(target);
+                if (operation.expectedSha256().equals("absent")) {
+                    if (exists) throw new IOException("file-replace 前像应不存在但目标已存在: " + operation.path());
+                } else if (!exists || !Hashing.sha256(target).equals(operation.expectedSha256())) {
+                    throw new IOException("file-replace 目标前像 SHA256 不匹配: " + operation.path());
+                }
                 continue;
             }
             byte[] base = desired.get(operation.path());
