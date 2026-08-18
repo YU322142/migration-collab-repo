@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-16T01:33:42.562711+00:00",
+  "generated_at": "2026-08-18T06:58:27.789790+00:00",
   "self_excluded": "repository-manifest.json",
   "files": [
     {
@@ -124,9 +124,29 @@
       "sha256": "8755CBBCBF8A24CF7935F081C9A18F3BD69F1CA5ECD7F29281F699A8B53CA63C"
     },
     {
+      "path": "docs/MODULE-CATALOG.md",
+      "bytes": 6427,
+      "sha256": "1CAD0670A6CAD40129019EAE92896332D618AAE04C022E146BDCEFE79733DBDF"
+    },
+    {
+      "path": "docs/MODULE-FILE-INDEX.md",
+      "bytes": 18354,
+      "sha256": "8AFF34EC5F85766EC71A2751FA35E0AC7799ED65946249804FF57618F996CD72"
+    },
+    {
+      "path": "docs/MODULE-INTERNAL-REFACTOR-MAP.md",
+      "bytes": 9382,
+      "sha256": "BEB91493CB546A7C09089814B25D6EC83A015DC4AC81C7F687B60FAFA541CF8D"
+    },
+    {
       "path": "docs/REPOSITORY-OPERATIONS.md",
       "bytes": 1558,
       "sha256": "8DF5A0607D5386C34381C2DDD6E2EE6FF403FAEB64AEAD0A3BE8BC8831C8969A"
+    },
+    {
+      "path": "docs/SCRIPT-DOMAIN-CATALOG.md",
+      "bytes": 4562,
+      "sha256": "0A6DD9F10A4D6F2733E801D61412DD547A28E4D71098087372094DA0E8A9FB68"
     },
     {
       "path": "docs/SECURITY-NOTES.md",
@@ -162,6 +182,11 @@
       "path": "docs/VALIDATION-20260815.md",
       "bytes": 1199,
       "sha256": "46BFCCC921FB29215B488A05EE23E63026CEB6BD117E8FABA6B93C969CADE9DC"
+    },
+    {
+      "path": "migration-collab-repo.zip",
+      "bytes": 206953240,
+      "sha256": "D3F8F684A99A4343C9D475593F6C05396A7EDC64CEF8AD45A4D21333AE618526"
     },
     {
       "path": "outputs/projects/cctweaked-startup-shutdown-guard-neoforge/build.gradle",
@@ -2304,6 +2329,11 @@
       "sha256": "5BEADB7D2C238F50662013AAA7A0C9AA70A01ABEBB7E5064B0BF5AFD77E6F923"
     },
     {
+      "path": "outputs/tools/build_c6c_singleplayer_parity.py",
+      "bytes": 7312,
+      "sha256": "E6B9C4718C53A771816A2EDF35C474CE44FF56B79D29FD361F9FDA497A0E0987"
+    },
+    {
       "path": "outputs/tools/build_candidate11_guard_cc_bundles.py",
       "bytes": 43611,
       "sha256": "9CD273A2AA2BB57B24689B621F744147F4860693C3526823DE72D8BE9560EB9D"
@@ -3229,6 +3259,11 @@
       "sha256": "4C8E3C7D715D0EF4341A04951BFB4FB261C76DB7FBD31C38A43A5661F1B8D91E"
     },
     {
+      "path": "outputs/tools/test_build_c6c_singleplayer_parity.py",
+      "bytes": 2885,
+      "sha256": "6DA1A12BB1B4B9F138A1C143E76330D3E9EB4262FE0B75460292669B7990B5CE"
+    },
+    {
       "path": "outputs/tools/test_build_candidate11_guard_cc_bundles.py",
       "bytes": 13341,
       "sha256": "F4CE162D94ABB4B13B3E8CD34785AFD15074E7A56B7501DFDFAD040A5732150D"
@@ -3287,6 +3322,11 @@
       "path": "outputs/tools/test_candidate14_release_gate.py",
       "bytes": 12418,
       "sha256": "1D6C73719C9981093458B15A6F84B194F1E16E2FFFC7A6F4E84E74BA33E14B0E"
+    },
+    {
+      "path": "outputs/tools/test_chain_and_pale_oak_tags.py",
+      "bytes": 1038,
+      "sha256": "2A4C472E606909E2E4DDCEAB40408B66C6942C2164350EB503EE9350115C65B8"
     },
     {
       "path": "outputs/tools/test_convert_create_fluid_nbt.py",
@@ -5085,8 +5125,8 @@
     },
     {
       "path": "pack/client-config/ftbquests/quests/lang/en_us.snbt",
-      "bytes": 61443,
-      "sha256": "852A77D70E7F4C6FB92E7D5BE1636CCF66DF349209CEC27B539AE840125B46D6"
+      "bytes": 61446,
+      "sha256": "E945E60F9297025C52286D09B67244C5B17DB6E77A6945AA69D89B12CD8CEACE"
     },
     {
       "path": "pack/client-config/ftbquests/quests/lang/th_th.snbt",
@@ -5095,8 +5135,8 @@
     },
     {
       "path": "pack/client-config/ftbquests/quests/lang/zh_cn.snbt",
-      "bytes": 52068,
-      "sha256": "8098F68B05EB748BE950247A8525A8A97C47C6DEC00AA4E687F7CEE9F5E2B1EF"
+      "bytes": 52081,
+      "sha256": "673E03B6EEB42171BBF06E52C905F3C9E56CDCE258C94CD715C988EF4113DD09"
     },
     {
       "path": "pack/client-config/ftbquests/quests/reward_tables/0DA6727500F2701E.snbt",
@@ -14635,8 +14675,8 @@
     },
     {
       "path": "pack/server-config/ftbquests/quests/lang/en_us.snbt",
-      "bytes": 61443,
-      "sha256": "852A77D70E7F4C6FB92E7D5BE1636CCF66DF349209CEC27B539AE840125B46D6"
+      "bytes": 61446,
+      "sha256": "E945E60F9297025C52286D09B67244C5B17DB6E77A6945AA69D89B12CD8CEACE"
     },
     {
       "path": "pack/server-config/ftbquests/quests/lang/th_th.snbt",
@@ -14645,8 +14685,8 @@
     },
     {
       "path": "pack/server-config/ftbquests/quests/lang/zh_cn.snbt",
-      "bytes": 52068,
-      "sha256": "8098F68B05EB748BE950247A8525A8A97C47C6DEC00AA4E687F7CEE9F5E2B1EF"
+      "bytes": 52081,
+      "sha256": "673E03B6EEB42171BBF06E52C905F3C9E56CDCE258C94CD715C988EF4113DD09"
     },
     {
       "path": "pack/server-config/ftbquests/quests/reward_tables/0DA6727500F2701E.snbt",
@@ -20429,9 +20469,24 @@
       "sha256": "D2B0F4E392D11373523947963BB11A89B47055E57C36B2D787AD2613EC973C03"
     },
     {
+      "path": "pack/server-kubejs/data/minecraft/tags/block/block.zip",
+      "bytes": 1092,
+      "sha256": "0C067E290D3261521AB921818BFE611666D56E7DF17CAD3FC1E6989F7E192431"
+    },
+    {
       "path": "pack/server-kubejs/data/minecraft/tags/block/deepslate_ore_replaceables.json",
       "bytes": 71,
       "sha256": "40DCED9D79A868041BBD60D40AA581F909F56D9B854C6EE61E338B69B311625F"
+    },
+    {
+      "path": "pack/server-kubejs/data/minecraft/tags/block/logs.json",
+      "bytes": 181,
+      "sha256": "3D2283F1420A3EB3B388519B8996AF510DA04EFC0647041496649BA533CF6078"
+    },
+    {
+      "path": "pack/server-kubejs/data/minecraft/tags/block/logs_that_burn.json",
+      "bytes": 181,
+      "sha256": "3D2283F1420A3EB3B388519B8996AF510DA04EFC0647041496649BA533CF6078"
     },
     {
       "path": "pack/server-kubejs/data/minecraft/tags/block/mangrove_logs.json",
@@ -20440,8 +20495,13 @@
     },
     {
       "path": "pack/server-kubejs/data/minecraft/tags/block/mineable/pickaxe.json",
-      "bytes": 172,
-      "sha256": "B83D8E599F3B70EEC0D920F84BCB9381B66C468465B69BBDAC8F506CCEACC600"
+      "bytes": 196,
+      "sha256": "47157D6FEB3C44A42CA9627BF1060C80EFA1551088D91762C3E9195C3562D9AC"
+    },
+    {
+      "path": "pack/server-kubejs/data/minecraft/tags/block/needs_stone_tool.json",
+      "bytes": 64,
+      "sha256": "E79CD9CA81EC426DF489685700180AE19C0D94287186C7CB62AABBF61C1E21E9"
     },
     {
       "path": "pack/server-kubejs/data/minecraft/tags/block/sand.json",
@@ -121210,8 +121270,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2101,
-      "sha256": "D9D9E79A61D645CD4D6576FF9E8B480DBB71E15505EE5C5B7FB874798274E593"
+      "bytes": 2229,
+      "sha256": "2390CB94BAAAE9900E9359F1BCBB892A908327D48B0B6DE316F4978D1A79C792"
     },
     {
       "path": "reports/current-20260815/ALLOWLIST-MANIFEST.json",
