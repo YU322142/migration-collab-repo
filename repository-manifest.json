@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-18T08:39:36.251106+00:00",
+  "generated_at": "2026-08-18T09:23:14.390908+00:00",
   "self_excluded": "repository-manifest.json",
   "files": [
     {
@@ -20,8 +20,8 @@
     },
     {
       "path": "artifacts/client-baselines/motiquies-2.0.0-mods.json",
-      "bytes": 46694,
-      "sha256": "7C0622B9D4723B059094D0810073CBC38B85117B2F579DF0B3D1803916007E29"
+      "bytes": 46896,
+      "sha256": "1DBAF166A8F62FBCF27C8ED0B89C079AC930EABAD7A1441C74B1C71125D96A1F"
     },
     {
       "path": "artifacts/EXTERNAL-ARTIFACTS.json",
@@ -125,8 +125,8 @@
     },
     {
       "path": "docs/CLIENT-AUTHORITY-POLICY.md",
-      "bytes": 1641,
-      "sha256": "E3DA1E1295D96328EC401B1327BF05D63D5BCF466BF876A1654821F9D5E25C6C"
+      "bytes": 1906,
+      "sha256": "06C6AA4DBE60EFE8C0A5F51BE3B7BF81F9300D7C5AB5E3EEF492182A3D06041B"
     },
     {
       "path": "docs/KNOWN-ISSUES.md",
@@ -135,13 +135,13 @@
     },
     {
       "path": "docs/MODULE-CATALOG.md",
-      "bytes": 6427,
-      "sha256": "1CAD0670A6CAD40129019EAE92896332D618AAE04C022E146BDCEFE79733DBDF"
+      "bytes": 6709,
+      "sha256": "FA26853B26869F113DA87FB7E19336717EB404E735217FEACFC6B365D6A9EDA7"
     },
     {
       "path": "docs/MODULE-FILE-INDEX.md",
-      "bytes": 18354,
-      "sha256": "8AFF34EC5F85766EC71A2751FA35E0AC7799ED65946249804FF57618F996CD72"
+      "bytes": 19439,
+      "sha256": "BFB28A3E0C68F17F9DB40AB82CD28ED3818EDAABE3CCE9D9535D994E56E974AD"
     },
     {
       "path": "docs/MODULE-INTERNAL-REFACTOR-MAP.md",
@@ -1364,6 +1364,46 @@
       "sha256": "4E9D60DCB0675E497BFA084A8156619E0A03B0C03EC2B90372D5790EE941E623"
     },
     {
+      "path": "outputs/projects/hardcore-revival-death-message-fix-neoforge/build.gradle",
+      "bytes": 988,
+      "sha256": "18B67FAFCF907C1C311C7C2293D09BB524EACF5C2A26BDDF88718C344F86542F"
+    },
+    {
+      "path": "outputs/projects/hardcore-revival-death-message-fix-neoforge/gradle.properties",
+      "bytes": 640,
+      "sha256": "CC4B9B058C6FDAE224A41E4267F640B966F48A633DFF819FB2B37231B1F56E37"
+    },
+    {
+      "path": "outputs/projects/hardcore-revival-death-message-fix-neoforge/README.md",
+      "bytes": 1557,
+      "sha256": "661B9F5EB9859FDD042A8ED2CFFE2C7D175FF463FCE47B7E97F83B96D7C1B8FE"
+    },
+    {
+      "path": "outputs/projects/hardcore-revival-death-message-fix-neoforge/settings.gradle",
+      "bytes": 283,
+      "sha256": "04A08D37AC96D38916845F047427200399EF0662E930D9F875B34AC0AD88A716"
+    },
+    {
+      "path": "outputs/projects/hardcore-revival-death-message-fix-neoforge/src/main/java/dev/migration/hardcore_revival_death_fix/HardcoreRevivalDeathFix.java",
+      "bytes": 243,
+      "sha256": "8DBB6C5AC12B8B80BE79E712E85B243CB943870D3F9B03061A23157BAF8B058C"
+    },
+    {
+      "path": "outputs/projects/hardcore-revival-death-message-fix-neoforge/src/main/java/dev/migration/hardcore_revival_death_fix/mixin/HardcoreRevivalManagerMixin.java",
+      "bytes": 959,
+      "sha256": "2FBA9EE6AA5064B0DC8291C32F4A6688B1F0D2B720467C70B5C4AC9C3ADFE1F1"
+    },
+    {
+      "path": "outputs/projects/hardcore-revival-death-message-fix-neoforge/src/main/resources/hardcore_revival_death_fix.mixins.json",
+      "bytes": 227,
+      "sha256": "A3F8FEF66D3AEF6547656D6DF7909E09609B2C389DD9629FA4861BF1A58EA72F"
+    },
+    {
+      "path": "outputs/projects/hardcore-revival-death-message-fix-neoforge/src/main/resources/META-INF/neoforge.mods.toml",
+      "bytes": 673,
+      "sha256": "B7F5CF2DB863C15480CAC4499006ED20911D6C62B0FDBE91D329477D07D60651"
+    },
+    {
       "path": "outputs/projects/heightmap-384-to-544-compat-neoforge/build.gradle",
       "bytes": 2998,
       "sha256": "E78951E7324F0F1E1C5E112248178F408018462AA75E7AE1DB787F74C00A7A3D"
@@ -2075,8 +2115,8 @@
     },
     {
       "path": "outputs/tools/apply_singleplayer_gameplay_parity.py",
-      "bytes": 4407,
-      "sha256": "9E919FB6A9EF8F14D90A013C0F689D73DA94F5AC569D3563864CA4BC24C33960"
+      "bytes": 5005,
+      "sha256": "D8A6CB0AD12ADF3BE805F49915E36A0F4D932A0A943B6F379713BDFA18652722"
     },
     {
       "path": "outputs/tools/archive_legacy_roots.py",
@@ -2430,8 +2470,8 @@
     },
     {
       "path": "outputs/tools/build_singleplayer_gameplay_parity.py",
-      "bytes": 10756,
-      "sha256": "B1DE0C8E876CE5E466D570F303DE1CD095520E31A93EB7C887B99C3E198D76A4"
+      "bytes": 11755,
+      "sha256": "17787E6B1AA594ED1B897D8DDAD853F2E0C8238B6FDBF04F5A203A7957D13A39"
     },
     {
       "path": "outputs/tools/build_storage_ota_packages_from_forensics.py",
@@ -3335,8 +3375,8 @@
     },
     {
       "path": "outputs/tools/test_build_singleplayer_gameplay_parity.py",
-      "bytes": 1771,
-      "sha256": "E31075D838A1ECD0AF65C10ED669F6BCCE3C2A168E2167AFB96828C12B87523D"
+      "bytes": 2035,
+      "sha256": "5499568052720F501578086E95D3AC0DBD7F3B5CE692C9E506029D2F84B070E1"
     },
     {
       "path": "outputs/tools/test_candidate13_nbt_audits.py",
@@ -3402,6 +3442,11 @@
       "path": "outputs/tools/test_generate_resource_overlay_render_fixes.py",
       "bytes": 4676,
       "sha256": "2BCC4A29A679F950D186805A0BFC4A184932092C2B6D2E9D5ECD680496056978"
+    },
+    {
+      "path": "outputs/tools/test_hardcore_revival_death_message_fix.py",
+      "bytes": 1146,
+      "sha256": "B934B2BC6FBDCB025667E927308BE355D311EE2234EACEBBA165EC116B1AB5BD"
     },
     {
       "path": "outputs/tools/test_import_candidate12_to_prism.ps1",

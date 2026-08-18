@@ -53,10 +53,20 @@ def apply(overlay: Path, client_root: Path, backup: Path) -> dict[str, object]:
     try:
         for row in files:
             relative = str(row["path"])
+            mode = str(row.get("mode", "replace"))
             source = safe_target(overlay / "overlay", relative)
             target = safe_target(client_root, relative)
             if not source.is_file():
                 raise ApplyError(f"overlay payload missing: {relative}")
+            if mode == "preserve_or_add" and target.exists():
+                if not target.is_file() or sha256_file(target) != str(row["sha256"]).upper():
+                    raise ApplyError(f"protected client file conflict: {relative}")
+                backup_manifest["files"].append(
+                    {"path": relative, "existed": True, "unchanged": True}
+                )
+                continue
+            if mode not in {"replace", "preserve_or_add"}:
+                raise ApplyError(f"unknown overlay mode for {relative}: {mode}")
             if target.exists():
                 backup_target = safe_target(backup, relative)
                 backup_target.parent.mkdir(parents=True, exist_ok=True)

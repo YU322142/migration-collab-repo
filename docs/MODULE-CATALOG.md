@@ -30,6 +30,7 @@
 | 身份与登录 | `projects/ports/trueuuid-login-proxy-fix`、`projects/ports/xiyuslogin-migration`、`projects/patches/xiyuslogin-auto-session-ota` | 正版身份、密码认证、单人世界和专用服务器策略分离；不由历史身份猜测继承认证。 | 服务端主导，客户端配套 |
 | 生命周期保护 | `projects/ports/hotbath-trigger-registry-fix`、`projects/ports/end-client-harness`、`outputs/projects/cctweaked-startup-shutdown-guard-neoforge` | 将启动、注册和关闭期风险收束为明确的策略边界。 | 按模块而定 |
 | 规则保护 | `outputs/projects/deferred-content-protection-neoforge`、`outputs/projects/create-dynamic-blocking-neoforge`、`outputs/projects/create-chute-unload-guard-neoforge` | 对延迟内容、物流和自动化建立可审查的服务端规则。 | 服务端主导 |
+| Hardcore Revival 死亡提示兼容 | `outputs/projects/hardcore-revival-death-message-fix-neoforge` | 只抑制“进入可救援倒地状态”时过早产生的假死亡广播；保留真正死亡、超时提示和 MineAstr 事件上报。 | 双端，依赖 Hardcore Revival |
 | 诊断工程 | `outputs/projects/poi-migration-diagnostic`、`outputs/projects/recipe-set-diagnostic`、`outputs/projects/create-saveddata-probe` | 为迁移判断提供观察点；不是默认玩法内容。 | 诊断专用 |
 
 ## 客户端呈现与交互

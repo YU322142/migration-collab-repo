@@ -1,0 +1,8 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.migration.hardcore_revival_death_fix.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["HardcoreRevivalManagerMixin"],
+  "injectors": {"defaultRequire": 1}
+}

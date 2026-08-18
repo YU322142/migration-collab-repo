@@ -3,7 +3,7 @@
   "authority": "client",
   "instance": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Motiquies - 动静交映 - 2.0.0",
   "mods_directory": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Motiquies - 动静交映 - 2.0.0\\minecraft\\mods",
-  "mod_file_count": 256,
+  "mod_file_count": 257,
   "policy": {
     "preserve_every_listed_file": true,
     "server_may_add_missing_shared_gameplay_mods": true,
@@ -652,6 +652,11 @@
       "name": "happyghast-equivalence-1.0.0-equivalence.2+mc1.21.1.jar",
       "bytes": 13270,
       "sha256": "36C1CE14EE18B81C04654F1A6956F2257B7DEAC07746E960475AAF5C6F25A579"
+    },
+    {
+      "name": "hardcore-revival-death-message-fix-1.0.0+neoforge.1.21.1.1.jar",
+      "bytes": 3213,
+      "sha256": "24301BBCD2EF88E33F45520C5E4BC651F8BC567543183802B0CA1F2058C52826"
     },
     {
       "name": "hardcorerevival-neoforge-1.21.1-21.1.14.jar",

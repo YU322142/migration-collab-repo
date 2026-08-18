@@ -48,6 +48,11 @@ class SingleplayerGameplayParityPolicyTest(unittest.TestCase):
         self.assertIn("trueuuid", MODULE.AUTH_SCRIPT_MARKERS)
         self.assertIn("/login", MODULE.AUTH_SCRIPT_MARKERS)
 
+    def test_tlm_pack_location_is_part_of_reviewed_repository(self) -> None:
+        repo = SCRIPT.resolve().parents[2]
+        pack = repo / "pack" / "common-tlm-custom-pack"
+        self.assertTrue((pack / "touhou_little_maid-1.0.0" / "pack.mcmeta").is_file())
+
 
 if __name__ == "__main__":
     unittest.main()

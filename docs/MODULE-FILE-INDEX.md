@@ -182,6 +182,17 @@
 | 配置与事件 | `projects/ports/xiyuslogin-migration/src/main/java/org/xiyu/yee/xiyuslogin/config/XiyusLoginConfig.java`、`event/PlayerEventHandler.java`、`event/ServerEventHandler.java` |
 | 既有重构 | EasyAuth 迁移、TrueUUID 自动认证和单人世界策略已拆分；密码登录仍保留。 |
 
+### Hardcore Revival death-message fix
+
+| 模块 | 文件 |
+| --- | --- |
+| 模组入口 | `outputs/projects/hardcore-revival-death-message-fix-neoforge/src/main/java/dev/migration/hardcore_revival_death_fix/HardcoreRevivalDeathFix.java` |
+| 兼容注入 | `outputs/projects/hardcore-revival-death-message-fix-neoforge/src/main/java/dev/migration/hardcore_revival_death_fix/mixin/HardcoreRevivalManagerMixin.java` |
+| 注入声明 | `outputs/projects/hardcore-revival-death-message-fix-neoforge/src/main/resources/hardcore_revival_death_fix.mixins.json` |
+| 模组元数据 | `outputs/projects/hardcore-revival-death-message-fix-neoforge/src/main/resources/META-INF/neoforge.mods.toml` |
+| 构建/验证 | `outputs/projects/hardcore-revival-death-message-fix-neoforge/build.gradle`、`outputs/tools/test_hardcore_revival_death_message_fix.py` |
+| 既有重构 | 将 Hardcore Revival 的“可救援倒地”和“真正死亡”分成两种可见性语义；倒地不再冒充死亡，超时死亡仍显示；MineAstr 保持原样，仅在真正死亡事件上报 `player_death`。 |
+
 ## 数据与脚本入口文件
 
 | 工作域 | 入口文件 |

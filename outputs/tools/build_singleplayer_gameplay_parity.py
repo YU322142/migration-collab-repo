@@ -127,7 +127,9 @@ def validate_hoporp(payload: bytes) -> None:
         raise ParityError("Hopo Better Ruined Portals metadata contract failed")
 
 
-def write_payload(root: Path, relative: str, payload: bytes) -> dict[str, object]:
+def write_payload(
+    root: Path, relative: str, payload: bytes, *, mode: str = "replace"
+) -> dict[str, object]:
     target = root / PurePosixPath(relative)
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_bytes(payload)
@@ -135,6 +137,7 @@ def write_payload(root: Path, relative: str, payload: bytes) -> dict[str, object
         "path": relative,
         "bytes": len(payload),
         "sha256": sha256_bytes(payload),
+        "mode": mode,
     }
 
 
@@ -236,6 +239,27 @@ def build(
 
     rows.append(write_payload(overlay, f"mods/{C6C_PATCH_NAME}", c6c_patch.read_bytes()))
     categories["policy_patch_mods"] = 1
+
+    # TLM discovers unpacked custom packs from this client-root directory.  It
+    # is gameplay presentation/collection content, not server identity state.
+    # Existing client files are authoritative: the applier may add missing
+    # files or accept byte-identical files, but must stop on any conflict.
+    tlm_pack = repo / "pack" / "common-tlm-custom-pack"
+    tlm_count = 0
+    for source in sorted(
+        (path for path in tlm_pack.rglob("*") if path.is_file()),
+        key=lambda path: path.relative_to(tlm_pack).as_posix().lower(),
+    ):
+        relative = "tlm_custom_pack/" + source.relative_to(tlm_pack).as_posix()
+        rows.append(
+            write_payload(
+                overlay, relative, source.read_bytes(), mode="preserve_or_add"
+            )
+        )
+        tlm_count += 1
+    if tlm_count == 0:
+        raise ParityError("reviewed TLM custom pack is empty")
+    categories["tlm_custom_pack_files"] = tlm_count
 
     rows.sort(key=lambda row: str(row["path"]).lower())
     delete_rows = [
