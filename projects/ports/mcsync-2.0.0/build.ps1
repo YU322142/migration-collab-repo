@@ -77,7 +77,7 @@ if (Test-Path -LiteralPath $neoForgeStubRoot) {
 }
 
 Write-Output '[4/8] Building Fabric/NeoForge/executable/agent JAR...'
-& jar --create --file $jarPath --manifest (Join-Path $projectRoot 'manifest.mf') `
+& jar --create --file $jarPath --date 2000-01-01T00:00:00Z --manifest (Join-Path $projectRoot 'manifest.mf') `
     -C $mainClasses . `
     -C (Join-Path $projectRoot 'src\main\resources') .
 if ($LASTEXITCODE -ne 0) {
@@ -323,15 +323,58 @@ Get-ChildItem -LiteralPath $outputsDirectory -File -Filter 'MCSync-*-source.zip'
 if (Test-Path -LiteralPath $sourceZip) {
     Remove-Item -LiteralPath $sourceZip -Force
 }
-Compress-Archive -Path @(
-    (Join-Path $projectRoot 'src'),
-    (Join-Path $projectRoot 'build.ps1'),
-    (Join-Path $projectRoot 'manifest.mf'),
-    (Join-Path $projectRoot 'README.md'),
-    (Join-Path $projectRoot 'modsync.properties.example'),
-    (Join-Path $projectRoot 'LICENSE'),
-    (Join-Path $projectRoot 'docs')
-) -DestinationPath $sourceZip -CompressionLevel Optimal
+$sourceRoots = @(
+    'src',
+    'build.ps1',
+    'manifest.mf',
+    'README.md',
+    'modsync.properties.example',
+    'LICENSE',
+    'docs'
+)
+$sourceEntries = foreach ($relativeRoot in $sourceRoots) {
+    $absoluteRoot = Join-Path $projectRoot $relativeRoot
+    if (Test-Path -LiteralPath $absoluteRoot -PathType Container) {
+        Get-ChildItem -LiteralPath $absoluteRoot -Recurse -File | ForEach-Object {
+            [pscustomobject]@{
+                Source = $_.FullName
+                Entry = $_.FullName.Substring($projectRoot.Length + 1).Replace('\\', '/')
+            }
+        }
+    } else {
+        [pscustomobject]@{ Source = $absoluteRoot; Entry = $relativeRoot.Replace('\\', '/') }
+    }
+}
+$sourceEntries = @($sourceEntries | Sort-Object Entry)
+$sourceStream = [System.IO.File]::Open($sourceZip, [System.IO.FileMode]::CreateNew)
+try {
+    $sourceArchive = [System.IO.Compression.ZipArchive]::new(
+        $sourceStream,
+        [System.IO.Compression.ZipArchiveMode]::Create,
+        $false,
+        [System.Text.Encoding]::UTF8)
+    try {
+        $fixedTimestamp = [System.DateTimeOffset]::new(2000, 1, 1, 0, 0, 0, [System.TimeSpan]::Zero)
+        foreach ($sourceEntry in $sourceEntries) {
+            $entry = $sourceArchive.CreateEntry(
+                $sourceEntry.Entry,
+                [System.IO.Compression.CompressionLevel]::Optimal)
+            $entry.LastWriteTime = $fixedTimestamp
+            $input = [System.IO.File]::OpenRead($sourceEntry.Source)
+            $output = $entry.Open()
+            try {
+                $input.CopyTo($output)
+            } finally {
+                $output.Dispose()
+                $input.Dispose()
+            }
+        }
+    } finally {
+        $sourceArchive.Dispose()
+    }
+} finally {
+    $sourceStream.Dispose()
+}
 
 Get-FileHash -Algorithm SHA256 -LiteralPath (Join-Path $outputsDirectory $jarOutputName) |
     Select-Object Algorithm, Hash, Path
