@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JTabbedPane;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
 import javax.swing.UIManager;
@@ -265,8 +266,10 @@ public final class PublisherMain {
 
         JFrame frame = new JFrame(text("MCSync 2.0 发布工作台", "MCSync 2.0 Publisher Workspace"));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(760, 410);
+        frame.setSize(1180, 760);
         frame.setLocationRelativeTo(null);
+
+        JPanel legacyPanel = new JPanel(new BorderLayout());
 
         JPanel form = new JPanel(new GridBagLayout());
         form.setBorder(BorderFactory.createEmptyBorder(16, 16, 8, 16));
@@ -283,8 +286,6 @@ public final class PublisherMain {
                 "Keep previous types, platforms, names and descriptions while refreshing current JAR hashes and versions"));
         JButton generateButton = new JButton(text(
                 "编辑必须/推荐模组并生成清单", "Edit required/recommended mods and generate catalog"));
-        JButton v5Button = new JButton(text(
-                "生成 MCSync v5 OTA 发布…", "Build MCSync v5 OTA release…"));
         JButton resourcePackButton = new JButton(text(
                 "为资源包生成 resourcepacks.txt…", "Generate resourcepacks.txt…"));
         JButton serverListButton = new JButton(text(
@@ -318,7 +319,6 @@ public final class PublisherMain {
         form.add(loadPreviousCatalog, constraints);
 
         JPanel actions = new JPanel(new FlowLayout(FlowLayout.RIGHT));
-        actions.add(v5Button);
         actions.add(serverListButton);
         actions.add(resourcePackButton);
         actions.add(generateButton);
@@ -328,10 +328,10 @@ public final class PublisherMain {
         constraints.weightx = 1;
         form.add(actions, constraints);
 
-        frame.add(form, BorderLayout.NORTH);
+        legacyPanel.add(form, BorderLayout.NORTH);
         JScrollPane scroll = new JScrollPane(log);
         scroll.setBorder(BorderFactory.createTitledBorder(text("结果", "Results")));
-        frame.add(scroll, BorderLayout.CENTER);
+        legacyPanel.add(scroll, BorderLayout.CENTER);
 
         browseButton.addActionListener(event -> {
             JFileChooser chooser = new JFileChooser();
@@ -468,59 +468,6 @@ public final class PublisherMain {
             }.execute();
         });
 
-        v5Button.addActionListener(event -> {
-            Path gameRoot;
-            try {
-                Path selected = Path.of(directoryField.getText()).toAbsolutePath().normalize();
-                gameRoot = selected.getFileName() != null && selected.getFileName().toString().equalsIgnoreCase("mods")
-                        ? selected.getParent() : selected;
-                if (gameRoot == null || !Files.isDirectory(gameRoot)) throw new IllegalArgumentException();
-            } catch (Exception failure) {
-                JOptionPane.showMessageDialog(frame,
-                        text("请先选择客户端的 mods 目录或游戏根目录。", "Choose the client mods or game root first."),
-                        text("缺少目录", "Missing directory"), JOptionPane.WARNING_MESSAGE);
-                return;
-            }
-            JFileChooser projectChooser = new JFileChooser(gameRoot.toFile());
-            projectChooser.setDialogTitle(text("选择 v5 发布项目 JSON", "Choose the v5 publisher project JSON"));
-            projectChooser.setFileFilter(new FileNameExtensionFilter("JSON", "json"));
-            if (projectChooser.showOpenDialog(frame) != JFileChooser.APPROVE_OPTION) return;
-            JFileChooser outputChooser = new JFileChooser(gameRoot.toFile());
-            outputChooser.setDialogTitle(text("选择空的发布输出目录", "Choose an empty release output directory"));
-            outputChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-            if (outputChooser.showSaveDialog(frame) != JFileChooser.APPROVE_OPTION) return;
-            Path project = projectChooser.getSelectedFile().toPath();
-            Path output = outputChooser.getSelectedFile().toPath();
-            Path finalGameRoot = gameRoot;
-            v5Button.setEnabled(false);
-            log.append("\nMCSync v5: " + project + " -> " + output + "\n");
-            new SwingWorker<PublisherProjectV5.Publication, Void>() {
-                @Override
-                protected PublisherProjectV5.Publication doInBackground() throws Exception {
-                    return PublisherProjectV5.publish(finalGameRoot, project, output);
-                }
-
-                @Override
-                protected void done() {
-                    v5Button.setEnabled(true);
-                    try {
-                        PublisherProjectV5.Publication publication = get();
-                        log.append(text("v5 发布完成：", "v5 release completed: ")
-                                + publication.manifestPath() + "\n");
-                        JOptionPane.showMessageDialog(frame,
-                                text("v5 OTA 发布目录已生成，并完成哈希与分发策略校验。",
-                                        "The v5 OTA release directory was generated and validated."),
-                                text("发布完成", "Release complete"), JOptionPane.INFORMATION_MESSAGE);
-                    } catch (Exception failure) {
-                        Throwable cause = failure.getCause() == null ? failure : failure.getCause();
-                        log.append(text("v5 发布失败：", "v5 release failed: ") + cause.getMessage() + "\n");
-                        JOptionPane.showMessageDialog(frame, cause.getMessage(),
-                                text("发布失败", "Release failed"), JOptionPane.ERROR_MESSAGE);
-                    }
-                }
-            }.execute();
-        });
-
         resourcePackButton.addActionListener(event -> {
             JFileChooser chooser = new JFileChooser();
             chooser.setDialogTitle(text("选择要发布的资源包 ZIP", "Choose a resource-pack ZIP to publish"));
@@ -637,6 +584,10 @@ public final class PublisherMain {
             }.execute();
         });
 
+        JTabbedPane publisherTabs = new JTabbedPane();
+        publisherTabs.addTab(text("2.0 OTA 发布", "2.0 OTA publisher"), V5PublisherWorkspace.create(frame));
+        publisherTabs.addTab(text("1.9.x 兼容工具", "1.9.x compatibility tools"), legacyPanel);
+        frame.add(publisherTabs, BorderLayout.CENTER);
         frame.setVisible(true);
     }
 

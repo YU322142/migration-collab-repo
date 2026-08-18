@@ -35,11 +35,11 @@
 | `MinecraftWindowStatus.java` / `SyncStatusReporter.java` | 在已有 Minecraft 窗口标题和 `.modsync/ui-status.json/.txt` 输出启动期状态；无额外更新器窗口，失败回退日志。 |
 | `PublisherProjectV5.java` / `PublisherMain.java` | 发布项目审查、哈希物化、许可来源分离、镜像预设、v5 清单和发布报告；上游文件不会被复制到发布目录。 |
 
-`releaseSequence` 是发布顺序，而不是整合包展示版本。展示版本可以包含语义化名称，但发布序号必须严格单调递增。相同序号只允许同一 `releaseId` 和同一清单 SHA256 重放，以支持幂等启动检查。
+`releaseSequence` 是发布顺序，而不是整合包展示版本。展示版本可以包含语义化名称，但发布序号必须严格单调递增。GUI 默认在实际导出开始前以系统本地时间生成 `yyyyMMddHHmmssSSS`（17 位）序号；保存项目时同时记录是否启用自动刷新。关闭自动刷新仅用于精确复现或重放已经审计的固定发布。相同序号只允许同一 `releaseId` 和同一清单 SHA256 重放，以支持幂等启动检查。
 
 ### 文件来源与再分发边界
 
-发布工具仍由 `java -jar MCSync-2.0.0.jar` 打开，但 UI 将从单层表格重构为发布项目、文件来源、配置操作、验证与导出四个工作区。文件来源有五种：
+发布工具仍由 `java -jar MCSync-2.0.0.jar` 打开。主窗口已重构为发布项目、文件与来源、同步范围、配置 OTA、验证与导出五个工作区；1.9.x 工具保留为独立兼容页。文件来源有五种：
 
 - `publisher-hosted`：发布者确认允许再分发，并由自己的发布目录提供文件；手工适配、自制兼容模组继续使用这种原有方式。
 - `direct`：使用作者或项目提供的固定 HTTPS 文件地址。

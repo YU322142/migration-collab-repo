@@ -53,6 +53,7 @@ public final class AllTests {
         testV5SelfUpdateReplacesLegacyJarInSameTransaction();
         testV5CoordinatorDownloadsBeforeStartupAndBecomesIdempotent();
         testV5PublisherProjectBuildsDeterministicRelease();
+        testPublisherCloudBundleBuildsStableAndLegacyEntrypoints();
         testManifestGenerationAndParsing();
         testFabricModIdAndV1Compatibility();
         testNeoForgeMetadataAndUniversalBootstrap();
@@ -861,6 +862,12 @@ public final class AllTests {
                       "configOperations":[]
                     }
                     """, StandardCharsets.UTF_8);
+            @SuppressWarnings("unchecked")
+            Map<String, Object> inMemoryProject = (Map<String, Object>) StrictJson.parse(
+                    Files.readString(project, StandardCharsets.UTF_8));
+            ReleaseManifestV5 validated = PublisherProjectV5.validateProject(root, inMemoryProject);
+            check(validated.files().size() == 2 && validated.configOperations().isEmpty(),
+                    "GUI 内存项目应在不写输出的前提下完成严格 v5 预检");
             Path output = root.resolve("release");
             PublisherProjectV5.Publication publication = PublisherProjectV5.publish(root, project, output);
             check(publication.hostedFiles() == 1, "发布器只应复制允许二次分发的 publisher-hosted 文件");
@@ -874,6 +881,67 @@ public final class AllTests {
                     "发布器必须锁定所有本地验证文件的精确 SHA256");
             check(Files.isRegularFile(publication.reportPath()), "发布器应输出机器可读审计报告");
             pass("v5 publisher project separates redistributable and upstream-only files");
+        } finally {
+            deleteTree(root);
+        }
+    }
+
+    private void testPublisherCloudBundleBuildsStableAndLegacyEntrypoints() throws Exception {
+        Path root = Files.createTempDirectory("mcsync-cloud-bundle-");
+        try {
+            long generatedSequence = PublisherProjectV5.currentTimeReleaseSequence();
+            String generatedSequenceText = Long.toString(generatedSequence);
+            check(generatedSequenceText.matches("\\d{17}")
+                            && generatedSequenceText.substring(0, 8).equals(
+                            java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.BASIC_ISO_DATE)),
+                    "发布序号应按当前系统日期时间生成 yyyyMMddHHmmssSSS");
+            Files.createDirectories(root.resolve("game/mods"));
+            Files.writeString(root.resolve("game/mods/custom.jar"), "custom", StandardCharsets.UTF_8);
+            Path updater = root.resolve("MCSync-2.0.0.jar");
+            writeNeoForgeJar(updater, "mcmodsync", "2.0.0");
+            @SuppressWarnings("unchecked")
+            Map<String, Object> project = (Map<String, Object>) StrictJson.parse("""
+                    {
+                      "schema":1,"releaseId":"cloud-1","releaseSequence":2000001,
+                      "minimumMCSyncVersion":"2.0.0",
+                      "managedScopes":[{"path":"mods","policy":"managed"}],
+                      "files":[{
+                        "path":"mods/custom.jar","kind":"mod","required":true,
+                        "restartRequired":true,"side":["client"],
+                        "download":{"type":"publisher-hosted","distributionPolicy":"redistributable"}
+                      }],
+                      "configOperations":[]
+                    }
+                    """);
+            Path output = root.resolve("cloud");
+            PublisherCloudBundle.Result result = PublisherCloudBundle.publish(
+                    root.resolve("game"), project, output, "https://files.example.test/mcsync",
+                    "channel/stable/mods-v4.txt", "legacy/1.9/mods-v4.txt", "legacy/1.6/mods.txt",
+                    List.of("http://old-pc.example.test/client/mods-v4.txt"),
+                    List.of("https://old-mobile.example.test/client/mods.txt"), true, updater);
+            ReleaseManifestV5 stable = ReleaseManifestV5.parse(Files.readAllBytes(result.stableManifest()));
+            check(stable.releaseSequence() == 2_000_001L
+                            && stable.files().getFirst().download().endpoints().getFirst().uri().toASCIIString()
+                            .equals("https://files.example.test/mcsync/releases/2000001/mods/custom.jar"),
+                    "稳定 v5 入口应锁定不可变版本目录中的托管文件");
+            ModManifest v4 = ModManifest.parse(Files.readString(
+                    output.resolve("legacy/1.9/mods-v4.txt"), StandardCharsets.UTF_8));
+            String v2 = Files.readString(output.resolve("legacy/1.6/mods.txt"), StandardCharsets.UTF_8);
+            long v2DataRows = v2.lines().filter(line -> !line.isBlank() && !line.startsWith("#")).count();
+            check(v4.entries().size() == 2 && v4.catalogVersion().equals("2000001")
+                            && v2.startsWith(ModManifest.MAGIC_V2 + "\n") && v2DataRows == 2,
+                    "1.9.x 与 1.6.x/1.7.x 网关都应只包含 MCSync 和配置引导");
+            check(v4.managedClientConfig().orElseThrow().values().get("manifest")
+                            .equals("https://files.example.test/mcsync/channel/stable/mods-v4.txt"),
+                    "旧版配置引导应把升级后客户端切到 2.0 稳定入口");
+            check(Files.isRegularFile(output.resolve("legacy/1.6/MCModSync-Config.jar"))
+                            && v2.contains("\tMCModSync-Config.jar\n"),
+                    "1.6.x/1.7.x 网关必须下发已锁定的配置引导 JAR");
+            String endpointMap = Files.readString(result.legacyEndpointMap(), StandardCharsets.UTF_8);
+            check(endpointMap.contains("http://old-pc.example.test/client/mods-v4.txt")
+                            && endpointMap.contains("https://old-mobile.example.test/client/mods.txt"),
+                    "交付包必须原样保留旧客户端实际读取的 HTTP/HTTPS URL 部署映射");
+            pass("publisher cloud bundle preserves historical URLs and builds v5/v4/v2 entrypoints");
         } finally {
             deleteTree(root);
         }

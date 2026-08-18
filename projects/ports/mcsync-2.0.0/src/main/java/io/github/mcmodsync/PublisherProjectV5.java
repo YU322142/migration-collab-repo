@@ -8,6 +8,8 @@ import java.nio.file.LinkOption;
 import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -17,30 +19,86 @@ import java.util.Set;
 
 /** Materializes a reviewed publisher project into a deterministic schema-v5 release directory. */
 final class PublisherProjectV5 {
+    private static final DateTimeFormatter RELEASE_SEQUENCE_TIME =
+            DateTimeFormatter.ofPattern("yyyyMMddHHmmssSSS");
     private static final Set<String> ROOT_KEYS = Set.of(
             "schema", "releaseId", "releaseSequence", "minimumMCSyncVersion",
-            "managedScopes", "files", "configOperations");
+            "managedScopes", "files", "configOperations", "remote");
     private static final Set<String> FILE_KEYS = Set.of(
             "path", "kind", "required", "restartRequired", "side", "download");
 
     private PublisherProjectV5() {
     }
 
+    static long currentTimeReleaseSequence() {
+        return Long.parseLong(LocalDateTime.now().format(RELEASE_SEQUENCE_TIME));
+    }
+
     record Publication(ReleaseManifestV5 manifest, Path manifestPath, Path reportPath, int hostedFiles) {
+    }
+
+    /** Performs the same strict project/file/config checks as publication without network or output writes. */
+    static ReleaseManifestV5 validateProject(Path gameRoot, Map<String, Object> source) throws IOException {
+        Path root = gameRoot.toAbsolutePath().normalize();
+        if (!Files.isDirectory(root)) throw new IOException("发布源游戏目录不存在: " + root);
+        requireKeys(source.keySet(), ROOT_KEYS, "project root");
+        if (!new BigDecimal("1").equals(source.get("schema"))) throw new IOException("发布项目 schema 必须为 1");
+        LinkedHashMap<String, Object> manifestJson = new LinkedHashMap<>();
+        manifestJson.put("schema", ReleaseManifestV5.SCHEMA);
+        manifestJson.put("releaseId", source.get("releaseId"));
+        manifestJson.put("releaseSequence", source.get("releaseSequence"));
+        manifestJson.put("minimumMCSyncVersion", source.getOrDefault("minimumMCSyncVersion", BuildInfo.VERSION));
+        manifestJson.put("managedScopes", source.getOrDefault("managedScopes", List.of()));
+        ManagedPathPolicy pathPolicy = new ManagedPathPolicy(root, List.of());
+        ArrayList<Object> generatedFiles = new ArrayList<>();
+        for (Object raw : array(source.get("files"), "files")) {
+            Map<String, Object> file = object(raw, "files[]");
+            requireKeys(file.keySet(), FILE_KEYS, "files[]");
+            if (!(file.get("path") instanceof String relative)) throw new IOException("files[].path 必须是字符串");
+            Path local = pathPolicy.resolve(relative, false);
+            if (!Files.isRegularFile(local, LinkOption.NOFOLLOW_LINKS)) throw new IOException("发布项目中的文件不存在: " + relative);
+            byte[] bytes = Files.readAllBytes(local);
+            if ((relative.startsWith("config/") || relative.startsWith("defaultconfigs/")
+                    || relative.startsWith("kubejs/config/"))
+                    && SensitiveDataPolicy.looksLikeCredentialDocument(bytes)) {
+                throw new IOException("检测到可能含凭据的配置文件，请改用键级 OTA: " + relative);
+            }
+            LinkedHashMap<String, Object> generated = new LinkedHashMap<>(file);
+            generated.put("sha256", Hashing.sha256(bytes));
+            generated.put("size", bytes.length);
+            generatedFiles.add(generated);
+        }
+        manifestJson.put("files", generatedFiles);
+        manifestJson.put("configOperations", source.getOrDefault("configOperations", List.of()));
+        try {
+            return ReleaseManifestV5.parse((StrictJson.stringify(manifestJson) + "\n").getBytes(StandardCharsets.UTF_8));
+        } catch (IllegalArgumentException failure) {
+            throw new IOException("发布项目无法生成有效 v5 清单: " + failure.getMessage(), failure);
+        }
     }
 
     static Publication publish(Path gameRoot, Path projectFile, Path outputDirectory) throws IOException {
         Path root = gameRoot.toAbsolutePath().normalize();
         Path project = projectFile.toAbsolutePath().normalize();
+        if (!Files.isRegularFile(project)) throw new IOException("v5 发布项目不存在: " + project);
+        Map<String, Object> source = object(
+                StrictJson.parse(Files.readString(project, StandardCharsets.UTF_8)), "root");
+        return publish(gameRoot, source, outputDirectory, project.getFileName().toString());
+    }
+
+    static Publication publish(
+            Path gameRoot,
+            Map<String, Object> source,
+            Path outputDirectory,
+            String projectName) throws IOException {
+        Path root = gameRoot.toAbsolutePath().normalize();
         Path output = outputDirectory.toAbsolutePath().normalize();
         if (!Files.isDirectory(root)) throw new IOException("发布源游戏目录不存在: " + root);
-        if (!Files.isRegularFile(project)) throw new IOException("v5 发布项目不存在: " + project);
         if (Files.exists(output) && (!Files.isDirectory(output) || hasEntries(output))) {
             throw new IOException("发布输出目录必须不存在或为空，避免混入旧版本文件: " + output);
         }
         Files.createDirectories(output);
 
-        Map<String, Object> source = object(StrictJson.parse(Files.readString(project, StandardCharsets.UTF_8)), "root");
         requireKeys(source.keySet(), ROOT_KEYS, "project root");
         if (!new BigDecimal("1").equals(source.get("schema"))) {
             throw new IOException("发布项目 schema 必须为 1");
@@ -117,7 +175,8 @@ final class PublisherProjectV5 {
         report.put("status", "PASS");
         report.put("generatedAt", Instant.now().toString());
         report.put("sourceRoot", "<local-game-root>");
-        report.put("project", project.getFileName().toString());
+        report.put("project", projectName == null || projectName.isBlank()
+                ? "<gui-project>" : projectName);
         report.put("releaseId", manifest.releaseId());
         report.put("releaseSequence", manifest.releaseSequence());
         report.put("manifestSha256", Hashing.sha256(manifestPath));
@@ -135,8 +194,17 @@ final class PublisherProjectV5 {
                 {
                   "schema": 1,
                   "releaseId": "motiquies-2.0.0-ota.1",
-                  "releaseSequence": 2000001,
+                  "releaseSequence": %d,
                   "minimumMCSyncVersion": "2.0.0",
+                  "remote": {
+                    "baseUrl":"https://files.example.com/mcsync",
+                    "stablePath":"channel/stable/mods-v4.txt",
+                    "legacyV4Path":"legacy/1.9/mods-v4.txt",
+                    "legacyV2Path":"legacy/1.6/mods.txt",
+                    "legacyV4CurrentUrls":"https://old.example.com/client/mods-v4.txt",
+                    "legacyV2CurrentUrls":"https://old.example.com/client/mods.txt",
+                    "generateLegacyGateways":true
+                  },
                   "managedScopes": [
                     {"path":"mods","policy":"managed"},
                     {"path":"resourcepacks","policy":"managed"},
@@ -166,7 +234,7 @@ final class PublisherProjectV5 {
                   ],
                   "configOperations": []
                 }
-                """;
+                """.formatted(currentTimeReleaseSequence());
         Files.createDirectories(output.toAbsolutePath().normalize().getParent());
         Files.writeString(output, template, StandardCharsets.UTF_8);
     }

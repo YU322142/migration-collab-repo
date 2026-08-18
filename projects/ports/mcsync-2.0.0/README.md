@@ -1,6 +1,6 @@
 # MCSync 2.0
 
-MCSync 是 MCModSync 1.9.x 的兼容后继版本，用于在 Minecraft/NeoForge 完成模组加载前自动检查和暂存客户端 OTA。2.0 引入结构化 v5 发布清单、单调发布序号防降级和精确配置键事务；旧 v1-v4 清单与 1.9.x 升级入口继续保留。
+MCSync 是 MCModSync 1.9.x 的兼容后继版本，用于在 Minecraft/NeoForge 完成模组加载前自动检查和暂存客户端 OTA。2.0 引入结构化 v5 发布清单、单调发布序号防降级和精确配置键事务；旧 v1-v4 清单与 1.9.x 升级入口继续保留。图形发布器默认在导出瞬间按本机系统时间生成 `yyyyMMddHHmmssSSS` 发布序号，也可关闭自动刷新以重放一个已审计的固定项目。
 
 > 兼容性约束：产品名和产物名已改为 `MCSync`，但技术 `modId` 仍为 `mcmodsync`，旧 `modsync.properties`、`.modsync/` 状态目录和 `MCModSync-Config.jar` 引导文件暂时继续识别。不要为了统一命名而删除这些旧入口，否则会切断已安装 1.9.x 客户端的原地升级路径。
 
@@ -119,6 +119,8 @@ Fabric 和 NeoForge 的普通模组不能混在一份清单里。建议至少使
 只有以下启动器识别为手机端：`PojavLauncher`、`MCinaBox`、`FCL`、`Zalith Launcher 2`。其他启动器均按电脑端处理。
 
 ## 第一次发布
+
+MCSync 2.0.0 双击 JAR 后默认进入五页式 OTA 发布工作台：发布项目、文件与来源、同步范围、配置 OTA、验证与导出。它可直接扫描安全内容目录，固定 Modrinth/CurseForge 版本、选择 MCIMirror 候选，并对单个 TOML/JSON/properties 配置键做有前像的统一 OTA。旧 v4 发布器位于“1.9.x 兼容工具”页。
 
 ### 1. 准备发布目录
 
