@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-18T06:58:27.789790+00:00",
+  "generated_at": "2026-08-18T08:39:36.251106+00:00",
   "self_excluded": "repository-manifest.json",
   "files": [
     {
@@ -17,6 +17,11 @@
       "path": ".gitignore",
       "bytes": 898,
       "sha256": "F75D02DC38ECAF4A0B3DD9F530080403599FBA6DA8D9D1C1EC46522BED61124E"
+    },
+    {
+      "path": "artifacts/client-baselines/motiquies-2.0.0-mods.json",
+      "bytes": 46694,
+      "sha256": "7C0622B9D4723B059094D0810073CBC38B85117B2F579DF0B3D1803916007E29"
     },
     {
       "path": "artifacts/EXTERNAL-ARTIFACTS.json",
@@ -117,6 +122,11 @@
       "path": "docs/ARTIFACT-POLICY.md",
       "bytes": 495,
       "sha256": "62042DD62E240B5BD8CFDA6D7111257BB70DDAB590C523B25EE175BD6F59AE3F"
+    },
+    {
+      "path": "docs/CLIENT-AUTHORITY-POLICY.md",
+      "bytes": 1641,
+      "sha256": "E3DA1E1295D96328EC401B1327BF05D63D5BCF466BF876A1654821F9D5E25C6C"
     },
     {
       "path": "docs/KNOWN-ISSUES.md",
@@ -2064,6 +2074,11 @@
       "sha256": "E184796A949CC156CFCD36BC9A7868305B28A8ED4B2C68D0644243BA684FA076"
     },
     {
+      "path": "outputs/tools/apply_singleplayer_gameplay_parity.py",
+      "bytes": 4407,
+      "sha256": "9E919FB6A9EF8F14D90A013C0F689D73DA94F5AC569D3563864CA4BC24C33960"
+    },
+    {
       "path": "outputs/tools/archive_legacy_roots.py",
       "bytes": 11734,
       "sha256": "14B187D5772A40602C91B696994D88731806E6365B7828ED4716AA788F576444"
@@ -2414,6 +2429,11 @@
       "sha256": "19FC749763319002E038F185E13BFAA44769B83BC72ED502019B4A27F5035147"
     },
     {
+      "path": "outputs/tools/build_singleplayer_gameplay_parity.py",
+      "bytes": 10756,
+      "sha256": "B1DE0C8E876CE5E466D570F303DE1CD095520E31A93EB7C887B99C3E198D76A4"
+    },
+    {
       "path": "outputs/tools/build_storage_ota_packages_from_forensics.py",
       "bytes": 19451,
       "sha256": "B815514ED0357F8AF6F16A1B393BE4E9ED10F5EA9EBB0CE96E28B5E7401EE028"
@@ -2457,6 +2477,11 @@
       "path": "outputs/tools/candidate14_release_gate_common.py",
       "bytes": 14351,
       "sha256": "A8191734A97A136A641975C59EA529C2E2D2B47BCF4F107B1938AB232BF7CACB"
+    },
+    {
+      "path": "outputs/tools/capture_client_mod_baseline.py",
+      "bytes": 3091,
+      "sha256": "B1B5126D6937E9CA73F78E3984D7BA66BCC8846E7DC9CBD01D8502F7104F63CF"
     },
     {
       "path": "outputs/tools/capture_process_window.ps1",
@@ -3307,6 +3332,11 @@
       "path": "outputs/tools/test_build_mechanomania_merge_matrix.py",
       "bytes": 8272,
       "sha256": "56FD3461B32944613362FB5040049ABA4AA8DC879F55355DBCA531ACD9BD8484"
+    },
+    {
+      "path": "outputs/tools/test_build_singleplayer_gameplay_parity.py",
+      "bytes": 1771,
+      "sha256": "E31075D838A1ECD0AF65C10ED669F6BCCE3C2A168E2167AFB96828C12B87523D"
     },
     {
       "path": "outputs/tools/test_candidate13_nbt_audits.py",
