@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Main-Class: io.github.mcmodsync.PublisherMain
+Premain-Class: io.github.mcmodsync.ModSyncAgent
+Can-Redefine-Classes: false
+Can-Retransform-Classes: false
+Implementation-Title: MCSync
+Implementation-Version: 2.0.0

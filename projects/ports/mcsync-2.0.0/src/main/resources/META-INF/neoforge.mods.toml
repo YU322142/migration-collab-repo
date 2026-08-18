@@ -1,0 +1,23 @@
+modLoader="javafml"
+loaderVersion="[1,)"
+license="MIT"
+[[mods]]
+modId="mcmodsync"
+version="2.0.0"
+displayName="MCSync"
+authors="MCSync Contributors"
+description='''Pre-launch synchronization for required and recommended Minecraft mods with MD5 and SHA256 verification. Supports Fabric and NeoForge clients.'''
+
+[[dependencies.mcmodsync]]
+modId="neoforge"
+type="required"
+versionRange="[21.1.0,)"
+ordering="NONE"
+side="CLIENT"
+
+[[dependencies.mcmodsync]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1]"
+ordering="NONE"
+side="CLIENT"

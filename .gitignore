@@ -57,6 +57,7 @@ security/local/
 **/.vscode/
 **/.archive-unpack/
 **/.venv/
+/projects/outputs/
 
 # Large/generated artifacts
 *.mca
