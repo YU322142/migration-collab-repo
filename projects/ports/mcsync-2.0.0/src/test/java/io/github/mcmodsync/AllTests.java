@@ -49,6 +49,7 @@ public final class AllTests {
         testReleaseSequenceAntiDowngradeGate();
         testStructuredConfigMutationEngine();
         testV5AtomicReleaseTransactionAndOwnership();
+        testV5InterruptedCommitRecoversFromDurableJournal();
         testV5CoordinatorDownloadsBeforeStartupAndBecomesIdempotent();
         testV5PublisherProjectBuildsDeterministicRelease();
         testManifestGenerationAndParsing();
@@ -678,6 +679,40 @@ public final class AllTests {
                 }
                 """.formatted(releaseId, sequence, String.join(",", files), configOperations);
         return ReleaseManifestV5.parse(json.getBytes(StandardCharsets.UTF_8));
+    }
+
+    private void testV5InterruptedCommitRecoversFromDurableJournal() throws Exception {
+        Path root = Files.createTempDirectory("mcsync-v5-recovery-");
+        try {
+            Path target = root.resolve("mods/recover.jar");
+            Path transaction = root.resolve(".modsync/transactions/interrupted-test");
+            Path backup = transaction.resolve("backup/mods/recover.jar");
+            Files.createDirectories(target.getParent());
+            Files.createDirectories(backup.getParent());
+            byte[] original = "original-before-crash".getBytes(StandardCharsets.UTF_8);
+            Files.write(backup, original);
+            Files.writeString(target, "partially-committed", StandardCharsets.UTF_8);
+            Files.writeString(transaction.resolve("journal.json"), """
+                    {
+                      "schema":1,"state":"PREPARED","releaseId":"interrupted","releaseSequence":77,
+                      "manifestSha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                      "createdAt":"2026-08-18T00:00:00Z",
+                      "backups":[{"path":"mods/recover.jar","existed":true,"sha256":"%s"}]
+                    }
+                    """.formatted(Hashing.sha256(original)), StandardCharsets.UTF_8);
+            ReleaseTransactionEngine engine = new ReleaseTransactionEngine(root, 2);
+            check(engine.recoverPendingTransactions() == 1
+                            && Arrays.equals(Files.readAllBytes(target), original),
+                    "下次启动必须从持久日志恢复强杀时的部分提交");
+            check(!Files.exists(transaction.resolve("journal.json"))
+                            && Files.isRegularFile(transaction.resolve("recovery-receipt.json")),
+                    "自动恢复完成后应留下恢复回执并清除活动日志");
+            check(engine.recoverPendingTransactions() == 0,
+                    "已恢复事务必须幂等，不得在后续启动重复回滚");
+            pass("v5 interrupted commits recover from durable journals");
+        } finally {
+            deleteTree(root);
+        }
     }
 
     private static String fileJson(String path, byte[] bytes) {

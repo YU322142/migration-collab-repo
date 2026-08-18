@@ -69,6 +69,7 @@ final class ReleaseTransactionEngine {
             String manifestSha256,
             ArtifactProvider provider) throws IOException, InterruptedException {
         Files.createDirectories(state);
+        recoverPendingTransactions();
         if (Files.exists(state.resolve("RECOVERY_REQUIRED.txt"))) {
             throw new IOException("检测到未完成恢复标记，拒绝开始新的 v5 事务");
         }
@@ -182,11 +183,12 @@ final class ReleaseTransactionEngine {
                     Path saved = backup.resolve(relative).normalize();
                     Files.createDirectories(saved.getParent());
                     Files.copy(target, saved, StandardCopyOption.COPY_ATTRIBUTES);
-                    backups.add(new BackupEntry(relative, true));
+                    backups.add(new BackupEntry(relative, true, Hashing.sha256(saved)));
                 } else {
-                    backups.add(new BackupEntry(relative, false));
+                    backups.add(new BackupEntry(relative, false, ""));
                 }
             }
+            Path journal = writePreparedJournal(transaction, manifest, manifestSha256, backups);
             commitStarted = true;
             for (String relative : removals) fileOperations.deleteIfExists(paths.resolve(relative, true));
             for (Map.Entry<String, byte[]> entry : desired.entrySet()) {
@@ -201,14 +203,16 @@ final class ReleaseTransactionEngine {
                     throw new IOException("事务写后校验失败: " + expected.getKey());
                 }
             }
-            Path receipt = writeReceipt(transaction, manifest, manifestSha256, desiredHashes, removals);
             ownership.write(manifest.releaseId(), manifest.releaseSequence(), desiredHashes);
             sequenceGate.commit(manifest, manifestSha256);
+            Path receipt = writeReceipt(transaction, manifest, manifestSha256, desiredHashes, removals);
+            Files.deleteIfExists(journal);
             return new Result(!desired.isEmpty() || !removals.isEmpty(), desired.size(), removals.size(), configChanged, receipt);
         } catch (Throwable failure) {
             if (commitStarted) {
                 try {
                     rollback(paths, backup, backups);
+                    Files.deleteIfExists(transaction.resolve("journal.json"));
                 } catch (Throwable rollbackFailure) {
                     Files.writeString(state.resolve("RECOVERY_REQUIRED.txt"),
                             "MCSync v5 transaction " + transactionId + " rollback failed.\n"
@@ -223,6 +227,41 @@ final class ReleaseTransactionEngine {
         }
     }
 
+    int recoverPendingTransactions() throws IOException {
+        Path transactions = state.resolve("transactions");
+        if (!Files.isDirectory(transactions)) return 0;
+        ManagedPathPolicy paths = new ManagedPathPolicy(root, List.of());
+        int recovered = 0;
+        try (var stream = Files.list(transactions)) {
+            for (Path transaction : stream.filter(Files::isDirectory).sorted().toList()) {
+                Path journal = transaction.resolve("journal.json");
+                if (!Files.isRegularFile(journal)) continue;
+                List<BackupEntry> entries = readPreparedJournal(journal, transaction.resolve("backup"));
+                try {
+                    rollback(paths, transaction.resolve("backup"), entries);
+                    LinkedHashMap<String, Object> receipt = new LinkedHashMap<>();
+                    receipt.put("schema", 1);
+                    receipt.put("status", "ROLLED_BACK_AFTER_INTERRUPTED_COMMIT");
+                    receipt.put("recoveredAt", Instant.now().toString());
+                    receipt.put("journalSha256", Hashing.sha256(journal));
+                    receipt.put("restored", entries.stream().map(BackupEntry::relative).toList());
+                    Files.writeString(transaction.resolve("recovery-receipt.json"),
+                            StrictJson.stringify(receipt) + "\n", StandardCharsets.UTF_8);
+                    Files.delete(journal);
+                    recovered++;
+                } catch (Throwable failure) {
+                    Files.writeString(state.resolve("RECOVERY_REQUIRED.txt"),
+                            "MCSync could not recover interrupted transaction " + transaction.getFileName()
+                                    + ".\n" + failure + "\n",
+                            StandardCharsets.UTF_8);
+                    if (failure instanceof IOException io) throw io;
+                    throw new IOException("中断事务自动恢复失败", failure);
+                }
+            }
+        }
+        return recovered;
+    }
+
     private void rollback(ManagedPathPolicy paths, Path backup, List<BackupEntry> entries) throws IOException {
         List<BackupEntry> reverse = new ArrayList<>(entries);
         reverse.sort(Comparator.comparing(BackupEntry::relative).reversed());
@@ -230,12 +269,73 @@ final class ReleaseTransactionEngine {
             Path target = paths.resolve(entry.relative(), true);
             if (entry.existed()) {
                 Path saved = backup.resolve(entry.relative());
+                if (!Files.isRegularFile(saved) || !Hashing.sha256(saved).equals(entry.backupSha256())) {
+                    throw new IOException("事务备份缺失或哈希漂移: " + entry.relative());
+                }
                 Files.createDirectories(target.getParent());
                 Files.copy(saved, target, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.COPY_ATTRIBUTES);
             } else {
                 fileOperations.deleteIfExists(target);
             }
         }
+    }
+
+    private static Path writePreparedJournal(
+            Path transaction,
+            ReleaseManifestV5 manifest,
+            String manifestSha256,
+            List<BackupEntry> backups) throws IOException {
+        LinkedHashMap<String, Object> journal = new LinkedHashMap<>();
+        journal.put("schema", 1);
+        journal.put("state", "PREPARED");
+        journal.put("releaseId", manifest.releaseId());
+        journal.put("releaseSequence", manifest.releaseSequence());
+        journal.put("manifestSha256", manifestSha256);
+        journal.put("createdAt", Instant.now().toString());
+        journal.put("backups", backups.stream().map(entry -> Map.of(
+                "path", entry.relative(),
+                "existed", entry.existed(),
+                "sha256", entry.backupSha256())).toList());
+        Path result = transaction.resolve("journal.json");
+        Files.writeString(result, StrictJson.stringify(journal) + "\n", StandardCharsets.UTF_8);
+        return result;
+    }
+
+    @SuppressWarnings("unchecked")
+    private static List<BackupEntry> readPreparedJournal(Path journal, Path backup) throws IOException {
+        Object parsed;
+        try {
+            parsed = StrictJson.parse(Files.readString(journal, StandardCharsets.UTF_8));
+        } catch (RuntimeException failure) {
+            throw new IOException("事务日志不是有效 JSON: " + journal, failure);
+        }
+        if (!(parsed instanceof Map<?, ?> raw)) throw new IOException("事务日志根不是对象");
+        Map<String, Object> object = (Map<String, Object>) raw;
+        if (!new java.math.BigDecimal("1").equals(object.get("schema"))
+                || !"PREPARED".equals(object.get("state"))
+                || !(object.get("backups") instanceof List<?> values)) {
+            throw new IOException("事务日志 schema/state/backups 无效");
+        }
+        ArrayList<BackupEntry> result = new ArrayList<>();
+        LinkedHashSet<String> seen = new LinkedHashSet<>();
+        for (Object value : values) {
+            if (!(value instanceof Map<?, ?> entry)) throw new IOException("事务日志备份条目不是对象");
+            Object pathRaw = entry.get("path");
+            Object existedRaw = entry.get("existed");
+            Object hashRaw = entry.get("sha256");
+            if (!(pathRaw instanceof String relative) || !(existedRaw instanceof Boolean existed)
+                    || !(hashRaw instanceof String hash) || !seen.add(relative.toLowerCase(java.util.Locale.ROOT))) {
+                throw new IOException("事务日志备份条目无效或重复");
+            }
+            Path saved = backup.resolve(relative).normalize();
+            if (!saved.startsWith(backup)) throw new IOException("事务日志备份路径逃逸");
+            if (existed && (!hash.matches("[0-9a-f]{64}") || !Files.isRegularFile(saved))) {
+                throw new IOException("事务日志声明的备份不存在或哈希格式无效: " + relative);
+            }
+            if (!existed && !hash.isEmpty()) throw new IOException("不存在目标的备份哈希必须为空");
+            result.add(new BackupEntry(relative, existed, hash));
+        }
+        return List.copyOf(result);
     }
 
     private static Path writeReceipt(
@@ -273,6 +373,6 @@ final class ReleaseTransactionEngine {
         return side.contains("client") || side.contains("integrated_server") || side.contains("both");
     }
 
-    private record BackupEntry(String relative, boolean existed) {
+    private record BackupEntry(String relative, boolean existed, String backupSha256) {
     }
 }
