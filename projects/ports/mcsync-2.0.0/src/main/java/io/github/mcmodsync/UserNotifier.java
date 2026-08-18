@@ -83,7 +83,7 @@ final class UserNotifier implements SyncObserver {
                     mobileRuntime
                             ? (portableMode ? "portable-mobile" : "agent-mobile")
                             : (portableMode ? "portable-headless" : "agent-headless"));
-            System.out.println("[MCModSync] " + environment.summaryLine());
+            System.out.println("[MCSync] " + environment.summaryLine());
         }
     }
 
@@ -119,7 +119,7 @@ final class UserNotifier implements SyncObserver {
     }
 
     static String restartRequiredTitle(DisplayLanguage language) {
-        return language.text("MCModSync：需要重新启动", "MCModSync: Restart Required");
+        return language.text("MCSync：需要重新启动", "MCSync: Restart Required");
     }
 
     static String restartRequiredMessage(DisplayLanguage language) {
@@ -177,12 +177,12 @@ final class UserNotifier implements SyncObserver {
     void showWaitingForGameExit(long parentPid) throws IOException {
         progressUiStarted = true;
         String plan = text(
-                "MCModSync 已检测到 Mod、资源包或服务器列表变化。\n\n"
+                "MCSync 已检测到 Mod、资源包或服务器列表变化。\n\n"
                         + "新版通常会让 Minecraft 自动正常退出。\n"
                         + "如果加载器、Minecraft 或启动器仍显示错误/退出窗口，请将那个窗口关闭；"
                         + "只要游戏 Java 进程结束，下载就会自动继续。\n\n"
                         + "请不要再次启动游戏，也不要手动改动 mods 目录。",
-                "MCModSync detected changes to mods, resource packs, or the server list.\n\n"
+                "MCSync detected changes to mods, resource packs, or the server list.\n\n"
                         + "Minecraft should exit normally. Close any remaining loader, Minecraft, or launcher window; "
                         + "the download starts after the game Java process exits.\n\n"
                         + "Do not launch the game again or modify the mods directory.");
@@ -200,7 +200,7 @@ final class UserNotifier implements SyncObserver {
             runOnUiThread(() -> {
                 closeActiveDownloadDialog();
                 ensureProgressDialog();
-                activeDownloadDialog.setTitle(text("MCModSync 正在准备更新", "MCModSync Preparing Update"));
+                activeDownloadDialog.setTitle(text("MCSync 正在准备更新", "MCSync Preparing Update"));
                 activePhaseLabel.setText(text("正在等待 Minecraft/加载器进程退出……",
                         "Waiting for the Minecraft/loader process to exit…"));
                 activeFileDetailLabel.setText(text("进程 PID ", "Process PID ") + parentPid
@@ -229,7 +229,7 @@ final class UserNotifier implements SyncObserver {
                                 "手机端：自动移出并备份服务器已移除/不在清单中的 Mod",
                                 "Mobile: moving server-removed or unlisted mods to backup"),
                         String.join(", ", serverRemoved));
-                System.out.println("[MCModSync] " + text(
+                System.out.println("[MCSync] " + text(
                         "手机端自动隔离服务器已移除 Mod: ",
                         "Mobile: quarantined mods removed by the server: ") + serverRemoved);
                 return RemovalDecision.BACKUP;
@@ -238,7 +238,7 @@ final class UserNotifier implements SyncObserver {
                             "无弹窗环境：保留服务器已移除的 Mod 为客户端文件",
                             "Headless environment: keeping server-removed mods as client files"),
                     String.join(", ", serverRemoved));
-            System.out.println("[MCModSync] " + text(
+            System.out.println("[MCSync] " + text(
                     "无弹窗环境，自动保留服务器已移除 Mod: ",
                     "Headless environment: retained server-removed mods: ") + serverRemoved);
             return RemovalDecision.KEEP;
@@ -264,13 +264,13 @@ final class UserNotifier implements SyncObserver {
                                 "Choose how to handle mods removed by the server in the topmost window"));
                 int choice = showTopmostOptionDialog(
                         scroll,
-                        text("MCModSync：服务器已移除 Mod", "MCModSync: Mods Removed by Server"),
+                        text("MCSync：服务器已移除 Mod", "MCSync: Mods Removed by Server"),
                         options,
                         options[0]);
                 decision.set(choice == 0 ? RemovalDecision.BACKUP : RemovalDecision.KEEP);
             });
         } catch (IOException exception) {
-            System.err.println("[MCModSync] " + text(
+            System.err.println("[MCSync] " + text(
                     "无法显示服务器移除选择窗口，将安全保留文件: ",
                     "Cannot show the removed-mod dialog; files will be retained safely: ") + exception.getMessage());
         }
@@ -284,7 +284,7 @@ final class UserNotifier implements SyncObserver {
                 reportPhase(text(
                         "手机端：自动移出并备份未在云端清单中的本地 Mod",
                         "Mobile: moving local mods absent from the cloud catalog to backup"), fileName);
-                System.out.println("[MCModSync] " + text(
+                System.out.println("[MCSync] " + text(
                         "手机端自动隔离未确认客户端 Mod: ",
                         "Mobile: quarantined unconfirmed client mod: ") + fileName);
                 return UnknownModDecision.BACKUP;
@@ -293,7 +293,7 @@ final class UserNotifier implements SyncObserver {
             reportPhase(text(
                     "无弹窗环境：保留未在云端清单中的本地 Mod",
                     "Headless environment: keeping local mods absent from the cloud catalog"), fileName);
-            System.out.println("[MCModSync] " + text(
+            System.out.println("[MCSync] " + text(
                     "无弹窗环境，自动保留未确认客户端 Mod: ",
                     "Headless environment: retained unconfirmed client mod: ") + fileName);
             return UnknownModDecision.KEEP_CLIENT;
@@ -318,7 +318,7 @@ final class UserNotifier implements SyncObserver {
                                         + fileName + "\n\n"
                                         + "Is it a client-only mod that is safe to keep?\n"
                                         + "If unsure, choose No. The file is moved to .modsync/backups and is not deleted."),
-                        text("MCModSync：确认纯客户端 Mod", "MCModSync: Confirm Client-only Mod"),
+                        text("MCSync：确认纯客户端 Mod", "MCSync: Confirm Client-only Mod"),
                         options,
                         options[0]);
                 if (choice == 0) {
@@ -351,7 +351,7 @@ final class UserNotifier implements SyncObserver {
                     "The recommendation window is unavailable; all compatible recommended mods will be used. Catalog: ")
                     + request.catalogVersion();
             reportPhase(language.text("推荐模组使用默认选择", "Using default recommended mods"), detail);
-            System.out.println("[MCModSync] " + detail);
+            System.out.println("[MCSync] " + detail);
             return request.initiallySelected();
         }
 
@@ -431,7 +431,7 @@ final class UserNotifier implements SyncObserver {
                 ? activeDownloadDialog
                 : null;
         JDialog dialog = new JDialog(owner, language.text(
-                "MCModSync 推荐模组选择", "MCModSync Recommended Mods"), true);
+                "MCSync 推荐模组选择", "MCSync Recommended Mods"), true);
         dialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         dialog.setAlwaysOnTop(true);
         dialog.setAutoRequestFocus(true);
@@ -501,7 +501,7 @@ final class UserNotifier implements SyncObserver {
         try {
             runOnUiThread(() -> {
                 ensureProgressDialog();
-                activeDownloadDialog.setTitle(text("MCModSync 正在自动同步", "MCModSync Automatic Sync"));
+                activeDownloadDialog.setTitle(text("MCSync 正在自动同步", "MCSync Automatic Sync"));
                 activePhaseLabel.setText(text(
                         "已检测到 Mod 变化，正在准备下载……",
                         "Mod changes detected; preparing downloads…"));
@@ -542,7 +542,7 @@ final class UserNotifier implements SyncObserver {
         try {
             runOnUiThread(() -> {
                 ensureProgressDialog();
-                activeDownloadDialog.setTitle(text("MCModSync 正在同步资源包", "MCModSync Resource-pack Sync"));
+                activeDownloadDialog.setTitle(text("MCSync 正在同步资源包", "MCSync Resource-pack Sync"));
                 activePhaseLabel.setText(text(
                         "已检测到资源包变化，正在准备下载……",
                         "Resource-pack changes detected; preparing downloads…"));
@@ -572,14 +572,14 @@ final class UserNotifier implements SyncObserver {
         String plan = text(
                 "检测到云端服务器列表 MD5 已变化。\n\n"
                         + "将自动下载并校验：" + fileName + "\n\n"
-                        + "只有 MCModSync 所有权台账确认的云端条目才会更新或移除。\n"
+                        + "只有 MCSync 所有权台账确认的云端条目才会更新或移除。\n"
                         + "玩家自行添加、同地址重复或无法确认所有权的条目都会原样保留。\n"
                         + "现有条目保持原位置和相对顺序；新的云端服务器只追加到列表末尾。\n"
                         + "现有 servers.dat 会先保存到 .modsync/backups，再安全替换。\n\n"
                         + "下载内容只有通过 MD5 复核后才会提交，无需确认。",
                 "The cloud server-list MD5 changed.\n\n"
                         + "Download and verify automatically: " + fileName + "\n\n"
-                        + "Only cloud entries verified by the MCModSync ownership ledger may be updated or removed.\n"
+                        + "Only cloud entries verified by the MCSync ownership ledger may be updated or removed.\n"
                         + "Player-added, duplicate-address, and ownership-ambiguous entries are retained unchanged.\n"
                         + "Existing entries keep their positions and relative order; new cloud servers are appended.\n"
                         + "The existing servers.dat is backed up to .modsync/backups before replacement.\n\n"
@@ -595,7 +595,7 @@ final class UserNotifier implements SyncObserver {
         try {
             runOnUiThread(() -> {
                 ensureProgressDialog();
-                activeDownloadDialog.setTitle(text("MCModSync 正在同步服务器列表", "MCModSync Server-list Sync"));
+                activeDownloadDialog.setTitle(text("MCSync 正在同步服务器列表", "MCSync Server-list Sync"));
                 activePhaseLabel.setText(text(
                         "已检测到服务器列表变化，正在自动下载……",
                         "Server-list changes detected; downloading automatically…"));
@@ -646,7 +646,7 @@ final class UserNotifier implements SyncObserver {
             });
         } catch (IOException exception) {
             markDialogsUnavailable(exception.getMessage());
-            System.err.println("[MCModSync] " + text(
+            System.err.println("[MCSync] " + text(
                     "无法更新进度窗口: ", "Cannot update the progress window: ") + exception.getMessage());
         }
     }
@@ -710,7 +710,7 @@ final class UserNotifier implements SyncObserver {
                 closeActiveDownloadDialog();
                 JDialog dialog = new JDialog(
                         (java.awt.Frame) null,
-                        text("MCModSync 更新完成", "MCModSync Update Complete"),
+                        text("MCSync 更新完成", "MCSync Update Complete"),
                         false);
                 dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
                 JLabel content = new JLabel("<html><div style='padding:12px'>"
@@ -730,7 +730,7 @@ final class UserNotifier implements SyncObserver {
             });
         } catch (IOException exception) {
             markDialogsUnavailable(exception.getMessage());
-            System.err.println("[MCModSync] " + text(
+            System.err.println("[MCSync] " + text(
                     "无法显示完成提示: ", "Cannot show the completion message: ") + exception.getMessage());
         }
     }
@@ -738,7 +738,7 @@ final class UserNotifier implements SyncObserver {
     static void showFatalError(Throwable failure) {
         String message = mostUsefulMessage(failure);
         DisplayLanguage language = DisplayLanguage.detect(resolveOptionalGameDirectory());
-        System.err.println("[MCModSync] "
+        System.err.println("[MCSync] "
                 + language.text("游戏启动已阻止: ", "Game startup blocked: ") + message);
         if (!dialogsAvailable()) {
             new SyncStatusReporter(resolveOptionalGameDirectory(), language).failed(message);
@@ -769,20 +769,20 @@ final class UserNotifier implements SyncObserver {
                         null,
                         scroll,
                         language.text(
-                                "MCModSync 错误：游戏启动已阻止",
-                                "MCModSync Error: Game Startup Blocked"),
+                                "MCSync 错误：游戏启动已阻止",
+                                "MCSync Error: Game Startup Blocked"),
                         JOptionPane.ERROR_MESSAGE);
             });
         } catch (IOException exception) {
             markDialogsUnavailable(exception.getMessage());
-            System.err.println("[MCModSync] " + language.text(
+            System.err.println("[MCSync] " + language.text(
                     "无法显示错误窗口: ", "Cannot show the error window: ") + exception.getMessage());
         }
     }
 
     static void showInstanceBusy() {
         DisplayLanguage language = DisplayLanguage.detect(resolveOptionalGameDirectory());
-        System.err.println("[MCModSync] " + language.text(
+        System.err.println("[MCSync] " + language.text(
                 "本次启动已取消：请等待同步完成，或关闭该实例的旧 Minecraft/Java 进程后重试。",
                 "Launch cancelled: wait for sync to finish, or close the old Minecraft/Java process and retry."));
         if (!dialogsAvailable()) {
@@ -792,20 +792,20 @@ final class UserNotifier implements SyncObserver {
             runOnUiThread(() -> JOptionPane.showMessageDialog(
                     null,
                     language.text(
-                            "该客户端正在由 MCModSync 下载或替换文件，\n"
+                            "该客户端正在由 MCSync 下载或替换文件，\n"
                                     + "或者同一游戏实例已有一个 Minecraft/Java 进程正在运行。\n\n"
                                     + "本次启动已安全取消，不是 Mod 崩溃。\n"
                                     + "请等待更新窗口显示完成并自动关闭；若没有更新窗口，\n"
                                     + "请先关闭旧的 Minecraft/Java，然后再点击启动。",
-                            "MCModSync is downloading or replacing files, or another Minecraft/Java process is running "
+                            "MCSync is downloading or replacing files, or another Minecraft/Java process is running "
                                     + "for this instance.\n\n"
                                     + "This launch was cancelled safely; it is not a mod crash.\n"
                                     + "Wait for the update window to finish and close. If there is no update window, "
                                     + "close the old Minecraft/Java process before launching again."),
-                    language.text("MCModSync：客户端正在使用中", "MCModSync: Client Is Busy"),
+                    language.text("MCSync：客户端正在使用中", "MCSync: Client Is Busy"),
                     JOptionPane.WARNING_MESSAGE));
         } catch (IOException exception) {
-            System.err.println("[MCModSync] " + language.text(
+            System.err.println("[MCSync] " + language.text(
                     "无法显示客户端占用提示: ", "Cannot show the client-busy message: ") + exception.getMessage());
         }
     }
@@ -925,7 +925,7 @@ final class UserNotifier implements SyncObserver {
             return;
         }
 
-        activePhaseLabel = new JLabel(text("MCModSync 正在准备更新……", "MCModSync is preparing an update…"));
+        activePhaseLabel = new JLabel(text("MCSync 正在准备更新……", "MCSync is preparing an update…"));
         activePhaseLabel.setBorder(BorderFactory.createEmptyBorder(12, 12, 8, 12));
 
         activePlanArea = new JTextArea();
@@ -964,7 +964,7 @@ final class UserNotifier implements SyncObserver {
 
         JDialog dialog = new JDialog(
                 (java.awt.Frame) null,
-                text("MCModSync 正在自动同步", "MCModSync Automatic Sync"),
+                text("MCSync 正在自动同步", "MCSync Automatic Sync"),
                 false);
         dialog.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
         dialog.addWindowListener(new WindowAdapter() {
@@ -992,7 +992,7 @@ final class UserNotifier implements SyncObserver {
         if (activeDownloadDialog == null || !activeDownloadDialog.isDisplayable()) {
             return;
         }
-        activeDownloadDialog.setTitle(text("MCModSync 等待你的选择", "MCModSync Waiting for Your Choice"));
+        activeDownloadDialog.setTitle(text("MCSync 等待你的选择", "MCSync Waiting for Your Choice"));
         activePhaseLabel.setText(phase);
         activeFileDetailLabel.setText(detail);
         setWaitingProgress(activeFileProgressBar, text("等待选择", "Waiting for selection"));
@@ -1074,7 +1074,7 @@ final class UserNotifier implements SyncObserver {
     private void applyDownloadProgress(DownloadProgress snapshot) {
         ensureProgressDialog();
         activeDownloadDialog.toFront();
-        activeDownloadDialog.setTitle(text("MCModSync 正在下载", "MCModSync Downloading"));
+        activeDownloadDialog.setTitle(text("MCSync 正在下载", "MCSync Downloading"));
         activePhaseLabel.setText(text("正在下载 [", "Downloading [")
                 + snapshot.fileIndex() + "/" + snapshot.fileCount()
                 + "] " + snapshot.fileName());
@@ -1212,7 +1212,7 @@ final class UserNotifier implements SyncObserver {
     static void markDialogsUnavailable(String reason) {
         dialogsAvailableCache = false;
         System.setProperty("modsync.disableDialogs", "true");
-        System.err.println("[MCModSync] " + staticText(
+        System.err.println("[MCSync] " + staticText(
                         "图形窗口不可用，已切换为无弹窗模式",
                         "GUI dialogs are unavailable; switched to headless mode")
                 + (reason == null || reason.isBlank() ? "" : ": " + reason));

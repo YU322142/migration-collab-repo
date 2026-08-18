@@ -27,7 +27,7 @@ final class ParallelDownloadRunner {
         ExecutorService executor = Executors.newFixedThreadPool(
                 threadCount(taskCount),
                 runnable -> {
-                    Thread thread = new Thread(runnable, "MCModSync-download");
+                    Thread thread = new Thread(runnable, "MCSync-download");
                     thread.setDaemon(true);
                     return thread;
                 });

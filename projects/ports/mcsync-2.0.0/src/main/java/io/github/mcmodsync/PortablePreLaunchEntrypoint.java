@@ -24,8 +24,8 @@ final class PortablePreLaunchEntrypoint {
             return;
         }
 
-        log(language, "MCModSync " + BuildInfo.VERSION + " " + loaderName + " 便携模式校验开始",
-                "MCModSync " + BuildInfo.VERSION + " " + loaderName + " portable-mode verification started");
+        log(language, "MCSync " + BuildInfo.VERSION + " " + loaderName + " 便携模式校验开始",
+                "MCSync " + BuildInfo.VERSION + " " + loaderName + " portable-mode verification started");
         try {
             Path gameDirectory = locator.locate().toAbsolutePath().normalize();
             // Pin this property before loading configuration so a stale test or
@@ -51,7 +51,7 @@ final class PortablePreLaunchEntrypoint {
             }
             instanceGuard = InstanceGuard.acquire(config.gameDirectory());
             Runtime.getRuntime().addShutdownHook(
-                    new Thread(PortablePreLaunchEntrypoint::releaseGuard, "MCModSync-lock-release"));
+                    new Thread(PortablePreLaunchEntrypoint::releaseGuard, "MCSync-lock-release"));
 
             if (shouldUpdateInProcess(environment)) {
                 runMobileInProcessUpdate(loaderName, config);
@@ -69,7 +69,7 @@ final class PortablePreLaunchEntrypoint {
             if (result.status() == SyncProbeResult.Status.CHANGES_REQUIRED) {
                 boolean helperStarted = PortableUpdateHelper.schedule(
                         config, message -> log(language, message), loaderName);
-                System.err.println("[MCModSync] RESTART_REQUIRED");
+                System.err.println("[MCSync] RESTART_REQUIRED");
                 if (helperStarted) {
                     log(language,
                             "更新窗口已经启动；Minecraft 将正常退出，更新完成后请重新启动",
@@ -77,16 +77,16 @@ final class PortablePreLaunchEntrypoint {
                     exitProcess(0);
                 }
                 throw new RestartRequiredException(language.text(
-                        "MCModSync 检测到同步内容变化。本次 " + loaderName + " 启动已停止；"
+                        "MCSync 检测到同步内容变化。本次 " + loaderName + " 启动已停止；"
                                 + "辅助进程会在当前 Java 完全退出后自动下载并替换。"
                                 + "请等待“更新完成”窗口，再回到启动器启动一次。",
-                        "MCModSync detected synchronized-content changes. This " + loaderName
+                        "MCSync detected synchronized-content changes. This " + loaderName
                                 + " launch was stopped; the helper will download and replace files after Java exits."
                                 + " Wait for the update-complete window, then launch the instance again."));
             }
         } catch (InstanceGuard.AlreadyRunningException busy) {
             releaseGuard();
-            System.err.println("[MCModSync] STARTUP_CANCELLED_UPDATE_BUSY");
+            System.err.println("[MCSync] STARTUP_CANCELLED_UPDATE_BUSY");
             log(language, "本次启动已安全取消：同步辅助进程仍在工作，或该实例已有 Minecraft 正在运行",
                     "This launch was cancelled safely: the sync helper is still working or Minecraft is already "
                             + "running for this instance");
@@ -97,8 +97,8 @@ final class PortablePreLaunchEntrypoint {
             throw expected;
         } catch (Throwable failure) {
             releaseGuard();
-            System.err.println("[MCModSync] STARTUP_BLOCKED");
-            System.err.println("[MCModSync] " + language.text(
+            System.err.println("[MCSync] STARTUP_BLOCKED");
+            System.err.println("[MCSync] " + language.text(
                     "致命错误：无法保证同步内容完整，Minecraft 启动已中止。",
                     "Fatal error: synchronized content integrity cannot be guaranteed; Minecraft startup stopped."));
             failure.printStackTrace(System.err);
@@ -124,14 +124,14 @@ final class PortablePreLaunchEntrypoint {
                         + ", unchanged " + result.unchanged() + ")");
 
         if (result.status() == SyncResult.Status.UPDATED) {
-            System.err.println("[MCModSync] RESTART_REQUIRED");
+            System.err.println("[MCSync] RESTART_REQUIRED");
             log(language, "旧模组已禁用并移入备份，新文件已就绪。请重新启动游戏以加载更新后的 Mod。",
                     "Old mods were disabled and moved to backup; new files are ready. Restart to load updated mods.");
             releaseGuard();
             if (Boolean.getBoolean("modsync.disableProcessExit")) {
                 throw new RestartRequiredException(language.text(
-                        "MCModSync 手机端已在当前进程完成下载并禁用旧模组。本次启动已停止，请重新启动游戏。",
-                        "MCModSync mobile synchronization completed in-process; restart is required."));
+                        "MCSync 手机端已在当前进程完成下载并禁用旧模组。本次启动已停止，请重新启动游戏。",
+                        "MCSync mobile synchronization completed in-process; restart is required."));
             }
             exitProcess(0);
         }
@@ -153,8 +153,8 @@ final class PortablePreLaunchEntrypoint {
     private static void exitProcess(int code) {
         if (Boolean.getBoolean("modsync.disableProcessExit")) {
             throw new RestartRequiredException(language.text(
-                    "MCModSync 请求退出进程 (code=" + code + ")，但测试模式禁用了 System.exit。",
-                    "MCModSync requested process exit (code=" + code + "), but test mode disabled System.exit."));
+                    "MCSync 请求退出进程 (code=" + code + ")，但测试模式禁用了 System.exit。",
+                    "MCSync requested process exit (code=" + code + "), but test mode disabled System.exit."));
         }
         System.exit(code);
     }
@@ -168,7 +168,7 @@ final class PortablePreLaunchEntrypoint {
     }
 
     private static void log(String message) {
-        System.out.println("[MCModSync " + TIME.format(LocalDateTime.now()) + "] " + message);
+        System.out.println("[MCSync " + TIME.format(LocalDateTime.now()) + "] " + message);
     }
 
     static synchronized void releaseGuard() {

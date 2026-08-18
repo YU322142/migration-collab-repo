@@ -50,6 +50,7 @@ public final class AllTests {
         testStructuredConfigMutationEngine();
         testV5AtomicReleaseTransactionAndOwnership();
         testV5InterruptedCommitRecoversFromDurableJournal();
+        testV5SelfUpdateReplacesLegacyJarInSameTransaction();
         testV5CoordinatorDownloadsBeforeStartupAndBecomesIdempotent();
         testV5PublisherProjectBuildsDeterministicRelease();
         testManifestGenerationAndParsing();
@@ -710,6 +711,44 @@ public final class AllTests {
             check(engine.recoverPendingTransactions() == 0,
                     "已恢复事务必须幂等，不得在后续启动重复回滚");
             pass("v5 interrupted commits recover from durable journals");
+        } finally {
+            deleteTree(root);
+        }
+    }
+
+    private void testV5SelfUpdateReplacesLegacyJarInSameTransaction() throws Exception {
+        Path root = Files.createTempDirectory("mcsync-v5-self-update-");
+        try {
+            Files.createDirectories(root.resolve("mods"));
+            Path legacy = root.resolve("mods/MCModSync-1.9.2.jar");
+            Path candidate = root.resolve("candidate-MCSync-2.1.0.jar");
+            writeFabricJar(legacy, BuildInfo.TECHNICAL_MOD_ID, "1.9.2");
+            writeFabricJar(candidate, BuildInfo.TECHNICAL_MOD_ID, "2.1.0");
+            byte[] candidateBytes = Files.readAllBytes(candidate);
+            byte[] gameplay = "gameplay-update".getBytes(StandardCharsets.UTF_8);
+            ReleaseManifestV5 manifest = transactionManifest(
+                    30,
+                    "self-update-30",
+                    List.of(
+                            fileJson("mods/MCSync-2.1.0.jar", candidateBytes),
+                            fileJson("mods/gameplay.jar", gameplay)),
+                    "[]");
+            ReleaseTransactionEngine.Result result = new ReleaseTransactionEngine(root, 2).apply(
+                    manifest, Hashing.sha256(manifest.serialize()),
+                    entry -> entry.path().contains("MCSync") ? candidateBytes : gameplay);
+            check(result.installed() == 2 && result.removed() == 1
+                            && !Files.exists(legacy)
+                            && ModMetadata.readVersion(root.resolve("mods/MCSync-2.1.0.jar")).equals("2.1.0")
+                            && Arrays.equals(Files.readAllBytes(root.resolve("mods/gameplay.jar")), gameplay),
+                    "1.9.x 同 modId JAR 必须与 2.0+ 自更新及玩法文件在一个事务中替换");
+            long selfJars;
+            try (var stream = Files.list(root.resolve("mods"))) {
+                selfJars = stream.filter(Files::isRegularFile)
+                        .filter(path -> ModMetadata.readModId(path).equals(BuildInfo.TECHNICAL_MOD_ID))
+                        .count();
+            }
+            check(selfJars == 1, "自更新后 mods 中必须只剩一个技术 modId=mcmodsync 的 JAR");
+            pass("v5 self update replaces the legacy 1.9.x JAR atomically");
         } finally {
             deleteTree(root);
         }
@@ -3353,10 +3392,13 @@ public final class AllTests {
             notifier.afterUpdate(1, 0, 0);
 
             Path status = root.resolve(".modsync/ui-status.txt");
+            Path statusJson = root.resolve(".modsync/ui-status.json");
             Path progressLog = root.resolve(".modsync/progress.log");
             check(Files.isRegularFile(status), "应写入 ui-status.txt");
+            check(Files.isRegularFile(statusJson), "应写入机器可读的 ui-status.json");
             check(Files.isRegularFile(progressLog), "应写入 progress.log");
             String statusText = Files.readString(status);
+            Map<?, ?> statusObject = (Map<?, ?>) StrictJson.parse(Files.readString(statusJson));
             String progressText = Files.readString(progressLog);
             check(statusText.contains("progressPermille=") || statusText.contains("Update complete"),
                     "英文状态文件应包含进度或完成信息");
@@ -3368,6 +3410,8 @@ public final class AllTests {
                     "英文进度日志应包含环境识别信息");
             check(statusText.contains("Update complete") && !statusText.contains("更新完成"),
                     "英文系统/配置下 ui-status.txt 应使用英文");
+            check(statusObject.get("progressPermille").toString().equals("1000"),
+                    "ui-status.json 应反映完成进度");
             pass("headless progress is logged and written");
         } finally {
             restoreProperties(previous);

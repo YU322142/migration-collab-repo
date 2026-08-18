@@ -95,9 +95,13 @@ Modrinth/CurseForge 不取“最新版”，只解析清单锁定的版本/文�
 
 配置操作声明：路径、格式、键、值类型、允许旧值、目标值、缺失策略、冲突策略、适用 side、应用 phase、重启要求和所属发布序号。
 
+`file-replace` 另外必须声明 `expectedSha256`（或明确的 `absent`），事务提交前会校验文件前像；没有前像约束的整文件替换一律拒绝。
+
 首批结构化编辑器支持 TOML、严格 JSON 与 properties。JSON5、SNBT 或其他不能可靠保留类型/语义的格式在拥有专用解析器前只能使用带旧 SHA 的 `file-replace`，不能以文本搜索替换冒充键级更新。
 
 含认证字段的文件默认禁止整文件托管。未列入操作的键应保持原值；TOML/properties 尽可能保留注释和原始排版。当前值不在 `expected` 中时默认阻断，不静默覆盖。
+
+配置键名包含 token、password、secret、credential、API key、private key 等凭据语义时禁止 OTA；发布器也会拒绝把疑似凭据配置整文件复制进发布目录。
 
 ## 7. 原子事务与恢复
 

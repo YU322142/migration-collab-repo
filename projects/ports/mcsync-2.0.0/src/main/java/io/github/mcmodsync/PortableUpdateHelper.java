@@ -74,7 +74,7 @@ public final class PortableUpdateHelper {
                 System.exit(0);
             }
         } catch (Throwable failure) {
-            System.err.println("[MCModSync Helper] UPDATE_FAILED");
+            System.err.println("[MCSync Helper] UPDATE_FAILED");
             failure.printStackTrace(System.err);
             UserNotifier.showFatalError(failure);
             System.exit(1);
@@ -151,7 +151,7 @@ public final class PortableUpdateHelper {
         builder.redirectError(ProcessBuilder.Redirect.appendTo(logPath.toFile()));
         Process process;
         // Keep a live read handle until the child acknowledges that its main
-        // class loaded. This also prevents an older MCModSync process from
+        // class loaded. This also prevents an older MCSync process from
         // deleting the new runtime copy during the launch window on Windows.
         try (JarFile pinned = openVerifiedHelperArchive(helperJar)) {
             process = builder.start();
@@ -180,7 +180,7 @@ public final class PortableUpdateHelper {
         cleanupOldHelperCopies(helperDirectory, logger);
 
         Path helperJar = helperDirectory.resolve(
-                "MCModSync-helper-" + ProcessHandle.current().pid() + "-" + System.nanoTime() + ".jar");
+                "MCSync-helper-" + ProcessHandle.current().pid() + "-" + System.nanoTime() + ".jar");
         Path partial = helperDirectory.resolve("." + helperJar.getFileName() + ".part");
         try {
             Files.copy(selfJar, partial);
@@ -437,7 +437,7 @@ public final class PortableUpdateHelper {
                 }
             }
         } catch (URISyntaxException exception) {
-            throw new IOException("MCModSync JAR 路径格式无效", exception);
+            throw new IOException("MCSync JAR 路径格式无效", exception);
         }
 
         // Some custom class loaders omit CodeSource. Fall back to either
@@ -487,9 +487,9 @@ public final class PortableUpdateHelper {
             } catch (ReflectiveOperationException ignored) {
                 // Report the original, more useful loader lookup failure below.
             }
-            throw new IOException("无法通过 Fabric/NeoForge Loader 定位 MCModSync JAR", exception);
+            throw new IOException("无法通过 Fabric/NeoForge Loader 定位 MCSync JAR", exception);
         }
-        throw new IOException("无法定位正在运行的 MCModSync JAR");
+        throw new IOException("无法定位正在运行的 MCSync JAR");
     }
 
     private static boolean isJar(Path path) {
@@ -520,7 +520,7 @@ public final class PortableUpdateHelper {
     }
 
     private static void log(String message) {
-        System.out.println("[MCModSync Helper " + TIME.format(LocalDateTime.now()) + "] " + message);
+        System.out.println("[MCSync Helper " + TIME.format(LocalDateTime.now()) + "] " + message);
     }
 
     private static void log(String chinese, String english) {

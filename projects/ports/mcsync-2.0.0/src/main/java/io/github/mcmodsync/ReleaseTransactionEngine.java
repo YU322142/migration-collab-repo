@@ -170,6 +170,7 @@ final class ReleaseTransactionEngine {
                 }
             }
         }
+        addLegacySelfUpdateRemovals(paths, stage, desired.keySet(), removals);
 
         List<BackupEntry> backups = new ArrayList<>();
         boolean commitStarted = false;
@@ -224,6 +225,38 @@ final class ReleaseTransactionEngine {
             if (failure instanceof InterruptedException interrupted) throw interrupted;
             if (failure instanceof IOException io) throw io;
             throw new IOException("MCSync v5 事务失败", failure);
+        }
+    }
+
+    private void addLegacySelfUpdateRemovals(
+            ManagedPathPolicy paths,
+            Path stage,
+            Set<String> desiredPaths,
+            Set<String> removals) throws IOException {
+        List<String> selfCandidates = new ArrayList<>();
+        for (String relative : desiredPaths) {
+            if (!relative.toLowerCase(java.util.Locale.ROOT).endsWith(".jar")) continue;
+            Path staged = stage.resolve(relative);
+            if (ModMetadata.readModId(staged).equals(BuildInfo.TECHNICAL_MOD_ID)) selfCandidates.add(relative);
+        }
+        if (selfCandidates.size() > 1) {
+            throw new IOException("v5 发布不能包含多个 MCSync 自更新候选");
+        }
+        if (selfCandidates.isEmpty()) return;
+        Path mods = root.resolve("mods");
+        if (!Files.isDirectory(mods)) return;
+        String desired = selfCandidates.getFirst().replace('\\', '/');
+        try (var stream = Files.list(mods)) {
+            for (Path existing : stream.filter(Files::isRegularFile)
+                    .filter(path -> path.getFileName().toString().toLowerCase(java.util.Locale.ROOT).endsWith(".jar"))
+                    .toList()) {
+                String relative = root.relativize(existing).toString().replace('\\', '/');
+                if (relative.equalsIgnoreCase(desired)) continue;
+                if (ModMetadata.readModId(existing).equals(BuildInfo.TECHNICAL_MOD_ID)) {
+                    paths.resolve(relative, true);
+                    removals.add(relative);
+                }
+            }
         }
     }
 

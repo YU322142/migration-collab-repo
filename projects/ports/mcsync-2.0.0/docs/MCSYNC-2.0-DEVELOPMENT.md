@@ -27,6 +27,13 @@
 | `ReleaseManifestV5.java` | 把一次 OTA 表达为有身份、有顺序、有文件集合和配置操作集合的不可变发布。拒绝越界路径、重复路径、未知类型和不完整操作。 |
 | `StrictJson.java` | 为发布清单提供无隐式容错的最小 JSON 边界；重复键和尾随内容均视为发布错误。 |
 | `ReleaseSequenceGate.java` | 维护客户端已成功应用的最高发布序号。低序号和同序号分叉均阻断；只有完整事务成功后才写状态。 |
+| `ReleaseTransactionEngine.java` | 在同一事务中暂存、校验、配置变更、自更新、旧同 modId 替换、备份、原子提交、断电恢复和回滚。 |
+| `ReleaseArtifactResolver.java` | 解析 publisher/direct/Modrinth/CurseForge/镜像候选；缓存已验哈希文件，任何来源都不能绕过清单 SHA256。 |
+| `PublisherPlatformResolver.java` | 仅在发布者本机把 CurseForge fileId/API 解析为固定文件 URL；API key 不进入清单、JAR、客户端或日志。 |
+| `ConfigMutationEngine.java` | 对 TOML、严格 JSON、properties 做键级 set/merge；凭据键、歧义键、类型漂移和无前像替换失败闭锁。 |
+| `ManagedPathPolicy.java` | 定义可 OTA 的路径边界，拒绝存档、区块、玩家数据、缓存、原生库、符号链接和 `servers.dat` 普通覆盖。 |
+| `MinecraftWindowStatus.java` / `SyncStatusReporter.java` | 在已有 Minecraft 窗口标题和 `.modsync/ui-status.json/.txt` 输出启动期状态；无额外更新器窗口，失败回退日志。 |
+| `PublisherProjectV5.java` / `PublisherMain.java` | 发布项目审查、哈希物化、许可来源分离、镜像预设、v5 清单和发布报告；上游文件不会被复制到发布目录。 |
 
 `releaseSequence` 是发布顺序，而不是整合包展示版本。展示版本可以包含语义化名称，但发布序号必须严格单调递增。相同序号只允许同一 `releaseId` 和同一清单 SHA256 重放，以支持幂等启动检查。
 
@@ -68,8 +75,8 @@ v5 将配置变更与文件替换分开描述：
 
 MCSync 的检查、下载和校验发生在模组与配置被 NeoForge 消费之前。可以在 Minecraft 窗口内显示进度，但 Mod、KubeJS、注册表相关资源及大多数配置发生变化后仍必须重启。隐藏 helper 只负责在 JVM 退出后原子替换被占用文件，不把热替换伪装成安全能力。
 
-## 当前阶段
+## 当前阶段（2026-08-18）
 
-- 已完成：MCSync 品牌与 2.0.0 构建身份；新旧文件名扫描兼容；v5 结构解析；配置操作模型；单调发布序号门禁；本地状态原子提交；便携自升级烟测。
-- 待接入：v5 下载规划与现有同步事务；配置格式适配器；Minecraft 内进度界面；启动退出后的自替换/回滚统一事务；真实 1.9.x JAR 升级矩阵。
+- 已完成：MCSync 品牌与 2.0.0 构建身份；新旧文件名扫描兼容；v5 结构解析与下载规划；配置键级 OTA；单调发布序号门禁；同版本篡改修复；断电事务日志恢复；旧 1.9.x 同 modId 自更新；NeoForge 原窗口标题进度；无弹窗状态 JSON；发布器平台/镜像解析与完整回归测试。
+- 动态待验证：真实 NeoForge 渲染层内嵌覆盖层（当前安全实现使用原窗口标题，不创建第二窗口）；真实公网下的 Modrinth/CurseForge 镜像矩阵；在用户指定客户端之外的发布实例验证。
 - 禁止：在上述门禁完成前将开发 JAR 放入活动客户端或交由 MCModSync/MCSync 清单自动分发。

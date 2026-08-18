@@ -538,9 +538,9 @@ final class ModSyncEngine {
                         entry.descriptionZh(),
                         entry.descriptionEn()));
                 protectedEntry = true;
-                log("忽略云端较旧的 MCModSync " + versionIn(entry.fileName())
+                log("忽略云端较旧的 MCSync " + versionIn(entry.fileName())
                                 + "；保留本地 " + newest.version() + "，防止同步器降级",
-                        "Ignoring older cloud MCModSync " + versionIn(entry.fileName())
+                        "Ignoring older cloud MCSync " + versionIn(entry.fileName())
                                 + "; retaining local " + newest.version() + " to prevent a downgrade");
             } else {
                 effective.add(entry);
@@ -1056,7 +1056,7 @@ final class ModSyncEngine {
             IOException original,
             IOException rollback,
             Path transactionDirectory) {
-        String content = "MCModSync 自动回滚未完全成功。\n"
+        String content = "MCSync 自动回滚未完全成功。\n"
                 + "为避免加载器加载不完整的 Mod 组合，后续启动已被阻止。\n"
                 + "事务文件目录: " + transactionDirectory + "\n"
                 + "原始错误: " + original + "\n"

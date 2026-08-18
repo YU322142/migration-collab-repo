@@ -21,6 +21,7 @@ final class SyncStatusReporter {
     private static final DateTimeFormatter TIME = DateTimeFormatter.ofPattern("HH:mm:ss");
 
     private final Path statusFile;
+    private final Path statusJsonFile;
     private final Path progressLogFile;
     private final DisplayLanguage language;
     private final AtomicLong lastProgressLogMs = new AtomicLong();
@@ -43,6 +44,7 @@ final class SyncStatusReporter {
                 ? null
                 : gameDirectory.toAbsolutePath().normalize().resolve(".modsync");
         this.statusFile = directory == null ? null : directory.resolve("ui-status.txt");
+        this.statusJsonFile = directory == null ? null : directory.resolve("ui-status.json");
         this.progressLogFile = directory == null ? null : directory.resolve("progress.log");
         this.language = language == null ? DisplayLanguage.EN_US : language;
         this.phase = text("准备中", "Preparing");
@@ -186,9 +188,24 @@ final class SyncStatusReporter {
                     StandardOpenOption.CREATE,
                     StandardOpenOption.TRUNCATE_EXISTING,
                     StandardOpenOption.WRITE);
+            java.util.LinkedHashMap<String, Object> json = new java.util.LinkedHashMap<>();
+            json.put("schema", 1);
+            json.put("time", TIME.format(LocalDateTime.now()));
+            json.put("mode", mode);
+            json.put("phase", phase);
+            json.put("detail", detail);
+            json.put("progressPermille", totalPermille);
+            json.put("plan", plan);
+            Files.writeString(
+                    statusJsonFile,
+                    StrictJson.stringify(json) + "\n",
+                    StandardCharsets.UTF_8,
+                    StandardOpenOption.CREATE,
+                    StandardOpenOption.TRUNCATE_EXISTING,
+                    StandardOpenOption.WRITE);
         } catch (IOException exception) {
-            System.err.println("[MCModSync] "
-                    + text("无法写入 ui-status.txt: ", "Cannot write ui-status.txt: ")
+            System.err.println("[MCSync] "
+                    + text("无法写入 ui-status 状态: ", "Cannot write ui-status state: ")
                     + exception.getMessage());
         }
     }
@@ -216,7 +233,7 @@ final class SyncStatusReporter {
     }
 
     private void logLine(String message) {
-        String line = "[MCModSync UI " + TIME.format(LocalDateTime.now()) + "] " + message;
+        String line = "[MCSync UI " + TIME.format(LocalDateTime.now()) + "] " + message;
         System.out.println(line);
         appendProgressLog(message);
     }

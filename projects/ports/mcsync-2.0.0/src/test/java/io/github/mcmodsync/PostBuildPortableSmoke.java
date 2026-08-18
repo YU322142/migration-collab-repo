@@ -86,7 +86,7 @@ public final class PostBuildPortableSmoke {
             if (child.exitValue() != 0) {
                 throw new AssertionError("Portable preLaunch child exit=" + child.exitValue() + "\n" + childOutput);
             }
-            if (!childOutput.contains("[MCModSync] RESTART_REQUIRED")) {
+            if (!childOutput.contains("RESTART_REQUIRED")) {
                 throw new AssertionError("Portable preLaunch did not take the graceful-exit path\n" + childOutput);
             }
             if (!childOutput.contains("更新辅助进程已确认可用")
