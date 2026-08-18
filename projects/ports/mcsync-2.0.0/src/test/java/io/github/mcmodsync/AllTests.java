@@ -40,6 +40,9 @@ public final class AllTests {
     private void run() throws Exception {
         testMcsyncBrandingKeepsLegacyTechnicalIdentity();
         testV5ReleaseManifestParsingAndValidation();
+        testV5PlatformDownloadSourcesAndMirrorTrustBoundary();
+        testV5CustomBuildUsesPublisherHostedDistribution();
+        testChinaApiMirrorPresetsRemainExplicitThirdPartyCandidates();
         testReleaseSequenceAntiDowngradeGate();
         testManifestGenerationAndParsing();
         testFabricModIdAndV1Compatibility();
@@ -176,6 +179,121 @@ public final class AllTests {
         } finally {
             deleteTree(root);
         }
+    }
+
+    private void testV5PlatformDownloadSourcesAndMirrorTrustBoundary() {
+        String manifest = """
+                {
+                  "schema": 5,
+                  "releaseId": "platform-downloads-1",
+                  "releaseSequence": 2000002,
+                  "minimumMCSyncVersion": "2.0.0",
+                  "files": [
+                    {
+                      "path": "mods/modrinth-example.jar",
+                      "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+                      "size": 10,
+                      "kind": "mod",
+                      "download": {
+                        "type": "modrinth",
+                        "projectId": "AABBCCDD",
+                        "versionId": "IIJJKKLL",
+                        "distributionPolicy": "upstream-only",
+                        "endpoints": [
+                          {"url": "https://api.modrinth.com/v2/", "role": "official", "purpose": "api", "region": "global", "priority": 100},
+                          {"url": "https://mod.mcimirror.top/modrinth/v2/", "role": "mirror", "purpose": "api", "region": "cn", "priority": 10, "thirdParty": true}
+                        ]
+                      }
+                    },
+                    {
+                      "path": "mods/curseforge-example.jar",
+                      "sha256": "2222222222222222222222222222222222222222222222222222222222222222",
+                      "size": 20,
+                      "kind": "mod",
+                      "download": {
+                        "type": "curseforge",
+                        "projectId": "123456",
+                        "fileId": 7654321,
+                        "distributionPolicy": "upstream-only",
+                        "endpoints": [
+                          {"url": "https://api.curseforge.com/v1/", "role": "official", "purpose": "api", "region": "global", "priority": 100}
+                          ,{"url": "https://mod.mcimirror.top/curseforge/v1/", "role": "mirror", "purpose": "api", "region": "cn", "priority": 10, "thirdParty": true}
+                        ]
+                      }
+                    }
+                  ]
+                }
+                """;
+        ReleaseManifestV5 parsed = ReleaseManifestV5.parse(manifest.getBytes(StandardCharsets.UTF_8));
+        check(parsed.files().get(0).download().type().equals("modrinth"), "应保留 Modrinth 固定版本来源");
+        check(parsed.files().get(0).download().endpoints().get(1).role().equals("mirror"),
+                "中国镜像应作为显式候选端点，而非替换信任根");
+        check(parsed.files().get(1).download().distributionPolicy().equals("upstream-only"),
+                "CurseForge 上游下载不应被误标为允许随包再分发");
+
+        expectFailure(() -> ReleaseManifestV5.parse(manifest
+                .replace("https://mod.mcimirror.top/modrinth/v2/", "http://mirror.invalid/v2/")
+                .getBytes(StandardCharsets.UTF_8)));
+        expectFailure(() -> ReleaseManifestV5.parse(manifest
+                .replace("\"fileId\": 7654321", "\"fileId\": 0")
+                .getBytes(StandardCharsets.UTF_8)));
+        expectFailure(() -> ReleaseManifestV5.parse(manifest
+                .replace("\"type\": \"modrinth\"", "\"type\": \"publisher-hosted\"")
+                .getBytes(StandardCharsets.UTF_8)));
+        ReleaseManifestV5 proxied = ReleaseManifestV5.parse(manifest
+                .replace(
+                        "\"url\": \"https://mod.mcimirror.top/modrinth/v2/\", \"role\": \"mirror\", \"purpose\": \"api\"",
+                        "\"url\": \"https://mirror.example.invalid/files/example.jar\", \"role\": \"mirror\", \"purpose\": \"file\"")
+                .getBytes(StandardCharsets.UTF_8));
+        check(proxied.files().getFirst().download().endpoints().get(1).thirdParty(),
+                "特殊网络环境允许 upstream-only 使用显式第三方文件代理");
+        expectFailure(() -> ReleaseManifestV5.parse(manifest
+                .replace("\"thirdParty\": true", "\"thirdParty\": false")
+                .getBytes(StandardCharsets.UTF_8)));
+        pass("v5 pins Modrinth/CurseForge sources and treats mirrors as hash-checked candidates");
+    }
+
+    private void testV5CustomBuildUsesPublisherHostedDistribution() {
+        String manifest = """
+                {
+                  "schema": 5,
+                  "releaseId": "custom-build-1",
+                  "releaseSequence": 2000003,
+                  "minimumMCSyncVersion": "2.0.0",
+                  "files": [{
+                    "path": "mods/our-compat-fix.jar",
+                    "sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                    "size": 30,
+                    "kind": "mod",
+                    "download": {
+                      "type": "publisher-hosted",
+                      "distributionPolicy": "redistributable"
+                    }
+                  }]
+                }
+                """;
+        ReleaseManifestV5 parsed = ReleaseManifestV5.parse(manifest.getBytes(StandardCharsets.UTF_8));
+        check(parsed.files().getFirst().download().type().equals("publisher-hosted"),
+                "手工适配和自制模组应保留发布目录下载方式");
+        pass("custom builds retain publisher-hosted delivery only when redistributable");
+    }
+
+    private void testChinaApiMirrorPresetsRemainExplicitThirdPartyCandidates() {
+        List<ReleaseManifestV5.DownloadEndpoint> modrinth =
+                DownloadEndpointPresets.forPlatform("modrinth", true);
+        check(modrinth.getFirst().uri().equals(DownloadEndpointPresets.MODRINTH_MCIMIRROR),
+                "Modrinth 中国区预设应使用 MCIMirror 的 modrinth/v2 前缀");
+        check(modrinth.getFirst().thirdParty() && modrinth.getFirst().role().equals("mirror"),
+                "镜像预设必须保留第三方身份");
+        check(modrinth.getLast().uri().equals(DownloadEndpointPresets.MODRINTH_OFFICIAL),
+                "镜像预设必须保留官方回退");
+
+        List<ReleaseManifestV5.DownloadEndpoint> curseforge =
+                DownloadEndpointPresets.forPlatform("curseforge", true);
+        check(curseforge.getFirst().uri().equals(DownloadEndpointPresets.CURSEFORGE_MCIMIRROR),
+                "CurseForge 中国区预设应使用 MCIMirror 的 curseforge/v1 前缀");
+        check(curseforge.getLast().role().equals("official"), "CurseForge 也必须保留官方候选");
+        pass("MCIMirror API presets remain explicit third-party candidates with official fallback");
     }
 
     private static ReleaseManifestV5 releaseManifest(long sequence, String releaseId) {

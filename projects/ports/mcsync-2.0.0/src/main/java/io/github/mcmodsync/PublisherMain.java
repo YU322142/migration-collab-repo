@@ -190,7 +190,7 @@ public final class PublisherMain {
                 .filter(entry -> entry.modId().equals("mcmodsync"))
                 .count();
         if (syncTools != 1) {
-            throw new IOException("发布目录必须恰好包含一个当前 MCModSync JAR（Mod ID: mcmodsync）");
+            throw new IOException("发布目录必须恰好包含一个当前 MCSync JAR（兼容 Mod ID: mcmodsync）");
         }
         return new PublicationScan(scanned, managedConfig, bootstrapEntry, configurationTemplate);
     }
@@ -234,7 +234,7 @@ public final class PublisherMain {
         } catch (Exception ignored) {
         }
 
-        JFrame frame = new JFrame(text("MCModSync 清单发布工具", "MCModSync Catalog Publisher"));
+        JFrame frame = new JFrame(text("MCSync 2.0 发布工作台", "MCSync 2.0 Publisher Workspace"));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(760, 410);
         frame.setLocationRelativeTo(null);
@@ -394,8 +394,8 @@ public final class PublisherMain {
                                 "1.6.x/1.7 永久升级入口：",
                                 "Permanent 1.6.x/1.7 upgrade gateway: ") + upgradeOutput + "\n");
                         String upgradeNotice = text(
-                                "\n\nmods.txt 只包含 MCModSync 与配置引导 JAR。旧版升级后会统一读取 mods-v4.txt，并重新同步完整 Mod 集。",
-                                "\n\nmods.txt contains only MCModSync and the configuration bootstrap JAR. Upgraded clients use mods-v4.txt and synchronize the complete mod set again.");
+                                "\n\nmods.txt 只包含 MCSync 与兼容配置引导 JAR。旧版升级后会切换到结构化发布清单。",
+                                "\n\nmods.txt contains only MCSync and the compatibility bootstrap JAR. Upgraded clients switch to the structured release manifest.");
                         int count = completed.entries().size();
                         log.append(text("完成，共 ", "Completed: ") + count
                                 + text(" 个 Mod。\n清单：", " mod(s).\nCatalog: ") + output + "\n");
@@ -572,7 +572,7 @@ public final class PublisherMain {
         chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
         chooser.setAcceptAllFileFilterUsed(false);
         chooser.setFileFilter(new FileNameExtensionFilter(text(
-                "MCModSync 清单 (*.txt)", "MCModSync catalog (*.txt)"), "txt"));
+                "MCSync 清单 (*.txt)", "MCSync catalog (*.txt)"), "txt"));
         chooser.setCurrentDirectory(modsDirectory.toFile());
         if (chooser.showOpenDialog(owner) != JFileChooser.APPROVE_OPTION) {
             return Optional.empty();
@@ -635,17 +635,17 @@ public final class PublisherMain {
         System.out.println(text("用法：", "Usage:"));
         System.out.println(text("  双击 JAR：打开图形界面", "  Double-click the JAR to open the GUI"));
         System.out.println(text(
-                "  java -jar MCModSync.jar <mods目录> [mods-v4.txt输出路径]",
-                "  java -jar MCModSync.jar <mods-directory> [mods-v4.txt-output]"));
+                "  java -jar MCSync.jar <mods目录> [mods-v4.txt输出路径]",
+                "  java -jar MCSync.jar <mods-directory> [mods-v4.txt-output]"));
         System.out.println(text(
-                "  java -jar MCModSync.jar --resourcepack <资源包.zip> [resourcepacks.txt输出路径]",
-                "  java -jar MCModSync.jar --resourcepack <resource-pack.zip> [resourcepacks.txt-output]"));
+                "  java -jar MCSync.jar --resourcepack <资源包.zip> [resourcepacks.txt输出路径]",
+                "  java -jar MCSync.jar --resourcepack <resource-pack.zip> [resourcepacks.txt-output]"));
         System.out.println(text(
-                "  java -jar MCModSync.jar --serverlist <servers.dat> [serverlist.txt输出路径]",
-                "  java -jar MCModSync.jar --serverlist <servers.dat> [serverlist.txt-output]"));
+                "  java -jar MCSync.jar --serverlist <servers.dat> [serverlist.txt输出路径]",
+                "  java -jar MCSync.jar --serverlist <servers.dat> [serverlist.txt-output]"));
         System.out.println(text(
-                "  java -jar MCModSync.jar --upgrade-v2 <mods目录> [mods.txt输出路径]",
-                "  java -jar MCModSync.jar --upgrade-v2 <mods-directory> [mods.txt-output]"));
+                "  java -jar MCSync.jar --upgrade-v2 <mods目录> [mods.txt输出路径]",
+                "  java -jar MCSync.jar --upgrade-v2 <mods-directory> [mods.txt-output]"));
         System.out.println(text(
                 "  语言：-Dmodsync.language=zh_cn 或 -Dmodsync.language=en_us",
                 "  Language: -Dmodsync.language=zh_cn or -Dmodsync.language=en_us"));

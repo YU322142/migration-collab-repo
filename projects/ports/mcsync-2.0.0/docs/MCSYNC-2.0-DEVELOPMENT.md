@@ -30,6 +30,28 @@
 
 `releaseSequence` 是发布顺序，而不是整合包展示版本。展示版本可以包含语义化名称，但发布序号必须严格单调递增。相同序号只允许同一 `releaseId` 和同一清单 SHA256 重放，以支持幂等启动检查。
 
+### 文件来源与再分发边界
+
+发布工具仍由 `java -jar MCSync-2.0.0.jar` 打开，但 UI 将从单层表格重构为发布项目、文件来源、配置操作、验证与导出四个工作区。文件来源有五种：
+
+- `publisher-hosted`：发布者确认允许再分发，并由自己的发布目录提供文件；手工适配、自制兼容模组继续使用这种原有方式。
+- `direct`：使用作者或项目提供的固定 HTTPS 文件地址。
+- `modrinth`：固定项目 ID 和版本 ID，通过官方 API或受控镜像解析文件。
+- `curseforge`：固定项目 ID 和 file ID；发布者 API key 只存在本机，不写入清单。
+- `manual`：无法合法自动下载时提供人工处理信息；必须模组不得使用该模式发布。
+
+下载方式和分发许可是两个独立但必须匹配的字段：
+
+- `redistributable` 可以使用 `publisher-hosted`。
+- `upstream-only` 只能使用作者官方直链或平台来源，发布器不得复制进我们的文件目录。
+- `manual` 只能搭配 `manual` 来源。
+
+schema 会拒绝 `publisher-hosted + upstream-only`。出于中国大陆或其他特殊网络环境考虑，`upstream-only` 仍可使用第三方 API 或文件代理，但镜像端点必须显式声明 `role=mirror` 与 `thirdParty=true`，发布器也必须展示来源警告。这样做不会把文件复制进我们的发布目录；无论官方源还是第三方镜像，客户端最终只接受与清单锁定 ID、大小和 SHA256 完全一致的文件。
+
+首个内置中国区预设为 MCIMirror 的 API 前缀：Modrinth 使用 `https://mod.mcimirror.top/modrinth/v2/`，CurseForge 使用 `https://mod.mcimirror.top/curseforge/v1/`。该预设可关闭，异常时回退官方 API，且解析结果仍受固定项目/版本或文件 ID、大小和 SHA256 约束。
+
+中国镜像只改变传输路径，不改变发布身份。所有候选下载最终都必须满足 v5 中固定的文件大小和 SHA256；镜像返回的“最新版”、文件名或元数据不能覆盖清单锁定值。
+
 ## 配置 OTA 边界
 
 v5 将配置变更与文件替换分开描述：
