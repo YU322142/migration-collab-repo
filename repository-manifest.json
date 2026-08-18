@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-18T09:23:14.390908+00:00",
+  "generated_at": "2026-08-18T09:35:32.854036+00:00",
   "self_excluded": "repository-manifest.json",
   "files": [
     {
@@ -127,6 +127,11 @@
       "path": "docs/CLIENT-AUTHORITY-POLICY.md",
       "bytes": 1906,
       "sha256": "06C6AA4DBE60EFE8C0A5F51BE3B7BF81F9300D7C5AB5E3EEF492182A3D06041B"
+    },
+    {
+      "path": "docs/CLIENT-TITLE-AND-10MB-BOOTSTRAP-DESIGN.md",
+      "bytes": 6978,
+      "sha256": "0AABBB0DBB810250807C31DE0F55E7F9998E258E311F501D5877A1523D570CA1"
     },
     {
       "path": "docs/KNOWN-ISSUES.md",
