@@ -3,6 +3,10 @@ package io.github.mcmodsync;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
+import java.nio.file.AtomicMoveNotSupportedException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -14,15 +18,35 @@ final class ReleaseArtifactResolver implements ReleaseTransactionEngine.Artifact
     private final ModSyncConfig config;
     private final HttpClient client;
     private final Consumer<String> logger;
+    private final SyncObserver observer;
+    private int completedFiles;
+    private int totalFiles = 1;
 
     ReleaseArtifactResolver(ModSyncConfig config, Consumer<String> logger) {
+        this(config, logger, SyncObserver.NONE);
+    }
+
+    ReleaseArtifactResolver(ModSyncConfig config, Consumer<String> logger, SyncObserver observer) {
         this.config = config;
         this.logger = logger;
+        this.observer = observer;
         this.client = RequiredManifestFetcher.createClient(config.connectTimeout());
+    }
+
+    void setTotalFiles(int totalFiles) {
+        this.totalFiles = Math.max(totalFiles, 1);
     }
 
     @Override
     public byte[] fetch(ReleaseManifestV5.FileEntry entry) throws IOException, InterruptedException {
+        Path cached = cachePath(entry);
+        if (Files.isRegularFile(cached) && Files.size(cached) == entry.size()
+                && Hashing.sha256(cached).equals(entry.sha256())) {
+            byte[] bytes = Files.readAllBytes(cached);
+            reportCompleted(entry, bytes.length);
+            return bytes;
+        }
+        Files.deleteIfExists(cached);
         List<URI> candidates = resolveCandidates(entry);
         IOException last = null;
         for (URI candidate : candidates) {
@@ -38,6 +62,8 @@ final class ReleaseArtifactResolver implements ReleaseTransactionEngine.Artifact
                 if (bytes.length != entry.size() || !Hashing.sha256(bytes).equals(entry.sha256())) {
                     throw new IOException("候选源返回的文件与清单锁定哈希不一致");
                 }
+                storeCache(cached, bytes);
+                reportCompleted(entry, bytes.length);
                 return bytes;
             } catch (IOException failure) {
                 last = failure;
@@ -45,6 +71,29 @@ final class ReleaseArtifactResolver implements ReleaseTransactionEngine.Artifact
             }
         }
         throw new IOException("所有下载候选均失败: " + entry.path(), last);
+    }
+
+    private void reportCompleted(ReleaseManifestV5.FileEntry entry, long bytes) {
+        completedFiles++;
+        observer.downloadProgress(new SyncObserver.DownloadProgress(
+                entry.path(), completedFiles, totalFiles, bytes, bytes,
+                completedFiles, totalFiles, completedFiles * 1000 / totalFiles));
+    }
+
+    private Path cachePath(ReleaseManifestV5.FileEntry entry) throws IOException {
+        Path directory = config.gameDirectory().resolve(".modsync").resolve("cache-v5");
+        Files.createDirectories(directory);
+        return directory.resolve(entry.sha256() + ".bin");
+    }
+
+    private static void storeCache(Path target, byte[] bytes) throws IOException {
+        Path temporary = Files.createTempFile(target.getParent(), ".download-", ".part");
+        Files.write(temporary, bytes);
+        try {
+            Files.move(temporary, target, StandardCopyOption.ATOMIC_MOVE, StandardCopyOption.REPLACE_EXISTING);
+        } catch (AtomicMoveNotSupportedException failure) {
+            Files.move(temporary, target, StandardCopyOption.REPLACE_EXISTING);
+        }
     }
 
     private List<URI> resolveCandidates(ReleaseManifestV5.FileEntry entry)

@@ -2,6 +2,9 @@ package io.github.mcmodsync;
 
 import java.io.IOException;
 import java.net.http.HttpClient;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
 
@@ -48,9 +51,30 @@ final class V5ReleaseSync {
         return Optional.of(new Loaded(manifest, bytes, Hashing.sha256(bytes)));
     }
 
-    static SyncProbeResult probe(ModSyncConfig config, Loaded loaded) throws IOException {
+    static SyncProbeResult probe(
+            ModSyncConfig config,
+            Loaded loaded,
+            Consumer<String> logger,
+            SyncObserver observer) throws IOException, InterruptedException {
         boolean changes = new ReleaseTransactionEngine(config.gameDirectory(), config.fileOperationRetries())
                 .needsApply(loaded.manifest(), loaded.sha256());
+        if (changes) {
+            observer.phaseChanged("检测到 v5 OTA，正在游戏窗口内完成下载与哈希校验……");
+            ReleaseArtifactResolver resolver = new ReleaseArtifactResolver(config, logger, observer);
+            List<ReleaseManifestV5.FileEntry> downloads = new java.util.ArrayList<>();
+            ManagedPathPolicy paths = new ManagedPathPolicy(config.gameDirectory(), loaded.manifest().managedScopes());
+            for (ReleaseManifestV5.FileEntry entry : loaded.manifest().files()) {
+                if (!(entry.side().contains("client") || entry.side().contains("both"))
+                        || entry.download().type().equals("manual")) continue;
+                Path target = paths.resolve(entry.path(), true);
+                if (paths.policyFor(entry.path()).equals("first-install") && Files.exists(target)) continue;
+                if (Files.isRegularFile(target) && Files.size(target) == entry.size()
+                        && Hashing.sha256(target).equals(entry.sha256())) continue;
+                downloads.add(entry);
+            }
+            resolver.setTotalFiles(downloads.size());
+            for (ReleaseManifestV5.FileEntry entry : downloads) resolver.fetch(entry);
+        }
         return new SyncProbeResult(changes
                 ? SyncProbeResult.Status.CHANGES_REQUIRED
                 : SyncProbeResult.Status.UP_TO_DATE);
@@ -62,9 +86,14 @@ final class V5ReleaseSync {
             Consumer<String> logger,
             SyncObserver observer) throws IOException, InterruptedException {
         observer.phaseChanged("正在暂存并校验 MCSync v5 发布事务……");
+        ReleaseArtifactResolver resolver = new ReleaseArtifactResolver(config, logger, observer);
+        resolver.setTotalFiles((int) loaded.manifest().files().stream()
+                .filter(file -> (file.side().contains("client") || file.side().contains("both"))
+                        && !file.download().type().equals("manual"))
+                .count());
         ReleaseTransactionEngine.Result result = new ReleaseTransactionEngine(
                 config.gameDirectory(), config.fileOperationRetries())
-                .apply(loaded.manifest(), loaded.sha256(), new ReleaseArtifactResolver(config, logger));
+                .apply(loaded.manifest(), loaded.sha256(), resolver);
         if (!result.changed()) return new SyncResult(SyncResult.Status.UNCHANGED, 0, 0, 0);
         return new SyncResult(SyncResult.Status.UPDATED, result.installed(), result.removed(), 0);
     }

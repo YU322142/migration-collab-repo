@@ -44,6 +44,7 @@ final class ReleaseTransactionEngine {
             if (!appliesToClient(entry.side())) continue;
             desiredPaths.add(entry.path());
             Path target = paths.resolve(entry.path(), true);
+            if (paths.policyFor(entry.path()).equals("first-install") && Files.exists(target)) continue;
             if (!Files.isRegularFile(target) || Files.size(target) != entry.size()
                     || !Hashing.sha256(target).equals(entry.sha256())) return true;
         }
@@ -73,7 +74,7 @@ final class ReleaseTransactionEngine {
         }
         ReleaseSequenceGate sequenceGate = new ReleaseSequenceGate(state);
         ReleaseSequenceGate.Decision gateDecision = sequenceGate.validate(manifest, manifestSha256);
-        if (gateDecision.alreadyApplied()) {
+        if (gateDecision.alreadyApplied() && !needsApply(manifest, manifestSha256)) {
             return new Result(false, 0, 0, 0, null);
         }
 
@@ -91,7 +92,10 @@ final class ReleaseTransactionEngine {
         LinkedHashMap<String, String> desiredHashes = new LinkedHashMap<>();
         for (ReleaseManifestV5.FileEntry entry : manifest.files()) {
             if (!appliesToClient(entry.side())) continue;
-            paths.resolve(entry.path(), true);
+            Path localTarget = paths.resolve(entry.path(), true);
+            if (paths.policyFor(entry.path()).equals("first-install") && Files.exists(localTarget)) {
+                continue;
+            }
             byte[] bytes;
             if (entry.download().type().equals("manual")) {
                 Path local = paths.resolve(entry.path(), true);

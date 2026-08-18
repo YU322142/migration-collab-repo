@@ -88,6 +88,7 @@ final class UserNotifier implements SyncObserver {
     }
 
     private void reportPhase(String phase, String detail) {
+        MinecraftWindowStatus.update(detail == null || detail.isBlank() ? phase : phase + " — " + detail);
         if (statusReporter != null) {
             statusReporter.phase(phase, detail);
         }
@@ -100,12 +101,14 @@ final class UserNotifier implements SyncObserver {
     }
 
     private void reportProgress(DownloadProgress progress) {
+        MinecraftWindowStatus.update(progress.fileName() + "  " + (progress.totalPermille() / 10.0) + "%");
         if (statusReporter != null) {
             statusReporter.progress(progress);
         }
     }
 
     private void reportCompleted(int downloaded, int quarantined, int unchanged) {
+        MinecraftWindowStatus.update(text("更新已就绪，请重启", "Update ready; restart required"));
         if (statusReporter != null) {
             statusReporter.completed(downloaded, quarantined, unchanged, portableMode);
         }

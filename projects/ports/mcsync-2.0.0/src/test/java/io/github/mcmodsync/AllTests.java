@@ -504,6 +504,29 @@ public final class AllTests {
                     "[]");
             expectIoFailure(() -> engine.apply(
                     forbidden, Hashing.sha256(forbidden.serialize()), entry -> thirdMod));
+
+            Files.writeString(root.resolve("options.txt"), "user-options", StandardCharsets.UTF_8);
+            byte[] packagedOptions = "pack-options".getBytes(StandardCharsets.UTF_8);
+            String firstInstallJson = """
+                    {
+                      "schema":5,"releaseId":"tx-first-install","releaseSequence":13,
+                      "minimumMCSyncVersion":"2.0.0",
+                      "managedScopes":[
+                        {"path":"mods","policy":"additive"},
+                        {"path":"options.txt","policy":"first-install"}
+                      ],
+                      "files":[%s,%s],"configOperations":[]
+                    }
+                    """.formatted(fileJson("mods/third.jar", thirdMod), fileJson("options.txt", packagedOptions));
+            ReleaseManifestV5 firstInstall = ReleaseManifestV5.parse(
+                    firstInstallJson.getBytes(StandardCharsets.UTF_8));
+            AtomicInteger fetched = new AtomicInteger();
+            engine.apply(firstInstall, Hashing.sha256(firstInstall.serialize()), entry -> {
+                fetched.incrementAndGet();
+                return thirdMod;
+            });
+            check(Files.readString(root.resolve("options.txt")).equals("user-options") && fetched.get() == 1,
+                    "first-install 文件已存在时必须保留且不得下载覆盖");
             pass("v5 release transaction is atomic, ownership-aware, and save-state safe");
         } finally {
             deleteTree(root);
@@ -568,11 +591,14 @@ public final class AllTests {
             URI uri = URI.create("http://127.0.0.1:" + server.getAddress().getPort()
                     + "/release/manifest.json");
             ModSyncConfig runtimeConfig = config(root, uri, false, false);
+            SyncProbeResult initialProbe = ModSyncCoordinator.probe(runtimeConfig, message -> { }, SyncObserver.NONE);
+            check(initialProbe.status() == SyncProbeResult.Status.CHANGES_REQUIRED && fileRequests.get() == 1,
+                    "NeoForge 初始检查应先在当前窗口生命周期内下载并缓存更新");
             SyncResult applied = ModSyncCoordinator.synchronize(runtimeConfig, message -> { }, SyncObserver.NONE);
             check(applied.status() == SyncResult.Status.UPDATED
                             && Arrays.equals(Files.readAllBytes(root.resolve("mods/demo.jar")), mod),
                     "启动辅助进程应在游戏加载前完成 v5 文件下载与提交");
-            check(fileRequests.get() == 1, "首次 v5 发布只应下载一次目标文件");
+            check(fileRequests.get() == 1, "辅助进程提交时应复用已验哈希缓存，不得再次联网下载");
 
             SyncProbeResult probe = ModSyncCoordinator.probe(runtimeConfig, message -> { }, SyncObserver.NONE);
             check(probe.status() == SyncProbeResult.Status.UP_TO_DATE,
@@ -580,7 +606,20 @@ public final class AllTests {
             SyncResult repeated = ModSyncCoordinator.synchronize(runtimeConfig, message -> { }, SyncObserver.NONE);
             check(repeated.status() == SyncResult.Status.UNCHANGED && fileRequests.get() == 1,
                     "幂等启动不得重新下载已正确安装的文件");
-            check(manifestRequests.get() == 3, "每次启动检查都应重新取得小型清单以发现 OTA");
+
+            Files.writeString(root.resolve("mods/demo.jar"), "tampered", StandardCharsets.UTF_8);
+            SyncProbeResult repairProbe = ModSyncCoordinator.probe(
+                    runtimeConfig, message -> { }, SyncObserver.NONE);
+            check(repairProbe.status() == SyncProbeResult.Status.CHANGES_REQUIRED,
+                    "同一 releaseSequence 的受管文件被篡改后必须重新进入修复流程");
+            SyncResult repaired = ModSyncCoordinator.synchronize(
+                    runtimeConfig, message -> { }, SyncObserver.NONE);
+            check(repaired.status() == SyncResult.Status.UPDATED
+                            && Arrays.equals(Files.readAllBytes(root.resolve("mods/demo.jar")), mod),
+                    "同版本同清单也必须修复哈希漂移，不能被防降级状态误判为已完成");
+            check(fileRequests.get() == 1,
+                    "同版本修复应复用已验哈希缓存，不必重复从远端下载");
+            check(manifestRequests.get() == 6, "每次启动检查都应重新取得小型清单以发现 OTA");
             pass("v5 coordinator downloads pre-start and remains idempotent");
         } finally {
             if (server != null) server.stop(0);

@@ -15,7 +15,7 @@ final class ManagedPathPolicy {
             "journeymap", "xaero", "natives", "libraries", "versions", "assets");
     private static final Set<String> FORBIDDEN_EXACT = Set.of(
             "ops.json", "whitelist.json", "usercache.json", "banned-ips.json",
-            "banned-players.json", "server.properties", "session.lock");
+            "banned-players.json", "server.properties", "session.lock", "servers.dat");
 
     private final Path root;
     private final List<ReleaseManifestV5.ManagedScope> scopes;
@@ -54,6 +54,14 @@ final class ManagedPathPolicy {
 
     boolean isManaged(String relative) {
         return scopes.stream().anyMatch(scope -> scope.policy().equals("managed") && within(scope.path(), relative));
+    }
+
+    String policyFor(String relative) {
+        return scopes.stream()
+                .filter(scope -> within(scope.path(), relative))
+                .map(ReleaseManifestV5.ManagedScope::policy)
+                .findFirst()
+                .orElse("additive");
     }
 
     private static boolean within(String scope, String path) {

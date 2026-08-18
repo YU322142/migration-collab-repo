@@ -21,8 +21,13 @@ final class ModSyncCoordinator {
         if (v5.isPresent()) {
             boolean changed = false;
             for (BakaXLLayout.Target target : BakaXLLayout.syncTargets(config.gameDirectory())) {
-                changed |= V5ReleaseSync.probe(config.forGameDirectory(target.gameDirectory()), v5.get()).status()
+                ModSyncConfig targetConfig = config.forGameDirectory(target.gameDirectory());
+                changed |= V5ReleaseSync.probe(targetConfig, v5.get(), logger, observer).status()
                         == SyncProbeResult.Status.CHANGES_REQUIRED;
+                if (config.syncServerList()) {
+                    changed |= new ServerListSyncEngine(targetConfig, logger).probeWithoutChanges().status()
+                            == SyncProbeResult.Status.CHANGES_REQUIRED;
+                }
             }
             return new SyncProbeResult(changed
                     ? SyncProbeResult.Status.CHANGES_REQUIRED
@@ -94,11 +99,18 @@ final class ModSyncCoordinator {
             int removed = 0;
             boolean changed = false;
             for (BakaXLLayout.Target target : BakaXLLayout.syncTargets(config.gameDirectory())) {
+                ModSyncConfig targetConfig = config.forGameDirectory(target.gameDirectory());
                 SyncResult result = V5ReleaseSync.synchronize(
-                        config.forGameDirectory(target.gameDirectory()), v5.get(), logger, observer);
+                        targetConfig, v5.get(), logger, observer);
                 installed += result.downloaded();
                 removed += result.quarantined();
                 changed |= result.status() == SyncResult.Status.UPDATED;
+                if (config.syncServerList()) {
+                    SyncResult serverList = new ServerListSyncEngine(targetConfig, logger, observer).synchronize();
+                    installed += serverList.downloaded();
+                    removed += serverList.quarantined();
+                    changed |= serverList.status() == SyncResult.Status.UPDATED;
+                }
             }
             if (changed) {
                 observer.afterUpdate(installed, removed, 0);
