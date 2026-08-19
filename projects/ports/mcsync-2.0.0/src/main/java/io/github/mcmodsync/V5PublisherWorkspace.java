@@ -22,6 +22,7 @@ import javax.swing.table.AbstractTableModel;
 import javax.swing.table.TableColumn;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.FileDialog;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
@@ -72,12 +73,14 @@ final class V5PublisherWorkspace {
     private final FileModel files = new FileModel();
     private final ScopeModel scopes = new ScopeModel();
     private final ConfigModel config = new ConfigModel();
+    private final JTabbedPane workspaceTabs = new JTabbedPane();
     private final JTable fileTable = new JTable(files);
     private final JTable scopeTable = new JTable(scopes);
     private final JTable configTable = new JTable(config);
     private final JTextArea validation = new JTextArea();
     private final JLabel summary = new JLabel();
     private final PublisherModAutoMatcher modMatcher = new PublisherModAutoMatcher();
+    private Path projectFile;
 
     private V5PublisherWorkspace(JFrame owner) {
         this.owner = owner;
@@ -99,14 +102,13 @@ final class V5PublisherWorkspace {
         heading.add(summary, BorderLayout.EAST);
         root.add(heading, BorderLayout.NORTH);
 
-        JTabbedPane tabs = new JTabbedPane();
-        tabs.addTab("发布项目", projectPanel());
-        tabs.addTab("文件与来源", filesPanel());
-        tabs.addTab("同步范围", scopesPanel());
-        tabs.addTab("配置 OTA", configPanel());
-        tabs.addTab("远端与旧版升级", remotePanel());
-        tabs.addTab("验证与导出", exportPanel());
-        root.add(tabs, BorderLayout.CENTER);
+        workspaceTabs.addTab("发布项目", projectPanel());
+        workspaceTabs.addTab("文件与来源", filesPanel());
+        workspaceTabs.addTab("同步范围", scopesPanel());
+        workspaceTabs.addTab("配置 OTA", configPanel());
+        workspaceTabs.addTab("远端与旧版升级", remotePanel());
+        workspaceTabs.addTab("验证与导出", exportPanel());
+        root.add(workspaceTabs, BorderLayout.CENTER);
     }
 
     private JPanel projectPanel() {
@@ -717,13 +719,15 @@ final class V5PublisherWorkspace {
 
     private void saveProject() {
         try {
-            JFileChooser chooser = new JFileChooser();
-            chooser.setDialogTitle("保存 MCSync 2.0 发布项目");
-            chooser.setSelectedFile(new java.io.File(releaseId.getText() + ".publisher.json"));
-            if (chooser.showSaveDialog(owner) != JFileChooser.APPROVE_OPTION) return;
-            Path output = chooser.getSelectedFile().toPath().toAbsolutePath().normalize();
+            validation.append("正在打开系统项目保存对话框…\n");
+            Path output = chooseProjectFile(FileDialog.SAVE);
+            if (output == null) {
+                validation.append("已取消保存发布项目。\n");
+                return;
+            }
             if (output.getParent() != null) Files.createDirectories(output.getParent());
             Files.writeString(output, StrictJson.stringify(projectMap()) + "\n", StandardCharsets.UTF_8);
+            projectFile = output;
             validation.append("项目已保存：" + output + "\n");
         } catch (Exception failure) {
             showError(failure.getMessage());
@@ -731,18 +735,63 @@ final class V5PublisherWorkspace {
     }
 
     private void loadProject() {
-        JFileChooser chooser = new JFileChooser();
-        chooser.setDialogTitle("打开 MCSync 2.0 发布项目");
-        if (chooser.showOpenDialog(owner) != JFileChooser.APPROVE_OPTION) return;
         try {
-            Object parsed = StrictJson.parse(Files.readString(chooser.getSelectedFile().toPath(), StandardCharsets.UTF_8));
+            validation.append("正在打开系统项目选择器…\n");
+            Path selected = chooseProjectFile(FileDialog.LOAD);
+            if (selected == null) {
+                validation.append("已取消打开发布项目。\n");
+                return;
+            }
+            validation.append("正在读取发布项目：" + selected + "\n");
+            Object parsed = StrictJson.parse(Files.readString(selected, StandardCharsets.UTF_8));
             if (!(parsed instanceof Map<?, ?> raw)) throw new IOException("项目根必须是 JSON 对象。");
             @SuppressWarnings("unchecked") Map<String, Object> project = (Map<String, Object>) raw;
             loadProjectMap(project);
-            validation.append("项目已加载：" + chooser.getSelectedFile() + "\n");
+            projectFile = selected;
+            validation.append("项目已加载：" + selected + "\n");
+            if (gameRoot.getText().isBlank()) {
+                validation.append("旧项目没有保存客户端根目录；请在“发布项目”页重新选择。\n");
+            }
+            validation.setCaretPosition(validation.getDocument().getLength());
+            workspaceTabs.setSelectedIndex(files.rows.isEmpty() ? 0 : 1);
+            JOptionPane.showMessageDialog(owner,
+                    "发布项目已加载。\n文件：" + files.rows.size()
+                            + "\n同步范围：" + scopes.rows.size()
+                            + "\n配置操作：" + config.rows.size()
+                            + (gameRoot.getText().isBlank() ? "\n\n此旧项目未保存客户端目录，请重新选择。" : ""),
+                    "MCSync 2.0 发布项目", JOptionPane.INFORMATION_MESSAGE);
         } catch (Exception failure) {
             showError("无法加载项目：" + failure.getMessage());
         }
+    }
+
+    private Path chooseProjectFile(int mode) {
+        String title = mode == FileDialog.LOAD
+                ? "打开 MCSync 2.0 发布项目"
+                : "保存 MCSync 2.0 发布项目";
+        FileDialog dialog = new FileDialog(owner, title, mode);
+        dialog.setMultipleMode(false);
+        dialog.setFilenameFilter((directory, name) -> name.toLowerCase(Locale.ROOT).endsWith(".json"));
+        if (projectFile != null) {
+            Path parent = projectFile.getParent();
+            if (parent != null) dialog.setDirectory(parent.toString());
+            dialog.setFile(projectFile.getFileName().toString());
+        } else {
+            dialog.setDirectory(System.getProperty("user.dir", "."));
+            if (mode == FileDialog.SAVE) dialog.setFile(releaseId.getText().strip() + ".publisher.json");
+        }
+        dialog.setVisible(true);
+        String selectedName = dialog.getFile();
+        String selectedDirectory = dialog.getDirectory();
+        dialog.dispose();
+        owner.toFront();
+        owner.requestFocus();
+        if (selectedName == null || selectedDirectory == null) return null;
+        Path selected = Path.of(selectedDirectory, selectedName).toAbsolutePath().normalize();
+        if (mode == FileDialog.SAVE && !selected.getFileName().toString().toLowerCase(Locale.ROOT).endsWith(".json")) {
+            selected = selected.resolveSibling(selected.getFileName() + ".publisher.json");
+        }
+        return selected;
     }
 
     private Map<String, Object> projectMap() {
@@ -751,16 +800,19 @@ final class V5PublisherWorkspace {
         project.put("releaseId", releaseId.getText().strip());
         project.put("releaseSequence", BigDecimal.valueOf(((Number) releaseSequence.getValue()).longValue()));
         project.put("minimumMCSyncVersion", minimumVersion.getText().strip());
-        project.put("remote", Map.of(
-                "baseUrl", normalizedBaseUrl(),
-                "stablePath", cloudPath(stableManifestPath.getText()),
-                "legacyV4Path", cloudPath(legacyV4Path.getText()),
-                "legacyV2Path", cloudPath(legacyV2Path.getText()),
-                "syncServerList", syncServerList.isSelected(),
-                "serverListSource", serverListSource.getText().strip(),
-                "serverListManifestPath", cloudPath(serverListManifestPath.getText()),
-                "autoReleaseSequence", autoReleaseSequence.isSelected(),
-                "generateLegacyGateways", generateLegacyGateways.isSelected()));
+        LinkedHashMap<String, Object> remote = new LinkedHashMap<>();
+        remote.put("baseUrl", normalizedBaseUrl());
+        remote.put("stablePath", cloudPath(stableManifestPath.getText()));
+        remote.put("legacyV4Path", cloudPath(legacyV4Path.getText()));
+        remote.put("legacyV2Path", cloudPath(legacyV2Path.getText()));
+        remote.put("syncServerList", syncServerList.isSelected());
+        remote.put("serverListSource", serverListSource.getText().strip());
+        remote.put("serverListManifestPath", cloudPath(serverListManifestPath.getText()));
+        remote.put("gameRoot", gameRoot.getText().strip());
+        remote.put("outputDirectory", outputDirectory.getText().strip());
+        remote.put("autoReleaseSequence", autoReleaseSequence.isSelected());
+        remote.put("generateLegacyGateways", generateLegacyGateways.isSelected());
+        project.put("remote", remote);
         project.put("managedScopes", scopes.rows.stream().map(row -> Map.of(
                 "path", row.path.strip(), "policy", row.policy)).toList());
         project.put("files", files.rows.stream().map(this::fileJson).toList());
@@ -880,6 +932,8 @@ final class V5PublisherWorkspace {
         serverListSource.setText(String.valueOf(remote.getOrDefault("serverListSource", "")));
         serverListManifestPath.setText(String.valueOf(remote.getOrDefault(
                 "serverListManifestPath", serverListManifestPath.getText())));
+        gameRoot.setText(String.valueOf(remote.getOrDefault("gameRoot", gameRoot.getText())));
+        outputDirectory.setText(String.valueOf(remote.getOrDefault("outputDirectory", outputDirectory.getText())));
         autoReleaseSequence.setSelected(!Boolean.FALSE.equals(remote.get("autoReleaseSequence")));
         generateLegacyGateways.setSelected(!Boolean.FALSE.equals(remote.get("generateLegacyGateways")));
         scopes.rows.clear();
