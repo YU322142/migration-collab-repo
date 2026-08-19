@@ -209,7 +209,7 @@ final class V5PublisherWorkspace {
         JTextArea help = new JTextArea(
                 "必须 Mod 会始终同步；推荐 Mod 由玩家在 Minecraft 窗口内首次启动或推荐清单新增时选择，"
                         + "默认全选。Mod 会优先按哈希自动匹配 Modrinth/CurseForge；未匹配的自制或适配 Mod 回退为本地托管。"
-                        + "中文描述永不被平台英文覆盖，可从 mods-v4.txt 导入后继续人工维护。");
+                        + "中文描述永不被平台英文覆盖；可单独从 mods-v4.txt 或 mods-v5.json 继承模组信息，不改其他发布配置。");
         help.setEditable(false);
         help.setLineWrap(true);
         help.setWrapStyleWord(true);
@@ -221,6 +221,7 @@ final class V5PublisherWorkspace {
         JPanel buttons = new JPanel(new FlowLayout(FlowLayout.LEFT));
         JButton scan = new JButton("扫描 mods");
         JButton importV4 = new JButton("从 mods-v4.txt 导入");
+        JButton importV5 = new JButton("从 mods-v5.json 导入模组信息…");
         JButton rematch = new JButton("自动匹配全部 Mod");
         JButton required = new JButton("所选设为必须");
         JButton recommended = new JButton("所选设为推荐");
@@ -228,6 +229,7 @@ final class V5PublisherWorkspace {
         JButton remove = new JButton("移除选中");
         scan.addActionListener(event -> scanMods(scan));
         importV4.addActionListener(event -> importV4Catalog());
+        importV5.addActionListener(event -> importV5ModCatalog());
         rematch.addActionListener(event -> autoMatchMods(rematch));
         required.addActionListener(event -> setSelectedModKind(true));
         recommended.addActionListener(event -> setSelectedModKind(false));
@@ -235,6 +237,7 @@ final class V5PublisherWorkspace {
         remove.addActionListener(event -> removeSelected(modsTable, files.rows));
         buttons.add(scan);
         buttons.add(importV4);
+        buttons.add(importV5);
         buttons.add(rematch);
         buttons.add(required);
         buttons.add(recommended);
@@ -584,8 +587,14 @@ final class V5PublisherWorkspace {
     }
 
     private List<FileRow> discoverMods(Path rootPath) throws IOException {
-        ArrayList<FileRow> found = new ArrayList<>();
         Set<String> existing = files.normalizedPaths();
+        return discoverCurrentMods(rootPath).stream()
+                .filter(row -> existing.add(row.path.toLowerCase(Locale.ROOT)))
+                .toList();
+    }
+
+    private static List<FileRow> discoverCurrentMods(Path rootPath) throws IOException {
+        ArrayList<FileRow> found = new ArrayList<>();
         Path mods = rootPath.resolve("mods");
         if (!Files.isDirectory(mods, LinkOption.NOFOLLOW_LINKS)) return found;
         try (var stream = Files.list(mods)) {
@@ -594,7 +603,6 @@ final class V5PublisherWorkspace {
                     .sorted().toList()) {
                 if (Files.isSymbolicLink(jar)) continue;
                 String relative = rootPath.relativize(jar).toString().replace('\\', '/');
-                if (!existing.add(relative.toLowerCase(Locale.ROOT))) continue;
                 FileRow row = FileRow.scanned(relative, "mod");
                 populateLocalModMetadata(jar, row);
                 found.add(row);
@@ -673,6 +681,66 @@ final class V5PublisherWorkspace {
         } catch (Exception failure) {
             showError("导入 mods-v4.txt 失败：" + cause(failure).getMessage());
         }
+    }
+
+    private void importV5ModCatalog() {
+        Path rootPath;
+        try {
+            rootPath = requireGameRoot();
+        } catch (IOException failure) {
+            showError(failure.getMessage());
+            return;
+        }
+        JFileChooser chooser = new JFileChooser(rootPath.toFile());
+        chooser.setDialogTitle("选择用于继承模组信息的 mods-v5.json");
+        chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        if (chooser.showOpenDialog(owner) != JFileChooser.APPROVE_OPTION) return;
+        Path manifestPath = chooser.getSelectedFile().toPath().toAbsolutePath().normalize();
+        try {
+            ReleaseManifestV5 manifest = ReleaseManifestV5.parse(Files.readAllBytes(manifestPath));
+            List<ReleaseManifestV5.FileEntry> imported = manifest.files().stream()
+                    .filter(entry -> entry.kind().equals("mod"))
+                    .toList();
+            List<FileRow> current = discoverCurrentMods(rootPath);
+            List<V5ModCatalogMatcher.CurrentMod> currentKeys = current.stream()
+                    .map(row -> new V5ModCatalogMatcher.CurrentMod(row.path, row.modId))
+                    .toList();
+            V5ModCatalogMatcher.MatchResult matches = V5ModCatalogMatcher.match(currentKeys, imported);
+            for (FileRow row : current) {
+                ReleaseManifestV5.FileEntry entry = matches.byCurrentPath().get(
+                        V5ModCatalogMatcher.normalizePath(row.path));
+                if (entry != null) applyImportedV5Metadata(row, entry);
+            }
+
+            // The selected client's mods directory is authoritative: stale rows are removed and
+            // an entry that only exists in the imported manifest is never resurrected.
+            files.rows.removeIf(row -> row.kind.equals("mod"));
+            files.rows.addAll(current);
+            files.rows.sort(Comparator.comparing(row -> row.path));
+            files.fireTableDataChanged();
+            refreshSummary();
+            validation.append("已从 " + manifestPath.getFileName() + " 仅导入 Mods 元数据：匹配 "
+                    + matches.byCurrentPath().size() + "，当前新增 " + matches.newCurrentPaths().size()
+                    + "，旧清单已删除/无法唯一对应 " + matches.deletedImportedPaths().size()
+                    + "。其他文件、范围、配置操作和远端设置均未改动；正在按当前 JAR 重新匹配下载来源。\n");
+            autoMatchMods(null);
+        } catch (Exception failure) {
+            showError("导入 mods-v5.json 模组信息失败：" + cause(failure).getMessage());
+        }
+    }
+
+    private static void applyImportedV5Metadata(FileRow row, ReleaseManifestV5.FileEntry entry) {
+        row.required = entry.required();
+        row.restart = entry.restartRequired();
+        row.side = entry.side().stream().sorted().findFirst().orElse("client");
+        if (!entry.modId().isBlank()) row.modId = entry.modId();
+        if (!entry.displayName().isBlank()) row.displayName = entry.displayName();
+        if (!entry.version().isBlank()) row.modVersion = entry.version();
+        if (!entry.descriptionZh().isBlank()) row.descriptionZh = entry.descriptionZh();
+        if (!entry.descriptionEn().isBlank()) row.descriptionEn = entry.descriptionEn();
+        row.incompatiblePlatforms.clear();
+        row.incompatiblePlatforms.addAll(entry.incompatiblePlatforms());
+        row.matchDetail = "已从 v5 继承元数据，等待按当前文件重新匹配";
     }
 
     private void setSelectedModKind(boolean required) {

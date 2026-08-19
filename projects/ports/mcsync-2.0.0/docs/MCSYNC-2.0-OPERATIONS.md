@@ -4,6 +4,9 @@
 
 1. 运行 `java -jar MCSync-2.0.0.jar`，在默认打开的“2.0 OTA 发布”页选择已验证客户端的游戏根目录。
 2. 在“文件与来源”扫描安全内容目录。发布器只对直接位于 `mods/` 的 Mod JAR 做精确匹配：先批量查询 Modrinth SHA-512，再查询 CurseForge fingerprint；匹配不到才回退为本地托管文件。
+   - 只想沿用上一版的中英文描述和必须/推荐设置时，在“Mods”页使用“从 mods-v5.json 导入模组信息”。该操作只重建 Mods 表，不修改其他文件、受管范围、配置 OTA、服务器列表或远端地址。
+   - 当前所选客户端的 `mods/` 是权威状态：已经删除的 Mod 不会被旧 JSON 恢复；新加入的 Mod 保留本地扫描默认值；升级后改名的 JAR 仅在 `modId` 唯一时继承旧描述。重复或歧义身份不会猜测匹配。
+   - 导入后下载来源会按当前 JAR 重新匹配，旧清单中的哈希、URL 和平台文件 ID 不会直接复用；人工维护的中文描述不会被平台英文覆盖。
 3. 资源包、光影、KubeJS、TACZ、女仆模型包和配置等非 Mod 文件始终使用 `publisher-hosted + redistributable`，不会查询模组站，也不展示无意义的分发政策选择。安全扫描会把 `tacz/`、`tlm_custom_pack/` 纳入独立受管范围；Mod JAR 内置的默认包仍不重复同步。
 4. 中国镜像只是候选传输端点，必须同时保留官方端点；两者最终都以清单中的大小和 SHA-256 为准。
 5. CurseForge 的 API key 只在发布者本机通过 `MCSYNC_CURSEFORGE_API_KEY` 或 JVM system property 提供。发布完成后清单只保存固定文件 URL，不保存 key。

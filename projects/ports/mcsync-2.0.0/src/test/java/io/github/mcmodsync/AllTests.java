@@ -44,6 +44,7 @@ public final class AllTests {
         testV5ReleaseManifestParsingAndValidation();
         testV5RecommendedSelectionIsDeferredToMinecraftWindow();
         testV5ResourceAndShaderPacksCanBeOptional();
+        testV5ModCatalogImportRespectsCurrentClientDeletions();
         testV5PlatformDownloadSourcesAndMirrorTrustBoundary();
         testOnlyModsMayUsePlatformDownloadSources();
         testDefaultDownloadConcurrencyIs128();
@@ -260,6 +261,45 @@ public final class AllTests {
             if (old == null) System.clearProperty("modsync.forceInGameSelection");
             else System.setProperty("modsync.forceInGameSelection", old);
         }
+    }
+
+    private void testV5ModCatalogImportRespectsCurrentClientDeletions() {
+        ReleaseManifestV5.DownloadSource hosted = new ReleaseManifestV5.DownloadSource(
+                "publisher-hosted", "", "", null, "redistributable", List.of());
+        ReleaseManifestV5.FileEntry unchanged = new ReleaseManifestV5.FileEntry(
+                "mods/a-old.jar", "1".repeat(64), 1, "mod", false, true, Set.of("client"), hosted,
+                "mod_a", "A", "1", "甲", "A", Set.of());
+        ReleaseManifestV5.FileEntry upgraded = new ReleaseManifestV5.FileEntry(
+                "mods/b-old.jar", "2".repeat(64), 1, "mod", true, true, Set.of("client"), hosted,
+                "mod_b", "B", "1", "乙", "B", Set.of());
+        ReleaseManifestV5.FileEntry deleted = new ReleaseManifestV5.FileEntry(
+                "mods/deleted.jar", "3".repeat(64), 1, "mod", true, true, Set.of("client"), hosted,
+                "mod_deleted", "Deleted", "1", "已删除", "Deleted", Set.of());
+        ReleaseManifestV5.FileEntry ambiguousOne = new ReleaseManifestV5.FileEntry(
+                "mods/ambiguous-1.jar", "4".repeat(64), 1, "mod", true, true, Set.of("client"), hosted,
+                "duplicate", "Duplicate 1", "1", "重复一", "Duplicate 1", Set.of());
+        ReleaseManifestV5.FileEntry ambiguousTwo = new ReleaseManifestV5.FileEntry(
+                "mods/ambiguous-2.jar", "5".repeat(64), 1, "mod", true, true, Set.of("client"), hosted,
+                "duplicate", "Duplicate 2", "1", "重复二", "Duplicate 2", Set.of());
+
+        V5ModCatalogMatcher.MatchResult result = V5ModCatalogMatcher.match(
+                List.of(
+                        new V5ModCatalogMatcher.CurrentMod("mods/a-old.jar", "mod_a"),
+                        new V5ModCatalogMatcher.CurrentMod("mods/b-new.jar", "mod_b"),
+                        new V5ModCatalogMatcher.CurrentMod("mods/new.jar", "new_mod"),
+                        new V5ModCatalogMatcher.CurrentMod("mods/unknown.jar", "duplicate")),
+                List.of(unchanged, upgraded, deleted, ambiguousOne, ambiguousTwo));
+
+        check(result.byCurrentPath().size() == 2
+                        && result.byCurrentPath().get("mods/a-old.jar").equals(unchanged)
+                        && result.byCurrentPath().get("mods/b-new.jar").equals(upgraded),
+                "v5 Mods 导入应按路径及唯一 modId 继承元数据，并识别升级后改名的 JAR");
+        check(result.newCurrentPaths().containsAll(Set.of("mods/new.jar", "mods/unknown.jar")),
+                "新增 Mod 与歧义 modId 必须保留当前扫描默认值，不能猜测继承");
+        check(result.deletedImportedPaths().containsAll(Set.of(
+                        "mods/deleted.jar", "mods/ambiguous-1.jar", "mods/ambiguous-2.jar")),
+                "旧 v5 中已从客户端删除或无法唯一对应的 Mod 不得被恢复");
+        pass("v5 Mods-only import preserves translations without reviving deleted mods");
     }
 
     private void testPublisherResolvesCurseForgeWithoutLeakingCredentials() throws Exception {
