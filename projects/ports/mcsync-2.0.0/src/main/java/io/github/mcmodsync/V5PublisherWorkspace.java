@@ -702,9 +702,12 @@ final class V5PublisherWorkspace {
                     .filter(entry -> entry.kind().equals("mod"))
                     .toList();
             List<FileRow> current = discoverCurrentMods(rootPath);
-            List<V5ModCatalogMatcher.CurrentMod> currentKeys = current.stream()
-                    .map(row -> new V5ModCatalogMatcher.CurrentMod(row.path, row.modId))
-                    .toList();
+            List<V5ModCatalogMatcher.CurrentMod> currentKeys = new ArrayList<>();
+            for (FileRow row : current) {
+                Path jar = rootPath.resolve(row.path).normalize();
+                currentKeys.add(new V5ModCatalogMatcher.CurrentMod(
+                        row.path, row.modId, Hashing.sha256(jar)));
+            }
             V5ModCatalogMatcher.MatchResult matches = V5ModCatalogMatcher.match(currentKeys, imported);
             for (FileRow row : current) {
                 ReleaseManifestV5.FileEntry entry = matches.byCurrentPath().get(
@@ -719,7 +722,7 @@ final class V5PublisherWorkspace {
             files.rows.sort(Comparator.comparing(row -> row.path));
             files.fireTableDataChanged();
             refreshSummary();
-            validation.append("已从 " + manifestPath.getFileName() + " 仅导入 Mods 元数据：匹配 "
+            validation.append("已从 " + manifestPath.getFileName() + " 仅导入 Mods 元数据：按 SHA-256 精确优先、唯一 modId 仅作升级元数据后备，匹配 "
                     + matches.byCurrentPath().size() + "，当前新增 " + matches.newCurrentPaths().size()
                     + "，旧清单已删除/无法唯一对应 " + matches.deletedImportedPaths().size()
                     + "。其他文件、范围、配置操作和远端设置均未改动；正在按当前 JAR 重新匹配下载来源。\n");

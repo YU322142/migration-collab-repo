@@ -15,7 +15,7 @@ final class V5ModCatalogMatcher {
     private V5ModCatalogMatcher() {
     }
 
-    record CurrentMod(String path, String modId) {
+    record CurrentMod(String path, String modId, String sha256) {
     }
 
     record MatchResult(
@@ -30,30 +30,25 @@ final class V5ModCatalogMatcher {
     }
 
     static MatchResult match(List<CurrentMod> current, List<ReleaseManifestV5.FileEntry> imported) {
-        Map<String, ReleaseManifestV5.FileEntry> importedByPath =
-                uniqueImportedIndex(imported, entry -> normalizePath(entry.path()));
+        Map<String, ReleaseManifestV5.FileEntry> importedByHash =
+                uniqueImportedIndex(imported, entry -> normalizeHash(entry.sha256()));
         Map<String, ReleaseManifestV5.FileEntry> importedById =
                 uniqueImportedIndex(imported, entry -> normalizeId(entry.modId()));
-        Map<String, ReleaseManifestV5.FileEntry> importedByName =
-                uniqueImportedIndex(imported, entry -> fileName(entry.path()));
         Map<String, Integer> currentIdCounts = counts(current.stream()
                 .map(item -> normalizeId(item.modId())).toList());
-        Map<String, Integer> currentNameCounts = counts(current.stream()
-                .map(item -> fileName(item.path())).toList());
 
         LinkedHashMap<String, ReleaseManifestV5.FileEntry> matches = new LinkedHashMap<>();
         HashSet<String> usedImportedPaths = new HashSet<>();
         HashSet<String> newCurrent = new HashSet<>();
         for (CurrentMod item : current) {
             String currentPath = normalizePath(item.path());
-            ReleaseManifestV5.FileEntry match = importedByPath.get(currentPath);
+            // File identity comes from content. A unique modId is only a metadata-migration
+            // fallback for an upgraded JAR whose bytes necessarily changed; callers must still
+            // re-resolve its download source from the current file fingerprint.
+            ReleaseManifestV5.FileEntry match = importedByHash.get(normalizeHash(item.sha256()));
             String id = normalizeId(item.modId());
             if (match == null && !id.isBlank() && currentIdCounts.getOrDefault(id, 0) == 1) {
                 match = importedById.get(id);
-            }
-            String name = fileName(item.path());
-            if (match == null && currentNameCounts.getOrDefault(name, 0) == 1) {
-                match = importedByName.get(name);
             }
             if (match == null || !usedImportedPaths.add(normalizePath(match.path()))) {
                 newCurrent.add(currentPath);
@@ -101,9 +96,9 @@ final class V5ModCatalogMatcher {
         return modId == null ? "" : modId.strip().toLowerCase(Locale.ROOT);
     }
 
-    private static String fileName(String path) {
-        String normalized = normalizePath(path);
-        int separator = normalized.lastIndexOf('/');
-        return separator < 0 ? normalized : normalized.substring(separator + 1);
+    private static String normalizeHash(String sha256) {
+        if (sha256 == null) return "";
+        String normalized = sha256.strip().toLowerCase(Locale.ROOT);
+        return normalized.matches("[0-9a-f]{64}") ? normalized : "";
     }
 }

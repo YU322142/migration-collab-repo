@@ -284,16 +284,16 @@ public final class AllTests {
 
         V5ModCatalogMatcher.MatchResult result = V5ModCatalogMatcher.match(
                 List.of(
-                        new V5ModCatalogMatcher.CurrentMod("mods/a-old.jar", "mod_a"),
-                        new V5ModCatalogMatcher.CurrentMod("mods/b-new.jar", "mod_b"),
-                        new V5ModCatalogMatcher.CurrentMod("mods/new.jar", "new_mod"),
-                        new V5ModCatalogMatcher.CurrentMod("mods/unknown.jar", "duplicate")),
+                        new V5ModCatalogMatcher.CurrentMod("mods/a-renamed.jar", "wrong_metadata", "1".repeat(64)),
+                        new V5ModCatalogMatcher.CurrentMod("mods/b-new.jar", "mod_b", "9".repeat(64)),
+                        new V5ModCatalogMatcher.CurrentMod("mods/new.jar", "new_mod", "a".repeat(64)),
+                        new V5ModCatalogMatcher.CurrentMod("mods/unknown.jar", "duplicate", "b".repeat(64))),
                 List.of(unchanged, upgraded, deleted, ambiguousOne, ambiguousTwo));
 
         check(result.byCurrentPath().size() == 2
-                        && result.byCurrentPath().get("mods/a-old.jar").equals(unchanged)
+                        && result.byCurrentPath().get("mods/a-renamed.jar").equals(unchanged)
                         && result.byCurrentPath().get("mods/b-new.jar").equals(upgraded),
-                "v5 Mods 导入应按路径及唯一 modId 继承元数据，并识别升级后改名的 JAR");
+                "v5 Mods 导入应先按 SHA-256 识别改名文件，并只用唯一 modId 继承升级后的元数据");
         check(result.newCurrentPaths().containsAll(Set.of("mods/new.jar", "mods/unknown.jar")),
                 "新增 Mod 与歧义 modId 必须保留当前扫描默认值，不能猜测继承");
         check(result.deletedImportedPaths().containsAll(Set.of(
