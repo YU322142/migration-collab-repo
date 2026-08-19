@@ -19,7 +19,9 @@ import javax.swing.JTextField;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.SwingWorker;
 import javax.swing.table.AbstractTableModel;
+import javax.swing.RowFilter;
 import javax.swing.table.TableColumn;
+import javax.swing.table.TableRowSorter;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.FileDialog;
@@ -47,7 +49,7 @@ import java.util.Set;
 /** Primary MCSync 2.0 publisher workspace embedded in the executable JAR. */
 final class V5PublisherWorkspace {
     private static final List<String> AUTO_SCAN_ROOTS = List.of(
-            "mods", "resourcepacks", "shaderpacks", "kubejs", "tacz", "tlm_custom_pack");
+            "resourcepacks", "shaderpacks", "kubejs", "tacz", "tlm_custom_pack");
     private static final Set<String> NEVER_SCAN_ROOTS = Set.of(
             "saves", "world", "logs", "crash-reports", "screenshots", "natives", "libraries",
             "assets", "versions", "downloads", "backups", "simplebackups", ".minecraft");
@@ -75,6 +77,7 @@ final class V5PublisherWorkspace {
     private final ConfigModel config = new ConfigModel();
     private final JTabbedPane workspaceTabs = new JTabbedPane();
     private final JTable fileTable = new JTable(files);
+    private final JTable modsTable = new JTable(files);
     private final JTable scopeTable = new JTable(scopes);
     private final JTable configTable = new JTable(config);
     private final JTextArea validation = new JTextArea();
@@ -103,7 +106,8 @@ final class V5PublisherWorkspace {
         root.add(heading, BorderLayout.NORTH);
 
         workspaceTabs.addTab("发布项目", projectPanel());
-        workspaceTabs.addTab("文件与来源", filesPanel());
+        workspaceTabs.addTab("Mods", modsPanel());
+        workspaceTabs.addTab("其他文件", filesPanel());
         workspaceTabs.addTab("同步范围", scopesPanel());
         workspaceTabs.addTab("配置 OTA", configPanel());
         workspaceTabs.addTab("远端与旧版升级", remotePanel());
@@ -155,15 +159,14 @@ final class V5PublisherWorkspace {
     }
 
     private JPanel filesPanel() {
-        configureCombo(fileTable, 5, FILE_SIDES);
-        fileTable.setAutoCreateRowSorter(true);
+        configureCombo(fileTable, 6, FILE_SIDES);
+        installKindFilter(fileTable, false);
         fileTable.setRowHeight(23);
 
         JPanel panel = new JPanel(new BorderLayout(6, 6));
         JTextArea help = new JTextArea(
-                "只有 mods/*.jar 会进行 Modrinth/CurseForge 精确哈希匹配；匹配成功使用上游来源，"
-                        + "匹配失败回退为本地托管。资源包、光影、KubeJS、配置等始终只作为普通本地发布文件，"
-                        + "不会接触模组站或镜像接口。");
+                "这里仅管理资源包、光影、KubeJS、模型包和其他普通文件。它们始终由发布者托管，"
+                        + "不会接触 Modrinth、CurseForge 或镜像接口；mods 请在独立的 Mods 选项卡管理。");
         help.setEditable(false);
         help.setLineWrap(true);
         help.setWrapStyleWord(true);
@@ -175,18 +178,68 @@ final class V5PublisherWorkspace {
         JPanel buttons = new JPanel(new FlowLayout(FlowLayout.LEFT));
         JButton scan = new JButton("扫描安全内容目录");
         JButton add = new JButton("添加文件…");
-        JButton rematch = new JButton("自动匹配全部 Mod");
         JButton remove = new JButton("移除选中");
         scan.addActionListener(event -> scanSafeRoots(scan));
         add.addActionListener(event -> addFiles());
-        rematch.addActionListener(event -> autoMatchMods(rematch));
         remove.addActionListener(event -> removeSelected(fileTable, files.rows));
         buttons.add(scan);
         buttons.add(add);
-        buttons.add(rematch);
         buttons.add(remove);
         panel.add(buttons, BorderLayout.SOUTH);
         return panel;
+    }
+
+    private JPanel modsPanel() {
+        configureCombo(modsTable, 6, FILE_SIDES);
+        installKindFilter(modsTable, true);
+        modsTable.setRowHeight(23);
+
+        JPanel panel = new JPanel(new BorderLayout(6, 6));
+        JTextArea help = new JTextArea(
+                "必须 Mod 会始终同步；推荐 Mod 由玩家在 Minecraft 窗口内首次启动或推荐清单新增时选择，"
+                        + "默认全选。Mod 会优先按哈希自动匹配 Modrinth/CurseForge；未匹配的自制或适配 Mod 回退为本地托管。"
+                        + "中文描述永不被平台英文覆盖，可从 mods-v4.txt 导入后继续人工维护。");
+        help.setEditable(false);
+        help.setLineWrap(true);
+        help.setWrapStyleWord(true);
+        help.setRows(3);
+        help.setOpaque(false);
+        panel.add(help, BorderLayout.NORTH);
+        panel.add(new JScrollPane(modsTable), BorderLayout.CENTER);
+
+        JPanel buttons = new JPanel(new FlowLayout(FlowLayout.LEFT));
+        JButton scan = new JButton("扫描 mods");
+        JButton importV4 = new JButton("从 mods-v4.txt 导入");
+        JButton rematch = new JButton("自动匹配全部 Mod");
+        JButton required = new JButton("所选设为必须");
+        JButton recommended = new JButton("所选设为推荐");
+        JButton remove = new JButton("移除选中");
+        scan.addActionListener(event -> scanMods(scan));
+        importV4.addActionListener(event -> importV4Catalog());
+        rematch.addActionListener(event -> autoMatchMods(rematch));
+        required.addActionListener(event -> setSelectedModKind(true));
+        recommended.addActionListener(event -> setSelectedModKind(false));
+        remove.addActionListener(event -> removeSelected(modsTable, files.rows));
+        buttons.add(scan);
+        buttons.add(importV4);
+        buttons.add(rematch);
+        buttons.add(required);
+        buttons.add(recommended);
+        buttons.add(remove);
+        panel.add(buttons, BorderLayout.SOUTH);
+        return panel;
+    }
+
+    private void installKindFilter(JTable table, boolean modsOnly) {
+        TableRowSorter<FileModel> sorter = new TableRowSorter<>(files);
+        sorter.setRowFilter(new RowFilter<>() {
+            @Override
+            public boolean include(Entry<? extends FileModel, ? extends Integer> entry) {
+                boolean mod = files.rows.get(entry.getIdentifier()).kind.equals("mod");
+                return modsOnly == mod;
+            }
+        });
+        table.setRowSorter(sorter);
     }
 
     private JPanel scopesPanel() {
@@ -479,6 +532,146 @@ final class V5PublisherWorkspace {
                 }
             }
         }.execute();
+    }
+
+    private void scanMods(JButton button) {
+        Path rootPath;
+        try {
+            rootPath = requireGameRoot();
+        } catch (IOException failure) {
+            showError(failure.getMessage());
+            return;
+        }
+        button.setEnabled(false);
+        validation.append("\n正在扫描 mods 并读取本地元数据…\n");
+        new SwingWorker<List<FileRow>, Void>() {
+            @Override
+            protected List<FileRow> doInBackground() throws Exception {
+                return discoverMods(rootPath);
+            }
+
+            @Override
+            protected void done() {
+                button.setEnabled(true);
+                try {
+                    List<FileRow> found = get();
+                    files.rows.addAll(found);
+                    files.rows.sort(Comparator.comparing(row -> row.path));
+                    files.fireTableDataChanged();
+                    refreshSummary();
+                    validation.append("mods 扫描完成：新增 " + found.size()
+                            + " 个 Mod；默认按保守规则标记为必须，正在执行平台精确匹配。\n");
+                    autoMatchMods(null);
+                } catch (Exception failure) {
+                    showError(cause(failure).getMessage());
+                }
+            }
+        }.execute();
+    }
+
+    private List<FileRow> discoverMods(Path rootPath) throws IOException {
+        ArrayList<FileRow> found = new ArrayList<>();
+        Set<String> existing = files.normalizedPaths();
+        Path mods = rootPath.resolve("mods");
+        if (!Files.isDirectory(mods, LinkOption.NOFOLLOW_LINKS)) return found;
+        try (var stream = Files.list(mods)) {
+            for (Path jar : stream.filter(path -> Files.isRegularFile(path, LinkOption.NOFOLLOW_LINKS))
+                    .filter(path -> path.getFileName().toString().toLowerCase(Locale.ROOT).endsWith(".jar"))
+                    .sorted().toList()) {
+                if (Files.isSymbolicLink(jar)) continue;
+                String relative = rootPath.relativize(jar).toString().replace('\\', '/');
+                if (!existing.add(relative.toLowerCase(Locale.ROOT))) continue;
+                FileRow row = FileRow.scanned(relative, "mod");
+                populateLocalModMetadata(jar, row);
+                found.add(row);
+            }
+        }
+        return found;
+    }
+
+    private static void populateLocalModMetadata(Path jar, FileRow row) {
+        row.modId = ModMetadata.readModId(jar);
+        row.displayName = ModMetadata.readName(jar);
+        row.modVersion = ModMetadata.readVersion(jar);
+        String description = ModMetadata.readDescription(jar);
+        if (containsHan(description)) row.descriptionZh = description;
+        else row.descriptionEn = description;
+        row.required = true;
+        row.restart = true;
+    }
+
+    private void importV4Catalog() {
+        Path rootPath;
+        try {
+            rootPath = requireGameRoot();
+        } catch (IOException failure) {
+            showError(failure.getMessage());
+            return;
+        }
+        JFileChooser chooser = new JFileChooser(rootPath.toFile());
+        chooser.setDialogTitle("选择旧版 mods-v4.txt");
+        chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        if (chooser.showOpenDialog(owner) != JFileChooser.APPROVE_OPTION) return;
+        Path manifestPath = chooser.getSelectedFile().toPath().toAbsolutePath().normalize();
+        try {
+            ModManifest legacy = ModManifest.parse(Files.readString(manifestPath, StandardCharsets.UTF_8));
+            if (!legacy.supportsRecommendations()) {
+                throw new IOException("所选文件不是带必须/推荐元数据的 mods-v4.txt。 ");
+            }
+            files.rows.addAll(discoverMods(rootPath));
+            Map<String, ManifestEntry> byModId = new LinkedHashMap<>();
+            Map<String, ManifestEntry> byFile = new LinkedHashMap<>();
+            for (ManifestEntry entry : legacy.entries()) {
+                if (!entry.modId().isBlank()) byModId.put(entry.modId().toLowerCase(Locale.ROOT), entry);
+                byFile.put(entry.fileName().toLowerCase(Locale.ROOT), entry);
+            }
+            int matched = 0;
+            for (FileRow row : files.rows) {
+                if (!row.kind.equals("mod")) continue;
+                ManifestEntry entry = row.modId.isBlank() ? null : byModId.get(row.modId.toLowerCase(Locale.ROOT));
+                if (entry == null) entry = byFile.get(Path.of(row.path).getFileName().toString().toLowerCase(Locale.ROOT));
+                if (entry == null) continue;
+                row.required = !entry.recommended();
+                if (!entry.displayName().isBlank()) row.displayName = entry.displayName();
+                if (!entry.version().isBlank()) row.modVersion = entry.version();
+                if (!entry.descriptionZh().isBlank()) row.descriptionZh = entry.descriptionZh();
+                if (row.descriptionEn.isBlank() && !entry.descriptionEn().isBlank()) {
+                    row.descriptionEn = entry.descriptionEn();
+                }
+                row.incompatiblePlatforms.clear();
+                for (ClientPlatform platform : entry.incompatiblePlatforms()) {
+                    row.incompatiblePlatforms.add(switch (platform) {
+                        case WINDOWS -> "windows";
+                        case MAC -> "macos";
+                        case LINUX -> "linux";
+                        case MOBILE -> "android";
+                    });
+                }
+                matched++;
+            }
+            files.rows.sort(Comparator.comparing(row -> row.path));
+            files.fireTableDataChanged();
+            refreshSummary();
+            validation.append("已从 " + manifestPath.getFileName() + " 导入 " + matched
+                    + " 个当前 Mod 的必须/推荐、双语描述和平台限制；文件哈希仍以当前客户端为准。\n");
+            autoMatchMods(null);
+        } catch (Exception failure) {
+            showError("导入 mods-v4.txt 失败：" + cause(failure).getMessage());
+        }
+    }
+
+    private void setSelectedModKind(boolean required) {
+        int[] selected = modsTable.getSelectedRows();
+        for (int viewRow : selected) {
+            FileRow row = files.rows.get(modsTable.convertRowIndexToModel(viewRow));
+            row.required = required;
+        }
+        files.fireTableDataChanged();
+    }
+
+    private static boolean containsHan(String value) {
+        return value != null && value.codePoints().anyMatch(codePoint ->
+                Character.UnicodeScript.of(codePoint) == Character.UnicodeScript.HAN);
     }
 
     private void autoMatchMods(JButton button) {
@@ -868,6 +1061,16 @@ final class V5PublisherWorkspace {
         file.put("required", row.required);
         file.put("restartRequired", row.restart);
         file.put("side", List.of(row.side));
+        if (row.kind.equals("mod")) {
+            if (!row.modId.isBlank()) file.put("modId", row.modId.strip());
+            if (!row.displayName.isBlank()) file.put("displayName", row.displayName.strip());
+            if (!row.modVersion.isBlank()) file.put("version", row.modVersion.strip());
+            if (!row.descriptionZh.isBlank()) file.put("descriptionZh", row.descriptionZh.strip());
+            if (!row.descriptionEn.isBlank()) file.put("descriptionEn", row.descriptionEn.strip());
+            if (!row.incompatiblePlatforms.isEmpty()) {
+                file.put("incompatiblePlatforms", row.incompatiblePlatforms.stream().sorted().toList());
+            }
+        }
         LinkedHashMap<String, Object> download = new LinkedHashMap<>();
         download.put("type", row.source);
         download.put("distributionPolicy", row.policy);
@@ -951,6 +1154,14 @@ final class V5PublisherWorkspace {
             file.required = Boolean.TRUE.equals(row.get("required"));
             file.restart = !Boolean.FALSE.equals(row.get("restartRequired"));
             file.side = side.isEmpty() ? "client" : String.valueOf(side.getFirst());
+            file.modId = String.valueOf(row.getOrDefault("modId", ""));
+            file.displayName = String.valueOf(row.getOrDefault("displayName", ""));
+            file.modVersion = String.valueOf(row.getOrDefault("version", ""));
+            file.descriptionZh = String.valueOf(row.getOrDefault("descriptionZh", ""));
+            file.descriptionEn = String.valueOf(row.getOrDefault("descriptionEn", ""));
+            for (Object platform : (List<Object>) row.getOrDefault("incompatiblePlatforms", List.of())) {
+                file.incompatiblePlatforms.add(String.valueOf(platform));
+            }
             file.source = String.valueOf(download.getOrDefault("type", "publisher-hosted"));
             file.policy = String.valueOf(download.getOrDefault("distributionPolicy", defaultPolicy(file.source)));
             file.projectId = String.valueOf(download.getOrDefault("projectId", ""));
@@ -1052,6 +1263,12 @@ final class V5PublisherWorkspace {
         String directUrl = "";
         boolean chinaMirror = true;
         String matchDetail = "待匹配";
+        String modId = "";
+        String displayName = "";
+        String modVersion = "";
+        String descriptionZh = "";
+        String descriptionEn = "";
+        final Set<String> incompatiblePlatforms = new HashSet<>();
 
         static FileRow scanned(String path, String kind) {
             FileRow row = new FileRow();
@@ -1085,28 +1302,34 @@ final class V5PublisherWorkspace {
     }
 
     private static final class FileModel extends AbstractTableModel {
-        private final String[] columns = {"状态", "相对路径", "类型", "必须", "重启", "作用端", "获取方式", "匹配结果"};
+        private final String[] columns = {
+                "状态", "相对路径", "类型", "必须", "推荐", "重启", "作用端", "获取方式", "匹配结果"};
         final List<FileRow> rows = new ArrayList<>();
 
         @Override public int getRowCount() { return rows.size(); }
         @Override public int getColumnCount() { return columns.length; }
         @Override public String getColumnName(int column) { return columns[column]; }
-        @Override public Class<?> getColumnClass(int column) { return Set.of(3, 4).contains(column) ? Boolean.class : String.class; }
-        @Override public boolean isCellEditable(int row, int column) { return column == 3 || column == 4 || column == 5; }
+        @Override public Class<?> getColumnClass(int column) { return Set.of(3, 4, 5).contains(column) ? Boolean.class : String.class; }
+        @Override public boolean isCellEditable(int row, int column) {
+            if (column == 4) return rows.get(row).kind.equals("mod");
+            return column == 3 || column == 5 || column == 6;
+        }
         @Override public Object getValueAt(int rowIndex, int columnIndex) {
             FileRow r = rows.get(rowIndex);
             return switch (columnIndex) {
-                case 0 -> r.confirmed ? "已确定" : "待匹配"; case 1 -> r.path; case 2 -> r.kind; case 3 -> r.required;
-                case 4 -> r.restart; case 5 -> r.side;
-                case 6 -> r.source.equals("publisher-hosted") ? "本地托管" : "上游平台";
-                case 7 -> r.matchDetail; default -> "";
+                case 0 -> r.confirmed ? "已确定" : "待匹配"; case 1 -> r.path; case 2 -> r.kind;
+                case 3 -> r.required; case 4 -> r.kind.equals("mod") && !r.required;
+                case 5 -> r.restart; case 6 -> r.side;
+                case 7 -> r.source.equals("publisher-hosted") ? "本地托管" : "上游平台";
+                case 8 -> r.matchDetail; default -> "";
             };
         }
         @Override public void setValueAt(Object value, int rowIndex, int columnIndex) {
             FileRow r = rows.get(rowIndex);
             switch (columnIndex) {
                 case 3 -> r.required = Boolean.TRUE.equals(value);
-                case 4 -> r.restart = Boolean.TRUE.equals(value); case 5 -> r.side = String.valueOf(value);
+                case 4 -> { if (r.kind.equals("mod")) r.required = !Boolean.TRUE.equals(value); }
+                case 5 -> r.restart = Boolean.TRUE.equals(value); case 6 -> r.side = String.valueOf(value);
                 default -> { }
             }
             fireTableRowsUpdated(rowIndex, rowIndex);

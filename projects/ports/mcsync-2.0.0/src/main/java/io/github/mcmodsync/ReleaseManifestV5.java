@@ -96,7 +96,9 @@ record ReleaseManifestV5(
         for (Object value : array(root, "files")) {
             Map<String, Object> file = object(value, "files[]");
             requireOnlyKeys(file, "files[]", Set.of(
-                    "path", "sha256", "size", "kind", "required", "restartRequired", "side", "download"));
+                    "path", "sha256", "size", "kind", "required", "restartRequired", "side", "download",
+                    "modId", "displayName", "version", "descriptionZh", "descriptionEn",
+                    "incompatiblePlatforms"));
             String path = safeRelativePath(string(file, "path"));
             if (!normalizedPaths.add(path.toLowerCase(Locale.ROOT))) {
                 throw new IllegalArgumentException("清单包含重复文件路径: " + path);
@@ -113,11 +115,20 @@ record ReleaseManifestV5(
             boolean required = bool(file, "required", true);
             boolean restartRequired = bool(file, "restartRequired", true);
             Set<String> side = stringSet(file, "side", Set.of("client"), SIDES);
+            String modId = optionalString(file, "modId");
+            String displayName = optionalString(file, "displayName");
+            String version = optionalString(file, "version");
+            String descriptionZh = optionalString(file, "descriptionZh");
+            String descriptionEn = optionalString(file, "descriptionEn");
+            Set<String> incompatiblePlatforms = stringSet(
+                    file, "incompatiblePlatforms", Set.of(), Set.of("windows", "linux", "macos", "android"));
             DownloadSource source = parseDownloadSource(file.get("download"), path, kind);
             if (required && source.type().equals("manual")) {
                 throw new IllegalArgumentException("必须文件不能使用 manual 下载源: " + path);
             }
-            files.add(new FileEntry(path, hash, size, kind, required, restartRequired, side, source));
+            files.add(new FileEntry(
+                    path, hash, size, kind, required, restartRequired, side, source,
+                    modId, displayName, version, descriptionZh, descriptionEn, incompatiblePlatforms));
         }
         if (files.isEmpty()) {
             throw new IllegalArgumentException("v5 清单至少要包含一个文件");
@@ -201,10 +212,43 @@ record ReleaseManifestV5(
             boolean required,
             boolean restartRequired,
             Set<String> side,
-            DownloadSource download) {
+            DownloadSource download,
+            String modId,
+            String displayName,
+            String version,
+            String descriptionZh,
+            String descriptionEn,
+            Set<String> incompatiblePlatforms) {
         FileEntry {
             side = Set.copyOf(side);
+            incompatiblePlatforms = Set.copyOf(incompatiblePlatforms);
         }
+
+        FileEntry(
+                String path,
+                String sha256,
+                long size,
+                String kind,
+                boolean required,
+                boolean restartRequired,
+                Set<String> side,
+                DownloadSource download) {
+            this(path, sha256, size, kind, required, restartRequired, side, download,
+                    "", "", "", "", "", Set.of());
+        }
+
+        boolean recommendedMod() {
+            return kind.equals("mod") && !required;
+        }
+
+        String selectionKey() {
+            return modId.isBlank() ? path.toLowerCase(Locale.ROOT) : modId.toLowerCase(Locale.ROOT);
+        }
+    }
+
+    ReleaseManifestV5 withFiles(List<FileEntry> selectedFiles) {
+        return new ReleaseManifestV5(
+                releaseId, releaseSequence, minimumMcsyncVersion, managedScopes, selectedFiles, configOperations);
     }
 
     record DownloadSource(
@@ -358,6 +402,14 @@ record ReleaseManifestV5(
         result.put("required", file.required());
         result.put("restartRequired", file.restartRequired());
         result.put("side", file.side().stream().sorted().toList());
+        putIfNotBlank(result, "modId", file.modId());
+        putIfNotBlank(result, "displayName", file.displayName());
+        putIfNotBlank(result, "version", file.version());
+        putIfNotBlank(result, "descriptionZh", file.descriptionZh());
+        putIfNotBlank(result, "descriptionEn", file.descriptionEn());
+        if (!file.incompatiblePlatforms().isEmpty()) {
+            result.put("incompatiblePlatforms", file.incompatiblePlatforms().stream().sorted().toList());
+        }
         DownloadSource source = file.download();
         Map<String, Object> download = new LinkedHashMap<>();
         download.put("type", source.type());
@@ -382,6 +434,10 @@ record ReleaseManifestV5(
         }
         result.put("download", download);
         return result;
+    }
+
+    private static void putIfNotBlank(Map<String, Object> target, String key, String value) {
+        if (value != null && !value.isBlank()) target.put(key, value);
     }
 
     private static Map<String, Object> configJson(ConfigOperation operation) {

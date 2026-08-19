@@ -25,7 +25,9 @@ final class PublisherProjectV5 {
             "schema", "releaseId", "releaseSequence", "minimumMCSyncVersion",
             "managedScopes", "files", "configOperations", "remote");
     private static final Set<String> FILE_KEYS = Set.of(
-            "path", "kind", "required", "restartRequired", "side", "download");
+            "path", "kind", "required", "restartRequired", "side", "download",
+            "modId", "displayName", "version", "descriptionZh", "descriptionEn",
+            "incompatiblePlatforms");
 
     private PublisherProjectV5() {
     }
