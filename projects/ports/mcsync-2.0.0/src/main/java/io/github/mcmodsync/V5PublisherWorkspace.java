@@ -50,12 +50,7 @@ final class V5PublisherWorkspace {
     private static final Set<String> NEVER_SCAN_ROOTS = Set.of(
             "saves", "world", "logs", "crash-reports", "screenshots", "natives", "libraries",
             "assets", "versions", "downloads", "backups", "simplebackups", ".minecraft");
-    private static final String[] FILE_KINDS = {
-            "mod", "resource-pack", "shader-pack", "kubejs", "config", "default-config", "support"};
     private static final String[] FILE_SIDES = {"client", "both", "server"};
-    private static final String[] SOURCE_TYPES = {
-            "publisher-hosted", "modrinth", "curseforge", "direct", "manual"};
-    private static final String[] DISTRIBUTION_POLICIES = {"redistributable", "upstream-only", "manual"};
 
     private final JFrame owner;
     private final JPanel root = new JPanel(new BorderLayout(8, 8));
@@ -81,6 +76,7 @@ final class V5PublisherWorkspace {
     private final JTable configTable = new JTable(config);
     private final JTextArea validation = new JTextArea();
     private final JLabel summary = new JLabel();
+    private final PublisherModAutoMatcher modMatcher = new PublisherModAutoMatcher();
 
     private V5PublisherWorkspace(JFrame owner) {
         this.owner = owner;
@@ -156,17 +152,15 @@ final class V5PublisherWorkspace {
     }
 
     private JPanel filesPanel() {
-        configureCombo(fileTable, 2, FILE_KINDS);
         configureCombo(fileTable, 5, FILE_SIDES);
-        configureCombo(fileTable, 6, SOURCE_TYPES);
-        configureCombo(fileTable, 7, DISTRIBUTION_POLICIES);
         fileTable.setAutoCreateRowSorter(true);
         fileTable.setRowHeight(23);
 
         JPanel panel = new JPanel(new BorderLayout(6, 6));
         JTextArea help = new JTextArea(
-                "扫描后每个文件都必须人工确认来源。自制/已授权内容可用 publisher-hosted；"
-                        + "不允许二次分发的 Mod 选 modrinth/curseforge/direct，可同时使用 MCIMirror 和官方回退。");
+                "只有 mods/*.jar 会进行 Modrinth/CurseForge 精确哈希匹配；匹配成功使用上游来源，"
+                        + "匹配失败回退为本地托管。资源包、光影、KubeJS、配置等始终只作为普通本地发布文件，"
+                        + "不会接触模组站或镜像接口。");
         help.setEditable(false);
         help.setLineWrap(true);
         help.setWrapStyleWord(true);
@@ -178,19 +172,15 @@ final class V5PublisherWorkspace {
         JPanel buttons = new JPanel(new FlowLayout(FlowLayout.LEFT));
         JButton scan = new JButton("扫描安全内容目录");
         JButton add = new JButton("添加文件…");
-        JButton confirm = new JButton("确认选中来源");
+        JButton rematch = new JButton("自动匹配全部 Mod");
         JButton remove = new JButton("移除选中");
         scan.addActionListener(event -> scanSafeRoots(scan));
         add.addActionListener(event -> addFiles());
-        confirm.addActionListener(event -> {
-            for (int view : fileTable.getSelectedRows()) files.rows.get(fileTable.convertRowIndexToModel(view)).confirmed = true;
-            files.fireTableDataChanged();
-            refreshSummary();
-        });
+        rematch.addActionListener(event -> autoMatchMods(rematch));
         remove.addActionListener(event -> removeSelected(fileTable, files.rows));
         buttons.add(scan);
         buttons.add(add);
-        buttons.add(confirm);
+        buttons.add(rematch);
         buttons.add(remove);
         panel.add(buttons, BorderLayout.SOUTH);
         return panel;
@@ -301,7 +291,7 @@ final class V5PublisherWorkspace {
         validation.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 13));
         validation.setLineWrap(true);
         validation.setWrapStyleWord(true);
-        validation.setText("点击“验证项目”检查路径、来源、分发政策、平台 ID 和配置操作。\n");
+        validation.setText("点击“验证项目”检查路径、Mod 自动匹配结果和配置操作。\n");
         JPanel panel = new JPanel(new BorderLayout(6, 6));
         JSplitPane split = new JSplitPane(JSplitPane.VERTICAL_SPLIT,
                 new JScrollPane(validation), releaseChecklist());
@@ -325,8 +315,8 @@ final class V5PublisherWorkspace {
     private JScrollPane releaseChecklist() {
         JTextArea checklist = new JTextArea(
                 "导出门禁\n"
-                        + "  • 所有文件来源已人工确认\n"
-                        + "  • 不可二次分发内容未使用 publisher-hosted\n"
+                        + "  • mods/*.jar 已完成平台精确匹配或回退本地发布\n"
+                        + "  • 其他文件全部使用本地发布，不接触模组站\n"
                         + "  • 中国镜像仅是第三方传输候选，保留官方回退\n"
                         + "  • required 文件不能使用 manual\n"
                         + "  • 配置 OTA 有前像、冲突策略和作用端\n"
@@ -408,9 +398,24 @@ final class V5PublisherWorkspace {
                             String relative = rootPath.relativize(path).toString().replace('\\', '/');
                             String first = relative.split("/", 2)[0].toLowerCase(Locale.ROOT);
                             if (NEVER_SCAN_ROOTS.contains(first) || !existing.add(relative.toLowerCase(Locale.ROOT))) continue;
-                            found.add(FileRow.scanned(relative, kindFor(relative)));
+                            FileRow row = FileRow.scanned(relative, kindFor(relative));
+                            if (!PublisherModAutoMatcher.isModArtifact(relative, row.kind)) {
+                                row.confirmed = true;
+                                row.applyLocal("非 Mod 文件固定本地托管");
+                            }
+                            found.add(row);
                         }
                     }
+                }
+                List<FileRow> modRows = found.stream()
+                        .filter(row -> PublisherModAutoMatcher.isModArtifact(row.path, row.kind)).toList();
+                Map<Path, PublisherModAutoMatcher.Match> matches = modMatcher.matchAll(
+                        modRows.stream().map(row -> rootPath.resolve(row.path)).toList());
+                for (FileRow row : modRows) {
+                    PublisherModAutoMatcher.Match match = matches.get(rootPath.resolve(row.path));
+                    if (match == null) match = new PublisherModAutoMatcher.Match(
+                            PublisherModAutoMatcher.localDownload(), "未匹配，使用本地文件");
+                    row.applyMatch(match);
                 }
                 return found;
             }
@@ -423,8 +428,53 @@ final class V5PublisherWorkspace {
                     files.rows.addAll(found);
                     files.rows.sort(Comparator.comparing(row -> row.path));
                     files.fireTableDataChanged();
-                    validation.append("扫描完成：新增 " + found.size() + " 个文件，请逐项确认来源。\n");
+                    validation.append("扫描完成：新增 " + found.size()
+                            + " 个文件；Mod 已按精确哈希匹配，其他文件固定本地托管。\n");
                     refreshSummary();
+                } catch (Exception failure) {
+                    showError(cause(failure).getMessage());
+                }
+            }
+        }.execute();
+    }
+
+    private void autoMatchMods(JButton button) {
+        Path rootPath;
+        try {
+            rootPath = requireGameRoot();
+        } catch (IOException failure) {
+            showError(failure.getMessage());
+            return;
+        }
+        List<FileRow> mods = files.rows.stream()
+                .filter(row -> PublisherModAutoMatcher.isModArtifact(row.path, row.kind))
+                .toList();
+        if (mods.isEmpty()) {
+            validation.append("没有需要匹配的 mods/*.jar。\n");
+            return;
+        }
+        if (button != null) button.setEnabled(false);
+        validation.append("正在批量查询 Modrinth/CurseForge 精确哈希…\n");
+        new SwingWorker<Map<Path, PublisherModAutoMatcher.Match>, Void>() {
+            @Override protected Map<Path, PublisherModAutoMatcher.Match> doInBackground() {
+                return modMatcher.matchAll(mods.stream().map(row -> rootPath.resolve(row.path)).toList());
+            }
+            @Override protected void done() {
+                if (button != null) button.setEnabled(true);
+                try {
+                    Map<Path, PublisherModAutoMatcher.Match> matches = get();
+                    int platform = 0;
+                    for (FileRow row : mods) {
+                        PublisherModAutoMatcher.Match match = matches.get(rootPath.resolve(row.path));
+                        if (match == null) match = new PublisherModAutoMatcher.Match(
+                                PublisherModAutoMatcher.localDownload(), "未匹配，使用本地文件");
+                        row.applyMatch(match);
+                        platform += !"publisher-hosted".equals(row.source) ? 1 : 0;
+                    }
+                    files.fireTableDataChanged();
+                    refreshSummary();
+                    validation.append("Mod 自动匹配完成：" + platform + " 个上游匹配，"
+                            + (mods.size() - platform) + " 个回退本地托管。\n");
                 } catch (Exception failure) {
                     showError(cause(failure).getMessage());
                 }
@@ -452,11 +502,20 @@ final class V5PublisherWorkspace {
                 continue;
             }
             String relative = rootPath.relativize(path).toString().replace('\\', '/');
-            if (existing.add(relative.toLowerCase(Locale.ROOT))) files.rows.add(FileRow.scanned(relative, kindFor(relative)));
+            if (existing.add(relative.toLowerCase(Locale.ROOT))) {
+                FileRow row = FileRow.scanned(relative, kindFor(relative));
+                if (!PublisherModAutoMatcher.isModArtifact(relative, row.kind)) {
+                    row.confirmed = true;
+                    row.applyLocal("非 Mod 文件固定本地托管");
+                }
+                files.rows.add(row);
+            }
         }
         files.rows.sort(Comparator.comparing(row -> row.path));
         files.fireTableDataChanged();
         refreshSummary();
+        if (files.rows.stream().anyMatch(row -> PublisherModAutoMatcher.isModArtifact(row.path, row.kind)
+                && !row.confirmed)) autoMatchMods(null);
     }
 
     private static String kindFor(String relative) {
@@ -500,25 +559,24 @@ final class V5PublisherWorkspace {
         for (int i = 0; i < files.rows.size(); i++) {
             FileRow row = files.rows.get(i);
             String at = "文件第 " + (i + 1) + " 行：";
-            if (!row.confirmed) errors.add(at + "来源尚未人工确认。");
+            if (!row.confirmed) errors.add(at + "Mod 自动来源匹配尚未完成。");
             if (row.path.isBlank() || row.path.startsWith("/") || row.path.contains("..")
                     || !unique.add(row.path.toLowerCase(Locale.ROOT))) errors.add(at + "路径为空、不安全或重复。");
             if (rootPath != null && !Files.isRegularFile(rootPath.resolve(row.path), LinkOption.NOFOLLOW_LINKS)) {
                 errors.add(at + "本地文件不存在：" + row.path);
             }
-            if (row.required && row.source.equals("manual")) errors.add(at + "required 文件不能使用 manual。");
-            if (row.source.equals("publisher-hosted") && !row.policy.equals("redistributable")) {
-                errors.add(at + "publisher-hosted 必须是 redistributable。");
+            boolean mod = PublisherModAutoMatcher.isModArtifact(row.path, row.kind);
+            if (!mod && !row.source.equals("publisher-hosted")) {
+                errors.add(at + "非 Mod 文件禁止使用模组站、镜像或 direct/manual 来源。");
             }
-            if (row.source.equals("manual") && !row.policy.equals("manual")) errors.add(at + "manual 必须使用 manual 政策。");
-            if (row.source.equals("modrinth") && (row.projectId.isBlank() || row.versionId.isBlank())) {
-                errors.add(at + "Modrinth 需要 projectId 和 versionId。");
+            if (!mod && !row.policy.equals("redistributable")) {
+                errors.add(at + "非 Mod 文件固定使用本地托管策略。");
             }
-            if (row.source.equals("curseforge") && (row.projectId.isBlank() || !row.fileId.matches("[1-9][0-9]*"))) {
-                errors.add(at + "CurseForge 需要 modId(projectId) 和正整数 fileId。");
+            if (mod && row.source.equals("modrinth") && (row.projectId.isBlank() || row.versionId.isBlank())) {
+                errors.add(at + "Modrinth 匹配缺少固定项目/版本。");
             }
-            if (row.source.equals("direct") && !row.directUrl.startsWith("https://")) {
-                errors.add(at + "direct 需要 HTTPS 文件地址。");
+            if (mod && row.source.equals("curseforge") && (row.projectId.isBlank() || !row.fileId.matches("[1-9][0-9]*"))) {
+                errors.add(at + "CurseForge 匹配缺少固定项目/文件。");
             }
         }
         try {
@@ -818,6 +876,9 @@ final class V5PublisherWorkspace {
             file.directUrl = endpoints.stream().filter(Map.class::isInstance).map(Map.class::cast)
                     .filter(endpoint -> "file".equals(endpoint.get("purpose"))).map(endpoint -> String.valueOf(endpoint.get("url")))
                     .findFirst().orElse("");
+            if (!PublisherModAutoMatcher.isModArtifact(file.path, file.kind)) {
+                file.applyLocal("非 Mod 文件固定本地托管");
+            }
             files.rows.add(file);
         }
         config.rows.clear();
@@ -904,6 +965,7 @@ final class V5PublisherWorkspace {
         String fileId = "";
         String directUrl = "";
         boolean chinaMirror = true;
+        String matchDetail = "待匹配";
 
         static FileRow scanned(String path, String kind) {
             FileRow row = new FileRow();
@@ -911,37 +973,54 @@ final class V5PublisherWorkspace {
             row.kind = kind;
             return row;
         }
+
+        void applyLocal(String detail) {
+            source = "publisher-hosted";
+            policy = "redistributable";
+            projectId = "";
+            versionId = "";
+            fileId = "";
+            directUrl = "";
+            chinaMirror = false;
+            matchDetail = detail;
+        }
+
+        void applyMatch(PublisherModAutoMatcher.Match match) {
+            Map<String, Object> download = match.download();
+            source = String.valueOf(download.getOrDefault("type", "publisher-hosted"));
+            policy = String.valueOf(download.getOrDefault("distributionPolicy", "redistributable"));
+            projectId = String.valueOf(download.getOrDefault("projectId", ""));
+            versionId = String.valueOf(download.getOrDefault("versionId", ""));
+            Object id = download.get("fileId");
+            fileId = id == null ? "" : String.valueOf(id);
+            matchDetail = match.detail();
+            confirmed = true;
+        }
     }
 
     private static final class FileModel extends AbstractTableModel {
-        private final String[] columns = {"确认", "相对路径", "类型", "必须", "重启", "作用端", "下载来源", "分发政策",
-                "project/mod ID", "version ID", "file ID", "direct HTTPS URL", "中国镜像"};
+        private final String[] columns = {"状态", "相对路径", "类型", "必须", "重启", "作用端", "获取方式", "匹配结果"};
         final List<FileRow> rows = new ArrayList<>();
 
         @Override public int getRowCount() { return rows.size(); }
         @Override public int getColumnCount() { return columns.length; }
         @Override public String getColumnName(int column) { return columns[column]; }
-        @Override public Class<?> getColumnClass(int column) { return Set.of(0, 3, 4, 12).contains(column) ? Boolean.class : String.class; }
-        @Override public boolean isCellEditable(int row, int column) { return true; }
+        @Override public Class<?> getColumnClass(int column) { return Set.of(3, 4).contains(column) ? Boolean.class : String.class; }
+        @Override public boolean isCellEditable(int row, int column) { return column == 3 || column == 4 || column == 5; }
         @Override public Object getValueAt(int rowIndex, int columnIndex) {
             FileRow r = rows.get(rowIndex);
             return switch (columnIndex) {
-                case 0 -> r.confirmed; case 1 -> r.path; case 2 -> r.kind; case 3 -> r.required;
-                case 4 -> r.restart; case 5 -> r.side; case 6 -> r.source; case 7 -> r.policy;
-                case 8 -> r.projectId; case 9 -> r.versionId; case 10 -> r.fileId;
-                case 11 -> r.directUrl; case 12 -> r.chinaMirror; default -> "";
+                case 0 -> r.confirmed ? "已确定" : "待匹配"; case 1 -> r.path; case 2 -> r.kind; case 3 -> r.required;
+                case 4 -> r.restart; case 5 -> r.side;
+                case 6 -> r.source.equals("publisher-hosted") ? "本地托管" : "上游平台";
+                case 7 -> r.matchDetail; default -> "";
             };
         }
         @Override public void setValueAt(Object value, int rowIndex, int columnIndex) {
             FileRow r = rows.get(rowIndex);
             switch (columnIndex) {
-                case 0 -> r.confirmed = Boolean.TRUE.equals(value); case 1 -> r.path = String.valueOf(value);
-                case 2 -> r.kind = String.valueOf(value); case 3 -> r.required = Boolean.TRUE.equals(value);
+                case 3 -> r.required = Boolean.TRUE.equals(value);
                 case 4 -> r.restart = Boolean.TRUE.equals(value); case 5 -> r.side = String.valueOf(value);
-                case 6 -> { r.source = String.valueOf(value); r.policy = defaultPolicy(r.source); r.confirmed = false; }
-                case 7 -> r.policy = String.valueOf(value); case 8 -> r.projectId = String.valueOf(value);
-                case 9 -> r.versionId = String.valueOf(value); case 10 -> r.fileId = String.valueOf(value);
-                case 11 -> r.directUrl = String.valueOf(value); case 12 -> r.chinaMirror = Boolean.TRUE.equals(value);
                 default -> { }
             }
             fireTableRowsUpdated(rowIndex, rowIndex);

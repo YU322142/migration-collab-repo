@@ -31,13 +31,15 @@
 
 ## 4. 文件下载来源与许可
 
-每个文件必须显式或通过安全默认值声明来源：
+来源选择按文件类别隔离：只有直接位于 `mods/` 的 Mod JAR 可以使用模组站或上游来源。发布器必须先按文件哈希自动匹配 Modrinth，再按 CurseForge fingerprint 自动匹配；都无法精确匹配时生成本地托管条目。其他文件不得查询或引用模组站，只能作为本地发布文件。
+
+Mod 文件可使用：
 
 - `publisher-hosted`：手工适配、自制兼容层及其他确认允许再分发的文件。
 - `direct`：作者或项目提供的固定 HTTPS 文件地址。
 - `modrinth`：固定 project ID、version ID 和文件名。
 - `curseforge`：固定 mod ID、file ID 和文件名。
-- `manual`：无法自动合法取得的可选文件；必须文件不得使用。
+- `manual`：保留给导入旧项目的兼容 schema；GUI 自动流程不会为新文件生成该来源。
 
 分发策略：
 
@@ -48,6 +50,8 @@
 Modrinth/CurseForge 不取“最新版”，只解析清单锁定的版本/文件。CurseForge API key 只能存在于发布者本机或受控解析服务，不进入远程清单、客户端配置或日志。
 
 中国区支持 MCIMirror API 预设。官方和第三方镜像都是传输候选，不是完整性信任根；无论来源如何，文件名、固定平台 ID、大小和 SHA256 必须全部符合清单。第三方端点必须显式标记 `role=mirror`、`thirdParty=true`，失败后回退其他候选。
+
+客户端文件下载默认并发为 128，且实际工作线程数取 `min(待下载文件数, 配置并发)`。`mcsync.downloadThreads` 只允许 1–128；平台元数据识别必须使用批量 API，与文件下载并发解耦。
 
 ## 5. 同步范围
 

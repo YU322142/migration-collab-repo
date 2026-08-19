@@ -29,6 +29,8 @@
 | `ReleaseSequenceGate.java` | 维护客户端已成功应用的最高发布序号。低序号和同序号分叉均阻断；只有完整事务成功后才写状态。 |
 | `ReleaseTransactionEngine.java` | 在同一事务中暂存、校验、配置变更、自更新、旧同 modId 替换、备份、原子提交、断电恢复和回滚。 |
 | `ReleaseArtifactResolver.java` | 解析 publisher/direct/Modrinth/CurseForge/镜像候选；缓存已验哈希文件，任何来源都不能绕过清单 SHA256。 |
+| `ParallelDownloadRunner.java` | 为旧清单与 schema-v5 提供统一的有界并发；默认 128，按任务数缩小，并允许通过系统属性下调。 |
+| `PublisherModAutoMatcher.java` | 仅识别 `mods/*.jar`；批量计算并匹配 Modrinth SHA-512 与 CurseForge fingerprint，无法精确匹配时回退本地托管。 |
 | `PublisherPlatformResolver.java` | 仅在发布者本机把 CurseForge fileId/API 解析为固定文件 URL；API key 不进入清单、JAR、客户端或日志。 |
 | `ConfigMutationEngine.java` | 对 TOML、严格 JSON、properties 做键级 set/merge；凭据键、歧义键、类型漂移和无前像替换失败闭锁。 |
 | `ManagedPathPolicy.java` | 定义可 OTA 的路径边界，拒绝存档、区块、玩家数据、缓存、原生库、符号链接和 `servers.dat` 普通覆盖。 |
@@ -39,7 +41,7 @@
 
 ### 文件来源与再分发边界
 
-发布工具仍由 `java -jar MCSync-2.0.0.jar` 打开。主窗口已重构为发布项目、文件与来源、同步范围、配置 OTA、验证与导出五个工作区；1.9.x 工具保留为独立兼容页。文件来源有五种：
+发布工具仍由 `java -jar MCSync-2.0.0.jar` 打开。主窗口已重构为发布项目、文件与来源、同步范围、配置 OTA、验证与导出五个工作区；1.9.x 工具保留为独立兼容页。来源决策只属于 Mod：发布器对 `mods/*.jar` 自动精确匹配平台，无法匹配才使用本地文件；其余目录固定本地托管，不参与模组站或许可来源选择。schema 为旧项目保留五种来源表达：
 
 - `publisher-hosted`：发布者确认允许再分发，并由自己的发布目录提供文件；手工适配、自制兼容模组继续使用这种原有方式。
 - `direct`：使用作者或项目提供的固定 HTTPS 文件地址。
@@ -58,6 +60,8 @@ schema 会拒绝 `publisher-hosted + upstream-only`。出于中国大陆或其�
 首个内置中国区预设为 MCIMirror 的 API 前缀：Modrinth 使用 `https://mod.mcimirror.top/modrinth/v2/`，CurseForge 使用 `https://mod.mcimirror.top/curseforge/v1/`。该预设可关闭，异常时回退官方 API，且解析结果仍受固定项目/版本或文件 ID、大小和 SHA256 约束。
 
 中国镜像只改变传输路径，不改变发布身份。所有候选下载最终都必须满足 v5 中固定的文件大小和 SHA256；镜像返回的“最新版”、文件名或元数据不能覆盖清单锁定值。
+
+schema-v5 和旧版下载共用 `ParallelDownloadRunner`。默认上限为 128，少于 128 个任务时只创建对应数量的线程；系统属性 `mcsync.downloadThreads` 可在 1–128 内下调。发布器的平台识别通过 Modrinth/CurseForge 批量接口完成，不把下载并发数转换成 API 请求并发数。
 
 ## 配置 OTA 边界
 

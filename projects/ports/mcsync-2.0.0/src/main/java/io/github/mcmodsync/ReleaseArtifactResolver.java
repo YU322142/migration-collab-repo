@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 
 /** Resolves pinned v5 sources into hash-checked bytes; mirrors are transport candidates only. */
@@ -19,7 +20,7 @@ final class ReleaseArtifactResolver implements ReleaseTransactionEngine.Artifact
     private final HttpClient client;
     private final Consumer<String> logger;
     private final SyncObserver observer;
-    private int completedFiles;
+    private final AtomicInteger completedFiles = new AtomicInteger();
     private int totalFiles = 1;
 
     ReleaseArtifactResolver(ModSyncConfig config, Consumer<String> logger) {
@@ -35,6 +36,21 @@ final class ReleaseArtifactResolver implements ReleaseTransactionEngine.Artifact
 
     void setTotalFiles(int totalFiles) {
         this.totalFiles = Math.max(totalFiles, 1);
+        completedFiles.set(0);
+    }
+
+    void prefetch(List<ReleaseManifestV5.FileEntry> entries) throws IOException, InterruptedException {
+        setTotalFiles(entries.size());
+        ParallelDownloadRunner.run(entries.size(), index -> fetch(entries.get(index)));
+    }
+
+    byte[] readCached(ReleaseManifestV5.FileEntry entry) throws IOException {
+        Path cached = cachePath(entry);
+        if (!Files.isRegularFile(cached) || Files.size(cached) != entry.size()
+                || !Hashing.sha256(cached).equals(entry.sha256())) {
+            throw new IOException("预下载缓存缺失或已损坏: " + entry.path());
+        }
+        return Files.readAllBytes(cached);
     }
 
     @Override
@@ -74,10 +90,10 @@ final class ReleaseArtifactResolver implements ReleaseTransactionEngine.Artifact
     }
 
     private void reportCompleted(ReleaseManifestV5.FileEntry entry, long bytes) {
-        completedFiles++;
+        int completed = completedFiles.incrementAndGet();
         observer.downloadProgress(new SyncObserver.DownloadProgress(
-                entry.path(), completedFiles, totalFiles, bytes, bytes,
-                completedFiles, totalFiles, completedFiles * 1000 / totalFiles));
+                entry.path(), completed, totalFiles, bytes, bytes,
+                completed, totalFiles, completed * 1000 / totalFiles));
     }
 
     private Path cachePath(ReleaseManifestV5.FileEntry entry) throws IOException {

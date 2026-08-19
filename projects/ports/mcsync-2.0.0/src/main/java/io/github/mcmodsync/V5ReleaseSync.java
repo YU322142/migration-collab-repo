@@ -61,19 +61,7 @@ final class V5ReleaseSync {
         if (changes) {
             observer.phaseChanged("检测到 v5 OTA，正在游戏窗口内完成下载与哈希校验……");
             ReleaseArtifactResolver resolver = new ReleaseArtifactResolver(config, logger, observer);
-            List<ReleaseManifestV5.FileEntry> downloads = new java.util.ArrayList<>();
-            ManagedPathPolicy paths = new ManagedPathPolicy(config.gameDirectory(), loaded.manifest().managedScopes());
-            for (ReleaseManifestV5.FileEntry entry : loaded.manifest().files()) {
-                if (!(entry.side().contains("client") || entry.side().contains("both"))
-                        || entry.download().type().equals("manual")) continue;
-                Path target = paths.resolve(entry.path(), true);
-                if (paths.policyFor(entry.path()).equals("first-install") && Files.exists(target)) continue;
-                if (Files.isRegularFile(target) && Files.size(target) == entry.size()
-                        && Hashing.sha256(target).equals(entry.sha256())) continue;
-                downloads.add(entry);
-            }
-            resolver.setTotalFiles(downloads.size());
-            for (ReleaseManifestV5.FileEntry entry : downloads) resolver.fetch(entry);
+            resolver.prefetch(downloadsNeeded(config, loaded.manifest()));
         }
         return new SyncProbeResult(changes
                 ? SyncProbeResult.Status.CHANGES_REQUIRED
@@ -87,15 +75,29 @@ final class V5ReleaseSync {
             SyncObserver observer) throws IOException, InterruptedException {
         observer.phaseChanged("正在暂存并校验 MCSync v5 发布事务……");
         ReleaseArtifactResolver resolver = new ReleaseArtifactResolver(config, logger, observer);
-        resolver.setTotalFiles((int) loaded.manifest().files().stream()
-                .filter(file -> (file.side().contains("client") || file.side().contains("both"))
-                        && !file.download().type().equals("manual"))
-                .count());
+        resolver.prefetch(downloadsNeeded(config, loaded.manifest()));
         ReleaseTransactionEngine.Result result = new ReleaseTransactionEngine(
                 config.gameDirectory(), config.fileOperationRetries())
-                .apply(loaded.manifest(), loaded.sha256(), resolver);
+                .apply(loaded.manifest(), loaded.sha256(), resolver::readCached);
         if (!result.changed()) return new SyncResult(SyncResult.Status.UNCHANGED, 0, 0, 0);
         return new SyncResult(SyncResult.Status.UPDATED, result.installed(), result.removed(), 0);
+    }
+
+    private static List<ReleaseManifestV5.FileEntry> downloadsNeeded(
+            ModSyncConfig config,
+            ReleaseManifestV5 manifest) throws IOException {
+        List<ReleaseManifestV5.FileEntry> downloads = new java.util.ArrayList<>();
+        ManagedPathPolicy paths = new ManagedPathPolicy(config.gameDirectory(), manifest.managedScopes());
+        for (ReleaseManifestV5.FileEntry entry : manifest.files()) {
+            if (!(entry.side().contains("client") || entry.side().contains("both"))
+                    || entry.download().type().equals("manual")) continue;
+            Path target = paths.resolve(entry.path(), true);
+            if (paths.policyFor(entry.path()).equals("first-install") && Files.exists(target)) continue;
+            if (Files.isRegularFile(target) && Files.size(target) == entry.size()
+                    && Hashing.sha256(target).equals(entry.sha256())) continue;
+            downloads.add(entry);
+        }
+        return downloads;
     }
 
 }

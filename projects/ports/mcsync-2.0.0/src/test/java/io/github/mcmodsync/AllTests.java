@@ -42,6 +42,9 @@ public final class AllTests {
         testMcsyncBrandingKeepsLegacyTechnicalIdentity();
         testV5ReleaseManifestParsingAndValidation();
         testV5PlatformDownloadSourcesAndMirrorTrustBoundary();
+        testOnlyModsMayUsePlatformDownloadSources();
+        testDefaultDownloadConcurrencyIs128();
+        testModArtifactClassificationAndFingerprintNormalization();
         testV5CustomBuildUsesPublisherHostedDistribution();
         testChinaApiMirrorPresetsRemainExplicitThirdPartyCandidates();
         testPublisherResolvesCurseForgeWithoutLeakingCredentials();
@@ -373,6 +376,82 @@ public final class AllTests {
         pass("custom builds retain publisher-hosted delivery only when redistributable");
     }
 
+    private void testOnlyModsMayUsePlatformDownloadSources() {
+        String localResourcePack = """
+                {
+                  "schema":5,"releaseId":"nonmod-local","releaseSequence":2000004,
+                  "minimumMCSyncVersion":"2.0.0",
+                  "files":[{
+                    "path":"resourcepacks/example.zip",
+                    "sha256":"4444444444444444444444444444444444444444444444444444444444444444",
+                    "size":40,"kind":"resource-pack",
+                    "download":{"type":"publisher-hosted","distributionPolicy":"redistributable"}
+                  }]
+                }
+                """;
+        ReleaseManifestV5 parsed = ReleaseManifestV5.parse(localResourcePack.getBytes(StandardCharsets.UTF_8));
+        check(parsed.files().getFirst().download().type().equals("publisher-hosted"),
+                "资源包等非 Mod 文件应固定使用本地发布源");
+
+        String platformSource = """
+                "download":{
+                  "type":"modrinth","projectId":"demo","versionId":"fixed-version",
+                  "distributionPolicy":"upstream-only",
+                  "endpoints":[{"url":"https://api.modrinth.com/v2/","role":"official",
+                    "purpose":"api","region":"global","priority":100}]
+                }
+                """;
+        expectFailure(() -> ReleaseManifestV5.parse(localResourcePack
+                .replace("\"download\":{\"type\":\"publisher-hosted\",\"distributionPolicy\":\"redistributable\"}",
+                        platformSource.strip())
+                .getBytes(StandardCharsets.UTF_8)));
+        expectFailure(() -> ReleaseManifestV5.parse(localResourcePack
+                .replace("\"download\":{\"type\":\"publisher-hosted\",\"distributionPolicy\":\"redistributable\"}",
+                        "\"download\":{\"type\":\"direct\",\"distributionPolicy\":\"upstream-only\","
+                                + "\"endpoints\":[{\"url\":\"https://files.example.test/a.zip\","
+                                + "\"role\":\"official\",\"purpose\":\"file\",\"region\":\"global\","
+                                + "\"priority\":100}]}" )
+                .getBytes(StandardCharsets.UTF_8)));
+        pass("only direct mods may use platform or upstream download sources");
+    }
+
+    private void testDefaultDownloadConcurrencyIs128() {
+        String old = System.getProperty("mcsync.downloadThreads");
+        try {
+            System.clearProperty("mcsync.downloadThreads");
+            check(ParallelDownloadRunner.configuredThreads() == 128
+                            && ParallelDownloadRunner.threadCount(300) == 128
+                            && ParallelDownloadRunner.threadCount(12) == 12,
+                    "默认并发应为 128，小任务不得创建多余线程");
+            System.setProperty("mcsync.downloadThreads", "16");
+            check(ParallelDownloadRunner.threadCount(300) == 16, "应允许管理员降低下载并发");
+            System.setProperty("mcsync.downloadThreads", "999");
+            check(ParallelDownloadRunner.configuredThreads() == 128, "配置不得超过安全上限 128");
+            System.setProperty("mcsync.downloadThreads", "0");
+            check(ParallelDownloadRunner.configuredThreads() == 1, "配置下限应为 1");
+            System.setProperty("mcsync.downloadThreads", "invalid");
+            check(ParallelDownloadRunner.configuredThreads() == 128, "无效配置应回退默认 128");
+        } finally {
+            if (old == null) System.clearProperty("mcsync.downloadThreads");
+            else System.setProperty("mcsync.downloadThreads", old);
+        }
+        pass("download concurrency defaults to 128 with bounded override");
+    }
+
+    private void testModArtifactClassificationAndFingerprintNormalization() {
+        check(PublisherModAutoMatcher.isModArtifact("mods/example.jar", "mod"),
+                "直接位于 mods 的 JAR 应进入平台匹配");
+        check(!PublisherModAutoMatcher.isModArtifact("mods/nested/example.jar", "mod")
+                        && !PublisherModAutoMatcher.isModArtifact("resourcepacks/example.jar", "mod")
+                        && !PublisherModAutoMatcher.isModArtifact("mods/example.jar", "support")
+                        && !PublisherModAutoMatcher.isModArtifact("mods/example.zip", "mod"),
+                "嵌套、非 mods、类型不符和非 JAR 文件不得进入模组站匹配");
+        check(PublisherModAutoMatcher.curseForgeFingerprint("a b\r\nc\t".getBytes(StandardCharsets.UTF_8))
+                        == PublisherModAutoMatcher.curseForgeFingerprint("abc".getBytes(StandardCharsets.UTF_8)),
+                "CurseForge fingerprint 必须按平台规则忽略 ASCII 空白");
+        pass("mod artifact classification and CurseForge fingerprint normalization");
+    }
+
     private void testChinaApiMirrorPresetsRemainExplicitThirdPartyCandidates() {
         List<ReleaseManifestV5.DownloadEndpoint> modrinth =
                 DownloadEndpointPresets.forPlatform("modrinth", true);
@@ -609,8 +688,8 @@ public final class AllTests {
                 fetched.incrementAndGet();
                 return thirdMod;
             });
-            check(Files.readString(root.resolve("options.txt")).equals("user-options") && fetched.get() == 1,
-                    "first-install 文件已存在时必须保留且不得下载覆盖");
+            check(Files.readString(root.resolve("options.txt")).equals("user-options") && fetched.get() == 0,
+                    "first-install 文件和已正确安装的内容都应直接复用，不得重复下载覆盖");
 
             Path script = root.resolve("kubejs/startup_scripts/controlled.js");
             Files.createDirectories(script.getParent());

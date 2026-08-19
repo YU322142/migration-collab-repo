@@ -3,8 +3,8 @@
 ## 发布者流程
 
 1. 运行 `java -jar MCSync-2.0.0.jar`，在默认打开的“2.0 OTA 发布”页选择已验证客户端的游戏根目录。
-2. 在“文件与来源”扫描安全内容目录，为每个文件选择 `publisher-hosted`、`direct`、`modrinth`、`curseforge` 或 `manual`，明确 `redistributable` / `upstream-only` / `manual`，然后人工确认该行。
-3. 手工适配的模组放 `publisher-hosted + redistributable`；不允许再分发的模组只能用固定平台版本、固定 fileId/versionId 或人工来源。
+2. 在“文件与来源”扫描安全内容目录。发布器只对直接位于 `mods/` 的 Mod JAR 做精确匹配：先批量查询 Modrinth SHA-512，再查询 CurseForge fingerprint；匹配不到才回退为本地托管文件。
+3. 资源包、光影、KubeJS、TACZ、女仆模型包和配置等非 Mod 文件始终使用 `publisher-hosted + redistributable`，不会查询模组站，也不展示无意义的分发政策选择。
 4. 中国镜像只是候选传输端点，必须同时保留官方端点；两者最终都以清单中的大小和 SHA-256 为准。
 5. CurseForge 的 API key 只在发布者本机通过 `MCSYNC_CURSEFORGE_API_KEY` 或 JVM system property 提供。发布完成后清单只保存固定文件 URL，不保存 key。
 6. 在“配置 OTA”按文件、配置键、旧值前像、目标值、作用端和冲突策略添加统一修复；不必整份覆盖配置。
@@ -25,6 +25,7 @@
 ## 客户端启动流程
 
 - 1.9.x 先通过旧 v2/v4 永久入口升级到 MCSync 2.0。
+- 自动下载默认最多并行 128 个文件；实际线程数不会超过待下载文件数。可用 `-Dmcsync.downloadThreads=N` 将并发下调，范围为 1–128。平台识别使用批量 API，不按此线程数轰炸模组站。
 - NeoForge 在现有 Minecraft 窗口标题显示检查、下载、校验和“需要重启”；不创建第二个更新窗口。
 - 文件、KubeJS、注册表资源或配置发生变化时，MCSync 停止本次启动；隐藏 helper 在 JVM 退出后提交并等待下一次启动。
 - 同一发布序号下，文件被玩家改坏会重新修复；清单序号不会降低，清单分叉会阻断。

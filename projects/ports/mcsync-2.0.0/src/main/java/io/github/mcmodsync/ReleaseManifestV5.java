@@ -113,7 +113,7 @@ record ReleaseManifestV5(
             boolean required = bool(file, "required", true);
             boolean restartRequired = bool(file, "restartRequired", true);
             Set<String> side = stringSet(file, "side", Set.of("client"), SIDES);
-            DownloadSource source = parseDownloadSource(file.get("download"), path);
+            DownloadSource source = parseDownloadSource(file.get("download"), path, kind);
             if (required && source.type().equals("manual")) {
                 throw new IllegalArgumentException("必须文件不能使用 manual 下载源: " + path);
             }
@@ -261,7 +261,7 @@ record ReleaseManifestV5(
         return normalized;
     }
 
-    private static DownloadSource parseDownloadSource(Object raw, String path) {
+    private static DownloadSource parseDownloadSource(Object raw, String path, String kind) {
         if (raw == null) {
             return new DownloadSource("publisher-hosted", "", "", null, "redistributable", List.of());
         }
@@ -276,6 +276,14 @@ record ReleaseManifestV5(
                 optionalString(source, "distributionPolicy", defaultDistributionPolicy(type)),
                 DISTRIBUTION_POLICIES,
                 "download.distributionPolicy");
+        boolean modArtifact = PublisherModAutoMatcher.isModArtifact(path, kind);
+        if (!modArtifact && !type.equals("publisher-hosted")) {
+            throw new IllegalArgumentException(
+                    "只有 mods 目录中的 Mod JAR 可以使用模组站、direct 或 manual 下载源: " + path);
+        }
+        if (!modArtifact && !distributionPolicy.equals("redistributable")) {
+            throw new IllegalArgumentException("非 Mod 文件固定作为本地发布文件，不接受分发政策选择: " + path);
+        }
         List<DownloadEndpoint> endpoints = new ArrayList<>();
         for (Object value : optionalArray(source, "endpoints")) {
             Map<String, Object> endpoint = object(value, "download.endpoints[]");

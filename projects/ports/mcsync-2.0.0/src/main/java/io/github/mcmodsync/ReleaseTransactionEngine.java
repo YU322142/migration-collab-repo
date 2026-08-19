@@ -105,6 +105,9 @@ final class ReleaseTransactionEngine {
                     continue;
                 }
                 bytes = Files.readAllBytes(local);
+            } else if (Files.isRegularFile(localTarget) && Files.size(localTarget) == entry.size()
+                    && Hashing.sha256(localTarget).equals(entry.sha256())) {
+                bytes = Files.readAllBytes(localTarget);
             } else {
                 bytes = provider.fetch(entry);
             }

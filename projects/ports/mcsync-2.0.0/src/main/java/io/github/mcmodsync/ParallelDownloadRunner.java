@@ -11,13 +11,25 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
 final class ParallelDownloadRunner {
-    private static final int MAX_THREADS = 4;
+    static final int DEFAULT_THREADS = 128;
+    static final int MAX_THREADS = 128;
+    private static final String THREAD_PROPERTY = "mcsync.downloadThreads";
 
     private ParallelDownloadRunner() {
     }
 
     static int threadCount(int taskCount) {
-        return Math.max(1, Math.min(MAX_THREADS, taskCount));
+        return Math.max(1, Math.min(configuredThreads(), taskCount));
+    }
+
+    static int configuredThreads() {
+        String configured = System.getProperty(THREAD_PROPERTY, "").strip();
+        if (configured.isEmpty()) return DEFAULT_THREADS;
+        try {
+            return Math.max(1, Math.min(MAX_THREADS, Integer.parseInt(configured)));
+        } catch (NumberFormatException ignored) {
+            return DEFAULT_THREADS;
+        }
     }
 
     static void run(int taskCount, IndexedTask task) throws IOException, InterruptedException {
