@@ -113,6 +113,9 @@ record ReleaseManifestV5(
             }
             String kind = oneOf(string(file, "kind"), FILE_KINDS, "文件 kind");
             boolean required = bool(file, "required", true);
+            if (!required && !Set.of("mod", "resource-pack", "shader-pack").contains(kind)) {
+                throw new IllegalArgumentException("只有 Mod、资源包和光影包可以设为可选: " + path);
+            }
             boolean restartRequired = bool(file, "restartRequired", true);
             Set<String> side = stringSet(file, "side", Set.of("client"), SIDES);
             String modId = optionalString(file, "modId");
@@ -241,8 +244,14 @@ record ReleaseManifestV5(
             return kind.equals("mod") && !required;
         }
 
+        boolean optionalSelectable() {
+            return !required && Set.of("mod", "resource-pack", "shader-pack").contains(kind);
+        }
+
         String selectionKey() {
-            return modId.isBlank() ? path.toLowerCase(Locale.ROOT) : modId.toLowerCase(Locale.ROOT);
+            return kind.equals("mod") && !modId.isBlank()
+                    ? modId.toLowerCase(Locale.ROOT)
+                    : path.toLowerCase(Locale.ROOT);
         }
     }
 

@@ -37,7 +37,7 @@ final class V5RecommendedSelectionStore {
             Path gameDirectory,
             RuntimeEnvironment environment) throws IOException {
         List<ReleaseManifestV5.FileEntry> recommended = manifest.files().stream()
-                .filter(ReleaseManifestV5.FileEntry::recommendedMod)
+                .filter(ReleaseManifestV5.FileEntry::optionalSelectable)
                 .toList();
         if (recommended.isEmpty()) {
             Files.deleteIfExists(pendingPath(gameDirectory));
@@ -104,6 +104,7 @@ final class V5RecommendedSelectionStore {
             Map<String, Object> item = object(raw);
             mods.add(new PendingMod(
                     string(item, "key"),
+                    string(item, "kind"),
                     string(item, "fileName"),
                     string(item, "displayName"),
                     string(item, "version"),
@@ -132,7 +133,7 @@ final class V5RecommendedSelectionStore {
         List<ReleaseManifestV5.FileEntry> effective = new ArrayList<>();
         String platformId = platformId(platform);
         for (ReleaseManifestV5.FileEntry entry : manifest.files()) {
-            if (!entry.recommendedMod()) {
+            if (!entry.optionalSelectable()) {
                 effective.add(entry);
             } else if (selected.contains(entry.selectionKey())
                     && !entry.incompatiblePlatforms().contains(platformId)) {
@@ -161,6 +162,7 @@ final class V5RecommendedSelectionStore {
             boolean compatible = !entry.incompatiblePlatforms().contains(platformId);
             Map<String, Object> item = new LinkedHashMap<>();
             item.put("key", entry.selectionKey());
+            item.put("kind", entry.kind());
             item.put("fileName", Path.of(entry.path()).getFileName().toString());
             item.put("displayName", entry.displayName().isBlank() ? entry.selectionKey() : entry.displayName());
             item.put("version", entry.version());
@@ -294,6 +296,7 @@ final class V5RecommendedSelectionStore {
 
     record PendingMod(
             String key,
+            String kind,
             String fileName,
             String displayName,
             String version,
@@ -301,6 +304,14 @@ final class V5RecommendedSelectionStore {
             String descriptionEn,
             boolean compatible,
             boolean selected) {
+        String typeLabel(DisplayLanguage language) {
+            return switch (kind) {
+                case "resource-pack" -> language.text("资源包", "Resource pack");
+                case "shader-pack" -> language.text("光影包", "Shader pack");
+                default -> language.text("推荐模组", "Recommended mod");
+            };
+        }
+
         String description(DisplayLanguage language) {
             String preferred = language.chinese() ? descriptionZh : descriptionEn;
             String fallback = language.chinese() ? descriptionEn : descriptionZh;

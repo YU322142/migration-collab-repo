@@ -166,7 +166,9 @@ final class V5PublisherWorkspace {
         JPanel panel = new JPanel(new BorderLayout(6, 6));
         JTextArea help = new JTextArea(
                 "这里仅管理资源包、光影、KubeJS、模型包和其他普通文件。它们始终由发布者托管，"
-                        + "不会接触 Modrinth、CurseForge 或镜像接口；mods 请在独立的 Mods 选项卡管理。");
+                        + "不会接触 Modrinth、CurseForge 或镜像接口。资源包和光影包可设为可选，"
+                        + "玩家会与推荐 Mod 一起在 Minecraft 窗口内选择；其他玩法文件保持必须。"
+                        + "mods 请在独立的 Mods 选项卡管理。");
         help.setEditable(false);
         help.setLineWrap(true);
         help.setWrapStyleWord(true);
@@ -178,12 +180,18 @@ final class V5PublisherWorkspace {
         JPanel buttons = new JPanel(new FlowLayout(FlowLayout.LEFT));
         JButton scan = new JButton("扫描安全内容目录");
         JButton add = new JButton("添加文件…");
+        JButton required = new JButton("所选设为必须");
+        JButton optional = new JButton("所选资源/光影设为可选");
         JButton remove = new JButton("移除选中");
         scan.addActionListener(event -> scanSafeRoots(scan));
         add.addActionListener(event -> addFiles());
+        required.addActionListener(event -> setSelectedContentRequired(true));
+        optional.addActionListener(event -> setSelectedContentRequired(false));
         remove.addActionListener(event -> removeSelected(fileTable, files.rows));
         buttons.add(scan);
         buttons.add(add);
+        buttons.add(required);
+        buttons.add(optional);
         buttons.add(remove);
         panel.add(buttons, BorderLayout.SOUTH);
         return panel;
@@ -673,6 +681,17 @@ final class V5PublisherWorkspace {
         files.fireTableDataChanged();
     }
 
+    private void setSelectedContentRequired(boolean required) {
+        int[] selected = fileTable.getSelectedRows();
+        for (int viewRow : selected) {
+            FileRow row = files.rows.get(fileTable.convertRowIndexToModel(viewRow));
+            if (required || Set.of("resource-pack", "shader-pack").contains(row.kind)) {
+                row.required = required;
+            }
+        }
+        files.fireTableDataChanged();
+    }
+
     private void editSelectedModMetadata() {
         int viewRow = modsTable.getSelectedRow();
         if (viewRow < 0) {
@@ -869,6 +888,10 @@ final class V5PublisherWorkspace {
                 errors.add(at + "本地文件不存在：" + row.path);
             }
             boolean mod = PublisherModAutoMatcher.isModArtifact(row.path, row.kind);
+            boolean selectable = Set.of("mod", "resource-pack", "shader-pack").contains(row.kind);
+            if (!row.required && !selectable) {
+                errors.add(at + "只有 Mod、资源包和光影包可以设为可选；其他玩法文件必须同步。");
+            }
             if (!mod && !row.source.equals("publisher-hosted")) {
                 errors.add(at + "非 Mod 文件禁止使用模组站、镜像或 direct/manual 来源。");
             }
@@ -1119,7 +1142,7 @@ final class V5PublisherWorkspace {
         file.put("required", row.required);
         file.put("restartRequired", row.restart);
         file.put("side", List.of(row.side));
-        if (row.kind.equals("mod")) {
+        if (Set.of("mod", "resource-pack", "shader-pack").contains(row.kind)) {
             if (!row.modId.isBlank()) file.put("modId", row.modId.strip());
             if (!row.displayName.isBlank()) file.put("displayName", row.displayName.strip());
             if (!row.modVersion.isBlank()) file.put("version", row.modVersion.strip());
@@ -1332,6 +1355,9 @@ final class V5PublisherWorkspace {
             FileRow row = new FileRow();
             row.path = path;
             row.kind = kind;
+            if (Set.of("resource-pack", "shader-pack").contains(kind)) {
+                row.displayName = Path.of(path).getFileName().toString();
+            }
             row.restart = kind.equals("mod") || kind.equals("kubejs")
                     || kind.equals("config") || kind.equals("default-config");
             return row;
@@ -1369,7 +1395,7 @@ final class V5PublisherWorkspace {
 
     private static final class FileModel extends AbstractTableModel {
         private final String[] columns = {
-                "状态", "相对路径", "类型", "必须", "推荐", "重启", "作用端", "获取方式", "匹配结果"};
+                "状态", "相对路径", "类型", "必须", "推荐/可选", "重启", "作用端", "获取方式", "匹配结果"};
         final List<FileRow> rows = new ArrayList<>();
 
         @Override public int getRowCount() { return rows.size(); }
@@ -1377,14 +1403,15 @@ final class V5PublisherWorkspace {
         @Override public String getColumnName(int column) { return columns[column]; }
         @Override public Class<?> getColumnClass(int column) { return Set.of(3, 4, 5).contains(column) ? Boolean.class : String.class; }
         @Override public boolean isCellEditable(int row, int column) {
-            if (column == 4) return rows.get(row).kind.equals("mod");
-            return column == 3 || column == 5 || column == 6;
+            if (column == 4) return Set.of("mod", "resource-pack", "shader-pack").contains(rows.get(row).kind);
+            if (column == 3) return Set.of("mod", "resource-pack", "shader-pack").contains(rows.get(row).kind);
+            return column == 5 || column == 6;
         }
         @Override public Object getValueAt(int rowIndex, int columnIndex) {
             FileRow r = rows.get(rowIndex);
             return switch (columnIndex) {
                 case 0 -> r.confirmed ? "已确定" : "待匹配"; case 1 -> r.path; case 2 -> r.kind;
-                case 3 -> r.required; case 4 -> r.kind.equals("mod") && !r.required;
+                case 3 -> r.required; case 4 -> Set.of("mod", "resource-pack", "shader-pack").contains(r.kind) && !r.required;
                 case 5 -> r.restart; case 6 -> r.side;
                 case 7 -> r.source.equals("publisher-hosted") ? "本地托管" : "上游平台";
                 case 8 -> r.matchDetail; default -> "";
@@ -1394,7 +1421,11 @@ final class V5PublisherWorkspace {
             FileRow r = rows.get(rowIndex);
             switch (columnIndex) {
                 case 3 -> r.required = Boolean.TRUE.equals(value);
-                case 4 -> { if (r.kind.equals("mod")) r.required = !Boolean.TRUE.equals(value); }
+                case 4 -> {
+                    if (Set.of("mod", "resource-pack", "shader-pack").contains(r.kind)) {
+                        r.required = !Boolean.TRUE.equals(value);
+                    }
+                }
                 case 5 -> r.restart = Boolean.TRUE.equals(value); case 6 -> r.side = String.valueOf(value);
                 default -> { }
             }

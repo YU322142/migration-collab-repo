@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-/** Minecraft-window selection screen shown before any recommended JAR is installed. */
+/** Minecraft-window selection screen shown before optional content is installed. */
 public final class RecommendedSelectionScreen extends Screen {
     private static final int PAGE_SIZE = 7;
     private static final AtomicBoolean STARTED = new AtomicBoolean();
@@ -29,7 +29,7 @@ public final class RecommendedSelectionScreen extends Screen {
             Path gameDirectory,
             V5RecommendedSelectionStore.PendingSelection pending) {
         super(Component.literal(DisplayLanguage.detect(gameDirectory).text(
-                "MCSync 推荐模组选择", "MCSync Recommended Mods")));
+                "MCSync 可选内容选择", "MCSync Optional Content")));
         this.gameDirectory = gameDirectory;
         this.pending = pending;
         this.language = DisplayLanguage.detect(gameDirectory);
@@ -114,6 +114,22 @@ public final class RecommendedSelectionScreen extends Screen {
         addRenderableWidget(Button.builder(Component.literal(language.text(
                 "确认并退出", "Confirm and exit")), button -> confirm())
                 .bounds(left + 328, bottom, 92, 20).build());
+        int categoryRow = bottom + 24;
+        addRenderableWidget(Button.builder(Component.literal(language.text(
+                "取消全部资源包", "Clear resource packs")), button -> {
+            clearKind("resource-pack");
+            rebuild();
+        }).bounds(left, categoryRow, 160, 20).build());
+        addRenderableWidget(Button.builder(Component.literal(language.text(
+                "取消全部光影包", "Clear shader packs")), button -> {
+            clearKind("shader-pack");
+            rebuild();
+        }).bounds(left + 164, categoryRow, 160, 20).build());
+    }
+
+    private void clearKind(String kind) {
+        pending.mods().stream().filter(mod -> mod.kind().equals(kind))
+                .forEach(mod -> selected.remove(mod.key()));
     }
 
     private void rebuild() {
@@ -123,7 +139,7 @@ public final class RecommendedSelectionScreen extends Screen {
     private String buttonLabel(V5RecommendedSelectionStore.PendingMod mod) {
         String mark = !mod.compatible() ? "[×] " : selected.contains(mod.key()) ? "[✓] " : "[ ] ";
         String version = mod.version().isBlank() ? "" : "  " + mod.version();
-        return mark + mod.displayName() + version;
+        return mark + "[" + mod.typeLabel(language) + "] " + mod.displayName() + version;
     }
 
     private void confirm() {
@@ -141,8 +157,8 @@ public final class RecommendedSelectionScreen extends Screen {
         renderBackground(graphics, mouseX, mouseY, partialTick);
         graphics.drawCenteredString(font, title, width / 2, 18, 0xFFFFFF);
         graphics.drawCenteredString(font, Component.literal(language.text(
-                "必须模组已锁定；推荐模组默认全选。确认后游戏退出，下次启动在加载前同步。",
-                "Required mods are locked. Recommended mods default to selected; confirm, then relaunch to sync.")),
+                "必须内容已锁定；推荐模组、资源包和光影包默认全选。确认后退出，下次启动前同步。",
+                "Required content is locked. Optional mods, resource packs and shaders default to selected; confirm, then relaunch.")),
                 width / 2, 36, 0xB7C9E2);
         int first = page * PAGE_SIZE;
         int last = Math.min(first + PAGE_SIZE, pending.mods().size());

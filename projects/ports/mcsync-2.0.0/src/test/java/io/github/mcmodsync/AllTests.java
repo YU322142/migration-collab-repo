@@ -43,6 +43,7 @@ public final class AllTests {
         testMcsyncBrandingKeepsLegacyTechnicalIdentity();
         testV5ReleaseManifestParsingAndValidation();
         testV5RecommendedSelectionIsDeferredToMinecraftWindow();
+        testV5ResourceAndShaderPacksCanBeOptional();
         testV5PlatformDownloadSourcesAndMirrorTrustBoundary();
         testOnlyModsMayUsePlatformDownloadSources();
         testDefaultDownloadConcurrencyIs128();
@@ -216,6 +217,48 @@ public final class AllTests {
             pass("explicit client-only metadata defaults to recommended without weakening MCSync");
         } finally {
             deleteTree(root);
+        }
+    }
+
+    private void testV5ResourceAndShaderPacksCanBeOptional() throws Exception {
+        Path root = Files.createTempDirectory("mcsync-v5-optional-packs-");
+        String old = System.getProperty("modsync.forceInGameSelection");
+        System.setProperty("modsync.forceInGameSelection", "true");
+        try {
+            ReleaseManifestV5.DownloadSource hosted = new ReleaseManifestV5.DownloadSource(
+                    "publisher-hosted", "", "", null, "redistributable", List.of());
+            ReleaseManifestV5.FileEntry required = new ReleaseManifestV5.FileEntry(
+                    "kubejs/client_scripts/core.js", "1".repeat(64), 1, "kubejs", true, true,
+                    Set.of("client"), hosted);
+            ReleaseManifestV5.FileEntry resource = new ReleaseManifestV5.FileEntry(
+                    "resourcepacks/pretty.zip", "2".repeat(64), 2, "resource-pack", false, false,
+                    Set.of("client"), hosted, "", "Pretty Pack", "1", "美化资源包", "Visual resource pack", Set.of());
+            ReleaseManifestV5.FileEntry shader = new ReleaseManifestV5.FileEntry(
+                    "shaderpacks/light.zip", "3".repeat(64), 3, "shader-pack", false, false,
+                    Set.of("client"), hosted, "", "Light Shader", "1", "轻量光影", "Lightweight shader", Set.of());
+            ReleaseManifestV5 manifest = new ReleaseManifestV5(
+                    "packs", 1, "2.0.0", List.of(), List.of(required, resource, shader), List.of());
+
+            V5RecommendedSelectionStore.Resolution initial = V5RecommendedSelectionStore.resolve(
+                    manifest, root, RuntimeEnvironment.detect());
+            check(initial.selectionPending() && initial.effectiveManifest().files().equals(List.of(required)),
+                    "可选资源包和光影包必须等待游戏内确认，确认前不得下载");
+            V5RecommendedSelectionStore.PendingSelection pending = V5RecommendedSelectionStore.readPending(root);
+            check(pending != null && pending.mods().size() == 2
+                            && pending.mods().stream().anyMatch(item -> item.kind().equals("resource-pack"))
+                            && pending.mods().stream().anyMatch(item -> item.kind().equals("shader-pack"))
+                            && pending.mods().stream().allMatch(V5RecommendedSelectionStore.PendingMod::selected),
+                    "游戏内选择页必须区分资源包和光影包，且首次出现时默认全部勾选");
+            V5RecommendedSelectionStore.confirm(root, pending, Set.of(resource.selectionKey()));
+            V5RecommendedSelectionStore.Resolution selected = V5RecommendedSelectionStore.resolve(
+                    manifest, root, RuntimeEnvironment.detect());
+            check(!selected.selectionPending()
+                            && selected.effectiveManifest().files().equals(List.of(required, resource)),
+                    "玩家取消的可选光影不得同步，选中的资源包应保留");
+            pass("v5 resource packs and shader packs can be optional in the Minecraft selection screen");
+        } finally {
+            if (old == null) System.clearProperty("modsync.forceInGameSelection");
+            else System.setProperty("modsync.forceInGameSelection", old);
         }
     }
 
