@@ -65,6 +65,9 @@ final class V5PublisherWorkspace {
     private final JTextField stableManifestPath = new JTextField("channel/stable/mods-v5.json");
     private final JTextField legacyV4Path = new JTextField("legacy/1.9/mods-v4.txt");
     private final JTextField legacyV2Path = new JTextField("legacy/1.6/mods.txt");
+    private final JCheckBox syncServerList = new JCheckBox("同步服务器列表（保留玩家自定义条目）", true);
+    private final JTextField serverListSource = new JTextField();
+    private final JTextField serverListManifestPath = new JTextField("server-list/serverlist.txt");
     private final JCheckBox generateLegacyGateways = new JCheckBox("生成 1.9.x 和 1.6.x/1.7.x 永久升级入口", true);
     private final FileModel files = new FileModel();
     private final ScopeModel scopes = new ScopeModel();
@@ -255,9 +258,13 @@ final class V5PublisherWorkspace {
         addFieldRow(form, c, 1, "2.0 稳定入口：", stableManifestPath);
         addFieldRow(form, c, 2, "1.9.x 升级入口：", legacyV4Path);
         addFieldRow(form, c, 3, "1.6.x/1.7.x 升级入口：", legacyV2Path);
+        addFilePathRow(form, c, 4, "服务器列表源：", serverListSource, "选择 servers.dat");
+        addFieldRow(form, c, 5, "服务器列表清单路径：", serverListManifestPath);
         c.gridx = 1;
-        c.gridy = 4;
+        c.gridy = 6;
         c.gridwidth = 2;
+        form.add(syncServerList, c);
+        c.gridy = 7;
         form.add(generateLegacyGateways, c);
         panel.add(form, BorderLayout.NORTH);
 
@@ -267,6 +274,8 @@ final class V5PublisherWorkspace {
                         + "channel/stable/mods-v5.json        2.0 客户端的正式 v5 入口\n"
                         + "legacy/1.9/mods-v4.txt            1.8/1.9 升级网关\n"
                         + "legacy/1.6/mods.txt               1.6/1.7 v2 升级网关\n"
+                        + "server-list/serverlist.txt        服务器列表校验清单\n"
+                        + "server-list/servers.dat           服务器列表合并源\n"
                         + "client-modsync.properties         客户端/配置引导用的地址片段\n\n"
                         + "新版只读取 mods-v5.json；旧版升级材料单独生成在 legacy/，不参与新版入口。\n"
                         + "发布时先上传 releases 和新版 JSON，再把 legacy/ 下的材料放到你维护的旧版地址。");
@@ -313,6 +322,7 @@ final class V5PublisherWorkspace {
                         + "  • 中国镜像仅是第三方传输候选，保留官方回退\n"
                         + "  • required 文件不能使用 manual\n"
                         + "  • 配置 OTA 有前像、冲突策略和作用端\n"
+                        + "  • options.txt 仅首装写入；服务器列表源与清单已校验\n"
                         + "  • 输出目录为空，不混入旧发布");
         checklist.setEditable(false);
         checklist.setOpaque(false);
@@ -334,6 +344,22 @@ final class V5PublisherWorkspace {
         c.weightx = 0;
         form.add(button, c);
         button.addActionListener(event -> chooseDirectory(field, existing));
+    }
+
+    private void addFilePathRow(
+            JPanel form, GridBagConstraints c, int row, String label, JTextField field, String buttonText) {
+        c.gridx = 0;
+        c.gridy = row;
+        c.weightx = 0;
+        form.add(new JLabel(label), c);
+        c.gridx = 1;
+        c.weightx = 1;
+        form.add(field, c);
+        JButton button = new JButton(buttonText);
+        c.gridx = 2;
+        c.weightx = 0;
+        form.add(button, c);
+        button.addActionListener(event -> chooseFile(field, "选择测试客户端的 servers.dat"));
     }
 
     private static void addFieldRow(JPanel form, GridBagConstraints c, int row, String label, JTextField field) {
@@ -363,6 +389,20 @@ final class V5PublisherWorkspace {
         int result = existing ? chooser.showOpenDialog(owner) : chooser.showSaveDialog(owner);
         if (result == JFileChooser.APPROVE_OPTION) {
             target.setText(chooser.getSelectedFile().toPath().toAbsolutePath().normalize().toString());
+            if (target == gameRoot && serverListSource.getText().isBlank()) {
+                Path candidate = Path.of(target.getText()).resolve(ServerListManifest.FILE_NAME);
+                if (Files.isRegularFile(candidate)) serverListSource.setText(candidate.toString());
+            }
+        }
+    }
+
+    private void chooseFile(JTextField target, String title) {
+        JFileChooser chooser = new JFileChooser();
+        chooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        chooser.setDialogTitle(title);
+        if (!target.getText().isBlank()) chooser.setSelectedFile(Path.of(target.getText()).toFile());
+        if (chooser.showOpenDialog(owner) == JFileChooser.APPROVE_OPTION) {
+            target.setText(chooser.getSelectedFile().toPath().toAbsolutePath().normalize().toString());
         }
     }
 
@@ -381,6 +421,14 @@ final class V5PublisherWorkspace {
             protected List<FileRow> doInBackground() throws Exception {
                 ArrayList<FileRow> found = new ArrayList<>();
                 Set<String> existing = files.normalizedPaths();
+                Path options = rootPath.resolve("options.txt");
+                if (Files.isRegularFile(options, LinkOption.NOFOLLOW_LINKS)
+                        && existing.add("options.txt")) {
+                    FileRow row = FileRow.scanned("options.txt", "support");
+                    row.confirmed = true;
+                    row.applyLocal("首装保留：不覆盖玩家已有 options.txt");
+                    found.add(row);
+                }
                 for (String directory : AUTO_SCAN_ROOTS) {
                     Path scanRoot = rootPath.resolve(directory);
                     if (!Files.isDirectory(scanRoot, LinkOption.NOFOLLOW_LINKS)) continue;
@@ -540,6 +588,19 @@ final class V5PublisherWorkspace {
             validateCloudPath(stableManifestPath.getText(), "2.0 稳定入口", "mods-v5.json");
             validateCloudPath(legacyV4Path.getText(), "1.9.x 入口", "mods-v4.txt");
             validateCloudPath(legacyV2Path.getText(), "1.6.x 入口", "mods.txt");
+            if (syncServerList.isSelected()) {
+                if (serverListSource.getText().isBlank()) {
+                    errors.add("已启用服务器列表同步，但没有选择 servers.dat 源文件。");
+                } else {
+                    Path source = Path.of(serverListSource.getText()).toAbsolutePath().normalize();
+                    if (!Files.isRegularFile(source) || !source.getFileName().toString().equalsIgnoreCase("servers.dat")) {
+                        errors.add("服务器列表源必须是普通文件 servers.dat。");
+                    } else {
+                        ServerListManifest.fromFile(source);
+                    }
+                }
+                validateCloudPath(serverListManifestPath.getText(), "服务器列表清单", "serverlist.txt");
+            }
         } catch (Exception failure) {
             errors.add("远端配置无效：" + failure.getMessage());
         }
@@ -627,6 +688,8 @@ final class V5PublisherWorkspace {
                 return PublisherCloudBundle.publish(
                         rootPath, project, output, normalizedBaseUrl(), stableManifestPath.getText(),
                         legacyV4Path.getText(), legacyV2Path.getText(),
+                        syncServerList.isSelected() ? Path.of(serverListSource.getText()).toAbsolutePath().normalize() : null,
+                        syncServerList.isSelected() ? serverListManifestPath.getText() : "",
                         generateLegacyGateways.isSelected(), updater);
             }
 
@@ -693,6 +756,9 @@ final class V5PublisherWorkspace {
                 "stablePath", cloudPath(stableManifestPath.getText()),
                 "legacyV4Path", cloudPath(legacyV4Path.getText()),
                 "legacyV2Path", cloudPath(legacyV2Path.getText()),
+                "syncServerList", syncServerList.isSelected(),
+                "serverListSource", serverListSource.getText().strip(),
+                "serverListManifestPath", cloudPath(serverListManifestPath.getText()),
                 "autoReleaseSequence", autoReleaseSequence.isSelected(),
                 "generateLegacyGateways", generateLegacyGateways.isSelected()));
         project.put("managedScopes", scopes.rows.stream().map(row -> Map.of(
@@ -809,6 +875,11 @@ final class V5PublisherWorkspace {
         stableManifestPath.setText(String.valueOf(remote.getOrDefault("stablePath", stableManifestPath.getText())));
         legacyV4Path.setText(String.valueOf(remote.getOrDefault("legacyV4Path", legacyV4Path.getText())));
         legacyV2Path.setText(String.valueOf(remote.getOrDefault("legacyV2Path", legacyV2Path.getText())));
+        boolean savedServerList = Boolean.TRUE.equals(remote.get("syncServerList"));
+        syncServerList.setSelected(savedServerList);
+        serverListSource.setText(String.valueOf(remote.getOrDefault("serverListSource", "")));
+        serverListManifestPath.setText(String.valueOf(remote.getOrDefault(
+                "serverListManifestPath", serverListManifestPath.getText())));
         autoReleaseSequence.setSelected(!Boolean.FALSE.equals(remote.get("autoReleaseSequence")));
         generateLegacyGateways.setSelected(!Boolean.FALSE.equals(remote.get("generateLegacyGateways")));
         scopes.rows.clear();
@@ -1006,6 +1077,8 @@ final class V5PublisherWorkspace {
             rows.add(new ScopeRow("resourcepacks", "managed"));
             rows.add(new ScopeRow("shaderpacks", "managed"));
             rows.add(new ScopeRow("kubejs", "managed"));
+            rows.add(new ScopeRow("tacz", "managed"));
+            rows.add(new ScopeRow("tlm_custom_pack", "managed"));
             rows.add(new ScopeRow("config", "additive"));
             rows.add(new ScopeRow("defaultconfigs", "additive"));
             rows.add(new ScopeRow("configureddefaults", "first-install"));

@@ -18,7 +18,8 @@ final class PublisherCloudBundle {
     record Result(
             PublisherProjectV5.Publication publication,
             Path stableManifest,
-            Path clientProperties) {
+            Path clientProperties,
+            Path serverListManifest) {
     }
 
     private PublisherCloudBundle() {
@@ -32,6 +33,8 @@ final class PublisherCloudBundle {
             String stablePath,
             String legacyV4Path,
             String legacyV2Path,
+            Path serverListSource,
+            String serverListManifestPath,
             boolean legacyGateways,
             Path updaterJar) throws IOException {
         Path output = outputRoot.toAbsolutePath().normalize();
@@ -40,6 +43,10 @@ final class PublisherCloudBundle {
         String stableRelative = validatePath(stablePath, "mods-v5.json");
         String v4Relative = validatePath(legacyV4Path, "mods-v4.txt");
         String v2Relative = validatePath(legacyV2Path, "mods.txt");
+        boolean syncServerList = serverListSource != null;
+        String serverListRelative = syncServerList
+                ? validatePath(serverListManifestPath, "serverlist.txt") : "";
+        if (syncServerList) ServerListManifest.fromFile(serverListSource);
         if (legacyGateways) {
             if (updaterJar == null || !Files.isRegularFile(updaterJar)) {
                 throw new IOException("生成旧版网关时缺少 MCSync 2.0.0 JAR");
@@ -57,14 +64,25 @@ final class PublisherCloudBundle {
         Files.copy(publication.manifestPath(), stable, StandardCopyOption.REPLACE_EXISTING);
         String stableUrl = base + "/" + stableRelative;
         Path properties = output.resolve("client-modsync.properties");
-        writeClientProperties(properties, stableUrl);
+        Path serverListManifest = null;
+        String serverListUrl = null;
+        if (syncServerList) {
+            serverListManifest = output.resolve(serverListRelative.replace('/', java.io.File.separatorChar));
+            Files.createDirectories(serverListManifest.getParent());
+            Files.copy(serverListSource, serverListManifest.getParent().resolve(ServerListManifest.FILE_NAME),
+                    StandardCopyOption.REPLACE_EXISTING);
+            ServerListManifest.fromFile(serverListSource).write(serverListManifest);
+            serverListUrl = base + "/" + serverListRelative;
+        }
+        writeClientProperties(properties, stableUrl, serverListUrl);
         if (legacyGateways) {
             ManagedClientConfig managed = ManagedClientConfig.fromPropertiesFile(properties);
             buildLegacyDirectory(output.resolve(parent(v4Relative)), updaterJar, managed, true, sequence);
             buildLegacyDirectory(output.resolve(parent(v2Relative)), updaterJar, managed, false, sequence);
         }
-        writeGuide(output.resolve("REMOTE-DEPLOYMENT.md"), sequence, stableRelative, stableUrl, legacyGateways);
-        return new Result(publication, stable, properties);
+        writeGuide(output.resolve("REMOTE-DEPLOYMENT.md"), sequence, stableRelative, stableUrl,
+                serverListRelative, legacyGateways);
+        return new Result(publication, stable, properties, serverListManifest);
     }
 
     @SuppressWarnings("unchecked")
@@ -104,12 +122,15 @@ final class PublisherCloudBundle {
         else LegacyUpgradeManifest.write(catalog, directory.resolve("mods.txt"));
     }
 
-    private static void writeClientProperties(Path output, String manifestUrl) throws IOException {
+    private static void writeClientProperties(Path output, String manifestUrl, String serverListManifestUrl)
+            throws IOException {
         Files.writeString(output,
                 "# MCSync 2.0 server-managed bootstrap\n"
                         + "manifest=" + manifestUrl + "\n"
                         + "syncResourcePacks=false\n"
-                        + "syncServerList=false\n"
+                        + "syncServerList=" + (serverListManifestUrl != null) + "\n"
+                        + (serverListManifestUrl == null ? ""
+                                : "serverListManifest=" + serverListManifestUrl + "\n")
                         + "strict=true\n"
                         + "requireManifest=true\n",
                 StandardCharsets.UTF_8);
@@ -120,6 +141,7 @@ final class PublisherCloudBundle {
             long sequence,
             String stablePath,
             String stableUrl,
+            String serverListPath,
             boolean legacy) throws IOException {
         Files.writeString(output,
                 "# MCSync cloud deployment\n\n"
@@ -130,6 +152,8 @@ final class PublisherCloudBundle {
                                 : "2. Legacy gateways were not generated.\n")
                         + "3. Atomically replace `" + stablePath + "` last.\n"
                         + "4. Configure clients with `manifest=" + stableUrl + "`.\n\n"
+                        + (serverListPath.isBlank() ? ""
+                                : "5. Upload `" + serverListPath + "` and its sibling `servers.dat`.\n\n")
                         + "Do not overwrite immutable release files. Rollback uses a new, larger releaseSequence.\n",
                 StandardCharsets.UTF_8);
     }

@@ -57,6 +57,7 @@ public final class AllTests {
         testV5CoordinatorDownloadsBeforeStartupAndBecomesIdempotent();
         testV5PublisherProjectBuildsDeterministicRelease();
         testPublisherCloudBundleBuildsStableAndLegacyEntrypoints();
+        testPublisherCloudBundleExportsServerList();
         testManifestGenerationAndParsing();
         testFabricModIdAndV1Compatibility();
         testNeoForgeMetadataAndUniversalBootstrap();
@@ -996,7 +997,7 @@ public final class AllTests {
             PublisherCloudBundle.Result result = PublisherCloudBundle.publish(
                     root.resolve("game"), project, output, "https://files.example.test/mcsync",
                     "channel/stable/mods-v5.json", "legacy/1.9/mods-v4.txt", "legacy/1.6/mods.txt",
-                    true, updater);
+                    null, "", true, updater);
             ReleaseManifestV5 stable = ReleaseManifestV5.parse(Files.readAllBytes(result.stableManifest()));
             check(stable.releaseSequence() == 2_000_001L
                             && stable.files().getFirst().download().endpoints().getFirst().uri().toASCIIString()
@@ -1019,6 +1020,48 @@ public final class AllTests {
                             && result.stableManifest().getFileName().toString().equals("mods-v5.json"),
                     "新版稳定入口必须使用 mods-v5.json，旧版网关单独输出");
             pass("publisher cloud bundle builds v5 JSON and separate legacy v4/v2 materials");
+        } finally {
+            deleteTree(root);
+        }
+    }
+
+    private void testPublisherCloudBundleExportsServerList() throws Exception {
+        Path root = Files.createTempDirectory("mcsync-cloud-server-list-");
+        try {
+            Files.createDirectories(root.resolve("game/mods"));
+            Files.writeString(root.resolve("game/mods/custom.jar"), "custom", StandardCharsets.UTF_8);
+            Path servers = root.resolve("servers.dat");
+            Files.writeString(servers, "server-list-fixture", StandardCharsets.UTF_8);
+            @SuppressWarnings("unchecked")
+            Map<String, Object> project = (Map<String, Object>) StrictJson.parse("""
+                    {
+                      "schema":1,"releaseId":"cloud-server-list","releaseSequence":2000002,
+                      "minimumMCSyncVersion":"2.0.0",
+                      "managedScopes":[{"path":"mods","policy":"managed"}],
+                      "files":[{
+                        "path":"mods/custom.jar","kind":"mod","required":true,
+                        "restartRequired":true,"side":["client"],
+                        "download":{"type":"publisher-hosted","distributionPolicy":"redistributable"}
+                      }],
+                      "configOperations":[]
+                    }
+                    """);
+            Path output = root.resolve("cloud");
+            PublisherCloudBundle.Result result = PublisherCloudBundle.publish(
+                    root.resolve("game"), project, output, "https://files.example.test/mcsync",
+                    "channel/stable/mods-v5.json", "legacy/1.9/mods-v4.txt", "legacy/1.6/mods.txt",
+                    servers, "server-list/serverlist.txt", false, null);
+            Path exportedServers = output.resolve("server-list/servers.dat");
+            ServerListManifest manifest = ServerListManifest.parse(Files.readString(
+                    result.serverListManifest(), StandardCharsets.UTF_8));
+            String properties = Files.readString(result.clientProperties(), StandardCharsets.UTF_8);
+            check(Files.mismatch(servers, exportedServers) == -1
+                            && manifest.md5().equals(Hashing.md5(servers)),
+                    "发布器应把服务器列表清单与 servers.dat 作为同级文件导出");
+            check(properties.contains("syncServerList=true\n")
+                            && properties.contains("serverListManifest=https://files.example.test/mcsync/server-list/serverlist.txt\n"),
+                    "客户端配置模板应启用服务器列表同步并指向导出清单");
+            pass("publisher cloud bundle exports server list and managed client configuration");
         } finally {
             deleteTree(root);
         }

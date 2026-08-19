@@ -120,7 +120,9 @@ Fabric 和 NeoForge 的普通模组不能混在一份清单里。建议至少使
 
 ## 第一次发布
 
-MCSync 2.0.0 双击 JAR 后默认进入五页式 OTA 发布工作台：发布项目、文件与来源、同步范围、配置 OTA、验证与导出。它只对 `mods/*.jar` 自动批量匹配 Modrinth/CurseForge 精确文件，无法匹配才生成本地托管条目；资源包、光影、KubeJS、模型包和配置等其他文件始终走本地发布，不接触模组站。客户端自动下载默认最多并行 128 个文件（可用 `-Dmcsync.downloadThreads=1..128` 下调），并可对单个 TOML/JSON/properties 配置键做有前像的统一 OTA。旧 v4 发布器位于“1.9.x 兼容工具”页。
+MCSync 2.0.0 双击 JAR 后默认进入六页式 OTA 发布工作台：发布项目、文件与来源、同步范围、配置 OTA、远端与旧版升级、验证与导出。它只对 `mods/*.jar` 自动批量匹配 Modrinth/CurseForge 精确文件，无法匹配才生成本地托管条目；资源包、光影、KubeJS、TACZ、女仆模型包和配置等其他文件始终走本地发布，不接触模组站。安全扫描会自动纳入根目录 `options.txt`，但它固定使用 `first-install`，不会覆盖玩家现有设置。客户端自动下载默认最多并行 128 个文件（可用 `-Dmcsync.downloadThreads=1..128` 下调），并可对单个 TOML/JSON/properties 配置键做有前像的统一 OTA。旧 v4 发布器位于“1.9.x 兼容工具”页。
+
+“远端与旧版升级”页可选取测试客户端的 `servers.dat`。启用后，云端包会额外包含 `server-list/serverlist.txt` 与同级 `servers.dat`，`client-modsync.properties` 自动写入 `syncServerList=true` 和清单 URL。客户端依据服务器列表所有权台账更新 MCSync 管理的条目，同时保留玩家自行添加的服务器。该选择、源文件路径和云端相对路径都会随发布项目 JSON 保存；旧项目没有这些字段时默认保持关闭。
 
 ### 1. 准备发布目录
 

@@ -201,6 +201,9 @@ final class PublisherProjectV5 {
                     "stablePath":"channel/stable/mods-v5.json",
                     "legacyV4Path":"legacy/1.9/mods-v4.txt",
                     "legacyV2Path":"legacy/1.6/mods.txt",
+                    "syncServerList":false,
+                    "serverListSource":"",
+                    "serverListManifestPath":"server-list/serverlist.txt",
                     "generateLegacyGateways":true
                   },
                   "managedScopes": [
@@ -208,8 +211,12 @@ final class PublisherProjectV5 {
                     {"path":"resourcepacks","policy":"managed"},
                     {"path":"shaderpacks","policy":"managed"},
                     {"path":"kubejs","policy":"managed"},
+                    {"path":"tacz","policy":"managed"},
+                    {"path":"tlm_custom_pack","policy":"managed"},
                     {"path":"config","policy":"additive"},
-                    {"path":"defaultconfigs","policy":"additive"}
+                    {"path":"defaultconfigs","policy":"additive"},
+                    {"path":"configureddefaults","policy":"first-install"},
+                    {"path":"options.txt","policy":"first-install"}
                   ],
                   "files": [
                     {
