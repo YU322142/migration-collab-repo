@@ -31,6 +31,12 @@ final class ModMetadata {
         return FabricModMetadata.isValidModId(value);
     }
 
+    static boolean recommendedByMetadata(Path jar) {
+        String modId = readModId(jar);
+        if (modId.equals(BuildInfo.TECHNICAL_MOD_ID)) return false;
+        return FabricModMetadata.isClientOnly(jar) || NeoForgeModMetadata.isNetworkOptional(jar);
+    }
+
     private static String validNeoForgeId(String value) {
         return isValidModId(value) ? value : "";
     }

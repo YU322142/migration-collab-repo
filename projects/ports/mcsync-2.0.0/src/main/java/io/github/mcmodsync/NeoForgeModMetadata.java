@@ -52,6 +52,11 @@ final class NeoForgeModMetadata {
         return normalize(readField(jar, "description"));
     }
 
+    static boolean isNetworkOptional(Path jar) {
+        String value = readField(jar, "displayTest").strip().toUpperCase(Locale.ROOT);
+        return value.equals("IGNORE_ALL_VERSION") || value.equals("IGNORE_SERVER_VERSION");
+    }
+
     private static String readField(Path jar, String field) {
         try (ZipFile zip = new ZipFile(jar.toFile())) {
             ZipEntry entry = zip.getEntry(ENTRY_NAME);
@@ -132,7 +137,8 @@ final class NeoForgeModMetadata {
                 }
                 String key = line.substring(0, equals).strip();
                 if (!key.equals("modId") && !key.equals("version")
-                        && !key.equals("displayName") && !key.equals("description")) {
+                        && !key.equals("displayName") && !key.equals("description")
+                        && !key.equals("displayTest")) {
                     continue;
                 }
                 String raw = line.substring(equals + 1).strip();

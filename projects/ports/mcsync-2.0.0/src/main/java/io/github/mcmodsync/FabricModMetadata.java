@@ -37,6 +37,10 @@ final class FabricModMetadata {
                 .strip();
     }
 
+    static boolean isClientOnly(Path jar) {
+        return readTopLevelString(jar, "environment").equalsIgnoreCase("client");
+    }
+
     private static String readTopLevelString(Path jar, String field) {
         try (ZipFile zip = new ZipFile(jar.toFile())) {
             ZipEntry entry = zip.getEntry("fabric.mod.json");

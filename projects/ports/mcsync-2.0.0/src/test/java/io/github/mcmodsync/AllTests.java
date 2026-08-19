@@ -47,6 +47,7 @@ public final class AllTests {
         testOnlyModsMayUsePlatformDownloadSources();
         testDefaultDownloadConcurrencyIs128();
         testModArtifactClassificationAndFingerprintNormalization();
+        testClientOnlyMetadataDefaultsToRecommended();
         testV5CustomBuildUsesPublisherHostedDistribution();
         testChinaApiMirrorPresetsRemainExplicitThirdPartyCandidates();
         testPublisherResolvesCurseForgeWithoutLeakingCredentials();
@@ -176,6 +177,33 @@ public final class AllTests {
         } finally {
             if (old == null) System.clearProperty("modsync.forceInGameSelection");
             else System.setProperty("modsync.forceInGameSelection", old);
+        }
+    }
+
+    private void testClientOnlyMetadataDefaultsToRecommended() throws Exception {
+        Path root = Files.createTempDirectory("mcsync-client-only-metadata-");
+        try {
+            Path clientOnly = root.resolve("client-only.jar");
+            try (ZipOutputStream zip = new ZipOutputStream(Files.newOutputStream(clientOnly))) {
+                zip.putNextEntry(new ZipEntry("fabric.mod.json"));
+                zip.write(("{\"id\":\"client_only\",\"version\":\"1\","
+                        + "\"environment\":\"client\"}").getBytes(StandardCharsets.UTF_8));
+                zip.closeEntry();
+            }
+            Path requiredSync = root.resolve("mcsync.jar");
+            try (ZipOutputStream zip = new ZipOutputStream(Files.newOutputStream(requiredSync))) {
+                zip.putNextEntry(new ZipEntry("fabric.mod.json"));
+                zip.write(("{\"id\":\"mcmodsync\",\"version\":\"2.0.0\","
+                        + "\"environment\":\"client\"}").getBytes(StandardCharsets.UTF_8));
+                zip.closeEntry();
+            }
+            check(ModMetadata.recommendedByMetadata(clientOnly),
+                    "明确 environment=client 的普通 Mod 应保守默认归入推荐");
+            check(!ModMetadata.recommendedByMetadata(requiredSync),
+                    "MCSync 本体即使标为客户端侧也必须始终属于必需 Mod");
+            pass("explicit client-only metadata defaults to recommended without weakening MCSync");
+        } finally {
+            deleteTree(root);
         }
     }
 

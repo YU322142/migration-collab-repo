@@ -27,9 +27,15 @@ final class PublisherModAutoMatcher {
         client = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(8)).build();
     }
 
-    record Match(Map<String, Object> download, String detail) {
+    record Match(Map<String, Object> download, String detail, String displayName, String descriptionEn) {
         Match {
             download = Map.copyOf(download);
+            displayName = displayName == null ? "" : displayName.strip();
+            descriptionEn = descriptionEn == null ? "" : descriptionEn.strip();
+        }
+
+        Match(Map<String, Object> download, String detail) {
+            this(download, detail, "", "");
         }
     }
 
@@ -58,10 +64,57 @@ final class PublisherModAutoMatcher {
         }
         batchModrinth(readable, result);
         batchCurseForge(readable, result);
+        enrichPlatformMetadata(result);
         for (Path jar : readable.keySet()) {
             result.putIfAbsent(jar, local("未在 Modrinth/CurseForge 精确匹配，使用本地文件"));
         }
         return result;
+    }
+
+    private void enrichPlatformMetadata(Map<Path, Match> result) {
+        Map<String, PlatformMetadata> cache = new LinkedHashMap<>();
+        for (Map.Entry<Path, Match> item : new ArrayList<>(result.entrySet())) {
+            Match match = item.getValue();
+            String type = text(match.download().get("type"));
+            String projectId = text(match.download().get("projectId"));
+            if (projectId.isBlank() || !(type.equals("modrinth") || type.equals("curseforge"))) continue;
+            String key = type + ":" + projectId;
+            PlatformMetadata metadata = cache.computeIfAbsent(key, ignored -> fetchMetadata(type, projectId));
+            if (metadata == null) continue;
+            result.put(item.getKey(), new Match(
+                    match.download(), match.detail(), metadata.displayName(), metadata.descriptionEn()));
+        }
+    }
+
+    private PlatformMetadata fetchMetadata(String type, String projectId) {
+        if (type.equals("modrinth")) {
+            for (URI base : List.of(
+                    DownloadEndpointPresets.MODRINTH_MCIMIRROR,
+                    DownloadEndpointPresets.MODRINTH_OFFICIAL)) {
+                try {
+                    Object parsed = getJson(base.resolve("project/" + Rfc3986.encodePathSegment(projectId)), false);
+                    if (!(parsed instanceof Map<?, ?> raw)) continue;
+                    Map<String, Object> project = castMap(raw);
+                    return new PlatformMetadata(
+                            text(project.get("title")), englishText(project.get("description")));
+                } catch (Exception ignored) {
+                }
+            }
+            return null;
+        }
+        for (URI base : List.of(
+                DownloadEndpointPresets.CURSEFORGE_MCIMIRROR,
+                DownloadEndpointPresets.CURSEFORGE_OFFICIAL)) {
+            URI uri = base.resolve("mods/" + Rfc3986.encodePathSegment(projectId));
+            try {
+                Object parsed = getJson(uri, "api.curseforge.com".equalsIgnoreCase(uri.getHost()));
+                if (!(parsed instanceof Map<?, ?> root) || !(root.get("data") instanceof Map<?, ?> raw)) continue;
+                Map<String, Object> project = castMap(raw);
+                return new PlatformMetadata(text(project.get("name")), englishText(project.get("summary")));
+            } catch (Exception ignored) {
+            }
+        }
+        return null;
     }
 
     private void batchModrinth(Map<Path, Signature> jars, Map<Path, Match> result) {
@@ -139,6 +192,12 @@ final class PublisherModAutoMatcher {
                 .POST(HttpRequest.BodyPublishers.ofString(body));
         addCurseForgeKey(request, curseForgeKey);
         return responseJson(client.send(request.build(), HttpResponse.BodyHandlers.ofString()));
+    }
+
+    private Object getJson(URI uri, boolean curseForgeKey) throws IOException, InterruptedException {
+        HttpRequest.Builder builder = request(uri).GET();
+        addCurseForgeKey(builder, curseForgeKey);
+        return responseJson(client.send(builder.build(), HttpResponse.BodyHandlers.ofString()));
     }
 
     private static HttpRequest.Builder request(URI uri) {
@@ -242,9 +301,19 @@ final class PublisherModAutoMatcher {
         return value instanceof String text ? text : "";
     }
 
+    private static String englishText(Object value) {
+        String text = text(value).replace('\r', ' ').replace('\n', ' ').replace('\t', ' ').strip();
+        boolean containsHan = text.codePoints().anyMatch(codePoint ->
+                Character.UnicodeScript.of(codePoint) == Character.UnicodeScript.HAN);
+        return containsHan ? "" : text;
+    }
+
     private static long integer(Object value) {
         if (value instanceof BigDecimal number) return number.longValue();
         if (value instanceof Number number) return number.longValue();
         return -1;
+    }
+
+    private record PlatformMetadata(String displayName, String descriptionEn) {
     }
 }

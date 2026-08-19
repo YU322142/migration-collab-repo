@@ -213,18 +213,21 @@ final class V5PublisherWorkspace {
         JButton rematch = new JButton("自动匹配全部 Mod");
         JButton required = new JButton("所选设为必须");
         JButton recommended = new JButton("所选设为推荐");
+        JButton editMetadata = new JButton("编辑名称与双语描述…");
         JButton remove = new JButton("移除选中");
         scan.addActionListener(event -> scanMods(scan));
         importV4.addActionListener(event -> importV4Catalog());
         rematch.addActionListener(event -> autoMatchMods(rematch));
         required.addActionListener(event -> setSelectedModKind(true));
         recommended.addActionListener(event -> setSelectedModKind(false));
+        editMetadata.addActionListener(event -> editSelectedModMetadata());
         remove.addActionListener(event -> removeSelected(modsTable, files.rows));
         buttons.add(scan);
         buttons.add(importV4);
         buttons.add(rematch);
         buttons.add(required);
         buttons.add(recommended);
+        buttons.add(editMetadata);
         buttons.add(remove);
         panel.add(buttons, BorderLayout.SOUTH);
         return panel;
@@ -596,8 +599,9 @@ final class V5PublisherWorkspace {
         String description = ModMetadata.readDescription(jar);
         if (containsHan(description)) row.descriptionZh = description;
         else row.descriptionEn = description;
-        row.required = true;
+        row.required = !ModMetadata.recommendedByMetadata(jar);
         row.restart = true;
+        if (!row.required) row.matchDetail = "客户端可选元数据：默认推荐";
     }
 
     private void importV4Catalog() {
@@ -667,6 +671,60 @@ final class V5PublisherWorkspace {
             row.required = required;
         }
         files.fireTableDataChanged();
+    }
+
+    private void editSelectedModMetadata() {
+        int viewRow = modsTable.getSelectedRow();
+        if (viewRow < 0) {
+            showError("请先在 Mods 表格中选择一个模组。");
+            return;
+        }
+        FileRow row = files.rows.get(modsTable.convertRowIndexToModel(viewRow));
+        JTextField name = new JTextField(row.displayName, 36);
+        JTextField version = new JTextField(row.modVersion, 36);
+        JTextArea chinese = new JTextArea(row.descriptionZh, 5, 42);
+        JTextArea english = new JTextArea(row.descriptionEn, 5, 42);
+        chinese.setLineWrap(true);
+        chinese.setWrapStyleWord(true);
+        english.setLineWrap(true);
+        english.setWrapStyleWord(true);
+        JCheckBox windows = new JCheckBox("Windows 不兼容", row.incompatiblePlatforms.contains("windows"));
+        JCheckBox linux = new JCheckBox("Linux 不兼容", row.incompatiblePlatforms.contains("linux"));
+        JCheckBox macos = new JCheckBox("macOS 不兼容", row.incompatiblePlatforms.contains("macos"));
+        JCheckBox android = new JCheckBox("Android 不兼容", row.incompatiblePlatforms.contains("android"));
+
+        JPanel form = new JPanel(new GridBagLayout());
+        GridBagConstraints c = constraints();
+        addFieldRow(form, c, 0, "显示名称：", name);
+        addFieldRow(form, c, 1, "版本：", version);
+        c.gridx = 0; c.gridy = 2; c.weightx = 0; c.fill = GridBagConstraints.NONE;
+        form.add(new JLabel("中文描述："), c);
+        c.gridx = 1; c.weightx = 1; c.fill = GridBagConstraints.BOTH;
+        form.add(new JScrollPane(chinese), c);
+        c.gridx = 0; c.gridy = 3; c.weightx = 0; c.fill = GridBagConstraints.NONE;
+        form.add(new JLabel("英文描述："), c);
+        c.gridx = 1; c.weightx = 1; c.fill = GridBagConstraints.BOTH;
+        form.add(new JScrollPane(english), c);
+        JPanel platforms = new JPanel(new FlowLayout(FlowLayout.LEFT, 6, 0));
+        platforms.add(windows); platforms.add(linux); platforms.add(macos); platforms.add(android);
+        c.gridx = 0; c.gridy = 4; c.weightx = 0; c.fill = GridBagConstraints.NONE;
+        form.add(new JLabel("推荐平台限制："), c);
+        c.gridx = 1; c.weightx = 1; c.fill = GridBagConstraints.HORIZONTAL;
+        form.add(platforms, c);
+
+        int result = JOptionPane.showConfirmDialog(owner, form,
+                "编辑 Mod 信息 — " + row.path, JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+        if (result != JOptionPane.OK_OPTION) return;
+        row.displayName = name.getText().strip();
+        row.modVersion = version.getText().strip();
+        row.descriptionZh = chinese.getText().strip();
+        row.descriptionEn = english.getText().strip();
+        row.incompatiblePlatforms.clear();
+        if (windows.isSelected()) row.incompatiblePlatforms.add("windows");
+        if (linux.isSelected()) row.incompatiblePlatforms.add("linux");
+        if (macos.isSelected()) row.incompatiblePlatforms.add("macos");
+        if (android.isSelected()) row.incompatiblePlatforms.add("android");
+        files.fireTableRowsUpdated(modsTable.convertRowIndexToModel(viewRow), modsTable.convertRowIndexToModel(viewRow));
     }
 
     private static boolean containsHan(String value) {
@@ -1274,6 +1332,8 @@ final class V5PublisherWorkspace {
             FileRow row = new FileRow();
             row.path = path;
             row.kind = kind;
+            row.restart = kind.equals("mod") || kind.equals("kubejs")
+                    || kind.equals("config") || kind.equals("default-config");
             return row;
         }
 
@@ -1297,6 +1357,12 @@ final class V5PublisherWorkspace {
             Object id = download.get("fileId");
             fileId = id == null ? "" : String.valueOf(id);
             matchDetail = match.detail();
+            if (displayName.isBlank() && !match.displayName().isBlank()) {
+                displayName = match.displayName();
+            }
+            if (descriptionEn.isBlank() && !match.descriptionEn().isBlank()) {
+                descriptionEn = match.descriptionEn();
+            }
             confirmed = true;
         }
     }
