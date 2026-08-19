@@ -19,9 +19,9 @@ import java.util.Set;
 
 /**
  * Keeps schema-v5 recommended-Mod choices separate from the release sequence.
- * A changed recommendation catalog creates a pending request consumed by the
- * Minecraft-window UI; until confirmation, only previously confirmed choices
- * are included in the effective manifest.
+ * A first-time or newly added recommendation creates a pending request consumed
+ * by the Minecraft-window UI. Ordinary version/hash/description updates and
+ * removals retain the player's existing choices without prompting again.
  */
 final class V5RecommendedSelectionStore {
     private static final String STATE_FILE = "recommended-selection-v5.properties";
@@ -60,14 +60,20 @@ final class V5RecommendedSelectionStore {
             return new Resolution(filter(manifest, compatible, platform), false, Set.copyOf(compatible));
         }
 
-        boolean current = saved != null
-                && saved.catalogFingerprint().equals(fingerprint)
-                && saved.platform() == platform;
-        if (current) {
+        if (saved != null && saved.platform() == platform) {
             Set<String> selected = new LinkedHashSet<>(saved.selected());
             selected.retainAll(compatible);
-            Files.deleteIfExists(pendingPath(gameDirectory));
-            return new Resolution(filter(manifest, selected, platform), false, Set.copyOf(selected));
+            LinkedHashSet<String> newlyAdded = new LinkedHashSet<>(compatible);
+            newlyAdded.removeAll(saved.known());
+            if (newlyAdded.isEmpty()) {
+                // A recommendation's version/hash/description may change without
+                // changing the player's opt-in decision. Removed or newly
+                // incompatible recommendations are silently pruned here.
+                save(statePath(gameDirectory), new SavedSelection(
+                        fingerprint, platform, selected, compatible));
+                Files.deleteIfExists(pendingPath(gameDirectory));
+                return new Resolution(filter(manifest, selected, platform), false, Set.copyOf(selected));
+            }
         }
 
         Set<String> previous = new LinkedHashSet<>();
@@ -172,7 +178,6 @@ final class V5RecommendedSelectionStore {
         StringBuilder value = new StringBuilder();
         recommended.stream().sorted(java.util.Comparator.comparing(ReleaseManifestV5.FileEntry::selectionKey))
                 .forEach(entry -> value.append(entry.selectionKey()).append('\t')
-                        .append(entry.sha256()).append('\t')
                         .append(entry.incompatiblePlatforms().stream().sorted().toList()).append('\n'));
         return Hashing.sha256(value.toString().getBytes(StandardCharsets.UTF_8));
     }

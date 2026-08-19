@@ -155,12 +155,24 @@ public final class AllTests {
             check(!declined.selectionPending() && declined.effectiveManifest().files().equals(List.of(required)),
                     "同一推荐清单不应重复询问，并应保留取消选择");
 
+            ReleaseManifestV5.FileEntry optionalAUpdated = new ReleaseManifestV5.FileEntry(
+                    "mods/optional-a-2.jar", "4".repeat(64), 2, "mod", false, true, Set.of("client"), hosted,
+                    "optional_a", "Optional A", "2", "推荐甲（新版）", "Optional A updated", Set.of());
+            ReleaseManifestV5 versionOnly = new ReleaseManifestV5(
+                    "test", 2, "2.0.0", first.managedScopes(),
+                    List.of(required, optionalAUpdated), List.of());
+            V5RecommendedSelectionStore.Resolution versionUpdated = V5RecommendedSelectionStore.resolve(
+                    versionOnly, root, RuntimeEnvironment.detect());
+            check(!versionUpdated.selectionPending()
+                            && versionUpdated.effectiveManifest().files().equals(List.of(required)),
+                    "推荐 Mod 仅版本、哈希、文件名或描述变化时不得重复询问");
+
             ReleaseManifestV5.FileEntry optionalB = new ReleaseManifestV5.FileEntry(
                     "mods/optional-b.jar", "3".repeat(64), 1, "mod", false, true, Set.of("client"), hosted,
                     "optional_b", "Optional B", "1", "推荐乙", "Optional B", Set.of());
             ReleaseManifestV5 second = new ReleaseManifestV5(
-                    "test", 2, "2.0.0", first.managedScopes(),
-                    List.of(required, optionalA, optionalB), List.of());
+                    "test", 3, "2.0.0", first.managedScopes(),
+                    List.of(required, optionalAUpdated, optionalB), List.of());
             V5RecommendedSelectionStore.Resolution updated = V5RecommendedSelectionStore.resolve(
                     second, root, RuntimeEnvironment.detect());
             check(updated.selectionPending(), "新增推荐 Mod 必须重新显示游戏内选择页");
