@@ -148,10 +148,13 @@ final class V5PublisherWorkspace {
         panel.add(note, BorderLayout.CENTER);
 
         JPanel actions = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        JButton continueV5 = new JButton("从现有 mods-v5.json 继续发布…");
         JButton load = new JButton("打开发布项目…");
         JButton save = new JButton("保存发布项目…");
+        continueV5.addActionListener(event -> importExistingV5Manifest());
         load.addActionListener(event -> loadProject());
         save.addActionListener(event -> saveProject());
+        actions.add(continueV5);
         actions.add(load);
         actions.add(save);
         panel.add(actions, BorderLayout.SOUTH);
@@ -1039,6 +1042,126 @@ final class V5PublisherWorkspace {
         }
     }
 
+    private void importExistingV5Manifest() {
+        try {
+            validation.append("正在选择现有 mods-v5.json…\n");
+            Path selected = chooseExistingV5File();
+            if (selected == null) {
+                validation.append("已取消从现有 v5 清单继续发布。\n");
+                return;
+            }
+            byte[] bytes = Files.readAllBytes(selected);
+            ReleaseManifestV5.parse(bytes); // strict schema, path, source and policy validation
+            Object parsed = StrictJson.parse(new String(bytes, StandardCharsets.UTF_8));
+            if (!(parsed instanceof Map<?, ?> raw)) throw new IOException("v5 清单根必须是 JSON 对象。");
+            @SuppressWarnings("unchecked") Map<String, Object> manifest = (Map<String, Object>) raw;
+            Map<String, Object> project = continuationProject(manifest);
+            loadProjectMap(project);
+            autoReleaseSequence.setSelected(true);
+            releaseSequence.setValue(PublisherProjectV5.currentTimeReleaseSequence());
+            projectFile = null;
+            validation.append("已继承现有 v5 清单：" + selected + "\n"
+                    + "已保留双语描述、必须/可选、同步范围和配置 OTA；导出时将重新计算文件哈希与时间序号。\n");
+            validation.setCaretPosition(validation.getDocument().getLength());
+            workspaceTabs.setSelectedIndex(1);
+            JOptionPane.showMessageDialog(owner,
+                    "现有 mods-v5.json 已导入为下一版发布基线。\n"
+                            + "文件：" + files.rows.size() + "\n"
+                            + "配置操作：" + config.rows.size() + "\n\n"
+                            + "请确认客户端根目录，然后扫描/匹配新加入或改名的文件并保存发布项目。",
+                    "继续发布", JOptionPane.INFORMATION_MESSAGE);
+        } catch (Exception failure) {
+            showError("无法导入现有 mods-v5.json：" + cause(failure).getMessage());
+        }
+    }
+
+    private Path chooseExistingV5File() {
+        FileDialog dialog = new FileDialog(owner, "选择现有 mods-v5.json", FileDialog.LOAD);
+        dialog.setMultipleMode(false);
+        dialog.setFilenameFilter((directory, name) -> name.equalsIgnoreCase("mods-v5.json")
+                || name.toLowerCase(Locale.ROOT).endsWith(".json"));
+        dialog.setDirectory(projectFile != null && projectFile.getParent() != null
+                ? projectFile.getParent().toString()
+                : System.getProperty("user.dir", "."));
+        dialog.setFile("mods-v5.json");
+        dialog.setVisible(true);
+        String name = dialog.getFile();
+        String directory = dialog.getDirectory();
+        dialog.dispose();
+        owner.toFront();
+        owner.requestFocus();
+        return name == null || directory == null ? null : Path.of(directory, name).toAbsolutePath().normalize();
+    }
+
+    @SuppressWarnings("unchecked")
+    private Map<String, Object> continuationProject(Map<String, Object> manifest) throws IOException {
+        LinkedHashMap<String, Object> project = new LinkedHashMap<>();
+        project.put("schema", BigDecimal.ONE);
+        project.put("releaseId", textOrEmpty(manifest.get("releaseId")));
+        project.put("releaseSequence", manifest.getOrDefault("releaseSequence", BigDecimal.ONE));
+        project.put("minimumMCSyncVersion", textOrEmpty(manifest.get("minimumMCSyncVersion")));
+        LinkedHashMap<String, Object> remote = new LinkedHashMap<>();
+        remote.put("baseUrl", publicBaseUrl.getText().strip());
+        remote.put("stablePath", cloudPath(stableManifestPath.getText()));
+        remote.put("legacyV4Path", cloudPath(legacyV4Path.getText()));
+        remote.put("legacyV2Path", cloudPath(legacyV2Path.getText()));
+        remote.put("syncServerList", syncServerList.isSelected());
+        remote.put("serverListSource", serverListSource.getText().strip());
+        remote.put("serverListManifestPath", cloudPath(serverListManifestPath.getText()));
+        remote.put("gameRoot", gameRoot.getText().strip());
+        remote.put("outputDirectory", outputDirectory.getText().strip());
+        remote.put("autoReleaseSequence", true);
+        remote.put("generateLegacyGateways", generateLegacyGateways.isSelected());
+        project.put("remote", remote);
+        project.put("managedScopes", manifest.getOrDefault("managedScopes", List.of()));
+        project.put("configOperations", manifest.getOrDefault("configOperations", List.of()));
+
+        Path root = null;
+        if (!gameRoot.getText().isBlank()) {
+            Path candidate = Path.of(gameRoot.getText()).toAbsolutePath().normalize();
+            if (Files.isDirectory(candidate)) root = candidate;
+        }
+        Map<String, String> currentModsById = currentModPathsById(root);
+        List<Object> importedFiles = new ArrayList<>();
+        for (Object value : (List<Object>) manifest.getOrDefault("files", List.of())) {
+            if (!(value instanceof Map<?, ?> rawFile)) continue;
+            LinkedHashMap<String, Object> file = new LinkedHashMap<>((Map<String, Object>) rawFile);
+            file.remove("sha256");
+            file.remove("size");
+            String path = textOrEmpty(file.get("path"));
+            if (root != null && !Files.isRegularFile(root.resolve(path), LinkOption.NOFOLLOW_LINKS)
+                    && "mod".equals(textOrEmpty(file.get("kind")))) {
+                String replacement = currentModsById.get(textOrEmpty(file.get("modId")).toLowerCase(Locale.ROOT));
+                if (replacement != null) file.put("path", replacement);
+            }
+            importedFiles.add(file);
+        }
+        project.put("files", importedFiles);
+        return project;
+    }
+
+    private static Map<String, String> currentModPathsById(Path root) throws IOException {
+        if (root == null || !Files.isDirectory(root.resolve("mods"))) return Map.of();
+        LinkedHashMap<String, String> result = new LinkedHashMap<>();
+        HashSet<String> ambiguous = new HashSet<>();
+        try (var stream = Files.list(root.resolve("mods"))) {
+            for (Path jar : stream.filter(Files::isRegularFile)
+                    .filter(path -> path.getFileName().toString().toLowerCase(Locale.ROOT).endsWith(".jar"))
+                    .sorted().toList()) {
+                String modId = ModMetadata.readModId(jar).toLowerCase(Locale.ROOT);
+                if (modId.isBlank()) continue;
+                String relative = root.relativize(jar).toString().replace('\\', '/');
+                if (result.putIfAbsent(modId, relative) != null) ambiguous.add(modId);
+            }
+        }
+        ambiguous.forEach(result::remove);
+        return result;
+    }
+
+    private static String textOrEmpty(Object value) {
+        return value == null ? "" : String.valueOf(value);
+    }
+
     private Path chooseProjectFile(int mode) {
         String title = mode == FileDialog.LOAD
                 ? "打开 MCSync 2.0 发布项目"
@@ -1235,11 +1358,11 @@ final class V5PublisherWorkspace {
             file.required = Boolean.TRUE.equals(row.get("required"));
             file.restart = !Boolean.FALSE.equals(row.get("restartRequired"));
             file.side = side.isEmpty() ? "client" : String.valueOf(side.getFirst());
-            file.modId = String.valueOf(row.getOrDefault("modId", ""));
-            file.displayName = String.valueOf(row.getOrDefault("displayName", ""));
-            file.modVersion = String.valueOf(row.getOrDefault("version", ""));
-            file.descriptionZh = String.valueOf(row.getOrDefault("descriptionZh", ""));
-            file.descriptionEn = String.valueOf(row.getOrDefault("descriptionEn", ""));
+            file.modId = textOrEmpty(row.get("modId"));
+            file.displayName = textOrEmpty(row.get("displayName"));
+            file.modVersion = textOrEmpty(row.get("version"));
+            file.descriptionZh = textOrEmpty(row.get("descriptionZh"));
+            file.descriptionEn = textOrEmpty(row.get("descriptionEn"));
             for (Object platform : (List<Object>) row.getOrDefault("incompatiblePlatforms", List.of())) {
                 file.incompatiblePlatforms.add(String.valueOf(platform));
             }
