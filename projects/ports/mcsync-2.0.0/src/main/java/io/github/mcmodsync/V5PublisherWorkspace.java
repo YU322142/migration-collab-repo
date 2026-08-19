@@ -62,11 +62,9 @@ final class V5PublisherWorkspace {
     private final JCheckBox autoReleaseSequence = new JCheckBox("导出时按当前系统时间刷新序号", true);
     private final JTextField minimumVersion = new JTextField(BuildInfo.VERSION);
     private final JTextField publicBaseUrl = new JTextField("https://files.example.com/mcsync");
-    private final JTextField stableManifestPath = new JTextField("channel/stable/mods-v4.txt");
+    private final JTextField stableManifestPath = new JTextField("channel/stable/mods-v5.json");
     private final JTextField legacyV4Path = new JTextField("legacy/1.9/mods-v4.txt");
     private final JTextField legacyV2Path = new JTextField("legacy/1.6/mods.txt");
-    private final JTextField legacyV4CurrentUrls = new JTextField("https://old.example.com/client/mods-v4.txt");
-    private final JTextField legacyV2CurrentUrls = new JTextField("https://old.example.com/client/mods.txt");
     private final JCheckBox generateLegacyGateways = new JCheckBox("生成 1.9.x 和 1.6.x/1.7.x 永久升级入口", true);
     private final FileModel files = new FileModel();
     private final ScopeModel scopes = new ScopeModel();
@@ -257,10 +255,8 @@ final class V5PublisherWorkspace {
         addFieldRow(form, c, 1, "2.0 稳定入口：", stableManifestPath);
         addFieldRow(form, c, 2, "1.9.x 升级入口：", legacyV4Path);
         addFieldRow(form, c, 3, "1.6.x/1.7.x 升级入口：", legacyV2Path);
-        addFieldRow(form, c, 4, "1.9.x 当前实际 URL（多个用逗号）：", legacyV4CurrentUrls);
-        addFieldRow(form, c, 5, "1.6.x/1.7.x 当前实际 URL：", legacyV2CurrentUrls);
         c.gridx = 1;
-        c.gridy = 6;
+        c.gridy = 4;
         c.gridwidth = 2;
         form.add(generateLegacyGateways, c);
         panel.add(form, BorderLayout.NORTH);
@@ -268,15 +264,12 @@ final class V5PublisherWorkspace {
         JTextArea explanation = new JTextArea(
                 "输出会按下列布局生成：\n\n"
                         + "releases/<releaseSequence>/       不可变的版本文件与 manifest-v5.json\n"
-                        + "channel/stable/mods-v4.txt        2.0 客户端的固定 v5 入口\n"
+                        + "channel/stable/mods-v5.json        2.0 客户端的正式 v5 入口\n"
                         + "legacy/1.9/mods-v4.txt            1.8/1.9 升级网关\n"
                         + "legacy/1.6/mods.txt               1.6/1.7 v2 升级网关\n"
                         + "client-modsync.properties         客户端/配置引导用的地址片段\n\n"
-                        + "稳定入口仍使用 mods-v4.txt 文件名，但内容是 schema-v5 JSON。"
-                        + "这样旧配置引导器允许该 URL，2.0 又可以根据内容自动识别新清单。\n"
-                        + "旧客户端只读取它们现在已经配置的旧 URL。必须把 legacy 网关部署到这些原地址，"
-                        + "或从原地址做 HTTP 重定向。\n"
-                        + "发布时先上传 releases 和 legacy，部署旧 URL，最后原子替换 channel/stable/mods-v4.txt。");
+                        + "新版只读取 mods-v5.json；旧版升级材料单独生成在 legacy/，不参与新版入口。\n"
+                        + "发布时先上传 releases 和新版 JSON，再把 legacy/ 下的材料放到你维护的旧版地址。");
         explanation.setEditable(false);
         explanation.setFont(new Font(Font.MONOSPACED, Font.PLAIN, 13));
         explanation.setLineWrap(true);
@@ -544,13 +537,9 @@ final class V5PublisherWorkspace {
             if (!"https".equalsIgnoreCase(base.getScheme()) || base.getHost() == null) {
                 errors.add("公开根地址必须是 HTTPS 绝对地址。");
             }
-            validateCloudPath(stableManifestPath.getText(), "2.0 稳定入口", "mods-v4.txt");
+            validateCloudPath(stableManifestPath.getText(), "2.0 稳定入口", "mods-v5.json");
             validateCloudPath(legacyV4Path.getText(), "1.9.x 入口", "mods-v4.txt");
             validateCloudPath(legacyV2Path.getText(), "1.6.x 入口", "mods.txt");
-            if (generateLegacyGateways.isSelected()) {
-                validateExistingUrls(legacyV4CurrentUrls.getText(), "1.9.x", "mods-v4.txt");
-                validateExistingUrls(legacyV2CurrentUrls.getText(), "1.6.x/1.7.x", "mods.txt");
-            }
         } catch (Exception failure) {
             errors.add("远端配置无效：" + failure.getMessage());
         }
@@ -638,7 +627,6 @@ final class V5PublisherWorkspace {
                 return PublisherCloudBundle.publish(
                         rootPath, project, output, normalizedBaseUrl(), stableManifestPath.getText(),
                         legacyV4Path.getText(), legacyV2Path.getText(),
-                        splitUrls(legacyV4CurrentUrls.getText()), splitUrls(legacyV2CurrentUrls.getText()),
                         generateLegacyGateways.isSelected(), updater);
             }
 
@@ -705,8 +693,6 @@ final class V5PublisherWorkspace {
                 "stablePath", cloudPath(stableManifestPath.getText()),
                 "legacyV4Path", cloudPath(legacyV4Path.getText()),
                 "legacyV2Path", cloudPath(legacyV2Path.getText()),
-                "legacyV4CurrentUrls", legacyV4CurrentUrls.getText().strip(),
-                "legacyV2CurrentUrls", legacyV2CurrentUrls.getText().strip(),
                 "autoReleaseSequence", autoReleaseSequence.isSelected(),
                 "generateLegacyGateways", generateLegacyGateways.isSelected()));
         project.put("managedScopes", scopes.rows.stream().map(row -> Map.of(
@@ -755,27 +741,6 @@ final class V5PublisherWorkspace {
                 || !normalized.endsWith("/" + fileName)) {
             throw new IllegalArgumentException(label + " 必须是以 /" + fileName + " 结尾的安全相对路径");
         }
-    }
-
-    private static void validateExistingUrls(String value, String label, String fileName) {
-        List<String> urls = splitUrls(value);
-        if (urls.isEmpty()) {
-            throw new IllegalArgumentException(label + " 至少要填写一个当前客户端实际读取的 URL");
-        }
-        for (String raw : urls) {
-            URI uri = URI.create(raw);
-            boolean web = "https".equalsIgnoreCase(uri.getScheme()) || "http".equalsIgnoreCase(uri.getScheme());
-            if (!web || uri.getHost() == null
-                    || uri.getPath() == null || !uri.getPath().endsWith("/" + fileName)) {
-                throw new IllegalArgumentException(label + " 旧 URL 必须是以 /" + fileName
-                        + " 结尾的 HTTP/HTTPS 地址: " + raw);
-            }
-        }
-    }
-
-    private static List<String> splitUrls(String value) {
-        return java.util.Arrays.stream((value == null ? "" : value).split("[,;\\r\\n]+"))
-                .map(String::strip).filter(item -> !item.isEmpty()).toList();
     }
 
     private Map<String, Object> fileJson(FileRow row) {
@@ -844,10 +809,6 @@ final class V5PublisherWorkspace {
         stableManifestPath.setText(String.valueOf(remote.getOrDefault("stablePath", stableManifestPath.getText())));
         legacyV4Path.setText(String.valueOf(remote.getOrDefault("legacyV4Path", legacyV4Path.getText())));
         legacyV2Path.setText(String.valueOf(remote.getOrDefault("legacyV2Path", legacyV2Path.getText())));
-        legacyV4CurrentUrls.setText(String.valueOf(remote.getOrDefault(
-                "legacyV4CurrentUrls", legacyV4CurrentUrls.getText())));
-        legacyV2CurrentUrls.setText(String.valueOf(remote.getOrDefault(
-                "legacyV2CurrentUrls", legacyV2CurrentUrls.getText())));
         autoReleaseSequence.setSelected(!Boolean.FALSE.equals(remote.get("autoReleaseSequence")));
         generateLegacyGateways.setSelected(!Boolean.FALSE.equals(remote.get("generateLegacyGateways")));
         scopes.rows.clear();

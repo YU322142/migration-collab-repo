@@ -18,8 +18,7 @@ final class PublisherCloudBundle {
     record Result(
             PublisherProjectV5.Publication publication,
             Path stableManifest,
-            Path clientProperties,
-            Path legacyEndpointMap) {
+            Path clientProperties) {
     }
 
     private PublisherCloudBundle() {
@@ -33,19 +32,15 @@ final class PublisherCloudBundle {
             String stablePath,
             String legacyV4Path,
             String legacyV2Path,
-            List<String> legacyV4Urls,
-            List<String> legacyV2Urls,
             boolean legacyGateways,
             Path updaterJar) throws IOException {
         Path output = outputRoot.toAbsolutePath().normalize();
         ensureEmpty(output);
         String base = normalizeBase(baseUrl);
-        String stableRelative = validatePath(stablePath, "mods-v4.txt");
+        String stableRelative = validatePath(stablePath, "mods-v5.json");
         String v4Relative = validatePath(legacyV4Path, "mods-v4.txt");
         String v2Relative = validatePath(legacyV2Path, "mods.txt");
         if (legacyGateways) {
-            validateHistoricalUrls(legacyV4Urls, "mods-v4.txt");
-            validateHistoricalUrls(legacyV2Urls, "mods.txt");
             if (updaterJar == null || !Files.isRegularFile(updaterJar)) {
                 throw new IOException("生成旧版网关时缺少 MCSync 2.0.0 JAR");
             }
@@ -63,15 +58,13 @@ final class PublisherCloudBundle {
         String stableUrl = base + "/" + stableRelative;
         Path properties = output.resolve("client-modsync.properties");
         writeClientProperties(properties, stableUrl);
-        Path endpointMap = output.resolve("LEGACY-ENDPOINT-MAP.txt");
         if (legacyGateways) {
             ManagedClientConfig managed = ManagedClientConfig.fromPropertiesFile(properties);
             buildLegacyDirectory(output.resolve(parent(v4Relative)), updaterJar, managed, true, sequence);
             buildLegacyDirectory(output.resolve(parent(v2Relative)), updaterJar, managed, false, sequence);
-            writeEndpointMap(endpointMap, legacyV4Urls, v4Relative, legacyV2Urls, v2Relative);
         }
         writeGuide(output.resolve("REMOTE-DEPLOYMENT.md"), sequence, stableRelative, stableUrl, legacyGateways);
-        return new Result(publication, stable, properties, legacyGateways ? endpointMap : null);
+        return new Result(publication, stable, properties);
     }
 
     @SuppressWarnings("unchecked")
@@ -122,19 +115,6 @@ final class PublisherCloudBundle {
                 StandardCharsets.UTF_8);
     }
 
-    private static void writeEndpointMap(
-            Path output,
-            List<String> v4Urls,
-            String v4Path,
-            List<String> v2Urls,
-            String v2Path) throws IOException {
-        StringBuilder text = new StringBuilder("# Existing legacy URLs must remain reachable\n\n");
-        for (String url : v4Urls) text.append(url).append("\t<- ").append(v4Path).append('\n');
-        for (String url : v2Urls) text.append(url).append("\t<- ").append(v2Path).append('\n');
-        text.append("\nReplace the exact old object or configure an HTTP redirect to the generated gateway.\n");
-        Files.writeString(output, text, StandardCharsets.UTF_8);
-    }
-
     private static void writeGuide(
             Path output,
             long sequence,
@@ -146,7 +126,7 @@ final class PublisherCloudBundle {
                         + "Release sequence: " + sequence + "\n\n"
                         + "1. Upload `releases/" + sequence + "/` first.\n"
                         + (legacy
-                                ? "2. Upload `legacy/`, then replace or redirect every historical URL in LEGACY-ENDPOINT-MAP.txt.\n"
+                                ? "2. Copy the generated files under `legacy/` to the separately managed legacy download locations.\n"
                                 : "2. Legacy gateways were not generated.\n")
                         + "3. Atomically replace `" + stablePath + "` last.\n"
                         + "4. Configure clients with `manifest=" + stableUrl + "`.\n\n"
@@ -182,19 +162,6 @@ final class PublisherCloudBundle {
             throw new IllegalArgumentException("云端路径必须安全且以 /" + name + " 结尾: " + value);
         }
         return path;
-    }
-
-    private static void validateHistoricalUrls(List<String> urls, String name) {
-        if (urls == null || urls.isEmpty()) throw new IllegalArgumentException("必须填写当前旧客户端的实际 URL");
-        for (String raw : urls) {
-            URI uri = URI.create(raw);
-            boolean web = "https".equalsIgnoreCase(uri.getScheme()) || "http".equalsIgnoreCase(uri.getScheme());
-            if (!web || uri.getHost() == null
-                    || uri.getPath() == null || !uri.getPath().endsWith("/" + name)) {
-                throw new IllegalArgumentException("旧 URL 必须是以 /" + name
-                        + " 结尾的 HTTP/HTTPS 地址: " + raw);
-            }
-        }
     }
 
     private static String parent(String path) throws IOException {

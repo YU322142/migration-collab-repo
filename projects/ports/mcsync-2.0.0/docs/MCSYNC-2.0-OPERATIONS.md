@@ -14,13 +14,13 @@
 
 ## 云端与旧版入口
 
-图形发布器生成 `releases/<releaseSequence>/`、`channel/stable/mods-v4.txt`、`legacy/1.9/mods-v4.txt`、`legacy/1.6/mods.txt`、`client-modsync.properties` 与 `LEGACY-ENDPOINT-MAP.txt`。
+图形发布器生成 `releases/<releaseSequence>/`、`channel/stable/mods-v5.json`、`legacy/1.9/mods-v4.txt`、`legacy/1.6/mods.txt` 与 `client-modsync.properties`。旧版地址不需要填写进项目；发布器只导出需要部署到旧地址的升级材料。
 
 默认发布序号在点击导出时根据当前系统时间刷新，格式为 `yyyyMMddHHmmssSSS`，例如 `20260818153045123`。同一次导出生成的旧 1.9.x v4 网关也使用这个数字作为 `catalog-version`，因此新旧入口共享一个发布顺序。它是防降级排序键，不是展示版本；发布机器的日期和时间必须正确。若要重放已签核项目，可在 GUI 关闭自动刷新并保留原序号。
 
-注意：`legacy/...` 是本地交付布局，不是旧客户端会自动发现的新地址。发布者必须在 GUI 填写当前 1.9.x 与 1.6.x/1.7.x 客户端已经使用的全部旧 URL，然后将生成的网关文件覆盖到这些原 URL，或者在原 URL 配置 HTTP 重定向。历史入口允许保留已经部署的 HTTP 或 HTTPS 地址；新的 2.0 稳定根地址仍强制 HTTPS。只上传到新 `legacy/` URL 无法升级已安装的旧客户端。
+注意：`legacy/...` 是需要复制到旧版地址的交付材料，不是旧客户端会自动发现的新地址。发布器不记录旧地址，也不要求联网探测旧地址；部署者按自己的旧版地址把对应材料覆盖或发布即可。新的 2.0 稳定入口独立使用 HTTPS 的 `mods-v5.json`。
 
-稳定 2.0 入口保留 `mods-v4.txt` 文件名，但内容为 schema-v5 JSON。这是为了让 1.9.x 配置引导器允许该 URL；MCSync 2.0 会按内容识别 v5。上传顺序必须是：先上传不可变 `releases/`，再部署旧网关，最后原子切换 `channel/stable/mods-v4.txt`。
+新版稳定入口使用真实的 `channel/stable/mods-v5.json`。上传顺序为：先上传不可变 `releases/`，再上传新版 JSON；如果要支持旧版，再把 `legacy/` 下的升级材料复制到你维护的旧地址。新版客户端不会读取旧版目录。
 
 ## 客户端启动流程
 

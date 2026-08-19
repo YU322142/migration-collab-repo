@@ -33,7 +33,10 @@ final class ManagedClientConfig {
     static final String BOOTSTRAP_MOD_ID = "mcmodsync_config";
     static final String BOOTSTRAP_FILE_NAME = "MCModSync-Config.jar";
     static final String BOOTSTRAP_RESOURCE = "mcmodsync/bootstrap.properties";
-    static final String MANIFEST_FILE_NAME = "mods-v4.txt";
+    static final String LEGACY_MANIFEST_FILE_NAME = "mods-v4.txt";
+    static final String V5_MANIFEST_FILE_NAME = "mods-v5.json";
+    /** Legacy CLI output name; the 2.0 publisher uses mods-v5.json for the new channel. */
+    static final String MANIFEST_FILE_NAME = LEGACY_MANIFEST_FILE_NAME;
     private static final String CATALOG_PREFIX = "# client-config.";
     private static final int MAX_BOOTSTRAP_BYTES = 64 * 1024;
     private static final List<String> MANAGED_KEYS = List.of(
@@ -236,8 +239,10 @@ final class ManagedClientConfig {
         }
         URI manifestUri = validateHttpUri(manifest, "manifest", description);
         String path = manifestUri.getPath();
-        if (path == null || !path.endsWith("/" + MANIFEST_FILE_NAME)) {
-            throw new IllegalArgumentException(description + " 的 manifest 必须指向 " + MANIFEST_FILE_NAME);
+        if (path == null || !(path.endsWith("/" + LEGACY_MANIFEST_FILE_NAME)
+                || path.endsWith("/" + V5_MANIFEST_FILE_NAME))) {
+            throw new IllegalArgumentException(description + " 的 manifest 必须指向 "
+                    + LEGACY_MANIFEST_FILE_NAME + " 或 " + V5_MANIFEST_FILE_NAME);
         }
 
         for (String key : URL_KEYS) {

@@ -198,11 +198,9 @@ final class PublisherProjectV5 {
                   "minimumMCSyncVersion": "2.0.0",
                   "remote": {
                     "baseUrl":"https://files.example.com/mcsync",
-                    "stablePath":"channel/stable/mods-v4.txt",
+                    "stablePath":"channel/stable/mods-v5.json",
                     "legacyV4Path":"legacy/1.9/mods-v4.txt",
                     "legacyV2Path":"legacy/1.6/mods.txt",
-                    "legacyV4CurrentUrls":"https://old.example.com/client/mods-v4.txt",
-                    "legacyV2CurrentUrls":"https://old.example.com/client/mods.txt",
                     "generateLegacyGateways":true
                   },
                   "managedScopes": [

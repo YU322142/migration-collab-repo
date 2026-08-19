@@ -995,9 +995,8 @@ public final class AllTests {
             Path output = root.resolve("cloud");
             PublisherCloudBundle.Result result = PublisherCloudBundle.publish(
                     root.resolve("game"), project, output, "https://files.example.test/mcsync",
-                    "channel/stable/mods-v4.txt", "legacy/1.9/mods-v4.txt", "legacy/1.6/mods.txt",
-                    List.of("http://old-pc.example.test/client/mods-v4.txt"),
-                    List.of("https://old-mobile.example.test/client/mods.txt"), true, updater);
+                    "channel/stable/mods-v5.json", "legacy/1.9/mods-v4.txt", "legacy/1.6/mods.txt",
+                    true, updater);
             ReleaseManifestV5 stable = ReleaseManifestV5.parse(Files.readAllBytes(result.stableManifest()));
             check(stable.releaseSequence() == 2_000_001L
                             && stable.files().getFirst().download().endpoints().getFirst().uri().toASCIIString()
@@ -1011,16 +1010,15 @@ public final class AllTests {
                             && v2.startsWith(ModManifest.MAGIC_V2 + "\n") && v2DataRows == 2,
                     "1.9.x 与 1.6.x/1.7.x 网关都应只包含 MCSync 和配置引导");
             check(v4.managedClientConfig().orElseThrow().values().get("manifest")
-                            .equals("https://files.example.test/mcsync/channel/stable/mods-v4.txt"),
+                            .equals("https://files.example.test/mcsync/channel/stable/mods-v5.json"),
                     "旧版配置引导应把升级后客户端切到 2.0 稳定入口");
             check(Files.isRegularFile(output.resolve("legacy/1.6/MCModSync-Config.jar"))
                             && v2.contains("\tMCModSync-Config.jar\n"),
                     "1.6.x/1.7.x 网关必须下发已锁定的配置引导 JAR");
-            String endpointMap = Files.readString(result.legacyEndpointMap(), StandardCharsets.UTF_8);
-            check(endpointMap.contains("http://old-pc.example.test/client/mods-v4.txt")
-                            && endpointMap.contains("https://old-mobile.example.test/client/mods.txt"),
-                    "交付包必须原样保留旧客户端实际读取的 HTTP/HTTPS URL 部署映射");
-            pass("publisher cloud bundle preserves historical URLs and builds v5/v4/v2 entrypoints");
+            check(Files.isRegularFile(result.stableManifest())
+                            && result.stableManifest().getFileName().toString().equals("mods-v5.json"),
+                    "新版稳定入口必须使用 mods-v5.json，旧版网关单独输出");
+            pass("publisher cloud bundle builds v5 JSON and separate legacy v4/v2 materials");
         } finally {
             deleteTree(root);
         }

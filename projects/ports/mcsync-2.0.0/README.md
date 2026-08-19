@@ -28,7 +28,7 @@ legacy-mobile/               # 原手机端硬编码地址所在目录；内容�
 ├─ MCModSync-1.9.2.jar
 └─ MCModSync-Config.jar
 1.21.1/fabric/               # 同一版本/加载器的新电脑端和手机端共用
-├─ mods-v4.txt               # 完整正式清单
+├─ mods-v5.json              # 2.0 正式 schema-v5 清单
 ├─ MCModSync-1.9.2.jar
 ├─ MCModSync-Config.jar
 ├─ fabric-api.jar
@@ -36,7 +36,7 @@ legacy-mobile/               # 原手机端硬编码地址所在目录；内容�
 └─ recommended-mod.jar
 ```
 
-每份清单中的文件名都按该清单 URL 的目录解析。旧电脑和旧手机目录各自只需发布 `mods.txt`、当前同步器和配置引导 JAR；目标目录发布该 Minecraft/加载器组合的 `mods-v4.txt` 与其列出的全部 JAR。两个旧地址可以相同，也可以像旧版本那样分开；它们最终都由配置引导 JAR 切到同一个目标地址。`mods.txt` 是永久升级入口，不要改成 v4 或删除。1.21.11 Fabric 与 1.21.1 NeoForge 都要另建目录，不能复用这里的清单。
+每份清单中的文件名都按该清单 URL 的目录解析。旧电脑和旧手机目录只需要生成 `mods.txt`、当前同步器和配置引导 JAR；目标目录使用新版 `mods-v5.json`。旧版升级材料和新版清单相互独立，1.21.11 Fabric 与 1.21.1 NeoForge 也必须另建目录。
 
 ### 1.21.1 与 1.21.11 并行部署
 
