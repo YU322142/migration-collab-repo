@@ -75,6 +75,10 @@ $neoForgeStubRoot = Join-Path $mainClasses 'net\neoforged'
 if (Test-Path -LiteralPath $neoForgeStubRoot) {
     Remove-Item -LiteralPath $neoForgeStubRoot -Recurse -Force
 }
+$minecraftStubRoot = Join-Path $mainClasses 'net\minecraft'
+if (Test-Path -LiteralPath $minecraftStubRoot) {
+    Remove-Item -LiteralPath $minecraftStubRoot -Recurse -Force
+}
 
 Write-Output '[4/8] Building Fabric/NeoForge/executable/agent JAR...'
 & jar --create --file $jarPath --date 2000-01-01T00:00:00Z --manifest (Join-Path $projectRoot 'manifest.mf') `
@@ -83,7 +87,7 @@ Write-Output '[4/8] Building Fabric/NeoForge/executable/agent JAR...'
 if ($LASTEXITCODE -ne 0) {
     throw "jar failed with exit code $LASTEXITCODE"
 }
-$loaderApiLeak = & jar tf $jarPath | Select-String -Pattern '^net/(fabricmc|neoforged)/'
+$loaderApiLeak = & jar tf $jarPath | Select-String -Pattern '^net/(fabricmc|neoforged|minecraft)/'
 if ($loaderApiLeak) {
     throw "Refusing to ship Fabric/NeoForge Loader API classes inside MCModSync jar: $loaderApiLeak"
 }

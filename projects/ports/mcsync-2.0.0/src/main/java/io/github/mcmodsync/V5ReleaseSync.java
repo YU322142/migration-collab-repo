@@ -56,12 +56,19 @@ final class V5ReleaseSync {
             Loaded loaded,
             Consumer<String> logger,
             SyncObserver observer) throws IOException, InterruptedException {
+        V5RecommendedSelectionStore.Resolution selection = V5RecommendedSelectionStore.resolve(
+                loaded.manifest(), config.gameDirectory(), RuntimeEnvironment.detect());
+        ReleaseManifestV5 effective = selection.effectiveManifest();
+        if (selection.selectionPending()) {
+            System.setProperty("modsync.recommendedSelectionPending", "true");
+            logger.accept("MCSync 推荐 Mod 清单需要在 Minecraft 窗口内确认；本轮只处理必须项和既有选择");
+        }
         boolean changes = new ReleaseTransactionEngine(config.gameDirectory(), config.fileOperationRetries())
-                .needsApply(loaded.manifest(), loaded.sha256());
+                .needsApply(effective, loaded.sha256());
         if (changes) {
             observer.phaseChanged("检测到 v5 OTA，正在游戏窗口内完成下载与哈希校验……");
             ReleaseArtifactResolver resolver = new ReleaseArtifactResolver(config, logger, observer);
-            resolver.prefetch(downloadsNeeded(config, loaded.manifest()));
+            resolver.prefetch(downloadsNeeded(config, effective));
         }
         return new SyncProbeResult(changes
                 ? SyncProbeResult.Status.CHANGES_REQUIRED
@@ -73,12 +80,18 @@ final class V5ReleaseSync {
             Loaded loaded,
             Consumer<String> logger,
             SyncObserver observer) throws IOException, InterruptedException {
+        V5RecommendedSelectionStore.Resolution selection = V5RecommendedSelectionStore.resolve(
+                loaded.manifest(), config.gameDirectory(), RuntimeEnvironment.detect());
+        ReleaseManifestV5 effective = selection.effectiveManifest();
+        if (selection.selectionPending()) {
+            System.setProperty("modsync.recommendedSelectionPending", "true");
+        }
         observer.phaseChanged("正在暂存并校验 MCSync v5 发布事务……");
         ReleaseArtifactResolver resolver = new ReleaseArtifactResolver(config, logger, observer);
-        resolver.prefetch(downloadsNeeded(config, loaded.manifest()));
+        resolver.prefetch(downloadsNeeded(config, effective));
         ReleaseTransactionEngine.Result result = new ReleaseTransactionEngine(
                 config.gameDirectory(), config.fileOperationRetries())
-                .apply(loaded.manifest(), loaded.sha256(), resolver::readCached);
+                .apply(effective, loaded.sha256(), resolver::readCached);
         if (!result.changed()) return new SyncResult(SyncResult.Status.UNCHANGED, 0, 0, 0);
         return new SyncResult(SyncResult.Status.UPDATED, result.installed(), result.removed(), 0);
     }

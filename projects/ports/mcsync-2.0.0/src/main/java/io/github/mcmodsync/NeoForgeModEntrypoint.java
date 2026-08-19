@@ -12,7 +12,9 @@ public final class NeoForgeModEntrypoint {
     public NeoForgeModEntrypoint() {
         System.setProperty("modsync.inGameWindow", "true");
         System.setProperty("modsync.disableDialogs", "true");
-        PortablePreLaunchEntrypoint.run("NeoForge", NeoForgeModEntrypoint::locateGameDirectory);
+        Path gameDirectory = locateGameDirectory();
+        PortablePreLaunchEntrypoint.run("NeoForge", () -> gameDirectory);
+        RecommendedSelectionScreen.start(gameDirectory);
     }
 
     static Path locateGameDirectory() {

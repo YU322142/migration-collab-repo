@@ -18,6 +18,7 @@ import java.time.Instant;
 import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -41,6 +42,7 @@ public final class AllTests {
     private void run() throws Exception {
         testMcsyncBrandingKeepsLegacyTechnicalIdentity();
         testV5ReleaseManifestParsingAndValidation();
+        testV5RecommendedSelectionIsDeferredToMinecraftWindow();
         testV5PlatformDownloadSourcesAndMirrorTrustBoundary();
         testOnlyModsMayUsePlatformDownloadSources();
         testDefaultDownloadConcurrencyIs128();
@@ -119,6 +121,62 @@ public final class AllTests {
         check(BuildInfo.VERSION.equals("2.0.0"), "首个 MCSync 版本应为 2.0.0");
         check(BuildInfo.TECHNICAL_MOD_ID.equals("mcmodsync"), "必须保留旧 modId 才能从 1.9.x 原地升级");
         pass("MCSync branding preserves the legacy technical upgrade identity");
+    }
+
+    private void testV5RecommendedSelectionIsDeferredToMinecraftWindow() throws Exception {
+        Path root = Files.createTempDirectory("mcsync-v5-recommended-screen-");
+        String old = System.getProperty("modsync.forceInGameSelection");
+        System.setProperty("modsync.forceInGameSelection", "true");
+        try {
+            ReleaseManifestV5.DownloadSource hosted = new ReleaseManifestV5.DownloadSource(
+                    "publisher-hosted", "", "", null, "redistributable", List.of());
+            ReleaseManifestV5.FileEntry required = new ReleaseManifestV5.FileEntry(
+                    "mods/core.jar", "1".repeat(64), 1, "mod", true, true, Set.of("client"), hosted,
+                    "core", "Core", "1", "核心", "Core", Set.of());
+            ReleaseManifestV5.FileEntry optionalA = new ReleaseManifestV5.FileEntry(
+                    "mods/optional-a.jar", "2".repeat(64), 1, "mod", false, true, Set.of("client"), hosted,
+                    "optional_a", "Optional A", "1", "推荐甲", "Optional A", Set.of());
+            ReleaseManifestV5 first = new ReleaseManifestV5(
+                    "test", 1, "2.0.0", List.of(new ReleaseManifestV5.ManagedScope("mods", "managed")),
+                    List.of(required, optionalA), List.of());
+
+            V5RecommendedSelectionStore.Resolution initial = V5RecommendedSelectionStore.resolve(
+                    first, root, RuntimeEnvironment.detect());
+            check(initial.selectionPending(), "首次 v5 推荐清单必须等待 Minecraft 窗口确认");
+            check(initial.effectiveManifest().files().equals(List.of(required)),
+                    "确认前只能同步必须 Mod，不能提前安装推荐 Mod");
+            V5RecommendedSelectionStore.PendingSelection pending = V5RecommendedSelectionStore.readPending(root);
+            check(pending != null && pending.mods().size() == 1 && pending.mods().getFirst().selected(),
+                    "首次推荐项应默认全选");
+            V5RecommendedSelectionStore.confirm(root, pending, Set.of());
+            V5RecommendedSelectionStore.Resolution declined = V5RecommendedSelectionStore.resolve(
+                    first, root, RuntimeEnvironment.detect());
+            check(!declined.selectionPending() && declined.effectiveManifest().files().equals(List.of(required)),
+                    "同一推荐清单不应重复询问，并应保留取消选择");
+
+            ReleaseManifestV5.FileEntry optionalB = new ReleaseManifestV5.FileEntry(
+                    "mods/optional-b.jar", "3".repeat(64), 1, "mod", false, true, Set.of("client"), hosted,
+                    "optional_b", "Optional B", "1", "推荐乙", "Optional B", Set.of());
+            ReleaseManifestV5 second = new ReleaseManifestV5(
+                    "test", 2, "2.0.0", first.managedScopes(),
+                    List.of(required, optionalA, optionalB), List.of());
+            V5RecommendedSelectionStore.Resolution updated = V5RecommendedSelectionStore.resolve(
+                    second, root, RuntimeEnvironment.detect());
+            check(updated.selectionPending(), "新增推荐 Mod 必须重新显示游戏内选择页");
+            V5RecommendedSelectionStore.PendingSelection updatedPending =
+                    V5RecommendedSelectionStore.readPending(root);
+            Map<String, Boolean> defaults = new LinkedHashMap<>();
+            for (V5RecommendedSelectionStore.PendingMod mod : updatedPending.mods()) {
+                defaults.put(mod.key(), mod.selected());
+            }
+            check(Boolean.FALSE.equals(defaults.get("optional_a"))
+                            && Boolean.TRUE.equals(defaults.get("optional_b")),
+                    "旧取消项必须保持取消，只有新增推荐项默认勾选");
+            pass("v5 recommendations wait for the Minecraft window and preserve prior choices");
+        } finally {
+            if (old == null) System.clearProperty("modsync.forceInGameSelection");
+            else System.setProperty("modsync.forceInGameSelection", old);
+        }
     }
 
     private void testPublisherResolvesCurseForgeWithoutLeakingCredentials() throws Exception {
