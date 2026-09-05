@@ -26,6 +26,33 @@
 | Tom's Storage 性能/平台适配 | `projects/ports/toms-storage-neoforge-1.21.1-perf-port/` | GitHub `YU322142/Toms-Storage`，NeoForge 公开版本 `neoforge-1.21.1-2.3.0-perf5.2`，受上游条款约束 |
 | Chest Colorizer | `outputs/projects/chest-colorizer-neoforge-1.21.1/` | 已新建公开仓库并发布 `v1.6.1-equivalence.3` |
 
+### 本次新增的独立公开仓库
+
+下列项目均已从干净源码副本公开；构建缓存、JAR/ZIP 制品、世界数据和凭据未进入仓库。
+
+| 项目 | GitHub 仓库 | 发布边界 |
+| --- | --- | --- |
+| CC:Tweaked Startup/Shutdown Guard | `YU322142/CCTweaked-Startup-Shutdown-Guard` | 独立 NeoForge 源码，MIT |
+| Create Carriage Orientation Guard | `YU322142/Create-Carriage-Orientation-Guard` | 独立兼容源码，MIT；不含 Create JAR |
+| Create Chute Unload Guard | `YU322142/Create-Chute-Unload-Guard` | 独立兼容源码，MIT；不含 Create JAR |
+| Create Dynamic Blocking | `YU322142/Create-Dynamic-Blocking` | 独立兼容源码，MIT；不含 Create JAR |
+| Create SavedData Probe | `YU322142/Create-SavedData-Probe` | 诊断源码，MIT；不含世界数据 |
+| Deferred Content Protection | `YU322142/Deferred-Content-Protection` | 独立 NeoForge 源码，MIT |
+| Hardcore Revival Death Message Fix | `YU322142/Hardcore-Revival-Death-Message-Fix` | 独立兼容源码，MIT；不含上游 JAR |
+| Heightmap 384→544 Compat | `YU322142/Heightmap-384-to-544-Compat` | 独立兼容源码，MIT；不含区块/世界 |
+| Kaleidoscope Cookery Scarecrow Compat | `YU322142/Kaleidoscope-Cookery-Scarecrow-Compat` | 独立兼容源码，MIT；不含上游 JAR |
+| Kaleidoscope Nether Backport | `YU322142/Kaleidoscope-Nether-Backport` | 自有等价源码/数据，MIT；遵守上游条款 |
+| Mishang UC Pale Oak Equivalence | `YU322142/MishangUC-Pale-Oak-Equivalence` | 自有兼容源码，LGPL-3.0-or-later；不含上游 JAR |
+| POI Migration Diagnostic | `YU322142/POI-Migration-Diagnostic` | 诊断源码，MIT；不含 POI/世界快照 |
+| Potted Farms 1.21.1 Equivalence | `YU322142/Potted-Farms-1.21.1-Equivalence` | 自有数据包快照；不含存档或第三方制品 |
+| Recipe Set Diagnostic | `YU322142/Recipe-Set-Diagnostic` | 诊断源码，MIT；不修改存档 |
+| Migration Resource Error Overlay | `YU322142/Migration-Resource-Error-Overlay` | 自有资源修复源码/数据；不含上游 JAR |
+| Waypoint and Fire Rule Equivalence | `YU322142/Waypoint-Fire-Equivalence` | 独立兼容源码，MIT；不含服务端数据 |
+| TLM Patchouli Spawn Box Balance | `YU322142/TLM-Patchouli-Spawn-Box-Balance` | 仅公开 overlay、构建/校验脚本；不含 TLM JAR |
+| WorldEdit Direction Property Fix | `YU322142/WorldEdit-Direction-Property-Fix` | 仅公开补丁/构建/校验脚本；不含 WorldEdit JAR |
+| XiyusLogin Auto-Session OTA | `YU322142/XiyusLogin-Auto-Session-OTA` | 仅公开 OTA 脚本/文档；不含认证库、凭据或服务端存档 |
+| Yuushya 2.3.0 Patchouli Safety | `YU322142/Yuushya-2.3.0-Patchouli-Safety` | 仅公开 overlay/构建/校验脚本；不含 Yuushya JAR |
+
 ## 完整适配工程目录
 
 下列目录都属于本次迁移期间的源码、兼容层或验证工程；不是运行中的服务端副本。
@@ -59,6 +86,7 @@
 - KubeJS、数据包、配置模板、构建脚本、单元测试和不含真实身份的审计样例。
 - 适配说明、模块索引、变更日志、合规的第三方许可证文本。
 - Chest Colorizer、MineAstr、MCSync 等已经单独公开的仓库和 release。
+- 上表列出的独立兼容模组、诊断工程和补丁仓库；没有独立 release 的项目只发布源码，制品仍按上游许可在本地构建。
 
 ### 不直接公开
 

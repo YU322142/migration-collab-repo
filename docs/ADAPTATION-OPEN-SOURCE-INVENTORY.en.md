@@ -34,6 +34,34 @@ is client-only and does not belong on the server.
 | Tom's Storage port | `projects/ports/toms-storage-neoforge-1.21.1-perf-port/` | Public at `YU322142/Toms-Storage`, NeoForge version `neoforge-1.21.1-2.3.0-perf5.2`, subject to upstream terms |
 | Chest Colorizer | `outputs/projects/chest-colorizer-neoforge-1.21.1/` | New public repository and release published |
 
+### Newly published standalone repositories
+
+All projects below were copied from clean source snapshots. Build caches,
+JAR/ZIP artifacts, world data, and credentials were excluded.
+
+| Project | GitHub repository | Publication boundary |
+| --- | --- | --- |
+| CC:Tweaked Startup/Shutdown Guard | `YU322142/CCTweaked-Startup-Shutdown-Guard` | Standalone NeoForge source, MIT |
+| Create Carriage Orientation Guard | `YU322142/Create-Carriage-Orientation-Guard` | Standalone compatibility source, MIT; no Create JAR |
+| Create Chute Unload Guard | `YU322142/Create-Chute-Unload-Guard` | Standalone compatibility source, MIT; no Create JAR |
+| Create Dynamic Blocking | `YU322142/Create-Dynamic-Blocking` | Standalone compatibility source, MIT; no Create JAR |
+| Create SavedData Probe | `YU322142/Create-SavedData-Probe` | Diagnostic source, MIT; no world data |
+| Deferred Content Protection | `YU322142/Deferred-Content-Protection` | Standalone NeoForge source, MIT |
+| Hardcore Revival Death Message Fix | `YU322142/Hardcore-Revival-Death-Message-Fix` | Standalone compatibility source, MIT; no upstream JAR |
+| Heightmap 384→544 Compat | `YU322142/Heightmap-384-to-544-Compat` | Standalone compatibility source, MIT; no chunks/world |
+| Kaleidoscope Cookery Scarecrow Compat | `YU322142/Kaleidoscope-Cookery-Scarecrow-Compat` | Standalone compatibility source, MIT; no upstream JAR |
+| Kaleidoscope Nether Backport | `YU322142/Kaleidoscope-Nether-Backport` | Authored equivalence source/data, MIT; obey upstream terms |
+| Mishang UC Pale Oak Equivalence | `YU322142/MishangUC-Pale-Oak-Equivalence` | Authored compatibility source, LGPL-3.0-or-later; no upstream JAR |
+| POI Migration Diagnostic | `YU322142/POI-Migration-Diagnostic` | Diagnostic source, MIT; no POI/world snapshot |
+| Potted Farms 1.21.1 Equivalence | `YU322142/Potted-Farms-1.21.1-Equivalence` | Authored datapack snapshot; no save or third-party artifact |
+| Recipe Set Diagnostic | `YU322142/Recipe-Set-Diagnostic` | Diagnostic source, MIT; no save mutation |
+| Migration Resource Error Overlay | `YU322142/Migration-Resource-Error-Overlay` | Authored resource fix source/data; no upstream JAR |
+| Waypoint and Fire Rule Equivalence | `YU322142/Waypoint-Fire-Equivalence` | Standalone compatibility source, MIT; no server data |
+| TLM Patchouli Spawn Box Balance | `YU322142/TLM-Patchouli-Spawn-Box-Balance` | Overlay/build/verification scripts only; no TLM JAR |
+| WorldEdit Direction Property Fix | `YU322142/WorldEdit-Direction-Property-Fix` | Patch/build/verification scripts only; no WorldEdit JAR |
+| XiyusLogin Auto-Session OTA | `YU322142/XiyusLogin-Auto-Session-OTA` | OTA scripts/docs only; no auth DB, credentials, or save |
+| Yuushya 2.3.0 Patchouli Safety | `YU322142/Yuushya-2.3.0-Patchouli-Safety` | Overlay/build/verification scripts only; no Yuushya JAR |
+
 ## Complete adaptation project roots
 
 These directories are source, compatibility layers, or verification projects;
@@ -97,6 +125,9 @@ they are not live server copies.
 - Architecture notes, module indexes, changelogs, and compatible license text.
 - The already published MineAstr, MCSync, ImmersivePaintings, Tom's Storage,
   and Chest Colorizer repositories/releases.
+- The standalone compatibility mods, diagnostics, and patch repositories listed
+  above; projects without a binary release publish source only and are built
+  locally under the applicable upstream terms.
 
 ### Do not publish directly
 
