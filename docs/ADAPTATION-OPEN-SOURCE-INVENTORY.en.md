@@ -27,11 +27,11 @@ is client-only and does not belong on the server.
 
 | Project | Local project files | Public status |
 | --- | --- | --- |
-| MCSync | `projects/ports/mcsync-2.0.0/`; full working tree under the publication workspace | Public at `YU322142/MCSync` |
-| MineAstr NeoForge | Publication workspace `MineAstr` | Public at `YU322142/MineAstr` |
-| MineAstr AstrBot plugin | Publication workspace `MineAstr-astrbot-plugin` | Public `astrbot-plugin` branch in `YU322142/MineAstr` |
-| Immersive Paintings × MineAstr | `projects/patches/immersive-paintings-mineastr-compat/` | Public at `YU322142/ImmersivePaintings` |
-| Tom's Storage port | `projects/ports/toms-storage-neoforge-1.21.1-perf-port/` | Public at `YU322142/Toms-Storage`, subject to upstream terms |
+| MCSync | `projects/ports/mcsync-2.0.0/`; full working tree under the publication workspace | Public at `YU322142/MCSync`, current public version `v2.0.3` |
+| MineAstr NeoForge | Publication workspace `MineAstr` | Public at `YU322142/MineAstr`, current public version `v0.6.30` |
+| MineAstr AstrBot plugin | Publication workspace `MineAstr-astrbot-plugin` | Public `astrbot-plugin` branch in `YU322142/MineAstr`, current public version `astrbot-v0.6.30` |
+| Immersive Paintings × MineAstr | `projects/patches/immersive-paintings-mineastr-compat/` | Public at `YU322142/ImmersivePaintings`, current public version `0.7.15+1.21.1` |
+| Tom's Storage port | `projects/ports/toms-storage-neoforge-1.21.1-perf-port/` | Public at `YU322142/Toms-Storage`, NeoForge version `neoforge-1.21.1-2.3.0-perf5.2`, subject to upstream terms |
 | Chest Colorizer | `outputs/projects/chest-colorizer-neoforge-1.21.1/` | New public repository and release published |
 
 ## Complete adaptation project roots

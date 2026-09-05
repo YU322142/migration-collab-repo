@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "repository-manifest.json"
-SKIP_DIRS = {".git", "__pycache__", ".gradle", "build", "run", "logs", "tmp"}
+SKIP_DIRS = {".git", "__pycache__", ".gradle", "build", "out", "run", "logs", "tmp"}
 SKIP_SUFFIXES = {".pyc", ".pyo", ".class", ".log"}
 
 def sha256(path: Path) -> str:
@@ -27,6 +27,12 @@ for path in sorted(ROOT.rglob("*"), key=lambda item: item.as_posix().lower()):
     # Check the filename too so copied worktree pointer files named `.git`
     # can never become part of the collaboration snapshot.
     if any(part.lower() in SKIP_DIRS for part in rel.parts):
+        continue
+    # Compatibility copies under projects/outputs are generated from the
+    # canonical MCModSync source and are deliberately excluded from the public
+    # source snapshot.  Keep the alias on disk for local tooling, but never
+    # let it enter the manifest or the allowlisted staging set.
+    if rel.as_posix().lower().startswith("projects/outputs/"):
         continue
     if path.suffix.lower() in SKIP_SUFFIXES:
         continue

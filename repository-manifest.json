@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-09-05T15:18:02.535074+00:00",
+  "generated_at": "2026-09-05T15:58:23.316785+00:00",
   "self_excluded": "repository-manifest.json",
   "files": [
     {
@@ -115,13 +115,13 @@
     },
     {
       "path": "docs/ADAPTATION-OPEN-SOURCE-INVENTORY.en.md",
-      "bytes": 6305,
-      "sha256": "16D91A00DD07E273BC2B7610E736E27A19F5CF7965779378246802F344487400"
+      "bytes": 6504,
+      "sha256": "2F8D25E8AA189F61C2A3DB2BB5EA8EF6B6EEAA0426F8E698235409F705B5D7E2"
     },
     {
       "path": "docs/ADAPTATION-OPEN-SOURCE-INVENTORY.zh-CN.md",
-      "bytes": 6252,
-      "sha256": "D586EDF9D283B4D02A5C446FDCDD4B44B77A0E343162275D10BD200083449804"
+      "bytes": 6393,
+      "sha256": "383377F85454C61BBC084E4D37ABAE8420FED0925956C70814F7339EC2261E4C"
     },
     {
       "path": "docs/ARCHITECTURE.md",
@@ -167,6 +167,16 @@
       "path": "docs/MODULE-INTERNAL-REFACTOR-MAP.md",
       "bytes": 9505,
       "sha256": "61AF9E92599E14B77EE2A1437B166A03CA3C69340DA84367C09D83D3C41E6634"
+    },
+    {
+      "path": "docs/PROJECT-BUILD-GUIDE.en.md",
+      "bytes": 12511,
+      "sha256": "247C2928C36CE5F489E964B4A0CA65635583960AB62CBBEA5259F6C0734236E6"
+    },
+    {
+      "path": "docs/PROJECT-BUILD-GUIDE.zh-CN.md",
+      "bytes": 14445,
+      "sha256": "A0F0387713E3B01C4FF1F0E12E6AD7D7C53E229171E4BA4F6C525360D3153351"
     },
     {
       "path": "docs/REPOSITORY-OPERATIONS.md",
@@ -27037,16 +27047,6 @@
       "path": "pack/worldgen-height-544-overlay/README.md",
       "bytes": 2116,
       "sha256": "7E8FB3745A2117A73E0F4BE3F265F44981B2E6F873F6BDD41142A1172B3B091E"
-    },
-    {
-      "path": "projects/outputs/MCModSync-README-zh-CN.md",
-      "bytes": 23134,
-      "sha256": "E24536613E7B23811822D7BB94D53A40825405AA7EFFA3B066876A16FB85C292"
-    },
-    {
-      "path": "projects/outputs/modsync.properties.example",
-      "bytes": 1605,
-      "sha256": "92DFAC3F535B1FEB60478F977E1C44EFC5D91F3E8A47D3F226066160DB58C8CE"
     },
     {
       "path": "projects/patches/immersive-paintings-mineastr-compat/ARTIFACT-REFERENCE.md",
@@ -72974,16 +72974,6 @@
       "sha256": "92DFAC3F535B1FEB60478F977E1C44EFC5D91F3E8A47D3F226066160DB58C8CE"
     },
     {
-      "path": "projects/ports/mcsync-2.0.0/out/MCSync-README-zh-CN.md",
-      "bytes": 24599,
-      "sha256": "D95B13858D755001E809C24DE51E8DBBD40C1DD1D4A258A4645F45AA0826B9F7"
-    },
-    {
-      "path": "projects/ports/mcsync-2.0.0/out/modsync.properties.example",
-      "bytes": 1605,
-      "sha256": "92DFAC3F535B1FEB60478F977E1C44EFC5D91F3E8A47D3F226066160DB58C8CE"
-    },
-    {
       "path": "projects/ports/mcsync-2.0.0/README.md",
       "bytes": 24599,
       "sha256": "D95B13858D755001E809C24DE51E8DBBD40C1DD1D4A258A4645F45AA0826B9F7"
@@ -84920,8 +84910,8 @@
     },
     {
       "path": "projects/ports/potted-farms-1.21.1-equivalence-full/potted-farms-final-audit-20260808.md",
-      "bytes": 8105,
-      "sha256": "C7B4030C9B1321BBBF683693972CD2B30EDA9C569E82D8112CC95D8DA44ACCAF"
+      "bytes": 8101,
+      "sha256": "060C239028402C044CD1E13D6D351E9DB24E84753806C55A833CD8A4122D7A6A"
     },
     {
       "path": "projects/ports/potted-farms-1.21.1-equivalence-full/source-world-potted-farms-audit-20260808.json",
@@ -121885,8 +121875,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2409,
-      "sha256": "34A6BCA0C9EC9F08F7A81269DDA1D0DC561BC3C6B940EAC8DABFD270B09C95D3"
+      "bytes": 2547,
+      "sha256": "4BBD3DEE6D90BDD84DF3A15B8E0394BF99AEB9A5D3CD7AA7053A4CEAE8A3E63D"
     },
     {
       "path": "reports/current-20260815/ALLOWLIST-MANIFEST.json",
@@ -121900,8 +121890,8 @@
     },
     {
       "path": "reports/current-20260815/MASTER-TERRAIN-BIOME-OTA-RUNBOOK-20260815.md",
-      "bytes": 19293,
-      "sha256": "E7081E2C057A9A6168137AF5FF0B775A171B1569CA322F9E213E8E40D155C6D5"
+      "bytes": 19289,
+      "sha256": "07951E7A0514AC4268DFD99007B1A25ECAD244508CBFA254F5F3F4B3AD1C81AD"
     },
     {
       "path": "reports/current-20260815/mechanomania-latest-c-ota-candidate-manifest-20260815.json",
@@ -125305,8 +125295,8 @@
     },
     {
       "path": "tools/repository/refresh_repository_manifest.py",
-      "bytes": 2337,
-      "sha256": "D2DB056B8C77C8BF2C16C9CE4E6127354225B8C756FCB1F2D4A0A790F6839341"
+      "bytes": 2716,
+      "sha256": "A355986C88FA68F3F652E705A86D7856564D0300B9A86B2C421FF575631DBBB9"
     },
     {
       "path": "tools/repository/sanitize_snapshot.py",

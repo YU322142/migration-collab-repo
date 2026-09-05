@@ -19,11 +19,11 @@
 
 | 项目 | 本地项目文件 | 公开状态 |
 | --- | --- | --- |
-| MCSync | `projects/ports/mcsync-2.0.0/`；完整历史在发布工作区 `MCSync` | GitHub `YU322142/MCSync`，当前发布线为 2.0.x |
-| MineAstr NeoForge | 发布工作区 `MineAstr` | GitHub `YU322142/MineAstr`，NeoForge 1.21.1 分支 |
-| MineAstr AstrBot 插件 | 发布工作区 `MineAstr-astrbot-plugin` | GitHub `YU322142/MineAstr` 的 `astrbot-plugin` 分支 |
-| Immersive Paintings × MineAstr | `projects/patches/immersive-paintings-mineastr-compat/` | GitHub `YU322142/ImmersivePaintings` |
-| Tom's Storage 性能/平台适配 | `projects/ports/toms-storage-neoforge-1.21.1-perf-port/` | GitHub `YU322142/Toms-Storage`，受上游条款约束 |
+| MCSync | `projects/ports/mcsync-2.0.0/`；完整历史在发布工作区 `MCSync` | GitHub `YU322142/MCSync`，当前公开版本 `v2.0.3` |
+| MineAstr NeoForge | 发布工作区 `MineAstr` | GitHub `YU322142/MineAstr`，当前公开版本 `v0.6.30` |
+| MineAstr AstrBot 插件 | 发布工作区 `MineAstr-astrbot-plugin` | GitHub `YU322142/MineAstr` 的 `astrbot-plugin` 分支，当前公开版本 `astrbot-v0.6.30` |
+| Immersive Paintings × MineAstr | `projects/patches/immersive-paintings-mineastr-compat/` | GitHub `YU322142/ImmersivePaintings`，当前公开版本 `0.7.15+1.21.1` |
+| Tom's Storage 性能/平台适配 | `projects/ports/toms-storage-neoforge-1.21.1-perf-port/` | GitHub `YU322142/Toms-Storage`，NeoForge 公开版本 `neoforge-1.21.1-2.3.0-perf5.2`，受上游条款约束 |
 | Chest Colorizer | `outputs/projects/chest-colorizer-neoforge-1.21.1/` | 已新建公开仓库并发布 `v1.6.1-equivalence.3` |
 
 ## 完整适配工程目录

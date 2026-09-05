@@ -30,6 +30,8 @@
 8. docs/REPOSITORY-OPERATIONS.md
 9. docs/ARTIFACT-POLICY.md
 10. docs/KNOWN-ISSUES.md
+11. docs/PROJECT-BUILD-GUIDE.zh-CN.md（逐项目独立编译入口）
+12. docs/PROJECT-BUILD-GUIDE.en.md（English build entry points）
 
 ## 目录
 
