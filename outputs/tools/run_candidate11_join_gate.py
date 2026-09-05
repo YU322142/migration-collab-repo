@@ -36,7 +36,7 @@ ROOT = Path(__file__).resolve().parents[2]
 TOOLS = ROOT / "outputs" / "tools"
 OUTPUTS = ROOT / "outputs"
 WORKSPACE_CLIENT_ROOT = OUTPUTS / "tmp"
-FORBIDDEN_SOURCE = Path(r"D:\Trans\20260807")
+FORBIDDEN_SOURCE = Path(r"<TRANS_ROOT>\20260807")
 DEFAULT_JAVA = Path(r"C:\Program Files\Java\jdk-21.0.10\bin\java.exe")
 DEFAULT_POWERSHELL = Path(
     r"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
@@ -46,7 +46,7 @@ DEFAULT_CLIENT_LAUNCHER = TOOLS / "launch_neoforge_client_isolated.ps1"
 SYNTHETIC_USERNAME = "Candidate11Gate"
 SYNTHETIC_UUID = "00000000-0000-0000-0000-000000001101"
 CANDIDATE11_RELEASE_ROOT = Path(
-    r"D:\Trans\migration-audit-work\final-mod-bundles-candidate11-20260811"
+    r"<AUDIT_ROOT>\final-mod-bundles-candidate11-20260811"
 )
 CANDIDATE11_READY = CANDIDATE11_RELEASE_ROOT / "READY.json"
 CANDIDATE11_RELEASE_LOCK = CANDIDATE11_RELEASE_ROOT / "release-lock.json"
@@ -89,7 +89,7 @@ CANDIDATE11_CLIENT_ROOT = OUTPUTS / "tmp" / "client-gate-candidate11" / ".minecr
 # Bind this exact path so the gate can use the verified 9GB target without
 # renaming or copying it merely to satisfy a substring check.
 PIPELINE_PREPARED_TARGET = Path(
-    r"D:\Trans\migration-audit-work\manual-test-candidate8n-20260811"
+    r"<AUDIT_ROOT>\manual-test-candidate8n-20260811"
 )
 CANDIDATE11_CLIENT_PREPARE_REPORT = OUTPUTS / "candidate11-client-root-prepare-20260811.json"
 CC_GUARD_FILE = "cctweaked-startup-shutdown-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar"
@@ -101,7 +101,7 @@ CC_COMPUTER_POSITION = (1403, 67, -5088)
 CC_COMPUTER_BLOCK_ENTITY_ID = "computercraft:computer_normal"
 ATTEMPT_MARKER_NAME = ".candidate11-join-gate-attempt.json"
 REQUIRED_LOCAL_RESOURCE_PACK_SOURCE = Path(
-    "D:/D/Tools/\u52a8\u9759\u4ea4\u6620-1.4.2-PCL2/.minecraft/versions/"
+    "<INSTANCE_ROOT>/\u52a8\u9759\u4ea4\u6620-1.4.2-PCL2/.minecraft/versions/"
     "\u52a8\u9759\u4ea4\u6620\u5ba2\u6237\u7aef/resourcepacks/"
     "\u4e16\u754c\u6307\u5b9a\u8d44\u6e90\u5305\u55b5.zip"
 )

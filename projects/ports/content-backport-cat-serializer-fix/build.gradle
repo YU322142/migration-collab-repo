@@ -33,11 +33,11 @@ tasks.withType(JavaCompile).configureEach {
 tasks.withType(Test).configureEach {
     useJUnitPlatform()
     systemProperty 'backport.inputJar', providers.gradleProperty('inputJar')
-        .orElse('D:/Trans/migration-audit-work/mod-candidates/backport-1.5.jar').get()
+        .orElse('<AUDIT_ROOT>/mod-candidates/backport-1.5.jar').get()
 }
 
 def inputJar = providers.gradleProperty('inputJar')
-    .orElse('D:/Trans/migration-audit-work/mod-candidates/backport-1.5.jar')
+    .orElse('<AUDIT_ROOT>/mod-candidates/backport-1.5.jar')
 def fixedJar = layout.buildDirectory.file('libs/backport-1.5-cat-serializer-fix.1.jar')
 
 tasks.register('patchBackportJar', JavaExec) {

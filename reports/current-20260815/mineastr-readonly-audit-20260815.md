@@ -8,10 +8,10 @@ At inspection time an existing Prism `javaw` client process was present (PID 239
 
 The Attempt13 server loads MineAstr 0.6.26 but disables the bridge before it attempts a WebSocket connection:
 
-- Active server config: `D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt13-20260814\config\mineastr-common.toml`
+- Active server config: `<AUDIT_ROOT>\mechanomania-matched-runtime-attempt13-20260814\config\mineastr-common.toml`
 - `enabled = false` (the active NeoForge TOML)
 - Startup evidence: `logs\latest.log:1520` and `logs\debug.log:25135` at `2026-08-14 22:30:40.507`: the MineAstr logger emits “disabled by configuration” (the Chinese source text is rendered garbled by the legacy console encoding).
-- Source behavior: `MineAstrBridge.start()` checks `MineAstrConfig.ENABLED` and returns before `connectNow()` (`D:\Trans\migration-audit-work\mineastr-validation\neoforge-1.21.1-current\src\main\java\com\mineastr\MineAstrBridge.java:107-119`). `connectNow()` also refuses when disabled (`:764-767`).
+- Source behavior: `MineAstrBridge.start()` checks `MineAstrConfig.ENABLED` and returns before `connectNow()` (`<AUDIT_ROOT>\mineastr-validation\neoforge-1.21.1-current\src\main\java\com\mineastr\MineAstrBridge.java:107-119`). `connectNow()` also refuses when disabled (`:764-767`).
 
 Therefore the first failure is configuration-gated startup, not a DNS/TCP/WebSocket failure. No MineAstr connection error is expected while `enabled=false`.
 

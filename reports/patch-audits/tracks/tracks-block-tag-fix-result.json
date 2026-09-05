@@ -2,12 +2,12 @@
   "schema": 1,
   "status": "PASS_REPRODUCIBLE_BUILD",
   "source": {
-    "path": "D:\\Trans\\migration-audit-work\\attempt6-data-resource-fixes-20260814\\jars\\tracks-neoforge-1.21.1-1.0.1.jar",
+    "path": "<AUDIT_ROOT>\\attempt6-data-resource-fixes-20260814\\jars\\tracks-neoforge-1.21.1-1.0.1.jar",
     "bytes": 165882,
     "sha256": "B5022C73AE4A36E8798D1E57D8128EB42DA2964C6E38C722D2AD7CCD2FF443E5"
   },
   "artifact": {
-    "path": "D:\\Trans\\migration-audit-work\\tracks-tag-fix-artifacts-20260814\\tracks-neoforge-1.21.1-1.0.1-block-tag-fix.1.jar",
+    "path": "<AUDIT_ROOT>\\tracks-tag-fix-artifacts-20260814\\tracks-neoforge-1.21.1-1.0.1-block-tag-fix.1.jar",
     "bytes": 165818,
     "sha256": "3119FA84955907FD734EF77F2296EC2E546F4442BC3AE13B04046C5D71F61CCF"
   },

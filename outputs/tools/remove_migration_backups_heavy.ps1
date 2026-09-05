@@ -6,8 +6,8 @@ $ProgressPreference = 'SilentlyContinue'
 
 $TargetPath = 'D:\Codex\.migration-backups-heavy'
 $ProtectedPath = 'D:\Codex\.migration'
-$StatusPath = 'D:\Trans\migration-backups-heavy-cleanup-20260813-status.json'
-$LogPath = 'D:\Trans\migration-backups-heavy-cleanup-20260813.log'
+$StatusPath = '<TRANS_ROOT>\migration-backups-heavy-cleanup-20260813-status.json'
+$LogPath = '<TRANS_ROOT>\migration-backups-heavy-cleanup-20260813.log'
 $ExpectedBytes = [int64]29112078243
 $ExpectedFiles = 21450
 $ExpectedTopDirectory = '20260807-150332'

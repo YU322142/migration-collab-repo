@@ -11,7 +11,7 @@
     "same_dimension_tectonic_switch": "REJECTED",
     "reason": "The complete old-world frontier lacks blending_data and the generator heights differ by 160 blocks."
   },
-  "authoritative_world": "D:\\Trans\\migration-handoff-20260812\\02-latest\\converted-staging\\world",
+  "authoritative_world": "<HANDOFF_ROOT>\\02-latest\\converted-staging\\world",
   "evidence": {
     "existing_terrain_chunks": 927157,
     "terrain_region_files": 1280,
@@ -87,19 +87,19 @@
       "sha256": "187BEB1CEAC560A9A44B1277C62B56FD5BBEEA73A8ED48C26E5936E06F0D467C"
     },
     "vanilla_client_jar": {
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\libraries\\com\\mojang\\minecraft\\1.21.1\\minecraft-1.21.1-client.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\libraries\\com\\mojang\\minecraft\\1.21.1\\minecraft-1.21.1-client.jar",
       "sha256": "499F6897D1837516680F3114072D8106E11C9ADCD933FE5CF051B551089B0C99"
     },
     "mechanomania_dimension": {
-      "path": "D:\\Trans\\migration-audit-work\\integration-pack-audit-20260813\\overrides\\kubejs\\data\\minecraft\\dimension\\overworld.json",
+      "path": "<AUDIT_ROOT>\\integration-pack-audit-20260813\\overrides\\kubejs\\data\\minecraft\\dimension\\overworld.json",
       "sha256": "E7C7748FE2D626D0E6073B518EC9848A0B2128A1EE807BA96A989DD1E6D1FC9C"
     },
     "mechanomania_dimension_type": {
-      "path": "D:\\Trans\\migration-audit-work\\integration-pack-audit-20260813\\overrides\\kubejs\\data\\minecraft\\dimension_type\\overworld.json",
+      "path": "<AUDIT_ROOT>\\integration-pack-audit-20260813\\overrides\\kubejs\\data\\minecraft\\dimension_type\\overworld.json",
       "sha256": "F037D47507D099F2BC74D1D6093E3D580EE8E62312AD15F41B46DF4EA801A817"
     },
     "mechanomania_noise_settings": {
-      "path": "D:\\Trans\\migration-audit-work\\integration-pack-audit-20260813\\overrides\\kubejs\\data\\minecraft\\worldgen\\noise_settings\\overworld.json",
+      "path": "<AUDIT_ROOT>\\integration-pack-audit-20260813\\overrides\\kubejs\\data\\minecraft\\worldgen\\noise_settings\\overworld.json",
       "sha256": "5EAADC06F3BF2C35C85D753A2D1632ACE4A2348180F0BD02C973D3574E33AB85"
     }
   },

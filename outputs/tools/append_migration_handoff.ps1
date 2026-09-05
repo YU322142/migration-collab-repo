@@ -1,5 +1,5 @@
 param(
-    [string]$Destination = 'D:\Trans\migration-handoff-20260812.building'
+    [string]$Destination = '<HANDOFF_ROOT>.building'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -80,7 +80,7 @@ try {
         'KaleidoscopeCookery-1.21.1-neoforge'
     )
     foreach ($name in $dSourceNames) {
-        Copy-Tree (Join-Path 'D:\Trans\migration-audit-work' $name) (Join-Path $Destination "03-tools-and-source\d-projects\$name") @('/XD', 'build', '.gradle', '.git', 'out', 'bin', 'classes', 'reports', 'tmp')
+        Copy-Tree (Join-Path '<AUDIT_ROOT>' $name) (Join-Path $Destination "03-tools-and-source\d-projects\$name") @('/XD', 'build', '.gradle', '.git', 'out', 'bin', 'classes', 'reports', 'tmp')
     }
 
     Write-Status 'copy-reports' 'RUNNING'
@@ -90,22 +90,22 @@ try {
         Where-Object { $_.Extension -in @('.json','.md','.txt','.sha256','.properties','.dat') } |
         ForEach-Object { Copy-Item -LiteralPath $_.FullName -Destination (Join-Path $reportTarget $_.Name) -Force }
     $explicit = @(
-        'D:\Trans\migration-audit-work\handoff-immersive-paintings-manifest-20260812.json',
-        'D:\Trans\migration-audit-work\tmp-handoff-create-tracks-audit-20260812.json',
-        'D:\Trans\migration-audit-work\tmp-handoff-create-tracks-fixed-20260812.dat',
-        'D:\Trans\migration-audit-work\handoff-create-carriage-orientation-guard-20260812\build1-create-carriage-orientation-guard.jar',
-        'D:\Trans\migration-audit-work\carriage-guard-build-20260812.log'
+        '<AUDIT_ROOT>\handoff-immersive-paintings-manifest-20260812.json',
+        '<AUDIT_ROOT>\tmp-handoff-create-tracks-audit-20260812.json',
+        '<AUDIT_ROOT>\tmp-handoff-create-tracks-fixed-20260812.dat',
+        '<AUDIT_ROOT>\handoff-create-carriage-orientation-guard-20260812\build1-create-carriage-orientation-guard.jar',
+        '<AUDIT_ROOT>\carriage-guard-build-20260812.log'
     )
     foreach ($file in $explicit) { if (Test-Path -LiteralPath $file -PathType Leaf) { Copy-FileSafe $file (Join-Path $Destination "04-reports-and-docs\evidence\$(Split-Path $file -Leaf)") } }
 
     Write-Status 'copy-special-inputs' 'RUNNING'
-    $originalPack = Resolve-ResourcePack 'D:\D\Tools' 110867309 'BF88450FF0EED414657DC75CC1F0FD6689109A654DEEC8CF5306A13C3900CCCC'
+    $originalPack = Resolve-ResourcePack '<INSTANCE_ROOT>' 110867309 'BF88450FF0EED414657DC75CC1F0FD6689109A654DEEC8CF5306A13C3900CCCC'
     Copy-FileSafe $originalPack (Join-Path $Destination '01-original\resource-pack-original.zip')
     $adaptedPack = Get-ChildItem -LiteralPath (Join-Path $workspace 'outputs\candidate13-resource-closure-20260812') -File -Filter '*.zip' |
         Where-Object { $_.Length -eq 110377999 } | Select-Object -First 1
     if ($null -eq $adaptedPack -or (Get-FileHash -Algorithm SHA256 -LiteralPath $adaptedPack.FullName).Hash -ne '614ABDF34F7CFDB7974474A645BFA71CC4CA2E67F609983616E61474A57E3364') { throw 'Adapted resource pack size/hash mismatch' }
     Copy-FileSafe $adaptedPack.FullName (Join-Path $Destination '02-latest\resource-pack-mc1.21.1-candidate13.zip')
-    $crash = Resolve-FileByName 'D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3' 'crash-2026-08-12_23.38.16-client.txt'
+    $crash = Resolve-FileByName '<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3' 'crash-2026-08-12_23.38.16-client.txt'
     Copy-FileSafe $crash (Join-Path $Destination '04-reports-and-docs\evidence\candidate14-manual-client-crash.txt')
 
     Write-Status 'copy-handoff-docs' 'RUNNING'

@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 $scriptPath = Join-Path $PSScriptRoot 'prepare_candidate11_client_root.ps1'
-$releaseRoot = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate11-20260811'
+$releaseRoot = '<AUDIT_ROOT>\final-mod-bundles-candidate11-20260811'
 $readyPath = Join-Path $releaseRoot 'READY.json'
 $manifestPath = Join-Path $releaseRoot 'manifests\client.json'
 

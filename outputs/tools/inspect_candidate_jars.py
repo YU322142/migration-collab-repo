@@ -129,7 +129,7 @@ def main() -> int:
         explicit = [pathlib.Path(arg) for arg in sys.argv[2:]]
         print(json.dumps([inspect(path.resolve()) for path in explicit if path.is_file()], ensure_ascii=False, indent=2))
         return 0
-    root = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else r"D:\Trans\migration-audit-work")
+    root = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else r"<AUDIT_ROOT>")
     explicit = [pathlib.Path(arg) for arg in sys.argv[2:]]
     print(json.dumps([inspect(path) for path in candidate_paths(root, explicit)], ensure_ascii=False, indent=2))
     return 0

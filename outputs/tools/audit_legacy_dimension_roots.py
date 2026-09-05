@@ -708,7 +708,7 @@ def compact_summary(report: dict[str, Any]) -> dict[str, Any]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Read-only audit of legacy Bukkit dimension roots versus canonical dimensions")
-    parser.add_argument("--source", type=Path, default=Path(r"D:\Trans\20260807"))
+    parser.add_argument("--source", type=Path, default=Path(r"<TRANS_ROOT>\20260807"))
     parser.add_argument("--json", type=Path, required=True)
     parser.add_argument("--markdown", type=Path, required=True)
     parser.add_argument("--summary-json", type=Path)

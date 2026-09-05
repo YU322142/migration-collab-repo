@@ -102,8 +102,8 @@ class RuntimeSafetyTest(unittest.TestCase):
             subject._strict_sanitization(value, 7)
 
     def test_native_and_posix_temporary_paths_are_rewritten(self) -> None:
-        temporary = Path("D:/Trans/migration-audit-work/runtime.tmp")
-        output = Path("D:/Trans/migration-audit-work/runtime")
+        temporary = Path("<AUDIT_ROOT>/runtime.tmp")
+        output = Path("<AUDIT_ROOT>/runtime")
         value = {
             "native": str(temporary / "server.properties"),
             "posix": (temporary / "world" / "level.dat").as_posix(),

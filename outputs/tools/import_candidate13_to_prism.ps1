@@ -1,7 +1,7 @@
 param(
     [string] $ClientRoot = '',
-    [string] $PrismRoot = 'D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
-    [string] $ReleaseRoot = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate13-20260812',
+    [string] $PrismRoot = '<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
+    [string] $ReleaseRoot = '<AUDIT_ROOT>\final-mod-bundles-candidate13-20260812',
     [string] $TemplateInstanceName = '',
     [string] $InstanceName = '',
     [string] $Report = '',
@@ -16,7 +16,7 @@ $ErrorActionPreference = 'Stop'
 $workspace = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..')).TrimEnd('\')
 $expectedClientRoot = Join-Path $workspace 'outputs\tmp\client-gate-candidate13\.minecraft'
 $expectedReport = Join-Path $workspace 'outputs\candidate13-prism-import-20260812.json'
-$expectedRelease = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate13-20260812'
+$expectedRelease = '<AUDIT_ROOT>\final-mod-bundles-candidate13-20260812'
 $expectedReadySha = 'FA992151079AEE46DCDAEB49D23487F0F4642099E86F0962469E2257E830BA3F'
 $expectedManifestSha = '261ADB612DB2A2D992F8A8CAC0FC8C753D6620B98B8CB79E693CC434E57216BE'
 $expectedBundleSha = 'AC9887DB6F12E0A9E9F8B77030C3F904276DB8BFD4BDF9D01C4B9DAF9EEA4495'
@@ -125,7 +125,7 @@ if($PreflightOnly){[ordered]@{schema=1;status='PREFLIGHT_PASS';candidate=13;clie
 $temp=Join-Path $instances ('.candidate13-import-'+[Guid]::NewGuid().ToString('N')); $tempMc=Join-Path $temp 'minecraft'; $published=$false
 try {
     New-Item -ItemType Directory -Path $tempMc | Out-Null
-    foreach($name in @('assets','libraries','versions')){$src=Get-Item -LiteralPath (Join-Path $client $name) -Force; if($src.LinkType -ne 'Junction'){throw "Fresh shared directory is not a junction: $name"}; $resolved=Full-Path ([string]$src.Target); if(Path-IsWithin $resolved 'D:\Trans\20260807'){throw "Shared directory resolves into historical backup: $resolved"}; New-Item -ItemType Junction -Path (Join-Path $tempMc $name) -Target $resolved|Out-Null}
+    foreach($name in @('assets','libraries','versions')){$src=Get-Item -LiteralPath (Join-Path $client $name) -Force; if($src.LinkType -ne 'Junction'){throw "Fresh shared directory is not a junction: $name"}; $resolved=Full-Path ([string]$src.Target); if(Path-IsWithin $resolved '<TRANS_ROOT>\20260807'){throw "Shared directory resolves into historical backup: $resolved"}; New-Item -ItemType Junction -Path (Join-Path $tempMc $name) -Target $resolved|Out-Null}
     foreach($name in @('config','defaultconfigs','data')){Copy-Tree (Join-Path $client $name) (Join-Path $tempMc $name)}
     foreach($name in @('options.txt','servers.dat')){Copy-Item -LiteralPath (Join-Path $client $name) -Destination (Join-Path $tempMc $name)}
     foreach($name in @('mods','resourcepacks')){New-Item -ItemType Directory -Path (Join-Path $tempMc $name)|Out-Null}

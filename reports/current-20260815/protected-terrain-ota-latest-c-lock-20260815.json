@@ -3,7 +3,7 @@
   "date": "2026-08-15",
   "status": "LATEST_C_LOCKED_READY_FOR_REMOTE_STOPPED_PREFLIGHT",
   "authoritative_current_snapshot": {
-    "path": "D:/Down/mechanomania-matched-runtime-attempt13-2.zip",
+    "path": "<DOWNLOAD_ROOT>/mechanomania-matched-runtime-attempt13-2.zip",
     "bytes": 7936970883,
     "sha256": "ECCD0C6D28A9444DBBCEB3AAEDBBB882E3EEF82B4DDD2547C729571F21891A92",
     "archive_test": "PASS",
@@ -20,35 +20,35 @@
     "seed": -794095451117350581
   },
   "terrain_poi_transaction": {
-    "plan": "D:/Trans/migration-audit-work/protected-terrain-ota-20260815/plan.json",
+    "plan": "<AUDIT_ROOT>/protected-terrain-ota-20260815/plan.json",
     "plan_sha256": "483DD2073E7C31691CF15E1BA507556288FF37A11523D3383F6BE34C09C8096E",
-    "bundle_manifest": "D:/Trans/migration-audit-work/protected-terrain-ota-20260815/bundle/bundle.json",
+    "bundle_manifest": "<AUDIT_ROOT>/protected-terrain-ota-20260815/bundle/bundle.json",
     "bundle_manifest_sha256": "02EFC30B640FF1C54EF44D0AEC993825BF41803838AD62A07DC5694F3F4911FD",
-    "verify_report": "D:/Trans/migration-audit-work/protected-terrain-ota-20260815/verify-bundle-report.json",
+    "verify_report": "<AUDIT_ROOT>/protected-terrain-ota-20260815/verify-bundle-report.json",
     "verify_report_sha256": "8ED6E0765090C74A7926301D11CDBC32FB2AC7284A4789594F03B00630E48676",
     "bundle_status": "READY_FOR_STOPPED_SERVER_APPLY",
     "preimage_enforcement": "per-file and per-slot CAS",
     "legacy_plan_embeds_archive_sha256": false
   },
   "entity_transaction": {
-    "plan": "D:/Trans/migration-audit-work/protected-entity-ota-20260815/entity-ota-plan.json",
+    "plan": "<AUDIT_ROOT>/protected-entity-ota-20260815/entity-ota-plan.json",
     "plan_sha256": "060D7E6AD9F1F9A129C0CF34592A780FB2D993BDA8E893D3241626DEE1DEE544",
-    "bundle_manifest": "D:/Trans/migration-audit-work/protected-entity-ota-20260815/bundle/bundle.json",
+    "bundle_manifest": "<AUDIT_ROOT>/protected-entity-ota-20260815/bundle/bundle.json",
     "bundle_manifest_sha256": "D5B64C32CE711B04A2D38E1BD6EF0023542939050E96E9B246957CAC0767CB1D",
-    "verify_report": "D:/Trans/migration-audit-work/protected-entity-ota-20260815/verify-bundle-independent-20260815.json",
+    "verify_report": "<AUDIT_ROOT>/protected-entity-ota-20260815/verify-bundle-independent-20260815.json",
     "verify_report_sha256": "8BD00012013ACA63624AD60EBC070FA2024DAC22E68E3000BB18AB41B4345036",
     "bundle_status": "VERIFIED_DETACHED_BUNDLE",
     "preimage_enforcement": "per-file, per-slot and entity-payload CAS",
     "legacy_plan_embeds_archive_sha256": false
   },
   "vanilla_reference": {
-    "strict_manifest": "D:/Trans/migration-audit-work/vanilla-reference-v-20260815/final/strict-world-manifest.json",
+    "strict_manifest": "<AUDIT_ROOT>/vanilla-reference-v-20260815/final/strict-world-manifest.json",
     "strict_manifest_sha256": "4BD4883295C8E0EFDF584A81AEB4FE19DAAA0EA0AE0B4B3BC3455E9768B2FCB1",
-    "final_verification_report": "D:/Trans/migration-audit-work/vanilla-reference-v-20260815/final/final-verification-report.json",
+    "final_verification_report": "<AUDIT_ROOT>/vanilla-reference-v-20260815/final/final-verification-report.json",
     "final_verification_report_sha256": "5507B0D06A0CDD3D9E4D362477A840D8EE4C20656265886F7AAA2C91B60BA05E"
   },
   "dynamic_validation": {
-    "settled_v_semantic_report": "D:/Trans/migration-audit-work/protected-terrain-ota-test-server-20260815/semantic-postverify-vs-settled-v.json",
+    "settled_v_semantic_report": "<AUDIT_ROOT>/protected-terrain-ota-test-server-20260815/semantic-postverify-vs-settled-v.json",
     "settled_v_semantic_report_sha256": "1AFCDF9506E1AEB5EF295D608AB2FB7745170D0641D01C020EE627B7EA4DC001",
     "selected_chunks": 29305,
     "selected_mismatches": 0,

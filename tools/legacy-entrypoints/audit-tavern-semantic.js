@@ -2,13 +2,13 @@ const fs = require("fs");
 const path = require("path");
 
 const SOURCE =
-  "D:/Trans/migration-audit-work/tavern-unpacked-1.2.0.10-fabric/data/kaleidoscope_tavern";
+  "<AUDIT_ROOT>/tavern-unpacked-1.2.0.10-fabric/data/kaleidoscope_tavern";
 const TARGET =
-  "D:/Trans/migration-audit-work/KaleidoscopeTavern-1.21.1/src/generated/resources/data/kaleidoscope_tavern";
+  "<AUDIT_ROOT>/KaleidoscopeTavern-1.21.1/src/generated/resources/data/kaleidoscope_tavern";
 const SOURCE_LANG =
-  "D:/Trans/migration-audit-work/tavern-unpacked-1.2.0.10-fabric/assets/kaleidoscope_tavern/lang";
+  "<AUDIT_ROOT>/tavern-unpacked-1.2.0.10-fabric/assets/kaleidoscope_tavern/lang";
 const TARGET_LANG =
-  "D:/Trans/migration-audit-work/KaleidoscopeTavern-1.21.1/src/main/resources/assets/kaleidoscope_tavern/lang";
+  "<AUDIT_ROOT>/KaleidoscopeTavern-1.21.1/src/main/resources/assets/kaleidoscope_tavern/lang";
 
 function walk(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {

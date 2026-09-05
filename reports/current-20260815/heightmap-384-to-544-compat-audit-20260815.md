@@ -19,10 +19,10 @@ Two independent `clean check jar` builds were run with Gradle 8.8, `--no-build-c
 
 `AD26B1F429F0E39FCD19D6EFD151DF93A62F3B0F7262312C7BA1D8340E13EFBF`
 
-Build logs and JAR copies are under `D:\Trans\migration-audit-work\heightmap-384-to-544-compat-20260815\build-1` and `build-2`.
+Build logs and JAR copies are under `<AUDIT_ROOT>\heightmap-384-to-544-compat-20260815\build-1` and `build-2`.
 
 The verified JAR has been installed only in the stopped test clone:
 
-`D:\Trans\migration-audit-work\protected-terrain-ota-test-server-20260815\mechanomania-matched-runtime-attempt13-20260814\mods\heightmap-384-to-544-compat-1.0.0+neoforge.1.21.1.jar`
+`<AUDIT_ROOT>\protected-terrain-ota-test-server-20260815\mechanomania-matched-runtime-attempt13-20260814\mods\heightmap-384-to-544-compat-1.0.0+neoforge.1.21.1.jar`
 
 There was no same-name preimage. The original public ZIP, production server, and client were not modified. Dynamic boot/legacy-chunk verification remains the next gate; do not treat this artifact alone as production OTA approval.

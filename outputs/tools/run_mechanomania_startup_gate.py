@@ -31,8 +31,8 @@ if str(TOOLS) not in sys.path:
 import run_candidate13_join_gate as legacy
 
 
-ALLOWED = Path(r"D:\Trans\migration-audit-work").resolve()
-FORBIDDEN = Path(r"D:\Trans\20260807").resolve()
+ALLOWED = Path(r"<AUDIT_ROOT>").resolve()
+FORBIDDEN = Path(r"<TRANS_ROOT>\20260807").resolve()
 MINEASTR_NAME = "mineastr-neoforge-1.21.1-0.6.26.jar"
 MINEASTR_SHA256 = "0264D729A3343BE1645B5AFE16C15A7A57C7E89A9405FA67EC80EE06D4A148D8"
 MINEASTR_BYTES = 257_982

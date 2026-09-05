@@ -28,7 +28,7 @@ WORKSPACE = Path(__file__).resolve().parents[2]
 DEFAULT_SPEC = WORKSPACE / "outputs/mechanomania-matched-release-input-lock-20260813.json"
 DEFAULT_REPORT = WORKSPACE / "outputs/mechanomania-matched-release-build-20260813.json"
 DEFAULT_MARKDOWN = WORKSPACE / "outputs/mechanomania-matched-release-build-20260813.md"
-DEFAULT_OUTPUT = Path(r"D:\Trans\migration-audit-work\mechanomania-matched-release-v2-20260813")
+DEFAULT_OUTPUT = Path(r"<AUDIT_ROOT>\mechanomania-matched-release-v2-20260813")
 
 TARGETS = {"SERVER", "CLIENT", "BOTH"}
 SIDE_CLASSIFICATIONS = {"SERVER_ONLY", "CLIENT_ONLY", "BOTH"}

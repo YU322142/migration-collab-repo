@@ -28,9 +28,9 @@ from typing import Any
 
 
 CANDIDATE10_ROOT = Path(
-    r"D:\Trans\migration-audit-work\final-mod-bundles-candidate10-20260811"
+    r"<AUDIT_ROOT>\final-mod-bundles-candidate10-20260811"
 )
-HISTORICAL_BACKUP_ROOT = Path(r"D:\Trans\20260807")
+HISTORICAL_BACKUP_ROOT = Path(r"<TRANS_ROOT>\20260807")
 BASELINE_JAR_COUNT = 50
 OUTPUT_JAR_COUNT = 52
 CC_BASE_MOD_ID = "computercraft"

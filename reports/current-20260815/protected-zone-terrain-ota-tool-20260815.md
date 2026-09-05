@@ -45,20 +45,20 @@ apply 之前会校验所有 40 个保护区 region、40 个 POI 候选文件和 
 
 ```powershell
 python outputs/tools/protected_zone_terrain_ota.py plan `
-  --current "D:\Down\mechanomania-matched-runtime-attempt13-2.zip" `
-  --donor "D:\Trans\migration-audit-work\vanilla-protected-V\world" `
+  --current "<DOWNLOAD_ROOT>\mechanomania-matched-runtime-attempt13-2.zip" `
+  --donor "<AUDIT_ROOT>\vanilla-protected-V\world" `
   --poi-policy donor-selected `
-  --output "D:\Trans\migration-audit-work\protected-terrain-ota\plan.json"
+  --output "<AUDIT_ROOT>\protected-terrain-ota\plan.json"
 
 python outputs/tools/protected_zone_terrain_ota.py build `
-  --plan "D:\Trans\migration-audit-work\protected-terrain-ota\plan.json" `
-  --bundle-root "D:\Trans\migration-audit-work\protected-terrain-ota\bundle"
+  --plan "<AUDIT_ROOT>\protected-terrain-ota\plan.json" `
+  --bundle-root "<AUDIT_ROOT>\protected-terrain-ota\bundle"
 
 python outputs/tools/protected_zone_terrain_ota.py verify-bundle `
-  --bundle-root "D:\Trans\migration-audit-work\protected-terrain-ota\bundle"
+  --bundle-root "<AUDIT_ROOT>\protected-terrain-ota\bundle"
 
 python outputs/tools/protected_zone_terrain_ota.py verify-target `
-  --bundle-root "D:\Trans\migration-audit-work\protected-terrain-ota\bundle" `
+  --bundle-root "<AUDIT_ROOT>\protected-terrain-ota\bundle" `
   --world "D:\stopped-server-copy\world" --state pre
 ```
 
@@ -66,9 +66,9 @@ python outputs/tools/protected_zone_terrain_ota.py verify-target `
 
 ```powershell
 python outputs/tools/protected_zone_terrain_ota.py apply `
-  --bundle-root "D:\Trans\migration-audit-work\protected-terrain-ota\bundle" `
+  --bundle-root "<AUDIT_ROOT>\protected-terrain-ota\bundle" `
   --world "D:\stopped-server-copy\world" `
-  --backup-root "D:\Trans\migration-audit-work\protected-terrain-ota\preimage" `
+  --backup-root "<AUDIT_ROOT>\protected-terrain-ota\preimage" `
   --allow-world-write --stopped-server-ack SERVER_IS_STOPPED
 ```
 
@@ -76,13 +76,13 @@ python outputs/tools/protected_zone_terrain_ota.py apply `
 
 ```powershell
 python outputs/tools/protected_zone_terrain_ota.py rollback `
-  --apply-receipt "D:\Trans\migration-audit-work\protected-terrain-ota\preimage\apply-receipt.json" `
+  --apply-receipt "<AUDIT_ROOT>\protected-terrain-ota\preimage\apply-receipt.json" `
   --allow-world-write --stopped-server-ack SERVER_IS_STOPPED
 ```
 
 ## 当前 C 的只读实盘结果
 
-输入：`D:\Down\mechanomania-matched-runtime-attempt13-2.zip`
+输入：`<DOWNLOAD_ROOT>\mechanomania-matched-runtime-attempt13-2.zip`
 
 - ZIP 字节数：`7,936,970,883`
 - ZIP SHA-256：`ECCD0C6D28A9444DBBCEB3AAEDBBB882E3EEF82B4DDD2547C729571F21891A92`
@@ -91,7 +91,7 @@ python outputs/tools/protected_zone_terrain_ota.py rollback `
 - POI 候选文件存在：`23/40`；选中槽位已占用：`9`
 - entities 候选文件存在：`15/40`；选中槽位已占用：`89`
 - 检查状态：`PASS_READ_ONLY`
-- 报告：`D:\Trans\migration-audit-work\protected-terrain-ota-tool-20260815\current-C-protected-inspection.json`
+- 报告：`<AUDIT_ROOT>\protected-terrain-ota-tool-20260815\current-C-protected-inspection.json`
 - 报告 SHA-256：`A65FC19BBEC804281C2A28F61AF82381503C5A44242CEB595B0CF33AF10A6854`
 
 ## 测试证据

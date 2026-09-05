@@ -4,7 +4,7 @@
 
 ## 成品与工具
 
-- D 盘转换根：`D:\Trans\migration-audit-work\journeymap-xaero-conversion-20260813`
+- D 盘转换根：`<AUDIT_ROOT>\journeymap-xaero-conversion-20260813`
 - 主安装候选：上述目录的 `staging\`
 - 机器可读报告：`conversion-report.json`
 - 人工报告：`conversion-report.md`

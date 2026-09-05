@@ -81,7 +81,7 @@ Final bytecode begins:
 ## Frozen artifact
 
 ```text
-D:\Trans\migration-audit-work\hotbath-300-trigger-fix-artifacts-20260814\hotbath-1.21.1-3.0.0-registry-fix.1.jar
+<AUDIT_ROOT>\hotbath-300-trigger-fix-artifacts-20260814\hotbath-1.21.1-3.0.0-registry-fix.1.jar
 ```
 
 - Size: `712,893` bytes
@@ -92,7 +92,7 @@ Reproducible build evidence is retained under `build-a` and `build-b` in the sam
 Source repository:
 
 ```text
-D:\Trans\migration-audit-work\hotbath-300-trigger-fix-source-20260814
+<AUDIT_ROOT>\hotbath-300-trigger-fix-source-20260814
 ```
 
 - Official 3.0.0 base: `5e382931c20744b2ffe43abc26b917e59f7a21cd`

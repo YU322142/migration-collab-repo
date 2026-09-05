@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
-    [string]$SourceServerRoot = 'D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt13-20260814',
-    [string]$TestRoot = 'D:\Trans\migration-audit-work\xiyuslogin-auto-session-script-test-20260815'
+    [string]$SourceServerRoot = '<AUDIT_ROOT>\mechanomania-matched-runtime-attempt13-20260814',
+    [string]$TestRoot = '<AUDIT_ROOT>\xiyuslogin-auto-session-script-test-20260815'
 )
 
 Set-StrictMode -Version Latest
@@ -14,7 +14,7 @@ $canonicalTestRoot = [System.IO.Path]::GetFullPath($TestRoot)
 
 if (Test-Path -LiteralPath $canonicalTestRoot) {
     $resolvedExisting = (Get-Item -LiteralPath $canonicalTestRoot).FullName
-    $allowedPrefix = 'D:\Trans\migration-audit-work\'
+    $allowedPrefix = '<AUDIT_ROOT>\'
     if (-not $resolvedExisting.StartsWith($allowedPrefix, [System.StringComparison]::OrdinalIgnoreCase)) {
         throw "Refusing to clear test directory outside $allowedPrefix"
     }

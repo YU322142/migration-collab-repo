@@ -41,12 +41,30 @@ PRIVATE_DOMAIN = re.compile(
     r"(?<![A-Za-z0-9.-])" + re.escape(PRIVATE_DOMAIN_TEXT), re.IGNORECASE
 )
 
+# Public snapshots must not expose workstation layout or live deployment
+# locations. Keep the replacements stable so scripts remain understandable
+# without retaining a usable production path.
+AUDIT_ROOT_PATH = re.compile(r"D:(?:\\\\|\\|/)+Trans(?:\\\\|\\|/)+migration-audit-work", re.IGNORECASE)
+HANDOFF_ROOT_PATH = re.compile(r"D:(?:\\\\|\\|/)+Trans(?:\\\\|\\|/)+migration-handoff-20260812", re.IGNORECASE)
+PUBLICATION_ROOT_PATH = re.compile(r"D:(?:\\\\|\\|/)+Trans(?:\\\\|\\|/)+github-publication-20260819", re.IGNORECASE)
+DOWNLOAD_ROOT_PATH = re.compile(r"D:(?:\\\\|\\|/)+Down", re.IGNORECASE)
+INSTANCE_ROOT_PATH = re.compile(r"D:(?:\\\\|\\|/)+D(?:\\\\|\\|/)+Tools", re.IGNORECASE)
+ASTRBOT_ROOT_PATH = re.compile(r"/(?:opt|srv)/(?:AstrBot|astrbot)(?:/|$)", re.IGNORECASE)
+TRANS_ROOT_PATH = re.compile(r"D:(?:\\\\|\\|/)+Trans", re.IGNORECASE)
+
 
 def scrub(text: str) -> str:
     text = WORKSPACE_PATH.sub("<WORKSPACE>", text)
     text = USER_HOME_PATH.sub("<USER_HOME>", text)
     text = PRIVATE_HOST.sub("play.example.invalid", text)
     text = PRIVATE_DOMAIN.sub("example.invalid", text)
+    text = AUDIT_ROOT_PATH.sub("<AUDIT_ROOT>", text)
+    text = HANDOFF_ROOT_PATH.sub("<HANDOFF_ROOT>", text)
+    text = PUBLICATION_ROOT_PATH.sub("<PUBLICATION_ROOT>", text)
+    text = DOWNLOAD_ROOT_PATH.sub("<DOWNLOAD_ROOT>", text)
+    text = INSTANCE_ROOT_PATH.sub("<INSTANCE_ROOT>", text)
+    text = ASTRBOT_ROOT_PATH.sub("<ASTRBOT_ROOT>/", text)
+    text = TRANS_ROOT_PATH.sub("<TRANS_ROOT>", text)
     return text
 
 

@@ -13,7 +13,7 @@ from typing import Any
 
 WORKSPACE = Path(__file__).resolve().parents[2]
 BUNDLE_ROOT = Path(
-    r"D:\Trans\migration-audit-work\final-mod-bundles-candidate11-20260811"
+    r"<AUDIT_ROOT>\final-mod-bundles-candidate11-20260811"
 )
 AUDIT_PATH = WORKSPACE / "outputs" / "candidate11-bundle-full-audit-20260811.json"
 AUDIT_SHA256 = "C3C96146A488DDBC5054F3A7B721AE9EA8031C83615B817D07FA453981D40A4F"

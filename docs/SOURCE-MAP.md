@@ -5,8 +5,8 @@
 源路径使用以下占位符，避免把个人用户目录写入 Git：
 
 - WORKSPACE：当前 Codex 工作区；
-- AUDIT_ROOT：D:\Trans\migration-audit-work；
-- HANDOFF_ROOT：D:\Trans\migration-handoff-20260812。
+- AUDIT_ROOT：<AUDIT_ROOT>；
+- HANDOFF_ROOT：<HANDOFF_ROOT>。
 
 复制策略：
 

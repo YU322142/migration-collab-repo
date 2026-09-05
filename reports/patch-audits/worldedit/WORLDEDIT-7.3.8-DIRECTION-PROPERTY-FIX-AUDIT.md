@@ -31,7 +31,7 @@ This is the narrow compatibility logic used by the official WorldEdit 7.3.x line
 
 Use the same JAR on both the dedicated server and the paired client:
 
-`D:\Trans\migration-audit-work\worldedit-738-direction-property-fix-artifacts-20260814\worldedit-mod-7.3.8-direction-property-fix.1.jar`
+`<AUDIT_ROOT>\worldedit-738-direction-property-fix-artifacts-20260814\worldedit-mod-7.3.8-direction-property-fix.1.jar`
 
 | Field | Value |
 |---|---|
@@ -54,7 +54,7 @@ The artifact is a replacement for `worldedit-mod-7.3.8.jar`; keep the filename e
 
 Build script:
 
-`D:\Trans\migration-audit-work\worldedit-738-direction-property-fix-artifacts-20260814\build_worldedit_738_direction_fix.ps1`
+`<AUDIT_ROOT>\worldedit-738-direction-property-fix-artifacts-20260814\build_worldedit_738_direction_fix.ps1`
 
 The script compiles with Java 21, patches two class entries, validates the JAR, and builds twice with a fixed ZIP timestamp. Both independent builds produced:
 
@@ -68,7 +68,7 @@ Source hash:
 
 Test script:
 
-`D:\Trans\migration-audit-work\worldedit-738-direction-property-fix-artifacts-20260814\test_worldedit_738_direction_fix.ps1`
+`<AUDIT_ROOT>\worldedit-738-direction-property-fix-artifacts-20260814\test_worldedit_738_direction_fix.ps1`
 
 The test creates equivalent generic/dedicated Minecraft direction properties without bootstrapping a game, then loads the original and fixed JAR in separate JVMs.
 

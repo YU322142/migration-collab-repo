@@ -41,7 +41,7 @@
 | WorldEdit 属性兼容 | `projects/patches/worldedit-7.3.8-direction-property-fix` | 编辑平台与目标运行时的方向属性语义一致。 | 双方 |
 | Yuushya 指南兼容 | `projects/patches/yuushya-2.3.0-patchouli-safety` | 指南展示资源与玩法引用分层，保证阅读体验而不锁死未来扩展。 | 双方 |
 | TLM 平衡层 | `projects/patches/tlm-patchouli-spawn-box-balance` | 女仆指南、配方和服务器玩法限制保持一致。 | 服务端权威，客户端展示 |
-| 本地视觉与资源层 | `outputs/projects/chest-colorizer-neoforge-1.21.1`、`outputs/projects/resource-error-overlay-1.21.1`、`outputs/projects/waypoint-fire-equivalence` | 渲染状态、资源错误可见性和导航体验；不改写世界权威数据。 | 客户端主导 |
+| 本地视觉与资源层 | `outputs/projects/chest-colorizer-neoforge-1.21.1`、`outputs/projects/resource-error-overlay-1.21.1`、`outputs/projects/waypoint-fire-equivalence` | 渲染状态、资源错误可见性和导航体验；不改写世界权威数据。Chest Colorizer 的未染色木桶稳定性修复已完成并公开，线上仍建议做一次视觉回归。 | 客户端主导 |
 
 ## 世界、地形与数据迁移
 

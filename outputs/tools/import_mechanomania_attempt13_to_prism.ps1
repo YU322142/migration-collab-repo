@@ -1,8 +1,8 @@
 param(
-    [string] $ClientRoot = 'D:\Trans\migration-audit-work\mechanomania-matched-client-attempt13-20260814',
-    [string] $ClientPrepareReport = 'D:\Trans\migration-audit-work\mechanomania-matched-client-attempt13-prepare-20260814.json',
-    [string] $GateReport = 'D:\Trans\migration-audit-work\mechanomania-startup-gate-attempt13-20260814.json',
-    [string] $PrismRoot = 'D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
+    [string] $ClientRoot = '<AUDIT_ROOT>\mechanomania-matched-client-attempt13-20260814',
+    [string] $ClientPrepareReport = '<AUDIT_ROOT>\mechanomania-matched-client-attempt13-prepare-20260814.json',
+    [string] $GateReport = '<AUDIT_ROOT>\mechanomania-startup-gate-attempt13-20260814.json',
+    [string] $PrismRoot = '<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
     [string] $TemplateInstanceName = '',
     [string] $InstanceName = '',
     [string] $Report = '',
@@ -26,12 +26,12 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $workspace = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..')).TrimEnd('\')
-$expectedClientRoot = 'D:\Trans\migration-audit-work\mechanomania-matched-client-attempt13-20260814'
-$expectedPrepareReport = 'D:\Trans\migration-audit-work\mechanomania-matched-client-attempt13-prepare-20260814.json'
+$expectedClientRoot = '<AUDIT_ROOT>\mechanomania-matched-client-attempt13-20260814'
+$expectedPrepareReport = '<AUDIT_ROOT>\mechanomania-matched-client-attempt13-prepare-20260814.json'
 $expectedPrepareReportSha256 = '4BA50238E24F4055DBF219103D3394B254D512B131B2BE0808C067BA8D9C8F86'
-$expectedGateReport = 'D:\Trans\migration-audit-work\mechanomania-startup-gate-attempt13-20260814.json'
+$expectedGateReport = '<AUDIT_ROOT>\mechanomania-startup-gate-attempt13-20260814.json'
 $expectedGateReportSha256 = '22E4BEE1EB6B3DE909650D02A980C9591679FC144E49D82828822EA7C7FAE425'
-$expectedPrismRoot = 'D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3'
+$expectedPrismRoot = '<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3'
 $expectedLocalPack = 'migration-local-resources-mc1.21.1.zip'
 $expectedLocalPackBytes = 110377999
 $expectedLocalPackSha256 = '614ABDF34F7CFDB7974474A645BFA71CC4CA2E67F609983616E61474A57E3364'

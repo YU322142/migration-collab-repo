@@ -31,7 +31,7 @@ ROOT = Path(__file__).resolve().parents[2]
 TOOLS = ROOT / "outputs" / "tools"
 OUTPUTS = ROOT / "outputs"
 WORKSPACE_CLIENT_ROOT = OUTPUTS / "tmp"
-FORBIDDEN_SOURCE = Path(r"D:\Trans\20260807")
+FORBIDDEN_SOURCE = Path(r"<TRANS_ROOT>\20260807")
 DEFAULT_JAVA = Path(r"C:\Program Files\Java\jdk-21.0.10\bin\java.exe")
 DEFAULT_POWERSHELL = Path(
     r"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
@@ -41,7 +41,7 @@ DEFAULT_CLIENT_LAUNCHER = TOOLS / "launch_neoforge_client_isolated.ps1"
 SYNTHETIC_USERNAME = "Candidate10Gate"
 SYNTHETIC_UUID = "00000000-0000-0000-0000-000000001001"
 REQUIRED_LOCAL_RESOURCE_PACK_SOURCE = Path(
-    "D:/D/Tools/\u52a8\u9759\u4ea4\u6620-1.4.2-PCL2/.minecraft/versions/"
+    "<INSTANCE_ROOT>/\u52a8\u9759\u4ea4\u6620-1.4.2-PCL2/.minecraft/versions/"
     "\u52a8\u9759\u4ea4\u6620\u5ba2\u6237\u7aef/resourcepacks/"
     "\u4e16\u754c\u6307\u5b9a\u8d44\u6e90\u5305\u55b5.zip"
 )

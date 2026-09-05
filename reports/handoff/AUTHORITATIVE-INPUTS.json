@@ -3,18 +3,18 @@
   "date": "2026-08-12",
   "status": "HANDOFF_CONTENT_FROZEN_PENDING_MANIFEST",
   "original_input": {
-    "path": "D:\\Down\\20260811.zip",
+    "path": "<DOWNLOAD_ROOT>\\20260811.zip",
     "bytes": 7838147411,
     "sha256": "9723FE28BC1B98D6ECE96A4063532BB2A533A038E7B3E457D50CF658E2495021",
     "policy": "IMMUTABLE_READ_ONLY"
   },
   "base_staging": {
-    "path": "D:\\Trans\\migration-audit-work\\cutover-staging-incoming-20260811-candidate13-20260812",
+    "path": "<AUDIT_ROOT>\\cutover-staging-incoming-20260811-candidate13-20260812",
     "policy": "FROZEN_BASE_DO_NOT_MODIFY",
     "note": "The handoff copy supersedes this base by replacing create_tracks.dat and restoring immersive_paintings_cache."
   },
   "release_base": {
-    "path": "D:\\Trans\\migration-audit-work\\final-mod-bundles-candidate14-r3-20260812",
+    "path": "<AUDIT_ROOT>\\final-mod-bundles-candidate14-r3-20260812",
     "ready_sha256": "66778B3F91842D0AB6CC291D03AD9538AB12447F63340E6144747C4DAE819C24",
     "server_bundle_sha256": "32EE13FBECD61CF8B04EA390D409D7F0B2D5FD3CB1AA37D180A75141E0FFEC28",
     "client_bundle_sha256": "FCBEFE432E802CA8834ADFEA8D360764F33697D84B690C53D085CBD3DCDE0E76",

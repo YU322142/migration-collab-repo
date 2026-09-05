@@ -169,7 +169,7 @@ def audit_pair(name: str, legacy: Path, canonical: Path, sample_count: int) -> d
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Semantic block-state sample for legacy/canonical dimension roots")
-    parser.add_argument("--source", type=Path, default=Path(r"D:\Trans\20260807"))
+    parser.add_argument("--source", type=Path, default=Path(r"<TRANS_ROOT>\20260807"))
     parser.add_argument("--sample-count", type=int, default=1024)
     parser.add_argument("--output", type=Path, required=True)
     args = parser.parse_args()

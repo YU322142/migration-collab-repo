@@ -573,7 +573,7 @@ def main() -> int:
     parser.add_argument("--target", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--markdown", type=Path)
-    parser.add_argument("--create-decompile", type=Path, default=Path("D:/Trans/migration-audit-work/fluid-target-review-20260811"))
+    parser.add_argument("--create-decompile", type=Path, default=Path("<AUDIT_ROOT>/fluid-target-review-20260811"))
     parser.add_argument("--workers", type=int, default=20)
     args = parser.parse_args()
     registry = parse_registry_map(args.create_decompile)

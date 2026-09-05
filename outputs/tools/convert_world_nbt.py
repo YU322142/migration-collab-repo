@@ -5774,7 +5774,7 @@ def main():
     world = args.world.resolve()
     source_game_dir = args.source_game_dir.resolve() if args.source_game_dir is not None else world.parent
     target_game_dir = args.target_game_dir.resolve() if args.target_game_dir is not None else None
-    if args.mode == "convert" and world == Path(r"D:\Trans\20260807\world").resolve():
+    if args.mode == "convert" and world == Path(r"<TRANS_ROOT>\20260807\world").resolve():
         raise SystemExit("refusing to write the read-only source world; use a D: migration copy")
     compatibility_mods = []
     runtime_capabilities = []

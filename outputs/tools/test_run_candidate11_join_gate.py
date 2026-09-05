@@ -92,7 +92,7 @@ class Candidate11JoinGateTest(unittest.TestCase):
 
     def test_immutable_e4_baseline_computer_is_on_without_writes(self) -> None:
         world = Path(
-            r"D:\Trans\migration-audit-work\cutover-staging-candidate8e4-20260811\world"
+            r"<AUDIT_ROOT>\cutover-staging-candidate8e4-20260811\world"
         )
         evidence = gate.computer_11_on_evidence(world, "test_baseline")
         self.assertTrue(evidence["on_preserved"])
@@ -123,7 +123,7 @@ class Candidate11JoinGateTest(unittest.TestCase):
     def test_locked_pipeline_target_is_allowed_without_renaming(self) -> None:
         self.assertEqual(
             gate.PIPELINE_PREPARED_TARGET,
-            Path(r"D:\Trans\migration-audit-work\manual-test-candidate8n-20260811"),
+            Path(r"<AUDIT_ROOT>\manual-test-candidate8n-20260811"),
         )
         self.assertNotIn("candidate11", gate.PIPELINE_PREPARED_TARGET.name.lower())
 

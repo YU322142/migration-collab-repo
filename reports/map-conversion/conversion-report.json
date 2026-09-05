@@ -24,19 +24,19 @@
         "sha256": "2b9c39579ea82a3d9c8c1a22029c7379d1bd240a1f4a08abd70b03374e55617a"
       },
       "source_zip": {
-        "path": "D:\\Down\\journeymap_export_yu_2026-06-19_22.45.13 (1).zip",
+        "path": "<DOWNLOAD_ROOT>\\journeymap_export_yu_2026-06-19_22.45.13 (1).zip",
         "sha256": "7e2db146c0b44b4dfe5f1c2f5732791d55aa3ccfb039b027dcac2cacc268bba7"
       },
       "vanilla_states": {
-        "path": "D:\\Trans\\migration-audit-work\\xaero-javap-20260813\\vanilla_states.dat",
+        "path": "<AUDIT_ROOT>\\xaero-javap-20260813\\vanilla_states.dat",
         "sha256": "269ba27a3657e8c676d76fff54227dc0cec8bca1f994576c7ba2ce310cadd49d"
       },
       "xaero_minimap_jar": {
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\xaerominimap-neoforge-1.21.1-26.1.0.jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\xaerominimap-neoforge-1.21.1-26.1.0.jar",
         "sha256": "6bd6cbab01ff57b9ba2fbfee18f9605593101f15d80e8d19dc59c385d2535ccc"
       },
       "xaero_world_map_jar": {
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\xaeroworldmap-neoforge-1.21.1-1.41.2.jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\xaeroworldmap-neoforge-1.21.1-1.41.2.jar",
         "sha256": "36b163fe8be4c2e800668c49294473da61eb360d821db675a2a948f8cc7c3d2b"
       }
     },
@@ -398,10 +398,10 @@
   "source": {
     "extracted_bytes": 321995990,
     "extracted_file_count": 3571,
-    "extracted_reference_root": "D:\\Trans\\migration-audit-work\\journeymap-export-audit-20260813",
+    "extracted_reference_root": "<AUDIT_ROOT>\\journeymap-export-audit-20260813",
     "source_was_modified": false,
     "zip_bytes": 289575063,
-    "zip_path": "D:\\Down\\journeymap_export_yu_2026-06-19_22.45.13 (1).zip",
+    "zip_path": "<DOWNLOAD_ROOT>\\journeymap_export_yu_2026-06-19_22.45.13 (1).zip",
     "zip_sha256": "7e2db146c0b44b4dfe5f1c2f5732791d55aa3ccfb039b027dcac2cacc268bba7",
     "zip_to_extracted_binding": {
       "all_sizes_and_crc32_match": true,
@@ -473,13 +473,13 @@
     "xaero_minimap": "26.1.0",
     "xaero_minimap_jar": {
       "bytes": 2138254,
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\xaerominimap-neoforge-1.21.1-26.1.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\xaerominimap-neoforge-1.21.1-26.1.0.jar",
       "sha256": "6bd6cbab01ff57b9ba2fbfee18f9605593101f15d80e8d19dc59c385d2535ccc"
     },
     "xaero_world_map": "1.41.2",
     "xaero_world_map_jar": {
       "bytes": 1387921,
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\xaeroworldmap-neoforge-1.21.1-1.41.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\xaeroworldmap-neoforge-1.21.1-1.41.2.jar",
       "sha256": "36b163fe8be4c2e800668c49294473da61eb360d821db675a2a948f8cc7c3d2b"
     }
   },

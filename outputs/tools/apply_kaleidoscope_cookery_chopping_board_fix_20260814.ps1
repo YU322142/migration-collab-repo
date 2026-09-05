@@ -1,9 +1,9 @@
 param(
-    [string]$Artifact = 'D:\Trans\migration-audit-work\kaleidoscope-cookery-chopping-board-fix-20260814\final-build2-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar',
-    [string]$ServerRoot = 'D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt13-20260814',
-    [string]$ClientRoot = 'D:\Trans\migration-audit-work\mechanomania-matched-client-attempt13-20260814',
+    [string]$Artifact = '<AUDIT_ROOT>\kaleidoscope-cookery-chopping-board-fix-20260814\final-build2-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar',
+    [string]$ServerRoot = '<AUDIT_ROOT>\mechanomania-matched-runtime-attempt13-20260814',
+    [string]$ClientRoot = '<AUDIT_ROOT>\mechanomania-matched-client-attempt13-20260814',
     [string]$PrismRoot = '',
-    [string]$AuditRoot = 'D:\Trans\migration-audit-work\kaleidoscope-cookery-chopping-board-fix-20260814'
+    [string]$AuditRoot = '<AUDIT_ROOT>\kaleidoscope-cookery-chopping-board-fix-20260814'
 )
 
 Set-StrictMode -Version Latest
@@ -25,7 +25,7 @@ function Get-Sha256([string]$Path) {
 }
 
 if ([string]::IsNullOrWhiteSpace($PrismRoot)) {
-    $instancesRoot = 'D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\instances'
+    $instancesRoot = '<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\instances'
     $prismCandidates = @(Get-ChildItem -LiteralPath $instancesRoot -Directory | Where-Object {
         $_.Name -like '*Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814'
     } | ForEach-Object { Join-Path $_.FullName 'minecraft' })

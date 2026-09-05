@@ -4,12 +4,12 @@
   "generated_at_local": "2026-08-14T23:52:43+08:00",
   "catalog_version": "20260814-235243",
   "scope": {
-    "client_mods": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods",
-    "server_mods": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods",
-    "properties": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\modsync.properties",
-    "old_reference": "D:\\D\\Tools\\动静交映-1.4.2-BakaXL\\instances\\动静交映客户端\\.minecraft\\mods\\mods-v4.txt",
-    "classification": "D:\\Trans\\migration-audit-work\\attempt13-mod-requiredness-audit-20260814\\client-mod-requiredness.json",
-    "output": "D:\\Trans\\migration-audit-work\\attempt13-mcmodsync-catalog-final-20260814"
+    "client_mods": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods",
+    "server_mods": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\mods",
+    "properties": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\modsync.properties",
+    "old_reference": "<INSTANCE_ROOT>\\动静交映-1.4.2-BakaXL\\instances\\动静交映客户端\\.minecraft\\mods\\mods-v4.txt",
+    "classification": "<AUDIT_ROOT>\\attempt13-mod-requiredness-audit-20260814\\client-mod-requiredness.json",
+    "output": "<AUDIT_ROOT>\\attempt13-mcmodsync-catalog-final-20260814"
   },
   "source_locks": {
     "modsync_properties_sha256": "645F3077BC8B3DC208809781F98F1E74407CBD65FE05C6CCD915605DC835EABB",
@@ -105,7 +105,7 @@
   "rows": [
     {
       "file": "advancednetherite-neoforge-2.3.1-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\advancednetherite-neoforge-2.3.1-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\advancednetherite-neoforge-2.3.1-1.21.1.jar",
       "bytes": 520611,
       "sha256": "AE0EC0A574D4EBD0644B37913C65A6F92EA20A0FE7E3D3799FD872CFE01A278A",
       "md5": "AD1FF51F9AE302227B95D8D70BE6A748",
@@ -143,7 +143,7 @@
     },
     {
       "file": "aeroworks-1.2.11.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\aeroworks-1.2.11.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\aeroworks-1.2.11.jar",
       "bytes": 278098,
       "sha256": "198FDCCC4F745455FA45F29C3CF594F0CDADBF64223EB01D792A3E894C806E78",
       "md5": "40A6D5CA48F7B7B73E377D36AF3D907F",
@@ -205,7 +205,7 @@
     },
     {
       "file": "alloy_smelter-neoforge-1.21.1-1.1.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\alloy_smelter-neoforge-1.21.1-1.1.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\alloy_smelter-neoforge-1.21.1-1.1.2.jar",
       "bytes": 122936,
       "sha256": "12E024F0886647C37A0102AB766BC6028C1E05010221C3F8293E609420521542",
       "md5": "0448369E0096254FB31DB2D567D053E9",
@@ -243,7 +243,7 @@
     },
     {
       "file": "ApothicAttributes-1.21.1-2.9.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ApothicAttributes-1.21.1-2.9.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ApothicAttributes-1.21.1-2.9.1.jar",
       "bytes": 314269,
       "sha256": "6E3DD73D01C1784F4D1293126E3020470887456CD0D246A4C44A0FC1A244E381",
       "md5": "A3EEB5DF11AAF5D5A661C498F76B8133",
@@ -289,7 +289,7 @@
     },
     {
       "file": "architectury-13.0.11-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\architectury-13.0.11-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\architectury-13.0.11-neoforge.jar",
       "bytes": 584734,
       "sha256": "9CC92F2C09533FC5482C60F993BD891C655A0E32B637037CDCB7C2B23ADEDEEB",
       "md5": "AEFBEA361809755C331126BCFF6E6D3E",
@@ -327,7 +327,7 @@
     },
     {
       "file": "armoreddoggo-neoforge-1.21-0.3.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\armoreddoggo-neoforge-1.21-0.3.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\armoreddoggo-neoforge-1.21-0.3.0.jar",
       "bytes": 213785,
       "sha256": "94F5084727B71AD1EBC649E5C85CF10A41522D2C5A1B7A97A6270F50AB78C3C4",
       "md5": "B7F773A36FEB420D2921245C7EC05B47",
@@ -365,7 +365,7 @@
     },
     {
       "file": "armoroftheages-neoforge-1.21.1-1.5.10.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\armoroftheages-neoforge-1.21.1-1.5.10.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\armoroftheages-neoforge-1.21.1-1.5.10.jar",
       "bytes": 554516,
       "sha256": "0435F7CB0D07F6ED12D4B808163DD253541EC8E209A07001C43A1EE461CD7AD6",
       "md5": "4CA7587E6DC4F263F93992D3BD812C8D",
@@ -411,7 +411,7 @@
     },
     {
       "file": "atlas_api-1.21.1-1.2.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\atlas_api-1.21.1-1.2.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\atlas_api-1.21.1-1.2.0.jar",
       "bytes": 28419,
       "sha256": "42F213C8FC8DB43E307DD5B0B726ACB2B044548258BCAC6C3F666A953688CC64",
       "md5": "17A2FB94D99B3A59EAE8B944BB5F7D6C",
@@ -449,7 +449,7 @@
     },
     {
       "file": "backport-1.5-cat-serializer-fix.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\backport-1.5-cat-serializer-fix.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\backport-1.5-cat-serializer-fix.1.jar",
       "bytes": 15336561,
       "sha256": "34291AF9D81B6AEE0780F5F511B2A9594664F36906AED40687DF1C7009E68B1D",
       "md5": "CD4CC3002BCAB0BF5D606352FF846399",
@@ -487,7 +487,7 @@
     },
     {
       "file": "balm-neoforge-1.21.1-21.0.54.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\balm-neoforge-1.21.1-21.0.54.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\balm-neoforge-1.21.1-21.0.54.jar",
       "bytes": 581424,
       "sha256": "6366AA26CF338393FDEB6D52B8E6D22B5F61975989EA6EA391C76C51273BE696",
       "md5": "4867BC98CBF1BF0CC7F3FDBE3AD8B9AC",
@@ -526,7 +526,7 @@
     },
     {
       "file": "barbequesdelight-1.3.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\barbequesdelight-1.3.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\barbequesdelight-1.3.0.jar",
       "bytes": 847092,
       "sha256": "FCE559AD8C0964CF4E3BFD9FC03FC2AB87BEBC31E446968C87D3876A86F23F7E",
       "md5": "66DFE9FA636D93812B2297751EC1D736",
@@ -573,7 +573,7 @@
     },
     {
       "file": "barched-neoforge-0.0.12-migration.1-asm.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\barched-neoforge-0.0.12-migration.1-asm.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\barched-neoforge-0.0.12-migration.1-asm.jar",
       "bytes": 1829478,
       "sha256": "CD93249FA802559886BE89F359E69DAEF1F38919F4B376B88BA1E2CE78F1BD4B",
       "md5": "6ABAD54DFBB3DD13F5516F7D2DCB5831",
@@ -627,7 +627,7 @@
     },
     {
       "file": "baubley-heart-canisters-1.21.1-1.2.3.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\baubley-heart-canisters-1.21.1-1.2.3.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\baubley-heart-canisters-1.21.1-1.2.3.jar",
       "bytes": 153222,
       "sha256": "34C3AABB612531BF58C92D10528C65EAD96D55DE532454F39152CB784E03000C",
       "md5": "4210EDAE10812A02ADED3B874CAC4104",
@@ -673,7 +673,7 @@
     },
     {
       "file": "bits_n_bobs-0.0.44.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\bits_n_bobs-0.0.44.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\bits_n_bobs-0.0.44.jar",
       "bytes": 1613264,
       "sha256": "6D8268D82CC6E38DD13F5247B28F37B7A35D66CB476C6E0632F4E9BA5570F5D8",
       "md5": "33956528DEBB0DB78F5410B9E2CBCE57",
@@ -711,7 +711,7 @@
     },
     {
       "file": "bookshelf-neoforge-1.21.1-21.1.67.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\bookshelf-neoforge-1.21.1-21.1.67.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\bookshelf-neoforge-1.21.1-21.1.67.jar",
       "bytes": 332655,
       "sha256": "933C016D71E19533DD2D0215717090F047251471FE2D11F61FDCEC0B39BC28D8",
       "md5": "C857BDEFCAAC1FC60FF49F10F6054FEF",
@@ -749,7 +749,7 @@
     },
     {
       "file": "BrewinAndChewin-neoforge-4.5.0+1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\BrewinAndChewin-neoforge-4.5.0+1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\BrewinAndChewin-neoforge-4.5.0+1.21.1.jar",
       "bytes": 1575450,
       "sha256": "9F6581823C2449DDE4AC1E9B4F5A7CC226C42E058E656741AB392F714F443971",
       "md5": "4548D2C0D5813E5A0ACAF5C68A86EC6C",
@@ -805,7 +805,7 @@
     },
     {
       "file": "c6c-1.2.5.1-purified.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\c6c-1.2.5.1-purified.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\c6c-1.2.5.1-purified.jar",
       "bytes": 666910,
       "sha256": "2666383E0E2C4C6F49494051FC2C3723D6B851DABD42D511F05712BAD2A529C4",
       "md5": "3BD2B0A6D4A76443DA66CD1F326028EB",
@@ -859,7 +859,7 @@
     },
     {
       "file": "carryon-neoforge-1.21.1-2.2.2.11.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\carryon-neoforge-1.21.1-2.2.2.11.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\carryon-neoforge-1.21.1-2.2.2.11.jar",
       "bytes": 347647,
       "sha256": "B18C734FB574C05C78DD33C4CD4C152E55EFC8AECC0B6DE876CC21BE3C147F7F",
       "md5": "F8438716763FE3865A833F8A9DCCEB9E",
@@ -897,7 +897,7 @@
     },
     {
       "file": "cc-tweaked-1.21.1-forge-1.120.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cc-tweaked-1.21.1-forge-1.120.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cc-tweaked-1.21.1-forge-1.120.0.jar",
       "bytes": 3126946,
       "sha256": "81A903710D109D129C249C105695A96F4BAD5E0ACF7068920FB191BA791C14CE",
       "md5": "AE82127D8F0A8575875032F1DA354561",
@@ -927,7 +927,7 @@
     },
     {
       "file": "cc_sable-neoforge-1.3.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cc_sable-neoforge-1.3.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cc_sable-neoforge-1.3.4.jar",
       "bytes": 43338,
       "sha256": "7504ABC1666A03E25EE2B8F99C352571B84EDC5F85DB24FA492D7B70D77ADFEB",
       "md5": "21CA77C3364BDF5A3A15ED5398476332",
@@ -981,7 +981,7 @@
     },
     {
       "file": "chefsdelight-1.0.5-neoforge-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\chefsdelight-1.0.5-neoforge-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\chefsdelight-1.0.5-neoforge-1.21.1.jar",
       "bytes": 95250,
       "sha256": "9FD7920A4CCED00443C107C1AC05002B35543734C76E05EF1D1EBF5F17CE99C8",
       "md5": "A99FB108E22E0BD50DBF543309D29A95",
@@ -1019,7 +1019,7 @@
     },
     {
       "file": "cloth-config-15.0.140-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cloth-config-15.0.140-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cloth-config-15.0.140-neoforge.jar",
       "bytes": 1163890,
       "sha256": "65E722E0D98431A07C45F8BDD8D529A217CC8C175FDE1740248BD5C1B4F3C0D4",
       "md5": "4C3757160403FCCCB8AD468C2EA22862",
@@ -1049,7 +1049,7 @@
     },
     {
       "file": "cmpackagecouriers-neoforge-2.3.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cmpackagecouriers-neoforge-2.3.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cmpackagecouriers-neoforge-2.3.0.jar",
       "bytes": 284554,
       "sha256": "9F9658C5E2036CD3862E263A7B4C625291CC1E0479650BD657DB7595807094A0",
       "md5": "FA69F3B9894677897549FBFDBA968596",
@@ -1104,7 +1104,7 @@
     },
     {
       "file": "CombatNouveau-v21.1.1-1.21.1-NeoForge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\CombatNouveau-v21.1.1-1.21.1-NeoForge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\CombatNouveau-v21.1.1-1.21.1-NeoForge.jar",
       "bytes": 100340,
       "sha256": "3ABE94698B5AC3323370ADADA82995020A57FABFD2D009C4882835FED95A2A4D",
       "md5": "4B5B464E37ACB2F86E969F1121B36969",
@@ -1150,7 +1150,7 @@
     },
     {
       "file": "connector-2.0.0-beta.16+1.21.1-full.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\connector-2.0.0-beta.16+1.21.1-full.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\connector-2.0.0-beta.16+1.21.1-full.jar",
       "bytes": 4533093,
       "sha256": "ED805A4DF711ADA58ED66AC2F1A30233EEB4E83C364BC4F16CD77F89A5BC5628",
       "md5": "D044303CEC7AB551E41C09456E12F508",
@@ -1171,7 +1171,7 @@
     },
     {
       "file": "ConstructionSticks-1.21.1-1.3.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ConstructionSticks-1.21.1-1.3.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ConstructionSticks-1.21.1-1.3.0.jar",
       "bytes": 262932,
       "sha256": "C035E07B7178FEFC12CA006255189A69C23608E7ADB3E91A616FE26A4E1711C5",
       "md5": "32422D7DBC89F476833BEDDA12E1FF42",
@@ -1209,7 +1209,7 @@
     },
     {
       "file": "constructionwand-kots-1.21.1-2.16.9.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\constructionwand-kots-1.21.1-2.16.9.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\constructionwand-kots-1.21.1-2.16.9.jar",
       "bytes": 202805,
       "sha256": "CF6ED4CF33D7CD44E026C4E6D2D337D022DB7050A861EE11CAE92C6BB3507B8F",
       "md5": "76862ABA20ADAAAD7FDB03383B40660B",
@@ -1263,7 +1263,7 @@
     },
     {
       "file": "copycats-3.0.4+mc.1.21.1-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\copycats-3.0.4+mc.1.21.1-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\copycats-3.0.4+mc.1.21.1-neoforge.jar",
       "bytes": 1791747,
       "sha256": "8480E2A62EAA625F75776831C1D8A9EF3D77D2D816FA2E67566C6EC25BA745D1",
       "md5": "C9F1A4B031CDFAB8EBFC06D81E891C43",
@@ -1309,7 +1309,7 @@
     },
     {
       "file": "cratedelight-25.09.22-1.21-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cratedelight-25.09.22-1.21-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cratedelight-25.09.22-1.21-neoforge.jar",
       "bytes": 166931,
       "sha256": "10AD1481E3613C92E942230C998A4BBFBD316ECFA5CFDCE53F89113CE6D2784B",
       "md5": "94869D38883F5E92B9ED61CD7809EE34",
@@ -1347,7 +1347,7 @@
     },
     {
       "file": "create-1.21.1-6.0.10.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-1.21.1-6.0.10.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-1.21.1-6.0.10.jar",
       "bytes": 19123767,
       "sha256": "EF87FE5709F1BA1F5B8BB20A2925B5AFB4669E178FD6D8BF10C167759EEFE37A",
       "md5": "179189C52B45A469E683570BE4E77188",
@@ -1451,7 +1451,7 @@
     },
     {
       "file": "create-aeronautics-bundled-1.21.1-1.2.1.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-aeronautics-bundled-1.21.1-1.2.1.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-aeronautics-bundled-1.21.1-1.2.1.1.jar",
       "bytes": 33058060,
       "sha256": "C49EF881581E91F42D8F6AD1A7E8967EB0D92A7D7551C483B5CD765BE90648D7",
       "md5": "0C94F39CDFA717C929133250D6D4F544",
@@ -1492,7 +1492,7 @@
     },
     {
       "file": "create-carriage-orientation-guard-1.0.0+neoforge.1.21.1-p0.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-carriage-orientation-guard-1.0.0+neoforge.1.21.1-p0.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-carriage-orientation-guard-1.0.0+neoforge.1.21.1-p0.2.jar",
       "bytes": 6288,
       "sha256": "805D6841BD30B514A059B21BEE4B6C70E183CB379CA286032975DCB961D6D74E",
       "md5": "B8732E23D91B5275F33BB4B2EB441296",
@@ -1538,7 +1538,7 @@
     },
     {
       "file": "create-central-kitchen-2.5.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-central-kitchen-2.5.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-central-kitchen-2.5.0.jar",
       "bytes": 375492,
       "sha256": "EF581FB9E62FFDA6BF5E1C6854847F5E53FE7DD43ADB4C1A318426481468AFEC",
       "md5": "66C68BCF22380798FB2F028AB2CC46EC",
@@ -1600,7 +1600,7 @@
     },
     {
       "file": "create-dynamic-blocking-1.0.0+neoforge.1.21.1-equivalence.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-dynamic-blocking-1.0.0+neoforge.1.21.1-equivalence.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-dynamic-blocking-1.0.0+neoforge.1.21.1-equivalence.1.jar",
       "bytes": 12258,
       "sha256": "8BC10C4B4949ED701F131FF36CCCE64DA2A817C13DFDD3838CFAC7512836ACED",
       "md5": "694C0FA94A39078EC75067864932DB1F",
@@ -1646,7 +1646,7 @@
     },
     {
       "file": "create-enchantment-industry-2.4.2-cei251-backport.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-enchantment-industry-2.4.2-cei251-backport.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-enchantment-industry-2.4.2-cei251-backport.1.jar",
       "bytes": 1575446,
       "sha256": "5B2C3BE95385DBF93000759DB604AB4C71224D7455C437C1B4650D91FAC669EB",
       "md5": "8CED1E311DC725E47E8382F7BB64C238",
@@ -1741,7 +1741,7 @@
     },
     {
       "file": "create-integrated-farming-1.2.6.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-integrated-farming-1.2.6.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-integrated-farming-1.2.6.jar",
       "bytes": 438847,
       "sha256": "6EEF62F0A46D68E0FEC18CE23C14104A0608FF9C66939C59E88C606FA268DD40",
       "md5": "8B4A246A8C0B0AAF8EE4D3016745C6A5",
@@ -1803,7 +1803,7 @@
     },
     {
       "file": "create_aeronautics_automated_logistics-0.4.2a.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_aeronautics_automated_logistics-0.4.2a.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_aeronautics_automated_logistics-0.4.2a.jar",
       "bytes": 805730,
       "sha256": "FA8A2363F6DA9674FAE97AAC1FFF7002747E13ED921C1C7A3DCC763184402898",
       "md5": "A661F5496ECC631FD33909DC41224C3F",
@@ -1873,7 +1873,7 @@
     },
     {
       "file": "create_aeronautics_toolgun-0.2.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_aeronautics_toolgun-0.2.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_aeronautics_toolgun-0.2.0.jar",
       "bytes": 827443,
       "sha256": "506A0DB3F4F17F55AE32E09254EE7B201BE784FCA686CB749286B21AD024C995",
       "md5": "C5318320770F510DC5A469FFBE1EE303",
@@ -1911,7 +1911,7 @@
     },
     {
       "file": "create_avionics-neoforge-1.21.1-0.5.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_avionics-neoforge-1.21.1-0.5.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_avionics-neoforge-1.21.1-0.5.1.jar",
       "bytes": 151025,
       "sha256": "0764B22558B639E675A12AEE439B74F965277EAC883A015C02191CE9E895CB95",
       "md5": "C555269AA22CB98B2598D771196454E7",
@@ -1997,7 +1997,7 @@
     },
     {
       "file": "create_compressed-2.2.0-neoforge-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_compressed-2.2.0-neoforge-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_compressed-2.2.0-neoforge-1.21.1.jar",
       "bytes": 158857,
       "sha256": "B4CE8B8031EF9917835E71EE6BFE05DC8150EA27D78CD7C50F1873EB290A4880",
       "md5": "F06F3148370C7D0947892A5DBEDDB34C",
@@ -2035,7 +2035,7 @@
     },
     {
       "file": "create_connected-1.3.2-mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_connected-1.3.2-mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_connected-1.3.2-mc1.21.1.jar",
       "bytes": 6773076,
       "sha256": "1D58A593B4FAA692DBD74C99C12A7FAC3AC82828A86F5CA3FCE5B15AA7C7859C",
       "md5": "89779A5ABD7296F1F201B20B51CA622B",
@@ -2082,7 +2082,7 @@
     },
     {
       "file": "create_easy_structures-0.2a-neoforge-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_easy_structures-0.2a-neoforge-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_easy_structures-0.2a-neoforge-1.21.1.jar",
       "bytes": 469490,
       "sha256": "8D5949114E9DD506C4A8598F789E63678FDF6B2B90F40A8E6EF2BABC6F56029F",
       "md5": "183F48DD9EC8A62CF2D2654172CCEB05",
@@ -2128,7 +2128,7 @@
     },
     {
       "file": "create_ez_stock_ticker-1.0.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_ez_stock_ticker-1.0.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_ez_stock_ticker-1.0.4.jar",
       "bytes": 715885,
       "sha256": "E811F8B84608225E398B7FCC2E9EE8149AA71C2965FC760E101B9153AB611444",
       "md5": "C2C33781BB51229AAB2435AFC1AE14F2",
@@ -2166,7 +2166,7 @@
     },
     {
       "file": "create_hypertube-0.5.0-ALPHA-NEOFORGE.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_hypertube-0.5.0-ALPHA-NEOFORGE.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_hypertube-0.5.0-ALPHA-NEOFORGE.jar",
       "bytes": 499740,
       "sha256": "FDCF86646A75465DFE711123E2D98C32D582F8A60D7819295315BBC066F8099E",
       "md5": "F29BBD65A169507C9381DC557B689374",
@@ -2220,7 +2220,7 @@
     },
     {
       "file": "create_mechanical_spawner-1.21.1-1.3.1-6.0.10.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_mechanical_spawner-1.21.1-1.3.1-6.0.10.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_mechanical_spawner-1.21.1-1.3.1-6.0.10.jar",
       "bytes": 1215658,
       "sha256": "1733F4E1E0DC668A52DA15CA1992A9F4F2508C5A8B709C33DD24B16D18708E7C",
       "md5": "9B77E0D7D92FAABC6F0B93CECD11F54E",
@@ -2274,7 +2274,7 @@
     },
     {
       "file": "create_pattern_schematics-2.0.10.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_pattern_schematics-2.0.10.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_pattern_schematics-2.0.10.jar",
       "bytes": 221764,
       "sha256": "D6525B9AB9914A194CA5AA00E6605F5977D8AC28722CDCCCE018DA44F62BC5C5",
       "md5": "AE96B6C00E6A87FFE6D5DF48302690FD",
@@ -2320,7 +2320,7 @@
     },
     {
       "file": "create_power_loader-2.0.5-mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_power_loader-2.0.5-mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_power_loader-2.0.5-mc1.21.1.jar",
       "bytes": 442369,
       "sha256": "69FB0433DCBA1597E7FBC06B2731EBD441F8ED99E20D8EC798D852D6865D1BD7",
       "md5": "DB072C13031F5144D140335206FDAD89",
@@ -2367,7 +2367,7 @@
     },
     {
       "file": "create_tweaked_controllers-1.21.1-1.2.7.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_tweaked_controllers-1.21.1-1.2.7.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create_tweaked_controllers-1.21.1-1.2.7.jar",
       "bytes": 303343,
       "sha256": "EDA56263FABFCF4064DBAA8950A7F469775D4457DC807EE84BA29169690FDA34",
       "md5": "B7CFE34FA390ACAD58E8A42CE90718F8",
@@ -2413,7 +2413,7 @@
     },
     {
       "file": "createadditionallogistics-1.21.1-1.4.5.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createadditionallogistics-1.21.1-1.4.5.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createadditionallogistics-1.21.1-1.4.5.jar",
       "bytes": 952653,
       "sha256": "6C06FF35A0BF8F0714026547F6587DC3BDC80199023E48C9B03AF2652BBC95C0",
       "md5": "A81079838BDC32142BD9730F69881911",
@@ -2459,7 +2459,7 @@
     },
     {
       "file": "createbigcannons-5.11.5+mc.1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createbigcannons-5.11.5+mc.1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createbigcannons-5.11.5+mc.1.21.1.jar",
       "bytes": 3765142,
       "sha256": "2C0576338EC400BEF5CA373650E3E919EEE602C002CE1B7B6EB0F69F3C67764A",
       "md5": "09985E607D92012FF7C5D4A244D8F0F7",
@@ -2569,7 +2569,7 @@
     },
     {
       "file": "createdeco-2.1.3.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createdeco-2.1.3.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createdeco-2.1.3.jar",
       "bytes": 3323409,
       "sha256": "508451F42357F3C61CB0A2FC1AE2DB9465A6C7EB490D2EFFCAFFBE465E0A1CA6",
       "md5": "96161D3AB7335827560DD1D435AE3D06",
@@ -2615,7 +2615,7 @@
     },
     {
       "file": "createdieselgenerators-1.21.1-1.3.14.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createdieselgenerators-1.21.1-1.3.14.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createdieselgenerators-1.21.1-1.3.14.jar",
       "bytes": 3143118,
       "sha256": "038D7F9173FE7F792B77054AB98E9543E04630825610A05B036329D30D02329C",
       "md5": "5700362ABE38D2E61A577B0DA032CB69",
@@ -2662,7 +2662,7 @@
     },
     {
       "file": "CreateDragonsPlus-1.11.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\CreateDragonsPlus-1.11.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\CreateDragonsPlus-1.11.4.jar",
       "bytes": 1029344,
       "sha256": "80687F22DAA95FA6240631097688F1E0295A5D31473D9AA56A14D360D863E98B",
       "md5": "E3B66C1FFA852FCF4297AD9FB423C39B",
@@ -2709,7 +2709,7 @@
     },
     {
       "file": "creategearsandtavern-1.1.6.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\creategearsandtavern-1.1.6.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\creategearsandtavern-1.1.6.jar",
       "bytes": 724827,
       "sha256": "CD58B8F99D6C8085A66B3ED17A6DC3F469A3C517D36A5C7571B83A76A0FFDCEC",
       "md5": "47CA24D08B322E73C53AAA795219ACA9",
@@ -2795,7 +2795,7 @@
     },
     {
       "file": "createliquidfuel-2.1.1-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createliquidfuel-2.1.1-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createliquidfuel-2.1.1-1.21.1.jar",
       "bytes": 18140,
       "sha256": "CCD44B069962890352DFEE442508880A37EECD3C5625D74D668DD6EB7D39EE3D",
       "md5": "40493B83833AF97C8D717084B61E7D62",
@@ -2841,7 +2841,7 @@
     },
     {
       "file": "createoreexcavation-1.21-1.6.8.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createoreexcavation-1.21-1.6.8.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createoreexcavation-1.21-1.6.8.jar",
       "bytes": 476990,
       "sha256": "D3A2E1A6E65DE7E50AE9E279DE399B6535DA407ABC8E6B4688A56F2E461AAB99",
       "md5": "3539FFEC4607FEA12BEBC5AA843DB283",
@@ -2903,7 +2903,7 @@
     },
     {
       "file": "createprism-1.2.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createprism-1.2.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createprism-1.2.2.jar",
       "bytes": 1287223,
       "sha256": "3B9C80F8A0104A2CEE1AF2B0A17B5A500F5600C55BCCC441A34063154587A8FA",
       "md5": "14CCEAAA0953AA2F78034E87C3A02813",
@@ -2949,7 +2949,7 @@
     },
     {
       "file": "createpropulsion-1.1.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createpropulsion-1.1.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createpropulsion-1.1.4.jar",
       "bytes": 1196735,
       "sha256": "816329242CE595D0F8B8BD1A7EA00DF48470D41F5B79240FAB682BBFBE6F39A1",
       "md5": "4D67F8A63E402DD31EF5E150FAA83EC9",
@@ -3091,7 +3091,7 @@
     },
     {
       "file": "createrailgrinding-1.2.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createrailgrinding-1.2.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createrailgrinding-1.2.1.jar",
       "bytes": 877593,
       "sha256": "3ABCC381B044DA297380CC2634DAC4DDF4E9C30E24F60FCC751B26E0686B407C",
       "md5": "BDAC0D213D814CCEDDA84656D61AFA09",
@@ -3137,7 +3137,7 @@
     },
     {
       "file": "createredstonelinkgui-1.21.1-1.3.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createredstonelinkgui-1.21.1-1.3.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createredstonelinkgui-1.21.1-1.3.0.jar",
       "bytes": 101655,
       "sha256": "509A3E239E07A7B4B134D7B99BAAF6F60F56C50BD3BB769554BD8CC0D40C2B56",
       "md5": "5BC4C53643A347E50B5253C6B55DA41A",
@@ -3199,7 +3199,7 @@
     },
     {
       "file": "createultimine-1.21.1-neoforge-1.3.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createultimine-1.21.1-neoforge-1.3.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createultimine-1.21.1-neoforge-1.3.2.jar",
       "bytes": 95195,
       "sha256": "96FEB5F37DA16DD41E2F547576DA72941C664AA5BAE3A6618621404C783522FB",
       "md5": "114AE1554CC5B027F8A4796848579D73",
@@ -3253,7 +3253,7 @@
     },
     {
       "file": "curios-neoforge-9.5.1+1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\curios-neoforge-9.5.1+1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\curios-neoforge-9.5.1+1.21.1.jar",
       "bytes": 410690,
       "sha256": "A45DF2125C26219974ABA7507FFC9AFE7B83ACC941A386AF3FAACB1CC0056FDE",
       "md5": "E8F0A3574264BB202C153B90293DC84C",
@@ -3291,7 +3291,7 @@
     },
     {
       "file": "cyclopscore-1.21.1-neoforge-1.29.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cyclopscore-1.21.1-neoforge-1.29.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cyclopscore-1.21.1-neoforge-1.29.2.jar",
       "bytes": 1161287,
       "sha256": "C8A3FA04CD3C9E3EFB903C0A7C79E8F4FEC5CB6E30F5B858ABA9236ED59021A6",
       "md5": "EDE3AA664ACB2C5F67E2A8AAEC5F1B62",
@@ -3329,7 +3329,7 @@
     },
     {
       "file": "dawnoftimebuilder-neoforge-1.21.1-1.6.6.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\dawnoftimebuilder-neoforge-1.21.1-1.6.6.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\dawnoftimebuilder-neoforge-1.21.1-1.6.6.jar",
       "bytes": 3083725,
       "sha256": "3B37504F81554F9965F1292005BD0DA3BBDB09F367D1891A15C166AB0BA0E739",
       "md5": "562F0C4B96C8EE97C242CAEF7567E884",
@@ -3375,7 +3375,7 @@
     },
     {
       "file": "deferred-content-protection-1.0.0+neoforge.1.21.1-first-release.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\deferred-content-protection-1.0.0+neoforge.1.21.1-first-release.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\deferred-content-protection-1.0.0+neoforge.1.21.1-first-release.1.jar",
       "bytes": 23338,
       "sha256": "1C7C4B2A76978C563C18EE05ABA9292099E6B15BA920CF2699904068F0B1104B",
       "md5": "A366B8DA9AB0FB83E079C715F6AD8C0F",
@@ -3413,7 +3413,7 @@
     },
     {
       "file": "deployer-0.1.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\deployer-0.1.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\deployer-0.1.2.jar",
       "bytes": 2010014,
       "sha256": "A6FC332B19B38A37A67BE8285E837DDD172F51F8026EACB6C4037A0EEB331B76",
       "md5": "6F7ADECAEBCA0ECD2B85446ADEA4016D",
@@ -3484,7 +3484,7 @@
     },
     {
       "file": "display_case-neoforge-1.21.1-1.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\display_case-neoforge-1.21.1-1.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\display_case-neoforge-1.21.1-1.2.jar",
       "bytes": 52914,
       "sha256": "3782905033B366C6F7383EF11102F381D85B5FE306446EC86527F043A8774ED8",
       "md5": "6AC4118DFC8F7CB46144956600ED3A9A",
@@ -3522,7 +3522,7 @@
     },
     {
       "file": "displaydelight-1.7.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\displaydelight-1.7.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\displaydelight-1.7.0.jar",
       "bytes": 1144367,
       "sha256": "4A77575139AA2FD1E1887243461E4F5CF1A532AC0A3A4D3A80C469D07A6DF55C",
       "md5": "7E084605B80ACC663AB0F2509222359C",
@@ -3552,7 +3552,7 @@
     },
     {
       "file": "drivebywire-0.2.9.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\drivebywire-0.2.9.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\drivebywire-0.2.9.jar",
       "bytes": 269068,
       "sha256": "5F8EAA10A6D61AA7330ED997C4F812509C55F02F7213AFBEBDE77C4AF17C23C3",
       "md5": "91299DD9ABB32161F9D5C1E6C6FF23F2",
@@ -3614,7 +3614,7 @@
     },
     {
       "file": "electroenergetics-1.21.1-1.1.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\electroenergetics-1.21.1-1.1.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\electroenergetics-1.21.1-1.1.1.jar",
       "bytes": 4771388,
       "sha256": "EA5DF2C5100A4AA178BD0054779015D85C63DA221A782915240656601B51AEFD",
       "md5": "A400544B9647E64A1359C742C3888795",
@@ -3661,7 +3661,7 @@
     },
     {
       "file": "ends_delight-2.6.1+neoforge.1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ends_delight-2.6.1+neoforge.1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ends_delight-2.6.1+neoforge.1.21.1.jar",
       "bytes": 258124,
       "sha256": "030593AA0957520B114C7AB36532CBF3C63C02D7D1BFF86331B8BD9FC4145C4E",
       "md5": "B6BCDD7A6FB58041D068A1F5752C4BBE",
@@ -3707,7 +3707,7 @@
     },
     {
       "file": "escalated-1.3.1-mc.1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\escalated-1.3.1-mc.1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\escalated-1.3.1-mc.1.21.1.jar",
       "bytes": 512511,
       "sha256": "CF2DE1AC5439E72A7020BA7AD42EA5B0E225B0FBAAA4CA941913E74C77EA582B",
       "md5": "8B677397F54E68440E452C3953FD9697",
@@ -3761,7 +3761,7 @@
     },
     {
       "file": "exposure-neoforge-1.21.1-1.9.18.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\exposure-neoforge-1.21.1-1.9.18.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\exposure-neoforge-1.21.1-1.9.18.jar",
       "bytes": 2192415,
       "sha256": "674C537A99F69B2BAE53521C95DAE59BC5F4EB2EB15418EEC0ECBAF36B53D888",
       "md5": "E927EA94D0DC436BD21DD86420EACC40",
@@ -3807,7 +3807,7 @@
     },
     {
       "file": "extra_gauges-2.1.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\extra_gauges-2.1.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\extra_gauges-2.1.2.jar",
       "bytes": 1055930,
       "sha256": "590A00B64D6AA4D347E848FDCC4824740987695AC899754D57036D62BEE5BD2D",
       "md5": "5C384B50B9328E12E443B91C7218071E",
@@ -3861,7 +3861,7 @@
     },
     {
       "file": "fabric-language-kotlin-1.13.13+kotlin.2.4.10.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fabric-language-kotlin-1.13.13+kotlin.2.4.10.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fabric-language-kotlin-1.13.13+kotlin.2.4.10.jar",
       "bytes": 8076363,
       "sha256": "34CCDACF13BB9351FE43CE61912C2E09B72364E43E787D36BA3D2D04DEC75A52",
       "md5": "B70470268BE8C74A10E10B24A2BF7DF6",
@@ -3904,7 +3904,7 @@
     },
     {
       "file": "FarmersDelight-1.21.1-1.3.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\FarmersDelight-1.21.1-1.3.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\FarmersDelight-1.21.1-1.3.2.jar",
       "bytes": 3163042,
       "sha256": "8FF438D62E1FCE61542945FAAE45975D823E04BD6E73A07A121EA05CE2F03DE7",
       "md5": "60186E1B39385ECAE70FF2F194EF7C32",
@@ -3950,7 +3950,7 @@
     },
     {
       "file": "fluidlogistics-1.1.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fluidlogistics-1.1.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fluidlogistics-1.1.0.jar",
       "bytes": 1797788,
       "sha256": "F7B4A86876B6CEA65EC8A6D02511698EE3430D2D00D5833C3AE7CFAACC625755",
       "md5": "448877708920CA43B1B613FAA3299854",
@@ -4052,7 +4052,7 @@
     },
     {
       "file": "ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ForgeConfigAPIPort-v21.1.6-1.21.1-Fabric.jar",
       "bytes": 633065,
       "sha256": "2E3A8F0E3BDA85A7D722720E7CE879CBD9D028D9395C6FC224D329B3C982D9B1",
       "md5": "EBA1A7F9D9976E983A2B9EB5E915E087",
@@ -4108,7 +4108,7 @@
     },
     {
       "file": "forgified-fabric-api-0.116.15+2.3.1+1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\forgified-fabric-api-0.116.15+2.3.1+1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\forgified-fabric-api-0.116.15+2.3.1+1.21.1.jar",
       "bytes": 5590061,
       "sha256": "B152376A89CF790CA7966DF220F3FA85FB8ECB603225A6A9BDB6684C94944F1E",
       "md5": "6047FCA6D016FCF8AB2812DDD96AF61D",
@@ -4206,7 +4206,7 @@
     },
     {
       "file": "framework-neoforge-1.21.1-0.13.10.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\framework-neoforge-1.21.1-0.13.10.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\framework-neoforge-1.21.1-0.13.10.jar",
       "bytes": 387332,
       "sha256": "24CFE608BB62F4C46FDE6AB75639A28D835458C8132D874AB5BB8CFE39C78B06",
       "md5": "28043A3FDE038F4C164CA465D89BB803",
@@ -4244,7 +4244,7 @@
     },
     {
       "file": "frequency-1.21.1-neoforge-0.1.5.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\frequency-1.21.1-neoforge-0.1.5.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\frequency-1.21.1-neoforge-0.1.5.jar",
       "bytes": 529246,
       "sha256": "7DDD91917DB166E3230E429CDB4C794C134C999F32348561F0AAF1DEA76F0F54",
       "md5": "3742A7213F55188079361972A4E7E500",
@@ -4290,7 +4290,7 @@
     },
     {
       "file": "ftb-library-neoforge-2101.1.34.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ftb-library-neoforge-2101.1.34.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ftb-library-neoforge-2101.1.34.jar",
       "bytes": 1439001,
       "sha256": "603E7C9FC8E7020642F2FF6D3A904EF5CB12F7CF8B683C5FF8B08F120D083CFF",
       "md5": "F169932423AF84B27E9526C1DB2689FA",
@@ -4336,7 +4336,7 @@
     },
     {
       "file": "ftb-quests-neoforge-2101.1.21.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ftb-quests-neoforge-2101.1.21.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ftb-quests-neoforge-2101.1.21.jar",
       "bytes": 1440894,
       "sha256": "8559D32D03BE276B156F843C8D56539668545C379462E557A9642370662CC294",
       "md5": "5D9364A68580AF1C60BA885DD69D9D20",
@@ -4406,7 +4406,7 @@
     },
     {
       "file": "ftb-teams-neoforge-2101.1.9.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ftb-teams-neoforge-2101.1.9.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ftb-teams-neoforge-2101.1.9.jar",
       "bytes": 291847,
       "sha256": "C0E4FCB2E349DD24DD3BDDB1BCDA6C61DAD3C1DB38E3BF1100E5DA9C2753E571",
       "md5": "7517A7D5F209C6D26596472A272C1F27",
@@ -4460,7 +4460,7 @@
     },
     {
       "file": "ftb-ultimine-neoforge-2101.1.15.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ftb-ultimine-neoforge-2101.1.15.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ftb-ultimine-neoforge-2101.1.15.jar",
       "bytes": 177109,
       "sha256": "1393A85CEB6E4794450D5F06043E3A033278E31B86DE8E03950D8B87604B2213",
       "md5": "93DE42BB644FAD478EDE2CC67D4AAC16",
@@ -4522,7 +4522,7 @@
     },
     {
       "file": "ftb-xmod-compat-neoforge-21.1.7.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ftb-xmod-compat-neoforge-21.1.7.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ftb-xmod-compat-neoforge-21.1.7.jar",
       "bytes": 141226,
       "sha256": "3D175D859068628024F18DAB7F993E63B21D37CB767CBED850FD9BA63FBD0830",
       "md5": "B4B738D6AAC1E8A8A8891722120EF340",
@@ -4640,7 +4640,7 @@
     },
     {
       "file": "fxntstorage-1.3.0+mc-1.21.1-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fxntstorage-1.3.0+mc-1.21.1-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fxntstorage-1.3.0+mc-1.21.1-neoforge.jar",
       "bytes": 1690112,
       "sha256": "77BC10CBA0602373DA09DE5884122B67E6116DC2DB9E7EA9ED54AAAC15148D50",
       "md5": "94315FFF7EEDBACE0AC84D4BCA624D40",
@@ -4718,7 +4718,7 @@
     },
     {
       "file": "fzzy_config-0.7.6+1.21+neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fzzy_config-0.7.6+1.21+neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fzzy_config-0.7.6+1.21+neoforge.jar",
       "bytes": 2369895,
       "sha256": "4E5CC1438087B0BC0276969E88B9AD0BDF2BCC60D6CAF5FE79E18947D7A29050",
       "md5": "CD0823556E6D24046BD0F4BA74CD4981",
@@ -4764,7 +4764,7 @@
     },
     {
       "file": "geckolib-neoforge-1.21.1-4.9.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\geckolib-neoforge-1.21.1-4.9.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\geckolib-neoforge-1.21.1-4.9.1.jar",
       "bytes": 630581,
       "sha256": "38C73035D1E8C143610FA76550B0472EA46F8B75FCAF2A14574EBF47517B8D02",
       "md5": "684D0F23E0BADA770D39AE0D907D6015",
@@ -4810,7 +4810,7 @@
     },
     {
       "file": "goblintraders-neoforge-1.21.1-1.11.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\goblintraders-neoforge-1.21.1-1.11.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\goblintraders-neoforge-1.21.1-1.11.2.jar",
       "bytes": 462245,
       "sha256": "523AEBC80BAAB377072FE26C5FF9D1C3649764F185131E7849ACD99833D406DD",
       "md5": "ECBAD97F19E2FE0782C7AF96FBD0EEC8",
@@ -4856,7 +4856,7 @@
     },
     {
       "file": "happyghast-equivalence-1.0.0-equivalence.2+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\happyghast-equivalence-1.0.0-equivalence.2+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\happyghast-equivalence-1.0.0-equivalence.2+mc1.21.1.jar",
       "bytes": 13270,
       "sha256": "36C1CE14EE18B81C04654F1A6956F2257B7DEAC07746E960475AAF5C6F25A579",
       "md5": "AA8A329EBBEB5DD6F0F95AB5F59925B0",
@@ -4902,7 +4902,7 @@
     },
     {
       "file": "hardcorerevival-neoforge-1.21.1-21.1.14.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\hardcorerevival-neoforge-1.21.1-21.1.14.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\hardcorerevival-neoforge-1.21.1-21.1.14.jar",
       "bytes": 242442,
       "sha256": "8E1FE1C9358289A68B4E3D32BFEC7EF9D074D96D0897BBD148E4CF86F93C7A3B",
       "md5": "61FA58B58671393BDCD38462E92BF918",
@@ -4948,7 +4948,7 @@
     },
     {
       "file": "horseman-neoforge-1.21.1-1.5.9.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\horseman-neoforge-1.21.1-1.5.9.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\horseman-neoforge-1.21.1-1.5.9.jar",
       "bytes": 445058,
       "sha256": "6EAD0D129EE4A40ACEC31D569572EC18DB3F08A15CE73DF66CE7694E2B251266",
       "md5": "C5C28282815CE0BB9DF3E9B93F3E1744",
@@ -4994,7 +4994,7 @@
     },
     {
       "file": "hotbath-1.21.1-3.0.0-registry-fix.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
       "bytes": 712893,
       "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A",
       "md5": "2761F0B9F743D3396F379D8F1B26869A",
@@ -5056,7 +5056,7 @@
     },
     {
       "file": "immersive_paintings-neoforge-1.21.1-0.7.8-migration.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\immersive_paintings-neoforge-1.21.1-0.7.8-migration.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\immersive_paintings-neoforge-1.21.1-0.7.8-migration.1.jar",
       "bytes": 5523583,
       "sha256": "AF4D838434302FF65F676D3A4BE8682666E0CCF95392FCFFFBE33E00D79D8D86",
       "md5": "4FB01E589786D663C520D79885CCCBBD",
@@ -5102,7 +5102,7 @@
     },
     {
       "file": "irons_jewelry-1.21.1-1.6.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\irons_jewelry-1.21.1-1.6.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\irons_jewelry-1.21.1-1.6.0.jar",
       "bytes": 710072,
       "sha256": "6B3578DFF5CD2389B397EA66B9F40FEF7587E36B459CA8E5F8C715C7BEFD2388",
       "md5": "40741E07CC5A0CFF68EBFAB9BD93CE95",
@@ -5164,7 +5164,7 @@
     },
     {
       "file": "irons_lib-1.21.1-1.0.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\irons_lib-1.21.1-1.0.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\irons_lib-1.21.1-1.0.2.jar",
       "bytes": 374610,
       "sha256": "650900B0F6561A74D6E2129A9094FD0B8A9EEA0A60D2A580261E0D4B25FCAF22",
       "md5": "E721286EF6096E6789252C208C8D333E",
@@ -5218,7 +5218,7 @@
     },
     {
       "file": "irons_spellbooks-1.21.1-3.15.6.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\irons_spellbooks-1.21.1-3.15.6.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\irons_spellbooks-1.21.1-3.15.6.jar",
       "bytes": 13584342,
       "sha256": "BD8235AEF2F7F4827D8005E9700C1C04E5F3A84C50E0F92685674CAC49E985DB",
       "md5": "E85C986ADA93C16C1FC26AAAD86475BD",
@@ -5288,7 +5288,7 @@
     },
     {
       "file": "ironssablecompat-1.0.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ironssablecompat-1.0.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ironssablecompat-1.0.4.jar",
       "bytes": 65043,
       "sha256": "8BFAE20BDD87C457FF6B0922CF97F690205F1828C4F942B1CD615BF762171EDF",
       "md5": "D98EDC4A3E67E5042CBE4100716E3E6B",
@@ -5335,7 +5335,7 @@
     },
     {
       "file": "kaleidoscope-cookery-scarecrow-compat-1.0.0+neoforge.1.21.1-candidate13.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscope-cookery-scarecrow-compat-1.0.0+neoforge.1.21.1-candidate13.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscope-cookery-scarecrow-compat-1.0.0+neoforge.1.21.1-candidate13.1.jar",
       "bytes": 4453,
       "sha256": "E06FCFEA1FF76FB22EAD50964C18F22657971E42B6E82F0A2FE844C2F048B463",
       "md5": "E396BCDE22A1F2B6B9A3B2E0BBA3F765",
@@ -5381,7 +5381,7 @@
     },
     {
       "file": "kaleidoscope-nether-equivalence-backport-1.1.9-equivalence.3+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscope-nether-equivalence-backport-1.1.9-equivalence.3+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscope-nether-equivalence-backport-1.1.9-equivalence.3+mc1.21.1.jar",
       "bytes": 26632,
       "sha256": "AD022124989BA50FB1B95D58BA7AD2F9FC525A356108307EACE169F2850E2E34",
       "md5": "02DA657F10A3691D38800BAA535B7CCD",
@@ -5443,7 +5443,7 @@
     },
     {
       "file": "kaleidoscope_end-1.0.14-migration.7-neoforge+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscope_end-1.0.14-migration.7-neoforge+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscope_end-1.0.14-migration.7-neoforge+mc1.21.1.jar",
       "bytes": 480536,
       "sha256": "E03A7DBA3A67768C35F3CA1C0B47892CAF4A972F8362D27FF62675C7555A11BC",
       "md5": "39229F02068762C1E26092D68BA5B751",
@@ -5489,7 +5489,7 @@
     },
     {
       "file": "kaleidoscope_nether-1.1.2-neoforge+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscope_nether-1.1.2-neoforge+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscope_nether-1.1.2-neoforge+mc1.21.1.jar",
       "bytes": 1018826,
       "sha256": "4698B09F9A3EDD84AB37A9506C3B88C7B59E947B21AE894C477998421335FFB6",
       "md5": "0DC3631C02EC02673812651C43157328",
@@ -5535,7 +5535,7 @@
     },
     {
       "file": "kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
       "bytes": 5575411,
       "sha256": "AC0D269F395A5D8CBCFEDC747898D1A16171AB0C0C0E94681605F682FEEDAEF0",
       "md5": "214A068AD751B606A02730E7DA916B37",
@@ -5581,7 +5581,7 @@
     },
     {
       "file": "kaleidoscopedoll-1.4.1-neoforge+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscopedoll-1.4.1-neoforge+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscopedoll-1.4.1-neoforge+mc1.21.1.jar",
       "bytes": 3602786,
       "sha256": "AD63142CAE3B561D9BADCE1D8348268D85B8D4BC68084307810E22A48C7554EB",
       "md5": "F016EE7B4CB58370BE3B853481FFC8EC",
@@ -5619,7 +5619,7 @@
     },
     {
       "file": "kaleidoscopetavern-1.2.0-neoforge+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscopetavern-1.2.0-neoforge+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscopetavern-1.2.0-neoforge+mc1.21.1.jar",
       "bytes": 1838499,
       "sha256": "90D08D87EA9FF6341EEB371CB95BD82CD613FBC34326BC8D1723F598CA9B957B",
       "md5": "20E2852151E8020C313C16635DA629F0",
@@ -5665,7 +5665,7 @@
     },
     {
       "file": "kotlinforforge-5.12.0-all.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kotlinforforge-5.12.0-all.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kotlinforforge-5.12.0-all.jar",
       "bytes": 7279264,
       "sha256": "2785A4DD6DE5C6C56065FD8EB789C82771BD2EE773C30794C23160A3B2C39139",
       "md5": "93EC434C7112952F0501211A992538B9",
@@ -5686,7 +5686,7 @@
     },
     {
       "file": "kubejs-neoforge-2101.7.2-build.368.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kubejs-neoforge-2101.7.2-build.368.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kubejs-neoforge-2101.7.2-build.368.jar",
       "bytes": 2281720,
       "sha256": "28867299E7A9F02CFD74E34745FDBBB073FE4887FDDBC98FD6C1ED2E87B01482",
       "md5": "95792A5239AE2F1D478D2A674DCF557F",
@@ -5757,7 +5757,7 @@
     },
     {
       "file": "kubejs_curios_neoforge_1.21.1-1.0.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kubejs_curios_neoforge_1.21.1-1.0.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kubejs_curios_neoforge_1.21.1-1.0.4.jar",
       "bytes": 41200,
       "sha256": "A1EA50B512AABAE8859951EA6AC94F03E425E33446B4A3C507ED5E8C3F3739AB",
       "md5": "DDD0398A03484E3B44CCE920F6985DB3",
@@ -5795,7 +5795,7 @@
     },
     {
       "file": "kubejstweaks-1.0.6.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kubejstweaks-1.0.6.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kubejstweaks-1.0.6.jar",
       "bytes": 421764,
       "sha256": "2A444FB6E0931F30ACC4D5880B164CC7BC8FE24801973A75BDE384996C827E8F",
       "md5": "7ACEF1EB54EF972B5F3D5B3560B7E8D9",
@@ -5849,7 +5849,7 @@
     },
     {
       "file": "l2complements-3.1.3.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\l2complements-3.1.3.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\l2complements-3.1.3.jar",
       "bytes": 1129976,
       "sha256": "94E34372F6C0EE1D36FD18EEDA5F2C6676800D32D63AA250C194472C7196B8A7",
       "md5": "29DABF0481F810DC2F4D2484C0CE9275",
@@ -5896,7 +5896,7 @@
     },
     {
       "file": "l2hostility-3.0.18.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\l2hostility-3.0.18.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\l2hostility-3.0.18.jar",
       "bytes": 2307083,
       "sha256": "8821952B49C5E9B1980B4D7CCECBCFA8E957204D39AC62D8D40DFF34FAAAF780",
       "md5": "E5D78E32814DD3FEBBE0A7F3ABC88068",
@@ -5980,7 +5980,7 @@
     },
     {
       "file": "l2library-3.0.8.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\l2library-3.0.8.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\l2library-3.0.8.jar",
       "bytes": 973882,
       "sha256": "26038E30873CF505BC289E28F9DCF084561B8A4929B294DD0552BA5E52505DD6",
       "md5": "08CF4B2A2A746CED5EF1437F17EB9366",
@@ -6022,7 +6022,7 @@
     },
     {
       "file": "L_Ender's Cataclysm 1.21.1-3.31-optimaztion2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\L_Ender's Cataclysm 1.21.1-3.31-optimaztion2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\L_Ender's Cataclysm 1.21.1-3.31-optimaztion2.jar",
       "bytes": 73362723,
       "sha256": "C6556B0686167A2B4BF66163F0871986737ED51301D38CCF3FC9D1751BD578AC",
       "md5": "0A619C6838C6A977198CC3DC65B2728F",
@@ -6076,7 +6076,7 @@
     },
     {
       "file": "ldlib2-neoforge-1.21.1-2.2.17-all.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ldlib2-neoforge-1.21.1-2.2.17-all.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ldlib2-neoforge-1.21.1-2.2.17-all.jar",
       "bytes": 6420002,
       "sha256": "858B9FDAA792AABF9BF7CB622634FDFBA6A3EA80019443ABBD127D5E2BFE85EB",
       "md5": "A126104A33D2876770D026CEF2458B38",
@@ -6114,7 +6114,7 @@
     },
     {
       "file": "lionfishapi-3.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\lionfishapi-3.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\lionfishapi-3.1.jar",
       "bytes": 91596,
       "sha256": "AEEBF0692650AFBBC78259C0D4E3D5B7EDF037707E8AE5D56045066D83A19CF6",
       "md5": "6103FE4848D0F8289431A0B307EFC444",
@@ -6152,7 +6152,7 @@
     },
     {
       "file": "lootjs-neoforge-1.21.1-3.7.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\lootjs-neoforge-1.21.1-3.7.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\lootjs-neoforge-1.21.1-3.7.0.jar",
       "bytes": 247689,
       "sha256": "D168FD80F45E5F23DCED8A54FDEE87347A4C7FC6CCD9C76D30AE4D067BA9C60A",
       "md5": "21D3EDA21B53344DD1F34759B4428634",
@@ -6198,7 +6198,7 @@
     },
     {
       "file": "lootr-neoforge-1.21.1-1.11.37.121.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\lootr-neoforge-1.21.1-1.11.37.121.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\lootr-neoforge-1.21.1-1.11.37.121.jar",
       "bytes": 982683,
       "sha256": "BA02303C6DFEC4658A17D1CDC743C8F5335799ED8B2F2103DC95F896745B1262",
       "md5": "C1B256FA951408B7018A56DEDA434B12",
@@ -6236,7 +6236,7 @@
     },
     {
       "file": "maidsoulkitchen-1.21.1-beta-v0.1.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\maidsoulkitchen-1.21.1-beta-v0.1.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\maidsoulkitchen-1.21.1-beta-v0.1.4.jar",
       "bytes": 1025696,
       "sha256": "311718144F170CC359F7D8B07FAE67813EECD24C2FD1253621E10261BCBD672C",
       "md5": "03B7F68A44891177D95C6B9767DE9B24",
@@ -6282,7 +6282,7 @@
     },
     {
       "file": "MaidUseHandCrank_1.6.2-neoforge_21.1.219-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\MaidUseHandCrank_1.6.2-neoforge_21.1.219-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\MaidUseHandCrank_1.6.2-neoforge_21.1.219-1.21.1.jar",
       "bytes": 157169,
       "sha256": "7B24CE1007C57AEFD9E444C4470C5064FEAF4E16E7198AE5049E98F103FB5049",
       "md5": "72A641EAA2C76B0703EEC5978A94C6BB",
@@ -6352,7 +6352,7 @@
     },
     {
       "file": "mechanicals-1.21.1-1.1.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mechanicals-1.21.1-1.1.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mechanicals-1.21.1-1.1.4.jar",
       "bytes": 2007954,
       "sha256": "0A988CAB2340C867B500CF3DAF689CD2F375549EBFF0C2E0B6D9134C901BFFC9",
       "md5": "0299C9378F0627F83E70EB1C6D72BB2F",
@@ -6408,7 +6408,7 @@
     },
     {
       "file": "mighty_mail-neoforge-1.21.1-1.1.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mighty_mail-neoforge-1.21.1-1.1.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mighty_mail-neoforge-1.21.1-1.1.4.jar",
       "bytes": 224354,
       "sha256": "CE5EA21CB6348769953EC68A9ADB4288F033CBDFE720AA6CF7B9D78CC76526F5",
       "md5": "E58FB28C5CCD6BF844E6F65968B56682",
@@ -6462,7 +6462,7 @@
     },
     {
       "file": "mishanguc-1.6.1-1.21.1-migration.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mishanguc-1.6.1-1.21.1-migration.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mishanguc-1.6.1-1.21.1-migration.1.jar",
       "bytes": 6544920,
       "sha256": "4FE5146CCC01DBB30BFD1D2FFE4CAEAF590E7F24F5D8159028E1865EAA8625DD",
       "md5": "1356E6255EE99D54D96A622BCDD49364",
@@ -6508,7 +6508,7 @@
     },
     {
       "file": "mishanguc-pale-oak-equivalence-backport-1.6.3-beta.5-equivalence.1+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mishanguc-pale-oak-equivalence-backport-1.6.3-beta.5-equivalence.1+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mishanguc-pale-oak-equivalence-backport-1.6.3-beta.5-equivalence.1+mc1.21.1.jar",
       "bytes": 130621,
       "sha256": "1E378D0DD82F7858ECA36AE28FBB26B8A9A93B77DDA31EAD5A48BCEB043FF6C4",
       "md5": "4170E1A157AC2DDEB2BAD223D9C4047F",
@@ -6562,7 +6562,7 @@
     },
     {
       "file": "modulargolems-3.1.40.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\modulargolems-3.1.40.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\modulargolems-3.1.40.jar",
       "bytes": 3395560,
       "sha256": "252DB0D3CCFC99E9DC2C4D26078F1E3C1437117E5601A8B54F6881BD480E4771",
       "md5": "8233B3834F0267ED68E0CF108C86F111",
@@ -6645,7 +6645,7 @@
     },
     {
       "file": "MyNethersDelight-1.21.1-1.10.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\MyNethersDelight-1.21.1-1.10.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\MyNethersDelight-1.21.1-1.10.2.jar",
       "bytes": 825875,
       "sha256": "002678F15AE0E61805D3BBD0BC8C7D7F683D63E6AB479FF8FB2518514134C4C2",
       "md5": "DEC2B03B6F32739A2F9788FB2CB002BA",
@@ -6699,7 +6699,7 @@
     },
     {
       "file": "mysterious_mountain_lib-1.2.15-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mysterious_mountain_lib-1.2.15-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mysterious_mountain_lib-1.2.15-1.21.1.jar",
       "bytes": 291753,
       "sha256": "D750A23AAC696222984935263BAEEC96E95901BBECA134D8A1018D66E6E9E2D6",
       "md5": "085D1EC16D6F44F1DC3AD6AE0F7FC257",
@@ -6737,7 +6737,7 @@
     },
     {
       "file": "NaturesCompass-1.21.1-3.0.3-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\NaturesCompass-1.21.1-3.0.3-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\NaturesCompass-1.21.1-3.0.3-neoforge.jar",
       "bytes": 216873,
       "sha256": "6DD24F37F5D69A6F9803C00B7722F9F103647131C29415511FA01C6FECED0848",
       "md5": "7A0E95B67A63EF1BCEAF40434941466B",
@@ -6775,7 +6775,7 @@
     },
     {
       "file": "nautilus-equivalence-0.1.0-equivalence.2+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\nautilus-equivalence-0.1.0-equivalence.2+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\nautilus-equivalence-0.1.0-equivalence.2+mc1.21.1.jar",
       "bytes": 2108502,
       "sha256": "01EBD831AC5D12D60965168EE10887FB9DE81CE660341F420D0C51E9A1E33415",
       "md5": "FD90FFA6572B95B813EED348059A0312",
@@ -6813,7 +6813,7 @@
     },
     {
       "file": "netmusic-1.5.1-neoforge+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\netmusic-1.5.1-neoforge+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\netmusic-1.5.1-neoforge+mc1.21.1.jar",
       "bytes": 1472671,
       "sha256": "54D5BD0A82AF2D4E2B1CBE03D45FB2962D242EC6DECA0E5B016D3092CE74DCDB",
       "md5": "C652CB88B6CF2F9997DC468E0C5A5C9E",
@@ -6859,7 +6859,7 @@
     },
     {
       "file": "Patchouli-1.21.1-92-NEOFORGE.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Patchouli-1.21.1-92-NEOFORGE.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Patchouli-1.21.1-92-NEOFORGE.jar",
       "bytes": 646486,
       "sha256": "579F23933F1DB9569F35F7770B9F2B0B6592A9389D7B3411272487BF5C77C98D",
       "md5": "40AE12E5EA2554AE97EA38E133558E86",
@@ -6897,7 +6897,7 @@
     },
     {
       "file": "Placebo-1.21.1-9.9.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Placebo-1.21.1-9.9.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Placebo-1.21.1-9.9.1.jar",
       "bytes": 324056,
       "sha256": "42C90BC43800558B9322BD60FAA9011D6694E66A87B7E6B3B9F51FA735B527EA",
       "md5": "CC725FC5406D3AF893484CFBBA06F6ED",
@@ -6935,7 +6935,7 @@
     },
     {
       "file": "player-animation-lib-forge-2.0.4+1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\player-animation-lib-forge-2.0.4+1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\player-animation-lib-forge-2.0.4+1.21.1.jar",
       "bytes": 203149,
       "sha256": "DBE5DE45F5CD60C0E5E47AF14E6D564534A98456E973CF670CB881F6938EEE92",
       "md5": "ECB81C9479605DB12A77BEA774B88406",
@@ -6965,7 +6965,7 @@
     },
     {
       "file": "polymorph-neoforge-1.1.0+1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\polymorph-neoforge-1.1.0+1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\polymorph-neoforge-1.1.0+1.21.1.jar",
       "bytes": 174972,
       "sha256": "BEC8118978ADEB052DE9C4EAF9A595830621D82515A764F32F9C8A4DD52AB94B",
       "md5": "2368E0C92AE882677BBF4B87418656B9",
@@ -7003,7 +7003,7 @@
     },
     {
       "file": "powerful_dummy-21-0.0.9-hotfix.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\powerful_dummy-21-0.0.9-hotfix.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\powerful_dummy-21-0.0.9-hotfix.jar",
       "bytes": 136609,
       "sha256": "5E273464B3BCE2A177AAEBEFE2600B64F2E04846373451DB38ED6CA90B2BCA6F",
       "md5": "C2BCF507F3450DE893700F937F16FD56",
@@ -7041,7 +7041,7 @@
     },
     {
       "file": "prickle-neoforge-1.21.1-21.1.11.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\prickle-neoforge-1.21.1-21.1.11.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\prickle-neoforge-1.21.1-21.1.11.jar",
       "bytes": 84812,
       "sha256": "CCF46C442ED3C7FE41AD056F0940560829EC4DD88360985DFACD78F4614EB167",
       "md5": "533C154FB306CD8043564EE1533873CE",
@@ -7079,7 +7079,7 @@
     },
     {
       "file": "PuzzlesLib-v21.1.36-1.21.1-NeoForge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\PuzzlesLib-v21.1.36-1.21.1-NeoForge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\PuzzlesLib-v21.1.36-1.21.1-NeoForge.jar",
       "bytes": 1076281,
       "sha256": "7BE6DB8633D27A928AB986FAB52D4BB882E6B50D3087392FB6E1403D2D62EDCA",
       "md5": "6BEA7D7CD84691A4E0AEBFADA2642755",
@@ -7117,7 +7117,7 @@
     },
     {
       "file": "railways-0.2.1+neoforge-mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\railways-0.2.1+neoforge-mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\railways-0.2.1+neoforge-mc1.21.1.jar",
       "bytes": 12120869,
       "sha256": "BEB9032A5377CFCEE27D79E2DD6DFA2DE7ABCF049ABE4817C3ADF618B44ED671",
       "md5": "4144E2515BB880DFE4F8EDA9915D4A8F",
@@ -7179,7 +7179,7 @@
     },
     {
       "file": "reddensstonelantern-1.0.4-neoforge-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\reddensstonelantern-1.0.4-neoforge-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\reddensstonelantern-1.0.4-neoforge-1.21.1.jar",
       "bytes": 617092,
       "sha256": "401BC898C2D11DE178A8CDD1225874940E5A3A3BAA9A2CC1137F817B6A8ED53E",
       "md5": "EC8E1F008B5D6316D0D7CFE38BE22539",
@@ -7217,7 +7217,7 @@
     },
     {
       "file": "resourcefullib-neoforge-1.21-3.0.12.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\resourcefullib-neoforge-1.21-3.0.12.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\resourcefullib-neoforge-1.21-3.0.12.jar",
       "bytes": 484332,
       "sha256": "5E36F2C69DE008DC5795F730C84AB767688F15C810944B585485349A0C911261",
       "md5": "32DA88903167D24BB20FEBEEB2C79225",
@@ -7255,7 +7255,7 @@
     },
     {
       "file": "Retraining-neoforge-1.21-2.0.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Retraining-neoforge-1.21-2.0.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Retraining-neoforge-1.21-2.0.0.jar",
       "bytes": 21051,
       "sha256": "5AF5827A3035DAAB71B7A534FACE245C64237E5521C6C8125628CA116FE8AA26",
       "md5": "876F43B959103A98564D21CCC8F81D3F",
@@ -7293,7 +7293,7 @@
     },
     {
       "file": "rhino-2101.2.7-build.85.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\rhino-2101.2.7-build.85.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\rhino-2101.2.7-build.85.jar",
       "bytes": 882075,
       "sha256": "95DF92CE578B2504CB16D8C9FC285303BF062EB15452246A18E57B7CF091C19A",
       "md5": "F5DF23FAB1AEF88B69F67776E0F79904",
@@ -7314,7 +7314,7 @@
     },
     {
       "file": "ritchiesprojectilelib-2.1.2-mc.1.21.1-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ritchiesprojectilelib-2.1.2-mc.1.21.1-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ritchiesprojectilelib-2.1.2-mc.1.21.1-neoforge.jar",
       "bytes": 76369,
       "sha256": "CC509060833736FB650AA4C36B1CE33A7EEEB9CA6E9F8E80A7C951C9E7487B24",
       "md5": "1772F7D2EF79CDB3E77FF0335FE7F3F8",
@@ -7352,7 +7352,7 @@
     },
     {
       "file": "sable-neoforge-1.21.1-1.2.2.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\sable-neoforge-1.21.1-1.2.2.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\sable-neoforge-1.21.1-1.2.2.1.jar",
       "bytes": 12778626,
       "sha256": "591FC29F21095C1A7D69C88674B21E49F781A8CB1ABD0A430905C0874E1EA7DD",
       "md5": "1DD928F2F973CC704F6D28B8D4347706",
@@ -7440,7 +7440,7 @@
     },
     {
       "file": "sable-schematic-api-0.2.6.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\sable-schematic-api-0.2.6.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\sable-schematic-api-0.2.6.jar",
       "bytes": 919142,
       "sha256": "7694E38D73249DEFA9D6E1AA7D35A0E1E106C0CBEDC460EFE40441196F0635A9",
       "md5": "D4CC339B623C3977D4E8505A6350B93B",
@@ -7526,7 +7526,7 @@
     },
     {
       "file": "showcaseitem-1.21.1-1.1.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\showcaseitem-1.21.1-1.1.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\showcaseitem-1.21.1-1.1.0.jar",
       "bytes": 19759,
       "sha256": "384D87E7DFB6C36C73EC264F7C0D20758D45AB9EB1EEE00ECAA3BC06B2340E63",
       "md5": "6B184CC61DF68D118A25767DE5575FCC",
@@ -7564,7 +7564,7 @@
     },
     {
       "file": "simpletomb-1.21.1-1.4.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\simpletomb-1.21.1-1.4.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\simpletomb-1.21.1-1.4.4.jar",
       "bytes": 284497,
       "sha256": "BB9F1CCF10D88648534AC6FA8D688C2B56713B2BC5E3475B7A5F3B527B7E1C76",
       "md5": "82EAEF9221A939D7128725076EEB52AF",
@@ -7602,7 +7602,7 @@
     },
     {
       "file": "simulated_gauges-1.1.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\simulated_gauges-1.1.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\simulated_gauges-1.1.0.jar",
       "bytes": 828225,
       "sha256": "20295FDA5D87BCBB32A8A566570383D5F1E68464953F151AC060E0B6F8907006",
       "md5": "EDA88FFBDC63EE94141916FBD0B0E743",
@@ -7664,7 +7664,7 @@
     },
     {
       "file": "sootychimneys-neoforge-1.3.5.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\sootychimneys-neoforge-1.3.5.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\sootychimneys-neoforge-1.3.5.jar",
       "bytes": 175697,
       "sha256": "E492F89C632B423C60F2A6F91386133F3A31E6E02EA9970F9EF30ECE5FCE41D4",
       "md5": "93E3607E043EC68B9F946F532EC050CF",
@@ -7702,7 +7702,7 @@
     },
     {
       "file": "StructureCompass-1.21-4.0.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\StructureCompass-1.21-4.0.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\StructureCompass-1.21-4.0.0.jar",
       "bytes": 65447,
       "sha256": "D5409479AF7220AE86425A3D6244B3F7B7B794FB1CF66E5F4434E9204686AF7D",
       "md5": "24E70761F4ED55ECD81657DCAA51AD1C",
@@ -7740,7 +7740,7 @@
     },
     {
       "file": "supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\supermartijn642configlib-1.1.8-neoforge-mc1.21.jar",
       "bytes": 207514,
       "sha256": "D2BA7B839A2268E4E223457E813D11AA2476C3BF708A7BBA691D8FC851778A4B",
       "md5": "0428149C5DB7BAD43D75E6F758F47678",
@@ -7778,7 +7778,7 @@
     },
     {
       "file": "synaxis-1.2.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\synaxis-1.2.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\synaxis-1.2.1.jar",
       "bytes": 3369815,
       "sha256": "3CC00F2AA6D59A230467198B33B68DB9B0B6ADA4855998231485299BFCEAFA9C",
       "md5": "016A83518AFA3FB2752EF20E28324B8D",
@@ -7864,7 +7864,7 @@
     },
     {
       "file": "takesapillage-neoforge-1.0.12+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\takesapillage-neoforge-1.0.12+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\takesapillage-neoforge-1.0.12+mc1.21.1.jar",
       "bytes": 2795307,
       "sha256": "4B44199DB0A965D6CDB420025544E18D35D81FA70EE75F564F3B705FF550CF98",
       "md5": "B40E8BBE0E7E92F16726DA09E1186949",
@@ -7918,7 +7918,7 @@
     },
     {
       "file": "TinySkeletons-v21.1.0-1.21.1-NeoForge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\TinySkeletons-v21.1.0-1.21.1-NeoForge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\TinySkeletons-v21.1.0-1.21.1-NeoForge.jar",
       "bytes": 105750,
       "sha256": "CF3B5094C2619BD7E7951A3D4A2C553B9EAD3932EBDB4AC577F9599461261DA9",
       "md5": "AE7919F4009221E3477C505B918DE17B",
@@ -7964,7 +7964,7 @@
     },
     {
       "file": "toms_storage-neoforge-1.21.1-2.4.1-perf5.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\toms_storage-neoforge-1.21.1-2.4.1-perf5.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\toms_storage-neoforge-1.21.1-2.4.1-perf5.2.jar",
       "bytes": 929241,
       "sha256": "29DB765C7EB8D91DBA017CB108D1B7619E845816FDFADBB0E64BF2CCFD6A801B",
       "md5": "186E63C3B4A13F1CCB94039239F13D0F",
@@ -8018,7 +8018,7 @@
     },
     {
       "file": "torchmaster-neoforge-1.21.1-21.1.5-beta.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\torchmaster-neoforge-1.21.1-21.1.5-beta.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\torchmaster-neoforge-1.21.1-21.1.5-beta.jar",
       "bytes": 124820,
       "sha256": "D4AD13D09031D42857EDFAD83EF31303007A659E75486871ECDCD27EFDD0FEDD",
       "md5": "1420CDDE870931D83AFCA2E0BA98AB40",
@@ -8056,7 +8056,7 @@
     },
     {
       "file": "touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
       "bytes": 24411246,
       "sha256": "32BE64DD058B7A91F90107972D104BDC0946D858E690D4C72032F64873F9B15B",
       "md5": "63E32EE165EC0C4FE5FF2F14B8C72179",
@@ -8102,7 +8102,7 @@
     },
     {
       "file": "tracks-neoforge-1.21.1-1.0.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\tracks-neoforge-1.21.1-1.0.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\tracks-neoforge-1.21.1-1.0.1.jar",
       "bytes": 165818,
       "sha256": "3119FA84955907FD734EF77F2296EC2E546F4442BC3AE13B04046C5D71F61CCF",
       "md5": "07EC58128E43C420679A4BD457257F02",
@@ -8172,7 +8172,7 @@
     },
     {
       "file": "tradeworks-1.0.7.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\tradeworks-1.0.7.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\tradeworks-1.0.7.jar",
       "bytes": 1631621,
       "sha256": "661C1849E68AE5CB38C6E1871222067DC21858E9A966E3C61365596D3C9374DA",
       "md5": "1BBD2466D78E076647F59505B6D84126",
@@ -8227,7 +8227,7 @@
     },
     {
       "file": "trading_floor-3.0.12.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\trading_floor-3.0.12.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\trading_floor-3.0.12.jar",
       "bytes": 212493,
       "sha256": "BAF8F23CCDDB8DA5B674FE309E8007DDB5042EBAB2FDEB4D2663448DB53A5F3A",
       "md5": "6FCC97933812A45A30027B34C1803613",
@@ -8273,7 +8273,7 @@
     },
     {
       "file": "trueuuid-1.2.1-neoforge-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\trueuuid-1.2.1-neoforge-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\trueuuid-1.2.1-neoforge-1.21.1.jar",
       "bytes": 176104,
       "sha256": "A3DE790BAFFF4D96313C4DB6B06FE87F1CD3FBD94F5CB79208AD104419852550",
       "md5": "14BDFC54974D3B3FE561255D90BAADB9",
@@ -8311,7 +8311,7 @@
     },
     {
       "file": "ultramarine-1.21.1-0.7.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ultramarine-1.21.1-0.7.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ultramarine-1.21.1-0.7.jar",
       "bytes": 4931591,
       "sha256": "91537FE70699F6C44EEA9D86C1B4EA0E1883DD38855B1D55E17018E7275F3D03",
       "md5": "D43C5C21BC365E6F1964DDF9705D0A85",
@@ -8349,7 +8349,7 @@
     },
     {
       "file": "umapyoi-1.4.12-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\umapyoi-1.4.12-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\umapyoi-1.4.12-1.21.1.jar",
       "bytes": 3942974,
       "sha256": "B116CC06EB8144AF264B50AD378864915343F0F6A8FEE29277BA616F009F4C2D",
       "md5": "71A2F778C2681C5D716D994CA338AAEC",
@@ -8403,7 +8403,7 @@
     },
     {
       "file": "untitledduckmod-1.1.5-neoforge-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\untitledduckmod-1.1.5-neoforge-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\untitledduckmod-1.1.5-neoforge-1.21.1.jar",
       "bytes": 295168,
       "sha256": "11EABA6A2909ACED5C413619A81B93FB42E385EB36E3D754D701E83AAEC33863",
       "md5": "E94D5681825D732997F5F47C4D5D3C81",
@@ -8449,7 +8449,7 @@
     },
     {
       "file": "UsefulSlime-neoforge-1.21-1.12.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\UsefulSlime-neoforge-1.21-1.12.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\UsefulSlime-neoforge-1.21-1.12.1.jar",
       "bytes": 609239,
       "sha256": "C853D3372C4A6A9F3CFB79940EFB63C833B1BDD087F56530A82824BD6B01AD06",
       "md5": "D37FB0BF0C986DFE16ED29814F690CE3",
@@ -8495,7 +8495,7 @@
     },
     {
       "file": "veil-neoforge-1.21.1-4.1.3.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\veil-neoforge-1.21.1-4.1.3.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\veil-neoforge-1.21.1-4.1.3.jar",
       "bytes": 3315077,
       "sha256": "D4E93828164E0C6D2DFF913D0217FAA3D8427F712C93B24DA5F5230F52979B5A",
       "md5": "618DB8303895A7214AAC545014FE68A0",
@@ -8557,7 +8557,7 @@
     },
     {
       "file": "waypoint-fire-equivalence-0.1.1+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\waypoint-fire-equivalence-0.1.1+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\waypoint-fire-equivalence-0.1.1+mc1.21.1.jar",
       "bytes": 44651,
       "sha256": "86A85C0447315AC17D373E3708425CEB8450D9D0CB1FD9C7ABDC82CE8D8E5B92",
       "md5": "9CB1B093496E35D294C739B79DDDE31A",
@@ -8595,7 +8595,7 @@
     },
     {
       "file": "WoolToString-NeoForge-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\WoolToString-NeoForge-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\WoolToString-NeoForge-1.21.1.jar",
       "bytes": 31679,
       "sha256": "8895A0CE6754C0B74527C356E1C93C0423DFD72FF7644BEB59F7BD3F02D46EF1",
       "md5": "17E05940E5D39396EF106B8E882E32A4",
@@ -8633,7 +8633,7 @@
     },
     {
       "file": "yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
       "bytes": 1111051,
       "sha256": "673FECBFFAD26BB6D025FB5F60560CF6340E542BDF091D8D66074490515292F3",
       "md5": "FCCEFBC519790BA2CCFB70BAC43A6917",
@@ -8654,7 +8654,7 @@
     },
     {
       "file": "yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar",
       "bytes": 28197402,
       "sha256": "31DFFD39D1FED94F2088405AF3B8DC862E363BA389015780355571ECCA4A813D",
       "md5": "E41238D6BA778C1AA785347FDC2EF623",
@@ -8700,7 +8700,7 @@
     },
     {
       "file": "AlwaysEat-neoforge-1.0.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\AlwaysEat-neoforge-1.0.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\AlwaysEat-neoforge-1.0.0.jar",
       "bytes": 5036,
       "sha256": "ED6B9BFEDADDB5C15C592A83AF9A4C76815D94FD70718718BE1722A34E5F93ED",
       "md5": "470B56B7B4878B9908A5AE7AECFB1279",
@@ -8746,7 +8746,7 @@
     },
     {
       "file": "appleskin-neoforge-mc1.21-3.0.9.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\appleskin-neoforge-mc1.21-3.0.9.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\appleskin-neoforge-mc1.21-3.0.9.jar",
       "bytes": 75804,
       "sha256": "38B48DD6231341C9F964CE6E42C57EC866C6CC8F72BEC938390A59BAFB3922DF",
       "md5": "DB5FE7619D502CF5B9BC972A955CD3BC",
@@ -8776,7 +8776,7 @@
     },
     {
       "file": "attributefix-neoforge-1.21.1-21.1.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\attributefix-neoforge-1.21.1-21.1.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\attributefix-neoforge-1.21.1-21.1.2.jar",
       "bytes": 19798,
       "sha256": "63208BE1B019BD5BBE95A0C98605E271F9E30113E75E64EE28CF79F75964A06F",
       "md5": "59951F0C51ACCF352F00577023F0ABAF",
@@ -8830,7 +8830,7 @@
     },
     {
       "file": "BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\BetterAdvancements-NeoForge-1.21.1-0.4.3.21.jar",
       "bytes": 98641,
       "sha256": "60B548BEF04A2F0E1DA686EE9035C2E3D4ED0459A17D7A4836FC26AF6DE6B60E",
       "md5": "A18430F1F7ECF6DD1849A8F240F509AF",
@@ -8868,7 +8868,7 @@
     },
     {
       "file": "biggerbetterendcities-1.21.1-1.0.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\biggerbetterendcities-1.21.1-1.0.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\biggerbetterendcities-1.21.1-1.0.0.jar",
       "bytes": 22857,
       "sha256": "6EE234E4F0D69A98B81CAD75AE0B87EA1344A73E644A39CA95F26D9E5F16E8D7",
       "md5": "0B000743CED83D77C786129F76B7054D",
@@ -8906,7 +8906,7 @@
     },
     {
       "file": "biomespy-neoforge-1.21.1-1.3.3.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\biomespy-neoforge-1.21.1-1.3.3.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\biomespy-neoforge-1.21.1-1.3.3.jar",
       "bytes": 38355,
       "sha256": "5CDF106229E3D6B368B80FCFB1048BC632565E5F94F21D08F5CE713992B27648",
       "md5": "E3AC0C5D9759FD7729BAECB2478B02D2",
@@ -8944,7 +8944,7 @@
     },
     {
       "file": "c2me-neoforge-mc1.21.1-0.4.0-alpha.0.113.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\c2me-neoforge-mc1.21.1-0.4.0-alpha.0.113.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\c2me-neoforge-mc1.21.1-0.4.0-alpha.0.113.jar",
       "bytes": 3653679,
       "sha256": "D0798B7EF4E4DDFF44EA61332D5464FCD27659AF3E8C773C4D7EF2C4730E624F",
       "md5": "DD5855DA563FE21817B6DE3EBE36513E",
@@ -9009,7 +9009,7 @@
     },
     {
       "file": "cctweaked-startup-shutdown-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cctweaked-startup-shutdown-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\cctweaked-startup-shutdown-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar",
       "bytes": 3919,
       "sha256": "6744626E2B43643E9F28C9159FABD7A6A53CDCDEB83AE8252C266F7E987F84F7",
       "md5": "31A086161C0F054197078BB2A4D015C9",
@@ -9055,7 +9055,7 @@
     },
     {
       "file": "chest-colorizer-1.6.1-equivalence.2+mc1.21.1-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\chest-colorizer-1.6.1-equivalence.2+mc1.21.1-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\chest-colorizer-1.6.1-equivalence.2+mc1.21.1-neoforge.jar",
       "bytes": 150133,
       "sha256": "9CEF2FAC6BD959202E37882B941EBC51A1ED7A4259441D3B41372971FD04F6D8",
       "md5": "057836F554E603FA4C6F97FC4669056B",
@@ -9093,7 +9093,7 @@
     },
     {
       "file": "clientsort-neoforge-2.2.2+1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\clientsort-neoforge-2.2.2+1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\clientsort-neoforge-2.2.2+1.21.1.jar",
       "bytes": 342154,
       "sha256": "2844D0F7374EBFB0DD0782A675EF53311BB3CEDACB1CF6258C35025EB809225F",
       "md5": "5A55E75ADE402919E04DBBE7B3DDB729",
@@ -9139,7 +9139,7 @@
     },
     {
       "file": "colorfulhearts-neoforge-1.21.1-10.5.9.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\colorfulhearts-neoforge-1.21.1-10.5.9.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\colorfulhearts-neoforge-1.21.1-10.5.9.jar",
       "bytes": 156588,
       "sha256": "332A7F3DF1274CABEAE05E9361C41561C42A670787ADC7E4B6795961B4721401",
       "md5": "19928B5C0725B89B285D8B4E1EEC8943",
@@ -9177,7 +9177,7 @@
     },
     {
       "file": "colorwheel-neoforge-1.2.9+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\colorwheel-neoforge-1.2.9+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\colorwheel-neoforge-1.2.9+mc1.21.1.jar",
       "bytes": 398004,
       "sha256": "9259E4ADB5B091FE2BD60E57BE7F0B2EC9872F1C97FF6D2ED3BB2A9A5EC6407F",
       "md5": "5FB6FDE45515060B695C245ECBF5F1AE",
@@ -9255,7 +9255,7 @@
     },
     {
       "file": "colorwheel_patcher-neoforge-1.0.5+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\colorwheel_patcher-neoforge-1.0.5+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\colorwheel_patcher-neoforge-1.0.5+mc1.21.1.jar",
       "bytes": 210569,
       "sha256": "2285A5154739D2E9889D979E3BDF54104B56D7966DAC8D43367305E5AAEDCCE8",
       "md5": "395253024CA2839433D824B9EB715AD4",
@@ -9301,7 +9301,7 @@
     },
     {
       "file": "configured-neoforge-1.21.1-2.6.3.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\configured-neoforge-1.21.1-2.6.3.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\configured-neoforge-1.21.1-2.6.3.jar",
       "bytes": 428793,
       "sha256": "421FFD2604B5487CBDB284D1EB5D1CB8A7D28F3FF84D5B4BDA25E0A579282A15",
       "md5": "6BC7AEA6278CD85C5EB7BEB7EDBB555B",
@@ -9355,7 +9355,7 @@
     },
     {
       "file": "ConfiguredDefaults-v21.1.3-1.21.1-NeoForge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ConfiguredDefaults-v21.1.3-1.21.1-NeoForge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ConfiguredDefaults-v21.1.3-1.21.1-NeoForge.jar",
       "bytes": 43521,
       "sha256": "48B97DADA951826B4ABF9B2DCAB79C0E701BB2980C5BCA4977BAC7CA0C264EA7",
       "md5": "512D6E79B39E980C320D197668A142CF",
@@ -9393,7 +9393,7 @@
     },
     {
       "file": "Controlling-neoforge-1.21.1-19.0.5.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Controlling-neoforge-1.21.1-19.0.5.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Controlling-neoforge-1.21.1-19.0.5.jar",
       "bytes": 77555,
       "sha256": "CC525FB6B030D9E4D33176983F278919E17B33935E2CA568929BDFA98F2B44A0",
       "md5": "7141C2D0BB774DC6E4481BE32B685179",
@@ -9439,7 +9439,7 @@
     },
     {
       "file": "create-chute-unload-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-chute-unload-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-chute-unload-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar",
       "bytes": 4018,
       "sha256": "AC51AEFDDA8437D777B5C8B3E285E9036676D854F7958C6B882807C15BE0910A",
       "md5": "B0060297B22C5B49CD6A3ED96758A7D6",
@@ -9485,7 +9485,7 @@
     },
     {
       "file": "create-nerfad-1.2.3-neoforge+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-nerfad-1.2.3-neoforge+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\create-nerfad-1.2.3-neoforge+mc1.21.1.jar",
       "bytes": 13933,
       "sha256": "3AA4E8FC9DB8BABE4C4487E94B88E182A59656DCA08BC3BDE0A1B46E53D20422",
       "md5": "D1217A582C9642C5D02B8790755DBDA3",
@@ -9539,7 +9539,7 @@
     },
     {
       "file": "createbetterfps-1.21.1-1.1.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createbetterfps-1.21.1-1.1.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\createbetterfps-1.21.1-1.1.4.jar",
       "bytes": 26547,
       "sha256": "F0080F5CB186BF9F785DC5510BABAB94D97ADC7918952CFF780D2C5FADF2AC9A",
       "md5": "88827DCBAD6F5BF8974C40E6FFF77ED5",
@@ -9593,7 +9593,7 @@
     },
     {
       "file": "CreateCyberGoggles-1.21.1-8.3.6-NeoForge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\CreateCyberGoggles-1.21.1-8.3.6-NeoForge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\CreateCyberGoggles-1.21.1-8.3.6-NeoForge.jar",
       "bytes": 672590,
       "sha256": "F8295C0707B515A5840B5534086C5FFC7716FF332ECA5949B721452487D84614",
       "md5": "2B25A50B10E0C3FAE586E4DC330AD414",
@@ -9639,7 +9639,7 @@
     },
     {
       "file": "CreateFastSchematicCannon-1.4.1-neoforge-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\CreateFastSchematicCannon-1.4.1-neoforge-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\CreateFastSchematicCannon-1.4.1-neoforge-1.21.1.jar",
       "bytes": 74294,
       "sha256": "5DBC33A64C01E8FEF09585FAE9D09C9AE04B800E3C4315ACE85901A68EB5FAE3",
       "md5": "29D403BF1114A346CE18DBDB3F179A66",
@@ -9685,7 +9685,7 @@
     },
     {
       "file": "disconnect-packet-fix-neoforge-2.0.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\disconnect-packet-fix-neoforge-2.0.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\disconnect-packet-fix-neoforge-2.0.1.jar",
       "bytes": 8231,
       "sha256": "6254F47C73249108706860505F8261B0273AAFDC53FE8008AADFCA162F0CFD3B",
       "md5": "A03D8FE52660976D2885AF738FC082B7",
@@ -9723,7 +9723,7 @@
     },
     {
       "file": "DnT-ancient-city-overhaul-v2 [NeoForge].jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
       "bytes": 945155,
       "sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E",
       "md5": "1F6E33095F4B53735FBA45A202D92BEA",
@@ -9744,7 +9744,7 @@
     },
     {
       "file": "do_a_barrel_roll-neoforge-3.7.3+1.21.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\do_a_barrel_roll-neoforge-3.7.3+1.21.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\do_a_barrel_roll-neoforge-3.7.3+1.21.jar",
       "bytes": 465787,
       "sha256": "E56395EBB26318C11F3A9474BBA14518F17F4F2028683EB0AA9CDC7DACF124E2",
       "md5": "92AD2F96176A94D07283B1BD0EC76D5E",
@@ -9782,7 +9782,7 @@
     },
     {
       "file": "efficient_hashing-neoforge-1.0.0+1.21.1-mod.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\efficient_hashing-neoforge-1.0.0+1.21.1-mod.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\efficient_hashing-neoforge-1.0.0+1.21.1-mod.jar",
       "bytes": 23822,
       "sha256": "76BB1BD93E211CFFAC01F2879E2E6B54BEE2B5884BC06BEDF0C21D89107AF5AD",
       "md5": "02D0B40376B17A8EA04E0C011FBCE558",
@@ -9803,7 +9803,7 @@
     },
     {
       "file": "enchdesc-neoforge-1.21.1-21.1.10.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\enchdesc-neoforge-1.21.1-21.1.10.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\enchdesc-neoforge-1.21.1-21.1.10.jar",
       "bytes": 82629,
       "sha256": "9424C9AFF4EDF4D8730C931DF4253138AEAEE745EC839AF7078D292BB4EEAA16",
       "md5": "40E73C52FE6D63EAFE099E3BB042AD8D",
@@ -9857,7 +9857,7 @@
     },
     {
       "file": "Epic Villages 1.3.0 (1.21+).jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Epic Villages 1.3.0 (1.21+).jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Epic Villages 1.3.0 (1.21+).jar",
       "bytes": 3445547,
       "sha256": "0A49C689131AFFE588F0EB168873169DED54AC9F10B337410969D836E3DA32EB",
       "md5": "076A285432D8B451F93407AE89194DA1",
@@ -9878,7 +9878,7 @@
     },
     {
       "file": "fastleafdecay-35.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fastleafdecay-35.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fastleafdecay-35.jar",
       "bytes": 9511,
       "sha256": "0B90F259CAEF64C3AA09D05427859990A51ADEC072540A9C598370B86C966A98",
       "md5": "97223075D6407A012024FD7E3C48E5E8",
@@ -9916,7 +9916,7 @@
     },
     {
       "file": "fastrecipesearch-1.21.1-26.2-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fastrecipesearch-1.21.1-26.2-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fastrecipesearch-1.21.1-26.2-neoforge.jar",
       "bytes": 54702,
       "sha256": "E5944B8159EA7AE45E01C0D3FCBD6F75154B75336A35F01D4AC52F9B22D6CA81",
       "md5": "55EB360C2B709B5FC88DDE9AD66B04D3",
@@ -9937,7 +9937,7 @@
     },
     {
       "file": "fasttag-1.21.1-26.1-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fasttag-1.21.1-26.1-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fasttag-1.21.1-26.1-neoforge.jar",
       "bytes": 8970,
       "sha256": "25C5CCB26F7666441A0D60B33AB88A97BFC7D0C5D858D951774308F0D44F706F",
       "md5": "5A08B8144E7E574922B8CD3503C2274D",
@@ -9967,7 +9967,7 @@
     },
     {
       "file": "ferritecore-7.0.3-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ferritecore-7.0.3-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ferritecore-7.0.3-neoforge.jar",
       "bytes": 121559,
       "sha256": "D87EA28262715EBFF45B8A82D493E6B468E7A4521BC021DF5D88302196D030A8",
       "md5": "E0374DAC41D6C641903F9E241911E1D3",
@@ -10005,7 +10005,7 @@
     },
     {
       "file": "flatbedrock-neoforge-87.0.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\flatbedrock-neoforge-87.0.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\flatbedrock-neoforge-87.0.0.jar",
       "bytes": 7728,
       "sha256": "0A7DC68A9D0C943BC9451A7EE476CB7F17C5C2FACD3C9AF188D2D06EA6A7BBBF",
       "md5": "D825E50C95FDBF0E03E38C1870DA843A",
@@ -10043,7 +10043,7 @@
     },
     {
       "file": "flerovium-neoforge-1.21.1-1.1.1-all.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\flerovium-neoforge-1.21.1-1.1.1-all.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\flerovium-neoforge-1.21.1-1.1.1-all.jar",
       "bytes": 182475,
       "sha256": "2CEAC9A74E4F715E242EA710A7E5E226601EFC0B00AAE6AD0D55CCBD9FB6BC00",
       "md5": "DD02CC5521AC70A99082491362A7E6A2",
@@ -10085,7 +10085,7 @@
     },
     {
       "file": "fragmentum-neoforge-1.21.1-2.1.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fragmentum-neoforge-1.21.1-2.1.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fragmentum-neoforge-1.21.1-2.1.1.jar",
       "bytes": 888074,
       "sha256": "C554EDA617578647B98E3849940F957CD67D501E8EAF1023FAB4B739EE5E7090",
       "md5": "01806C9D61343F5D87D126EA27C0AA29",
@@ -10123,7 +10123,7 @@
     },
     {
       "file": "fusion-1.2.11b-neoforge-mc1.21.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fusion-1.2.11b-neoforge-mc1.21.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\fusion-1.2.11b-neoforge-mc1.21.jar",
       "bytes": 532221,
       "sha256": "626340F7A4FF1CF406D73DA3D7E328C17818E8F41B983912333DA47287143B56",
       "md5": "F7E97BF76E6F6FDDA1BE32D1B009CC1E",
@@ -10161,7 +10161,7 @@
     },
     {
       "file": "ImmediatelyFast-NeoForge-1.6.11+1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ImmediatelyFast-NeoForge-1.6.11+1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\ImmediatelyFast-NeoForge-1.6.11+1.21.1.jar",
       "bytes": 361795,
       "sha256": "336DF12F099D1A441A3E06850BEA86E9C2D0C8BC022D3D9A201870A201562A04",
       "md5": "F432A12463ACCB05290EA7DE52FCCC43",
@@ -10199,7 +10199,7 @@
     },
     {
       "file": "iris-neoforge-1.8.13-snapshot+mc1.21.1-local.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\iris-neoforge-1.8.13-snapshot+mc1.21.1-local.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\iris-neoforge-1.8.13-snapshot+mc1.21.1-local.jar",
       "bytes": 2540682,
       "sha256": "B90DBBE951F074DF7A299D61F0AEBE6A897924E56250E94C80231C6AE117B254",
       "md5": "A0AD863C8C9E58770EB0C5516F5B8087",
@@ -10241,7 +10241,7 @@
     },
     {
       "file": "Jade-1.21.1-NeoForge-15.10.6.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Jade-1.21.1-NeoForge-15.10.6.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Jade-1.21.1-NeoForge-15.10.6.jar",
       "bytes": 726853,
       "sha256": "276F1F65A20D04F536989C4F311949D770B52C440C23C2B904A08860F3C93810",
       "md5": "67B89F182472859D1E478477716C9462",
@@ -10271,7 +10271,7 @@
     },
     {
       "file": "JadeAddons-1.21.1-NeoForge-6.1.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\JadeAddons-1.21.1-NeoForge-6.1.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\JadeAddons-1.21.1-NeoForge-6.1.0.jar",
       "bytes": 74419,
       "sha256": "5F242668AD710092964D4D9AFDA8A94FA2401665EA13EEA67D55D07E4DFF8A64",
       "md5": "81F8035BC735C75463ADD09F923AD372",
@@ -10301,7 +10301,7 @@
     },
     {
       "file": "jecharacters-1.21-neoforge-4.5.24.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\jecharacters-1.21-neoforge-4.5.24.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\jecharacters-1.21-neoforge-4.5.24.jar",
       "bytes": 243891,
       "sha256": "F7F2B4D9EC81BAD95BECA92C56444F87AA4A993DA80AB8DA184670BA7F879E83",
       "md5": "F7FDBBF09C1E405D018A9E8F85FF7467",
@@ -10322,7 +10322,7 @@
     },
     {
       "file": "jei-1.21.1-neoforge-19.43.0.393.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\jei-1.21.1-neoforge-19.43.0.393.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\jei-1.21.1-neoforge-19.43.0.393.jar",
       "bytes": 1685121,
       "sha256": "088C583065DB05ABEEDCA7868B619D22E204BCD73AAFE7736B9EB79BCBB67C8A",
       "md5": "FF4901B8DDF3A4A0AE4E72C6AAE2DA5D",
@@ -10360,7 +10360,7 @@
     },
     {
       "file": "JustEnoughProfessions-neoforge-1.21.1-4.0.5.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\JustEnoughProfessions-neoforge-1.21.1-4.0.5.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\JustEnoughProfessions-neoforge-1.21.1-4.0.5.jar",
       "bytes": 24879,
       "sha256": "B34D6BB434D507874A6EBE49D40169C26F7CAD8F51C9FFEA615EEDB153746696",
       "md5": "68AE6DBB6B7A88CD74C85025DD68CF12",
@@ -10406,7 +10406,7 @@
     },
     {
       "file": "krypton_fnp-neoforge-1.21.1-0.2.28.1-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\krypton_fnp-neoforge-1.21.1-0.2.28.1-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\krypton_fnp-neoforge-1.21.1-0.2.28.1-1.21.1.jar",
       "bytes": 1015871,
       "sha256": "05EBE849611DAAFE533FC57ED9B5156EDFA9157CED04D38A7860B1E2075984B9",
       "md5": "1C215ED088F6D5A32D17656B089BAE94",
@@ -10444,7 +10444,7 @@
     },
     {
       "file": "lithium-neoforge-0.15.4+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\lithium-neoforge-0.15.4+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\lithium-neoforge-0.15.4+mc1.21.1.jar",
       "bytes": 774220,
       "sha256": "488F33216030C1CB0BAA33E59DE3D657D08D5795A6C2080C8C8BBBC133FC8757",
       "md5": "969860E6A6EBE4DC2E2154B56F05483E",
@@ -10474,7 +10474,7 @@
     },
     {
       "file": "lukis-crazy-chambers-1.0.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\lukis-crazy-chambers-1.0.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\lukis-crazy-chambers-1.0.2.jar",
       "bytes": 2177448,
       "sha256": "59DDE0047528843664309B546A9FBD7AFA8A065472F6FEFD457FE6A40FAD23EF",
       "md5": "647A82D08955B75D1E3E0544E93B68E1",
@@ -10495,7 +10495,7 @@
     },
     {
       "file": "maxhealthfix-neoforge-1.21.1-21.1.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\maxhealthfix-neoforge-1.21.1-21.1.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\maxhealthfix-neoforge-1.21.1-21.1.4.jar",
       "bytes": 20034,
       "sha256": "762F7ECC02070781119BA50D82C79A5D8C512BB8C78F6DFAE0BCC667F7430105",
       "md5": "5F76F9A4E9B5F2BE25258BF5CCF6D15A",
@@ -10549,7 +10549,7 @@
     },
     {
       "file": "medieval_buildings_end_edition-1.21.1-1.0.4-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\medieval_buildings_end_edition-1.21.1-1.0.4-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\medieval_buildings_end_edition-1.21.1-1.0.4-neoforge.jar",
       "bytes": 438618,
       "sha256": "D11B62C633C739426C6B5812F6B1162265323E981A75EE2517B51FF78E7C20D4",
       "md5": "C98A8AFD7E67E4CA2622BC207B5E5494",
@@ -10587,7 +10587,7 @@
     },
     {
       "file": "mes-1.3.5-1.21.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mes-1.3.5-1.21.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mes-1.3.5-1.21.jar",
       "bytes": 1161207,
       "sha256": "7E30F4BDA5CDF2D1F1D824434CB0587E79928F9C2E0A5C777364E7E52DDB430B",
       "md5": "794AEB7412620414A6F1C9833382D490",
@@ -10617,7 +10617,7 @@
     },
     {
       "file": "migration-resource-overlay-1.2.0+mc1.21.1-candidate13.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\migration-resource-overlay-1.2.0+mc1.21.1-candidate13.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\migration-resource-overlay-1.2.0+mc1.21.1-candidate13.jar",
       "bytes": 43980,
       "sha256": "BCCB7D7CF8019D8895A081D563E578712D7CDF93DA0AD9EAFB31067439C62862",
       "md5": "CBC019E7748E92C47825AD0E8D1D99DE",
@@ -10703,7 +10703,7 @@
     },
     {
       "file": "mineastr-neoforge-1.21.1-0.6.26.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mineastr-neoforge-1.21.1-0.6.26.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\mineastr-neoforge-1.21.1-0.6.26.jar",
       "bytes": 257982,
       "sha256": "0264D729A3343BE1645B5AFE16C15A7A57C7E89A9405FA67EC80EE06D4A148D8",
       "md5": "0C7FC2EABA227A2F8CC7D2B0B8741969",
@@ -10741,7 +10741,7 @@
     },
     {
       "file": "modernfix-neoforge-5.27.14+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\modernfix-neoforge-5.27.14+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\modernfix-neoforge-5.27.14+mc1.21.1.jar",
       "bytes": 589839,
       "sha256": "EFC89CB7D22B932ECAD19777373688035A1C444443ABE8E56D236C44B59C0301",
       "md5": "29A4F5A367E671D08C0C7E2EC75B2224",
@@ -10787,7 +10787,7 @@
     },
     {
       "file": "MouseTweaks-neoforge-mc1.21-2.26.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\MouseTweaks-neoforge-mc1.21-2.26.1.jar",
       "bytes": 73938,
       "sha256": "68E6F4201C5DE97B77929A7215C9552495696CA6A3BF3AE4EACC34E135F6CC8B",
       "md5": "4AB6E808A59FDEBECFBC92438B85B470",
@@ -10808,7 +10808,7 @@
     },
     {
       "file": "noisium-neoforge-2.3.0+mc1.21-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\noisium-neoforge-2.3.0+mc1.21-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\noisium-neoforge-2.3.0+mc1.21-1.21.1.jar",
       "bytes": 60296,
       "sha256": "E95209D593BC00D7C5DE94F746FFD1DFBFA70AC8FBE938393EF930D00416109C",
       "md5": "CAAF072F2E2C6261B37B8359EF8631B1",
@@ -10854,7 +10854,7 @@
     },
     {
       "file": "obscure_tooltips-neoforge-1.21.1-4.2.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\obscure_tooltips-neoforge-1.21.1-4.2.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\obscure_tooltips-neoforge-1.21.1-4.2.2.jar",
       "bytes": 448523,
       "sha256": "42F0876D0C4A7D8E83231C542C00C80D6F3E0B3A12197DD94B695F8749D938D2",
       "md5": "0BD25912F66E034F260FBCB72B2521F0",
@@ -10900,7 +10900,7 @@
     },
     {
       "file": "packetfixer-3.3.1-1.20.5-1.21.X-merged.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\packetfixer-3.3.1-1.20.5-1.21.X-merged.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\packetfixer-3.3.1-1.20.5-1.21.X-merged.jar",
       "bytes": 46623,
       "sha256": "2979A8A3F44E5D5DF4F9F6315D18C220F3DEBF736BB8A2C2740ACDFB13BD820F",
       "md5": "8F22FB065079340A72AE5CE0DA12EFCB",
@@ -10938,7 +10938,7 @@
     },
     {
       "file": "particular-1.21.1-NeoForge-1.5.5.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\particular-1.21.1-NeoForge-1.5.5.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\particular-1.21.1-NeoForge-1.5.5.jar",
       "bytes": 314940,
       "sha256": "9911906AE0D883A617CE950FF4F1833BD9E379C5B221DF18A2B3E09556F84B2A",
       "md5": "492ADFF3F962445ACD56EEBDF8FC03CD",
@@ -11000,7 +11000,7 @@
     },
     {
       "file": "potted-farms-1.1.1-equivalence3.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\potted-farms-1.1.1-equivalence3.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\potted-farms-1.1.1-equivalence3.jar",
       "bytes": 679546,
       "sha256": "3E58A5C5CF33DE59DA08B175867C482CAD6D0BEBFAF5B07F6D5653646D74BA41",
       "md5": "40593F09B4D62D79D62C96881B2BA6A6",
@@ -11021,7 +11021,7 @@
     },
     {
       "file": "repurposed_structures-7.5.17+1.21.1-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\repurposed_structures-7.5.17+1.21.1-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\repurposed_structures-7.5.17+1.21.1-neoforge.jar",
       "bytes": 8238540,
       "sha256": "8299AC9BEDB488D65BAE351D529CAAD6A9072DC59F46BC50D599525EFA882A34",
       "md5": "8FEE35560B271093B6CC608E40545348",
@@ -11051,7 +11051,7 @@
     },
     {
       "file": "resourcefulconfig-neoforge-1.21-3.0.11.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\resourcefulconfig-neoforge-1.21-3.0.11.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\resourcefulconfig-neoforge-1.21-3.0.11.jar",
       "bytes": 341009,
       "sha256": "25B4F3502D25C535004ACD4A9420272FFF01D2F1E2DF352239FEC93FDAB005D4",
       "md5": "84FF2805A591B10D22B7E0C69B44246C",
@@ -11089,7 +11089,7 @@
     },
     {
       "file": "respawn-pitch-compat-1.0.0+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\respawn-pitch-compat-1.0.0+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\respawn-pitch-compat-1.0.0+mc1.21.1.jar",
       "bytes": 49767,
       "sha256": "FD71D70CEFAC0D4068DF854D856D612E1103AECD38C0321F195D729D4042A5A9",
       "md5": "A1569DE06E1086DFE79CBB1B2AD4B33E",
@@ -11127,7 +11127,7 @@
     },
     {
       "file": "Searchables-neoforge-1.21.1-1.0.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Searchables-neoforge-1.21.1-1.0.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\Searchables-neoforge-1.21.1-1.0.2.jar",
       "bytes": 77326,
       "sha256": "CA193F0C69033D8F709F9E073A7C1EF4EA46714E5C2F94EB23ACE12781C6AA68",
       "md5": "0A0A8665BB4D77E3F8139750CB98D9E4",
@@ -11165,7 +11165,7 @@
     },
     {
       "file": "serverwarashi-1.0.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\serverwarashi-1.0.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\serverwarashi-1.0.2.jar",
       "bytes": 30277,
       "sha256": "FC27B5A0876D6F6A2CD230EFD57BC5B31C2FBA92709662D03575B1A20E122875",
       "md5": "660E2BFE9B4CB39E9D2CFC980B81A27A",
@@ -11203,7 +11203,7 @@
     },
     {
       "file": "SimpleBackups-1.21-4.0.18.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\SimpleBackups-1.21-4.0.18.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\SimpleBackups-1.21-4.0.18.jar",
       "bytes": 47287,
       "sha256": "6CA9A590A8607263379C334A1F516396B5E28122ED00C13771D1E1669541E8D6",
       "md5": "D4314A24780441614574F6D76A3D8F12",
@@ -11241,7 +11241,7 @@
     },
     {
       "file": "smart_bounds-1.0.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\smart_bounds-1.0.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\smart_bounds-1.0.0.jar",
       "bytes": 749901,
       "sha256": "0240F90B62401EF6EDF30714CB0EEFBBC104BE629A9E595383DDF3AC898718B5",
       "md5": "4A7E29A427609ACD3A8925719D3EEEFA",
@@ -11287,7 +11287,7 @@
     },
     {
       "file": "smrb-1.0.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\smrb-1.0.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\smrb-1.0.0.jar",
       "bytes": 6416,
       "sha256": "91642737AAD509BA39D66ED62EEC56E7DF47D76853913E4C862DCA4421CF0DC1",
       "md5": "442648EABEF3C6277361857556C6A2A0",
@@ -11325,7 +11325,7 @@
     },
     {
       "file": "smsn-neoforge-1.4.1-1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\smsn-neoforge-1.4.1-1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\smsn-neoforge-1.4.1-1.21.1.jar",
       "bytes": 115237,
       "sha256": "4B517F062B008FC600881BE7BCAAC3DA03C13EE6E46B02B8E5670F7C7881857B",
       "md5": "1F044378176C62E65A9F0078D642A04D",
@@ -11371,7 +11371,7 @@
     },
     {
       "file": "sodium-neoforge-0.8.12-alpha.2+mc1.21.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\sodium-neoforge-0.8.12-alpha.2+mc1.21.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\sodium-neoforge-0.8.12-alpha.2+mc1.21.1.jar",
       "bytes": 1284556,
       "sha256": "6FB306747D28F3F38C29FBEFC785D9A5723F263C51FDAFBE1B0E7F8FBFF9CA30",
       "md5": "CA6020F7CC8D9CF8C8AC92EE9983BF4A",
@@ -11421,7 +11421,7 @@
     },
     {
       "file": "spark-1.10.124-neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\spark-1.10.124-neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\spark-1.10.124-neoforge.jar",
       "bytes": 3642581,
       "sha256": "647E8A81AFBE414DBA1DF4BA15FD06C5D32D4CB544E68828405E8E074C2E16DB",
       "md5": "A61DD250E618F8FD62FC6B0943831C50",
@@ -11451,7 +11451,7 @@
     },
     {
       "file": "structure_layout_optimizer-neoforge-1.0.12.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\structure_layout_optimizer-neoforge-1.0.12.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\structure_layout_optimizer-neoforge-1.0.12.jar",
       "bytes": 61777,
       "sha256": "EF8EB29C5C4F111C74A49D379843E4C2F51D11B28C8116A49BE13636C83F4385",
       "md5": "B0AD6A0FD2AD8F04F5634EDCAADF5421",
@@ -11497,7 +11497,7 @@
     },
     {
       "file": "vanillin-neoforge-1.21.1-1.1.3-local.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\vanillin-neoforge-1.21.1-1.1.3-local.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\vanillin-neoforge-1.21.1-1.1.3-local.jar",
       "bytes": 123858,
       "sha256": "88EADD068F6D81787721A0DB3B6127BA28F9F60971DFBDDE401F467C9C2C7905",
       "md5": "45A3E025A74302E2B45DF8F4899548D8",
@@ -11543,7 +11543,7 @@
     },
     {
       "file": "voicechat-neoforge-1.21.1-2.6.21.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\voicechat-neoforge-1.21.1-2.6.21.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\voicechat-neoforge-1.21.1-2.6.21.jar",
       "bytes": 4913870,
       "sha256": "901C4917960CE975CECC9A39C15D32C22BEABC23ED3C36F0CE75DF5A6CDD9366",
       "md5": "844544BF50AC62335A12283461E0A78C",
@@ -11590,7 +11590,7 @@
     },
     {
       "file": "worldedit-mod-7.3.8-direction-property-fix.1.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\worldedit-mod-7.3.8-direction-property-fix.1.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\worldedit-mod-7.3.8-direction-property-fix.1.jar",
       "bytes": 6264309,
       "sha256": "8EB5E39AA914EB1B09307B6C004478BD1263655FCCA880580673481EBFEF9283",
       "md5": "CF3BBA22C19D67853486B5FCD688BB67",
@@ -11633,7 +11633,7 @@
     },
     {
       "file": "wwoo-2.3.4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\wwoo-2.3.4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\wwoo-2.3.4.jar",
       "bytes": 2217959,
       "sha256": "DE4EF02F438B5DC680ED90AE14EF003DA295F774E58C34390D19552CEE0D25B9",
       "md5": "FFF07297D07EBDF729876831F275965A",
@@ -11671,7 +11671,7 @@
     },
     {
       "file": "xaerominimap-neoforge-1.21.1-26.1.0.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\xaerominimap-neoforge-1.21.1-26.1.0.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\xaerominimap-neoforge-1.21.1-26.1.0.jar",
       "bytes": 2138254,
       "sha256": "6BD6CBAB01FF57B9BA2FBFEE18F9605593101F15D80E8D19DC59C385D2535CCC",
       "md5": "7A16E984052424EBF78F50283BCA73E5",
@@ -11734,7 +11734,7 @@
     },
     {
       "file": "xaeroworldmap-neoforge-1.21.1-1.41.2.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\xaeroworldmap-neoforge-1.21.1-1.41.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\xaeroworldmap-neoforge-1.21.1-1.41.2.jar",
       "bytes": 1387921,
       "sha256": "36B163FE8BE4C2E800668C49294473DA61EB360D821DB675A2A948F8CC7C3D2B",
       "md5": "56F1B5ED048937C56349DFA184FB2B20",
@@ -11805,7 +11805,7 @@
     },
     {
       "file": "xiyuslogin-1.4-migration4.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\xiyuslogin-1.4-migration4.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\xiyuslogin-1.4-migration4.jar",
       "bytes": 170065,
       "sha256": "703E01B84558EA9AFE28E82B0FB67C12DC09BA2936DE70939F52759C52D2E998",
       "md5": "A0C916FEECF47426E577EB69F07D40BA",
@@ -11843,7 +11843,7 @@
     },
     {
       "file": "zfastnoise-1.0.12+1.21.1+neoforge.jar",
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\zfastnoise-1.0.12+1.21.1+neoforge.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\zfastnoise-1.0.12+1.21.1+neoforge.jar",
       "bytes": 35120,
       "sha256": "E38DB8CD22A75D2A1714FFF8C4D4F1E80DA53F2FAB3261AF847C855AD26C2CCA",
       "md5": "70595F93D10B9A3298A1BB101B63CEC4",

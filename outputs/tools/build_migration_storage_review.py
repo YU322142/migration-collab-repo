@@ -60,7 +60,7 @@ def main() -> int:
 
     migration_rows = [
         row for row in main_report["top_level_directories"]
-        if str(row["path"]).startswith("D:/Trans/migration-audit-work/")
+        if str(row["path"]).startswith("<AUDIT_ROOT>/")
     ]
     delete_rows = sorted(
         (row for row in migration_rows if row["category"] == "DELETE_AFTER_REVIEW"),
@@ -105,32 +105,32 @@ def main() -> int:
     immutable_original = next(
         (
             row for row in main_report["root_files"]
-            if str(row["path"]).lower() == "d:/down/20260811.zip"
+            if str(row["path"]).lower() == "<DOWNLOAD_ROOT>/20260811.zip"
         ),
         None,
     )
     keep = [
         {
-            "path": "D:/Trans/migration-handoff-20260812.7z",
+            "path": "<HANDOFF_ROOT>.7z",
             "bytes": int(handoff_status["archive"]["bytes"]),
             "sha256": handoff_status["archive"]["sha256"],
             "reason": "已完成 7z 全量测试的最终交接归档",
         },
         {
-            "path": "D:/Trans/migration-handoff-20260812.7z.sha256.txt",
+            "path": "<HANDOFF_ROOT>.7z.sha256.txt",
             "reason": "归档校验值",
         },
         {
-            "path": "D:/Trans/migration-handoff-20260812.archive-status.json",
+            "path": "<HANDOFF_ROOT>.archive-status.json",
             "reason": "归档与逐文件清单验证报告",
         },
         {
-            "path": "D:/Trans/migration-handoff-20260812",
+            "path": "<HANDOFF_ROOT>",
             "bytes": int(handoff_status["package"]["physical_bytes"]),
             "reason": "未压缩交接目录；接收方验证归档后可选择仅保留归档",
         },
         {
-            "path": "D:/Down/20260811.zip",
+            "path": "<DOWNLOAD_ROOT>/20260811.zip",
             "bytes": int(immutable_original["bytes"]) if immutable_original else None,
             "sha256": "9723FE28BC1B98D6ECE96A4063532BB2A533A038E7B3E457D50CF658E2495021",
             "reason": "用户最新停服原始输入，必须只读保留",
@@ -145,7 +145,7 @@ def main() -> int:
             "reason": "兼容模组源码；可另清理其中 build/.gradle，但不要删源码",
         },
         {
-            "path": "D:/Trans/migration-audit-work/final-mod-bundles-candidate14-r3-20260812",
+            "path": "<AUDIT_ROOT>/final-mod-bundles-candidate14-r3-20260812",
             "reason": "当前 release 参考；已入交接包，接收方验收前保留",
         },
     ]
@@ -228,9 +228,9 @@ def main() -> int:
         ],
         "deletion_preconditions": [
             "接收方先核验 migration-handoff-20260812.7z 的 SHA-256 与 7z test PASS",
-            "不得删除 D:/Down/20260811.zip 或用户原始资源包",
+            "不得删除 <DOWNLOAD_ROOT>/20260811.zip 或用户原始资源包",
             "不得把任何 Java 启动/保存过的候选世界重新当作转换输入",
-            "Prism 实例和 D:/Down 非迁移文件只做人工审核，不包含在批量删除建议中",
+            "Prism 实例和 <DOWNLOAD_ROOT> 非迁移文件只做人工审核，不包含在批量删除建议中",
             "执行删除时必须使用本 JSON 的精确路径，不使用通配符或父目录递归删除",
         ],
     }
@@ -272,10 +272,10 @@ def main() -> int:
         "",
         "## 人工确认项",
         "",
-        "- `D:/Trans/migration-audit-work/incoming-20260811-raw` 是原始 ZIP 的展开副本；最终交接包和原始 ZIP 均已校验，因此可在接收方确认后删除，但本报告仍把它列为人工确认。",
+        "- `<AUDIT_ROOT>/incoming-20260811-raw` 是原始 ZIP 的展开副本；最终交接包和原始 ZIP 均已校验，因此可在接收方确认后删除，但本报告仍把它列为人工确认。",
         "- 唯一 frozen staging 和 Candidate14-r3 release 已复制进交接包；接收方验证归档后可删除原工作目录副本。",
         "- Prism 实例可能含用户配置、账号选择、截图或存档，不进入自动删除建议。",
-        "- `D:/Down` 中除 `20260811.zip` 外大量内容与本迁移无关，本报告不建议批量清理。",
+        "- `<DOWNLOAD_ROOT>` 中除 `20260811.zip` 外大量内容与本迁移无关，本报告不建议批量清理。",
         "",
         "## 删除前置条件",
         "",

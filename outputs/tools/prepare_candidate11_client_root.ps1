@@ -13,7 +13,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $workspace = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..')).TrimEnd('\')
-$bundleRoot = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate11-20260811'
+$bundleRoot = '<AUDIT_ROOT>\final-mod-bundles-candidate11-20260811'
 $expectedSource = Join-Path $workspace 'outputs\tmp\client-gate-candidate5\.minecraft'
 $expectedMods = Join-Path $bundleRoot 'client-mods'
 $expectedManifest = Join-Path $bundleRoot 'manifests\client.json'
@@ -31,7 +31,7 @@ $expectedCcGuardFile = 'cctweaked-startup-shutdown-guard-1.0.0+neoforge.1.21.1-e
 $expectedCcGuardSha256 = '6744626E2B43643E9F28C9159FABD7A6A53CDCDEB83AE8252C266F7E987F84F7'
 $expectedCreateGuardFile = 'create-chute-unload-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar'
 $expectedCreateGuardSha256 = 'AC51AEFDDA8437D777B5C8B3E285E9036676D854F7958C6B882807C15BE0910A'
-$staleCandidate10Ready = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate10-20260811\READY.json'
+$staleCandidate10Ready = '<AUDIT_ROOT>\final-mod-bundles-candidate10-20260811\READY.json'
 $expectedStaleCandidate10ReadySha256 = '71D13227E80AB70B04CDD800D6E786821ABA759F99397B52960974715DFF5108'
 $expectedStaleCandidate10ManifestSha256 = '79677A95935DD67E4196C8CCC99F92D9D817087C1DC7402DCE3A614B44C89553'
 $expectedStaleCandidate10BundleSha256 = 'CEC51F141A226E53E5CB0F64851E6EA37DE6FFC7BFD307863FE2563AA606737F'
@@ -384,7 +384,7 @@ foreach ($name in $junctionNames) {
     if (-not (Test-Path -LiteralPath $directTarget -PathType Container)) {
         throw "Resolved shared client input missing: $directTarget"
     }
-    if (Path-IsWithin $directTarget 'D:\Trans\20260807') {
+    if (Path-IsWithin $directTarget '<TRANS_ROOT>\20260807') {
         throw "Shared client input unexpectedly resolves into the historical backup: $directTarget"
     }
     $destination = Join-Path $output $name

@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 import shutil
 
-ROOT = Path(r"D:\Trans\migration-audit-work")
+ROOT = Path(r"<AUDIT_ROOT>")
 ARTIFACT = ROOT / "tlm-patchouli-jar-balance-fix-attempt11-20260814" / "jars" / "touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar"
 JAR_NAME = ARTIFACT.name
 ORIGINAL_SHA = "F6DB04195820C8508704277EA76D63723804FF236A7B780369BA59EBE5CD9C27"

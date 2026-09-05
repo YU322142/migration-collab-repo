@@ -4,7 +4,7 @@
 
 ## 最终交接归档
 
-- 归档：`D:\Trans\migration-handoff-20260812.7z`
+- 归档：`<HANDOFF_ROOT>.7z`
 - 大小：15,372,562,055 bytes
 - SHA-256：`28594C4A05AC64D92E8B10D9132FC7CB255DA72B7B483A3D679A806E8F6BB1FA`
 - 7z 完整性测试：`PASS / Everything is Ok`
@@ -13,9 +13,9 @@
 
 外部权威验证文件：
 
-- `D:\Trans\migration-handoff-20260812.7z.sha256.txt`
-- `D:\Trans\migration-handoff-20260812.archive-status.json`
-- `D:\Trans\migration-handoff-20260812.test.log`
+- `<HANDOFF_ROOT>.7z.sha256.txt`
+- `<HANDOFF_ROOT>.archive-status.json`
+- `<HANDOFF_ROOT>.test.log`
 
 包内 `PACKAGE-STATUS.json` 在封存时写为 `PUBLISHED_PENDING_ARCHIVE`；随后完成的外部 `archive-status.json` 才是最终归档验证结论，状态为 `PASS`。
 
@@ -29,9 +29,9 @@ Candidate14-r3 Attempt 3 自动双轮门禁曾 PASS，但之后人工测试仍�
 
 ## 容量审计
 
-- 完整机器报告：`D:\Trans\migration-storage-audit-20260813.json`
-- 审核清单：`D:\Trans\migration-storage-review-20260813.json`
-- 人读摘要：`D:\Trans\migration-storage-review-20260813.md`
+- 完整机器报告：`<TRANS_ROOT>\migration-storage-audit-20260813.json`
+- 审核清单：`<TRANS_ROOT>\migration-storage-review-20260813.json`
+- 人读摘要：`<TRANS_ROOT>\migration-storage-review-20260813.md`
 
 结论：不需要保留约 400GB 的历史候选世界。审核后预计可回收：
 

@@ -5,7 +5,7 @@
 目标运行时：Minecraft 1.21.1 + NeoForge 21.1.241。原始输入是
 1.21.11 服务端快照；当前最新测试输入为：
 
-- D:\Down\mechanomania-matched-runtime-attempt13-2.zip
+- <DOWNLOAD_ROOT>\mechanomania-matched-runtime-attempt13-2.zip
 - SHA-256 ECCD0C6D28A9444DBBCEB3AAEDBBB882E3EEF82B4DDD2547C729571F21891A92
 
 ## 已整理

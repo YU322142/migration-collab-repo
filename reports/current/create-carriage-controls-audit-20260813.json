@@ -3,7 +3,7 @@
   "generated": "2026-08-13",
   "roots": {
     "source": {
-      "path": "D:\\Trans\\migration-audit-work\\incoming-20260811-raw\\20260811\\world\\data\\create_tracks.dat",
+      "path": "<AUDIT_ROOT>\\incoming-20260811-raw\\20260811\\world\\data\\create_tracks.dat",
       "bytes": 39250,
       "sha256": "54C032C54B08990320C247F7B09046E02828C333BF372914D9B741F810A39409",
       "data_version": 4671,
@@ -143,7 +143,7 @@
       ]
     },
     "staging": {
-      "path": "D:\\Trans\\migration-audit-work\\cutover-staging-incoming-20260811-candidate13-20260812\\world\\data\\create_tracks.dat",
+      "path": "<AUDIT_ROOT>\\cutover-staging-incoming-20260811-candidate13-20260812\\world\\data\\create_tracks.dat",
       "bytes": 36329,
       "sha256": "8EE71D8280E6DB55718BC5414770452ACC5F55F3660E731D8EDEF45BEDA6D26A",
       "data_version": 3955,

@@ -8,64 +8,64 @@
   "builder_started_minecraft": false,
   "builder_touched_prism": false,
   "source_gate": {
-    "path": "D:\\Trans\\migration-audit-work\\mechanomania-startup-gate-attempt13-20260814.json",
+    "path": "<AUDIT_ROOT>\\mechanomania-startup-gate-attempt13-20260814.json",
     "bytes": 40426,
     "sha256": "22E4BEE1EB6B3DE909650D02A980C9591679FC144E49D82828822EA7C7FAE425",
     "status": "PASS",
     "blockers": []
   },
   "base_release": {
-    "root": "D:\\Trans\\migration-audit-work\\mechanomania-matched-release-v2-20260813",
+    "root": "<AUDIT_ROOT>\\mechanomania-matched-release-v2-20260813",
     "ready_sha256": "AE84FE740B74D50A937284A7916E460ED55580EF1B4B794D8107562133D7F236",
     "release_lock_sha256": "AE84FE740B74D50A937284A7916E460ED55580EF1B4B794D8107562133D7F236"
   },
   "evidence_reports": [
     {
       "name": "data_resource",
-      "path": "D:\\Trans\\migration-audit-work\\attempt13-data-resource-apply-20260814.json",
+      "path": "<AUDIT_ROOT>\\attempt13-data-resource-apply-20260814.json",
       "bytes": 9104,
       "sha256": "1D009ED48FD8752AF2D4FFD4D04D013D6B0D2B4315DF73FC906F78EB159631A8"
     },
     {
       "name": "content",
-      "path": "D:\\Trans\\migration-audit-work\\attempt13-content-repairs-apply-20260814.json",
+      "path": "<AUDIT_ROOT>\\attempt13-content-repairs-apply-20260814.json",
       "bytes": 10581,
       "sha256": "2397D46351318A1995E252053E32F9C1E4D61886761091F78A61F4D6140645EB"
     },
     {
       "name": "core",
-      "path": "D:\\Trans\\migration-audit-work\\attempt13-core-fixes-apply-20260814.json",
+      "path": "<AUDIT_ROOT>\\attempt13-core-fixes-apply-20260814.json",
       "bytes": 12791,
       "sha256": "B49659E08861A62576053C7693BDAB3EFDD39B65F074C1E2AAA47F72FB16678F"
     },
     {
       "name": "tlm",
-      "path": "D:\\Trans\\migration-audit-work\\attempt13-tlm-patchouli-jar-apply-20260814.json",
+      "path": "<AUDIT_ROOT>\\attempt13-tlm-patchouli-jar-apply-20260814.json",
       "bytes": 2836,
       "sha256": "BA36A5AB43513D8D6CBAEF1D2380BEA56DB3C27C6B6CF7922DD22A7BA1FAE20D"
     },
     {
       "name": "happyghast",
-      "path": "D:\\Trans\\migration-audit-work\\attempt13-happyghast-duplicate-repair-20260814.json",
+      "path": "<AUDIT_ROOT>\\attempt13-happyghast-duplicate-repair-20260814.json",
       "bytes": 8780,
       "sha256": "3BB132384394B7B217E422C8A7B18FDAE5DBB125091F013EB47668F462FB9EA8"
     },
     {
       "name": "followup_postverify",
-      "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-postverify-20260814.json",
+      "path": "<AUDIT_ROOT>\\attempt13-followup-fixes-postverify-20260814.json",
       "bytes": 9104,
       "sha256": "18C51798F064F08544D288080FE3273F696D1773F3380FD211811F992FBEB40F"
     },
     {
       "name": "followup_apply",
-      "path": "D:\\Trans\\migration-audit-work\\attempt13-followup-fixes-apply-20260814.json",
+      "path": "<AUDIT_ROOT>\\attempt13-followup-fixes-apply-20260814.json",
       "bytes": 17636,
       "sha256": "FE71B842AB644D14E4FA8F99BDCE4627EFD55C1ACAD4DF5D5CE0149088732476"
     }
   ],
   "source_roots": {
-    "server": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814",
-    "client": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814"
+    "server": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814",
+    "client": "<AUDIT_ROOT>\\mechanomania-matched-client-attempt13-20260814"
   },
   "target": {
     "minecraft": "1.21.1",
@@ -526,7 +526,7 @@
       "rule": "Use the authoritative Attempt13-repaired converted world in place.",
       "happyghast_report": {
         "name": "happyghast",
-        "path": "D:\\Trans\\migration-audit-work\\attempt13-happyghast-duplicate-repair-20260814.json",
+        "path": "<AUDIT_ROOT>\\attempt13-happyghast-duplicate-repair-20260814.json",
         "bytes": 8780,
         "sha256": "3BB132384394B7B217E422C8A7B18FDAE5DBB125091F013EB47668F462FB9EA8"
       },
@@ -535,9 +535,9 @@
     "server_properties": {
       "copied": false,
       "production_identity": {
-        "server_properties_path": "D:\\Trans\\migration-handoff-20260812\\02-latest\\converted-staging\\server.properties",
+        "server_properties_path": "<HANDOFF_ROOT>\\02-latest\\converted-staging\\server.properties",
         "server_properties_sha256": "A71887512304BB526A125BD4F2CC835502456A3C8CB407AE73C8D02F1442552C",
-        "level_dat_path": "D:\\Trans\\migration-handoff-20260812\\02-latest\\converted-staging\\world\\level.dat",
+        "level_dat_path": "<HANDOFF_ROOT>\\02-latest\\converted-staging\\world\\level.dat",
         "level_dat_sha256": "C35D75EF337BB6E1BC12A801F2881A02CA9C9B865C22B0EB6FEBDB588B693269",
         "ports": {
           "server_port": 25566,
@@ -564,7 +564,7 @@
     "server_properties": "Never replace the production server.properties with this release.",
     "mcmodsync": "Do not install on either side for this release."
   },
-  "release_root": "D:\\Trans\\migration-audit-work\\mechanomania-matched-release-v3-20260814",
+  "release_root": "<AUDIT_ROOT>\\mechanomania-matched-release-v3-20260814",
   "bundle_pair_sha256": "A3D76838EB400E93951A0860706079FB1F38B073B59B0DB9234D4EF3F739D111",
   "server": {
     "mod_file_count": 236,

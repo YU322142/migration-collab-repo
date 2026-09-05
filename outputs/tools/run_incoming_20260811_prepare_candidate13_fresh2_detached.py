@@ -15,11 +15,11 @@ import time
 
 WORKSPACE = Path(__file__).resolve().parents[2]
 PYTHON = Path(r"C:\Python314\python.exe")
-STAGING = Path(r"D:\Trans\migration-audit-work\cutover-staging-incoming-20260811-candidate13-20260812")
-RUNTIME = Path(r"D:\Trans\migration-audit-work\manual-test-candidate8n-20260811")
-MODS = Path(r"D:\Trans\migration-audit-work\final-mod-bundles-candidate13-20260812\server-mods")
-OUTPUT = Path(r"D:\Trans\migration-audit-work\manual-test-candidate13-fresh2-20260812")
-REPORT = Path(r"D:\Trans\migration-audit-work\manual-test-candidate13-fresh2-prepare-20260812.json")
+STAGING = Path(r"<AUDIT_ROOT>\cutover-staging-incoming-20260811-candidate13-20260812")
+RUNTIME = Path(r"<AUDIT_ROOT>\manual-test-candidate8n-20260811")
+MODS = Path(r"<AUDIT_ROOT>\final-mod-bundles-candidate13-20260812\server-mods")
+OUTPUT = Path(r"<AUDIT_ROOT>\manual-test-candidate13-fresh2-20260812")
+REPORT = Path(r"<AUDIT_ROOT>\manual-test-candidate13-fresh2-prepare-20260812.json")
 STATUS = WORKSPACE / "outputs" / "incoming-20260811-prepare-candidate13-fresh2.status.json"
 STDOUT = WORKSPACE / "outputs" / "incoming-20260811-prepare-candidate13-fresh2.stdout.log"
 STDERR = WORKSPACE / "outputs" / "incoming-20260811-prepare-candidate13-fresh2.stderr.log"
@@ -59,7 +59,7 @@ def main() -> int:
                    "--server-port", "12341", "--rcon-port", "12342", "--voice-port", "26341",
                    "--sanitize-resources"]
         env = os.environ.copy()
-        env["PYTHONPATH"] = os.pathsep.join((r"D:\Trans\migration-audit-work\poi-nbtdeps", str(WORKSPACE / "outputs" / "tools")))
+        env["PYTHONPATH"] = os.pathsep.join((r"<AUDIT_ROOT>\poi-nbtdeps", str(WORKSPACE / "outputs" / "tools")))
         flags = subprocess.CREATE_NO_WINDOW | subprocess.CREATE_NEW_PROCESS_GROUP if os.name == "nt" else 0
         with STDOUT.open("wb") as stdout, STDERR.open("wb") as stderr:
             child = subprocess.Popen(command, cwd=WORKSPACE, env=env, stdin=subprocess.DEVNULL,

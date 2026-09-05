@@ -21,18 +21,18 @@ SPEC.loader.exec_module(migration)
 
 class FastMigrationTest(unittest.TestCase):
     def d_temp(self):
-        root = Path(os.environ.get("MIGRATION_TEST_TMP", r"D:\Trans\migration-audit-work\tmp"))
+        root = Path(os.environ.get("MIGRATION_TEST_TMP", r"<AUDIT_ROOT>\tmp"))
         root.mkdir(parents=True, exist_ok=True)
         return tempfile.TemporaryDirectory(dir=root)
 
     def test_staging_cannot_be_inside_source(self):
-        source = Path(r"D:\Trans\source")
+        source = Path(r"<TRANS_ROOT>\source")
         with self.assertRaisesRegex(ValueError, "must not be inside"):
             migration.ensure_distinct(source, source / "target")
-        migration.ensure_distinct(source, Path(r"D:\Trans\target"))
+        migration.ensure_distinct(source, Path(r"<TRANS_ROOT>\target"))
 
     def test_source_cannot_be_inside_staging(self):
-        staging = Path(r"D:\Trans\staging")
+        staging = Path(r"<TRANS_ROOT>\staging")
         with self.assertRaisesRegex(ValueError, "source-game-dir"):
             migration.ensure_distinct(staging / "source", staging)
 

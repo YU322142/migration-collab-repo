@@ -1,8 +1,8 @@
 {
   "schema": 1,
   "authority": "client",
-  "instance": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Motiquies - 动静交映 - 2.0.0",
-  "mods_directory": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Motiquies - 动静交映 - 2.0.0\\minecraft\\mods",
+  "instance": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Motiquies - 动静交映 - 2.0.0",
+  "mods_directory": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Motiquies - 动静交映 - 2.0.0\\minecraft\\mods",
   "mod_file_count": 257,
   "policy": {
     "preserve_every_listed_file": true,

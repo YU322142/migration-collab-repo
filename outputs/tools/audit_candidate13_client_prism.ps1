@@ -1,6 +1,6 @@
 param(
     [string] $ClientRoot = '',
-    [string] $PrismRoot = 'D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
+    [string] $PrismRoot = '<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
     [string] $InstanceName = '',
     [string] $ServerAddress = 'play.example.invalid:12341'
 )
@@ -10,7 +10,7 @@ param(
 $ErrorActionPreference = 'Stop'
 $workspace = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..')).TrimEnd('\')
 $expectedClientRoot = Join-Path $workspace 'outputs\tmp\client-gate-candidate13\.minecraft'
-$expectedRelease = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate13-20260812'
+$expectedRelease = '<AUDIT_ROOT>\final-mod-bundles-candidate13-20260812'
 $expectedReadySha = 'FA992151079AEE46DCDAEB49D23487F0F4642099E86F0962469E2257E830BA3F'
 $expectedManifestSha = '261ADB612DB2A2D992F8A8CAC0FC8C753D6620B98B8CB79E693CC434E57216BE'
 $expectedBundleSha = 'AC9887DB6F12E0A9E9F8B77030C3F904276DB8BFD4BDF9D01C4B9DAF9EEA4495'

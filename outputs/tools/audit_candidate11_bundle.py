@@ -14,7 +14,7 @@ from typing import Any
 
 WORKSPACE = Path(__file__).resolve().parents[2]
 EXPECTED_ROOT = Path(
-    r"D:\Trans\migration-audit-work\final-mod-bundles-candidate11-20260811"
+    r"<AUDIT_ROOT>\final-mod-bundles-candidate11-20260811"
 )
 EXPECTED_CC_AUDIT = WORKSPACE / "outputs" / "cctweaked-startup-shutdown-guard-audit-20260811.json"
 EXPECTED_CC_AUDIT_SHA256 = "E4CA8E03AD6D6BED5A9780C10CAEAEEA2F0E50211BF81A9C22D90EE47CB791C5"

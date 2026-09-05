@@ -13,11 +13,11 @@ import time
 
 WORKSPACE = Path(__file__).resolve().parents[2]
 OUTPUTS = WORKSPACE / "outputs"
-WORLD = Path(r"D:\Trans\migration-audit-work\incoming-20260811-raw\20260811\world")
-SOURCE_GAME = Path(r"D:\Trans\migration-audit-work\incoming-20260811-raw\20260811")
-TARGET_GAME = Path(r"D:\Trans\migration-audit-work\manual-test-candidate13-preflight-20260812")
+WORLD = Path(r"<AUDIT_ROOT>\incoming-20260811-raw\20260811\world")
+SOURCE_GAME = Path(r"<AUDIT_ROOT>\incoming-20260811-raw\20260811")
+TARGET_GAME = Path(r"<AUDIT_ROOT>\manual-test-candidate13-preflight-20260812")
 TOOL = OUTPUTS / "tools" / "convert_world_nbt.py"
-NBT_DEPS = Path(r"D:\Trans\migration-audit-work\poi-nbtdeps")
+NBT_DEPS = Path(r"<AUDIT_ROOT>\poi-nbtdeps")
 REPORT = OUTPUTS / "incoming-20260811-world-focus-rminus1-20260812.json"
 STATUS = OUTPUTS / "incoming-20260811-world-focus-rminus1-20260812.status.json"
 STDOUT = OUTPUTS / "incoming-20260811-world-focus-rminus1-20260812.stdout.log"

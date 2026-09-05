@@ -46,7 +46,7 @@ it must never be replaced with an empty stack.
 Run the deterministic fixture with D-drive Gradle state:
 
 ```powershell
-.\gradlew.bat -g D:\Trans\migration-audit-work\gradle-cache-toms-neoforge blockFilterAttachmentMigrationRegression --no-daemon
+.\gradlew.bat -g <AUDIT_ROOT>\gradle-cache-toms-neoforge blockFilterAttachmentMigrationRegression --no-daemon
 ```
 
 The fixture covers all seven audited coordinates, all priority values,
@@ -73,7 +73,7 @@ production source is never opened for write.
 
 Reproducible command (all temporary state on D):
 
-  $env:TEMP='D:\Trans\migration-audit-work\tmp-toms-mca'; $env:TMP=$env:TEMP; python -B migration-tools\toms_global_mca_downgrade.py fixture --source-world D:\Trans\20260807\world --fixture-root D:\Trans\migration-audit-work\toms-mca-fixture-20260808-6 --manifest D:\Trans\migration-audit-work\toms-storage-2.9.2-vs-2.4.1-audit\source-world-toms-attachments.csv --report D:\Trans\migration-audit-work\toms-mca-fixture-20260808-6\fixture-report.json
+  $env:TEMP='<AUDIT_ROOT>\tmp-toms-mca'; $env:TMP=$env:TEMP; python -B migration-tools\toms_global_mca_downgrade.py fixture --source-world <TRANS_ROOT>\20260807\world --fixture-root <AUDIT_ROOT>\toms-mca-fixture-20260808-6 --manifest <AUDIT_ROOT>\toms-storage-2.9.2-vs-2.4.1-audit\source-world-toms-attachments.csv --report <AUDIT_ROOT>\toms-mca-fixture-20260808-6\fixture-report.json
 
 Evidence: first pass 7/7 converted in four chunks; second pass 7/7
 ALREADY_NEOFORGE, zero converted chunks and zero writes; target-wins fixture
@@ -95,7 +95,7 @@ Fixture report SHA-256:
 
 The perf5.2 candidate was loaded with NeoForge 21.1.241 and Create 6.0.10 in:
 
-  D:\Trans\migration-audit-work\toms-storage-create-6.0.10-smoke4
+  <AUDIT_ROOT>\toms-storage-create-6.0.10-smoke4
 
 The RCON-gated smoke reached Done, returned a valid list response, saved all
 dimensions, and stopped. NeoForge 21.1.241, Create 6.0.10, and both Tom's

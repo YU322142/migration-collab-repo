@@ -26,7 +26,7 @@ Happy Ghast / Nautilus 的生成型 biome modifiers 和 Mechanomania 全量世�
 
 | 输入 | 固定值 |
 |---|---|
-| 权威 staging | `D:\Trans\migration-handoff-20260812\02-latest\converted-staging` |
+| 权威 staging | `<HANDOFF_ROOT>\02-latest\converted-staging` |
 | `level.dat` SHA-256 | `C35D75EF337BB6E1BC12A801F2881A02CA9C9B865C22B0EB6FEBDB588B693269` |
 | `backport-1.5.jar` SHA-256 | `167534C66D5E6C09DCB01152EBD37D18CED5CF6278A9228C094F937886133AF5` |
 | Chunky 版本 | NeoForge `1.4.23`, Modrinth version id `LuFhm4eU` |
@@ -35,7 +35,7 @@ Happy Ghast / Nautilus 的生成型 biome modifiers 和 Mechanomania 全量世�
 | 目标 Minecraft / DataVersion | `1.21.1 / 3955` |
 | NeoForge 基线 | `21.1.241`（当前已审计的本地服务端运行库） |
 | Java 内存 | `-Xms2G -Xmx4G` |
-| 隔离输出 | `D:\Trans\migration-audit-work\vanilla-terrain-freeze-20260813\isolated-server` |
+| 隔离输出 | `<AUDIT_ROOT>\vanilla-terrain-freeze-20260813\isolated-server` |
 
 ## 真正预生成步骤（本轮未执行）
 
@@ -95,7 +95,7 @@ Happy Ghast / Nautilus 的生成型 biome modifiers 和 Mechanomania 全量世�
 
 ```powershell
 python -B outputs\tools\vanilla_terrain_freeze.py audit-empty `
-  --world 'D:\Trans\migration-handoff-20260812\02-latest\converted-staging\world' `
+  --world '<HANDOFF_ROOT>\02-latest\converted-staging\world' `
   --radius 1536 `
   --output outputs\vanilla-terrain-protection-empty-audit-20260813.json
 ```
@@ -104,9 +104,9 @@ python -B outputs\tools\vanilla_terrain_freeze.py audit-empty `
 
 ```powershell
 python -B outputs\tools\vanilla_terrain_freeze.py freeze-manifest `
-  --world 'D:\Trans\migration-audit-work\vanilla-terrain-freeze-20260813\isolated-server\vanilla-freeze-world' `
+  --world '<AUDIT_ROOT>\vanilla-terrain-freeze-20260813\isolated-server\vanilla-freeze-world' `
   --plan outputs\vanilla-terrain-protection-plan-20260813.json `
-  --output 'D:\Trans\migration-audit-work\vanilla-terrain-freeze-20260813\freeze-manifest.json'
+  --output '<AUDIT_ROOT>\vanilla-terrain-freeze-20260813\freeze-manifest.json'
 ```
 
 冻结后防漂移：

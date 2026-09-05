@@ -22,13 +22,13 @@ $javaPath = [IO.Path]::GetFullPath($Java)
 $stateFile = [IO.Path]::GetFullPath($StatePath)
 $stopFile = [IO.Path]::GetFullPath($StopPath)
 $workspaceRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..')).TrimEnd('\') + '\'
-$externalRoot = 'D:\Trans\migration-audit-work\'.ToLowerInvariant()
+$externalRoot = '<AUDIT_ROOT>\'.ToLowerInvariant()
 $rootLower = $root.ToLowerInvariant()
 if (-not $root.StartsWith($workspaceRoot, [StringComparison]::OrdinalIgnoreCase) -and
     -not $rootLower.StartsWith($externalRoot, [StringComparison]::OrdinalIgnoreCase)) {
-    throw 'MinecraftRoot must be inside the current workspace or D:\Trans\migration-audit-work'
+    throw 'MinecraftRoot must be inside the current workspace or <AUDIT_ROOT>'
 }
-if ($rootLower.StartsWith('d:\trans\20260807\', [StringComparison]::OrdinalIgnoreCase)) {
+if ($rootLower.StartsWith('<TRANS_ROOT>\20260807\', [StringComparison]::OrdinalIgnoreCase)) {
     throw 'MinecraftRoot may not be inside the historical source backup'
 }
 if ((Get-Item -LiteralPath $root -Force).Attributes -band [IO.FileAttributes]::ReparsePoint) {

@@ -34,12 +34,12 @@ from run_villager_full_gate import Rcon  # noqa: E402
 JAVA = Path(r"C:\Program Files\Java\jdk-21.0.10\bin\java.exe")
 POWERSHELL = Path(r"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe")
 MIGRATION4_JAR = Path(
-    r"D:\Trans\migration-audit-work\XiyusLogin-migration\build\libs\xiyuslogin-1.4-migration4.jar"
+    r"<AUDIT_ROOT>\XiyusLogin-migration\build\libs\xiyuslogin-1.4-migration4.jar"
 )
 SERVER_LIBRARIES = Path(
-    r"D:\Trans\migration-audit-work\final-fullstack-smoke-corrected-schematicannon-20260810\libraries"
+    r"<AUDIT_ROOT>\final-fullstack-smoke-corrected-schematicannon-20260810\libraries"
 )
-CLIENT_BASE = Path(r"D:\Trans\migration-audit-work\client-gate-20260809\.minecraft")
+CLIENT_BASE = Path(r"<AUDIT_ROOT>\client-gate-20260809\.minecraft")
 PRIVATE_CLIENT_HELPER = TOOLS / "run_private_desktop_client_session.ps1"
 EXPECTED_JAR_SHA256 = "703E01B84558EA9AFE28E82B0FB67C12DC09BA2936DE70939F52759C52D2E998"
 EXPECTED_JAR_BYTES = 170065
@@ -459,7 +459,7 @@ def run() -> dict[str, object]:
         raise RuntimeError("runtime prerequisites are missing")
     if MIGRATION4_JAR.stat().st_size != EXPECTED_JAR_BYTES or sha256_file(MIGRATION4_JAR) != EXPECTED_JAR_SHA256:
         raise RuntimeError("migration4 artifact lock mismatch")
-    if str(MIGRATION4_JAR).lower().startswith(r"d:\trans\20260807".lower()):
+    if str(MIGRATION4_JAR).lower().startswith(r"<TRANS_ROOT>\20260807".lower()):
         raise RuntimeError("production source artifact is forbidden")
 
     run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ") + "-" + secrets.token_hex(3)

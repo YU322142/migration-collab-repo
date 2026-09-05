@@ -18,15 +18,15 @@
 
 ## 已冻结输入
 
-- 当前公测快照 C：`D:\Down\mechanomania-matched-runtime-attempt13-2.zip`
+- 当前公测快照 C：`<DOWNLOAD_ROOT>\mechanomania-matched-runtime-attempt13-2.zip`
   - SHA-256：`ECCD0C6D28A9444DBBCEB3AAEDBBB882E3EEF82B4DDD2547C729571F21891A92`
   - 用户已于 2026-08-15 明确确认：这就是最新服务端文件，不再等待 C2
 - 最新 C 外层锁定清单：`outputs/protected-terrain-ota-latest-c-lock-20260815.json`
-- 原版严格参考 V：`D:\Trans\migration-audit-work\vanilla-reference-v-20260815\strict-reference-world\vanilla-reference-v`
-- 动态稳定参考 V：`D:\Trans\migration-audit-work\vanilla-reference-v-20260815\settled-reference-world\vanilla-reference-v-settled`
-- Terrain/POI bundle：`D:\Trans\migration-audit-work\protected-terrain-ota-20260815\bundle`
-- Entity bundle：`D:\Trans\migration-audit-work\protected-entity-ota-20260815\bundle`
-- 最新 C 离线候选（已应用两个事务包，尚未动态启动）：`D:\Trans\migration-audit-work\mechanomania-latest-c-extracted-20260815\mechanomania-matched-runtime-attempt13-20260814`
+- 原版严格参考 V：`<AUDIT_ROOT>\vanilla-reference-v-20260815\strict-reference-world\vanilla-reference-v`
+- 动态稳定参考 V：`<AUDIT_ROOT>\vanilla-reference-v-20260815\settled-reference-world\vanilla-reference-v-settled`
+- Terrain/POI bundle：`<AUDIT_ROOT>\protected-terrain-ota-20260815\bundle`
+- Entity bundle：`<AUDIT_ROOT>\protected-entity-ota-20260815\bundle`
+- 最新 C 离线候选（已应用两个事务包，尚未动态启动）：`<AUDIT_ROOT>\mechanomania-latest-c-extracted-20260815\mechanomania-matched-runtime-attempt13-20260814`
 - Heightmap 兼容 JAR SHA-256：`AD26B1F429F0E39FCD19D6EFD151DF93A62F3B0F7262312C7BA1D8340E13EFBF`
 - 544 高度 overlay：`outputs/worldgen-height-544-overlay-20260815`
 

@@ -18,7 +18,7 @@ SPEC.loader.exec_module(bundle)
 
 class AssembleBundleTest(unittest.TestCase):
     def d_temp(self):
-        root = Path(os.environ.get("MIGRATION_TEST_TMP", r"D:\Trans\migration-audit-work\tmp"))
+        root = Path(os.environ.get("MIGRATION_TEST_TMP", r"<AUDIT_ROOT>\tmp"))
         root.mkdir(parents=True, exist_ok=True)
         return tempfile.TemporaryDirectory(dir=root)
 

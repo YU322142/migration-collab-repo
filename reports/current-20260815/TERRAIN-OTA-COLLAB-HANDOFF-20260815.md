@@ -11,13 +11,13 @@
 
 ## 永远不要变的输入
 
-- 当前公测服 C：`D:\Down\mechanomania-matched-runtime-attempt13-2.zip`
+- 当前公测服 C：`<DOWNLOAD_ROOT>\mechanomania-matched-runtime-attempt13-2.zip`
 - C SHA-256：`ECCD0C6D28A9444DBBCEB3AAEDBBB882E3EEF82B4DDD2547C729571F21891A92`
 - 最新 C 锁定清单：`outputs/protected-terrain-ota-latest-c-lock-20260815.json`
-- 最新 C 离线候选：`D:\Trans\migration-audit-work\mechanomania-latest-c-extracted-20260815\mechanomania-matched-runtime-attempt13-20260814`
+- 最新 C 离线候选：`<AUDIT_ROOT>\mechanomania-latest-c-extracted-20260815\mechanomania-matched-runtime-attempt13-20260814`
 - 候选清单：`outputs/mechanomania-latest-c-ota-candidate-manifest-20260815.json`
 - 候选清单 SHA：`27CC7D61016F2974490751A4AC45110DD089643E7A4D13B33A4D02E9680ACDD7`
-- 旧完整归档 R：`D:\Down\mechanomania-matched-runtime-attempt13-20260814-ota-final-20260815.zip`
+- 旧完整归档 R：`<DOWNLOAD_ROOT>\mechanomania-matched-runtime-attempt13-20260814-ota-final-20260815.zip`
 - R SHA-256：`92C719AF5A64C775992784326DC73563F0E3AEF6C6A757C9E1E22809497818B4`
 - 保护区：中心 `(10192,-1574)`，半径 `1536`，严格离散相交 `29,305` chunks / `40` regions
 - 核心：半径 `1000`，`12,500` chunks
@@ -30,7 +30,7 @@
 
 ### V 原版参考世界
 
-`D:\Trans\migration-audit-work\vanilla-reference-v-20260815\strict-reference-world\vanilla-reference-v`
+`<AUDIT_ROOT>\vanilla-reference-v-20260815\strict-reference-world\vanilla-reference-v`
 
 - 29,305/29,305，40 regions，19/19 PASS
 - final report SHA：`5507B0D06A0CDD3D9E4D362477A840D8EE4C20656265886F7AAA2C91B60BA05E`
@@ -38,7 +38,7 @@
 
 ### terrain/POI OTA
 
-`D:\Trans\migration-audit-work\protected-terrain-ota-20260815`
+`<AUDIT_ROOT>\protected-terrain-ota-20260815`
 
 - bundle：`bundle\`
 - plan SHA：`483DD2073E7C31691CF15E1BA507556288FF37A11523D3383F6BE34C09C8096E`
@@ -58,7 +58,7 @@
 
 测试根：
 
-`D:\Trans\migration-audit-work\protected-terrain-ota-test-server-20260815\mechanomania-matched-runtime-attempt13-20260814`
+`<AUDIT_ROOT>\protected-terrain-ota-test-server-20260815\mechanomania-matched-runtime-attempt13-20260814`
 
 - terrain/POI：preverify/apply/postverify PASS
 - 2026-08-15 19:36:21：`Done (6.814s)!`

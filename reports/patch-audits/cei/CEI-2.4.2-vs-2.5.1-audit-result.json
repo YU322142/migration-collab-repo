@@ -12,13 +12,13 @@
   },
   "inputs": {
     "2.4.2": {
-      "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\create-enchantment-industry-2.4.2.jar",
+      "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\create-enchantment-industry-2.4.2.jar",
       "size_bytes": 1283517,
       "sha256": "81F192BB53888E01F87A82EAAC2F261C93715F2221DBCF5D8A8D414F912F75EF",
       "zip_file_entries": 735
     },
     "2.5.1": {
-      "path": "D:\\Trans\\migration-audit-work\\mechanomania-attempt2-compat-backup-20260814\\runtime\\create-enchantment-industry-2.5.1.jar",
+      "path": "<AUDIT_ROOT>\\mechanomania-attempt2-compat-backup-20260814\\runtime\\create-enchantment-industry-2.5.1.jar",
       "size_bytes": 1573096,
       "sha256": "0D27024C0F8E94261689EB198D96003BA5A1697D4478B41E298BCA707CEAE988",
       "zip_file_entries": 846
@@ -163,7 +163,7 @@
     "missing_mappings_or_remap_found": false
   },
   "actual_world_findings": {
-    "report_directory": "D:\\Trans\\migration-audit-work\\cei-world-data-compat-audit-20260814",
+    "report_directory": "<AUDIT_ROOT>\\cei-world-data-compat-audit-20260814",
     "new_registry_or_component_hits": [],
     "forgers": [
       {
@@ -289,12 +289,12 @@
       "--max-workers=2",
       "-Dorg.gradle.jvmargs=-Xmx1536m"
     ],
-    "recommended_gradle_user_home": "D:\\Trans\\migration-audit-work\\gradle-cache-cei-backport-20260814"
+    "recommended_gradle_user_home": "<AUDIT_ROOT>\\gradle-cache-cei-backport-20260814"
   },
   "evidence_directories": {
-    "jar_audit": "D:\\Trans\\migration-audit-work\\cei-2.4.2-vs-2.5.1-save-compat-audit-20260814",
-    "world_audit": "D:\\Trans\\migration-audit-work\\cei-world-data-compat-audit-20260814",
-    "source_audit": "D:\\Trans\\migration-audit-work\\cei-official-source-audit-20260814",
-    "dependency_api_audit": "D:\\Trans\\migration-audit-work\\cei-dependency-api-audit-20260814"
+    "jar_audit": "<AUDIT_ROOT>\\cei-2.4.2-vs-2.5.1-save-compat-audit-20260814",
+    "world_audit": "<AUDIT_ROOT>\\cei-world-data-compat-audit-20260814",
+    "source_audit": "<AUDIT_ROOT>\\cei-official-source-audit-20260814",
+    "dependency_api_audit": "<AUDIT_ROOT>\\cei-dependency-api-audit-20260814"
   }
 }

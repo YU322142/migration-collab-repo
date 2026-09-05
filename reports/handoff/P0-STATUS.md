@@ -3,7 +3,7 @@
 ## Create carriage orientation
 
 - 源码：`outputs/projects/create-carriage-orientation-guard-neoforge/`
-- 已有 D 盘构建证据：`D:\Trans\migration-audit-work\handoff-create-carriage-orientation-guard-20260812\build1-create-carriage-orientation-guard.jar`
+- 已有 D 盘构建证据：`<AUDIT_ROOT>\handoff-create-carriage-orientation-guard-20260812\build1-create-carriage-orientation-guard.jar`
 - 已知构建证据 SHA-256：`C38D9E569D4F2FB84A2DC570CF170D610ADEDFAFAAEFE655E9198157A0BE82B0`
 - 当前状态：`BUILD_EVIDENCE_ONLY_REQUIRES_FINAL_REBUILD`。按用户要求，本交接任务不再继续修复或构建；后续人员自行处理。
 - 原因：本轮离线重建第一次选用了错误 Gradle 工作目录；第二次在线插件解析未在当前会话产出终态 JAR。交接者必须在 D 盘可联网 Gradle 环境中执行两次 `clean check jar`，逐字节比较 SHA，再把结果加入下一版动态 release-lock。

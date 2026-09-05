@@ -26,10 +26,10 @@ import time
 
 WORKSPACE = Path(__file__).resolve().parents[2]
 PYTHON = Path(r"C:\Python314\python.exe")
-NBT_DEPS = Path(r"D:\Trans\migration-audit-work\poi-nbtdeps")
-SOURCE = Path(r"D:\Trans\migration-audit-work\incoming-20260811-raw\20260811")
-STAGING = Path(r"D:\Trans\migration-audit-work\cutover-staging-incoming-20260811-candidate13-20260812")
-REPORTS = Path(r"D:\Trans\migration-audit-work\cutover-staging-incoming-20260811-candidate13-20260812-reports")
+NBT_DEPS = Path(r"<AUDIT_ROOT>\poi-nbtdeps")
+SOURCE = Path(r"<AUDIT_ROOT>\incoming-20260811-raw\20260811")
+STAGING = Path(r"<AUDIT_ROOT>\cutover-staging-incoming-20260811-candidate13-20260812")
+REPORTS = Path(r"<AUDIT_ROOT>\cutover-staging-incoming-20260811-candidate13-20260812-reports")
 BASELINE = REPORTS / "source-baseline.json"
 WORLD_REPORT = REPORTS / "world-convert.json"
 AUTH_DB = STAGING / "migration-input" / "EasyAuth" / "easyauth.db"
@@ -42,7 +42,7 @@ STATUS = WORKSPACE / "outputs" / "incoming-20260811-finalize.status.json"
 STDOUT = WORKSPACE / "outputs" / "incoming-20260811-finalize.stdout.log"
 STDERR = WORKSPACE / "outputs" / "incoming-20260811-finalize.stderr.log"
 TOOLS = WORKSPACE / "outputs" / "tools"
-AUTH_CONVERTER = Path(r"D:\Trans\migration-audit-work\XiyusLogin-migration\tools\migrate_easyauth.py")
+AUTH_CONVERTER = Path(r"<AUDIT_ROOT>\XiyusLogin-migration\tools\migrate_easyauth.py")
 
 
 def sha256(path: Path) -> str:
@@ -164,7 +164,7 @@ def main() -> int:
     try:
         if not SOURCE.is_dir() or not STAGING.is_dir() or SOURCE.resolve() == STAGING.resolve():
             raise RuntimeError("source/staging paths are invalid or overlap")
-        if Path(r"D:\Trans\20260807").resolve() == SOURCE.resolve():
+        if Path(r"<TRANS_ROOT>\20260807").resolve() == SOURCE.resolve():
             raise RuntimeError("historical 20260807 backup is forbidden")
         status(started, "RUNNING", "verify-world")
         world = verify_world_report()

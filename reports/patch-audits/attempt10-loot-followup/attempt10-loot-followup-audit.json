@@ -13,7 +13,7 @@
   },
   "audit": {
     "attempt10_log": {
-      "path": "D:\\Trans\\migration-audit-work\\mechanomania-cei-backport-startup-gate-attempt10-artifacts-20260814\\failure-final-server.latest.log",
+      "path": "<AUDIT_ROOT>\\mechanomania-cei-backport-startup-gate-attempt10-artifacts-20260814\\failure-final-server.latest.log",
       "sha256": "60808EA4EE07BB6E1B8FBEC0502B913F9C6EB2A624108C9EC259C5DE6B3F035D",
       "exact_error_counts": {
         "ring": 1,
@@ -54,7 +54,7 @@
     }
   },
   "reference_scan": {
-    "reference_runtime": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt9-20260814",
+    "reference_runtime": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt9-20260814",
     "equivalence_guards": {
       "reference_dnt_sha256": "890882EC1239FFF1CD5CC5F1DA1FE4BE98A31E748D418220BEE5F2B9F3D8FD91",
       "reference_iron_sha256": "BA1F1986CA706AE348CB6FCE6E383AB7CC61C375826CCF0E4D3A88ED2F9FCD3D",
@@ -78,9 +78,9 @@
     "scope_note": "Attempt9 installed JAR code/data plus KubeJS, world datapacks, defaultconfigs, and config; Attempt10 source-definition-only deltas cannot hide external content references; generated world region chunks were not parsed"
   },
   "build": {
-    "source_dnt": "D:\\Trans\\migration-audit-work\\attempt6-data-resource-fixes-20260814\\jars\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+    "source_dnt": "<AUDIT_ROOT>\\attempt6-data-resource-fixes-20260814\\jars\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
     "source_dnt_sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39",
-    "untouched_dnt": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt6-20260814\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+    "untouched_dnt": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt6-20260814\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
     "untouched_dnt_sha256": "890882EC1239FFF1CD5CC5F1DA1FE4BE98A31E748D418220BEE5F2B9F3D8FD91",
     "changes": [
       {
@@ -153,7 +153,7 @@
         "action": "replace_file_atomically",
         "relative_path": "mods/DnT-ancient-city-overhaul-v2 [NeoForge].jar",
         "expected_source_sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39",
-        "artifact": "D:\\Trans\\migration-audit-work\\attempt10-loot-followup-fixes-20260814\\jars\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "artifact": "<AUDIT_ROOT>\\attempt10-loot-followup-fixes-20260814\\jars\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
         "artifact_sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E",
         "artifact_bytes": 945155
       },
@@ -162,7 +162,7 @@
         "action": "replace_file_atomically",
         "relative_path": "mods/DnT-ancient-city-overhaul-v2 [NeoForge].jar",
         "expected_source_sha256": "3BF31C37B82B474C447E003C07DE96D5CF38DB1E5BD19F8A4482202B0BC30F39",
-        "artifact": "D:\\Trans\\migration-audit-work\\attempt10-loot-followup-fixes-20260814\\jars\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "artifact": "<AUDIT_ROOT>\\attempt10-loot-followup-fixes-20260814\\jars\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
         "artifact_sha256": "A7D3ABB6C39FB50C791D52E596C9D14C22D0287EAF6BA055A687C31C0A4C8A7E",
         "artifact_bytes": 945155
       },

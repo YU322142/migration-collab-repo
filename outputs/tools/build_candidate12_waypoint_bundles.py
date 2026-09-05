@@ -25,9 +25,9 @@ from typing import Any
 
 
 CANDIDATE11_ROOT = Path(
-    r"D:\Trans\migration-audit-work\final-mod-bundles-candidate11-20260811"
+    r"<AUDIT_ROOT>\final-mod-bundles-candidate11-20260811"
 )
-HISTORICAL_BACKUP_ROOT = Path(r"D:\Trans\20260807")
+HISTORICAL_BACKUP_ROOT = Path(r"<TRANS_ROOT>\20260807")
 JAR_COUNT = 52
 UNCHANGED_ROWS_PER_SIDE = 51
 WAYPOINT_MOD_ID = "waypoint_fire_equivalence"

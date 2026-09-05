@@ -35,8 +35,8 @@ import verify_deferred_item_ledger as ledger_verify
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUTS = ROOT / "outputs"
 BASELINE_LEDGER = OUTPUTS / "candidate14-netherite-horse-armor-ledger-baseline-20260812.json"
-FORBIDDEN_SOURCE = Path(r"D:\Trans\20260807")
-ALLOWED_EXTERNAL_ROOT = Path(r"D:\Trans\migration-audit-work")
+FORBIDDEN_SOURCE = Path(r"<TRANS_ROOT>\20260807")
+ALLOWED_EXTERNAL_ROOT = Path(r"<AUDIT_ROOT>")
 ATTEMPT_MARKER = ".candidate14-release-gate-attempt.json"
 SANITIZER_JARS = set(release_common.SANITIZER_JARS)
 RECIPE_BOOK_ALLOWLIST = OUTPUTS / "candidate14-server-recipe-book-stale-allowlist-20260812.json"

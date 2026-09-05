@@ -6,29 +6,29 @@
     "superseded_sha256":  "9113FD81FABED5B2E8FB969AC858F1FE5707E0FF6ADC7C037D407B3D80633C17",
     "installed_filename":  "kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
     "installed_sha256":  "AC0D269F395A5D8CBCFEDC747898D1A16171AB0C0C0E94681605F682FEEDAEF0",
-    "artifact":  "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\compatible-build2-kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
+    "artifact":  "<AUDIT_ROOT>\\kaleidoscope-cookery-chopping-board-fix-20260814\\compatible-build2-kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
     "installed":  [
                       {
                           "name":  "server",
-                          "path":  "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\mods\\kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
+                          "path":  "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\mods\\kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
                           "bytes":  5575411,
                           "sha256":  "AC0D269F395A5D8CBCFEDC747898D1A16171AB0C0C0E94681605F682FEEDAEF0",
-                          "backup":  "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\migration4-superseded-backup-20260814\\server-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar"
+                          "backup":  "<AUDIT_ROOT>\\kaleidoscope-cookery-chopping-board-fix-20260814\\migration4-superseded-backup-20260814\\server-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar"
                       },
                       {
                           "name":  "client",
-                          "path":  "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods\\kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
+                          "path":  "<AUDIT_ROOT>\\mechanomania-matched-client-attempt13-20260814\\mods\\kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
                           "bytes":  5575411,
                           "sha256":  "AC0D269F395A5D8CBCFEDC747898D1A16171AB0C0C0E94681605F682FEEDAEF0",
-                          "backup":  "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\migration4-superseded-backup-20260814\\client-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar"
+                          "backup":  "<AUDIT_ROOT>\\kaleidoscope-cookery-chopping-board-fix-20260814\\migration4-superseded-backup-20260814\\client-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar"
                       },
                       {
                           "name":  "prism",
-                          "path":  "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
+                          "path":  "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods\\kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar",
                           "bytes":  5575411,
                           "sha256":  "AC0D269F395A5D8CBCFEDC747898D1A16171AB0C0C0E94681605F682FEEDAEF0",
-                          "backup":  "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\migration4-superseded-backup-20260814\\prism-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar"
+                          "backup":  "<AUDIT_ROOT>\\kaleidoscope-cookery-chopping-board-fix-20260814\\migration4-superseded-backup-20260814\\prism-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar"
                       }
                   ],
-    "backup_root":  "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\migration4-superseded-backup-20260814"
+    "backup_root":  "<AUDIT_ROOT>\\kaleidoscope-cookery-chopping-board-fix-20260814\\migration4-superseded-backup-20260814"
 }

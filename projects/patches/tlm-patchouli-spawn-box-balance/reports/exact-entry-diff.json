@@ -3,8 +3,8 @@
   "policy": "preserve_mechanomania_balance_remove_only_stale_patchouli_pages",
   "side": "CLIENT",
   "server_changes": [],
-  "client_root": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt9-20260814",
-  "source_jar": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt9-20260814\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
+  "client_root": "<AUDIT_ROOT>\\mechanomania-matched-client-attempt9-20260814",
+  "source_jar": "<AUDIT_ROOT>\\mechanomania-matched-client-attempt9-20260814\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar",
   "source_jar_sha256": "F6DB04195820C8508704277EA76D63723804FF236A7B780369BA59EBE5CD9C27",
   "recipe_id_remains_removed_by_server": "touhou_little_maid:altar_recipe/spawn_box",
   "entries": [

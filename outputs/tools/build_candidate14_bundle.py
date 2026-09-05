@@ -29,10 +29,10 @@ import zipfile
 
 WORKSPACE = Path(__file__).resolve().parents[2]
 CANDIDATE13_ROOT = Path(
-    r"D:\Trans\migration-audit-work\final-mod-bundles-candidate13-20260812"
+    r"<AUDIT_ROOT>\final-mod-bundles-candidate13-20260812"
 )
 DEFAULT_OUTPUT_ROOT = Path(
-    r"D:\Trans\migration-audit-work\final-mod-bundles-candidate14-20260812"
+    r"<AUDIT_ROOT>\final-mod-bundles-candidate14-20260812"
 )
 DEFAULT_REPORT = WORKSPACE / "outputs/candidate14-bundle-build-20260812.json"
 DEFAULT_MARKDOWN = WORKSPACE / "outputs/candidate14-bundle-build-20260812.md"
@@ -74,7 +74,7 @@ MCSYNC_SHA256 = "2DD2BEC977B8669D0EF6C90FC54A06021DC0998E903B583517052B1B5CDA25A
 MCSYNC_MOD_ID = "mcmodsync"
 
 RUNTIME_SANITIZED_ROOT = Path(
-    r"D:\Trans\migration-audit-work\manual-test-candidate13-runtime-r2-20260812\mods"
+    r"<AUDIT_ROOT>\manual-test-candidate13-runtime-r2-20260812\mods"
 )
 RUNTIME_SANITIZER_LOCK = {
     "CreateDragonsPlus-1.11.4.jar": {

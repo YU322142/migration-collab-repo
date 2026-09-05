@@ -20,7 +20,7 @@ import zipfile
 ROOT = Path(__file__).resolve().parents[2]
 MIGRATION3_JAR = ROOT / "outputs/tmp/xiyuslogin-1.4-migration3-build1.jar"
 MIGRATION4_JAR = Path(
-    r"D:\Trans\migration-audit-work\XiyusLogin-migration\build\libs\xiyuslogin-1.4-migration4.jar"
+    r"<AUDIT_ROOT>\XiyusLogin-migration\build\libs\xiyuslogin-1.4-migration4.jar"
 )
 SYNTHETIC_EVIDENCE = ROOT / "outputs/xiyuslogin-migration3-synthetic-live-evidence-20260810.json"
 RUNTIME_REPORT = ROOT / "outputs/painting-p0-candidate6-runtime-20260810-escalated.json"
@@ -76,7 +76,7 @@ def relative(path: Path) -> str:
 
 def require_inside_audit_only(path: Path) -> None:
     text = str(path).replace("/", "\\").lower()
-    if "d:\\trans\\20260807" in text:
+    if "<TRANS_ROOT>\\20260807" in text:
         raise RuntimeError("production source path is not allowed")
 
 

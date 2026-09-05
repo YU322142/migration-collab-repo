@@ -5,8 +5,8 @@ param(
     [Parameter(Mandatory = $true)]
     [string] $ExpectedWaypointSha256,
 
-    [string] $PrismRoot = 'D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
-    [string] $ReleaseRoot = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate12-20260811',
+    [string] $PrismRoot = '<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
+    [string] $ReleaseRoot = '<AUDIT_ROOT>\final-mod-bundles-candidate12-20260811',
     [string] $SourceInstanceName = '',
     [string] $InstanceName = '',
     [string] $Report = ''
@@ -23,7 +23,7 @@ if ([string]::IsNullOrWhiteSpace($Report)) {
     $Report = Join-Path $workspace 'outputs\candidate12-prism-import-20260811.json'
 }
 
-$candidate11Release = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate11-20260811'
+$candidate11Release = '<AUDIT_ROOT>\final-mod-bundles-candidate11-20260811'
 $candidate11ReadySha = '613025D9852956113DD5DB7653C37BD0DF3C36F93818AB79B3681338B03BA05E'
 $candidate11ClientManifestSha = '1CECCAE36F9DDB47DDC9D882603C1A0D0AB54E073FCF21D86C34270D61B1C30D'
 $candidate11ClientBundleSha = 'CABFD4F8AAC31A2A6910E4963442E683690CC4D2F2F60E7B26984D63E6DAE95B'

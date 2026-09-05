@@ -19,11 +19,11 @@ import zipfile
 
 
 SOURCE = Path(
-    r"D:\Trans\migration-audit-work\attempt6-data-resource-fixes-20260814\jars\tracks-neoforge-1.21.1-1.0.1.jar"
+    r"<AUDIT_ROOT>\attempt6-data-resource-fixes-20260814\jars\tracks-neoforge-1.21.1-1.0.1.jar"
 )
 SOURCE_BYTES = 165_882
 SOURCE_SHA256 = "B5022C73AE4A36E8798D1E57D8128EB42DA2964C6E38C722D2AD7CCD2FF443E5"
-OUTPUT_ROOT = Path(r"D:\Trans\migration-audit-work\tracks-tag-fix-artifacts-20260814")
+OUTPUT_ROOT = Path(r"<AUDIT_ROOT>\tracks-tag-fix-artifacts-20260814")
 OUTPUT_NAME = "tracks-neoforge-1.21.1-1.0.1-block-tag-fix.1.jar"
 TAG_ENTRIES = (
     "data/create/tags/block/safe_nbt.json",

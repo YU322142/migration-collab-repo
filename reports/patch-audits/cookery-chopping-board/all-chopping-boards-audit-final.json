@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "status": "PASS",
-  "world": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world",
+  "world": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world",
   "target_id": "kaleidoscope_cookery:chopping_board",
   "workers": 12,
   "region_files": 1981,
@@ -14,7 +14,7 @@
   "missing_model_count": 0,
   "matches": [
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
       "slot": 176,
       "value": {
         "z": -423,
@@ -29,7 +29,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
       "slot": 176,
       "value": {
         "z": -420,
@@ -44,7 +44,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
       "slot": 176,
       "value": {
         "z": -427,
@@ -59,7 +59,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
       "slot": 176,
       "value": {
         "z": -424,
@@ -74,7 +74,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
       "slot": 176,
       "value": {
         "z": -421,
@@ -89,7 +89,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
       "slot": 912,
       "value": {
         "CurrentCutStack": {},
@@ -105,7 +105,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-7.-4.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-7.-4.mca",
       "slot": 88,
       "value": {
         "z": -2001,
@@ -120,7 +120,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.2.-10.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.2.-10.mca",
       "slot": 55,
       "value": {
         "CurrentCutStack": {},
@@ -136,7 +136,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.53.-26.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.53.-26.mca",
       "slot": 876,
       "value": {
         "CurrentCutStack": {},
@@ -154,7 +154,7 @@
   ],
   "exact_empty_air": [
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
       "slot": 176,
       "value": {
         "z": -423,
@@ -169,7 +169,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
       "slot": 176,
       "value": {
         "z": -420,
@@ -184,7 +184,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
       "slot": 176,
       "value": {
         "z": -427,
@@ -199,7 +199,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
       "slot": 176,
       "value": {
         "z": -424,
@@ -214,7 +214,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
       "slot": 176,
       "value": {
         "z": -421,
@@ -229,7 +229,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-1.-1.mca",
       "slot": 912,
       "value": {
         "CurrentCutStack": {},
@@ -245,7 +245,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-7.-4.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.-7.-4.mca",
       "slot": 88,
       "value": {
         "z": -2001,
@@ -260,7 +260,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.2.-10.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.2.-10.mca",
       "slot": 55,
       "value": {
         "CurrentCutStack": {},
@@ -276,7 +276,7 @@
       }
     },
     {
-      "region": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.53.-26.mca",
+      "region": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world\\region\\r.53.-26.mca",
       "slot": 876,
       "value": {
         "CurrentCutStack": {},

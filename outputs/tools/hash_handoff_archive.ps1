@@ -27,8 +27,8 @@ $package = Get-Item -LiteralPath $PackagePath
 if (-not $package.PSIsContainer) {
     throw "Package path is not a directory: $PackagePath"
 }
-if ($archive.DirectoryName -ne 'D:\Trans' -or $package.Parent.FullName -ne 'D:\Trans') {
-    throw 'Archive and package must both be direct children of D:\Trans'
+if ($archive.DirectoryName -ne '<TRANS_ROOT>' -or $package.Parent.FullName -ne '<TRANS_ROOT>') {
+    throw 'Archive and package must both be direct children of <TRANS_ROOT>'
 }
 
 $manifestPath = Join-Path $package.FullName 'MANIFEST-SHA256.json'
@@ -44,7 +44,7 @@ if ($archiveBefore.Length -ne $archiveAfter.Length -or $archiveBefore.LastWriteT
 }
 
 $physical = Get-ChildItem -LiteralPath $package.FullName -Recurse -File -Force | Measure-Object -Property Length -Sum
-$testLog = 'D:\Trans\migration-handoff-20260812.test.log'
+$testLog = '<HANDOFF_ROOT>.test.log'
 $testText = Get-Content -LiteralPath $testLog -Raw -Encoding UTF8
 if ($testText -notmatch 'Everything is Ok') {
     throw '7z test log does not contain Everything is Ok'

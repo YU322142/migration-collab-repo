@@ -1,14 +1,14 @@
 # Full-stack resource error audit
 
-Scope is the isolated NeoForge 1.21.1 pack only. No file under `D:\Trans\20260807` or `D:\Trans\20260807-neoforge-1.21.1` was changed.
+Scope is the isolated NeoForge 1.21.1 pack only. No file under `<TRANS_ROOT>\20260807` or `<TRANS_ROOT>\20260807-neoforge-1.21.1` was changed.
 
 ## Evidence
 
-- Baseline 18-error capture: `D:\Trans\migration-audit-work\happyghast-equivalence-smoke1\smoke4.stdout.log`.
-- Patched full-stack server: `D:\Trans\migration-audit-work\resource-overlay-fullstack-smoke1`.
-- Final startup capture: `D:\Trans\migration-audit-work\resource-overlay-fullstack-smoke1\smoke9.stdout.log`.
-- Final server log/reload capture: `D:\Trans\migration-audit-work\resource-overlay-fullstack-smoke1\logs\latest.log`.
-- Overlay source: `D:\Trans\migration-audit-work\Resource-Error-Overlay-1.21.1`.
+- Baseline 18-error capture: `<AUDIT_ROOT>\happyghast-equivalence-smoke1\smoke4.stdout.log`.
+- Patched full-stack server: `<AUDIT_ROOT>\resource-overlay-fullstack-smoke1`.
+- Final startup capture: `<AUDIT_ROOT>\resource-overlay-fullstack-smoke1\smoke9.stdout.log`.
+- Final server log/reload capture: `<AUDIT_ROOT>\resource-overlay-fullstack-smoke1\logs\latest.log`.
+- Overlay source: `<AUDIT_ROOT>\Resource-Error-Overlay-1.21.1`.
 - JSON validation: `JSON_OK=19`.
 - Overlay JAR: `migration-resource-overlay-1.0.0+mc1.21.1.jar`, 11,360 bytes, SHA-256 `DD5C16CE8C815885F3840BC3E96FB8DB5AE248AF06369EB57D3D01C3B2A60296`.
 

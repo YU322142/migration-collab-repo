@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generated_at": "2026-08-18T09:35:32.854036+00:00",
+  "generated_at": "2026-09-05T15:18:02.535074+00:00",
   "self_excluded": "repository-manifest.json",
   "files": [
     {
@@ -15,28 +15,28 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 898,
-      "sha256": "F75D02DC38ECAF4A0B3DD9F530080403599FBA6DA8D9D1C1EC46522BED61124E"
+      "bytes": 917,
+      "sha256": "3049A9157B105F0312325644192F524C988FC74A0852CEEBAFDE378C198C562C"
     },
     {
       "path": "artifacts/client-baselines/motiquies-2.0.0-mods.json",
-      "bytes": 46896,
-      "sha256": "1DBAF166A8F62FBCF27C8ED0B89C079AC930EABAD7A1441C74B1C71125D96A1F"
+      "bytes": 45600,
+      "sha256": "4D1ABA9060A3477AB40940F689504114B2507F87C9027B26CBDCADDB87C22B47"
     },
     {
       "path": "artifacts/EXTERNAL-ARTIFACTS.json",
-      "bytes": 2251,
-      "sha256": "ECE155D276FD2CD2F96492E7FEA8F0A508818AAC3BE85781FBAE51814E3191E5"
+      "bytes": 2144,
+      "sha256": "AAD7C6B2F0885041717D8286D36FA4A8231C244C4C4E0FECD039D1841552D562"
     },
     {
       "path": "artifacts/EXTERNAL-ARTIFACTS.md",
-      "bytes": 2019,
-      "sha256": "A8C5C62D7A772E250A4AD00D2BA98EE430DF1580230A08AC54197A6467AC9899"
+      "bytes": 1925,
+      "sha256": "F97C6C0BF67B752C053E18DE126A7F2A2B0ED19CCA57CD667249261F0DA90832"
     },
     {
       "path": "artifacts/mcmodsync-disabled/classification-source.json",
-      "bytes": 147457,
-      "sha256": "DA89BB5CC54C14FA619C4702417FD64BB10E34D15430A1047DFC3CF9E76A3C9B"
+      "bytes": 145166,
+      "sha256": "5E5CE00268F566ECE547830CB13C140C50B5268B1742F116A73DAD074EFB3342"
     },
     {
       "path": "artifacts/mcmodsync-disabled/local-template/catalog-draft.json",
@@ -70,8 +70,8 @@
     },
     {
       "path": "artifacts/mcmodsync-disabled/mods-v4-classification.json",
-      "bytes": 427867,
-      "sha256": "123C7F2610D92E8DCF6FA286EC7011B3499292B4584643510C2A81421C21DBDC"
+      "bytes": 428560,
+      "sha256": "7FEB236BFED37C4BDC84DDEB72E20C0C7699973A4194DF2AB53EFD7715DCFC07"
     },
     {
       "path": "artifacts/mcmodsync-disabled/MODS-V4-CLASSIFICATION.md",
@@ -114,6 +114,16 @@
       "sha256": "F2BDC9BED778AFA9D9AF3639AAAE9EA48B7D3937ED2E1285FD1C35CAF094725A"
     },
     {
+      "path": "docs/ADAPTATION-OPEN-SOURCE-INVENTORY.en.md",
+      "bytes": 6305,
+      "sha256": "16D91A00DD07E273BC2B7610E736E27A19F5CF7965779378246802F344487400"
+    },
+    {
+      "path": "docs/ADAPTATION-OPEN-SOURCE-INVENTORY.zh-CN.md",
+      "bytes": 6252,
+      "sha256": "D586EDF9D283B4D02A5C446FDCDD4B44B77A0E343162275D10BD200083449804"
+    },
+    {
       "path": "docs/ARCHITECTURE.md",
       "bytes": 1014,
       "sha256": "3A350B6281A714E014CBE42B2B82ACCD36DAD8EB8A286DCED42376AC19D096AF"
@@ -124,14 +134,19 @@
       "sha256": "62042DD62E240B5BD8CFDA6D7111257BB70DDAB590C523B25EE175BD6F59AE3F"
     },
     {
+      "path": "docs/CHEST-COLORIZER-LATEST.md",
+      "bytes": 1705,
+      "sha256": "0A73D307D9C4C7EAF35EAC826D764FB8A99059EB398D46B420BC289CD942CB3F"
+    },
+    {
       "path": "docs/CLIENT-AUTHORITY-POLICY.md",
-      "bytes": 1906,
-      "sha256": "06C6AA4DBE60EFE8C0A5F51BE3B7BF81F9300D7C5AB5E3EEF492182A3D06041B"
+      "bytes": 1911,
+      "sha256": "25D1B45E19057966C3BBDDB1B57F82BF4EDBB570CA511DE02252599DC76390EC"
     },
     {
       "path": "docs/CLIENT-TITLE-AND-10MB-BOOTSTRAP-DESIGN.md",
-      "bytes": 6978,
-      "sha256": "0AABBB0DBB810250807C31DE0F55E7F9998E258E311F501D5877A1523D570CA1"
+      "bytes": 6986,
+      "sha256": "525E550A57BAEA3FA9B796FC432C4887953BB8D342E7B06C019B88400681F645"
     },
     {
       "path": "docs/KNOWN-ISSUES.md",
@@ -140,8 +155,8 @@
     },
     {
       "path": "docs/MODULE-CATALOG.md",
-      "bytes": 6709,
-      "sha256": "FA26853B26869F113DA87FB7E19336717EB404E735217FEACFC6B365D6A9EDA7"
+      "bytes": 6818,
+      "sha256": "30FCF8BF0D0A597BA3757A35D267D8A06CEA3B02BF0455EEA10A29FEDF54C821"
     },
     {
       "path": "docs/MODULE-FILE-INDEX.md",
@@ -150,8 +165,8 @@
     },
     {
       "path": "docs/MODULE-INTERNAL-REFACTOR-MAP.md",
-      "bytes": 9382,
-      "sha256": "BEB91493CB546A7C09089814B25D6EC83A015DC4AC81C7F687B60FAFA541CF8D"
+      "bytes": 9505,
+      "sha256": "61AF9E92599E14B77EE2A1437B166A03CA3C69340DA84367C09D83D3C41E6634"
     },
     {
       "path": "docs/REPOSITORY-OPERATIONS.md",
@@ -175,13 +190,13 @@
     },
     {
       "path": "docs/SOURCE-MAP.md",
-      "bytes": 620,
-      "sha256": "5C3C23B02414A0586BDFE39E1F34414D30AE2E8C86D9055C807E1E349A61A610"
+      "bytes": 582,
+      "sha256": "5101C73E8531B4D9F11560059923877930C60635A0E69D8823E1F912EB68098B"
     },
     {
       "path": "docs/STATUS.md",
-      "bytes": 1224,
-      "sha256": "CB305D3CA8E3D1AA63425E938B9F49D69EDC239061FE7EC650754C696FD52512"
+      "bytes": 1232,
+      "sha256": "61A26903F4300CEEFC3DEE0F671841DE64207BDBC62E15150EB5F503F8C7E701"
     },
     {
       "path": "docs/TEST-MATRIX.md",
@@ -195,13 +210,8 @@
     },
     {
       "path": "docs/VALIDATION-20260815.md",
-      "bytes": 1199,
-      "sha256": "46BFCCC921FB29215B488A05EE23E63026CEB6BD117E8FABA6B93C969CADE9DC"
-    },
-    {
-      "path": "migration-collab-repo.zip",
-      "bytes": 206953240,
-      "sha256": "D3F8F684A99A4343C9D475593F6C05396A7EDC64CEF8AD45A4D21333AE618526"
+      "bytes": 1182,
+      "sha256": "3062EF1DDD8A97FA49F05C0ACB8A3DBAB71D682DF70D1BFA39F523356F3AF803"
     },
     {
       "path": "outputs/projects/cctweaked-startup-shutdown-guard-neoforge/build.gradle",
@@ -210,13 +220,13 @@
     },
     {
       "path": "outputs/projects/cctweaked-startup-shutdown-guard-neoforge/gradle.properties",
-      "bytes": 865,
-      "sha256": "C55CE8AB15232E55C8CCAA0CBBFF7968F2D8394D59E6445CDCD4617B75A21CCC"
+      "bytes": 848,
+      "sha256": "B19A84A3C04FADFD2862EB39C766C0C25144DEB5D882AAAC75C1039A913F756B"
     },
     {
       "path": "outputs/projects/cctweaked-startup-shutdown-guard-neoforge/README.md",
-      "bytes": 2481,
-      "sha256": "7C3FED2A85F90FBDEC07706E4FE727AE1851B1A17F8DA692F69D347551ACA534"
+      "bytes": 2464,
+      "sha256": "027060B75007897ED8BF02A4EC68404A7E9E3870C068E425E010C7CB4AE454A9"
     },
     {
       "path": "outputs/projects/cctweaked-startup-shutdown-guard-neoforge/settings.gradle",
@@ -260,8 +270,8 @@
     },
     {
       "path": "outputs/projects/chest-colorizer-neoforge-1.21.1/gradle.properties",
-      "bytes": 944,
-      "sha256": "6221070A18764064ED933FDCFA776F771B2DEA6124A50F5E79D60B780EB4B52F"
+      "bytes": 931,
+      "sha256": "7FF7EAA22F4D1500E82C1EF21018CC6029C6A9CCD3DE8516BE9C0F0F0413FADC"
     },
     {
       "path": "outputs/projects/chest-colorizer-neoforge-1.21.1/settings.gradle",
@@ -1100,8 +1110,8 @@
     },
     {
       "path": "outputs/projects/create-carriage-orientation-guard-neoforge/gradle.properties",
-      "bytes": 1104,
-      "sha256": "E8E61FD6F1A283B8666968FCB6F881CCB1F7FE401AF3EC2469DC2C5F2ABABE55"
+      "bytes": 1070,
+      "sha256": "6C1E22FD2B35ED1B6C0A6503D489790F8DF2FC7394F37A9D87F9697884D7441E"
     },
     {
       "path": "outputs/projects/create-carriage-orientation-guard-neoforge/settings.gradle",
@@ -1145,13 +1155,13 @@
     },
     {
       "path": "outputs/projects/create-chute-unload-guard-neoforge/gradle.properties",
-      "bytes": 989,
-      "sha256": "7893DB7D5BC72C05271EF2B26BC9C512AFE381EE0874F6C52473045079C5A1BE"
+      "bytes": 976,
+      "sha256": "C5A38983D2B79B5D80E1D0756233FC42DA6E46A7847E75D58EC99B5C2E32E9FC"
     },
     {
       "path": "outputs/projects/create-chute-unload-guard-neoforge/README.md",
-      "bytes": 1256,
-      "sha256": "9862ADA96B13A60B421B9F727B068AA43D0C47356295BC76A70B3A993B4DD4C5"
+      "bytes": 1222,
+      "sha256": "EA40648187D272C0D97509463F50EA7B665A738E56248B764167462CE6D792DC"
     },
     {
       "path": "outputs/projects/create-chute-unload-guard-neoforge/settings.gradle",
@@ -1195,8 +1205,8 @@
     },
     {
       "path": "outputs/projects/create-dynamic-blocking-neoforge/gradle.properties",
-      "bytes": 1015,
-      "sha256": "D94D4D3F6133B0100BE99CE9B92607841D8B2B3FA4121964FF644BB3540D874E"
+      "bytes": 1002,
+      "sha256": "243C5F597B4E6E89A4BF4FE632702F92FE899420A5B1B359DD9336304A2C24F0"
     },
     {
       "path": "outputs/projects/create-dynamic-blocking-neoforge/settings.gradle",
@@ -1250,8 +1260,8 @@
     },
     {
       "path": "outputs/projects/create-saveddata-probe/gradle.properties",
-      "bytes": 727,
-      "sha256": "10C275AECBF04FC1CFA204D367647F174C6D2456EEC88E2E1D081F157B07A2E5"
+      "bytes": 731,
+      "sha256": "5CA8289A525CE047E5540644C82BDB08F6C95302BC2BBB89ADD740E1779442B0"
     },
     {
       "path": "outputs/projects/create-saveddata-probe/settings.gradle",
@@ -1415,8 +1425,8 @@
     },
     {
       "path": "outputs/projects/heightmap-384-to-544-compat-neoforge/gradle.properties",
-      "bytes": 1076,
-      "sha256": "B03FCC8E0C38DDB4032CDBED3E9C2DFBEA225B7E330776D004A060EACBCFCC29"
+      "bytes": 1084,
+      "sha256": "DFE80BAA55385689225658B61BB23DE17D7175C06A340FB38D2A04756EA0244B"
     },
     {
       "path": "outputs/projects/heightmap-384-to-544-compat-neoforge/settings.gradle",
@@ -1460,8 +1470,8 @@
     },
     {
       "path": "outputs/projects/kaleidoscope-cookery-scarecrow-compat/gradle.properties",
-      "bytes": 1185,
-      "sha256": "769D51E1C4AD659F51297FB6C092BAF805BA7F2D89E75D4E03DA533F733D7257"
+      "bytes": 1151,
+      "sha256": "630E6D91AF8F68DD746FF8190242E49089D650B664E7AEDDF4C9393E10B4BFBE"
     },
     {
       "path": "outputs/projects/kaleidoscope-cookery-scarecrow-compat/README.md",
@@ -1640,8 +1650,8 @@
     },
     {
       "path": "outputs/projects/mishanguc-pale-oak-equivalence/build.gradle",
-      "bytes": 1650,
-      "sha256": "E93ED1D9DFFCB70B9C65CC9334030228496B05A391DB27A5B57DB7D18D71A99B"
+      "bytes": 1616,
+      "sha256": "C5F436DE53BDECFCD38FE0511BBFE5008E1B01F7A75F36DBEFF851C8EECC8C91"
     },
     {
       "path": "outputs/projects/mishanguc-pale-oak-equivalence/gradle.properties",
@@ -1795,8 +1805,8 @@
     },
     {
       "path": "outputs/projects/resource-error-overlay-1.21.1/RESOURCE_ERROR_AUDIT.md",
-      "bytes": 7825,
-      "sha256": "1EE2585EA124D824C5F62277E89549FA65CDC80631B5F92332786419E8EDF09E"
+      "bytes": 7748,
+      "sha256": "54673B88D65066BEFABFF89EBB9F3B0110CA7226D29C4E3D1B9FB547BE0452CF"
     },
     {
       "path": "outputs/projects/resource-error-overlay-1.21.1/src/main/resources/assets/kaleidoscope_end/blockstates/ender_dragon_tea.json",
@@ -2070,53 +2080,53 @@
     },
     {
       "path": "outputs/tools/append_migration_handoff.ps1",
-      "bytes": 7154,
-      "sha256": "3FE6EC225C4A88CA6005CF33B917425F7BAAEA827F76E4B74B524B20F44B6F57"
+      "bytes": 7041,
+      "sha256": "53511B035C0B6978E526A3E4DACFE7F60AB6EADDBA053E0D9DE1A370CFD14958"
     },
     {
       "path": "outputs/tools/apply_attempt10_core_fixes.py",
-      "bytes": 13685,
-      "sha256": "3A7A367EC9B921EFE993F8914A541A89ED79E2C8050246C4024AB98B178D1C65"
+      "bytes": 13502,
+      "sha256": "AA46423FFB81425B0EAEA6AD4FF12CCF9E4C46327C7D691DC11380F109037166"
     },
     {
       "path": "outputs/tools/apply_attempt11_followup_fixes_20260814.py",
-      "bytes": 33916,
-      "sha256": "F02516C53605A8558DD20F7A89E2C4204840686A538A438A24068F1C50A56DF9"
+      "bytes": 33903,
+      "sha256": "C752CBC997FCC30A80C7D052C7C7CCBD7D33E2EA193116143CF45D4C6514A811"
     },
     {
       "path": "outputs/tools/apply_attempt12_followup_fixes_20260814.py",
-      "bytes": 2657,
-      "sha256": "285AF7F700C2689728AC2CB462B23B689DCC2CD3DBC721886296CCE7BC68DC06"
+      "bytes": 2644,
+      "sha256": "2537F8166999D584D0780070633A076EBF9E13AE36E59C3BDABA7637A0724BA8"
     },
     {
       "path": "outputs/tools/apply_attempt12_tlm_patchouli_jar.py",
-      "bytes": 4749,
-      "sha256": "CEDA4B7950D727EC5948212435B190EC1C61F3D99B2BEE4B2BDCA1D1E9C197C5"
+      "bytes": 4732,
+      "sha256": "77A48EE166A4C8B32139B44ADAA1CA2E2B7127D2FA36D6F757CC6C07DCF6FE29"
     },
     {
       "path": "outputs/tools/apply_attempt13_followup_fixes_20260814.py",
-      "bytes": 2695,
-      "sha256": "046ACA86D3FFC725D49B4C855B882060B018ABF033EF434C0E949FF8DA291162"
+      "bytes": 2682,
+      "sha256": "3E9DA085321CA3B50A0F48F07A2A7B2DCF14F96D0AE7A9E8AB9469DB9443A0C6"
     },
     {
       "path": "outputs/tools/apply_attempt13_tlm_patchouli_jar.py",
-      "bytes": 4127,
-      "sha256": "EDBEE31B414568642B1B79637AC42C3C568EFDA57B4FABAFA3824819D50E22D7"
+      "bytes": 4110,
+      "sha256": "96FE43C2DD8144AA031CDCC74C7F74DBF4D466ABF27B67CB2F8868F3CCF78E65"
     },
     {
       "path": "outputs/tools/apply_attempt6_to_attempt10.py",
-      "bytes": 40229,
-      "sha256": "6998BEBE8164E5B98108DF90D52F2EEF03CB38B17565A941A456532E6F420745"
+      "bytes": 40193,
+      "sha256": "1787313BF123087CB72EB71389F25D584E7F9B66433AF68FEA2B85849EA8DE9E"
     },
     {
       "path": "outputs/tools/apply_kaleidoscope_cookery_chopping_board_fix_20260814.ps1",
-      "bytes": 7163,
-      "sha256": "5F4123E7FB7F07EC73CD2F4A928124204713E74D3322059A7077DDC8F15380D3"
+      "bytes": 7100,
+      "sha256": "BBD6931DD9F790B7DAD09FCD150BBA42E1B17C30ACFF085401C2AE78886CA0F7"
     },
     {
       "path": "outputs/tools/apply_kaleidoscope_cookery_compatible_hotfix_20260814.ps1",
-      "bytes": 6340,
-      "sha256": "E184796A949CC156CFCD36BC9A7868305B28A8ED4B2C68D0644243BA684FA076"
+      "bytes": 6277,
+      "sha256": "18200643F5C19B301B4246D71D06B0071306DAF04EF30DEF2B51BE9EB745A614"
     },
     {
       "path": "outputs/tools/apply_singleplayer_gameplay_parity.py",
@@ -2145,8 +2155,8 @@
     },
     {
       "path": "outputs/tools/audit_block_entity_state_consistency.py",
-      "bytes": 27130,
-      "sha256": "9AD66F194D4302AAB078171C186697A13CE7A88035F8DF94117AD6A0C0FD1F94"
+      "bytes": 27113,
+      "sha256": "C9FDC38DD9190B1A467E7A5C9A6712BC33E2043832B09EF8FD3EA8E42B32BDD9"
     },
     {
       "path": "outputs/tools/audit_brass_funnel_filters.py",
@@ -2155,13 +2165,13 @@
     },
     {
       "path": "outputs/tools/audit_candidate11_bundle.py",
-      "bytes": 14374,
-      "sha256": "38C67691434A24F828FC388015AFE742F094243BA5EEB65D209610AD76088673"
+      "bytes": 14357,
+      "sha256": "FC416449542E61824CB285B97EE60430A227050AC75E093FD2A1532D66C0D2CE"
     },
     {
       "path": "outputs/tools/audit_candidate13_client_prism.ps1",
-      "bytes": 8309,
-      "sha256": "D5EED20D774CB564C94058F8C677AE0BC5EFAF116CAD48B11D3899177CE21007"
+      "bytes": 8297,
+      "sha256": "46866C04FC15C1C6404481700B05848D6B0F539764B2BE13C832D554F0E7CC2A"
     },
     {
       "path": "outputs/tools/audit_candidate13_netherite_horse_armor.py",
@@ -2185,8 +2195,8 @@
     },
     {
       "path": "outputs/tools/audit_candidate6_transferred_content.py",
-      "bytes": 16375,
-      "sha256": "647BF4E6833F320FF72B342F1283F6AFAEAE27C3CF7A34E0ECCF280A65A63A33"
+      "bytes": 16378,
+      "sha256": "46E94A1FBF27E3FB09BFC6463BD498AF9F1A28BC40F8678B12668FC483881DCE"
     },
     {
       "path": "outputs/tools/audit_cei_backport_postgate_readonly.py",
@@ -2265,18 +2275,18 @@
     },
     {
       "path": "outputs/tools/audit_kaleidoscope_cookery_migration4_rebuild.py",
-      "bytes": 20353,
-      "sha256": "D7BB97CA2E477A99D5776B410C2E51D74C43925BE8A77DEB545C0C203D54F2C8"
+      "bytes": 20285,
+      "sha256": "D32D7F574A65D54C295CC76BDAB09DDBF11BD5D270D74C9552C764A5A6525700"
     },
     {
       "path": "outputs/tools/audit_legacy_dimension_roots.py",
-      "bytes": 32747,
-      "sha256": "A6582A288FAC55E51F3A4006DFC0308A9A142914EE5AFA8A1A71CC849BAAE252"
+      "bytes": 32751,
+      "sha256": "AE00977843FBE94BACE2BB8D4C984C5710C5192E637D4A4B514D6A8670C50F51"
     },
     {
       "path": "outputs/tools/audit_legacy_dimension_semantic_sample.py",
-      "bytes": 8106,
-      "sha256": "D1680F2C3CFF2526CB8E99B41C20B0532EBEBFE8C244C065CE274803CE3F5E32"
+      "bytes": 8110,
+      "sha256": "6B51E681A0D691A2FEBB0D729F2C320A5D8333F45148CD5185D432BA51776474"
     },
     {
       "path": "outputs/tools/audit_loaded_region_losses.py",
@@ -2380,8 +2390,8 @@
     },
     {
       "path": "outputs/tools/build_attempt6_data_resource_fixes_20260814.py",
-      "bytes": 27684,
-      "sha256": "631CE4DB8D36CC43E454854435308759B525334A31775FF6B0399E33D56EC1D7"
+      "bytes": 27597,
+      "sha256": "BAD9CC5488EAE3340127FADE9BA5CBDB71288028EE8028D103CD624BF8BF75C3"
     },
     {
       "path": "outputs/tools/build_c6c_purified.py",
@@ -2395,38 +2405,38 @@
     },
     {
       "path": "outputs/tools/build_candidate11_guard_cc_bundles.py",
-      "bytes": 43611,
-      "sha256": "9CD273A2AA2BB57B24689B621F744147F4860693C3526823DE72D8BE9560EB9D"
+      "bytes": 43598,
+      "sha256": "FA1AD378C06FB58366609F21A34DFC62CB6FA17CFA00615CCB3E41006015C7C2"
     },
     {
       "path": "outputs/tools/build_candidate12_waypoint_bundles.py",
-      "bytes": 40404,
-      "sha256": "293664C32C756F5C3EF1E9E73DA06419F1A21E5A677E295E74E7F13229584C4E"
+      "bytes": 40391,
+      "sha256": "4C49DE54A4029896ACECE635F14DC3C9131061755DA1569598F7B502E78C82DD"
     },
     {
       "path": "outputs/tools/build_candidate13_bundle.py",
-      "bytes": 31059,
-      "sha256": "EF7C646A22CC16E94C6CF0054C3575E0B561E23D5A67B586D67C51B6DC105707"
+      "bytes": 31025,
+      "sha256": "2030C35ACA3CD23F50687D87559E84AA49B7401B4C373893F10E1E6AF22A8CA5"
     },
     {
       "path": "outputs/tools/build_candidate13_resource_closure.py",
-      "bytes": 19828,
-      "sha256": "3C029A8332D6498DC135C1497AA341485106C40FEB503CC8747C6947F798F3C2"
+      "bytes": 19821,
+      "sha256": "3513D5A83B3BAA3E1F29EC3F4A318E66C6627F5D6FEAC53EDAEE8A795D5AFF6C"
     },
     {
       "path": "outputs/tools/build_candidate14_bundle.py",
-      "bytes": 31478,
-      "sha256": "1DC609CA03A8793E8CADADDFD0E398908FC89B1A4A5BDF17AB7A31B744526669"
+      "bytes": 31427,
+      "sha256": "9B72AB28899E968E48814D03655DD572A66302AD5938E077DECBBB034FED80ED"
     },
     {
       "path": "outputs/tools/build_candidate14_ota_readiness.py",
-      "bytes": 49034,
-      "sha256": "69B49367AFCBC79413AF140B9E45D6B67B95F1C73AFB114846D5EA1C63490924"
+      "bytes": 49000,
+      "sha256": "A57BEE54AF639D8D43A8D3DC0BEA1802019BDA06FE61AD4B30C44C3CD5376921"
     },
     {
       "path": "outputs/tools/build_candidate9_happyghast_bundles.py",
-      "bytes": 28126,
-      "sha256": "3EA49BF684BBFF3A7062243A2002FA430DB55E6554BEDA662E46B080BBD36853"
+      "bytes": 28130,
+      "sha256": "784D1C1C2D9905F963531807B00D4D0ADECEB4CFD1D3EC90ACF4648BF357BBEE"
     },
     {
       "path": "outputs/tools/build_cei_242_world_readability_report.py",
@@ -2435,28 +2445,28 @@
     },
     {
       "path": "outputs/tools/build_mechanomania_attempt13_release.py",
-      "bytes": 44613,
-      "sha256": "94203F89776DFFB2140178C8DB8EB304CEEB4565E137F9BB9C8D2CC35CB1A76F"
+      "bytes": 44596,
+      "sha256": "37079A63E4867E5E3B60E6AE60881FC79BDE5BA21EA65112C65BDFFD0EEAB877"
     },
     {
       "path": "outputs/tools/build_mechanomania_matched_release.py",
-      "bytes": 55780,
-      "sha256": "0280231A5D4E4E69A14AED1FD0A01839F1AFF39F1BAC7B17B5B18FBA5898A8CA"
+      "bytes": 55763,
+      "sha256": "9740619DF23F3E5EB5BFCBA7BC39C678B2FF06733D6B66801DBB67484A6F4715"
     },
     {
       "path": "outputs/tools/build_mechanomania_merge_matrix.py",
-      "bytes": 40560,
-      "sha256": "DFA2017F283090FC9730D67BB00D4DA3391138E7C381B40DC49FC703D4BEFF17"
+      "bytes": 40497,
+      "sha256": "9B402830069134BCA9B26C83B1B0639B9BB365AE14C30A1748A0A2140DA71059"
     },
     {
       "path": "outputs/tools/build_migration_handoff_copy.ps1",
-      "bytes": 3983,
-      "sha256": "CB86C366952D36FC0496BA249655525D7914FA523D5EC2FCC710A65522BA98EE"
+      "bytes": 3893,
+      "sha256": "4974D9903C7451238C01914990338D7EA1DE9EFD90DC46D30E384121FF80EAF3"
     },
     {
       "path": "outputs/tools/build_migration_storage_review.py",
-      "bytes": 12595,
-      "sha256": "21ECBF16E612C956E9043C78451A0C18684A70D2227C768990BDF810F3FFA28D"
+      "bytes": 12500,
+      "sha256": "2E574BA33333554DF0CD0D9FC7731ADB8051C6A8673B14CA344F46D4CA7BB94A"
     },
     {
       "path": "outputs/tools/build_protected_zone_object_disposition.py",
@@ -2470,8 +2480,8 @@
     },
     {
       "path": "outputs/tools/build_saveddata_delta_report.py",
-      "bytes": 13368,
-      "sha256": "19FC749763319002E038F185E13BFAA44769B83BC72ED502019B4A27F5035147"
+      "bytes": 13334,
+      "sha256": "2597691B7268E5E771E8CE3EA132C4C2DA58382CF3DCB12C00C0BDCFB091902C"
     },
     {
       "path": "outputs/tools/build_singleplayer_gameplay_parity.py",
@@ -2485,33 +2495,33 @@
     },
     {
       "path": "outputs/tools/build_terrain_preservation_final.py",
-      "bytes": 29857,
-      "sha256": "932F73EE9D25D9FDC959A98EA61AB98D549E33B552EBFFA6E414293A3A0ADA92"
+      "bytes": 29845,
+      "sha256": "669A9B7EDB06EEC10E941B86A0F83B1BF1F1A2C4129B93B2A42E7C9600787135"
     },
     {
       "path": "outputs/tools/build_tlm_patchouli_jar_balance_fix_attempt11_20260814.py",
-      "bytes": 29619,
-      "sha256": "7BCC79867875DC48412457124D7D3C1A8DBBA55005F7299E64B8B8AB0CA05BE9"
+      "bytes": 29534,
+      "sha256": "694E115AF41EE34122A200120FB649DE643E9ADDB261D6650557386A876D4364"
     },
     {
       "path": "outputs/tools/build_tracks_tag_fix_20260814.py",
-      "bytes": 6724,
-      "sha256": "3EC29871239FB5EDDA5BD4FE1CFCE323902C96313D7F9E0FF197E46932A8E4B6"
+      "bytes": 6690,
+      "sha256": "D1500DEF3D0538D46D5A7AFA7BB1AAC915A545F9647D3FA0F0043B9ED85627AA"
     },
     {
       "path": "outputs/tools/build_vanilla_and_known_bug_ledger.py",
-      "bytes": 43921,
-      "sha256": "86E317797719BE678A71750E21D7BCDD3AC0A40236277AA26E070918C6710917"
+      "bytes": 43870,
+      "sha256": "12690BB6AE56AE1C34E1E90084F36BC6B8CB06D16E4F052088C69B4543D58D84"
     },
     {
       "path": "outputs/tools/build_xiyuslogin_migration4_rebind_report.py",
-      "bytes": 10969,
-      "sha256": "1D4C7F508F8BB0F0906FB5E41B205843A8333552C63CC317688D1208112A1379"
+      "bytes": 10955,
+      "sha256": "0C20199AC410ABBEDC33D7460ADC1D5FC91E1088630D75D179405D3C7AB17435"
     },
     {
       "path": "outputs/tools/candidate13_detached_audit_supervisor.py",
-      "bytes": 7511,
-      "sha256": "3707CEEC11A538E8D411CEA95C3388133852688B5C3E139975FBFBB4C0EA76C8"
+      "bytes": 7477,
+      "sha256": "19F96B5EB26862BC8E2253D1428215F33320822D1E95BF20E034FDC02C1B811F"
     },
     {
       "path": "outputs/tools/candidate13_nbt_audit_common.py",
@@ -2610,8 +2620,8 @@
     },
     {
       "path": "outputs/tools/convert_journeymap_to_xaero.py",
-      "bytes": 82077,
-      "sha256": "1FBD49712E2CB2BA942AB91684785B412C6C6465D8D3E43A02FF0ED9F3967149"
+      "bytes": 82058,
+      "sha256": "4AFD66E98459679AB5D6398B4376E51AC3214E9E95BCD81DCDEE41817A400C20"
     },
     {
       "path": "outputs/tools/convert_nerfad_recipes.ps1",
@@ -2630,18 +2640,18 @@
     },
     {
       "path": "outputs/tools/convert_villager_region_entities.py",
-      "bytes": 7423,
-      "sha256": "E27FC9912748C4CF35837AC533A8072904E11651DFF2775690EC3F0942AF8389"
+      "bytes": 7427,
+      "sha256": "AB01289A5B4F3A931990CDDE0835D192410845A3D27D909CC46349A8349A9CE5"
     },
     {
       "path": "outputs/tools/convert_world_nbt.py",
-      "bytes": 251507,
-      "sha256": "BD8EB883BD22180D241F36E24C2736D0A29D91FCFD332BE4A35E9DB8B2C3296F"
+      "bytes": 251511,
+      "sha256": "81B8F2A183391DE0F44EE73C13F1121282413160ABA0938E838BD7EE60B23B02"
     },
     {
       "path": "outputs/tools/create_storage_object_ota.py",
-      "bytes": 94911,
-      "sha256": "E312C4FF1D357C3847835563566BC861E2C14533CF4236B7A285C1BC179B0E54"
+      "bytes": 94915,
+      "sha256": "9E557C6D73DAF5E39B345DB1D6ADDB92BB5DCA1F451303193F678B0C38DB6BC6"
     },
     {
       "path": "outputs/tools/deferred-content-protection-audit-20260812.json",
@@ -2680,8 +2690,8 @@
     },
     {
       "path": "outputs/tools/finalize_migration_handoff.py",
-      "bytes": 4404,
-      "sha256": "06D73047BDB30280DC0365C05198F9CEACEA8C225C1ED81CE620E9C240C7ED87"
+      "bytes": 4383,
+      "sha256": "AF873AF97C64A74DFC81BEC4E959E8613A90A6715CFD186D0F29BD253E50820D"
     },
     {
       "path": "outputs/tools/finalize_preheated_marker.py",
@@ -2695,13 +2705,13 @@
     },
     {
       "path": "outputs/tools/finish_remove_migration_backups_heavy.ps1",
-      "bytes": 7078,
-      "sha256": "D41E51DA4403008D56E35137CDFD3382C73483BB427C24B3D54D1358CC02D1C3"
+      "bytes": 7086,
+      "sha256": "0523873D2A05B6B86CD9EA568B6C0D90CCB46226E3F205BF60D023C64A519AF0"
     },
     {
       "path": "outputs/tools/generate_final_mod_bundle_inventory.py",
-      "bytes": 32527,
-      "sha256": "3121DFB18EA3AFAB6B4296DEBB5EC1FE07B3DD622E9C09456B8319F08AA1D494"
+      "bytes": 31294,
+      "sha256": "AC601CA456CD0E67C89C166D2C7F6288714855C0F44A163529BA40A08E913736"
     },
     {
       "path": "outputs/tools/generate_resource_overlay_render_fixes.py",
@@ -2710,8 +2720,8 @@
     },
     {
       "path": "outputs/tools/hash_handoff_archive.ps1",
-      "bytes": 3187,
-      "sha256": "6E5A3A4B660B825EBF2A30925C077B25ECE9EC0CFA1E9B05CE1854F931424947"
+      "bytes": 3178,
+      "sha256": "4C8814BFD1195EABEF1A822572A0549D7E0368EF358FF56AD37BC9499AD40B8F"
     },
     {
       "path": "outputs/tools/hash_migration_handoff.py",
@@ -2725,33 +2735,33 @@
     },
     {
       "path": "outputs/tools/import_candidate11_to_prism.ps1",
-      "bytes": 16631,
-      "sha256": "9A7773CAE5A7F8DCBF4031935BE60A49CE1596F97916391701F7F7BF9504D48B"
+      "bytes": 16624,
+      "sha256": "764F78DA3B65CE308A8E51AA5AAB1F10299B54990A154964915F1101BDD803AD"
     },
     {
       "path": "outputs/tools/import_candidate12_to_prism.ps1",
-      "bytes": 17966,
-      "sha256": "2F205088D59EDF32BDE43BE1A891605ED43C7A78EE78304D90B62D5789A285D6"
+      "bytes": 17937,
+      "sha256": "C372C940F0ED1ACCEA3D20CEF4088512117E48F93411EAA8F857F1646AEAC996"
     },
     {
       "path": "outputs/tools/import_candidate13_to_prism.ps1",
-      "bytes": 17877,
-      "sha256": "BE252C65A08FCEE73E97EAFEEB38060B8F40AAD60869BBA046BDC4F936F90520"
+      "bytes": 17852,
+      "sha256": "19D9B2CE7157ED6063CAE3D43FEE340411771E84EF02883F1D0FC9B11FC8F446"
     },
     {
       "path": "outputs/tools/import_candidate14_r3_to_prism.ps1",
-      "bytes": 32183,
-      "sha256": "3C1057EDFA22D42D3C3F305F470DD75C30504AABDFD12F921D5A32C8685A33B1"
+      "bytes": 32124,
+      "sha256": "5BCCE85F830EC41B80F942F87C3283A8999CB6E56F997A64F6A0DC832D1BD25B"
     },
     {
       "path": "outputs/tools/import_mechanomania_attempt13_to_prism.ps1",
-      "bytes": 35212,
-      "sha256": "157CA3C8A3D40E486FE9C82869799F19D16BFD51E8FA0CBCEFD733B404C410A3"
+      "bytes": 35120,
+      "sha256": "B6DE595EBAACF131DAE47A4D7F3270658EDF1C41FA2AF0616EB726DCCEF75849"
     },
     {
       "path": "outputs/tools/import_mechanomania_attempt9_to_prism.ps1",
-      "bytes": 33680,
-      "sha256": "EE054A439BFEC4149688B318C041CED0264348F41059BB761A0BD0C5ECA32C15"
+      "bytes": 33605,
+      "sha256": "5579EA53EE1AD4F0FDA1C871E848D8F5F47CAD30FA649E34BC975F9B9321160D"
     },
     {
       "path": "outputs/tools/inspect_block_at.py",
@@ -2760,8 +2770,8 @@
     },
     {
       "path": "outputs/tools/inspect_candidate_jars.py",
-      "bytes": 5142,
-      "sha256": "12D3427A2E71CFE6841E2070455E9D8D804482343D439DF7A7F48B11354E0F3C"
+      "bytes": 5125,
+      "sha256": "CBF89495C2803D966740430BB0718AC23DFD9EDAABA54347F0CD17B6937C9CE5"
     },
     {
       "path": "outputs/tools/inspect_chunk_block_delta.py",
@@ -2825,8 +2835,8 @@
     },
     {
       "path": "outputs/tools/PatchCookeryCode.java",
-      "bytes": 17895,
-      "sha256": "9B33B3ECCD0DD13B574960D96A433A5E45BB4BB7BF12E476A20BF43DE48B74E5"
+      "bytes": 17861,
+      "sha256": "1665848D62E1704DAA5AF3942F12A7F1EA419E3868A46837F2CCE004ADB36A8F"
     },
     {
       "path": "outputs/tools/PatchCookeryFoodBites.java",
@@ -2865,23 +2875,23 @@
     },
     {
       "path": "outputs/tools/prepare_candidate10_client_root.ps1",
-      "bytes": 23204,
-      "sha256": "30AB5F7A7D940CC64B1E9520474910144A509CEC0344B6F5221F4ECF3B161C29"
+      "bytes": 23174,
+      "sha256": "F336DDEC386AD2C5A0A04DE4830993E827F9E2FAE7059BF006E9AF379322AC40"
     },
     {
       "path": "outputs/tools/prepare_candidate11_client_root.ps1",
-      "bytes": 26499,
-      "sha256": "B8A39C075727E2C9E383CA3F2C4749E827FBA08D8C67EB1640E62CFA4B990497"
+      "bytes": 26469,
+      "sha256": "9BC60BFF9BF32DE75AB83B10CD9E16A74049419CB0C8CCFFD694BF1343267860"
     },
     {
       "path": "outputs/tools/prepare_candidate13_client_root.ps1",
-      "bytes": 18500,
-      "sha256": "F629CB5B874985931FDFA0FB422FD1ADB32E29F3D473B6C27BDD05A67077C5DA"
+      "bytes": 18470,
+      "sha256": "263FD3C2900CED9FDF5EA7A7D5702FF4A8B8308AEE95D8652CF468E8AD6B09C1"
     },
     {
       "path": "outputs/tools/prepare_candidate14_client_root.ps1",
-      "bytes": 14918,
-      "sha256": "C5395C51FA960109B21E3144079DFDF13448D03F9273ADFB574E053B53FEAFC7"
+      "bytes": 14888,
+      "sha256": "9A0E320BA51084D232CEBA4FC80653792D10E2CFC1A5F9BD7D1841072A4EDE26"
     },
     {
       "path": "outputs/tools/prepare_candidate14_release_client_root.ps1",
@@ -2890,18 +2900,18 @@
     },
     {
       "path": "outputs/tools/prepare_candidate14_release_client_root.py",
-      "bytes": 16585,
-      "sha256": "EF2893EF975E9FA02F05EFBD981D44015CCA56485776A01F4933516320D7DF1F"
+      "bytes": 16572,
+      "sha256": "7954E343B88298D5BE272E27C8ADA8251B2768086E73294AB2DFB7B9D5A7B115"
     },
     {
       "path": "outputs/tools/prepare_candidate14_release_runtime.py",
-      "bytes": 7404,
-      "sha256": "B23B35FF42B164585617F7BFE3A507A9FA1FFA0736CD1B8986892CEAE242EA69"
+      "bytes": 7391,
+      "sha256": "5E53B3B3F7B826F03188B5E0BE04D8FD0ABC7103215051B5610EEC0EF44FC418"
     },
     {
       "path": "outputs/tools/prepare_candidate8_client_root.ps1",
-      "bytes": 16098,
-      "sha256": "F48CB7CBF69491699F139A7DCA83724F0BDD114BE614E1C1B5A46637E897F698"
+      "bytes": 16102,
+      "sha256": "114884E082424BFF5E8564F22A82B0A34733730EDB3D470D606A6594933111CA"
     },
     {
       "path": "outputs/tools/prepare_chef_villager_gate.py",
@@ -2915,13 +2925,13 @@
     },
     {
       "path": "outputs/tools/prepare_cutover_delta.py",
-      "bytes": 19719,
-      "sha256": "E437534118A251A0F42E3B1F7154C164B09A69FF401C9501C8187BD5857D6B90"
+      "bytes": 19655,
+      "sha256": "9C5EBF598CFB48381E4333DBB300887C7DC1104F37F04C4828D1812D59150CB9"
     },
     {
       "path": "outputs/tools/prepare_fast_migration.py",
-      "bytes": 129288,
-      "sha256": "1C9BDF9522D2BE93F3B9FA2C30AB3E5F43ED7C79793B04DA6BF479C9A0B2A4DF"
+      "bytes": 129224,
+      "sha256": "454677B4D3467C43D6243ED486BCF963ABECFD48D87AE5E98834FB973FAD0147"
     },
     {
       "path": "outputs/tools/prepare_final_fullstack_smoke.py",
@@ -2930,13 +2940,13 @@
     },
     {
       "path": "outputs/tools/prepare_mechanomania_matched_client.py",
-      "bytes": 11779,
-      "sha256": "1D10E8BB4347592ADC820DA453294D974619CF0D9983DACC70EA3E8DC791F213"
+      "bytes": 11776,
+      "sha256": "2D88780CCEF28A0B349BD14908EB2C208BA1D6A44D2A1A887701C7974BED9D1E"
     },
     {
       "path": "outputs/tools/prepare_mechanomania_matched_runtime.py",
-      "bytes": 21270,
-      "sha256": "FC7E3BC3120EC607F39D7514E3EE18CD5E26FE6159CF90C0F96AA97092188E8C"
+      "bytes": 21177,
+      "sha256": "74ABEF195414A4BAE329D53EB4860AD6B6031E068951832297EEBFD75FECE9C4"
     },
     {
       "path": "outputs/tools/prepare_mechanomania_ui_overrides.py",
@@ -2965,18 +2975,18 @@
     },
     {
       "path": "outputs/tools/protected_zone_entity_ota.py",
-      "bytes": 86696,
-      "sha256": "2D1B3EEA182BCBAEED90ACF66C4A85D963D99C9E5760AFB21771E6AFDC47889E"
+      "bytes": 86670,
+      "sha256": "2F5106A4882820CE66FDDB27C89680AA61139F350F99426DC536EEED792D8B20"
     },
     {
       "path": "outputs/tools/protected_zone_terrain_ota.py",
-      "bytes": 52317,
-      "sha256": "2716F2B4A345EC0FE32C7AFCCB5649741ADC1627C204013457B4C4CDA02A2D8C"
+      "bytes": 52325,
+      "sha256": "2A9FB929EFE19DE74E3A23C0733CC54F4A97CCE42AEB7F1A7D7DC39537CEA719"
     },
     {
       "path": "outputs/tools/rcon_merge_source_entity.py",
-      "bytes": 3313,
-      "sha256": "689E64F5D8D959D86D568FB1FF6184C2392C0CDDADAE1F072896675EC2CD5898"
+      "bytes": 3296,
+      "sha256": "013888F419CF57029EBC8FFB753DA34F4482E32DA64FD6C29A10A6E16E57BABF"
     },
     {
       "path": "outputs/tools/relock_vanilla_final_datafix.py",
@@ -2990,8 +3000,8 @@
     },
     {
       "path": "outputs/tools/remove_migration_backups_heavy.ps1",
-      "bytes": 4408,
-      "sha256": "07C0F94D7B12BFCA0CAB99903BD7B0A00258CF949F2245F68A3FBD87F548B8BD"
+      "bytes": 4416,
+      "sha256": "549928E0B54653A025440AECD693E6F6405B6A2BF9158D1F71F8F5C00DDF5B4A"
     },
     {
       "path": "outputs/tools/repair_attempt12_duplicate_entity_uuids.py",
@@ -3000,18 +3010,18 @@
     },
     {
       "path": "outputs/tools/restore_handoff_original_zip.ps1",
-      "bytes": 1826,
-      "sha256": "A948B12A7FF372E053C2049CB368A208E55630908893A599518BA7F348B7710D"
+      "bytes": 1792,
+      "sha256": "B31620AD5B537A893C938677D5850FDE54072ADBE92255E35A0E8EDD5F1BFC95"
     },
     {
       "path": "outputs/tools/RestoreEndClientAssets.ps1",
-      "bytes": 2334,
-      "sha256": "7D29721ED65D332F4CF4B495E2046ABEAD451AFB67CC0F7B2103D831ED6BEA94"
+      "bytes": 2321,
+      "sha256": "DE4144A2B1B4EF2C5CCDDFD543C0D675A57AE8310D5666E0098EE1618F9148A2"
     },
     {
       "path": "outputs/tools/resume_incoming_20260811_finalize_detached.py",
-      "bytes": 10076,
-      "sha256": "52FDBB0F32824E087E84826D62AD4AC35BED069DE462B9FF889BB70EFD3F6531"
+      "bytes": 9995,
+      "sha256": "4971BA12B3827E20A28340FD0358FC6E7B46FE38964830A32A139042B5869E5D"
     },
     {
       "path": "outputs/tools/rewrite_region_chunk_dataversion.py",
@@ -3020,23 +3030,23 @@
     },
     {
       "path": "outputs/tools/run_candidate11_join_gate.py",
-      "bytes": 110794,
-      "sha256": "A0F2D0B625A651FF5F3A3A2A1D30BA322E311C48F05226D5DBDA00A15C523046"
+      "bytes": 110769,
+      "sha256": "107C7BC16084769B656EDD4D76C009865B9CE89D8E539D5AD41D517EB731ED63"
     },
     {
       "path": "outputs/tools/run_candidate13_join_gate.py",
-      "bytes": 112980,
-      "sha256": "C3B79777E6B38B8245E50F502DBC8B4061B0C3C0CEDF6D2976B5D929C322F4E6"
+      "bytes": 112916,
+      "sha256": "E2976AB7930547C467F5D166C07ACAB392AF06EE75B40DC6FF78B43E1E6A6701"
     },
     {
       "path": "outputs/tools/run_candidate14_r3_prepare_runtime_detached.py",
-      "bytes": 5382,
-      "sha256": "DD8D15D17006B30AFD27FD65E75FE6ECD87175488E62A326E76E4CBC29CEC241"
+      "bytes": 5280,
+      "sha256": "9AF674B72CAC3C48E72BB7804B73DD597C9EE28DB292AEA59DB6CA9DE4C7E66F"
     },
     {
       "path": "outputs/tools/run_candidate14_release_gate.py",
-      "bytes": 36357,
-      "sha256": "EB6660AA8B94175E7A4F248EA61C46252287147261700D676E8E0CFEACB7CA51"
+      "bytes": 36344,
+      "sha256": "E795BBFD0854EB1C8A947B7589D3F8B82CF807202A6C14F5F19CCEB151A99C41"
     },
     {
       "path": "outputs/tools/run_candidate5_fullstack_smoke.py",
@@ -3045,68 +3055,68 @@
     },
     {
       "path": "outputs/tools/run_candidate8_join_smoke.py",
-      "bytes": 92398,
-      "sha256": "4CDAB36C1B06C571B6956C9B68F7518D84A48C35385950BBAE3CFBF100AF45B4"
+      "bytes": 92407,
+      "sha256": "D910AD6B7BA9D1529D69DBCCA76370E54D2DC1F1C8BFE1EEF64F17C7153A816B"
     },
     {
       "path": "outputs/tools/run_hidden_client_render_gate.ps1",
-      "bytes": 21578,
-      "sha256": "E899FEC47B31B92EBB1BB2453DF3F3E8492EC88FF57E316EB967C7CA2556CDB7"
+      "bytes": 21561,
+      "sha256": "B23029F0FD4FC16159007EF046A84C7A15F948F7C00E0710696C4017807DD2A2"
     },
     {
       "path": "outputs/tools/run_incoming_20260811_fluid_audit_detached.py",
-      "bytes": 4917,
-      "sha256": "87E16451672A26B057F0C22E6F39752C4B7227BD5C6F77AA9A0896035B71B6B7"
+      "bytes": 4883,
+      "sha256": "5064F20AF3712E92D959F5865D71C477DD10F210F37A6B3356BAB46B97013960"
     },
     {
       "path": "outputs/tools/run_incoming_20260811_prepare_candidate13_detached.py",
-      "bytes": 4207,
-      "sha256": "F93597BA025A4DE9359D23C36479CBFB42418DF02435CBD96EBE208C16BF5B8A"
+      "bytes": 4105,
+      "sha256": "B68D968FB1442BB51B2C0651002FFD7E3894417CB5F300B14F2BEE9C0246BD7C"
     },
     {
       "path": "outputs/tools/run_incoming_20260811_prepare_candidate13_fresh2_detached.py",
-      "bytes": 4199,
-      "sha256": "A2F41422F047D0ADC28436A92C252A185ABFF18A47A5AB1FF9FE4EF496F5D9C6"
+      "bytes": 4097,
+      "sha256": "0E3457FDBFA7037D2C85A474189322894ABCC061CA4F04868CC021AD5ABF4BDF"
     },
     {
       "path": "outputs/tools/run_incoming_20260811_prepare_candidate13_runtime_detached.py",
-      "bytes": 4227,
-      "sha256": "71104EF84861CCDD6D4A18426303FB5CC947CAFC62F9A068158929E5B652442A"
+      "bytes": 4125,
+      "sha256": "61C00196E7D6D9BDA1445BF5ECAB0B115AE09FAEFBB1A9417163EA9AE910A24D"
     },
     {
       "path": "outputs/tools/run_incoming_20260811_stage_convert_detached.py",
-      "bytes": 6296,
-      "sha256": "E796F76567CF2D5B0CEBA8503720D9C63A874883006C508638A797E013E910C8"
+      "bytes": 6211,
+      "sha256": "C99F9D754F75776A4F657302F71356FBF30EFF2B7C92DB10E2F4306D91953D40"
     },
     {
       "path": "outputs/tools/run_incoming_20260811_verify_detached.py",
-      "bytes": 3558,
-      "sha256": "60B59BBB46659FD0A128A3E5EF2AC2DF952D796E3B80490D1AEA3597AA79032D"
+      "bytes": 3490,
+      "sha256": "B1429A139A3D0794E47CABC5B427A16A396411B1557D9208A3D27F5F8440B175"
     },
     {
       "path": "outputs/tools/run_incoming_20260811_world_dryrun_detached.py",
-      "bytes": 5670,
-      "sha256": "DC702E5B7FAD0AB1FFBCBFAEC6A05683DB8FCD8AA7BFCEF00686786A3BCB5C93"
+      "bytes": 5606,
+      "sha256": "0B48CF1B2D98BD5B0C446EB5C20648E782E8F080BC45FC41996F789B6A7315C2"
     },
     {
       "path": "outputs/tools/run_incoming_20260811_world_focus_detached.py",
-      "bytes": 4987,
-      "sha256": "B553FD62E6E6B2F98EF158F6FD015856BF5DBF136599E793017AF6A0A57A20D5"
+      "bytes": 4919,
+      "sha256": "8D79A40205F8EE917BF78F1EC4AEA29767A5A45C5481AE7EC550BD3EF1A8D5FC"
     },
     {
       "path": "outputs/tools/run_mechanomania_startup_gate.py",
-      "bytes": 57433,
-      "sha256": "DB93D5DFA9BE861BB2C8F9BC09B5FA9EA4BBD4423C20E40A024E31A43FF21468"
+      "bytes": 57420,
+      "sha256": "499AD74514318A88BCF750B6222C27EAF269E677EBDFAD7E2B1468E732DF7A6A"
     },
     {
       "path": "outputs/tools/run_mechanomania_startup_gate_attempt12.py",
-      "bytes": 27794,
-      "sha256": "0AFEE06618B57A4F874A9C68E969B1359A247B91DEC9D52BE3384680B5DF3135"
+      "bytes": 27783,
+      "sha256": "A578AB3D163C38EDC6A4160AC4D8D2603E5CE3D710EE3DFBAE3C7A68E5CEE16F"
     },
     {
       "path": "outputs/tools/run_private_desktop_client_session.ps1",
-      "bytes": 14764,
-      "sha256": "FB819479F7143C53B2E690568CE85CC5E31F47F5EE9C3C6ACB561C111AF195F9"
+      "bytes": 14734,
+      "sha256": "3B3DED8E869A1D4EB9D570C4697943DDF65E76786B96C03CFDA2AD0A3E02F84B"
     },
     {
       "path": "outputs/tools/run_villager_full_gate.py",
@@ -3115,13 +3125,13 @@
     },
     {
       "path": "outputs/tools/run_waypoint_op_join_gate.py",
-      "bytes": 11001,
-      "sha256": "59AA12056CE3B846277F082B4E71371CB3C165EB5DEF32C3E1E28DD4DE4256E2"
+      "bytes": 10984,
+      "sha256": "233BE12F418BBC93769196BE6D4376900769DD98BA6EFB1157DAE0A104B6C9A5"
     },
     {
       "path": "outputs/tools/run_xiyuslogin_migration4_private_smoke.py",
-      "bytes": 32115,
-      "sha256": "A8E74A51814368EF4B75F1E03C140DEF6E72EE7DCDE92CAB7C46298992DFC2DC"
+      "bytes": 32068,
+      "sha256": "555A35E0202943407982F4C6E28EEC74EE1D1100A4FA07C04E62D9C17ED42B84"
     },
     {
       "path": "outputs/tools/run_xiyuslogin_wrong_password_probe.py",
@@ -3160,28 +3170,28 @@
     },
     {
       "path": "outputs/tools/show_candidate8b_conversion_progress.ps1",
-      "bytes": 3094,
-      "sha256": "0C88E7993178C608110FDD64AD5F2A88B5F53FC5AD95357F1691106773C9A8B5"
+      "bytes": 3077,
+      "sha256": "9B530A3BA81DB73A5CB39A7559790CEA444BA82D6FCA138E990D38E87DBB767D"
     },
     {
       "path": "outputs/tools/show_candidate8c_conversion_progress.ps1",
-      "bytes": 3090,
-      "sha256": "E014B2CDC9609F070ABCC5A452FAFBB53DE89699C1912ECE4EE079EEFB5EE977"
+      "bytes": 3073,
+      "sha256": "69CBA88633CD3DFFA90C3832FAA856B4B22FBD5F01D1A01FEF21789B4B7BC5AA"
     },
     {
       "path": "outputs/tools/show_candidate8d_conversion_progress.ps1",
-      "bytes": 3100,
-      "sha256": "CB3188BC11F58687D807965C477C7A8094F3D9898195296B3CAE1F5A54FEACFC"
+      "bytes": 3083,
+      "sha256": "6F7AFC2F8CA3BC7F8941753D5C0DCF559A3C065E837251D7D1582F66A3B51CB8"
     },
     {
       "path": "outputs/tools/start_candidate13_join_gate.ps1",
-      "bytes": 1576,
-      "sha256": "208A5F4EA570D002EE01BD8D168D06CA221AA2771FF48E500E08C967BCCAA81F"
+      "bytes": 1559,
+      "sha256": "C579141DD0FBEB602C29D10F59D076E3AA7180EDE6E2BA1A313B25B6CD538FFE"
     },
     {
       "path": "outputs/tools/start_candidate14_r3_prepare_runtime.ps1",
-      "bytes": 1162,
-      "sha256": "26793A5FD5AE119F9208BC1897BA8882FB1BD480B4460048CC7FC294816416D3"
+      "bytes": 1145,
+      "sha256": "8CF01F561BA2CB0482D8EB1E828EEAA4401DD526EA4FA6765CE07976262CDFB9"
     },
     {
       "path": "outputs/tools/start_candidate14_release_gate.ps1",
@@ -3200,13 +3210,13 @@
     },
     {
       "path": "outputs/tools/start_incoming_20260811_prepare_candidate13_fresh2.ps1",
-      "bytes": 1104,
-      "sha256": "F71B93B4FAC9437AAA475C001393298966C1EE8B491EE37C565A5CCC4624DE4F"
+      "bytes": 1087,
+      "sha256": "58603D69D41148BEC1A160C08F6864C7EBCB7B3439C5F2F6D4C657E939E39D3D"
     },
     {
       "path": "outputs/tools/start_incoming_20260811_prepare_candidate13_runtime.ps1",
-      "bytes": 1100,
-      "sha256": "6FB887FFCE2886BB134653A50E92C21E4E059E62610AAD32F6747DAEFCCD199C"
+      "bytes": 1083,
+      "sha256": "E2020F7590FCA53D35A169E7B149846AA7A7400ABDA140A8D3D66AB0B5E58EAD"
     },
     {
       "path": "outputs/tools/start_incoming_20260811_verify.ps1",
@@ -3245,8 +3255,8 @@
     },
     {
       "path": "outputs/tools/test_assemble_final_mod_bundle.py",
-      "bytes": 4071,
-      "sha256": "D235E06086A95F008B3D990F55EFB12F63D8BE19C801FCE6478FB6413226D0E0"
+      "bytes": 4054,
+      "sha256": "9F7F371359D0681F4ECEA30C1ADD482114D2F87BC1E6B0530FC411F0897E857C"
     },
     {
       "path": "outputs/tools/test_assemble_production_target.py",
@@ -3360,8 +3370,8 @@
     },
     {
       "path": "outputs/tools/test_build_candidate9_happyghast_bundles.py",
-      "bytes": 10874,
-      "sha256": "F3042E62715293E84481489083F8A05793934B6F74A965A59B56B5132FC7FE13"
+      "bytes": 10857,
+      "sha256": "C5078FCA4C5F1CD7E56063FB8A9D7E00A406970D6ECACD7041447D05A05EE6F5"
     },
     {
       "path": "outputs/tools/test_build_mechanomania_gameplay_overlay.py",
@@ -3395,8 +3405,8 @@
     },
     {
       "path": "outputs/tools/test_candidate14_release_gate.py",
-      "bytes": 12418,
-      "sha256": "1D6C73719C9981093458B15A6F84B194F1E16E2FFFC7A6F4E84E74BA33E14B0E"
+      "bytes": 12316,
+      "sha256": "236375F8A0F7F3F25BDEB34625D9A0FBD2A52E2F11FBD3032E8231D73BB614F8"
     },
     {
       "path": "outputs/tools/test_chain_and_pale_oak_tags.py",
@@ -3415,8 +3425,8 @@
     },
     {
       "path": "outputs/tools/test_convert_journeymap_to_xaero.py",
-      "bytes": 15142,
-      "sha256": "0B861B15DE041EACA5D8E9CBC65BE3884D479724BF16EFB70AEFECCCA577CB19"
+      "bytes": 15126,
+      "sha256": "082A96584F2B601BD928E45D07A0A82BA1290388111F3D1C5C3D1C192D9FF7B2"
     },
     {
       "path": "outputs/tools/test_convert_player_advancements.py",
@@ -3430,8 +3440,8 @@
     },
     {
       "path": "outputs/tools/test_convert_world_nbt.py",
-      "bytes": 139531,
-      "sha256": "D93E8D02E57D3AFE8E8B0C487A99012B948492706AEA0006A6721994DEE3076D"
+      "bytes": 139514,
+      "sha256": "C793F9A55362417B3914D6CB12517524856594E5B7A71D09ABAABBF20893A4BE"
     },
     {
       "path": "outputs/tools/test_create_storage_object_ota.py",
@@ -3445,8 +3455,8 @@
     },
     {
       "path": "outputs/tools/test_generate_resource_overlay_render_fixes.py",
-      "bytes": 4676,
-      "sha256": "2BCC4A29A679F950D186805A0BFC4A184932092C2B6D2E9D5ECD680496056978"
+      "bytes": 4642,
+      "sha256": "594119DB60AE52260C1150D8D840E80899A61540890546F2924BA491F99DED69"
     },
     {
       "path": "outputs/tools/test_hardcore_revival_death_message_fix.py",
@@ -3470,13 +3480,13 @@
     },
     {
       "path": "outputs/tools/test_import_mechanomania_attempt9_to_prism.ps1",
-      "bytes": 5336,
-      "sha256": "386C4E7862655B55ABE4F19D423849E8EFC6F28CF0B2C9209CE2D0B0010837B3"
+      "bytes": 5319,
+      "sha256": "7ECA889335434F59607A294951C951262D714BDAA01BBBC7D5C47561F3BF9D60"
     },
     {
       "path": "outputs/tools/test_launch_neoforge_client_isolated_native_fallback.ps1",
-      "bytes": 8197,
-      "sha256": "8EE4AE85D04E6FAB9C2314D599C2F7B5A493E41EABC873EC3E6CB7619277C303"
+      "bytes": 8180,
+      "sha256": "3C0BD447CC7E06A9A558B00146815C815FFA5C5D45D28696F3873140B183F8B1"
     },
     {
       "path": "outputs/tools/test_mechanomania_release_runtime_common.py",
@@ -3500,8 +3510,8 @@
     },
     {
       "path": "outputs/tools/test_prepare_candidate11_client_root.ps1",
-      "bytes": 3411,
-      "sha256": "AE91F5B93A68F2A08BB5D44601E827ABA258EBCCB200E1EF0ACE352FC7DD6F7A"
+      "bytes": 3394,
+      "sha256": "EAC64ADAC7BADD0B4F28D6B7C1C39535C76E9B72AF1858D6BB3402246B85E641"
     },
     {
       "path": "outputs/tools/test_prepare_candidate13_client_root.ps1",
@@ -3515,18 +3525,18 @@
     },
     {
       "path": "outputs/tools/test_prepare_cutover_delta.py",
-      "bytes": 5194,
-      "sha256": "FE8C8F3A98082CDD7E52DFC13E8B639CE11B5C5AC1589612685B77D62EA42E48"
+      "bytes": 5177,
+      "sha256": "F83360E68AB2E171C1841BF9F1D56EEC8A323C95C297CB51DFEF3709249B9030"
     },
     {
       "path": "outputs/tools/test_prepare_fast_migration.py",
-      "bytes": 61817,
-      "sha256": "E75F30883A78B8E0E2F69305E5ECC96F3C502508C263AE12E2D999FEA2B04C39"
+      "bytes": 61812,
+      "sha256": "3B05F3D0C6605C62C24B27559D6BEB38CA14793947835ADF2EE3DD04666F1714"
     },
     {
       "path": "outputs/tools/test_prepare_final_fullstack_smoke.py",
-      "bytes": 1878,
-      "sha256": "573BC1183B960E6F7194D3531E2E72A340B711CBF326FC968029CE8FA66EBD8E"
+      "bytes": 1861,
+      "sha256": "CC9CE341F92DF5ACBFD355F0BD5361A923523A421C98C4392273D6D15D7F600E"
     },
     {
       "path": "outputs/tools/test_prepare_mechanomania_matched_client.py",
@@ -3535,8 +3545,8 @@
     },
     {
       "path": "outputs/tools/test_prepare_mechanomania_matched_runtime.py",
-      "bytes": 7429,
-      "sha256": "02B8140A5F4BB9C38EB101CE869997A2A4065CAC8C61C397A9E3A076FD3AB230"
+      "bytes": 7395,
+      "sha256": "34CD6CEB7311FF55CC287F12255205805ED9B13131A0516485AE59EE0B68282A"
     },
     {
       "path": "outputs/tools/test_prepare_mechanomania_ui_overrides.py",
@@ -3560,8 +3570,8 @@
     },
     {
       "path": "outputs/tools/test_protected_zone_entity_ota.py",
-      "bytes": 12881,
-      "sha256": "35082A8919391C13A213DE56DC528771347804F0054EE8BD4F3B41DEF7F23D11"
+      "bytes": 12830,
+      "sha256": "F1970912831B2CBA493500243FC69F0863ABC6404961E2640A5125B69CF9F02B"
     },
     {
       "path": "outputs/tools/test_protected_zone_terrain_ota.py",
@@ -3570,8 +3580,8 @@
     },
     {
       "path": "outputs/tools/test_remote_cutover_prep.py",
-      "bytes": 5320,
-      "sha256": "E84CC89A0C6DB249855B62615F6118856EFB1454D5ED5BBCBCEE9794AF50912C"
+      "bytes": 5323,
+      "sha256": "25559F833C6D9C05F5B6BA5B1662E81D2C2E4082D610827AB04A180D20F41E76"
     },
     {
       "path": "outputs/tools/test_remote_live_snapshot.py",
@@ -3580,8 +3590,8 @@
     },
     {
       "path": "outputs/tools/test_run_candidate11_join_gate.py",
-      "bytes": 5702,
-      "sha256": "45094520162ABC33767A5ED1CDB394333D339D9565EFC8562EBCAA2E69A1CC75"
+      "bytes": 5668,
+      "sha256": "CBA15FEBD1D033B8703951B005C012A10A0F214E25005C022787730CE9C20976"
     },
     {
       "path": "outputs/tools/test_run_candidate13_join_gate.py",
@@ -3595,8 +3605,8 @@
     },
     {
       "path": "outputs/tools/test_run_mechanomania_startup_gate.py",
-      "bytes": 35920,
-      "sha256": "F6A416BD58AF09D82BB948E9B049600C4B21FD69776E02D2CD944573005CE940"
+      "bytes": 35818,
+      "sha256": "73C21FDC11B3FDAFD379EBD2FD0EA9926FBB4E7973622FCE3BACC7A8C495133F"
     },
     {
       "path": "outputs/tools/test_run_xiyuslogin_wrong_password_probe.py",
@@ -3605,8 +3615,8 @@
     },
     {
       "path": "outputs/tools/test_sanitize_target_resources.py",
-      "bytes": 7264,
-      "sha256": "EF46B00C6CEDFC03C129FC3094949069822DBDDBB81492796C3E190AC0B7BD01"
+      "bytes": 7247,
+      "sha256": "FD45FDDCF2283D8BBCC618FBFB8E9C43B667B31179B7DB5E78086F125F24B2BB"
     },
     {
       "path": "outputs/tools/test_sync_live_snapshot.py",
@@ -3670,13 +3680,13 @@
     },
     {
       "path": "outputs/tools/test_xiyuslogin_auto_session.ps1",
-      "bytes": 5109,
-      "sha256": "A1209B1880B8A968E0ED7B9B0CB645B61E53FE21030F8EF131AC4B48818FB100"
+      "bytes": 5058,
+      "sha256": "2E7A7D6AEF348E5F44694EF2F73F4AA22B1ACC5F51DC63A2DA0317E59F149C29"
     },
     {
       "path": "outputs/tools/validate_candidate11_runtime_bundle.py",
-      "bytes": 10030,
-      "sha256": "41D76074FEDAA158AF873AEAE3B03E70D07E297B244C312BC487509DEAE38963"
+      "bytes": 10013,
+      "sha256": "49CA32E0AB3968AC72218A8998A3999293136CFFFA53F708A02BFE3EB21B8BF5"
     },
     {
       "path": "outputs/tools/validate_candidate14_ota_error_family_coverage.py",
@@ -3730,13 +3740,13 @@
     },
     {
       "path": "outputs/tools/verify_attempt10_content_repairs_installed.py",
-      "bytes": 23508,
-      "sha256": "73D0828A5A5D0BB98AD4414F5BB6A4BFA34356924FF848FCDCFB075EDAD575AC"
+      "bytes": 23491,
+      "sha256": "D825A9F2DC8D6674A9DBF3C643319491BAAEC64521B2FDDBD388C3FF6D9486F4"
     },
     {
       "path": "outputs/tools/verify_attempt6_data_resource_fixes_20260814.py",
-      "bytes": 8056,
-      "sha256": "662A2F8E93E2FCCAF437DC3E51F566F8B6AF0CD9A6DBA69E84EA5A188707629C"
+      "bytes": 8022,
+      "sha256": "E2932EC2ECFAE1893A571C70C7513A5D122DCD868D0E21506DEEC73C333578CE"
     },
     {
       "path": "outputs/tools/verify_auth_readiness.py",
@@ -20549,11 +20559,6 @@
       "sha256": "D2B0F4E392D11373523947963BB11A89B47055E57C36B2D787AD2613EC973C03"
     },
     {
-      "path": "pack/server-kubejs/data/minecraft/tags/block/block.zip",
-      "bytes": 1092,
-      "sha256": "0C067E290D3261521AB921818BFE611666D56E7DF17CAD3FC1E6989F7E192431"
-    },
-    {
       "path": "pack/server-kubejs/data/minecraft/tags/block/deepslate_ore_replaceables.json",
       "bytes": 71,
       "sha256": "40DCED9D79A868041BBD60D40AA581F909F56D9B854C6EE61E338B69B311625F"
@@ -27025,8 +27030,8 @@
     },
     {
       "path": "pack/worldgen-height-544-overlay/OVERLAY-CONTRACT.json",
-      "bytes": 5493,
-      "sha256": "D6AB7173E6A693B67A2E3086618D95806F9B815F31560AE1061CDCBC858AEB67"
+      "bytes": 5476,
+      "sha256": "05CA41BAD3DAF714E244E698AA1C5A720FFE824790A1E254032A8B50879C3CAA"
     },
     {
       "path": "pack/worldgen-height-544-overlay/README.md",
@@ -27034,9 +27039,19 @@
       "sha256": "7E8FB3745A2117A73E0F4BE3F265F44981B2E6F873F6BDD41142A1172B3B091E"
     },
     {
+      "path": "projects/outputs/MCModSync-README-zh-CN.md",
+      "bytes": 23134,
+      "sha256": "E24536613E7B23811822D7BB94D53A40825405AA7EFFA3B066876A16FB85C292"
+    },
+    {
+      "path": "projects/outputs/modsync.properties.example",
+      "bytes": 1605,
+      "sha256": "92DFAC3F535B1FEB60478F977E1C44EFC5D91F3E8A47D3F226066160DB58C8CE"
+    },
+    {
       "path": "projects/patches/immersive-paintings-mineastr-compat/ARTIFACT-REFERENCE.md",
-      "bytes": 618,
-      "sha256": "233F5035FE039E7DB8FA61CE408CEC833E0E73D83C6255C3F993803C150D53F5"
+      "bytes": 584,
+      "sha256": "3D3825433249C07344739344F4A12169FD87F937978E965CE581FF95998F2799"
     },
     {
       "path": "projects/patches/immersive-paintings-mineastr-compat/AUDIT.md",
@@ -27120,13 +27135,13 @@
     },
     {
       "path": "projects/patches/tlm-patchouli-spawn-box-balance/reports/exact-entry-diff.json",
-      "bytes": 2030,
-      "sha256": "C6E3EF183E709DDD8AE3C84B7A072777C23BAB8BEABD2CA326206A0F09118651"
+      "bytes": 1952,
+      "sha256": "888C53A780028D22F0A175A5E2B9D31E4C29430845E90BC80ABCCE73A00E4D8E"
     },
     {
       "path": "projects/patches/tlm-patchouli-spawn-box-balance/reports/static-dual-side-verification.json",
-      "bytes": 9157,
-      "sha256": "DB1B88B689DEA07A83F1358F75A2A9752FE7CF66C96DC81BE9CBBF382349F841"
+      "bytes": 9005,
+      "sha256": "C9D722EB5FE9400C8ADE73EAC0461F863E7DB09163F03A279E7225E2B1DFE912"
     },
     {
       "path": "projects/patches/tlm-patchouli-spawn-box-balance/SHA256SUMS.txt",
@@ -27140,8 +27155,8 @@
     },
     {
       "path": "projects/patches/worldedit-7.3.8-direction-property-fix/build_worldedit_738_direction_fix.ps1",
-      "bytes": 4090,
-      "sha256": "63E6F20E16C1264AA5E0C8DC602998F126FA3E9A679DA0B2E6956A954F6C58E9"
+      "bytes": 4022,
+      "sha256": "2F42F028F2F8AE366AE598B0F4C0C27CA06B3F091D89B7FBA5AFB297D8C38241"
     },
     {
       "path": "projects/patches/worldedit-7.3.8-direction-property-fix/source/com/sk89q/worldedit/neoforge/internal/NeoForgeTransmogrifier.java",
@@ -27155,13 +27170,13 @@
     },
     {
       "path": "projects/patches/worldedit-7.3.8-direction-property-fix/test_worldedit_738_direction_fix.ps1",
-      "bytes": 4137,
-      "sha256": "AE613F93616F81403CFB9E58A5A22E6E50878E620FC6CF06C104119CD8F05955"
+      "bytes": 4103,
+      "sha256": "3E62081985B27B80E45E502B68029ECA73767D00F8E81931EFFB5E27E250E4B5"
     },
     {
       "path": "projects/patches/worldedit-7.3.8-direction-property-fix/WORLDEDIT-7.3.8-DIRECTION-PROPERTY-FIX-AUDIT.md",
-      "bytes": 4440,
-      "sha256": "386A6E4EC5110A7ABECEDA63A181FAA7228D8E91C1C474308425A1911E7826AD"
+      "bytes": 4389,
+      "sha256": "A517370C712D85B93DA1890F6A92342F1E8C27FB15DF6E39517885106CBBE3E0"
     },
     {
       "path": "projects/patches/xiyuslogin-auto-session-ota/desired/xiyuslogin-session-values.toml",
@@ -27185,8 +27200,8 @@
     },
     {
       "path": "projects/patches/xiyuslogin-auto-session-ota/tools/test_xiyuslogin_auto_session.ps1",
-      "bytes": 5109,
-      "sha256": "A1209B1880B8A968E0ED7B9B0CB645B61E53FE21030F8EF131AC4B48818FB100"
+      "bytes": 5058,
+      "sha256": "2E7A7D6AEF348E5F44694EF2F73F4AA22B1ACC5F51DC63A2DA0317E59F149C29"
     },
     {
       "path": "projects/patches/xiyuslogin-auto-session-ota/tools/verify_xiyuslogin_auto_session.ps1",
@@ -27195,8 +27210,8 @@
     },
     {
       "path": "projects/patches/yuushya-2.3.0-patchouli-safety/build_yuushya_230_patchouli_fix.ps1",
-      "bytes": 3988,
-      "sha256": "1DA935A12A4D5B26FF2C2DC96F3094B712AF10DAAC633A421E06A84EBDD6171E"
+      "bytes": 3976,
+      "sha256": "71EE0A3AAF07CA80D7842E6420697BED12A67EA727AAC68356C4E9E8DE119A42"
     },
     {
       "path": "projects/patches/yuushya-2.3.0-patchouli-safety/patch-root/assets/yuushya/patchouli_books/yuushya_guidebook/en_us/categories/mod_functions.json",
@@ -27270,13 +27285,13 @@
     },
     {
       "path": "projects/patches/yuushya-2.3.0-patchouli-safety/test_yuushya_230_patchouli_fix.py",
-      "bytes": 10744,
-      "sha256": "B418939BD4E1F5CF2A81A5B16E25C2A8829280931E9882C143F97E8C8F37FEEF"
+      "bytes": 10693,
+      "sha256": "2D8E832202A1B983FA4EFD2076E50B343FEC5043CA8DCEFA320DFF0275333887"
     },
     {
       "path": "projects/patches/yuushya-2.3.0-patchouli-safety/YUUSHYA-2.3.0-PATCHOULI-SAFETY-FIX-AUDIT.md",
-      "bytes": 6544,
-      "sha256": "09444299E88A66B93A30D6F62A20FA8596E76D082DAE74E62EF48CC44FCC7108"
+      "bytes": 6459,
+      "sha256": "73FCCB157E761C621B52C855169547E3543E4A2B01656960203732A9C67BCED8"
     },
     {
       "path": "projects/ports/barched/.gitignore",
@@ -33490,8 +33505,8 @@
     },
     {
       "path": "projects/ports/content-backport-cat-serializer-fix/build.gradle",
-      "bytes": 1999,
-      "sha256": "F1368E6474B366C5293EEDF4536F830028CCD1FB445AC985D7926826AD571DD1"
+      "bytes": 1965,
+      "sha256": "B6A76B967E141825C34E4785D6C9A69B8C76DFE6CF0A2550B54D8B95C259215A"
     },
     {
       "path": "projects/ports/content-backport-cat-serializer-fix/README.md",
@@ -33840,8 +33855,8 @@
     },
     {
       "path": "projects/ports/happy-ghast-1.21.1-equivalence/gradle.properties",
-      "bytes": 727,
-      "sha256": "13428556F4F3C464FEF7B1C5D6840AFD2CA4A0A630EC45DE5E0608CFEC5DC391"
+      "bytes": 710,
+      "sha256": "CE1BBA34E096DB474DAD19925C9C3ECF3844AE2631656D2B2855DFE579B7BEDB"
     },
     {
       "path": "projects/ports/happy-ghast-1.21.1-equivalence/gradle/wrapper/gradle-wrapper.jar",
@@ -33870,8 +33885,8 @@
     },
     {
       "path": "projects/ports/happy-ghast-1.21.1-equivalence/SMOKE-20260808.md",
-      "bytes": 4240,
-      "sha256": "6A2A169B9AB36F3BF6D847185A02E1F30CDF713A10CA7EB43C91303AD3E66C08"
+      "bytes": 4189,
+      "sha256": "3184D5A9520B34AD55FC9AD510FB1FF44849B83FF9D7C6AB5C507876EAEF3BA5"
     },
     {
       "path": "projects/ports/happy-ghast-1.21.1-equivalence/src/main/java/com/bmt/happyghast_equivalence/client/HappyGhastClientEvents.java",
@@ -33945,8 +33960,8 @@
     },
     {
       "path": "projects/ports/happy-ghast-1.21.1-equivalence/STAT-AUDIT-20260811.md",
-      "bytes": 3992,
-      "sha256": "C86D1799B3E50560AF36AD15451DA5BC02B27A2756A4554AF661F3475987EBB8"
+      "bytes": 3941,
+      "sha256": "403D012106E07F260AAFBD9B44911DE4120A92E065219B85A3A3B0C72812AD2C"
     },
     {
       "path": "projects/ports/happy-ghast-1.21.1-equivalence/STAT-COMPAT-20260811.md",
@@ -33960,8 +33975,8 @@
     },
     {
       "path": "projects/ports/happy-ghast-1.21.1-equivalence/tools/inspect_source_happyghast_nbt.py",
-      "bytes": 1965,
-      "sha256": "9715D98440773EE3A8E03BB15406C6843DBBD512C2B886F20B5DCBAE7DCDFE3D"
+      "bytes": 1952,
+      "sha256": "3F18623E8B18F0EBA6F869AD342058859B1BEA6CD6ADFD430F0E6F6F1922F06A"
     },
     {
       "path": "projects/ports/hotbath-trigger-registry-fix/.gitattributes",
@@ -72909,14 +72924,534 @@
       "sha256": "61C45FF4BBE7D99A4DE33E23953EF968062621DF9203A387F536994C1F4A9069"
     },
     {
+      "path": "projects/ports/mcsync-2.0.0/.gitignore",
+      "bytes": 61,
+      "sha256": "D5A2024500BF0E3EEC3F2E979A1F6B4BFAA61C2931F48F69285FD72DF13A81D6"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/build.ps1",
+      "bytes": 17560,
+      "sha256": "D25A25F0E5537B2203C25E5E989DDF62478DD82396FB87454A1A32E0EBA6E5A6"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/docs/MCSYNC-2.0-DEVELOPMENT.md",
+      "bytes": 8502,
+      "sha256": "0B62856BF697515F546142A986C1C147170F287DE1552C333307C293D9969044"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/docs/MCSYNC-2.0-OPERATIONS.md",
+      "bytes": 5301,
+      "sha256": "D6CE675D2378D684882B0CCC3DB793D85B195FCED4E066EE2F0153AF8D5E7DFE"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/docs/MCSYNC-2.0-REQUIREMENTS.md",
+      "bytes": 10066,
+      "sha256": "E710A7F8C044483885A4D32232BDBCC3BADF3B1072E69A8146EAF9F5C9BF4FD4"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/docs/minecraft-1.21.1-1.21.11-parallel-update-audit.zh-CN.md",
+      "bytes": 12902,
+      "sha256": "62F1BBF361A2659D9C692BDF1635048978F005AFDA0649A1E093DAC757A83EB7"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/docs/中文使用指南.md",
+      "bytes": 18678,
+      "sha256": "627CF4932914A671106D533DE30B0EDEBC51D69267D7B5681A713CEA35B34B46"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/LICENSE",
+      "bytes": 1079,
+      "sha256": "0D1589306BEE252644BA945A7919ABB18D77E1CF4E7A6D710047877A81665F00"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/manifest.mf",
+      "bytes": 234,
+      "sha256": "B7B418E0FF1A4F2D3D01765E9269E96C6559AB064C35E000C624B13AD2A2412B"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/modsync.properties.example",
+      "bytes": 1605,
+      "sha256": "92DFAC3F535B1FEB60478F977E1C44EFC5D91F3E8A47D3F226066160DB58C8CE"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/out/MCSync-README-zh-CN.md",
+      "bytes": 24599,
+      "sha256": "D95B13858D755001E809C24DE51E8DBBD40C1DD1D4A258A4645F45AA0826B9F7"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/out/modsync.properties.example",
+      "bytes": 1605,
+      "sha256": "92DFAC3F535B1FEB60478F977E1C44EFC5D91F3E8A47D3F226066160DB58C8CE"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/README.md",
+      "bytes": 24599,
+      "sha256": "D95B13858D755001E809C24DE51E8DBBD40C1DD1D4A258A4645F45AA0826B9F7"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/fabricmc/loader/api/entrypoint/PreLaunchEntrypoint.java",
+      "bytes": 267,
+      "sha256": "915E84682AEFF4206956A1B0C15C2DB08ADD9AE3E0AE746E0C3AD6189FFD288F"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/minecraft/client/gui/components/Button.java",
+      "bytes": 694,
+      "sha256": "9C42514ECD8DD206D57DC1B77B53124A6C7B8751B57F9FB814D4207A0DAE1EB3"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/minecraft/client/gui/components/events/GuiEventListener.java",
+      "bytes": 91,
+      "sha256": "6ED0991CA39AC97980169206FE3548D91536297101C61DE9D9C9732651E1F512"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/minecraft/client/gui/components/Renderable.java",
+      "bytes": 78,
+      "sha256": "9432EC7FB875292252F81BF850A9641BC00772CFDFBE8DED20026544CAA1DA9C"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/minecraft/client/gui/Font.java",
+      "bytes": 57,
+      "sha256": "4B06EA63DA75EE29D0472CBB6A880DE2993D2A2EE3B364025B1BC051058CD446"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/minecraft/client/gui/GuiGraphics.java",
+      "bytes": 290,
+      "sha256": "8037F3229FD23A2C16C228D5A65986EAF12C60B4001D30E022227517ADBF9BD2"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/minecraft/client/gui/narration/NarratableEntry.java",
+      "bytes": 82,
+      "sha256": "7820C1E8C44DA9A5AEE646E4D0593C5FF240AFD2BFE0A159AB1B2FEA880E1F27"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/minecraft/client/gui/screens/Overlay.java",
+      "bytes": 77,
+      "sha256": "FF9A0EAB23DEEFA6CCDDDBE6E474CD0D263CA1EF6927CC6A714DBF854C00D785"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/minecraft/client/gui/screens/Screen.java",
+      "bytes": 1125,
+      "sha256": "9E93DD15139644DD8F91B1D6109369F861DDC40A8758167A52A98E69EAFFDACC"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/minecraft/client/Minecraft.java",
+      "bytes": 409,
+      "sha256": "C5FF4C61581647EF29E92BE9595CE3A0CA05C80E37BA4E73137C05CC72420239"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/minecraft/network/chat/Component.java",
+      "bytes": 137,
+      "sha256": "CC9DF5F1B6D5536A338359EC854A79EAB68505009AB864A66EAB5C80A757F9D6"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/minecraft/network/chat/MutableComponent.java",
+      "bytes": 89,
+      "sha256": "E21B9CEB0D97AFD10CD518E52B77A63445565E8841221E1590EB4197B1541899"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/neoforged/api/distmarker/Dist.java",
+      "bytes": 161,
+      "sha256": "061835E1E0321A37D5B954E22718156366666C20F25300A23C6D6928F19A93EF"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/compileOnly/java/net/neoforged/fml/common/Mod.java",
+      "bytes": 477,
+      "sha256": "E1DFD84A5192701936F8AAA99C8A95F5931E304941DDF19A00A3FBBB2D5C16AA"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/BakaXLLayout.java",
+      "bytes": 2740,
+      "sha256": "08B71ABBD8C5CFDCD6087CE1EA44B3F96A52D90C177EDAD0E5301A6CAA36A8DB"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/BuildInfo.java",
+      "bytes": 363,
+      "sha256": "F376B7EBDE4185681633D378A986776D88DD0D62984FA595A0E2458E4DC7AF24"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/CatalogEditorDialog.java",
+      "bytes": 10316,
+      "sha256": "2552DB7769E1AF6E7D515A057E64DE9D4F395D8EDA0B6857DC1F18C5C046A580"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ClientPlatform.java",
+      "bytes": 1510,
+      "sha256": "C08AC814471482F659409812E446824BD1C569FAEEDF22EBAE0982D020F36518"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ConfigMutationEngine.java",
+      "bytes": 21763,
+      "sha256": "68F1F0504D65E9CF48B760BA9C1F03246C51996BB3587A71AA5E545AAF549F52"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/DisplayLanguage.java",
+      "bytes": 2217,
+      "sha256": "AAADEA7CAC3B93F563D045E3A47EE19C6B823D621716CAD74E318CA710BEDB40"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/DownloadEndpointPresets.java",
+      "bytes": 1738,
+      "sha256": "051D60A50F7E049123BE535F7D1CE2169D8287907BCEDE17FEB13E1A065C14B3"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/DownloadProgressTracker.java",
+      "bytes": 2545,
+      "sha256": "0ED41EEB7C8351017C1A5A1B6B49E50C6C48889A3D32461BB6DA4A12A6D5AC0D"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/FabricModMetadata.java",
+      "bytes": 7999,
+      "sha256": "64A68F53768FFAFC97E8044B96EA18619FA59E1DA7B24848A48BB2E2EDAB7DE1"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/FabricPreLaunchEntrypoint.java",
+      "bytes": 1403,
+      "sha256": "DC757845700B556919B03796D4D790A99A02FE7B42282D0ED53361473CA7E0E4"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/FileOperations.java",
+      "bytes": 2833,
+      "sha256": "5E195B91C494D9D6F66BBD425C3F970CC37AA5DA8CD92FA2148889949FED1A58"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/Hashing.java",
+      "bytes": 2395,
+      "sha256": "BC9C7A22E02B62B84837E1D60702321DB9656AFC13BF05DF6A1086ADCE0604A8"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/InGameRecommendedSelection.java",
+      "bytes": 785,
+      "sha256": "A05CC000BC09B511B5A8FF614C25054CC51BDD4AF7F9361BB7BC4DB9DD93166D"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/InstanceGuard.java",
+      "bytes": 2670,
+      "sha256": "B6DD717944FE27E2D08B98E18A0AA669988C4BAE9054410CBBD2E5BCC9A36028"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/LegacyUpgradeManifest.java",
+      "bytes": 5332,
+      "sha256": "9DDD68E6A40D91820559B0481B7205ADC98CF0B50921964023D752C13A361157"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ManagedClientConfig.java",
+      "bytes": 17712,
+      "sha256": "DB55112DE07E5912A079604B6135A9BFFB39718B6FF3BB1D2E06BC57193061CA"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ManagedPathPolicy.java",
+      "bytes": 3525,
+      "sha256": "B55BCB4B36BA6DCD222845C2F880EF33C9D64FAB7E40F26FCABAFF75EA07093B"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ManifestEntry.java",
+      "bytes": 3479,
+      "sha256": "08B530B0FE5FD286BD4A1FBAE53F4A85BA8A8786136DB1A53A93A8A92AB9D877"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/MinecraftWindowStatus.java",
+      "bytes": 1388,
+      "sha256": "F8409C1563B068CD8B6FFD49F1A2D74049A4D6B0386E45AA691E60FF2C8926BD"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ModKind.java",
+      "bytes": 612,
+      "sha256": "AC21CD995DB71E542A7E103633DC6E7A4B3E913BE36D9F94AE740DBDA374C0D1"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ModManifest.java",
+      "bytes": 22588,
+      "sha256": "F11E1F818F966EA15A60E6C8D54389EC1F6ED95F1841A54098DDF3F161BAF0A3"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ModMetadata.java",
+      "bytes": 1468,
+      "sha256": "E277CF09841D7623A6D81803502A40FA9520662CCAD3E74FAC614B5C8ADEF674"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ModSyncAgent.java",
+      "bytes": 4546,
+      "sha256": "BE90D397B2538D270DB27CA6BC4884126183EECAEA1410FEB391F8740614EF18"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ModSyncConfig.java",
+      "bytes": 14015,
+      "sha256": "B97FC9D659B13611E3E32CFCA393976AAAE07F859BDCD7C89AEB6D67D8640B84"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ModSyncCoordinator.java",
+      "bytes": 14905,
+      "sha256": "7AA12CCC0929C6B56912943EBFBE291CF4B97C1C21245EE92041791D7AE3876E"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ModSyncEngine.java",
+      "bytes": 55113,
+      "sha256": "ABC25B2BBE51FA270804FD2ABF44A062FE4FE47E446240DF1A3E39764EA1097D"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/NeoForgeModEntrypoint.java",
+      "bytes": 1618,
+      "sha256": "9C26E2F39D339F28CBBD3532A42C80788BB2ADD03A94E9F502B222ED5F1F0D37"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/NeoForgeModMetadata.java",
+      "bytes": 10533,
+      "sha256": "D5356643B2B09B57DE2BC69BBA31075E0392B6C64D94CF952FFE9DA288B99D8D"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ParallelDownloadRunner.java",
+      "bytes": 3447,
+      "sha256": "9A96E5F1C30D61AAEA71A1F5BE442FA084ACE67D1F65C86887DD3C11C91528CC"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/PortablePreLaunchEntrypoint.java",
+      "bytes": 10145,
+      "sha256": "E200F987D046386D3BD830DEC2D0B3157BC8E9826324CDC7F0DCF6AAAB3E9A69"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/PortableUpdateHelper.java",
+      "bytes": 30714,
+      "sha256": "BFE96786488990F7A9B1B224BE18B793CD05E40E84867F9A63BDE4030233FBF6"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/PropertiesFiles.java",
+      "bytes": 1020,
+      "sha256": "1150B7E5147384FACDBF2558B57B2D6F0AF31AE7BDAEAEB534C5F359E3009742"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/PublisherCloudBundle.java",
+      "bytes": 10150,
+      "sha256": "B64620FC1330A35816733632AB999B7BBE5C0B198FD49EAE8BCE6495074131B2"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/PublisherMain.java",
+      "bytes": 36660,
+      "sha256": "C2E2C06958BEC376F3BA3EDDC050985B1F5841CB629E07C3BC8259BDF848FD46"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/PublisherModAutoMatcher.java",
+      "bytes": 15110,
+      "sha256": "2292F7839D0EBDF40A74943D626953016369FDE29E7EBB2DB5F9E636B74525B3"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/PublisherPlatformResolver.java",
+      "bytes": 5783,
+      "sha256": "511985E45630F5BD34365FC09F86DA7C7B780437BA02B56E8E29526B9D45153A"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/PublisherProjectV5.java",
+      "bytes": 15126,
+      "sha256": "14F12686C1F4A6916311CCCA33663FEEDF3DC1FFAB0E2F4AEFFF33BE9FFB0D28"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/RecommendedSelectionRequest.java",
+      "bytes": 554,
+      "sha256": "93A02F8CF20857E4B14B61D34BB5B1C4D4A12BE1BBD1A246193253F6FF3446FA"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/RecommendedSelectionScreen.java",
+      "bytes": 8451,
+      "sha256": "40AB61C84F15E8290D7622BD32DC122D0C29D8AA6FCD620D60AE8C4EC6C23507"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/RecommendedSelectionStore.java",
+      "bytes": 11954,
+      "sha256": "FFF1CFF003B4A8D795F0A9E08001C801412FCE74BBF64815CE9E63DB6C14481C"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ReleaseArtifactResolver.java",
+      "bytes": 9161,
+      "sha256": "CA4E3F6777335227CA0A94FE588031C9F109844D668324CECDFC754C21D82CE1"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ReleaseManifestV5.java",
+      "bytes": 31944,
+      "sha256": "BA94E5002CBFDF685966E1CBB6616C3926F6FC0CFA087FFF474C8A63C125A2E6"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ReleaseOwnershipLedger.java",
+      "bytes": 2475,
+      "sha256": "FC87937007C983246EABE72A41BB80627A961AF36AB84CB86184D0A0F0143C73"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ReleaseSequenceGate.java",
+      "bytes": 4822,
+      "sha256": "553C7A5FA3E9933BA7D450CAE31D9F7B2070DD3A1B4C094ED599AA5D8179B7F9"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ReleaseTransactionEngine.java",
+      "bytes": 22167,
+      "sha256": "68A7B3BD80C02118CC9559DF99DAC89B439CD88209BA41166E93CB5F722540FF"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/RequiredManifestFetcher.java",
+      "bytes": 4026,
+      "sha256": "5904A6E5A5139A316E28799A08C16C299A82B9924361112ACB4C587E93D08CDB"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ResourcePackEntry.java",
+      "bytes": 88,
+      "sha256": "7B4C56F0AA82638812890465D0DA644D2EBFD754E97E224BF0A740AFC514941D"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ResourcePackManifest.java",
+      "bytes": 5508,
+      "sha256": "943483F48918B0B5EAC8161AE50A899BDBF8EE2B04ADD74572DDA3110E28CF01"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ResourcePackSyncEngine.java",
+      "bytes": 25900,
+      "sha256": "12B22EEADB0CADB2B218F2A29BAF018C7AADE8EB56C65955258C9F8E86DB8094"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/Rfc3986.java",
+      "bytes": 986,
+      "sha256": "726FB36C31D656E36C59380259CDF2DC6E34712533B668AEC77FC493CF9BED9E"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/RuntimeEnvironment.java",
+      "bytes": 15698,
+      "sha256": "0B657A0AD52F91D413096DE82015418A6E88DBF6197C233E856B886642F09D8E"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/SensitiveDataPolicy.java",
+      "bytes": 2155,
+      "sha256": "462DC3F5025D7536CBE33AA100A26DD3D1B6DC31D2659649F032713EEB9B97C7"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ServerListManifest.java",
+      "bytes": 3593,
+      "sha256": "C287E65976E66608F9A26C422B353A1AF315EF97CE9845E3C1591637A5B38978"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ServerListNbt.java",
+      "bytes": 23091,
+      "sha256": "3E6E43D422DDF46BB547A99CBA58EAFC5B0BF69C380E7B6109E11F28C8E43EB3"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/ServerListSyncEngine.java",
+      "bytes": 19099,
+      "sha256": "931C1653C3D0B3B603B07F88E196E1090054D0669C5C7B64900BA55E65B37FB6"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/StrictJson.java",
+      "bytes": 10296,
+      "sha256": "07F63E77B6A089B7AB71B8AB2021DC8C6B10CA36897CCE8549259A52D93650F5"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/SyncObserver.java",
+      "bytes": 1831,
+      "sha256": "3B0337073F3977D5645EA3DC095DF80DE451F67FFCB13D80370130C0932425B4"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/SyncProbeResult.java",
+      "bytes": 166,
+      "sha256": "A37A0F6FECF8FFBFD2C2C9A0761515EFCB271E4C94752CD6ED171BB9E27829A0"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/SyncResult.java",
+      "bytes": 199,
+      "sha256": "946F9D9BB88B0B7CCC6A942B6BBBAEF2DC5F21BC64915B5E7159AB905D4C2F59"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/SyncStatusReporter.java",
+      "bytes": 11903,
+      "sha256": "F4D838016B335A6514D034B6BF052A6035DB9D4A4040B82AB6478A90201AD142"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/UserNotifier.java",
+      "bytes": 65119,
+      "sha256": "11F2EA4FE4CF555438F0CB7F6F746D8C427D62F0476756214F2797371D7A205D"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/V5ModCatalogMatcher.java",
+      "bytes": 4423,
+      "sha256": "856EEA851191E49A302B86633C5F7E79220CAAA072C3CEFD9214BA284D05831F"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/V5PublisherWorkspace.java",
+      "bytes": 90722,
+      "sha256": "CE236343002CB472C7056E9C120BE8A8F0199E204E5A0C41D84FBF2C92550170"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/V5RecommendedSelectionStore.java",
+      "bytes": 15081,
+      "sha256": "DE7CA10DCB75E90C7EDAB43DF864818A05D494431CD6B327C2779B201BF4D0D0"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/V5ReleaseSync.java",
+      "bytes": 5633,
+      "sha256": "D8F4757415FE2B611487DB0B59D31A26E10CB0FD82D64CC976842DCCF3B390C4"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/java/io/github/mcmodsync/VersionOrder.java",
+      "bytes": 1435,
+      "sha256": "4297C0F7BF40F1938B9165DBDEF072A68421E22D8BC72968CFB646FB01530A3A"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/resources/fabric.mod.json",
+      "bytes": 534,
+      "sha256": "C14CC9CDDE1E0A7D63018618922246CE5704C804B5D8FA3DA32F89691F0C391D"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/main/resources/META-INF/neoforge.mods.toml",
+      "bytes": 542,
+      "sha256": "19726E323D8556E897DDC332AD7E58EF3E80542432FAABEBCC35AEF22F29909F"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/test/java/io/github/mcmodsync/AllTests.java",
+      "bytes": 232341,
+      "sha256": "320D8CD50CB2B6A63D1CF48E9DF06F6F8653670005ABD53E3D3549B89EBD3697"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/test/java/io/github/mcmodsync/DummyMain.java",
+      "bytes": 258,
+      "sha256": "99D9E65165B46BE4AB60C5F94721D5140F9C1A947A7C477953F936B30D255143"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/test/java/io/github/mcmodsync/LegacyFabricInvoker.java",
+      "bytes": 684,
+      "sha256": "BB14D3BC59C90E247F61422E7E922658FC40AAAC6519A0F99BD9DD52AA8C15F1"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/test/java/io/github/mcmodsync/LegacyUpgradeIntegrationSmoke.java",
+      "bytes": 18518,
+      "sha256": "626AAB27DF96A3EB912AB309C75FAFD6196A48742350161899EB8675537840D8"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/test/java/io/github/mcmodsync/PortableActualChildMain.java",
+      "bytes": 581,
+      "sha256": "1F68EB8FDA4BE4536737E3B14CE6F6DC65ECC142767616AEC47FC15A801EF688"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/test/java/io/github/mcmodsync/PostBuildPortableSmoke.java",
+      "bytes": 10374,
+      "sha256": "CB1913EBCC0825E5234FF52055CC2CF8F7C3B973FF7A8A455B00A301FAB0E1EF"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/test/java/net/fabricmc/loader/api/FabricLoader.java",
+      "bytes": 860,
+      "sha256": "B189F2B8C9953A776EFCA203C8A148AE8AF5CE7476C46F126E77230DFC1C7E31"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/src/test/java/net/neoforged/fml/loading/FMLPaths.java",
+      "bytes": 431,
+      "sha256": "61C45FF4BBE7D99A4DE33E23953EF968062621DF9203A387F536994C1F4A9069"
+    },
+    {
+      "path": "projects/ports/mcsync-2.0.0/tools/translate_mod_descriptions_zh.ps1",
+      "bytes": 15073,
+      "sha256": "23FD2606A1E9B16654A1B9DCAB6A517FCA427B2E9F0EAA7415019A10612C0637"
+    },
+    {
       "path": "projects/ports/mishanguc-1.21.1-equivalence/.tmp/backport-meta/META-INF/neoforge.mods.toml",
       "bytes": 4151,
       "sha256": "35D257354511C0D18977999D12FE5616459E6DCF4F57BB6EA8EC65F57C57C85A"
     },
     {
       "path": "projects/ports/mishanguc-1.21.1-equivalence/build.gradle",
-      "bytes": 1650,
-      "sha256": "E93ED1D9DFFCB70B9C65CC9334030228496B05A391DB27A5B57DB7D18D71A99B"
+      "bytes": 1616,
+      "sha256": "C5F436DE53BDECFCD38FE0511BBFE5008E1B01F7A75F36DBEFF851C8EECC8C91"
     },
     {
       "path": "projects/ports/mishanguc-1.21.1-equivalence/gradle.properties",
@@ -74410,8 +74945,8 @@
     },
     {
       "path": "projects/ports/nautilus-alias-adapter/gradle.properties",
-      "bytes": 698,
-      "sha256": "3A330ACD8E05F6832E34CD1CB9B95F85FE01C845F4F2695F63E595A5130960DE"
+      "bytes": 681,
+      "sha256": "EE4CC9FFABA46231BC09EE9E28C9FFF070D3A845C49E3F14560E37AC3757CDF9"
     },
     {
       "path": "projects/ports/nautilus-alias-adapter/gradle/wrapper/gradle-wrapper.jar",
@@ -84385,13 +84920,13 @@
     },
     {
       "path": "projects/ports/potted-farms-1.21.1-equivalence-full/potted-farms-final-audit-20260808.md",
-      "bytes": 8186,
-      "sha256": "564F47BB3AFB55CE16E0C2E818C6FAA42618E57CB445B408D7A71B36C9AD9AF3"
+      "bytes": 8105,
+      "sha256": "C7B4030C9B1321BBBF683693972CD2B30EDA9C569E82D8112CC95D8DA44ACCAF"
     },
     {
       "path": "projects/ports/potted-farms-1.21.1-equivalence-full/source-world-potted-farms-audit-20260808.json",
-      "bytes": 3331,
-      "sha256": "2A80EA10C7BE4811E10E86A378E2A9BEA1BB073E0939C1696EC1DF7D29F8F91B"
+      "bytes": 3211,
+      "sha256": "2FD53848104C16C563CC43CE3831DE259ACA40BB16E9F940290D82F0A1FEA8E5"
     },
     {
       "path": "projects/ports/potted-farms-1.21.1-equivalence-full/unpacked/data/minecraft/tags/function/load.json",
@@ -85930,18 +86465,18 @@
     },
     {
       "path": "projects/ports/toms-storage-neoforge-1.21.1-perf-port/MIGRATION-1.21.11-TO-1.21.1.md",
-      "bytes": 5038,
-      "sha256": "EB151CCE494CEFDB2A7D94783BB10551506EBB8612245B31FCEAB73E601644E5"
+      "bytes": 4940,
+      "sha256": "B4349CB1DC1A6C9311194DFC4116A8977DC094C5B70E58B06AB81369833B643C"
     },
     {
       "path": "projects/ports/toms-storage-neoforge-1.21.1-perf-port/migration-tools/run_toms_create_rcon_smoke.ps1",
-      "bytes": 5655,
-      "sha256": "9759BAE6EA6A9AAB050997914DBFB160A79D43C62E5F5E449C7C37222DC9119E"
+      "bytes": 5621,
+      "sha256": "AA975D85BD8F903FF699D3C2F8204D883DE639155808E97BC118C2A0FB7759E4"
     },
     {
       "path": "projects/ports/toms-storage-neoforge-1.21.1-perf-port/migration-tools/run_toms_create_smoke.ps1",
-      "bytes": 5234,
-      "sha256": "2976A6E5D7BD5B0426F61B8D5A0BD61D9304039C999A9D4BA8B58E19A8DB9A00"
+      "bytes": 5200,
+      "sha256": "B0F629D54B84BF715F977BD820ED85707FB3428B6F24D6232E1AEB402018CED7"
     },
     {
       "path": "projects/ports/toms-storage-neoforge-1.21.1-perf-port/migration-tools/toms_global_mca_downgrade.py",
@@ -89970,8 +90505,8 @@
     },
     {
       "path": "projects/ports/xiyuslogin-migration/fixture/easyauth-migration-manifest.json",
-      "bytes": 713,
-      "sha256": "852FE8611C91F4DA67A0C31461ED3ABA0D6189E91DE76DC279EE7661DE5022B7"
+      "bytes": 679,
+      "sha256": "33AEBFE41424482B73C34040BC302AFE4E644124EBF325F0B41FC38C566AC200"
     },
     {
       "path": "projects/ports/xiyuslogin-migration/gradle.properties",
@@ -121350,8 +121885,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 2229,
-      "sha256": "2390CB94BAAAE9900E9359F1BCBB892A908327D48B0B6DE316F4978D1A79C792"
+      "bytes": 2409,
+      "sha256": "34A6BCA0C9EC9F08F7A81269DDA1D0DC561BC3C6B940EAC8DABFD270B09C95D3"
     },
     {
       "path": "reports/current-20260815/ALLOWLIST-MANIFEST.json",
@@ -121360,48 +121895,48 @@
     },
     {
       "path": "reports/current-20260815/heightmap-384-to-544-compat-audit-20260815.md",
-      "bytes": 2344,
-      "sha256": "D36CF12B8D4D0C064F05F2B7A1A592FBB31D9065592B11804B7B7965E8F2E3E9"
+      "bytes": 2310,
+      "sha256": "289A69735E47022F41B49C45762B55C9936690D8A20CC46B8827FB685A65A9AA"
     },
     {
       "path": "reports/current-20260815/MASTER-TERRAIN-BIOME-OTA-RUNBOOK-20260815.md",
-      "bytes": 19328,
-      "sha256": "C445AA141130AD19701F478F72F2025389FA4E5B9D8C068E0935033E5BBDE758"
+      "bytes": 19293,
+      "sha256": "E7081E2C057A9A6168137AF5FF0B775A171B1569CA322F9E213E8E40D155C6D5"
     },
     {
       "path": "reports/current-20260815/mechanomania-latest-c-ota-candidate-manifest-20260815.json",
-      "bytes": 4021,
-      "sha256": "27CC7D61016F2974490751A4AC45110DD089643E7A4D13B33A4D02E9680ACDD7"
+      "bytes": 3927,
+      "sha256": "BECBEA6ECC68F06A71BFA903B0CD3ECDB930B4BE91F122AA7D0A790F20F3D0C8"
     },
     {
       "path": "reports/current-20260815/mineastr-readonly-audit-20260815.md",
-      "bytes": 6646,
-      "sha256": "31FAA4F0BFF15EA2BD3D27F5E25EB18C47A4ED8C90F10E3405D6ACBD14459360"
+      "bytes": 6612,
+      "sha256": "5E640037C55C4908878167841DD8655FBC9DE4F92FAEDA3BD771E558339CED8F"
     },
     {
       "path": "reports/current-20260815/protected-terrain-ota-latest-c-lock-20260815.json",
-      "bytes": 3979,
-      "sha256": "376A47011A515134C10130ADADFF3D6F294081E7450D4225ACE9F30A60212C39"
+      "bytes": 3834,
+      "sha256": "4348B1EE0F2043768781BAD7E07E949EE51D359B44CE63DCF4A26BBE99C91CE6"
     },
     {
       "path": "reports/current-20260815/PROTECTED-TERRAIN-OTA-OPERATOR-RUNBOOK-20260815.md",
-      "bytes": 5669,
-      "sha256": "7F758BB1F9AAED81CF189E8EE731CFC884345FEB11F97DE74CC277FC44578756"
+      "bytes": 5592,
+      "sha256": "C093B75A4C1EC8E97B635BE709619064CB905E8F76DD4F7FB09D8AD2AAD600AD"
     },
     {
       "path": "reports/current-20260815/protected-zone-entity-relocation-ota-20260815.md",
-      "bytes": 4004,
-      "sha256": "F0696E29DEDDF16F0874C33D03EA769E9161E599CBEDC977DA4D3018E935416F"
+      "bytes": 3902,
+      "sha256": "B5193FF434C353CC950F427D6A7A99D802679356A95F5D54836CED699AF6232C"
     },
     {
       "path": "reports/current-20260815/protected-zone-terrain-ota-tool-20260815.md",
-      "bytes": 5343,
-      "sha256": "B5A26C86C334CD75A6E6AB0EA5309D2DAFD9173314BBED42128715F1996DDC56"
+      "bytes": 5189,
+      "sha256": "73E58FE6E63A8BBF08A406D0C20CB12DABDEA752E18FD1091A0DF43F1B3ECC1D"
     },
     {
       "path": "reports/current-20260815/terrain-biome-ota-current-state-20260815.json",
-      "bytes": 12396,
-      "sha256": "804841B0BCB0954BBEC372D5D098ECC54FBDA70EE1AD9F0A97409906566E429E"
+      "bytes": 12233,
+      "sha256": "B7C238966BFF1DAB9BF1D9E6EF826AE0C0F8517E4615A9BEB64DB3ECEE7C9E7C"
     },
     {
       "path": "reports/current-20260815/terrain-biome-safe-ota-design-20260815.md",
@@ -121410,8 +121945,8 @@
     },
     {
       "path": "reports/current-20260815/TERRAIN-OTA-COLLAB-HANDOFF-20260815.md",
-      "bytes": 6471,
-      "sha256": "3FCBFEBFA9416C260791839A19286B5111873081BC74D5FC2EC02B2DEB40EFEA"
+      "bytes": 6419,
+      "sha256": "DC79E31F0A34075109A010B0F3C30B24493168E2680A698E05E8B91AD02DB2CC"
     },
     {
       "path": "reports/current-20260815/WORLDGEN-HEIGHT-544-AND-FRONTIER-APPENDIX-20260815.md",
@@ -121420,13 +121955,13 @@
     },
     {
       "path": "reports/current/attempt13-content-repairs-apply-20260814.json",
-      "bytes": 10040,
-      "sha256": "A7FBEACE8E42D43B04EEB71F5A139F6E70D8213886495C61FB34AD07CD9CE61F"
+      "bytes": 9565,
+      "sha256": "158AD18996E5015BECB1AB7F0182E98AFF1CC9F22337EC72A9F2D646BE783C5E"
     },
     {
       "path": "reports/current/attempt13-followup-fixes-apply-20260814.json",
-      "bytes": 17636,
-      "sha256": "FE71B842AB644D14E4FA8F99BDCE4627EFD55C1ACAD4DF5D5CE0149088732476"
+      "bytes": 16641,
+      "sha256": "626E7191C3E2E0256CA3886F85C682C15614AD380B6D24FF2D920839452AB93C"
     },
     {
       "path": "reports/current/candidate14-ota-error-family-coverage-20260812.json",
@@ -121450,8 +121985,8 @@
     },
     {
       "path": "reports/current/chopping-board-world-audit-20260814.json",
-      "bytes": 9873,
-      "sha256": "09F2B5687035AF9BD402B18AE10E693EE8BD7E1805056E427FD07A1A64A7DEFB"
+      "bytes": 9816,
+      "sha256": "593921E52F99196DCF1E4A1501ADCA6134145433ECFDBB8E47B8912316651948"
     },
     {
       "path": "reports/current/chopping-board-world-audit-20260814.md",
@@ -121460,48 +121995,48 @@
     },
     {
       "path": "reports/current/client-mod-requiredness.json",
-      "bytes": 147457,
-      "sha256": "DA89BB5CC54C14FA619C4702417FD64BB10E34D15430A1047DFC3CF9E76A3C9B"
+      "bytes": 145166,
+      "sha256": "5E5CE00268F566ECE547830CB13C140C50B5268B1742F116A73DAD074EFB3342"
     },
     {
       "path": "reports/current/create-carriage-controls-audit-20260813.json",
-      "bytes": 8934,
-      "sha256": "7DCE3B726167FB8EBF9B379E6D02B4B4895440307B8FB763B6A555DA26C45554"
+      "bytes": 8597,
+      "sha256": "F11B403FC11BDF6660879562D27D92779447CD65DDD0EB6506B4B68339F2F758"
     },
     {
       "path": "reports/current/create-carriage-orientation-guard-p02-audit-20260813.md",
-      "bytes": 3827,
-      "sha256": "564B0AF0E84C100B8876B872260F7D1AAB8C98E810350E274340011435A62B91"
+      "bytes": 3793,
+      "sha256": "3EC479FE2B93F11FA2ADA9EB26C43A30B1CF89EBD2A96E25008A90BAC0284282"
     },
     {
       "path": "reports/current/create-contraption-region-audit-20260813.json",
-      "bytes": 36184,
-      "sha256": "16AE50B4A97DC9B9A94345A78830C10DB2D57511EF1404F01C84089623946660"
+      "bytes": 36146,
+      "sha256": "F817C91FA526CE01C22ADA21FAFD849BD12B570301EB96F6977AE0592870BFFC"
     },
     {
       "path": "reports/current/journeymap-to-xaero-handoff-20260813.md",
-      "bytes": 5074,
-      "sha256": "BE3F988652275D8AFC32FA7F2F39FFD1F95385F01B042CA1A021B124930CC122"
+      "bytes": 5057,
+      "sha256": "28BAC0B6A23CAA0B292F7292F6925D8117F0FBBB3D26E7213D555FF02BEDEAB1"
     },
     {
       "path": "reports/current/mechanomania-attempt13-prism-import-20260814.json",
-      "bytes": 6240,
-      "sha256": "F4F233C271D149BA89F9B82CBED7DF408678871E3503A85E4955D9F215EBDC97"
+      "bytes": 6093,
+      "sha256": "8B6CD8CAE16B3B7B538A4162380E7AACA62044771004DB3756FD73B01A53A897"
     },
     {
       "path": "reports/current/mechanomania-matched-release-v3-build-20260814.json",
-      "bytes": 23498,
-      "sha256": "F7D7D190556AD83F202BC7D6F83A0A43A700569CC2157434901157E45E00B999"
+      "bytes": 23205,
+      "sha256": "F808B71EFFD6202CFCC4D258C892CB236C8D63BA5DD732ACFAAD9163C53C7302"
     },
     {
       "path": "reports/current/mechanomania-matched-release-v3-build-20260814.md",
-      "bytes": 973,
-      "sha256": "56A6CAD045A5DF1D572E7451A3C2D14A02977D94297A822B0A8FD31C2A78960A"
+      "bytes": 956,
+      "sha256": "98A5C99B486BD73AC39ABA30D995AE5676DF565187304828D7BD57A53DB0BE22"
     },
     {
       "path": "reports/current/mechanomania-matched-release-v3-preflight-20260814.json",
-      "bytes": 21882,
-      "sha256": "D01F40B76217AC598447540EC21DAA4BD010172949841E8F27BBBE8757FD9447"
+      "bytes": 21608,
+      "sha256": "211C1BCEC4C5004EC6448EF270C11B4756C2DB7A689215FE5F56129E6FEE16E5"
     },
     {
       "path": "reports/current/mechanomania-matched-release-v3-preflight-20260814.md",
@@ -121510,8 +122045,8 @@
     },
     {
       "path": "reports/current/mechanomania-side-classification-20260813.json",
-      "bytes": 58363,
-      "sha256": "0F0B0D507582B54B87E2FE08E438DD51A9B709C1547ACD26D560872B09FF2CE1"
+      "bytes": 58399,
+      "sha256": "14A10C455A5D3E6510B023413824FADB9D71CEF9B21521CBEDCFEEBE71F85723"
     },
     {
       "path": "reports/current/mechanomania-side-classification-20260813.md",
@@ -121520,8 +122055,8 @@
     },
     {
       "path": "reports/current/mechanomania-startup-gate-attempt13-static-validation-20260814.json",
-      "bytes": 29674,
-      "sha256": "092C30279C3EB92936EF2507A7F7B6E6097FE6103470ED30221392BC9E5A4524"
+      "bytes": 27578,
+      "sha256": "E04F486BD41492FA3D3179F557F9E483A0A81AC707A034F9A5DB658F2C053380"
     },
     {
       "path": "reports/current/migration-current-status-and-todo-20260813.md",
@@ -121530,18 +122065,18 @@
     },
     {
       "path": "reports/current/private-launcher-fix-audit-20260814.json",
-      "bytes": 4112,
-      "sha256": "FE2BCFC61C707F7349BEC521C55CE0D3A66FDE93997ECE1E4F077F216C4136DE"
+      "bytes": 4042,
+      "sha256": "D7E9258FBF5D2AE56511098E6AC21C37AA960705DA3D0721A83BDD8C755987B1"
     },
     {
       "path": "reports/current/private-launcher-fix-audit-20260814.md",
-      "bytes": 4498,
-      "sha256": "21F88AB9111D84C9362BE635E73DBA9CC7222BDDBA55F6F67F2DA6DDCB5989FD"
+      "bytes": 4469,
+      "sha256": "D39CA8B0CEDC64B0386506FB3E7A938A1597C646F67C28C0D9846928FEFB45CD"
     },
     {
       "path": "reports/current/terrain-preservation-final-20260813.json",
-      "bytes": 6453,
-      "sha256": "8DEA7AA53D9E991ABB59DDAC082F5FA5B2AA737F3344D106E4F0C46D25A7DD70"
+      "bytes": 6376,
+      "sha256": "0A6BD19A28E1ABF42D53B97A5B78EE7E9C5D4F7396A4388FEFFDB27C7A7898EC"
     },
     {
       "path": "reports/current/terrain-preservation-final-20260813.md",
@@ -121550,13 +122085,13 @@
     },
     {
       "path": "reports/current/terrain-worldgen-compatibility-notes-20260813.md",
-      "bytes": 1678,
-      "sha256": "7B1696B6EE9FD752FACD87203D9088747F82B5005FED0121D69F03693BD53AC3"
+      "bytes": 1657,
+      "sha256": "7E9C9DEBDBDB4799671889F1C67030F8E9BDBABE6F32DC65F8EC3FBF0DDA120D"
     },
     {
       "path": "reports/current/vanilla-and-known-bug-ledger-20260813.json",
-      "bytes": 50930,
-      "sha256": "C09DCC4147D3F90133C0F8563AEF59E72BB9394F1E4BC61B134E567D49A1AAA4"
+      "bytes": 50873,
+      "sha256": "C509D06AC4F5D50029BCB23C36F84139BB019BEEE18B38290A46F514B357B040"
     },
     {
       "path": "reports/current/vanilla-and-known-bug-ledger-20260813.md",
@@ -121565,18 +122100,18 @@
     },
     {
       "path": "reports/current/vanilla-terrain-protection-runbook-20260813.md",
-      "bytes": 7128,
-      "sha256": "109745928B37D603D47F5242CA4BC6ACD818545AA7B282E438A8B4892AE79160"
+      "bytes": 7035,
+      "sha256": "DEE49FE726A2518C59DA67415D291BBD1906E5840EEA1D76CF689E8D1A65D7F1"
     },
     {
       "path": "reports/handoff/AUTHORITATIVE-INPUTS.json",
-      "bytes": 2171,
-      "sha256": "93FA9E62D06C22105B0AD1E745F02632663B81ECA5C7437FF41AFA392088618E"
+      "bytes": 2140,
+      "sha256": "69083B0017E061A63E79CE552DCA606C99B540B66AAA75508CAB021B6A904300"
     },
     {
       "path": "reports/handoff/FINAL-DELIVERY.md",
-      "bytes": 2006,
-      "sha256": "B56A900A24DA80E1422410CB448A52DA4F24FAA4EB3E9333756A6B900666B0D0"
+      "bytes": 1934,
+      "sha256": "708782AB3B90EE584BBDED2E454181D8B0B39912A8B825DA73E3389A863C4F10"
     },
     {
       "path": "reports/handoff/HISTORY-POLICY.md",
@@ -121585,8 +122120,8 @@
     },
     {
       "path": "reports/handoff/P0-STATUS.md",
-      "bytes": 1734,
-      "sha256": "DFC7EE69EAF8F8835DB0838DA45CF1BF66DCD9FA8EC21BC9F311EF32A8D68B8A"
+      "bytes": 1717,
+      "sha256": "CE613BBA0CA492C460B61A8E8D8783882BF65D4D4003D77562928A5FAF84C439"
     },
     {
       "path": "reports/handoff/README-交接说明.md",
@@ -121595,8 +122130,8 @@
     },
     {
       "path": "reports/handoff/SUPERSEDED-CANDIDATES.md",
-      "bytes": 2575,
-      "sha256": "354E13BAEAD0147102798C377639B537F8BC390A5938EF07800AABF4E284524D"
+      "bytes": 2473,
+      "sha256": "36AD21360F7E2EA9BFF37B8105E94487C249336B44F8B56CBD7D337449ADEDAD"
     },
     {
       "path": "reports/handoff/TODO.md",
@@ -121605,8 +122140,8 @@
     },
     {
       "path": "reports/map-conversion/conversion-report.json",
-      "bytes": 18102,
-      "sha256": "646A0FD774FB0A0EC7962DA5209D1DBBB62598672BAE06EE800A845167D9BBE1"
+      "bytes": 18090,
+      "sha256": "6D9BCFF5ABBA4EE14A2F1EC275CB46F9AE683E7417A38767DB4A0FC71280A8CB"
     },
     {
       "path": "reports/map-conversion/conversion-report.md",
@@ -121630,8 +122165,8 @@
     },
     {
       "path": "reports/patch-audits/attempt10-loot-followup/attempt10-loot-followup-audit.json",
-      "bytes": 10232,
-      "sha256": "BFFCF439EC7DE7EDAFDA6629D44DA95E2F6D4E98016FA999A507087EBFEF14D6"
+      "bytes": 9898,
+      "sha256": "468FB937CCB13509B461123BF86291B43E27109FCDF69ECD480FF2D456470861"
     },
     {
       "path": "reports/patch-audits/attempt10-loot-followup/ATTEMPT10-LOOT-FOLLOWUP-AUDIT.md",
@@ -121655,18 +122190,18 @@
     },
     {
       "path": "reports/patch-audits/attempt6-data-resources/loot298-audit.json",
-      "bytes": 311299,
-      "sha256": "3132A1EED7B144384DB4FB2E7A68ABBC9A6591C7DC5DE3EC2E296A6A6072D31F"
+      "bytes": 311109,
+      "sha256": "ABCB5E7EB0175B9C52F615C3AB4775DC437D4D21A307B06BEAF55AB8512376A7"
     },
     {
       "path": "reports/patch-audits/attempt6-data-resources/LOOT298-AUDIT.md",
-      "bytes": 5983,
-      "sha256": "8AEBC49CE03C354CC2D9733B4CAFF152CD05A58364A3471D25AA407582A5A6D6"
+      "bytes": 5949,
+      "sha256": "0FE8530A50B1D21E33DCB867EDABEAECC02F5CEB5A96070FB375A7920C93F413"
     },
     {
       "path": "reports/patch-audits/attempt6-data-resources/LOOT298-HANDOFF.md",
-      "bytes": 1792,
-      "sha256": "E013C4F44F1DA193B9CB0D8CCBCF556EB9B2B8F01D58AE09C595566949C27242"
+      "bytes": 1754,
+      "sha256": "489FE8D4E76FD3C0F37C5F4C10F5C9CD0DB465D57A958E1E33F4F92072544F0E"
     },
     {
       "path": "reports/patch-audits/cei/2.4.2/assets/create_dragons_plus/lang/en_us.json",
@@ -124490,13 +125025,13 @@
     },
     {
       "path": "reports/patch-audits/cei/CEI-2.4.2-vs-2.5.1-audit-result.json",
-      "bytes": 10790,
-      "sha256": "CF9090DD2B2A84024106828C37FEA43022849B1F36B42F2EEA1126E3D9CADE6A"
+      "bytes": 10660,
+      "sha256": "53D0545A68B3A924FAC6D480D1B26369ECC9B6C224A211DA9A81B8F8294A3197"
     },
     {
       "path": "reports/patch-audits/cei/CEI-2.4.2-vs-2.5.1-save-compat-and-backport-audit.md",
-      "bytes": 22593,
-      "sha256": "0F9A32C07AAFC363498EC18468CBBD8725E4D3B9E8B7BC02233E3D46A038C025"
+      "bytes": 22479,
+      "sha256": "663B390371DE0B00D07B5CE6ED3C389C3ED03D1853DE3C31EC237B4819D69092"
     },
     {
       "path": "reports/patch-audits/cei/class-path-diff.json",
@@ -124520,13 +125055,13 @@
     },
     {
       "path": "reports/patch-audits/cei/decompiled-2.4.2/summary.txt",
-      "bytes": 203,
-      "sha256": "CEEA03E784DAC6DE822023F7E5597B1F7C5C02BABBE5A38B9A4D12229178CD39"
+      "bytes": 208,
+      "sha256": "FF6CFF34D03DCE14390DF70D0366C4BE51E94868FF4EB156BBBC95EB5817560F"
     },
     {
       "path": "reports/patch-audits/cei/decompiled-2.5.1/summary.txt",
-      "bytes": 159,
-      "sha256": "81F64BA37D03DA638A640C0F45C2F965A7B86C8B7FFBA4BE01DE322965340B25"
+      "bytes": 142,
+      "sha256": "8FCC56A806FDA9268CAA34E7A0E25EAC9214E83343B6FDA8093E4DBA0B5DD1F9"
     },
     {
       "path": "reports/patch-audits/cei/javap-2.4.2-plus_dragons_createenchantmentindustry_common_processing_forger_BlazeForgerBlockEntity.txt",
@@ -124625,8 +125160,8 @@
     },
     {
       "path": "reports/patch-audits/cei/preliminary-world-scan-keys.json",
-      "bytes": 4582,
-      "sha256": "B00272D1AF0D2506DFADE57F5575E52E81F8FEE31D87647B0B8350220B35E768"
+      "bytes": 4498,
+      "sha256": "4E3ED014DC421507A20CEEBB71132CBB2A19DE93F92E7B3F3D4609A1AD8D4556"
     },
     {
       "path": "reports/patch-audits/cei/SHA256SUMS.txt",
@@ -124640,8 +125175,8 @@
     },
     {
       "path": "reports/patch-audits/content-backport/content-backport-1.5-cat-serializer-fix-result.json",
-      "bytes": 2758,
-      "sha256": "0EB56EFC9FBD8D0492B1596D030DAA6E908BF44E477A713604008F136BB5F7CC"
+      "bytes": 2701,
+      "sha256": "00CE0892DD9E06E5F26101B270F2644B77E708A5717E67B8485CA0B391BA8FA2"
     },
     {
       "path": "reports/patch-audits/content-backport/SHA256SUMS.txt",
@@ -124650,18 +125185,18 @@
     },
     {
       "path": "reports/patch-audits/cookery-chopping-board/all-chopping-boards-audit-final.json",
-      "bytes": 8898,
-      "sha256": "452680ECFB502017D3C04BE76272E07F24AF2F5FDF674227C8F9332A95E05625"
+      "bytes": 8238,
+      "sha256": "C33A05EF3F311812A1011FC686EE385815B303C7693111C59B35D6B4F10C13C9"
     },
     {
       "path": "reports/patch-audits/cookery-chopping-board/all-chopping-boards-audit.json",
-      "bytes": 30070,
-      "sha256": "8966674020A1864BF514DE9E814092EBA54A0F8536DFD795B4A9054BD78AA1F4"
+      "bytes": 27152,
+      "sha256": "068A7B72DC2FC4028C6B54B8863C47902AC66A202B16AC979E0502AF93A9438F"
     },
     {
       "path": "reports/patch-audits/cookery-chopping-board/chopping-board-world-audit-20260814.json",
-      "bytes": 9873,
-      "sha256": "09F2B5687035AF9BD402B18AE10E693EE8BD7E1805056E427FD07A1A64A7DEFB"
+      "bytes": 9816,
+      "sha256": "593921E52F99196DCF1E4A1501ADCA6134145433ECFDBB8E47B8912316651948"
     },
     {
       "path": "reports/patch-audits/cookery-chopping-board/chopping-board-world-audit-20260814.md",
@@ -124670,8 +125205,8 @@
     },
     {
       "path": "reports/patch-audits/cookery-chopping-board/independent-final-build-audit-20260814.json",
-      "bytes": 11679,
-      "sha256": "5A395E4ED07388A5F1C63FCFAAFC6B48630F5717E0F285026209FD233DADBE54"
+      "bytes": 11451,
+      "sha256": "4B2F4A3332842F42E6DD88FE948D73A388B562770A2E01FEC84B5111D6BD900C"
     },
     {
       "path": "reports/patch-audits/cookery-chopping-board/independent-final-build-audit-20260814.md",
@@ -124680,28 +125215,28 @@
     },
     {
       "path": "reports/patch-audits/cookery-chopping-board/kaleidoscope-cookery-chopping-board-fix-apply.json",
-      "bytes": 4728,
-      "sha256": "0CAB221EB89115744F1320B8C989843DB7C8621039D98A95C14510D9E88A8C04"
+      "bytes": 4472,
+      "sha256": "42D8F66F7D0E3842E4D857CB3D05EDA9DD541AD2CBA1C4844D4DB3308D771EAF"
     },
     {
       "path": "reports/patch-audits/cookery-chopping-board/kaleidoscope-cookery-chopping-board-fix-build-audit.json",
-      "bytes": 1953,
-      "sha256": "AD36A40D19DB126AB3DA988B10848947F0EDE9936E746D6DB9519B2047B280E5"
+      "bytes": 1851,
+      "sha256": "B94F702837B1BF91D5A63299905B67D17F6C71B50A21BA1C2B045F9471EC1106"
     },
     {
       "path": "reports/patch-audits/cookery-chopping-board/kaleidoscope-cookery-chopping-board-fix-compatible-build-audit.json",
-      "bytes": 1862,
-      "sha256": "32A166C65B034E4F1BD6213E07A7E171B55A27073EA455492D9C257C95D13D41"
+      "bytes": 1764,
+      "sha256": "669BB20F7D235B7CE9016D252F912A35DE35D15E80A6AEF6626A3A44068B70CF"
     },
     {
       "path": "reports/patch-audits/cookery-chopping-board/kaleidoscope-cookery-chopping-board-fix-final-build-audit.json",
-      "bytes": 1953,
-      "sha256": "47194657EE629D8EB51BF79269CFAD4BF74C6E5B6987297F225C42D110B7CBAD"
+      "bytes": 1851,
+      "sha256": "E383295D208D584F5336DFC938A2BC4621B21ADFDACA058098795C9997FA5117"
     },
     {
       "path": "reports/patch-audits/cookery-chopping-board/kaleidoscope-cookery-compatible-hotfix-apply.json",
-      "bytes": 3001,
-      "sha256": "190B33AE1628218DAA46DE17CB3F63E7FB47102755FE2FADD00284A59B018A19"
+      "bytes": 2838,
+      "sha256": "8E9E553189F778474B7249C4DE55E12F0775F45F8D5B9FF67AFD3C2849DB28AC"
     },
     {
       "path": "reports/patch-audits/hotbath/build-a/TEST-com.crabmod.hotbath.audit.HotBathTriggerRegistrationContractTest.xml",
@@ -124715,13 +125250,13 @@
     },
     {
       "path": "reports/patch-audits/hotbath/HOTBATH-3.0.0-TRIGGER-REGISTRY-FIX-AUDIT.md",
-      "bytes": 4141,
-      "sha256": "DDE4CE9B1173225D8B0F5CF4B3502D079B11D688948634E07FD0EC0DA13FC5CB"
+      "bytes": 4107,
+      "sha256": "238A95B20A31A74C07FCEF9053F292AAB9629CE7D1E579E8EB64E31F143DBFBA"
     },
     {
       "path": "reports/patch-audits/hotbath/hotbath-3.0.0-trigger-registry-fix-result.json",
-      "bytes": 4638,
-      "sha256": "9820E6F82C208112860601BAA7C283FBBE72C86A69EB70D40ACF04E64E35A7D7"
+      "bytes": 4543,
+      "sha256": "AB2422840C73641AEA35365227AD544D3C2FE022897FD7E9E889E2D62B81D07E"
     },
     {
       "path": "reports/patch-audits/hotbath/SHA256SUMS.txt",
@@ -124730,13 +125265,13 @@
     },
     {
       "path": "reports/patch-audits/tracks/tracks-block-tag-fix-result.json",
-      "bytes": 1221,
-      "sha256": "F8E300A68CFCA2AC9389B816143527B9DF6A0551FAC7BAB799A17C2E558B8E48"
+      "bytes": 1149,
+      "sha256": "91286824B4264E25858000260CCD29DBDB7C6EC31A3DEC028BC01D6B1D0F10FE"
     },
     {
       "path": "reports/patch-audits/worldedit/WORLDEDIT-7.3.8-DIRECTION-PROPERTY-FIX-AUDIT.md",
-      "bytes": 4440,
-      "sha256": "386A6E4EC5110A7ABECEDA63A181FAA7228D8E91C1C474308425A1911E7826AD"
+      "bytes": 4389,
+      "sha256": "A517370C712D85B93DA1890F6A92342F1E8C27FB15DF6E39517885106CBBE3E0"
     },
     {
       "path": "requirements-test.txt",
@@ -124755,8 +125290,8 @@
     },
     {
       "path": "tools/legacy-entrypoints/audit-tavern-semantic.js",
-      "bytes": 7594,
-      "sha256": "C8680EE2012C37FFC3FE77A2BA22570C94B702BB11F3861F086F2F981EEF617D"
+      "bytes": 7526,
+      "sha256": "0D532DB77967F37405AE4A206C216A2113F801DD3BC73AA206DE03F83AB3B36E"
     },
     {
       "path": "tools/repository/check_repository.py",
@@ -124765,8 +125300,8 @@
     },
     {
       "path": "tools/repository/normalize_source_map.py",
-      "bytes": 2187,
-      "sha256": "2F4791F840CD4B8339A18F2D1E2629B5E655BA13FBF6BD708E4E7B5CB0EE72F2"
+      "bytes": 2145,
+      "sha256": "9EF3E904CDF1739C6BB6F3610A18C25FE86784DDA9CB7192E772FF269B8C5D9B"
     },
     {
       "path": "tools/repository/refresh_repository_manifest.py",
@@ -124775,8 +125310,8 @@
     },
     {
       "path": "tools/repository/sanitize_snapshot.py",
-      "bytes": 2538,
-      "sha256": "C35B19627A75523318E678F904635E3F2F30C97AB4D8F5F270BBF34844350B8E"
+      "bytes": 3790,
+      "sha256": "31B8E9B273752BAF534B3F2C86B3EDA6BE53749B286DD3B15164255CEE91EA45"
     },
     {
       "path": "tools/repository/stage_manifest_files.py",

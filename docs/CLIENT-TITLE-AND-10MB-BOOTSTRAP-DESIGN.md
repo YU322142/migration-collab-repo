@@ -51,7 +51,7 @@
 
 ## Motiquies 2.0.1 轻量包结构
 
-参考文件：`D:/Down/Motiquies - 动静交映 - 2.0.1.zip`
+参考文件：`<DOWNLOAD_ROOT>/Motiquies - 动静交映 - 2.0.1.zip`
 
 - ZIP 大小：5,690,321 bytes。
 - 文件数：917。

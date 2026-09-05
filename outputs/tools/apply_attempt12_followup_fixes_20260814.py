@@ -22,7 +22,7 @@ impl = importlib.util.module_from_spec(spec)
 sys.modules[spec.name] = impl
 spec.loader.exec_module(impl)
 
-ROOT = Path(r"D:\Trans\migration-audit-work")
+ROOT = Path(r"<AUDIT_ROOT>")
 impl.SERVER = ROOT / "mechanomania-matched-runtime-attempt12-20260814"
 impl.CLIENT = ROOT / "mechanomania-matched-client-attempt12-20260814"
 impl.BACKUP = ROOT / "attempt12-followup-fixes-backup-20260814"
@@ -36,7 +36,7 @@ def ensure_attempt12_root_safety() -> None:
         impl.SERVER: "mechanomania-matched-runtime-attempt12-20260814",
         impl.CLIENT: "mechanomania-matched-client-attempt12-20260814",
     }
-    forbidden = Path(r"D:\Trans\20260807").resolve()
+    forbidden = Path(r"<TRANS_ROOT>\20260807").resolve()
     for value, leaf in expected.items():
         if not value.is_dir() or value.is_symlink():
             raise impl.FollowupError(f"unsafe Attempt12 target root: {value}")

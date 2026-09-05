@@ -11,13 +11,13 @@ from zipfile import ZipFile
 
 
 ORIGINAL = Path(
-    r"D:\Trans\migration-audit-work\mechanomania-matched-client-attempt9-20260814\mods\yuushya-1.21.0-neoforge-2.3.0.jar"
+    r"<AUDIT_ROOT>\mechanomania-matched-client-attempt9-20260814\mods\yuushya-1.21.0-neoforge-2.3.0.jar"
 )
 BUILD1 = Path(
-    r"D:\Trans\migration-audit-work\yuushya-230-patchouli-fix-artifacts-20260814\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar"
+    r"<AUDIT_ROOT>\yuushya-230-patchouli-fix-artifacts-20260814\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar"
 )
 BUILD2 = Path(
-    r"D:\Trans\migration-audit-work\yuushya-230-patchouli-fix-artifacts-20260814\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.2.jar"
+    r"<AUDIT_ROOT>\yuushya-230-patchouli-fix-artifacts-20260814\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.2.jar"
 )
 
 GUIDE_ROOTS = (

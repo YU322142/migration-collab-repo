@@ -16,8 +16,8 @@ import time
 WORKSPACE = Path(__file__).resolve().parents[2]
 OUTPUTS = WORKSPACE / "outputs"
 TOOLS = OUTPUTS / "tools"
-SOURCE_WORLD = Path(r"D:\Trans\migration-audit-work\incoming-20260811-raw\20260811\world")
-STAGING_WORLD = Path(r"D:\Trans\migration-audit-work\cutover-staging-incoming-20260811-candidate13-20260812\world")
+SOURCE_WORLD = Path(r"<AUDIT_ROOT>\incoming-20260811-raw\20260811\world")
+STAGING_WORLD = Path(r"<AUDIT_ROOT>\cutover-staging-incoming-20260811-candidate13-20260812\world")
 SOURCE_CODE = OUTPUTS / "tmp" / "source-cookery-codec-cfr" / "com" / "github" / "ysbbbbbb" / "kaleidoscopecookery" / "entity" / "ScarecrowEntity.java"
 TARGET_CODE = OUTPUTS / "tmp" / "target-cookery-codec-cfr" / "com" / "github" / "ysbbbbbb" / "kaleidoscopecookery" / "entity" / "ScarecrowEntity.java"
 WORKERS = 10

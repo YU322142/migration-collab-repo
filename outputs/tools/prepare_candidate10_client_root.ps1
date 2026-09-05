@@ -13,7 +13,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $workspace = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..')).TrimEnd('\')
-$bundleRoot = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate10-20260811'
+$bundleRoot = '<AUDIT_ROOT>\final-mod-bundles-candidate10-20260811'
 $expectedSource = Join-Path $workspace 'outputs\tmp\client-gate-candidate5\.minecraft'
 $expectedMods = Join-Path $bundleRoot 'client-mods'
 $expectedManifest = Join-Path $bundleRoot 'manifests\client.json'
@@ -26,7 +26,7 @@ $expectedManifestSha256 = '79677A95935DD67E4196C8CCC99F92D9D817087C1DC7402DCE3A6
 $expectedBundleSha256 = 'CEC51F141A226E53E5CB0F64851E6EA37DE6FFC7BFD307863FE2563AA606737F'
 $expectedHappyGhastFile = 'happyghast-equivalence-1.0.0-equivalence.2+mc1.21.1.jar'
 $expectedHappyGhastSha256 = '36C1CE14EE18B81C04654F1A6956F2257B7DEAC07746E960475AAF5C6F25A579'
-$staleCandidate9Ready = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate9-20260811\READY.json'
+$staleCandidate9Ready = '<AUDIT_ROOT>\final-mod-bundles-candidate9-20260811\READY.json'
 $expectedStaleCandidate9ReadySha256 = '2B650E1D5DDB0798B98F2A23BEC5636A629CFFFBB2B206D0A5685D654EDA0F0D'
 $expectedStaleCandidate9BundleSha256 = 'C87B3398E7B38907E8E4EE21ED6F3A4A748F5756E6E1612FB730132FD36E14D4'
 $expectedStaleCandidate9HappyGhastSha256 = 'F715D0065BEEC583B5EDEEFF3DCD28D4E9DFCC3D5E9B5FE55E9DF26C945D82E8'
@@ -339,7 +339,7 @@ foreach ($name in $junctionNames) {
     if (-not (Test-Path -LiteralPath $directTarget -PathType Container)) {
         throw "Resolved shared client input missing: $directTarget"
     }
-    if (Path-IsWithin $directTarget 'D:\Trans\20260807') {
+    if (Path-IsWithin $directTarget '<TRANS_ROOT>\20260807') {
         throw "Shared client input unexpectedly resolves into the historical backup: $directTarget"
     }
     $destination = Join-Path $output $name

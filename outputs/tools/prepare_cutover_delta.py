@@ -23,10 +23,10 @@ from pathlib import Path
 from typing import Iterable
 
 
-SOURCE_DEFAULT = Path(r"D:\Trans\20260807")
-STAGING_DEFAULT = Path(r"D:\Trans\migration-audit-work\cutover-staging-final")
+SOURCE_DEFAULT = Path(r"<TRANS_ROOT>\20260807")
+STAGING_DEFAULT = Path(r"<AUDIT_ROOT>\cutover-staging-final")
 WAYPOINT_JAR_DEFAULT = Path(
-    r"D:\Trans\migration-audit-work\waypoint-fire-equivalence\build\libs\waypoint-fire-equivalence-0.1.0-draft+mc1.21.1.jar"
+    r"<AUDIT_ROOT>\waypoint-fire-equivalence\build\libs\waypoint-fire-equivalence-0.1.0-draft+mc1.21.1.jar"
 )
 WAYPOINT_SHA256 = "5572EE1F196038071FB5D7B9D7FF271CCB0E19BA722B83BCC1A2B8C0C844F8EB"
 
@@ -269,7 +269,7 @@ def build_environment(staging: Path) -> dict[str, str]:
             "TMP": str(temp),
             "PYTHONPYCACHEPREFIX": str(temp / "pycache"),
             "PYTHONDONTWRITEBYTECODE": "1",
-            "PYTHONPATH": str(Path(r"D:\Trans\migration-audit-work\poi-nbtdeps")),
+            "PYTHONPATH": str(Path(r"<AUDIT_ROOT>\poi-nbtdeps")),
         }
     )
     return env
@@ -453,7 +453,7 @@ def run_delta_converters(
             [
                 str(
                     Path(
-                        r"D:\Trans\migration-audit-work\XiyusLogin-migration\tools\migrate_easyauth.py"
+                        r"<AUDIT_ROOT>\XiyusLogin-migration\tools\migrate_easyauth.py"
                     )
                 ),
                 str(source / "EasyAuth" / "easyauth.db"),

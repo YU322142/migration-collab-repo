@@ -23,11 +23,11 @@ from pathlib import Path
 from typing import Any
 
 
-OUT = Path(r"D:\Trans\migration-audit-work\tlm-patchouli-jar-balance-fix-attempt11-20260814")
-SERVER_ROOT = Path(r"D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt11-20260814")
-CLIENT_ROOT = Path(r"D:\Trans\migration-audit-work\mechanomania-matched-client-attempt11-20260814")
+OUT = Path(r"<AUDIT_ROOT>\tlm-patchouli-jar-balance-fix-attempt11-20260814")
+SERVER_ROOT = Path(r"<AUDIT_ROOT>\mechanomania-matched-runtime-attempt11-20260814")
+CLIENT_ROOT = Path(r"<AUDIT_ROOT>\mechanomania-matched-client-attempt11-20260814")
 REFERENCE_JAR = (
-    Path(r"D:\Trans\migration-audit-work\mechanomania-matched-client-attempt9-20260814")
+    Path(r"<AUDIT_ROOT>\mechanomania-matched-client-attempt9-20260814")
     / "mods"
     / "touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar"
 )
@@ -38,7 +38,7 @@ RECIPE_ID = "touhou_little_maid:altar_recipe/spawn_box"
 MAID_REL = "kubejs/server_scripts/maid.js"
 MAID_SHA256 = "FA458896BC728721995925563DD491F7ED54073FD1A94A5AE87004C66E4990F4"
 LOG_PATH = (
-    Path(r"D:\Trans\migration-audit-work\mechanomania-startup-gate-attempt11-artifacts-20260814")
+    Path(r"<AUDIT_ROOT>\mechanomania-startup-gate-attempt11-artifacts-20260814")
     / "failure-client-round1.state.stdout.log"
 )
 LOG_SHA256 = "89C85AB19048938C5C9282D97E8C66FC3FF968FB2AE7FA0315A6BD0CA417516F"

@@ -2,7 +2,7 @@ import io
 import sys
 from pathlib import Path
 
-sys.path.insert(0, r"D:\Trans\migration-audit-work\anvildeps")
+sys.path.insert(0, r"<AUDIT_ROOT>\anvildeps")
 from nbt import nbt
 
 
@@ -47,7 +47,7 @@ def value(tag):
 
 
 for region in ("r.-1.-1.mca", "r.-1.-2.mca"):
-    path = Path(r"D:\Trans\20260807\world\entities") / region
+    path = Path(r"<TRANS_ROOT>\20260807\world\entities") / region
     for slot, compression, payload in read_slots(path):
         chunk = nbt.NBTFile(buffer=io.BytesIO(decode(payload, compression)))
         for entity in chunk.get("Entities", []):

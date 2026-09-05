@@ -30,9 +30,9 @@
 
 - 工具：`outputs/tools/protected_zone_entity_ota.py`
 - 测试：`outputs/tools/test_protected_zone_entity_ota.py`
-- 完整逐实体 plan：`D:\Trans\migration-audit-work\protected-entity-ota-20260815\entity-ota-plan.json`
-- detached bundle：`D:\Trans\migration-audit-work\protected-entity-ota-20260815\bundle`
-- 测试克隆前像检查：`D:\Trans\migration-audit-work\protected-entity-ota-20260815\test-clone-preimage-verification.json`
+- 完整逐实体 plan：`<AUDIT_ROOT>\protected-entity-ota-20260815\entity-ota-plan.json`
+- detached bundle：`<AUDIT_ROOT>\protected-entity-ota-20260815\bundle`
+- 测试克隆前像检查：`<AUDIT_ROOT>\protected-entity-ota-20260815\test-clone-preimage-verification.json`
 
 关键校验：
 
@@ -46,9 +46,9 @@
 
 ```powershell
 $tool = '<WORKSPACE>\outputs\tools\protected_zone_entity_ota.py'
-$bundle = 'D:\Trans\migration-audit-work\protected-entity-ota-20260815\bundle'
-$world = 'D:\Trans\migration-audit-work\protected-terrain-ota-test-server-20260815\mechanomania-matched-runtime-attempt13-20260814\world'
-$backup = 'D:\Trans\migration-audit-work\protected-entity-ota-20260815\apply-backup-20260815'
+$bundle = '<AUDIT_ROOT>\protected-entity-ota-20260815\bundle'
+$world = '<AUDIT_ROOT>\protected-terrain-ota-test-server-20260815\mechanomania-matched-runtime-attempt13-20260814\world'
+$backup = '<AUDIT_ROOT>\protected-entity-ota-20260815\apply-backup-20260815'
 python $tool verify-target --bundle-root $bundle --world $world --state pre
 python $tool apply --bundle-root $bundle --world $world --backup-root $backup --allow-world-write --stopped-server-ack SERVER_IS_STOPPED
 python $tool verify-target --bundle-root $bundle --world $world --state post

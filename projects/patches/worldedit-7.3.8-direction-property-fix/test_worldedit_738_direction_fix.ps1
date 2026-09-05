@@ -1,8 +1,8 @@
 [CmdletBinding()]
 param(
-    [string]$OriginalJar = 'D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt6-20260814\mods\worldedit-mod-7.3.8.jar',
+    [string]$OriginalJar = '<AUDIT_ROOT>\mechanomania-matched-runtime-attempt6-20260814\mods\worldedit-mod-7.3.8.jar',
     [string]$FixedJar = '',
-    [string]$RuntimeRoot = 'D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt6-20260814'
+    [string]$RuntimeRoot = '<AUDIT_ROOT>\mechanomania-matched-runtime-attempt6-20260814'
 )
 
 $ErrorActionPreference = 'Stop'

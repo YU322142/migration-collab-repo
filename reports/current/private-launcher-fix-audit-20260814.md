@@ -9,7 +9,7 @@ exited during launcher preflight because the matched client's Prism-backed
 `libraries` tree contains none of the 24 Windows native classifier JARs named
 by the 1.21.1 metadata. The first rejected path was:
 
-`D:\Trans\migration-audit-work\mechanomania-matched-client-20260813\libraries\org\lwjgl\lwjgl-freetype\3.3.3\lwjgl-freetype-3.3.3-natives-windows.jar`
+`<AUDIT_ROOT>\mechanomania-matched-client-20260813\libraries\org\lwjgl\lwjgl-freetype\3.3.3\lwjgl-freetype-3.3.3-natives-windows.jar`
 
 All 93 selected non-native libraries were present. The Java executable was
 also present. This explains the evidence shape exactly: launcher PID 21984,
@@ -26,7 +26,7 @@ does not retain these classifier JARs.
 
 The client's `versions` junction has one resolved target:
 
-`D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\instances\1.21.11\minecraft\versions`
+`<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\instances\1.21.11\minecraft\versions`
 
 Its sibling `natives` directory is the extracted tree associated with that
 same version source. It contains 66 files / 16,505,767 bytes. A deterministic
@@ -79,7 +79,7 @@ Added regression test:
 - Final process inventory contained no `java.exe` or `javaw.exe`.
 
 The matched-client stub result is retained at
-`D:\Trans\migration-audit-work\private-launcher-fix-audit-20260814\matched-client-stub-launch-result.json`
+`<AUDIT_ROOT>\private-launcher-fix-audit-20260814\matched-client-stub-launch-result.json`
 (723 bytes, SHA-256
 `330A075D2E0ED96EC0AFAC9B30CF1F32202A6110702C8659100CB30D8A017297`).
 It is simulation evidence only; PID 424242 is synthetic.

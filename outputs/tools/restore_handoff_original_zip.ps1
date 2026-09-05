@@ -1,7 +1,7 @@
 param(
-    [string]$Source = 'D:\Down\20260811.zip',
-    [string]$Destination = 'D:\Trans\migration-handoff-20260812.building\01-original\20260811.zip',
-    [string]$StatusPath = 'D:\Trans\migration-handoff-20260812.restore-original.status.json'
+    [string]$Source = '<DOWNLOAD_ROOT>\20260811.zip',
+    [string]$Destination = '<HANDOFF_ROOT>.building\01-original\20260811.zip',
+    [string]$StatusPath = '<HANDOFF_ROOT>.restore-original.status.json'
 )
 
 $ErrorActionPreference = 'Stop'

@@ -226,7 +226,7 @@ foreach ($name in $junctionNames) {
     if (-not (Test-Path -LiteralPath $directTarget -PathType Container)) {
         throw "Resolved shared client input missing: $directTarget"
     }
-    if (Path-IsWithin $directTarget 'D:\Trans\20260807') {
+    if (Path-IsWithin $directTarget '<TRANS_ROOT>\20260807') {
         throw "Shared client input unexpectedly resolves into the historical backup: $directTarget"
     }
     $destination = Join-Path $output $name

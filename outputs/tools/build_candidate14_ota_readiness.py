@@ -22,10 +22,10 @@ import zipfile
 WORKSPACE = Path(__file__).resolve().parents[2]
 BUNDLE_REVISION = "candidate14-r3"
 CANDIDATE14_ROOT = Path(
-    r"D:\Trans\migration-audit-work\final-mod-bundles-candidate14-r3-20260812"
+    r"<AUDIT_ROOT>\final-mod-bundles-candidate14-r3-20260812"
 )
 SERVER_PROPERTIES = Path(
-    r"D:\Trans\migration-audit-work\incoming-20260811-raw\20260811\server.properties"
+    r"<AUDIT_ROOT>\incoming-20260811-raw\20260811\server.properties"
 )
 MCMODSYNC_ROOT = WORKSPACE / "outputs/tmp/mcmodsync-audit-20260812-r2"
 MCMODSYNC_JAR = WORKSPACE / "outputs/outputs/MCModSync-1.9.1.jar"

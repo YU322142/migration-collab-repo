@@ -4,7 +4,7 @@ $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
 $taskName = 'Codex-Candidate8d-WorldConversion-20260811'
-$reports = 'D:\Trans\migration-audit-work\cutover-staging-candidate8d-20260811-reports'
+$reports = '<AUDIT_ROOT>\cutover-staging-candidate8d-20260811-reports'
 $stdoutPath = Join-Path $reports 'scheduled-conversion.stdout.log'
 $stderrPath = Join-Path $reports 'scheduled-conversion.stderr.log'
 $statusPath = Join-Path $reports 'scheduled-conversion-status.json'

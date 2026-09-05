@@ -3,8 +3,8 @@
 已完成只读审计，未启动 Minecraft，未修改 Attempt6/frozen/生产。
 
 产物：
-- D:\\Trans\\migration-audit-work\\loot298-audit-20260814\\loot298-audit.json
-- D:\\Trans\\migration-audit-work\\loot298-audit-20260814\\LOOT298-AUDIT.md
+- <AUDIT_ROOT>\\loot298-audit-20260814\\loot298-audit.json
+- <AUDIT_ROOT>\\loot298-audit-20260814\\LOOT298-AUDIT.md
 
 精确统计：Railways 276（BYG 84/TFC 60/Nature's Spirit 36/Biomes O' Plenty 30/Twilight Forest 24/Blue Skies 18/Create DD 12/Quark 9/Hexcasting 3）；Create Connected 16；Tracks 3；Minecraft/Nova 2；Iron's Spells 1。全部来自 5 个 JAR，loose datapack 命中 0。
 

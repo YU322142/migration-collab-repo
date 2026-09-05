@@ -1,7 +1,7 @@
 # Potted Farms 1.21.11 -> NeoForge 1.21.1 最终等价审计
 
 审计日期：2026-08-08  
-范围：只读审计 `D:\Trans\20260807`；构建和运行测试仅位于 `D:\Trans\migration-audit-work`。未修改或部署生产目录。
+范围：只读审计 `<TRANS_ROOT>\20260807`；构建和运行测试仅位于 `<AUDIT_ROOT>`。未修改或部署生产目录。
 
 ## 结论
 
@@ -24,7 +24,7 @@
 
 最终候选路径：
 
-`D:\Trans\migration-audit-work\Potted-Farms-1.21.1-equivalence\potted-farms-1.1.1-equivalence3.jar`
+`<AUDIT_ROOT>\Potted-Farms-1.21.1-equivalence\potted-farms-1.1.1-equivalence3.jar`
 
 ## 静态等价证据
 
@@ -49,7 +49,7 @@
 
 全量只读报告：
 
-`D:\Trans\migration-audit-work\Potted-Farms-1.21.1-equivalence\source-world-potted-farms-audit-20260808.json`  
+`<AUDIT_ROOT>\Potted-Farms-1.21.1-equivalence\source-world-potted-farms-audit-20260808.json`
 SHA-256 `2A80EA10C7BE4811E10E86A378E2A9BEA1BB073E0939C1696EC1DF7D29F8F91B`
 
 结果：
@@ -65,7 +65,7 @@ SHA-256 `2A80EA10C7BE4811E10E86A378E2A9BEA1BB073E0939C1696EC1DF7D29F8F91B`
 
 扫描器已在已知夹具世界反证：识别到 2 个装斧展示框和 1 套可工作结构，0 个 region 失败。证据：
 
-`D:\Trans\migration-audit-work\potted-farms-official-upgrade-smoke1\fixture-world-potted-farms-audit.json`  
+`<AUDIT_ROOT>\potted-farms-official-upgrade-smoke1\fixture-world-potted-farms-audit.json`
 SHA-256 `51B99530AA7D6A4C98FB70DEFC8E49DE8F3063399FCEF3DBD21843622E7CF44C`
 
 扫描工具：
@@ -93,7 +93,7 @@ SHA-256 `51B99530AA7D6A4C98FB70DEFC8E49DE8F3063399FCEF3DBD21843622E7CF44C`
 
 证据目录：
 
-`D:\Trans\migration-audit-work\potted-farms-official-upgrade-smoke1`
+`<AUDIT_ROOT>\potted-farms-official-upgrade-smoke1`
 
 关键文件：
 

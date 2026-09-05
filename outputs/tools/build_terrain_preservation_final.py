@@ -35,10 +35,10 @@ DEFAULT_FRONTIER_AUDIT = Path("outputs/existing-terrain-frontier-audit-20260813.
 DEFAULT_BLEND_AUDIT = Path("outputs/existing-terrain-frontier-blending-audit-20260813.json")
 DEFAULT_VANILLA_PLAN = Path("outputs/vanilla-terrain-protection-plan-20260813.json")
 DEFAULT_PACK_DATA = Path(
-    r"D:\Trans\migration-audit-work\integration-pack-audit-20260813\overrides\kubejs\data"
+    r"<AUDIT_ROOT>\integration-pack-audit-20260813\overrides\kubejs\data"
 )
 DEFAULT_VANILLA_JAR = Path(
-    r"D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\libraries\com\mojang\minecraft\1.21.1\minecraft-1.21.1-client.jar"
+    r"<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\libraries\com\mojang\minecraft\1.21.1\minecraft-1.21.1-client.jar"
 )
 DEFAULT_PACK_OUTPUT = Path("outputs/terrain-preservation-frontier-datapack-20260813")
 DEFAULT_JSON_OUTPUT = Path("outputs/terrain-preservation-final-20260813.json")

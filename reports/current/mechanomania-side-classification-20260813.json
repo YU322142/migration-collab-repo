@@ -33,7 +33,7 @@
     "path": "<WORKSPACE>\\outputs\\mechanomania-mod-merge-audit-20260813.json",
     "sha256": "0D8E800B08E4E61E18A5966FBF06B6E98E328B3CB8E2FFE04FC3FA63A03688B4",
     "status": "PASS",
-    "pack_instance": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft"
+    "pack_instance": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft"
   },
   "counts": {
     "target_mod_ids": 11,
@@ -64,7 +64,7 @@
       "reverse_dependencies": [],
       "inspection": {
         "file": "byepregen-1.0.7.jar",
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\byepregen-1.0.7.jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\byepregen-1.0.7.jar",
         "bytes": 398774,
         "sha256": "12C90DA5BA9163202169CF7FDA6E765C8FD5F1E1C5E97D4350DE34366FD62E6D",
         "archive_crc": "PASS",
@@ -318,7 +318,7 @@
       "reverse_dependencies": [],
       "inspection": {
         "file": "efficient_hashing-neoforge-1.0.0+1.21.1-mod.jar",
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\efficient_hashing-neoforge-1.0.0+1.21.1-mod.jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\efficient_hashing-neoforge-1.0.0+1.21.1-mod.jar",
         "bytes": 23822,
         "sha256": "76BB1BD93E211CFFAC01F2879E2E6B54BEE2B5884BC06BEDF0C21D89107AF5AD",
         "archive_crc": "PASS",
@@ -391,7 +391,7 @@
       "reverse_dependencies": [],
       "inspection": {
         "file": "fastrecipesearch-1.21.1-26.2-neoforge.jar",
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\fastrecipesearch-1.21.1-26.2-neoforge.jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\fastrecipesearch-1.21.1-26.2-neoforge.jar",
         "bytes": 54702,
         "sha256": "E5944B8159EA7AE45E01C0D3FCBD6F75154B75336A35F01D4AC52F9B22D6CA81",
         "archive_crc": "PASS",
@@ -507,7 +507,7 @@
       "reverse_dependencies": [],
       "inspection": {
         "file": "HopoBetterRuinedPortals-[1.21.1-1.21.3]-1.4.4b.jar",
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\HopoBetterRuinedPortals-[1.21.1-1.21.3]-1.4.4b.jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\HopoBetterRuinedPortals-[1.21.1-1.21.3]-1.4.4b.jar",
         "bytes": 460577,
         "sha256": "C1E68C98EA538167CA7D4AC530C254E9D5DD400BEE408B0D72574B3C7F29E14B",
         "archive_crc": "PASS",
@@ -596,7 +596,7 @@
       "reverse_dependencies": [],
       "inspection": {
         "file": "jecharacters-1.21-neoforge-4.5.24.jar",
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\jecharacters-1.21-neoforge-4.5.24.jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\jecharacters-1.21-neoforge-4.5.24.jar",
         "bytes": 243891,
         "sha256": "F7F2B4D9EC81BAD95BECA92C56444F87AA4A993DA80AB8DA184670BA7F879E83",
         "archive_crc": "PASS",
@@ -672,7 +672,7 @@
       "reverse_dependencies": [],
       "inspection": {
         "file": "MouseTweaks-neoforge-mc1.21-2.26.1.jar",
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\MouseTweaks-neoforge-mc1.21-2.26.1.jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\MouseTweaks-neoforge-mc1.21-2.26.1.jar",
         "bytes": 73938,
         "sha256": "68E6F4201C5DE97B77929A7215C9552495696CA6A3BF3AE4EACC34E135F6CC8B",
         "archive_crc": "PASS",
@@ -796,7 +796,7 @@
       "reverse_dependencies": [],
       "inspection": {
         "file": "DnT-ancient-city-overhaul-v2 [NeoForge].jar",
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\DnT-ancient-city-overhaul-v2 [NeoForge].jar",
         "bytes": 945778,
         "sha256": "890882EC1239FFF1CD5CC5F1DA1FE4BE98A31E748D418220BEE5F2B9F3D8FD91",
         "archive_crc": "PASS",
@@ -884,7 +884,7 @@
       "reverse_dependencies": [],
       "inspection": {
         "file": "Epic Villages 1.3.0 (1.21+).jar",
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\Epic Villages 1.3.0 (1.21+).jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\Epic Villages 1.3.0 (1.21+).jar",
         "bytes": 3445547,
         "sha256": "0A49C689131AFFE588F0EB168873169DED54AC9F10B337410969D836E3DA32EB",
         "archive_crc": "PASS",
@@ -973,7 +973,7 @@
       "reverse_dependencies": [],
       "inspection": {
         "file": "lukis-crazy-chambers-1.0.2.jar",
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\lukis-crazy-chambers-1.0.2.jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\lukis-crazy-chambers-1.0.2.jar",
         "bytes": 2177448,
         "sha256": "59DDE0047528843664309B546A9FBD7AFA8A065472F6FEFD457FE6A40FAD23EF",
         "archive_crc": "PASS",
@@ -1073,7 +1073,7 @@
       ],
       "inspection": {
         "file": "rhino-2101.2.7-build.85.jar",
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\rhino-2101.2.7-build.85.jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\rhino-2101.2.7-build.85.jar",
         "bytes": 882075,
         "sha256": "95DF92CE578B2504CB16D8C9FC285303BF062EB15452246A18E57B7CF091C19A",
         "archive_crc": "PASS",
@@ -1152,7 +1152,7 @@
       ],
       "inspection": {
         "file": "yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
-        "path": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
+        "path": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
         "bytes": 1111051,
         "sha256": "673FECBFFAD26BB6D025FB5F60560CF6340E542BDF091D8D66074490515292F3",
         "archive_crc": "PASS",

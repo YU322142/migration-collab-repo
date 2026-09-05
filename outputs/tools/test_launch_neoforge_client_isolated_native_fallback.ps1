@@ -29,7 +29,7 @@ foreach ($requiredText in @(
     Assert-True ($launcherText.Contains($requiredText)) "missing launcher contract: $requiredText"
 }
 
-$testBase = 'D:\Trans\migration-audit-work\private-launcher-native-fallback-tests'
+$testBase = '<AUDIT_ROOT>\private-launcher-native-fallback-tests'
 $caseRoot = Join-Path $testBase ('case-' + [Guid]::NewGuid().ToString('N'))
 $sourceRoot = Join-Path $caseRoot 'source'
 $clientRoot = Join-Path $caseRoot 'client'

@@ -19,6 +19,6 @@ $process = Start-Process -FilePath $python -ArgumentList @('-B', $script) `
     pid = $process.Id
     stdout = $stdout
     stderr = $stderr
-    target = 'D:\Trans\migration-audit-work\manual-test-candidate14-r3-runtime-20260812'
+    target = '<AUDIT_ROOT>\manual-test-candidate14-r3-runtime-20260812'
     java_started = $false
 } | ConvertTo-Json

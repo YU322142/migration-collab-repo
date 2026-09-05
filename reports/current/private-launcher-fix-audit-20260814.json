@@ -10,14 +10,14 @@
     "selected_windows_native_artifacts": 24,
     "present_windows_native_artifacts": 0,
     "missing_windows_native_artifacts": 24,
-    "first_missing": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-20260813\\libraries\\org\\lwjgl\\lwjgl-freetype\\3.3.3\\lwjgl-freetype-3.3.3-natives-windows.jar",
+    "first_missing": "<AUDIT_ROOT>\\mechanomania-matched-client-20260813\\libraries\\org\\lwjgl\\lwjgl-freetype\\3.3.3\\lwjgl-freetype-3.3.3-natives-windows.jar",
     "launcher_pid": 21984,
     "java_pid": null,
     "pre_fix_launcher_sha256": "A7996B3B8E7AB5F71AB1AF7DB373465EBEA96203FF67FAE5BCD0070CC27F5F89"
   },
   "reusable_native_source": {
-    "versions_target": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\1.21.11\\minecraft\\versions",
-    "native_directory": "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\1.21.11\\minecraft\\natives",
+    "versions_target": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\1.21.11\\minecraft\\versions",
+    "native_directory": "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\1.21.11\\minecraft\\natives",
     "files": 66,
     "bytes": 16505767,
     "required_x64_files": 8,
@@ -65,7 +65,7 @@
       "client_native_files_after": 0,
       "process_created": false,
       "result": {
-        "path": "D:\\Trans\\migration-audit-work\\private-launcher-fix-audit-20260814\\matched-client-stub-launch-result.json",
+        "path": "<AUDIT_ROOT>\\private-launcher-fix-audit-20260814\\matched-client-stub-launch-result.json",
         "bytes": 723,
         "sha256": "330A075D2E0ED96EC0AFAC9B30CF1F32202A6110702C8659100CB30D8A017297"
       }
@@ -77,12 +77,12 @@
   },
   "evidence": {
     "attempt5_report": {
-      "path": "D:\\Trans\\migration-audit-work\\mechanomania-cei-backport-startup-gate-attempt5-20260814.json",
+      "path": "<AUDIT_ROOT>\\mechanomania-cei-backport-startup-gate-attempt5-20260814.json",
       "bytes": 7319,
       "sha256": "C6DBAE8BE745874C70E87113F45D0D6C21F3ED52EE537BB7016D5635152E0333"
     },
     "attempt5_client_state": {
-      "path": "D:\\Trans\\migration-audit-work\\mechanomania-cei-backport-startup-gate-attempt5-artifacts-20260814\\client-round1.state.json",
+      "path": "<AUDIT_ROOT>\\mechanomania-cei-backport-startup-gate-attempt5-artifacts-20260814\\client-round1.state.json",
       "bytes": 400,
       "sha256": "24CE1026F1112D6F49CA3DB269D28EE916FF82FCC0ABB5FB76B02D929DDFA8F9"
     }

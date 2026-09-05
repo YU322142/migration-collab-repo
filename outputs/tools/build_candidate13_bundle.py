@@ -25,7 +25,7 @@ from typing import Any
 
 WORKSPACE = Path(__file__).resolve().parents[2]
 CANDIDATE12_ROOT = Path(
-    r"D:\Trans\migration-audit-work\final-mod-bundles-candidate12-20260812"
+    r"<AUDIT_ROOT>\final-mod-bundles-candidate12-20260812"
 )
 DEFAULT_OVERLAY = (
     WORKSPACE
@@ -36,7 +36,7 @@ DEFAULT_RESOURCE_REPORT = (
     WORKSPACE / "outputs/candidate13-resource-closure-20260812/build-report.json"
 )
 DEFAULT_OUTPUT_ROOT = Path(
-    r"D:\Trans\migration-audit-work\final-mod-bundles-candidate13-20260812"
+    r"<AUDIT_ROOT>\final-mod-bundles-candidate13-20260812"
 )
 DEFAULT_REPORT = WORKSPACE / "outputs/candidate13-bundle-build-20260812.json"
 

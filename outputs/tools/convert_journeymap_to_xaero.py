@@ -3,7 +3,7 @@
 
 This tool never launches Minecraft and never writes into a live client.  It emits a
 staging tree, exhaustive manifests, and static validation results.  Large output is
-intended for D:\\Trans\\migration-audit-work.
+intended for <AUDIT_ROOT>.
 
 The map writer intentionally targets Xaero World Map's legacy region format v4.
 Xaero World Map 1.41.2 still reads this format and upgrades it on load.  Every

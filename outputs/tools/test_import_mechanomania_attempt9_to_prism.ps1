@@ -31,7 +31,7 @@ foreach ($needle in @('Start-Process', 'prismlauncher.exe', 'java.exe', 'javaw.e
 $tag = [Guid]::NewGuid().ToString('N')
 $report = Join-Path $workspace ("outputs\test-mechanomania-attempt9-prism-preflight-$tag.json")
 $sidecar = $report + '.sha256'
-$missingGate = "D:\Trans\migration-audit-work\test-only-missing-attempt9-gate-$tag.json"
+$missingGate = "<AUDIT_ROOT>\test-only-missing-attempt9-gate-$tag.json"
 try {
     if (Test-Path -LiteralPath $missingGate) { throw "Test-only missing gate unexpectedly exists: $missingGate" }
     $summary = & $scriptPath -PreflightOnly -GateReport $missingGate -Report $report | ConvertFrom-Json

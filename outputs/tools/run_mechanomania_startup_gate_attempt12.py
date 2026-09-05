@@ -10,7 +10,7 @@ checks for the Attempt12 core, TLM-JAR, and entity-repair transactions.
 
 ``--validate-only`` performs all filesystem/report checks and never starts
 Java.  Without it, the same checks are followed by the inherited one-round
-server/client startup smoke.  All large roots remain under D:\\Trans.
+server/client startup smoke.  All large roots remain under <TRANS_ROOT>.
 """
 
 from __future__ import annotations
@@ -31,7 +31,7 @@ if str(TOOLS) not in sys.path:
 import run_mechanomania_startup_gate as gate
 
 
-ALLOWED = Path(r"D:\Trans\migration-audit-work").resolve()
+ALLOWED = Path(r"<AUDIT_ROOT>").resolve()
 ATTEMPT12_RUNTIME = ALLOWED / "mechanomania-matched-runtime-attempt12-20260814"
 ATTEMPT12_CLIENT = ALLOWED / "mechanomania-matched-client-attempt12-20260814"
 ATTEMPT12_DATA_REPORT = ALLOWED / "attempt12-data-resource-apply-20260814.json"
@@ -482,7 +482,7 @@ def _write_validation_report(path: Path, result: dict[str, Any]) -> None:
 def _parser() -> argparse.ArgumentParser:
     parser = gate.parser()
     parser.add_argument("--validate-only", action="store_true", help="validate Attempt12 state without starting Java")
-    parser.add_argument("--validate-report", type=Path, help="write the validate-only JSON evidence under D:\\Trans")
+    parser.add_argument("--validate-report", type=Path, help="write the validate-only JSON evidence under <TRANS_ROOT>")
     parser.add_argument("--core-repair-report", type=Path, default=ATTEMPT12_CORE_REPORT)
     parser.add_argument("--tlm-apply-report", type=Path, default=ATTEMPT12_TLM_REPORT)
     parser.add_argument("--happyghast-repair-report", type=Path, default=ATTEMPT12_HAPPYGHAST_REPORT)

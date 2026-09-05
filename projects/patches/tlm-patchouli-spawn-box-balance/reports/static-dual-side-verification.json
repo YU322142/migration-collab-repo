@@ -15,20 +15,20 @@
       ]
     }
   },
-  "server_root": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt9-20260814",
-  "client_root": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt9-20260814",
+  "server_root": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt9-20260814",
+  "client_root": "<AUDIT_ROOT>\\mechanomania-matched-client-attempt9-20260814",
   "official_pack": "<WORKSPACE>\\outputs\\Mechanomania-Ultimate-Aeronautics-1.1.11.2.zip",
   "overlay_root": "<WORKSPACE>\\outputs\\patches\\tlm-patchouli-spawn-box-balance-fix-20260814\\overlay",
   "checks": [
     {
       "name": "server_root_exists",
       "passed": true,
-      "detail": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt9-20260814"
+      "detail": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt9-20260814"
     },
     {
       "name": "client_root_exists",
       "passed": true,
-      "detail": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt9-20260814"
+      "detail": "<AUDIT_ROOT>\\mechanomania-matched-client-attempt9-20260814"
     },
     {
       "name": "official_pack_exists",
@@ -43,7 +43,7 @@
     {
       "name": "server_maid_js_exists",
       "passed": true,
-      "detail": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt9-20260814\\kubejs\\server_scripts\\maid.js"
+      "detail": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt9-20260814\\kubejs\\server_scripts\\maid.js"
     },
     {
       "name": "server_balance_script_provenance",
@@ -88,7 +88,7 @@
     {
       "name": "client_tlm_jar_exists",
       "passed": true,
-      "detail": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt9-20260814\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar"
+      "detail": "<AUDIT_ROOT>\\mechanomania-matched-client-attempt9-20260814\\mods\\touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar"
     },
     {
       "name": "client_tlm_jar_provenance",
@@ -213,7 +213,7 @@
     {
       "name": "client_kubejs_asset_layer_exists",
       "passed": true,
-      "detail": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt9-20260814\\kubejs\\assets"
+      "detail": "<AUDIT_ROOT>\\mechanomania-matched-client-attempt9-20260814\\kubejs\\assets"
     },
     {
       "name": "client_has_no_server_maid_script",
@@ -223,7 +223,7 @@
     {
       "name": "attempt9_client_log_exists",
       "passed": true,
-      "detail": "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt9-20260814\\logs\\latest.log"
+      "detail": "<AUDIT_ROOT>\\mechanomania-matched-client-attempt9-20260814\\logs\\latest.log"
     },
     {
       "name": "attempt9_two_render_errors_reproduced",

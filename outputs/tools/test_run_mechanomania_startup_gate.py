@@ -579,13 +579,13 @@ class ValidateSideTests(unittest.TestCase):
 class Attempt10RepairLockTests(unittest.TestCase):
     def test_attempt11_followup_report_rehashes_the_installed_state(self) -> None:
         runtime = Path(
-            r"D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt11-20260814"
+            r"<AUDIT_ROOT>\mechanomania-matched-runtime-attempt11-20260814"
         ).resolve()
         client = Path(
-            r"D:\Trans\migration-audit-work\mechanomania-matched-client-attempt11-20260814"
+            r"<AUDIT_ROOT>\mechanomania-matched-client-attempt11-20260814"
         ).resolve()
         report = Path(
-            r"D:\Trans\migration-audit-work\attempt11-followup-fixes-postverify-20260814.json"
+            r"<AUDIT_ROOT>\attempt11-followup-fixes-postverify-20260814.json"
         )
         result = gate.validate_followup_repair_report(
             report,
@@ -602,14 +602,14 @@ class Attempt10RepairLockTests(unittest.TestCase):
         with self.assertRaisesRegex(gate.GateError, "not the built-in audited lock"):
             gate.validate_followup_repair_report(
                 Path(
-                    r"D:\Trans\migration-audit-work\attempt11-followup-fixes-postverify-20260814.json"
+                    r"<AUDIT_ROOT>\attempt11-followup-fixes-postverify-20260814.json"
                 ),
                 "0" * 64,
                 Path(
-                    r"D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt11-20260814"
+                    r"<AUDIT_ROOT>\mechanomania-matched-runtime-attempt11-20260814"
                 ).resolve(),
                 Path(
-                    r"D:\Trans\migration-audit-work\mechanomania-matched-client-attempt11-20260814"
+                    r"<AUDIT_ROOT>\mechanomania-matched-client-attempt11-20260814"
                 ).resolve(),
             )
 

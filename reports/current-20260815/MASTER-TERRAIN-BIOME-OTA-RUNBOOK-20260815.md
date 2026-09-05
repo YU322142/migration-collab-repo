@@ -50,7 +50,7 @@
 
 ### C：当前公测服务器
 
-文件：`D:\Down\mechanomania-matched-runtime-attempt13-2.zip`  
+文件：`<DOWNLOAD_ROOT>\mechanomania-matched-runtime-attempt13-2.zip`
 SHA-256：`ECCD0C6D28A9444DBBCEB3AAEDBBB882E3EEF82B4DDD2547C729571F21891A92`  
 大小：`7,936,970,883` bytes  
 归档测试：NanaZip `Everything is Ok`
@@ -69,7 +69,7 @@ SHA-256：`ECCD0C6D28A9444DBBCEB3AAEDBBB882E3EEF82B4DDD2547C729571F21891A92`
 
 ### R：较早的完整服务器归档
 
-文件：`D:\Down\mechanomania-matched-runtime-attempt13-20260814-ota-final-20260815.zip`  
+文件：`<DOWNLOAD_ROOT>\mechanomania-matched-runtime-attempt13-20260814-ota-final-20260815.zip`
 SHA-256：`92C719AF5A64C775992784326DC73563F0E3AEF6C6A757C9E1E22809497818B4`  
 大小：`14,218,857,050` bytes
 
@@ -105,7 +105,7 @@ V 使用同 seed 和目标 1.21.1 注册表生成：
 
 V 已于 2026-08-15 完成并冻结，后续不得重新生成后沿用旧清单：
 
-- 严格参考世界：`D:\Trans\migration-audit-work\vanilla-reference-v-20260815\strict-reference-world\vanilla-reference-v`
+- 严格参考世界：`<AUDIT_ROOT>\vanilla-reference-v-20260815\strict-reference-world\vanilla-reference-v`
 - 精确 `29,305` 个 terrain chunk、`40` 个 region，missing=`0`、extra=`0`
 - DataVersion=`3955`、Status=`minecraft:full`、seed 与本手册一致
 - 维度高度 `544`，Y=`320..479` 无自然方块
@@ -248,7 +248,7 @@ terrain/biome/structure/ticks/heightmap/light := V
 
 当前已完成第一轮基础动态验证：
 
-- D 盘测试根：`D:\Trans\migration-audit-work\protected-terrain-ota-test-server-20260815\mechanomania-matched-runtime-attempt13-20260814`
+- D 盘测试根：`<AUDIT_ROOT>\protected-terrain-ota-test-server-20260815\mechanomania-matched-runtime-attempt13-20260814`
 - terrain/POI bundle 在副本上 preverify、apply、postverify 均 PASS；原始 C ZIP 未修改
 - NeoForge 21.1.241 / Java 21 / `-Xmx8G`，仅监听测试端口 `12351`
 - 2026-08-15 19:36:21 到达 `Done (6.814s)!`
@@ -327,7 +327,7 @@ terrain/biome/structure/ticks/heightmap/light := V
 槽位级工具：`outputs/tools/protected_zone_terrain_ota.py`，SHA-256
 `2716F2B4A345EC0FE32C7AFCCB5649741ADC1627C204013457B4C4CDA02A2D8C`。
 
-正式 terrain/POI bundle：`D:\Trans\migration-audit-work\protected-terrain-ota-20260815\bundle`；
+正式 terrain/POI bundle：`<AUDIT_ROOT>\protected-terrain-ota-20260815\bundle`；
 plan SHA-256 `483DD2073E7C31691CF15E1BA507556288FF37A11523D3383F6BE34C09C8096E`，
 build report SHA-256 `02EFC30B640FF1C54EF44D0AEC993825BF41803838AD62A07DC5694F3F4911FD`，
 verify report SHA-256 `8ED6E0765090C74A7926301D11CDBC32FB2AC7284A4789594F03B00630E48676`。

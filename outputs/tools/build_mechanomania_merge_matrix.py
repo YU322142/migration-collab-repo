@@ -13,20 +13,20 @@ from typing import Any, Iterable
 
 
 WORKSPACE = Path(__file__).resolve().parents[2]
-DEFAULT_OUTPUT = Path(r"D:\Trans\migration-audit-work\mechanomania-merge-matrix-20260813")
+DEFAULT_OUTPUT = Path(r"<AUDIT_ROOT>\mechanomania-merge-matrix-20260813")
 DEFAULT_UI_RELEASE = Path(
-    r"D:\Trans\migration-audit-work\outputs\mechanomania-ui-sanitized-20260813"
+    r"<AUDIT_ROOT>\outputs\mechanomania-ui-sanitized-20260813"
     r"\manifests\release.json"
 )
 DEFAULT_MAP_REPORT = Path(
-    r"D:\Trans\migration-audit-work\journeymap-xaero-conversion-20260813"
+    r"<AUDIT_ROOT>\journeymap-xaero-conversion-20260813"
     r"\conversion-report.json"
 )
 DEFAULT_PACK_DATA = Path(
-    r"D:\Trans\migration-audit-work\integration-pack-audit-20260813\overrides\kubejs\data"
+    r"<AUDIT_ROOT>\integration-pack-audit-20260813\overrides\kubejs\data"
 )
 DEFAULT_VANILLA_CLIENT = Path(
-    r"D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\libraries"
+    r"<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\libraries"
     r"\com\mojang\minecraft\1.21.1\minecraft-1.21.1-client.jar"
 )
 

@@ -50,12 +50,12 @@ class Candidate14ReleaseGateTest(unittest.TestCase):
             "--target", "runtime", "--client-root", "client",
             "--prepare-report", "prepare.json", "--client-prepare-report", "client.json",
             "--report", "gate.json",
-            "--artifact-root", r"D:\Trans\migration-audit-work\candidate14-attempt3-artifacts",
+            "--artifact-root", r"<AUDIT_ROOT>\candidate14-attempt3-artifacts",
         ]
         args = gate.build_parser().parse_args(required)
         self.assertEqual(
             args.artifact_root,
-            Path(r"D:\Trans\migration-audit-work\candidate14-attempt3-artifacts"),
+            Path(r"<AUDIT_ROOT>\candidate14-attempt3-artifacts"),
         )
 
     def test_release_digest_is_cardinality_agnostic(self) -> None:
@@ -168,7 +168,7 @@ class Candidate14ReleaseGateTest(unittest.TestCase):
                 "--build-report", "build.json",
                 "--build-report-sha256", "B" * 64,
                 "--source-minecraft-root", str(prepare_client.OUTPUTS / "template"),
-                "--output-root", r"D:\Trans\migration-audit-work\client-gate-candidate14-r3-attempt2\.minecraft",
+                "--output-root", r"<AUDIT_ROOT>\client-gate-candidate14-r3-attempt2\.minecraft",
                 "--report", str(prepare_client.OUTPUTS / "client.json"),
                 "--local-resource-pack", str(prepare_client.OUTPUTS / "pack.zip"),
                 "--server-address", "mc.example.invalid:12341",
@@ -176,11 +176,11 @@ class Candidate14ReleaseGateTest(unittest.TestCase):
             ]
         )
         source, output, _, _ = prepare_client.validate_args(args)
-        self.assertTrue(str(output).startswith(r"D:\Trans\migration-audit-work"))
+        self.assertTrue(str(output).startswith(r"<AUDIT_ROOT>"))
         self.assertTrue(str(source).endswith(r"outputs\template"))
 
     def test_runtime_preparer_overlap_helper_is_fail_closed(self) -> None:
-        root = Path(r"D:\Trans\migration-audit-work")
+        root = Path(r"<AUDIT_ROOT>")
         staging = root / "staging"
         self.assertTrue(prepare_runtime.overlaps(staging / "child", staging))
         self.assertTrue(prepare_runtime.overlaps(staging, staging / "child"))
@@ -199,7 +199,7 @@ class Candidate14ReleaseGateTest(unittest.TestCase):
     def test_private_desktop_helper_accepts_d_drive_migration_root(self) -> None:
         helper = TOOLS / "run_private_desktop_client_session.ps1"
         text = helper.read_text(encoding="utf-8")
-        self.assertIn(r"D:\Trans\migration-audit-work", text)
+        self.assertIn(r"<AUDIT_ROOT>", text)
         self.assertIn("MinecraftRoot itself may not be a junction/reparse point", text)
         self.assertIn("MinecraftRoot mutable directory may not be linked", text)
 

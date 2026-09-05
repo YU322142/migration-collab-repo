@@ -31,7 +31,7 @@ execution still uses CC's separate seven-second execution limit.
 ## Build
 
 ```powershell
-& 'D:\Trans\migration-audit-work\gradle-cache-chest-colorizer\wrapper\dists\gradle-8.8-bin\dl7vupf4psengwqhwktix4v1\gradle-8.8\bin\gradle.bat' clean check jar --offline --no-daemon --max-workers=20
+& '<AUDIT_ROOT>\gradle-cache-chest-colorizer\wrapper\dists\gradle-8.8-bin\dl7vupf4psengwqhwktix4v1\gradle-8.8\bin\gradle.bat' clean check jar --offline --no-daemon --max-workers=20
 ```
 
 `verifyInputs` pins the CC:Tweaked input JAR SHA-256. `bytecodeContractTest`

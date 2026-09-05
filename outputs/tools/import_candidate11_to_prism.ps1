@@ -1,7 +1,7 @@
 param(
-    [string] $PrismRoot = 'D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
+    [string] $PrismRoot = '<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
     [string] $SourceMinecraftRoot = '',
-    [string] $ReleaseRoot = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate11-20260811',
+    [string] $ReleaseRoot = '<AUDIT_ROOT>\final-mod-bundles-candidate11-20260811',
     [string] $InstanceName = '',
     [string] $Report = ''
 )
@@ -25,7 +25,7 @@ $expectedReleaseLock = '613025D9852956113DD5DB7653C37BD0DF3C36F93818AB79B3681338
 $expectedPackSha = 'C8E9113D9E0773234A0CA1A77572548A968C5E5970856970FAAB8FC431E1BCD6'
 $expectedPackBytes = 111537147L
 $expectedServersSha = '383C90619FD783D6CFB045A3B98D49CE01E885CD4EEC3536BDD4C07A62AFCB41'
-$expectedJava = 'D:/D/Tools/PrismLauncher-Windows-MinGW-w64-Portable-11.0.3/java/java-runtime-delta/bin/javaw.exe'
+$expectedJava = '<INSTANCE_ROOT>/PrismLauncher-Windows-MinGW-w64-Portable-11.0.3/java/java-runtime-delta/bin/javaw.exe'
 
 function Full-Path([string] $Path) {
     return [IO.Path]::GetFullPath($Path).TrimEnd('\')

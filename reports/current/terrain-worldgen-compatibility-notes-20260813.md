@@ -4,7 +4,7 @@
 
 ## 不可破坏的输入
 
-- 权威世界：`D:\Trans\migration-handoff-20260812\02-latest\converted-staging\world`
+- 权威世界：`<HANDOFF_ROOT>\02-latest\converted-staging\world`
 - 保护中心：`x=10192, z=-1574`
 - 原版核心半径：`1000` 格
 - 已存在的 `region`、`entities`、`poi` 区块槽均为不可覆盖数据。

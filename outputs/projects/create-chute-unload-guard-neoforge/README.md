@@ -22,8 +22,8 @@ neither world data nor global block-entity validation.
 Build and verify with the pinned Gradle 8.8 runtime:
 
 ```powershell
-$env:GRADLE_USER_HOME = 'D:\Trans\migration-audit-work\gradle-cache-chest-colorizer'
-& 'D:\Trans\migration-audit-work\gradle-cache-chest-colorizer\wrapper\dists\gradle-8.8-bin\dl7vupf4psengwqhwktix4v1\gradle-8.8\bin\gradle.bat' clean check jar --offline --no-daemon --max-workers=20
+$env:GRADLE_USER_HOME = '<AUDIT_ROOT>\gradle-cache-chest-colorizer'
+& '<AUDIT_ROOT>\gradle-cache-chest-colorizer\wrapper\dists\gradle-8.8-bin\dl7vupf4psengwqhwktix4v1\gradle-8.8\bin\gradle.bat' clean check jar --offline --no-daemon --max-workers=20
 ```
 
 Install the resulting JAR in both the server and client `mods` directories.

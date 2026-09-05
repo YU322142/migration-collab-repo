@@ -4,7 +4,7 @@
 
 当前模组版本与客户端本地改动以以下 Prism 实例为准：
 
-`D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\instances\Motiquies - 动静交映 - 2.0.0`
+`<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\instances\Motiquies - 动静交映 - 2.0.0`
 
 锁定清单位于 `artifacts/client-baselines/motiquies-2.0.0-mods.json`。清单记录客户端每个 JAR 的文件名、大小和 SHA-256；它是后续服务端匹配、单人玩法恢复和 OTA 审计的输入基线。
 

@@ -19,11 +19,11 @@ import time
 
 WORKSPACE = Path(__file__).resolve().parents[2]
 OUTPUTS = WORKSPACE / "outputs"
-WORLD = Path(r"D:\Trans\migration-audit-work\incoming-20260811-raw\20260811\world")
-SOURCE_GAME = Path(r"D:\Trans\migration-audit-work\incoming-20260811-raw\20260811")
-TARGET_GAME = Path(r"D:\Trans\migration-audit-work\manual-test-candidate13-preflight-20260812")
+WORLD = Path(r"<AUDIT_ROOT>\incoming-20260811-raw\20260811\world")
+SOURCE_GAME = Path(r"<AUDIT_ROOT>\incoming-20260811-raw\20260811")
+TARGET_GAME = Path(r"<AUDIT_ROOT>\manual-test-candidate13-preflight-20260812")
 TOOL = OUTPUTS / "tools" / "convert_world_nbt.py"
-NBT_DEPS = Path(r"D:\Trans\migration-audit-work\poi-nbtdeps")
+NBT_DEPS = Path(r"<AUDIT_ROOT>\poi-nbtdeps")
 REPORT = OUTPUTS / "incoming-20260811-world-dryrun-candidate13-20260812.json"
 STATUS = OUTPUTS / "incoming-20260811-world-dryrun-candidate13-20260812.status.json"
 STDOUT = OUTPUTS / "incoming-20260811-world-dryrun-candidate13-20260812.stdout.log"
@@ -86,7 +86,7 @@ def main() -> int:
         for path in (WORLD, SOURCE_GAME, TOOL, NBT_DEPS, TARGET_GAME, TARGET_GAME / "mods", WAYPOINT):
             if not path.exists():
                 raise FileNotFoundError(f"missing dry-run dependency: {path}")
-        if WORLD == Path(r"D:\Trans\20260807\world"):
+        if WORLD == Path(r"<TRANS_ROOT>\20260807\world"):
             raise RuntimeError("refusing the old backup source")
         if REPORT.exists():
             raise FileExistsError(f"refusing to replace existing report: {REPORT}")

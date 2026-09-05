@@ -26,16 +26,16 @@ import mechanomania_release_runtime_common as release_common
 import prepare_final_fullstack_smoke as smoke
 
 
-ALLOWED_ROOT = Path(r"D:\Trans\migration-audit-work")
+ALLOWED_ROOT = Path(r"<AUDIT_ROOT>")
 ALLOWED_TEMPLATE = Path(
-    r"D:\Trans\migration-handoff-20260812\03-tools-and-source\d-projects\respawn-pitch-compat\smoke-server"
+    r"<HANDOFF_ROOT>\03-tools-and-source\d-projects\respawn-pitch-compat\smoke-server"
 )
-AUTHORITATIVE_SOURCE = Path(r"D:\Trans\migration-audit-work\incoming-20260811-raw\20260811")
+AUTHORITATIVE_SOURCE = Path(r"<AUDIT_ROOT>\incoming-20260811-raw\20260811")
 AUTHORITATIVE_STAGING = Path(
-    r"D:\Trans\migration-handoff-20260812\02-latest\converted-staging"
+    r"<HANDOFF_ROOT>\02-latest\converted-staging"
 )
 LOCKED_RELEASE_ROOT = Path(
-    r"D:\Trans\migration-audit-work\mechanomania-matched-release-v2-20260813"
+    r"<AUDIT_ROOT>\mechanomania-matched-release-v2-20260813"
 )
 LOCKED_READY_SHA256 = "AE84FE740B74D50A937284A7916E460ED55580EF1B4B794D8107562133D7F236"
 LOCKED_BUILD_REPORT = (

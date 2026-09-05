@@ -1,8 +1,8 @@
 param(
-    [string] $ClientRoot = 'D:\Trans\migration-audit-work\client-gate-candidate14-r3-attempt3\.minecraft',
+    [string] $ClientRoot = '<AUDIT_ROOT>\client-gate-candidate14-r3-attempt3\.minecraft',
     [string] $ClientPrepareReport = '',
-    [string] $PrismRoot = 'D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
-    [string] $ReleaseRoot = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate14-r3-20260812',
+    [string] $PrismRoot = '<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
+    [string] $ReleaseRoot = '<AUDIT_ROOT>\final-mod-bundles-candidate14-r3-20260812',
     [string] $BuildReport = '',
     [string] $TemplateInstanceName = '',
     [string] $InstanceName = '',
@@ -21,8 +21,8 @@ param(
 # The exact 54-JAR check is release-scoped and is not a permanent mod-count cap.
 $ErrorActionPreference = 'Stop'
 $workspace = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..')).TrimEnd('\')
-$expectedClientRoot = 'D:\Trans\migration-audit-work\client-gate-candidate14-r3-attempt3\.minecraft'
-$expectedRelease = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate14-r3-20260812'
+$expectedClientRoot = '<AUDIT_ROOT>\client-gate-candidate14-r3-attempt3\.minecraft'
+$expectedRelease = '<AUDIT_ROOT>\final-mod-bundles-candidate14-r3-20260812'
 $expectedReadySha = '66778B3F91842D0AB6CC291D03AD9538AB12447F63340E6144747C4DAE819C24'
 $expectedManifestSha = '020352BA39C8FAAF511AFF02FD0F9A92451697F51A1C8E4D1E0B9BEFE0398AAC'
 $expectedBuildReportSha = '4658F5B6B75CEBC0E89C549427FBA10B87E9A05D6C934B408DEF85923493EF81'
@@ -175,7 +175,7 @@ function Validate-Shared-Roots([string] $Root, [string] $Release) {
         $item = Get-Item -LiteralPath (Join-Path $Root $name) -Force
         if (-not $item.PSIsContainer -or -not (Is-Reparse $item) -or [string]$item.LinkType -cne 'Junction') { throw "Candidate14 shared client path must be a junction: $name" }
         $resolved = Full-Path ([string]$item.Target)
-        if (Path-IsWithin $resolved 'D:\Trans\20260807' -or (Paths-Overlap $resolved $Release)) { throw "Candidate14 shared client path resolves into protected data: $resolved" }
+        if (Path-IsWithin $resolved '<TRANS_ROOT>\20260807' -or (Paths-Overlap $resolved $Release)) { throw "Candidate14 shared client path resolves into protected data: $resolved" }
     }
     foreach ($name in @('config', 'data', 'defaultconfigs', 'mods', 'resourcepacks')) {
         $item = Get-Item -LiteralPath (Join-Path $Root $name) -Force

@@ -2,7 +2,7 @@
 """Fail-closed application of the verified Attempt6 data fixes to a fresh attempt.
 
 This tool is deliberately narrow.  It accepts only fresh, explicitly named
-Mechanomania attempt roots on ``D:\\Trans\\migration-audit-work``, verifies
+Mechanomania attempt roots on ``<AUDIT_ROOT>``, verifies
 the frozen Mechanomania release
 and the Attempt6 candidate by pinned SHA-256 values, computes side placement
 from the frozen release manifests, preflights every destination, and only then
@@ -30,7 +30,7 @@ import zipfile
 from typing import Any
 
 
-ALLOWED_ROOT = Path(r"D:\Trans\migration-audit-work")
+ALLOWED_ROOT = Path(r"<AUDIT_ROOT>")
 LOCKED_RELEASE_ROOT = ALLOWED_ROOT / "mechanomania-matched-release-v2-20260813"
 LOCKED_CANDIDATE_ROOT = ALLOWED_ROOT / "attempt6-data-resource-fixes-20260814"
 INTEGRATION_ROOT = ALLOWED_ROOT / "attempt10-data-resource-integration-20260814"

@@ -1,16 +1,16 @@
 param(
-    [string]$Destination = 'D:\Trans\migration-handoff-20260812.building'
+    [string]$Destination = '<HANDOFF_ROOT>.building'
 )
 
 $ErrorActionPreference = 'Stop'
 $ProgressPreference = 'SilentlyContinue'
 
-$originalZip = 'D:\Down\20260811.zip'
-$staging = 'D:\Trans\migration-audit-work\cutover-staging-incoming-20260811-candidate13-20260812'
-$release = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate14-r3-20260812'
-$paintingCache = 'D:\Trans\migration-audit-work\incoming-20260811-raw\20260811\immersive_paintings_cache'
-$fixedTracks = 'D:\Trans\migration-audit-work\tmp-handoff-create-tracks-fixed-20260812.dat'
-$tracksReport = 'D:\Trans\migration-audit-work\tmp-handoff-create-tracks-audit-20260812.json'
+$originalZip = '<DOWNLOAD_ROOT>\20260811.zip'
+$staging = '<AUDIT_ROOT>\cutover-staging-incoming-20260811-candidate13-20260812'
+$release = '<AUDIT_ROOT>\final-mod-bundles-candidate14-r3-20260812'
+$paintingCache = '<AUDIT_ROOT>\incoming-20260811-raw\20260811\immersive_paintings_cache'
+$fixedTracks = '<AUDIT_ROOT>\tmp-handoff-create-tracks-fixed-20260812.dat'
+$tracksReport = '<AUDIT_ROOT>\tmp-handoff-create-tracks-audit-20260812.json'
 
 foreach ($required in @($originalZip, $staging, $release, $paintingCache, $fixedTracks, $tracksReport)) {
     if (-not (Test-Path -LiteralPath $required)) {
@@ -19,8 +19,8 @@ foreach ($required in @($originalZip, $staging, $release, $paintingCache, $fixed
 }
 
 $destinationItem = Get-Item -LiteralPath (Split-Path -Parent $Destination)
-if ($destinationItem.FullName -notlike 'D:\Trans*') {
-    throw "Handoff destination must remain under D:\Trans: $Destination"
+if ($destinationItem.FullName -notlike '<TRANS_ROOT>*') {
+    throw "Handoff destination must remain under <TRANS_ROOT>: $Destination"
 }
 if (Test-Path -LiteralPath $Destination) {
     throw "Refusing to overwrite an existing handoff build: $Destination"

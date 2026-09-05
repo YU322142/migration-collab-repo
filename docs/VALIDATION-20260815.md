@@ -18,7 +18,7 @@ download cache.
 
 world NBT 测试需要外部 Python nbt 包。本机验证使用：
 
-    PYTHONPATH=D:\Trans\migration-audit-work\poi-nbtdeps
+    PYTHONPATH=<AUDIT_ROOT>\poi-nbtdeps
 
 地图转换测试使用 Codex bundled Python（包含 NumPy/Pillow）。这些依赖不复制进 Git。
 

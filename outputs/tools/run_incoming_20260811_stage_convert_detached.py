@@ -20,10 +20,10 @@ import time
 
 WORKSPACE = Path(__file__).resolve().parents[2]
 PYTHON = Path(r"C:\Python314\python.exe")
-NBT_DEPS = Path(r"D:\Trans\migration-audit-work\poi-nbtdeps")
-SOURCE = Path(r"D:\Trans\migration-audit-work\incoming-20260811-raw\20260811")
-STAGING = Path(r"D:\Trans\migration-audit-work\cutover-staging-incoming-20260811-candidate13-20260812")
-REPORTS = Path(r"D:\Trans\migration-audit-work\cutover-staging-incoming-20260811-candidate13-20260812-reports")
+NBT_DEPS = Path(r"<AUDIT_ROOT>\poi-nbtdeps")
+SOURCE = Path(r"<AUDIT_ROOT>\incoming-20260811-raw\20260811")
+STAGING = Path(r"<AUDIT_ROOT>\cutover-staging-incoming-20260811-candidate13-20260812")
+REPORTS = Path(r"<AUDIT_ROOT>\cutover-staging-incoming-20260811-candidate13-20260812-reports")
 REPORT = REPORTS / "fast-stage-convert.json"
 STATUS = WORKSPACE / "outputs" / "incoming-20260811-stage-convert-20260812.status.json"
 STDOUT = WORKSPACE / "outputs" / "incoming-20260811-stage-convert-20260812.stdout.log"
@@ -31,7 +31,7 @@ STDERR = WORKSPACE / "outputs" / "incoming-20260811-stage-convert-20260812.stder
 PREPARE = WORKSPACE / "outputs" / "tools" / "prepare_fast_migration.py"
 WAYPOINT = WORKSPACE / "outputs" / "projects" / "waypoint-fire-equivalence" / "build" / "libs" / "waypoint-fire-equivalence-0.1.1+mc1.21.1.jar"
 WAYPOINT_SHA = "86A85C0447315AC17D373E3708425CEB8450D9D0CB1FD9C7ABDC82CE8D8E5B92"
-VILLAGER_BASELINE = Path(r"D:\Trans\migration-audit-work\incoming-20260811-villagers-source-baseline-20260812.json")
+VILLAGER_BASELINE = Path(r"<AUDIT_ROOT>\incoming-20260811-villagers-source-baseline-20260812.json")
 WORKERS = 20
 
 

@@ -1,6 +1,6 @@
 param(
-    [string]$SourceJar = 'D:\Trans\20260807\mods\kaleidoscope_end-1.0.11-fabric+mc1.21.11.jar',
-    [string]$DestinationRoot = 'D:\Trans\migration-audit-work\KaleidoscopeEnd-1.21.1-equivalence\src\main\resources'
+    [string]$SourceJar = '<TRANS_ROOT>\20260807\mods\kaleidoscope_end-1.0.11-fabric+mc1.21.11.jar',
+    [string]$DestinationRoot = '<AUDIT_ROOT>\KaleidoscopeEnd-1.21.1-equivalence\src\main\resources'
 )
 
 $expectedSourceSha256 = 'CE9CC96296DA26EF2D604246D3FD7BFA618EA83145B81D1FB4E420B18D6DD619'

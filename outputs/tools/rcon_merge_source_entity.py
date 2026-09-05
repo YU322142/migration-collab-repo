@@ -27,7 +27,7 @@ def packet(connection: socket.socket, request_id: int, packet_type: int, body: s
 
 
 def select_entity(region: Path, slot: int, uuid: str | None):
-    sys.path.insert(0, r"D:\Trans\migration-audit-work")
+    sys.path.insert(0, r"<AUDIT_ROOT>")
     from audit_villagers import read_region_chunks
 
     for current_slot, chunk in read_region_chunks(region):

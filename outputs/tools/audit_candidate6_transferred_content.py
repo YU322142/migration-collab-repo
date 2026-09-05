@@ -200,7 +200,7 @@ def build_report(args: argparse.Namespace) -> dict[str, Any]:
     blockers: list[dict[str, str]] = []
     if marker.get("pending_saveddata"):
         blockers.append({"id": "pending_saveddata", "severity": "P0", "detail": "staging marker still has pending SavedData: " + ", ".join(marker["pending_saveddata"])})
-    blockers.append({"id": "live_snapshot_missing", "severity": "P0", "detail": "D:\\Trans\\20260807 is a historical backup; the current remote server has not been mirrored yet."})
+    blockers.append({"id": "live_snapshot_missing", "severity": "P0", "detail": "<TRANS_ROOT>\\20260807 is a historical backup; the current remote server has not been mirrored yet."})
     blockers.append({"id": "final_target_not_bound", "severity": "P0", "detail": "The inspected target is a rehearsal target; final production assembly must bind to the stopped live mirror and candidate6 bundle."})
     blockers.append({"id": "auth_live_matrix", "severity": "P1", "detail": "Migration4 Java synthetic scenarios pass, but Floodgate/Bedrock and supported proxy live scenarios remain unproven."})
     blockers.append({"id": "client_external_integrations", "severity": "P1", "detail": "Chest Colorizer CSV/render, MineAstr/AstrBot, and the remaining real-client interaction matrix are not bound to the live mirror."})

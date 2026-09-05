@@ -11,7 +11,7 @@ $process = Start-Process -FilePath $python -ArgumentList @('-B', $runner) -Worki
     status = 'STARTED'
     supervisor_pid = $process.Id
     status_file = (Join-Path $workspace 'outputs\incoming-20260811-prepare-candidate13-fresh2.status.json')
-    output = 'D:\Trans\migration-audit-work\manual-test-candidate13-fresh2-20260812'
+    output = '<AUDIT_ROOT>\manual-test-candidate13-fresh2-20260812'
     java_started = $false
     conversion_repeated = $false
 } | ConvertTo-Json -Depth 4

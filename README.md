@@ -1,8 +1,9 @@
 # Minecraft 1.21.11 -> NeoForge 1.21.1 migration collaboration repository
 
-这是一个本地 Git 协作仓库，不连接 GitHub，也不是可直接启动的发布包。
+这是迁移协作源码仓库，同时提供脱敏后的公开快照；它不是可直接启动的发布包。
 这里保存可复现的转换脚本、适配模组源代码、OTA 工具、测试和决策文档；
-运行中的服务器、客户端、世界存档和构建产物留在仓库外。
+运行中的服务器、客户端、世界存档和构建产物留在仓库外。公开范围和未公开材料
+的查找方式见 `docs/ADAPTATION-OPEN-SOURCE-INVENTORY.zh-CN.md`。
 
 当前状态：DEVELOPMENT / NOT_PRODUCTION_GO
 
@@ -19,15 +20,16 @@
 
 协作者先阅读：
 
-1. docs/STATUS.md
-2. docs/ARCHITECTURE.md
-3. docs/MODULE-CATALOG.md
-4. docs/MODULE-INTERNAL-REFACTOR-MAP.md
-5. docs/MODULE-FILE-INDEX.md
-6. docs/SCRIPT-DOMAIN-CATALOG.md
-7. docs/REPOSITORY-OPERATIONS.md
-8. docs/ARTIFACT-POLICY.md
-9. docs/KNOWN-ISSUES.md
+1. docs/ADAPTATION-OPEN-SOURCE-INVENTORY.zh-CN.md
+2. docs/STATUS.md
+3. docs/ARCHITECTURE.md
+4. docs/MODULE-CATALOG.md
+5. docs/MODULE-INTERNAL-REFACTOR-MAP.md
+6. docs/MODULE-FILE-INDEX.md
+7. docs/SCRIPT-DOMAIN-CATALOG.md
+8. docs/REPOSITORY-OPERATIONS.md
+9. docs/ARTIFACT-POLICY.md
+10. docs/KNOWN-ISSUES.md
 
 ## 目录
 
@@ -43,7 +45,7 @@
 ## 明确边界
 
 - 不把 .mca、NBT、玩家数据、Prism 实例、日志、JAR、ZIP、构建缓存或认证配置提交到 Git。
-- MCModSync 目前全局禁用；仓库中的 catalog 仅作格式研究，服务端绝不安装。
+- MCModSync/MCSync 的客户端同步资料只用于发布器和客户端流程研究；服务端绝不安装。
 - 任何生产 OTA 都必须在停服快照上执行，先 dry-run，再 CAS apply，并留下 receipt 与 rollback。
 - 保护区 (10192,-1574) 的核心半径 1000、冻结半径 1536 以及 544 高度过渡规则见 docs/。
 

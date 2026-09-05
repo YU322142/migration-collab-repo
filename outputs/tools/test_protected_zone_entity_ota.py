@@ -16,13 +16,13 @@ import nbtlib
 import protected_zone_entity_ota as ota
 
 
-BUNDLE_ROOT = Path(r"D:\Trans\migration-audit-work\protected-entity-ota-20260815\bundle")
+BUNDLE_ROOT = Path(r"<AUDIT_ROOT>\protected-entity-ota-20260815\bundle")
 GATE_PATH = Path(__file__).resolve().parent.parent / "protected-zone-entity-collision-poi-gate-20260815.json"
 V_WORLD = Path(
-    r"D:\Trans\migration-audit-work\vanilla-reference-v-20260815"
+    r"<AUDIT_ROOT>\vanilla-reference-v-20260815"
     r"\strict-reference-world\vanilla-reference-v"
 )
-TEST_TEMP_PARENT = Path(r"D:\Trans\migration-audit-work\protected-entity-ota-tests-20260815")
+TEST_TEMP_PARENT = Path(r"<AUDIT_ROOT>\protected-entity-ota-tests-20260815")
 
 
 class FlatIndex:

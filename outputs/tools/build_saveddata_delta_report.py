@@ -202,8 +202,8 @@ def main() -> int:
         "evidence": {
             "raw_report": str(args.raw_report.resolve()),
             "runtime_comparison": str(args.comparison.resolve()),
-            "source_mappings": r"D:\Trans\migration-audit-work\server-1.21.11-mappings.txt",
-            "target_sources": r"D:\Trans\migration-audit-work\create-saveddata-probe\build\moddev\artifacts\neoforge-21.1.241-sources.jar",
+            "source_mappings": r"<AUDIT_ROOT>\server-1.21.11-mappings.txt",
+            "target_sources": r"<AUDIT_ROOT>\create-saveddata-probe\build\moddev\artifacts\neoforge-21.1.241-sources.jar",
         },
     }
     args.json_output.parent.mkdir(parents=True, exist_ok=True)

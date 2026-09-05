@@ -1,8 +1,8 @@
 param(
-    [string] $ClientRoot = 'D:\Trans\migration-audit-work\mechanomania-matched-client-attempt9-20260814',
-    [string] $ClientPrepareReport = 'D:\Trans\migration-audit-work\mechanomania-matched-client-attempt9-prepare-20260814.json',
-    [string] $GateReport = 'D:\Trans\migration-audit-work\mechanomania-cei-backport-startup-gate-attempt9-20260814.json',
-    [string] $PrismRoot = 'D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
+    [string] $ClientRoot = '<AUDIT_ROOT>\mechanomania-matched-client-attempt9-20260814',
+    [string] $ClientPrepareReport = '<AUDIT_ROOT>\mechanomania-matched-client-attempt9-prepare-20260814.json',
+    [string] $GateReport = '<AUDIT_ROOT>\mechanomania-cei-backport-startup-gate-attempt9-20260814.json',
+    [string] $PrismRoot = '<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3',
     [string] $TemplateInstanceName = '',
     [string] $InstanceName = '',
     [string] $Report = '',
@@ -26,10 +26,10 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $workspace = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..')).TrimEnd('\')
-$expectedClientRoot = 'D:\Trans\migration-audit-work\mechanomania-matched-client-attempt9-20260814'
-$expectedPrepareReport = 'D:\Trans\migration-audit-work\mechanomania-matched-client-attempt9-prepare-20260814.json'
+$expectedClientRoot = '<AUDIT_ROOT>\mechanomania-matched-client-attempt9-20260814'
+$expectedPrepareReport = '<AUDIT_ROOT>\mechanomania-matched-client-attempt9-prepare-20260814.json'
 $expectedPrepareReportSha256 = 'B63ACEE97ED3C0EF53378A9BA4B5FE04C36EE98CA1B1B02E7ABF1A98086F7D65'
-$expectedPrismRoot = 'D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3'
+$expectedPrismRoot = '<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3'
 $expectedLocalPack = 'migration-local-resources-mc1.21.1.zip'
 $expectedLocalPackBytes = 110377999
 $expectedLocalPackSha256 = '614ABDF34F7CFDB7974474A645BFA71CC4CA2E67F609983616E61474A57E3364'

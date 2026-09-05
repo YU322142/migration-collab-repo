@@ -1,8 +1,8 @@
 # Attempt6 LootDataType 298 条只读审计
 
 - 审计时间：2026-08-14 14:02（Asia/Shanghai）
-- 运行时：D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt6-20260814
-- 错误日志：D:\Trans\migration-audit-work\attempt6-server-errors-by-logger-20260814.txt
+- 运行时：<AUDIT_ROOT>\mechanomania-matched-runtime-attempt6-20260814
+- 错误日志：<AUDIT_ROOT>\attempt6-server-errors-by-logger-20260814.txt
 - 错误日志 SHA-256：7C5F3B598FD7E9DA2E6B9956F115800365A1E11C4DE85DA993109AFA7288BD90
 - 解析结果：298/298 条，来源 5 个 JAR；loose datapack 命中 0。
 - 范围保证：未启动 Minecraft；未修改 Attempt6、冻结 staging、生产或 Prism。

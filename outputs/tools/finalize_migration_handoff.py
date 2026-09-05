@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-PACKAGE = Path(r"D:\Trans\migration-handoff-20260812.building")
+PACKAGE = Path(r"<HANDOFF_ROOT>.building")
 WORKSPACE = Path(__file__).resolve().parents[2]
 OUTPUTS = WORKSPACE / "outputs"
 

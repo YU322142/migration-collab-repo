@@ -19,15 +19,15 @@ import zipfile
 WORKSPACE = Path(__file__).resolve().parents[2]
 DEFAULT_SOURCE_OVERLAY = WORKSPACE / "outputs/projects/resource-error-overlay-1.21.1"
 DEFAULT_TARGET_YUUSHYA = Path(
-    r"D:\Trans\migration-audit-work\final-mod-bundles-candidate12-20260812"
+    r"<AUDIT_ROOT>\final-mod-bundles-candidate12-20260812"
     r"\client-mods\yuushya-1.21.0-neoforge-2.3.0.jar"
 )
 DEFAULT_SOURCE_YUUSHYA = Path(
-    r"D:\D\Tools\动静交映-1.4.2-BakaXL\instances\动静交映客户端"
+    r"<INSTANCE_ROOT>\动静交映-1.4.2-BakaXL\instances\动静交映客户端"
     r"\.minecraft\mods\yuushya-1.21.11-fabric-2.3.1.jar"
 )
 DEFAULT_LOCAL_PACK = Path(
-    r"D:\D\Tools\动静交映-1.4.2-PCL2\.minecraft\versions\动静交映客户端"
+    r"<INSTANCE_ROOT>\动静交映-1.4.2-PCL2\.minecraft\versions\动静交映客户端"
     r"\resourcepacks\世界指定资源包喵.zip"
 )
 DEFAULT_OUTPUT_DIR = WORKSPACE / "outputs/candidate13-resource-closure-20260812"

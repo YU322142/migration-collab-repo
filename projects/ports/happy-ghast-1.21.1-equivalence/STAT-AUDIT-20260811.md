@@ -1,7 +1,7 @@
 # Full migrated player-stat audit
 
 The audit input is the read-only staging copy
-`D:\Trans\migration-audit-work\cutover-staging-candidate8d-20260811\world\stats`.
+`<AUDIT_ROOT>\cutover-staging-candidate8d-20260811\world\stats`.
 It contains 112 JSON files (DataVersion 4671), all 112 parsed successfully.
 The deterministic source aggregate hash is
 `e5c25837cfd18b307c4d958dd9be22ab6de2a46a7453076d0785ecd36f4cdd20`.
@@ -65,7 +65,7 @@ Then run the audit against the server's `dumps/registry` directory:
 
 ```text
 python tools/audit_player_stats_registry.py \
-  --stats-dir D:\Trans\migration-audit-work\cutover-staging-candidate8d-20260811\world\stats \
+  --stats-dir <AUDIT_ROOT>\cutover-staging-candidate8d-20260811\world\stats \
   --target-dump-dir <fresh-candidate>\dumps\registry \
   --report outputs\happyghast-stat-audit-runtime-20260811.json
 ```
@@ -81,7 +81,7 @@ Install the same new JAR on both sides only through the established candidate
 bundle workflow. Do not copy it into a locked candidate or a production/source
 backup by hand. The reproducible artifact is:
 
-`D:\Trans\migration-audit-work\HappyGhast-1.21.1-equivalence\build\libs\happyghast-equivalence-1.0.0-equivalence.2+mc1.21.1.jar`
+`<AUDIT_ROOT>\HappyGhast-1.21.1-equivalence\build\libs\happyghast-equivalence-1.0.0-equivalence.2+mc1.21.1.jar`
 
 Size: 12,277 bytes. SHA-256 from two independent `clean check jar` runs:
 `f715d0065beeec583b5edeef3dcd28d4e9dfcc3d5e9b5fe55e9df26c945d82e8`.

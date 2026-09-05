@@ -18,8 +18,8 @@ PREFIX_RULES = [
         ),
         "<WORKSPACE>",
     ),
-    (re.compile(r"(?i)^D:\\Trans\\migration-audit-work"), "<AUDIT_ROOT>"),
-    (re.compile(r"(?i)^D:\\Trans\\migration-handoff-20260812"), "<HANDOFF_ROOT>"),
+    (re.compile(r"(?i)^<AUDIT_ROOT>"), "<AUDIT_ROOT>"),
+    (re.compile(r"(?i)^<HANDOFF_ROOT>"), "<HANDOFF_ROOT>"),
 ]
 
 

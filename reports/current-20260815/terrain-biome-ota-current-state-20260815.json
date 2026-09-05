@@ -6,7 +6,7 @@
   "canonical_runbook": "outputs/PROTECTED-TERRAIN-OTA-OPERATOR-RUNBOOK-20260815.md",
   "canonical_runbook_sha256": "7F758BB1F9AAED81CF189E8EE731CFC884345FEB11F97DE74CC277FC44578756",
   "latest_C_lock": {
-    "path": "D:/Down/mechanomania-matched-runtime-attempt13-2.zip",
+    "path": "<DOWNLOAD_ROOT>/mechanomania-matched-runtime-attempt13-2.zip",
     "bytes": 7936970883,
     "sha256": "ECCD0C6D28A9444DBBCEB3AAEDBBB882E3EEF82B4DDD2547C729571F21891A92",
     "archive_test": "PASS",
@@ -36,7 +36,7 @@
   },
   "snapshots": {
     "C_current": {
-      "path": "D:/Down/mechanomania-matched-runtime-attempt13-2.zip",
+      "path": "<DOWNLOAD_ROOT>/mechanomania-matched-runtime-attempt13-2.zip",
       "bytes": 7936970883,
       "sha256": "ECCD0C6D28A9444DBBCEB3AAEDBBB882E3EEF82B4DDD2547C729571F21891A92",
       "archive_test": "PASS",
@@ -46,13 +46,13 @@
       "modified": false
     },
     "R_earlier_full_server": {
-      "path": "D:/Down/mechanomania-matched-runtime-attempt13-20260814-ota-final-20260815.zip",
+      "path": "<DOWNLOAD_ROOT>/mechanomania-matched-runtime-attempt13-20260814-ota-final-20260815.zip",
       "bytes": 14218857050,
       "sha256": "92C719AF5A64C775992784326DC73563F0E3AEF6C6A757C9E1E22809497818B4",
       "deletion_forbidden": true
     },
     "test_clone": {
-      "path": "D:/Trans/migration-audit-work/protected-terrain-ota-test-server-20260815/mechanomania-matched-runtime-attempt13-20260814",
+      "path": "<AUDIT_ROOT>/protected-terrain-ota-test-server-20260815/mechanomania-matched-runtime-attempt13-20260814",
       "scope": "D-drive disposable validation only",
       "terrain_bundle_applied": true,
       "height_overlay_applied": true,
@@ -62,13 +62,13 @@
     }
   },
   "latest_C_candidate": {
-    "root": "D:/Trans/migration-audit-work/mechanomania-latest-c-extracted-20260815/mechanomania-matched-runtime-attempt13-20260814",
+    "root": "<AUDIT_ROOT>/mechanomania-latest-c-extracted-20260815/mechanomania-matched-runtime-attempt13-20260814",
     "source_lock": "outputs/protected-terrain-ota-latest-c-lock-20260815.json",
     "terrain_poi_apply": "APPLIED_VERIFIED",
-    "terrain_poi_receipt": "D:/Trans/migration-audit-work/mechanomania-latest-c-extracted-20260815/terrain-apply-backup/apply-receipt.json",
+    "terrain_poi_receipt": "<AUDIT_ROOT>/mechanomania-latest-c-extracted-20260815/terrain-apply-backup/apply-receipt.json",
     "terrain_poi_receipt_sha256": "EBB2E57F55357AD5A10A6B3CFDC161453A6FC05E93DDE698EA779B68C69724F9",
     "entity_apply": "APPLIED_VERIFIED",
-    "entity_receipt": "D:/Trans/migration-audit-work/mechanomania-latest-c-extracted-20260815/entity-apply-backup/apply-receipt.json",
+    "entity_receipt": "<AUDIT_ROOT>/mechanomania-latest-c-extracted-20260815/entity-apply-backup/apply-receipt.json",
     "entity_receipt_sha256": "158D6EDF2D918DE915A779A560B8A2AFB9C7F81DAD65C6BC4655A40EABD99533",
     "mineastr": "0.6.27",
     "heightmap_compat": "AD26B1F429F0E39FCD19D6EFD151DF93A62F3B0F7262312C7BA1D8340E13EFBF",
@@ -76,9 +76,9 @@
     "remote_applied": false
   },
   "V_reference": {
-    "root": "D:/Trans/migration-audit-work/vanilla-reference-v-20260815",
-    "strict_world": "D:/Trans/migration-audit-work/vanilla-reference-v-20260815/strict-reference-world/vanilla-reference-v",
-    "settled_world": "D:/Trans/migration-audit-work/vanilla-reference-v-20260815/settled-reference-world/vanilla-reference-v-settled",
+    "root": "<AUDIT_ROOT>/vanilla-reference-v-20260815",
+    "strict_world": "<AUDIT_ROOT>/vanilla-reference-v-20260815/strict-reference-world/vanilla-reference-v",
+    "settled_world": "<AUDIT_ROOT>/vanilla-reference-v-20260815/settled-reference-world/vanilla-reference-v-settled",
     "status": "PASS_FROZEN_19_OF_19",
     "terrain_chunks": 29305,
     "terrain_regions": 40,
@@ -89,9 +89,9 @@
     "non_minecraft_biome_block_structure": 0,
     "natural_blocks_at_or_above_y320": 0,
     "external_mcc": 0,
-    "final_verification_report": "D:/Trans/migration-audit-work/vanilla-reference-v-20260815/final/final-verification-report.json",
+    "final_verification_report": "<AUDIT_ROOT>/vanilla-reference-v-20260815/final/final-verification-report.json",
     "final_verification_sha256": "5507B0D06A0CDD3D9E4D362477A840D8EE4C20656265886F7AAA2C91B60BA05E",
-    "strict_manifest": "D:/Trans/migration-audit-work/vanilla-reference-v-20260815/final/strict-world-manifest.json",
+    "strict_manifest": "<AUDIT_ROOT>/vanilla-reference-v-20260815/final/strict-world-manifest.json",
     "strict_manifest_sha256": "4BD4883295C8E0EFDF584A81AEB4FE19DAAA0EA0AE0B4B3BC3455E9768B2FCB1",
     "settled_dynamic_log_sha256": "59D85BBCEB3FE00BDF9D2A78A634AFEFD9FC848ECF37616286EDAAD01B4948DA"
   },
@@ -99,7 +99,7 @@
     "tool": "outputs/tools/protected_zone_terrain_ota.py",
     "tool_sha256": "2716F2B4A345EC0FE32C7AFCCB5649741ADC1627C204013457B4C4CDA02A2D8C",
     "tests": "13/13 PASS",
-    "bundle_root": "D:/Trans/migration-audit-work/protected-terrain-ota-20260815/bundle",
+    "bundle_root": "<AUDIT_ROOT>/protected-terrain-ota-20260815/bundle",
     "payload_files": 69,
     "status": "READY_FOR_REMOTE_STOPPED_VERIFY_AND_APPLY_LATEST_C_LOCKED",
     "plan_sha256": "483DD2073E7C31691CF15E1BA507556288FF37A11523D3383F6BE34C09C8096E",
@@ -183,7 +183,7 @@
     "outside_c_mismatches": 0,
     "settled_v_validation_report": "outputs/protected-terrain-settled-v-dynamic-validation-20260815.json",
     "settled_v_validation_report_sha256": "5B160271BAA4250817C09091AA4EAD5BE8A9467387BC3FDB0D10A7B6E7D1D973",
-    "settled_v_semantic_report": "D:/Trans/migration-audit-work/protected-terrain-ota-test-server-20260815/semantic-postverify-vs-settled-v.json",
+    "settled_v_semantic_report": "<AUDIT_ROOT>/protected-terrain-ota-test-server-20260815/semantic-postverify-vs-settled-v.json",
     "settled_v_semantic_report_sha256": "1AFCDF9506E1AEB5EF295D608AB2FB7745170D0641D01C020EE627B7EA4DC001",
     "semantic_audit_tool_sha256": "D7EDFF0D0574EF1829C0C6D7E6E8DF91A8AEA9E6CAACD9C548A8A4FFE83B9442",
     "semantic_audit_unit_tests": "4/4 PASS",

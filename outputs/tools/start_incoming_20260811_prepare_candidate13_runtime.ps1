@@ -8,4 +8,4 @@ foreach ($path in @($python, $script)) { if (-not (Test-Path -LiteralPath $path 
 foreach ($path in @($stdout, $stderr)) { if (Test-Path -LiteralPath $path) { Remove-Item -LiteralPath $path -Force } }
 $process = Start-Process -FilePath $python -ArgumentList @('-B', $script) -WorkingDirectory $workspace `
     -RedirectStandardOutput $stdout -RedirectStandardError $stderr -WindowStyle Hidden -PassThru
-[ordered]@{ status='STARTED'; pid=$process.Id; stdout=$stdout; stderr=$stderr; target='D:\Trans\migration-audit-work\manual-test-candidate13-runtime-r2-20260812' } | ConvertTo-Json
+[ordered]@{ status='STARTED'; pid=$process.Id; stdout=$stdout; stderr=$stderr; target='<AUDIT_ROOT>\manual-test-candidate13-runtime-r2-20260812' } | ConvertTo-Json

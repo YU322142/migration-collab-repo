@@ -2045,7 +2045,7 @@ def parser() -> argparse.ArgumentParser:
     finalize.add_argument("--draft", type=Path, required=True)
     finalize.add_argument("--payload-root", type=Path, default=Path("."))
     finalize.add_argument("--output", type=Path, required=True)
-    finalize.add_argument("--temp-root", type=Path, default=Path("D:/Trans"))
+    finalize.add_argument("--temp-root", type=Path, default=Path("<TRANS_ROOT>"))
     finalize.add_argument("--report", type=Path)
     finalize.set_defaults(func=finalize_command)
 

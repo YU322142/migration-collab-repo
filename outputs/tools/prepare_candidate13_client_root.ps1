@@ -1,6 +1,6 @@
 param(
     [string] $SourceMinecraftRoot = '',
-    [string] $ReleaseRoot = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate13-20260812',
+    [string] $ReleaseRoot = '<AUDIT_ROOT>\final-mod-bundles-candidate13-20260812',
     [string] $OutputRoot = '',
     [string] $Report = '',
     [string] $LocalResourcePack = '',
@@ -18,7 +18,7 @@ $expectedReport = Join-Path $workspace 'outputs\candidate13-client-root-prepare-
 $localPackStem = ([char]0x4E16) + ([char]0x754C) + ([char]0x6307) + ([char]0x5B9A) + ([char]0x8D44) + ([char]0x6E90) + ([char]0x5305) + ([char]0x55B5)
 $localPackFileName = $localPackStem + '-mc1.21.1-candidate13.zip'
 $expectedPack = Join-Path (Join-Path $workspace 'outputs\candidate13-resource-closure-20260812') $localPackFileName
-$expectedRelease = 'D:\Trans\migration-audit-work\final-mod-bundles-candidate13-20260812'
+$expectedRelease = '<AUDIT_ROOT>\final-mod-bundles-candidate13-20260812'
 $expectedReadySha = 'FA992151079AEE46DCDAEB49D23487F0F4642099E86F0962469E2257E830BA3F'
 $expectedManifestSha = '261ADB612DB2A2D992F8A8CAC0FC8C753D6620B98B8CB79E693CC434E57216BE'
 $expectedBundleSha = 'AC9887DB6F12E0A9E9F8B77030C3F904276DB8BFD4BDF9D01C4B9DAF9EEA4495'
@@ -150,7 +150,7 @@ try {
     foreach ($name in @('assets','libraries','versions')) {
         $srcItem = Get-Item -LiteralPath (Join-Path $source $name) -Force; $target = Join-Path $temporaryOutput $name
         $resolved = if ($srcItem.LinkType -eq 'Junction') { Full-Path ([string]$srcItem.Target) } else { Full-Path $srcItem.FullName }
-        if (Path-IsWithin $resolved 'D:\Trans\20260807') { throw "Shared client input resolves into historical backup: $resolved" }
+        if (Path-IsWithin $resolved '<TRANS_ROOT>\20260807') { throw "Shared client input resolves into historical backup: $resolved" }
         New-Item -ItemType Junction -Path $target -Target $resolved | Out-Null
     }
     foreach ($name in @('config','defaultconfigs','data')) { Copy-Item -LiteralPath (Join-Path $source $name) -Destination (Join-Path $temporaryOutput $name) -Recurse }

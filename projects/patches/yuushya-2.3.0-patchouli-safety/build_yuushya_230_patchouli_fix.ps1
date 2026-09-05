@@ -3,9 +3,9 @@ param(
     [Parameter(Mandatory = $true)]
     [string]$OutputJar,
 
-    [string]$OriginalJar = 'D:\Trans\migration-audit-work\mechanomania-matched-client-attempt9-20260814\mods\yuushya-1.21.0-neoforge-2.3.0.jar',
+    [string]$OriginalJar = '<AUDIT_ROOT>\mechanomania-matched-client-attempt9-20260814\mods\yuushya-1.21.0-neoforge-2.3.0.jar',
 
-    [string]$JarTool = 'D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\java\java-runtime-delta\bin\jar.exe'
+    [string]$JarTool = '<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\java\java-runtime-delta\bin\jar.exe'
 )
 
 $ErrorActionPreference = 'Stop'

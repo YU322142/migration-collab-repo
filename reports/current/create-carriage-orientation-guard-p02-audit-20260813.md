@@ -20,8 +20,8 @@ The closure is deliberately two-layered:
 
 ## Authority and staging audit
 
-- Authority: `D:\Trans\migration-audit-work\incoming-20260811-raw\20260811\world`
-- Frozen staging: `D:\Trans\migration-audit-work\cutover-staging-incoming-20260811-candidate13-20260812\world`
+- Authority: `<AUDIT_ROOT>\incoming-20260811-raw\20260811\world`
+- Frozen staging: `<AUDIT_ROOT>\cutover-staging-incoming-20260811-candidate13-20260812\world`
 - Four saved carriages were found in each `create_tracks.dat`.
 - Source and staging both still contain four lowercase `InitialOrientation`
   values: `south`, `west`, `east`, and `north`.

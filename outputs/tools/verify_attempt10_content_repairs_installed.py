@@ -27,7 +27,7 @@ if str(TOOLS_DIR) not in sys.path:
 import apply_attempt10_content_repairs as repair_spec  # noqa: E402
 
 
-ALLOWED = Path(r"D:\Trans\migration-audit-work").resolve()
+ALLOWED = Path(r"<AUDIT_ROOT>").resolve()
 SPAWN_BOX_RECIPE = "touhou_little_maid:altar_recipe/spawn_box"
 REBORN_MAID_RECIPE = "touhou_little_maid:altar_recipe/reborn_maid"
 

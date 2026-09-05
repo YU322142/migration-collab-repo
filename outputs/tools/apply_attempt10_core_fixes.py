@@ -22,10 +22,10 @@ import sys
 import uuid
 
 
-SERVER = Path(r"D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt10-20260814")
-CLIENT = Path(r"D:\Trans\migration-audit-work\mechanomania-matched-client-attempt10-20260814")
-BACKUP = Path(r"D:\Trans\migration-audit-work\attempt10-core-fixes-backup-20260814")
-REPORT = Path(r"D:\Trans\migration-audit-work\attempt10-core-fixes-apply-20260814.json")
+SERVER = Path(r"<AUDIT_ROOT>\mechanomania-matched-runtime-attempt10-20260814")
+CLIENT = Path(r"<AUDIT_ROOT>\mechanomania-matched-client-attempt10-20260814")
+BACKUP = Path(r"<AUDIT_ROOT>\attempt10-core-fixes-backup-20260814")
+REPORT = Path(r"<AUDIT_ROOT>\attempt10-core-fixes-apply-20260814.json")
 ATTEMPT_MARKER = ".mechanomania-startup-gate-attempt.json"
 MCMODSYNC_RE = re.compile(r"mcmodsync", re.I)
 
@@ -33,7 +33,7 @@ MCMODSYNC_RE = re.compile(r"mcmodsync", re.I)
 ARTIFACTS = {
     "mineastr": {
         "source": Path(
-            r"D:\Trans\migration-audit-work\mcmodsync-latest-audit-20260813\mineastr-0.6.26\mineastr-neoforge-1.21.1-0.6.26.jar"
+            r"<AUDIT_ROOT>\mcmodsync-latest-audit-20260813\mineastr-0.6.26\mineastr-neoforge-1.21.1-0.6.26.jar"
         ),
         "name": "mineastr-neoforge-1.21.1-0.6.26.jar",
         "bytes": 257_982,
@@ -41,7 +41,7 @@ ARTIFACTS = {
     },
     "yacl": {
         "source": Path(
-            r"D:\Trans\migration-audit-work\mechanomania-matched-release-v2-20260813\client\mods\yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar"
+            r"<AUDIT_ROOT>\mechanomania-matched-release-v2-20260813\client\mods\yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar"
         ),
         "name": "yet_another_config_lib_v3-3.7.1+1.21.1-neoforge.jar",
         "bytes": 1_111_051,
@@ -49,7 +49,7 @@ ARTIFACTS = {
     },
     "backport": {
         "source": Path(
-            r"D:\Trans\migration-audit-work\content-backport-1.5-cat-serializer-fix-artifacts-20260814\backport-1.5-cat-serializer-fix.1.jar"
+            r"<AUDIT_ROOT>\content-backport-1.5-cat-serializer-fix-artifacts-20260814\backport-1.5-cat-serializer-fix.1.jar"
         ),
         "name": "backport-1.5-cat-serializer-fix.1.jar",
         "bytes": 15_336_561,
@@ -57,7 +57,7 @@ ARTIFACTS = {
     },
     "hotbath": {
         "source": Path(
-            r"D:\Trans\migration-audit-work\hotbath-300-trigger-fix-artifacts-20260814\hotbath-1.21.1-3.0.0-registry-fix.1.jar"
+            r"<AUDIT_ROOT>\hotbath-300-trigger-fix-artifacts-20260814\hotbath-1.21.1-3.0.0-registry-fix.1.jar"
         ),
         "name": "hotbath-1.21.1-3.0.0-registry-fix.1.jar",
         "bytes": 712_893,
@@ -65,7 +65,7 @@ ARTIFACTS = {
     },
     "worldedit": {
         "source": Path(
-            r"D:\Trans\migration-audit-work\worldedit-738-direction-property-fix-artifacts-20260814\worldedit-mod-7.3.8-direction-property-fix.1.jar"
+            r"<AUDIT_ROOT>\worldedit-738-direction-property-fix-artifacts-20260814\worldedit-mod-7.3.8-direction-property-fix.1.jar"
         ),
         "name": "worldedit-mod-7.3.8-direction-property-fix.1.jar",
         "bytes": 6_264_309,
@@ -73,7 +73,7 @@ ARTIFACTS = {
     },
     "cei": {
         "source": Path(
-            r"D:\Trans\migration-audit-work\cei-242-251-backport-artifacts-20260814\create-enchantment-industry-2.4.2-cei251-backport.1.jar"
+            r"<AUDIT_ROOT>\cei-242-251-backport-artifacts-20260814\create-enchantment-industry-2.4.2-cei251-backport.1.jar"
         ),
         "name": "create-enchantment-industry-2.4.2-cei251-backport.1.jar",
         "bytes": 1_575_446,
@@ -162,8 +162,8 @@ def root(side: str) -> Path:
 
 
 def ensure_root_safety() -> None:
-    expected_parent = Path(r"D:\Trans\migration-audit-work").resolve()
-    forbidden = Path(r"D:\Trans\20260807").resolve()
+    expected_parent = Path(r"<AUDIT_ROOT>").resolve()
+    forbidden = Path(r"<TRANS_ROOT>\20260807").resolve()
     for value in (SERVER, CLIENT):
         resolved = value.resolve()
         if not value.is_dir() or value.is_symlink():

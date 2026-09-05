@@ -26,7 +26,7 @@ $reportPath = [IO.Path]::GetFullPath($ResultReport)
 foreach ($path in @($root, $launcherPath, $javaPath)) {
     if (-not (Test-Path -LiteralPath $path)) { throw "Required path is missing: $path" }
 }
-$auditRoot = [IO.Path]::GetFullPath('D:\Trans\migration-audit-work').TrimEnd('\') + '\'
+$auditRoot = [IO.Path]::GetFullPath('<AUDIT_ROOT>').TrimEnd('\') + '\'
 $workspaceRoot = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot '..\..')).TrimEnd('\') + '\'
 if (-not $root.StartsWith($auditRoot, [StringComparison]::OrdinalIgnoreCase) -and
     -not $root.StartsWith($workspaceRoot, [StringComparison]::OrdinalIgnoreCase)) {

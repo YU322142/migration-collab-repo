@@ -9,11 +9,11 @@ $server = (Resolve-Path -LiteralPath $ServerDirectory).Path.TrimEnd('\')
 if ((Split-Path -Leaf $server) -notmatch '^toms-storage-create-6\.0\.10-smoke[0-9]+$') {
     throw "Refusing unexpected smoke directory: $server"
 }
-$tempRoot = 'D:\Trans\migration-audit-work\tmp-toms-create-rcon-smoke'
+$tempRoot = '<AUDIT_ROOT>\tmp-toms-create-rcon-smoke'
 New-Item -ItemType Directory -Path $tempRoot -Force | Out-Null
 $env:TEMP = $tempRoot
 $env:TMP = $tempRoot
-$env:GRADLE_USER_HOME = 'D:\Trans\migration-audit-work\gradle-cache-toms-neoforge'
+$env:GRADLE_USER_HOME = '<AUDIT_ROOT>\gradle-cache-toms-neoforge'
 
 function Read-Exact([IO.Stream]$Stream, [int]$Count) {
     $buffer = New-Object byte[] $Count

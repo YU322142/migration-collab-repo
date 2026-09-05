@@ -36,7 +36,7 @@ ROOT = Path(__file__).resolve().parents[2]
 TOOLS = ROOT / "outputs" / "tools"
 OUTPUTS = ROOT / "outputs"
 WORKSPACE_CLIENT_ROOT = OUTPUTS / "tmp"
-FORBIDDEN_SOURCE = Path(r"D:\Trans\20260807")
+FORBIDDEN_SOURCE = Path(r"<TRANS_ROOT>\20260807")
 DEFAULT_JAVA = Path(r"C:\Program Files\Java\jdk-21.0.10\bin\java.exe")
 DEFAULT_POWERSHELL = Path(
     r"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe"
@@ -47,7 +47,7 @@ SYNTHETIC_USERNAME = "SyntheticOperator"
 SYNTHETIC_UUID = "00000000-0000-4000-8000-000000000001"
 SYNTHETIC_PERMISSION_LEVEL = 4
 CANDIDATE13_RELEASE_ROOT = Path(
-    r"D:\Trans\migration-audit-work\final-mod-bundles-candidate13-20260812"
+    r"<AUDIT_ROOT>\final-mod-bundles-candidate13-20260812"
 )
 CANDIDATE13_READY = CANDIDATE13_RELEASE_ROOT / "READY.json"
 CANDIDATE13_RELEASE_LOCK = CANDIDATE13_RELEASE_ROOT / "release-lock.json"
@@ -55,7 +55,7 @@ CANDIDATE13_SERVER_MANIFEST = CANDIDATE13_RELEASE_ROOT / "manifests" / "server.j
 CANDIDATE13_CLIENT_MANIFEST = CANDIDATE13_RELEASE_ROOT / "manifests" / "client.json"
 CANDIDATE13_BUNDLE_BUILD_REPORT = OUTPUTS / "candidate13-bundle-build-20260812.json"
 CANDIDATE13_PREPARE_REPORT = Path(
-    r"D:\Trans\migration-audit-work\manual-test-candidate13-runtime-r2-prepare-20260812.json"
+    r"<AUDIT_ROOT>\manual-test-candidate13-runtime-r2-prepare-20260812.json"
 )
 CANDIDATE13_READY_SHA256 = (
     "FA992151079AEE46DCDAEB49D23487F0F4642099E86F0962469E2257E830BA3F"
@@ -89,7 +89,7 @@ CANDIDATE13_BUNDLE_PAIR_SHA256 = (
 )
 CANDIDATE13_CLIENT_ROOT = OUTPUTS / "tmp" / "client-gate-candidate13" / ".minecraft"
 PIPELINE_PREPARED_TARGET = Path(
-    r"D:\Trans\migration-audit-work\manual-test-candidate13-runtime-r2-20260812"
+    r"<AUDIT_ROOT>\manual-test-candidate13-runtime-r2-20260812"
 )
 CANDIDATE13_CLIENT_PREPARE_REPORT = OUTPUTS / "candidate13-client-root-prepare-20260812.json"
 CC_GUARD_FILE = "cctweaked-startup-shutdown-guard-1.0.0+neoforge.1.21.1-equivalence.1.jar"
@@ -931,7 +931,7 @@ def validate_prepare_report(
     path: Path, target: Path, server_port: int, rcon_port: int, voice_port: int | None
 ) -> dict[str, Any]:
     resolved_report = path.resolve()
-    allowed_report_root = Path(r"D:\Trans\migration-audit-work").resolve()
+    allowed_report_root = Path(r"<AUDIT_ROOT>").resolve()
     if (
         not is_within(resolved_report, allowed_report_root)
         or "candidate13" not in resolved_report.name.lower()

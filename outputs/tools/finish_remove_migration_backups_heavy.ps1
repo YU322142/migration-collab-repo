@@ -6,8 +6,8 @@ $ProgressPreference = 'SilentlyContinue'
 
 $TargetPath = 'D:\Codex\.migration-backups-heavy'
 $ProtectedPath = 'D:\Codex\.migration'
-$StatusPath = 'D:\Trans\migration-backups-heavy-cleanup-20260813-resume-status.json'
-$LogPath = 'D:\Trans\migration-backups-heavy-cleanup-20260813-resume.ndjson'
+$StatusPath = '<TRANS_ROOT>\migration-backups-heavy-cleanup-20260813-resume-status.json'
+$LogPath = '<TRANS_ROOT>\migration-backups-heavy-cleanup-20260813-resume.ndjson'
 $ExpectedTopDirectory = '20260807-150332'
 
 function Write-JsonLine {

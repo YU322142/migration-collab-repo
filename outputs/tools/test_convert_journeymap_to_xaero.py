@@ -20,22 +20,22 @@ TEST_TEMP_ROOT.mkdir(parents=True, exist_ok=True)
 import convert_journeymap_to_xaero as converter
 
 
-SOURCE_ZIP = Path(r"D:\Down\journeymap_export_yu_2026-06-19_22.45.13 (1).zip")
+SOURCE_ZIP = Path(r"<DOWNLOAD_ROOT>\journeymap_export_yu_2026-06-19_22.45.13 (1).zip")
 SOURCE_ROOT = Path(
-    r"D:\Trans\migration-audit-work\journeymap-export-audit-20260813"
+    r"<AUDIT_ROOT>\journeymap-export-audit-20260813"
 )
 MINIMAP_JAR = Path(
-    r"D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3"
+    r"<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3"
     r"\instances\Mechanomania-Ultimate-Aeronautics-1.1.11.1"
     r"\minecraft\mods\xaerominimap-neoforge-1.21.1-26.1.0.jar"
 )
 WORLD_MAP_JAR = Path(
-    r"D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3"
+    r"<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3"
     r"\instances\Mechanomania-Ultimate-Aeronautics-1.1.11.1"
     r"\minecraft\mods\xaeroworldmap-neoforge-1.21.1-1.41.2.jar"
 )
 VANILLA_STATES = Path(
-    r"D:\Trans\migration-audit-work\xaero-javap-20260813\vanilla_states.dat"
+    r"<AUDIT_ROOT>\xaero-javap-20260813\vanilla_states.dat"
 )
 
 

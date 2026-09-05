@@ -81,19 +81,19 @@ JAR 当前未提供 17 个：
 
 原始 JAR：
 
-- 路径：`D:\Trans\migration-audit-work\mechanomania-matched-client-attempt9-20260814\mods\yuushya-1.21.0-neoforge-2.3.0.jar`
+- 路径：`<AUDIT_ROOT>\mechanomania-matched-client-attempt9-20260814\mods\yuushya-1.21.0-neoforge-2.3.0.jar`
 - 大小：28,197,448 bytes
 - SHA-256：`C410C51E1ECDD9D3FF55EB34B84D71DA761A8990EC0993A766C9BA40E8C360E8`
 
 补丁 JAR（发布候选）：
 
-- 路径：`D:\Trans\migration-audit-work\yuushya-230-patchouli-fix-artifacts-20260814\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar`
+- 路径：`<AUDIT_ROOT>\yuushya-230-patchouli-fix-artifacts-20260814\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.1.jar`
 - 大小：28,197,402 bytes
 - SHA-256：`31DFFD39D1FED94F2088405AF3B8DC862E363BA389015780355571ECCA4A813D`
 
 第二次独立构建：
 
-- 路径：`D:\Trans\migration-audit-work\yuushya-230-patchouli-fix-artifacts-20260814\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.2.jar`
+- 路径：`<AUDIT_ROOT>\yuushya-230-patchouli-fix-artifacts-20260814\yuushya-1.21.0-neoforge-2.3.0-patchouli-safe.2.jar`
 - 大小：28,197,402 bytes
 - SHA-256：`31DFFD39D1FED94F2088405AF3B8DC862E363BA389015780355571ECCA4A813D`
 
@@ -103,7 +103,7 @@ JAR 当前未提供 17 个：
 
 验证脚本：
 
-- `D:\Trans\migration-audit-work\yuushya-230-patchouli-fix-artifacts-20260814\test_yuushya_230_patchouli_fix.py`
+- `<AUDIT_ROOT>\yuushya-230-patchouli-fix-artifacts-20260814\test_yuushya_230_patchouli_fix.py`
 - SHA-256：`B418939BD4E1F5CF2A81A5B16E25C2A8829280931E9882C143F97E8C8F37FEEF`
 
 执行结果：
@@ -133,7 +133,7 @@ missing_recipe_refs_preserved=17
 
 可复现构建脚本：
 
-- `D:\Trans\migration-audit-work\yuushya-230-patchouli-fix-artifacts-20260814\build_yuushya_230_patchouli_fix.ps1`
+- `<AUDIT_ROOT>\yuushya-230-patchouli-fix-artifacts-20260814\build_yuushya_230_patchouli_fix.ps1`
 
 补丁源文件位于同目录的 `patch-root\`，仅含 14 个需要覆盖的指南 JSON。
 

@@ -39,8 +39,8 @@ from pathlib import PurePosixPath
 from typing import Iterable
 
 
-SOURCE_DEFAULT = Path(r"D:\Trans\20260807")
-WORK_DEFAULT = Path(r"D:\Trans\migration-audit-work\cutover-staging")
+SOURCE_DEFAULT = Path(r"<TRANS_ROOT>\20260807")
+WORK_DEFAULT = Path(r"<AUDIT_ROOT>\cutover-staging")
 WAYPOINT_SHA256 = (
     "5572EE1F196038071FB5D7B9D7FF271CCB0E19BA722B83BCC1A2B8C0C844F8EB"
 )
@@ -67,7 +67,7 @@ LOCAL_CONVERTER_NAMES = (
     "migrate_mineastr_cache.py",
 )
 EASYAUTH_CONVERTER = Path(
-    r"D:\Trans\migration-audit-work\XiyusLogin-migration\tools\migrate_easyauth.py"
+    r"<AUDIT_ROOT>\XiyusLogin-migration\tools\migrate_easyauth.py"
 )
 WORLD_CONVERTER_INPUT_KINDS = frozenset(
     {"world-level", "server-properties", "world-player", "world-region-nbt"}
@@ -2359,7 +2359,7 @@ def build_environment(work_root: Path) -> dict[str, str]:
             "TMP": str(temp),
             "PYTHONPYCACHEPREFIX": str(work_root / "pycache"),
             "PYTHONDONTWRITEBYTECODE": "1",
-            "PYTHONPATH": str(Path(r"D:\Trans\migration-audit-work\poi-nbtdeps")),
+            "PYTHONPATH": str(Path(r"<AUDIT_ROOT>\poi-nbtdeps")),
         }
     )
     return env
@@ -2437,7 +2437,7 @@ def main() -> int:
         "--waypoint-fire-jar",
         type=Path,
         default=Path(
-            r"D:\Trans\migration-audit-work\waypoint-fire-equivalence\build\libs\waypoint-fire-equivalence-0.1.0-draft+mc1.21.1.jar"
+            r"<AUDIT_ROOT>\waypoint-fire-equivalence\build\libs\waypoint-fire-equivalence-0.1.0-draft+mc1.21.1.jar"
         ),
     )
     parser.add_argument("--waypoint-fire-sha256", default=WAYPOINT_SHA256)

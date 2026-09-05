@@ -1,9 +1,9 @@
 [CmdletBinding()]
 param(
-    [string]$OriginalJar = 'D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt6-20260814\mods\worldedit-mod-7.3.8.jar',
-    [string]$ServerJar = 'D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt6-20260814\libraries\net\minecraft\server\1.21.1-20240808.144430\server-1.21.1-20240808.144430-srg.jar',
-    [string]$GuavaJar = 'D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt6-20260814\libraries\com\google\guava\guava\32.1.2-jre\guava-32.1.2-jre.jar',
-    [string]$FailureAccessJar = 'D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt6-20260814\libraries\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar',
+    [string]$OriginalJar = '<AUDIT_ROOT>\mechanomania-matched-runtime-attempt6-20260814\mods\worldedit-mod-7.3.8.jar',
+    [string]$ServerJar = '<AUDIT_ROOT>\mechanomania-matched-runtime-attempt6-20260814\libraries\net\minecraft\server\1.21.1-20240808.144430\server-1.21.1-20240808.144430-srg.jar',
+    [string]$GuavaJar = '<AUDIT_ROOT>\mechanomania-matched-runtime-attempt6-20260814\libraries\com\google\guava\guava\32.1.2-jre\guava-32.1.2-jre.jar',
+    [string]$FailureAccessJar = '<AUDIT_ROOT>\mechanomania-matched-runtime-attempt6-20260814\libraries\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar',
     [string]$OutputDirectory = ''
 )
 

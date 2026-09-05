@@ -43,7 +43,7 @@
     "stale_path_removal": "Delete only through .ota-delete-list.json after the recorded preimage SHA-256 matches."
   },
   "source_locks": {
-    "current_server_root": "D:/Trans/migration-audit-work/mechanomania-attempt13-zip-ota-20260815/mechanomania-matched-runtime-attempt13-20260814",
+    "current_server_root": "<AUDIT_ROOT>/mechanomania-attempt13-zip-ota-20260815/mechanomania-matched-runtime-attempt13-20260814",
     "active_overworld_dimension_type_sha256": "389447CD8C9AFC38E3B3DC509409443E0E7C97F9EE90DAA298FECFC7C8806B49",
     "invalid_stale_dimension_type_sha256": "F037D47507D099F2BC74D1D6093E3D580EE8E62312AD15F41B46DF4EA801A817",
     "overworld_dimension_sha256": "FF2B47B821AE51E7455F66E2DF4EFA6A18873A713ED31C34D939D73EC5A27E6C",

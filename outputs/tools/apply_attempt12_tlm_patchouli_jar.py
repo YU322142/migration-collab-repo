@@ -10,7 +10,7 @@ import tempfile
 from pathlib import Path
 
 
-ROOT = Path(r"D:\Trans\migration-audit-work")
+ROOT = Path(r"<AUDIT_ROOT>")
 SERVER = ROOT / "mechanomania-matched-runtime-attempt12-20260814"
 CLIENT = ROOT / "mechanomania-matched-client-attempt12-20260814"
 ARTIFACT = ROOT / "tlm-patchouli-jar-balance-fix-attempt11-20260814" / "jars" / "touhoulittlemaid-1.5.3-neoforge+mc1.21.1.jar"

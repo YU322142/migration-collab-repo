@@ -11,19 +11,19 @@
     "config_or_ports_modified": false
   },
   "input": {
-    "path": "D:\\Trans\\migration-audit-work\\mod-candidates\\backport-1.5.jar",
+    "path": "<AUDIT_ROOT>\\mod-candidates\\backport-1.5.jar",
     "bytes": 15301451,
     "sha256": "167534C66D5E6C09DCB01152EBD37D18CED5CF6278A9228C094F937886133AF5"
   },
   "output": {
-    "path": "D:\\Trans\\migration-audit-work\\content-backport-1.5-cat-serializer-fix-artifacts-20260814\\backport-1.5-cat-serializer-fix.1.jar",
+    "path": "<AUDIT_ROOT>\\content-backport-1.5-cat-serializer-fix-artifacts-20260814\\backport-1.5-cat-serializer-fix.1.jar",
     "bytes": 15336561,
     "sha256": "34291AF9D81B6AEE0780F5F511B2A9594664F36906AED40687DF1C7009E68B1D",
     "mod_id": "backport",
     "metadata_version": "1.5",
     "side": "BOTH"
   },
-  "source_project": "D:\\Trans\\migration-audit-work\\content-backport-1.5-cat-serializer-fix-source-20260814",
+  "source_project": "<AUDIT_ROOT>\\content-backport-1.5-cat-serializer-fix-source-20260814",
   "changed_entries": [
     "com/juanmuscaria/backport/world/entity/animal/BackportedEntityDataSerializers.class",
     "com/juanmuscaria/backport/mixin/common/CatSoundVariantBackport$CatMixin.class",

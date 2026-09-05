@@ -9,8 +9,8 @@ import zipfile
 from pathlib import Path
 
 
-OUT = Path(r"D:\Trans\migration-audit-work\attempt6-data-resource-fixes-20260814")
-RUNTIME = Path(r"D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt6-20260814")
+OUT = Path(r"<AUDIT_ROOT>\attempt6-data-resource-fixes-20260814")
+RUNTIME = Path(r"<AUDIT_ROOT>\mechanomania-matched-runtime-attempt6-20260814")
 
 
 def sha(path: Path) -> str:

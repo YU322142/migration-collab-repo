@@ -6,8 +6,8 @@
 
 本报告比较以下两个 NeoForge 1.21.1 JAR：
 
-- 2.4.2：D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\instances\Mechanomania-Ultimate-Aeronautics-1.1.11.1\minecraft\mods\create-enchantment-industry-2.4.2.jar
-- 2.5.1：D:\Trans\migration-audit-work\mechanomania-attempt2-compat-backup-20260814\runtime\create-enchantment-industry-2.5.1.jar
+- 2.4.2：<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\instances\Mechanomania-Ultimate-Aeronautics-1.1.11.1\minecraft\mods\create-enchantment-industry-2.4.2.jar
+- 2.5.1：<AUDIT_ROOT>\mechanomania-attempt2-compat-backup-20260814\runtime\create-enchantment-industry-2.5.1.jar
 
 审计覆盖：
 
@@ -394,14 +394,14 @@ f1c38e 相对 9317ba9 的其他变化中：
 5. 产物位于 build\libs。
 6. build 依赖 spotlessApply，会改源码格式；只允许在隔离 worktree 执行。
 7. 4 GiB 内存机器建议：
-   - GRADLE_USER_HOME 指向 D:\Trans\migration-audit-work\gradle-cache-cei-backport-20260814；
+   - GRADLE_USER_HOME 指向 <AUDIT_ROOT>\gradle-cache-cei-backport-20260814；
    - --no-daemon；
    - --max-workers=2；
    - -Dorg.gradle.jvmargs=-Xmx1536m。
 
 审计用 filtered clone：
 
-D:\Trans\migration-audit-work\cei-official-source-audit-20260814
+<AUDIT_ROOT>\cei-official-source-audit-20260814
 
 该目录仅用于证据回溯；正式开发应另建 worktree。
 
@@ -440,12 +440,12 @@ D:\Trans\migration-audit-work\cei-official-source-audit-20260814
 ## 12. 证据目录
 
 - 本 JAR 审计：
-  D:\Trans\migration-audit-work\cei-2.4.2-vs-2.5.1-save-compat-audit-20260814
+  <AUDIT_ROOT>\cei-2.4.2-vs-2.5.1-save-compat-audit-20260814
 - 世界实际数据审计：
-  D:\Trans\migration-audit-work\cei-world-data-compat-audit-20260814
+  <AUDIT_ROOT>\cei-world-data-compat-audit-20260814
 - 官方源码 filtered clone：
-  D:\Trans\migration-audit-work\cei-official-source-audit-20260814
+  <AUDIT_ROOT>\cei-official-source-audit-20260814
 - 依赖 API 审计：
-  D:\Trans\migration-audit-work\cei-dependency-api-audit-20260814
+  <AUDIT_ROOT>\cei-dependency-api-audit-20260814
 
 本目录中的 class-path-diff.json、per-class-nbt-key-diff.json、codec-fields-*.json、mixin-diff.json、data-diff.json、assets-diff.json、javap-*.txt 和反编译输出构成可复查证据。

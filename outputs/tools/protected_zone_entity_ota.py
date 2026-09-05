@@ -68,14 +68,14 @@ MIN_Y = -64
 NATURAL_TOP_Y = 319
 MAX_BUILD_Y = 479
 STOPPED_ACK = "SERVER_IS_STOPPED"
-DEFAULT_CURRENT = Path(r"D:\Down\mechanomania-matched-runtime-attempt13-2.zip")
+DEFAULT_CURRENT = Path(r"<DOWNLOAD_ROOT>\mechanomania-matched-runtime-attempt13-2.zip")
 DEFAULT_GATE = SCRIPT_DIR.parent / "protected-zone-entity-collision-poi-gate-20260815.json"
 DEFAULT_V_WORLD = Path(
-    r"D:\Trans\migration-audit-work\vanilla-reference-v-20260815"
+    r"<AUDIT_ROOT>\vanilla-reference-v-20260815"
     r"\strict-reference-world\vanilla-reference-v"
 )
 INTENDED_TERRAIN_TEST_CLONE = Path(
-    r"D:\Trans\migration-audit-work\protected-terrain-ota-test-server-20260815"
+    r"<AUDIT_ROOT>\protected-terrain-ota-test-server-20260815"
     r"\mechanomania-matched-runtime-attempt13-20260814"
 )
 

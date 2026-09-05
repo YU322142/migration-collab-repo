@@ -15,10 +15,10 @@ from outputs.tools.generate_resource_overlay_render_fixes import (
 WORKSPACE = Path(__file__).resolve().parents[2]
 PROJECT = WORKSPACE / "outputs" / "projects" / "resource-error-overlay-1.21.1"
 END_JAR = Path(
-    r"D:\Trans\migration-audit-work\KaleidoscopeEnd-1.21.1-equivalence\build\libs\kaleidoscope_end-1.0.14-migration.7-neoforge+mc1.21.1.jar"
+    r"<AUDIT_ROOT>\KaleidoscopeEnd-1.21.1-equivalence\build\libs\kaleidoscope_end-1.0.14-migration.7-neoforge+mc1.21.1.jar"
 )
 NETHER_JAR = Path(
-    r"D:\Trans\migration-audit-work\world-migration-smoke1\mods\kaleidoscope_nether-1.1.2-neoforge+mc1.21.1.jar"
+    r"<AUDIT_ROOT>\world-migration-smoke1\mods\kaleidoscope_nether-1.1.2-neoforge+mc1.21.1.jar"
 )
 
 

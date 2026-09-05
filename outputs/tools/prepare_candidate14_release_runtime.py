@@ -26,8 +26,8 @@ import candidate14_release_gate_common as release_common
 import prepare_final_fullstack_smoke as smoke
 
 
-ALLOWED_ROOT = Path(r"D:\Trans\migration-audit-work")
-FORBIDDEN_SOURCE = Path(r"D:\Trans\20260807")
+ALLOWED_ROOT = Path(r"<AUDIT_ROOT>")
+FORBIDDEN_SOURCE = Path(r"<TRANS_ROOT>\20260807")
 
 
 def is_within(path: Path, root: Path) -> bool:

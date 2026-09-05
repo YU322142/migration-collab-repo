@@ -479,7 +479,7 @@ def build_bundles(
     server_happy, client_happy = validate_candidate6_pair(server, client, lock)
     replacement = validate_replacement(replacement_path, replacement_sha256, lock)
 
-    backup_root = Path(r"D:\Trans\20260807").resolve()
+    backup_root = Path(r"<TRANS_ROOT>\20260807").resolve()
     if paths_overlap(output_root, backup_root):
         raise ValueError(f"output root overlaps the historical backup: {output_root}")
     for source_dir in (server["bundle_dir"], client["bundle_dir"]):

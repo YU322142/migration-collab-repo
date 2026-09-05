@@ -3,7 +3,7 @@
 
 The script is deliberately source-hash guarded and never writes to the Attempt6
 runtime, frozen staging, production, or Prism directories.  It emits a patched
-JAR set plus a loose KubeJS overlay under D:\\Trans\\migration-audit-work.
+JAR set plus a loose KubeJS overlay under <AUDIT_ROOT>.
 No Minecraft process is started by this tool.
 """
 
@@ -20,9 +20,9 @@ from pathlib import Path
 from typing import Any, Callable
 
 
-RUNTIME = Path(r"D:\Trans\migration-audit-work\mechanomania-matched-runtime-attempt6-20260814")
-AUDIT_LOG = Path(r"D:\Trans\migration-audit-work\attempt6-server-errors-by-logger-20260814.txt")
-OUT = Path(r"D:\Trans\migration-audit-work\attempt6-data-resource-fixes-20260814")
+RUNTIME = Path(r"<AUDIT_ROOT>\mechanomania-matched-runtime-attempt6-20260814")
+AUDIT_LOG = Path(r"<AUDIT_ROOT>\attempt6-server-errors-by-logger-20260814.txt")
+OUT = Path(r"<AUDIT_ROOT>\attempt6-data-resource-fixes-20260814")
 
 
 JAR_HASHES = {
@@ -461,7 +461,7 @@ def main() -> int:
     (OUT / "reports").mkdir(parents=True, exist_ok=True)
     if AUDIT_LOG.is_file():
         shutil.copy2(AUDIT_LOG, OUT / "reports" / AUDIT_LOG.name)
-    child = Path(r"D:\Trans\migration-audit-work\loot298-audit-20260814")
+    child = Path(r"<AUDIT_ROOT>\loot298-audit-20260814")
     if child.is_dir():
         shutil.copy2(child / "loot298-audit.json", OUT / "reports" / "loot298-audit.json")
         shutil.copy2(child / "LOOT298-AUDIT.md", OUT / "reports" / "LOOT298-AUDIT.md")

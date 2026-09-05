@@ -991,7 +991,7 @@ class EntityConversionTests(unittest.TestCase):
         )
         if not target_jar.exists():
             target_jar = Path(
-                r"D:\Trans\migration-audit-work\mechanomania-matched-client-20260813"
+                r"<AUDIT_ROOT>\mechanomania-matched-client-20260813"
             ) / "versions" / "1.21.1" / "1.21.1.jar"
         if not target_jar.exists():
             self.skipTest("audited Minecraft 1.21.1 fixture JAR is not available")

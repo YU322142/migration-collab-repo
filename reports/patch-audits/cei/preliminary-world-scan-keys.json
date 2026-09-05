@@ -1,12 +1,12 @@
 {
     "status":  "PRELIMINARY_NO_GO_FOR_251_TO_242_DOWNGRADE_IF_251_CONTENT_WAS_SAVED",
     "jar_242":  {
-                    "path":  "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\create-enchantment-industry-2.4.2.jar",
+                    "path":  "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\Mechanomania-Ultimate-Aeronautics-1.1.11.1\\minecraft\\mods\\create-enchantment-industry-2.4.2.jar",
                     "bytes":  1283517,
                     "sha256":  "81F192BB53888E01F87A82EAAC2F261C93715F2221DBCF5D8A8D414F912F75EF"
                 },
     "jar_251":  {
-                    "path":  "D:\\Trans\\migration-audit-work\\mechanomania-attempt2-compat-backup-20260814\\runtime\\create-enchantment-industry-2.5.1.jar",
+                    "path":  "<AUDIT_ROOT>\\mechanomania-attempt2-compat-backup-20260814\\runtime\\create-enchantment-industry-2.5.1.jar",
                     "bytes":  1573096,
                     "sha256":  "0D27024C0F8E94261689EB198D96003BA5A1697D4478B41E298BCA707CEAE988"
                 },

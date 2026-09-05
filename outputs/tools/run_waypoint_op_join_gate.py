@@ -21,7 +21,7 @@ import time
 ROOT = Path(__file__).resolve().parents[2]
 TOOLS = ROOT / "outputs" / "tools"
 OUTPUTS = ROOT / "outputs"
-TARGET = Path(r"D:\Trans\migration-audit-work\manual-test-candidate8n-20260811")
+TARGET = Path(r"<AUDIT_ROOT>\manual-test-candidate8n-20260811")
 CLIENT_ROOT = ROOT / "outputs" / "tmp" / "client-gate-candidate11" / ".minecraft"
 SERVER_PORT = 12341
 RCON_PORT = 12342

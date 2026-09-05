@@ -25,14 +25,14 @@
     ]
   },
   "source": {
-    "path": "D:\\Trans\\migration-audit-work\\hotbath-300-trigger-fix-source-20260814",
+    "path": "<AUDIT_ROOT>\\hotbath-300-trigger-fix-source-20260814",
     "official_base_commit": "5e382931c20744b2ffe43abc26b917e59f7a21cd",
     "compatibility_commit": "bdc4d7cafb1de80650fedf1e62ded60c0dce06ff",
     "branch": "codex/hotbath-3.0.0-trigger-fix",
     "working_tree_clean": true
   },
   "original": {
-    "path": "D:\\Trans\\migration-audit-work\\hotbath-300-trigger-fix-source-20260814\\reference\\hotbath-1.21.1-3.0.0.jar",
+    "path": "<AUDIT_ROOT>\\hotbath-300-trigger-fix-source-20260814\\reference\\hotbath-1.21.1-3.0.0.jar",
     "bytes": 712727,
     "sha256": "93EE276A0BD10D23101AE2EA7982933347D99B4FA9CD8B7E015F813BA6CF11AA",
     "entries": 383,
@@ -41,7 +41,7 @@
     "target_class_sha256": "76288919209422FC4F0CBF526CF66EB3154873ADF7D13F730BB9548D3FB1ACD3"
   },
   "artifact": {
-    "path": "D:\\Trans\\migration-audit-work\\hotbath-300-trigger-fix-artifacts-20260814\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+    "path": "<AUDIT_ROOT>\\hotbath-300-trigger-fix-artifacts-20260814\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
     "name": "hotbath-1.21.1-3.0.0-registry-fix.1.jar",
     "bytes": 712893,
     "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A",
@@ -75,7 +75,7 @@
       "tests": 5,
       "failures": 0,
       "errors": 0,
-      "jar_path": "D:\\Trans\\migration-audit-work\\hotbath-300-trigger-fix-artifacts-20260814\\build-a\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+      "jar_path": "<AUDIT_ROOT>\\hotbath-300-trigger-fix-artifacts-20260814\\build-a\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
       "bytes": 712893,
       "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A"
     },
@@ -86,7 +86,7 @@
       "tests": 5,
       "failures": 0,
       "errors": 0,
-      "jar_path": "D:\\Trans\\migration-audit-work\\hotbath-300-trigger-fix-artifacts-20260814\\build-b\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
+      "jar_path": "<AUDIT_ROOT>\\hotbath-300-trigger-fix-artifacts-20260814\\build-b\\hotbath-1.21.1-3.0.0-registry-fix.1.jar",
       "bytes": 712893,
       "sha256": "1B53A2B7B2C6476BBAD3ACE344316DA7ABE62854967DE322E9A25CA1D5C7681A"
     }

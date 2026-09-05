@@ -65,7 +65,7 @@
   },
   "evidence_locks": [
     {
-      "path": "D:\\Trans\\migration-audit-work\\feature-id-audit.json",
+      "path": "<AUDIT_ROOT>\\feature-id-audit.json",
       "bytes": 12460,
       "sha256": "F7101938CF6C14972D4217E93E55D898C3C65820290961EB5F49F89AE26866DA"
     },
@@ -75,7 +75,7 @@
       "sha256": "CD34C9AE8B8EB4E0EF74836CFF594615EE0F20D8E043533643F85C7CC3ABD244"
     },
     {
-      "path": "D:\\Trans\\migration-audit-work\\incoming-20260811-villagers-source-baseline-20260812.json",
+      "path": "<AUDIT_ROOT>\\incoming-20260811-villagers-source-baseline-20260812.json",
       "bytes": 2033500,
       "sha256": "07DA5802FD834049D76B5EF860CA3192303BD00692AF08D70E50B146C1DB51F8"
     },
@@ -593,7 +593,7 @@
       "title": "50 个 1.21.1 后新增原版 ID",
       "classification": "data_safe_gameplay_runtime_pending",
       "evidence": [
-        "D:\\Trans\\migration-audit-work\\feature-id-audit.json",
+        "<AUDIT_ROOT>\\feature-id-audit.json",
         "outputs/migration-current-status-and-todo-20260813.md"
       ],
       "accomplished": [

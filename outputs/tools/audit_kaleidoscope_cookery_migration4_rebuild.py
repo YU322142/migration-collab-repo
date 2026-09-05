@@ -19,13 +19,13 @@ from typing import Any
 import zipfile
 
 
-ROOT = Path(r"D:\Trans\migration-audit-work\kaleidoscope-cookery-chopping-board-fix-20260814")
+ROOT = Path(r"<AUDIT_ROOT>\kaleidoscope-cookery-chopping-board-fix-20260814")
 BASELINE_SERVER = (
-    Path(r"D:\Trans\migration-audit-work\mechanomania-matched-release-v3-20260814\server\mods")
+    Path(r"<AUDIT_ROOT>\mechanomania-matched-release-v3-20260814\server\mods")
     / "kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar"
 )
 BASELINE_CLIENT = (
-    Path(r"D:\Trans\migration-audit-work\mechanomania-matched-release-v3-20260814\client\mods")
+    Path(r"<AUDIT_ROOT>\mechanomania-matched-release-v3-20260814\client\mods")
     / "kaleidoscopecookery-1.4.1.7-migration.3-neoforge+mc1.21.1.jar"
 )
 BUILD1 = ROOT / "final-build1-kaleidoscopecookery-1.4.1.7-migration.4-neoforge+mc1.21.1.jar"
@@ -35,7 +35,7 @@ BUILD1_STDERR = ROOT / "final-build1.stderr.log"
 BUILD2_STDOUT = ROOT / "final-build2.stdout.log"
 BUILD2_STDERR = ROOT / "final-build2.stderr.log"
 FINAL_SELF_AUDIT = ROOT / "kaleidoscope-cookery-chopping-board-fix-final-build-audit.json"
-PROJECT = Path(r"D:\Trans\migration-audit-work\KaleidoscopeCookery-1.21.1-neoforge")
+PROJECT = Path(r"<AUDIT_ROOT>\KaleidoscopeCookery-1.21.1-neoforge")
 DEFAULT_REPORT = ROOT / "independent-final-build-audit-20260814.json"
 DEFAULT_MARKDOWN = ROOT / "independent-final-build-audit-20260814.md"
 

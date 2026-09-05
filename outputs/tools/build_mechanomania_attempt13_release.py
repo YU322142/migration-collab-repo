@@ -26,7 +26,7 @@ import zipfile
 import build_mechanomania_matched_release as legacy
 
 
-ALLOWED_PARENT = Path(r"D:\Trans\migration-audit-work")
+ALLOWED_PARENT = Path(r"<AUDIT_ROOT>")
 DEFAULT_SERVER = ALLOWED_PARENT / "mechanomania-matched-runtime-attempt13-20260814"
 DEFAULT_CLIENT = ALLOWED_PARENT / "mechanomania-matched-client-attempt13-20260814"
 DEFAULT_GATE = ALLOWED_PARENT / "mechanomania-startup-gate-attempt13-20260814.json"

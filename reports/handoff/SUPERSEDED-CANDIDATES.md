@@ -4,12 +4,12 @@
 
 ## 禁止作为转换输入
 
-- `D:\Trans\migration-audit-work\manual-test-*`
-- `D:\Trans\migration-audit-work\final-fullstack-smoke-*`
-- `D:\Trans\migration-audit-work\world-migration-smoke*`
-- `D:\Trans\migration-audit-work\*fullstack-smoke*`
-- `D:\Trans\migration-audit-work\client-gate-*`
-- `D:\Trans\migration-audit-work\candidate*-artifacts-*`
+- `<AUDIT_ROOT>\manual-test-*`
+- `<AUDIT_ROOT>\final-fullstack-smoke-*`
+- `<AUDIT_ROOT>\world-migration-smoke*`
+- `<AUDIT_ROOT>\*fullstack-smoke*`
+- `<AUDIT_ROOT>\client-gate-*`
+- `<AUDIT_ROOT>\candidate*-artifacts-*`
 
 这些目录曾启动 Java、保存世界、执行玩家登录或被失败门禁写入 attempt marker。目标版本运行时可能已经丢弃无法解码的字段；即使它们“看起来能启动”，也不能反向作为数据转换基线。
 

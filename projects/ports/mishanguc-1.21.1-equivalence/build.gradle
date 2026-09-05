@@ -23,8 +23,8 @@ neoForge {
 
 dependencies {
     compileOnly files(
-            'D:/Trans/migration-audit-work/fullstack-create-6.0.10-smoke1/.cache/connector/mishanguc-1.6.1-1.21.1_mapped_moj_1.21.1.jar',
-            'D:/Trans/migration-audit-work/fullstack-create-6.0.10-smoke1/mods/backport-1.5.jar'
+            '<AUDIT_ROOT>/fullstack-create-6.0.10-smoke1/.cache/connector/mishanguc-1.6.1-1.21.1_mapped_moj_1.21.1.jar',
+            '<AUDIT_ROOT>/fullstack-create-6.0.10-smoke1/mods/backport-1.5.jar'
     )
     // Connector's mapped Mishang classes retain this Fabric API type in their
     // class hierarchy. The runtime already supplies it through Forgified Fabric API.

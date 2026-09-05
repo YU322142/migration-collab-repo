@@ -1,8 +1,8 @@
 {
     "generatedAt":  "2026-08-14T23:30:00+08:00",
     "policy":  "required means absence blocks startup/login/registry/authentication; recommended means absence does not prevent entering the server",
-    "source":  "D:\\Trans\\migration-audit-work\\mechanomania-matched-client-attempt13-20260814\\mods",
-    "activeClient":  "D:\\D\\Tools\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods",
+    "source":  "<AUDIT_ROOT>\\mechanomania-matched-client-attempt13-20260814\\mods",
+    "activeClient":  "<INSTANCE_ROOT>\\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\\instances\\动静交映-Mechanomania-Matched-Attempt13-NeoForge-1.21.1-20260814\\minecraft\\mods",
     "counts":  {
                    "gameplayCatalog":  247,
                    "required":  169,

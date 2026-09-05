@@ -11,9 +11,9 @@ import time
 
 WORKSPACE = Path(__file__).resolve().parents[2]
 PYTHON = Path(r"C:\Python314\python.exe")
-SOURCE = Path(r"D:\Trans\migration-audit-work\incoming-20260811-raw\20260811")
-STAGING = Path(r"D:\Trans\migration-audit-work\cutover-staging-incoming-20260811-candidate13-20260812")
-REPORTS = Path(r"D:\Trans\migration-audit-work\cutover-staging-incoming-20260811-candidate13-20260812-reports")
+SOURCE = Path(r"<AUDIT_ROOT>\incoming-20260811-raw\20260811")
+STAGING = Path(r"<AUDIT_ROOT>\cutover-staging-incoming-20260811-candidate13-20260812")
+REPORTS = Path(r"<AUDIT_ROOT>\cutover-staging-incoming-20260811-candidate13-20260812-reports")
 REPORT = REPORTS / "fast-verify.json"
 BASELINE = REPORTS / "source-baseline.json"
 WAYPOINT = WORKSPACE / "outputs" / "projects" / "waypoint-fire-equivalence" / "build" / "libs" / "waypoint-fire-equivalence-0.1.1+mc1.21.1.jar"
@@ -48,7 +48,7 @@ def main() -> int:
             "--world-workers", "20",
         ]
         environment = os.environ.copy()
-        environment["PYTHONPATH"] = os.pathsep.join((r"D:\Trans\migration-audit-work\poi-nbtdeps", str(WORKSPACE / "outputs" / "tools")))
+        environment["PYTHONPATH"] = os.pathsep.join((r"<AUDIT_ROOT>\poi-nbtdeps", str(WORKSPACE / "outputs" / "tools")))
         flags = subprocess.CREATE_NO_WINDOW | subprocess.CREATE_NEW_PROCESS_GROUP if os.name == "nt" else 0
         with STDOUT.open("wb") as stdout, STDERR.open("wb") as stderr:
             child = subprocess.Popen(command, cwd=WORKSPACE, env=environment, stdin=subprocess.DEVNULL,

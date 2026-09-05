@@ -3,7 +3,7 @@
   "audit_type": "read_only_kaleidoscope_cookery_chopping_board_snapshot",
   "generated_at": "2026-08-14T20:24:52.606+08:00",
   "status": "COMPLETE_POINT_IN_TIME_WITH_POST_SCAN_WRITE_WARNING",
-  "world": "D:\\Trans\\migration-audit-work\\mechanomania-matched-runtime-attempt13-20260814\\world",
+  "world": "<AUDIT_ROOT>\\mechanomania-matched-runtime-attempt13-20260814\\world",
   "target_block_entity_id": "kaleidoscope_cookery:chopping_board",
   "scan": {
     "window_start": "2026-08-14T20:09:51+08:00",
@@ -16,14 +16,14 @@
     "parse_errors": 0,
     "failures": 0,
     "source_status": "PASS",
-    "source_report": "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\all-chopping-boards-audit-final.json",
+    "source_report": "<AUDIT_ROOT>\\kaleidoscope-cookery-chopping-board-fix-20260814\\all-chopping-boards-audit-final.json",
     "source_report_bytes": 8898,
     "source_report_sha256": "452680ECFB502017D3C04BE76272E07F24AF2F5FDF674227C8F9332A95E05625"
   },
   "scan_history": {
     "original_serial_pid": 17624,
     "original_serial_status": "terminated_before_completion_by_parent_workflow_at_2026-08-14T20:04:55+08:00",
-    "original_serial_partial_output": "D:\\Trans\\migration-audit-work\\kaleidoscope-cookery-chopping-board-fix-20260814\\all-chopping-boards.jsonl",
+    "original_serial_partial_output": "<AUDIT_ROOT>\\kaleidoscope-cookery-chopping-board-fix-20260814\\all-chopping-boards.jsonl",
     "original_serial_partial_output_bytes": 3017,
     "original_serial_partial_output_sha256": "DDC7ACE1E784568A29023889C8888D7D3E3152BE16A39BD95B7B5D213555756D",
     "first_parallel_report_status": "FAIL_REGION_PARSE_ERRORS",

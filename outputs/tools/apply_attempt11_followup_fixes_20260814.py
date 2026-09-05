@@ -23,7 +23,7 @@ from datetime import datetime, timezone
 from typing import Any
 
 
-AUDIT_ROOT = Path(r"D:\Trans\migration-audit-work")
+AUDIT_ROOT = Path(r"<AUDIT_ROOT>")
 SERVER = AUDIT_ROOT / "mechanomania-matched-runtime-attempt11-20260814"
 CLIENT = AUDIT_ROOT / "mechanomania-matched-client-attempt11-20260814"
 BACKUP = AUDIT_ROOT / "attempt11-followup-fixes-backup-20260814"
@@ -289,7 +289,7 @@ def ensure_root_safety() -> None:
         CLIENT: "mechanomania-matched-client-attempt11-20260814",
     }
     audit_resolved = AUDIT_ROOT.resolve()
-    forbidden = Path(r"D:\Trans\20260807").resolve()
+    forbidden = Path(r"<TRANS_ROOT>\20260807").resolve()
     for value, leaf in expected.items():
         if not value.is_dir() or value.is_symlink():
             raise FollowupError(f"unsafe target root: {value}")

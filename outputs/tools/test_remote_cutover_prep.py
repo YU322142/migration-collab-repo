@@ -96,7 +96,7 @@ class RemoteCutoverTest(unittest.TestCase):
             for path in package.rglob("*"):
                 if path.is_file():
                     content = path.read_bytes().lower()
-                    self.assertNotIn(b"d:\\trans", content)
+                    self.assertNotIn(b"<TRANS_ROOT>", content)
                     self.assertNotIn(b"20260807", content)
             result = remote.verify_package(package, package / "PACKAGE-MANIFEST.json")
             self.assertEqual(result["status"], "PASS")

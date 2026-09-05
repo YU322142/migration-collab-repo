@@ -19,9 +19,9 @@ import time
 
 WORKSPACE = Path(__file__).resolve().parents[2]
 OUTPUTS = WORKSPACE / "outputs"
-WORLD = Path(r"D:\Trans\migration-audit-work\incoming-20260811-raw\20260811\world")
+WORLD = Path(r"<AUDIT_ROOT>\incoming-20260811-raw\20260811\world")
 TOOL = OUTPUTS / "tools" / "audit_create_fluid_nbt.py"
-NBT_DEPS = Path(r"D:\Trans\migration-audit-work\poi-nbtdeps")
+NBT_DEPS = Path(r"<AUDIT_ROOT>\poi-nbtdeps")
 REPORT = OUTPUTS / "incoming-20260811-create-fluid-source-audit-v3.json"
 STATUS = OUTPUTS / "incoming-20260811-create-fluid-source-audit-v3.status.json"
 STDOUT = OUTPUTS / "incoming-20260811-create-fluid-source-audit-v3.stdout.log"

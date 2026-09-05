@@ -5,8 +5,8 @@ import java.nio.file.Path;
 import java.util.stream.Collectors;
 
 public final class PatchCookeryCode {
-    private static final Path NEOFORGE = Path.of("D:/Trans/migration-audit-work/KaleidoscopeCookery-1.21.1-neoforge");
-    private static final Path FABRIC = Path.of("D:/Trans/migration-audit-work/KaleidoscopeCookery-1.21.1-fabric");
+    private static final Path NEOFORGE = Path.of("<AUDIT_ROOT>/KaleidoscopeCookery-1.21.1-neoforge");
+    private static final Path FABRIC = Path.of("<AUDIT_ROOT>/KaleidoscopeCookery-1.21.1-fabric");
 
     public static void main(String[] args) throws Exception {
         patchKnife();

@@ -30,7 +30,7 @@ $process = Start-Process -FilePath $python -ArgumentList @('-B', $script) `
     script = $script
     stdout = $stdout
     stderr = $stderr
-    target = 'D:\Trans\migration-audit-work\manual-test-candidate13-runtime-r2-20260812'
+    target = '<AUDIT_ROOT>\manual-test-candidate13-runtime-r2-20260812'
     client_root = (Join-Path $workspace 'outputs\tmp\client-gate-candidate13\.minecraft')
     ports = [ordered]@{ server = 12341; rcon = 12342; voice = 26341 }
     teleport_pause_seconds = 10

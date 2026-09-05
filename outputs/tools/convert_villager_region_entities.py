@@ -108,7 +108,7 @@ def main() -> None:
     args = parser.parse_args()
 
     world = args.world.resolve()
-    read_only_source = Path(r"D:\Trans\20260807\world").resolve()
+    read_only_source = Path(r"<TRANS_ROOT>\20260807\world").resolve()
     if args.mode == "convert" and world == read_only_source:
         raise SystemExit("refusing to write the read-only source world")
 

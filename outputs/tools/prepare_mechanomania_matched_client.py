@@ -26,8 +26,8 @@ if str(TOOLS_DIR) not in sys.path:
 import mechanomania_release_runtime_common as release_common
 
 
-ALLOWED_ROOT = Path(r"D:\Trans\migration-audit-work")
-FORBIDDEN_SOURCE = Path(r"D:\Trans\20260807")
+ALLOWED_ROOT = Path(r"<AUDIT_ROOT>")
+FORBIDDEN_SOURCE = Path(r"<TRANS_ROOT>\20260807")
 PACK_SHA = "614ABDF34F7CFDB7974474A645BFA71CC4CA2E67F609983616E61474A57E3364"
 PACK_BYTES = 110_377_999
 PACK_RUNTIME_NAME = "migration-local-resources-mc1.21.1.zip"
@@ -178,9 +178,9 @@ def prepare(args: argparse.Namespace) -> dict:
         temporary.mkdir(parents=True)
         # The old Prism instance may contain broken junctions.  Use the
         # portable Prism global stores as immutable shared inputs instead.
-        portable_root = Path(r"D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3")
+        portable_root = Path(r"<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3")
         versions_source = Path(
-            r"D:\D\Tools\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\instances\1.21.11\minecraft\versions"
+            r"<INSTANCE_ROOT>\PrismLauncher-Windows-MinGW-w64-Portable-11.0.3\instances\1.21.11\minecraft\versions"
         )
         shared = {
             "assets": portable_root / "assets",

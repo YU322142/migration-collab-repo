@@ -27,7 +27,7 @@ CLASSIFICATIONS = {CLASS_FIXED, CLASS_DATA_SAFE, CLASS_UNFINISHED}
 
 
 EVIDENCE_LOCKS: dict[str, tuple[str, int]] = {
-    r"D:\Trans\migration-audit-work\feature-id-audit.json": (
+    r"<AUDIT_ROOT>\feature-id-audit.json": (
         "F7101938CF6C14972D4217E93E55D898C3C65820290961EB5F49F89AE26866DA",
         12460,
     ),
@@ -35,7 +35,7 @@ EVIDENCE_LOCKS: dict[str, tuple[str, int]] = {
         "CD34C9AE8B8EB4E0EF74836CFF594615EE0F20D8E043533643F85C7CC3ABD244",
         105873429,
     ),
-    r"D:\Trans\migration-audit-work\incoming-20260811-villagers-source-baseline-20260812.json": (
+    r"<AUDIT_ROOT>\incoming-20260811-villagers-source-baseline-20260812.json": (
         "07DA5802FD834049D76B5EF860CA3192303BD00692AF08D70E50B146C1DB51F8",
         2033500,
     ),
@@ -306,7 +306,7 @@ def build_issues() -> list[dict[str, Any]]:
             "vanilla.new_registry_ids",
             "50 个 1.21.1 后新增原版 ID",
             CLASS_DATA_SAFE,
-            [r"D:\Trans\migration-audit-work\feature-id-audit.json", "outputs/migration-current-status-and-todo-20260813.md"],
+            [r"<AUDIT_ROOT>\feature-id-audit.json", "outputs/migration-current-status-and-todo-20260813.md"],
             ["识别到 50/50 个实际出现 ID", "49/50 有功能性 backport", "1/50 由安全载体保活"],
             ["最终合包注册表 dump", "双轮保存重启", "四个玩法簇的人工矩阵"],
             "both_side_mod_update",
