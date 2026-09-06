@@ -1,6 +1,6 @@
 # 服务器迁移期间的模组适配与开源清单
 
-快照日期：2026-09-05。本文是协作入口，回答三件事：做过哪些模组适配、源码和脚本在哪里、哪些内容已经公开或仍需许可/脱敏确认。文件级入口继续以 `MODULE-FILE-INDEX.md` 为准，抽象职责以 `MODULE-CATALOG.md` 和 `MODULE-INTERNAL-REFACTOR-MAP.md` 为准。
+快照日期：2026-09-06。本文是协作入口，回答三件事：做过哪些模组适配、源码和脚本在哪里、哪些内容已经公开或仍需许可/脱敏确认。文件级入口继续以 `MODULE-FILE-INDEX.md` 为准，抽象职责以 `MODULE-CATALOG.md` 和 `MODULE-INTERNAL-REFACTOR-MAP.md` 为准。
 
 ## 最新优先：Chest Colorizer
 
@@ -19,7 +19,7 @@
 
 | 项目 | 本地项目文件 | 公开状态 |
 | --- | --- | --- |
-| MCSync | `projects/ports/mcsync-2.0.0/`；完整历史在发布工作区 `MCSync` | GitHub `YU322142/MCSync`，当前公开版本 `v2.0.3` |
+| MCSync（历史项目） | `projects/ports/mcsync-2.0.0/`；完整历史在发布工作区 `MCSync` | GitHub `YU322142/MCSync`，已停止开发并归档；`v2.0.3` 仅作历史记录 |
 | MineAstr NeoForge | 发布工作区 `MineAstr` | GitHub `YU322142/MineAstr`，当前公开版本 `v0.6.30` |
 | MineAstr AstrBot 插件 | 发布工作区 `MineAstr-astrbot-plugin` | GitHub `YU322142/MineAstr` 的 `astrbot-plugin` 分支，当前公开版本 `astrbot-v0.6.30` |
 | Immersive Paintings × MineAstr | `projects/patches/immersive-paintings-mineastr-compat/` | GitHub `YU322142/ImmersivePaintings`，当前公开版本 `0.7.15+1.21.1` |
@@ -85,7 +85,7 @@
 - 我们编写或明确拥有维护权的 Java/Kotlin/Python/PowerShell/JavaScript 源码。
 - KubeJS、数据包、配置模板、构建脚本、单元测试和不含真实身份的审计样例。
 - 适配说明、模块索引、变更日志、合规的第三方许可证文本。
-- Chest Colorizer、MineAstr、MCSync 等已经单独公开的仓库和 release。
+- Chest Colorizer、MineAstr 等正在维护的独立仓库，以及 MCSync 这类已归档的历史仓库；归档项目只保留审查入口，不作为当前客户端方案。
 - 上表列出的独立兼容模组、诊断工程和补丁仓库；没有独立 release 的项目只发布源码，制品仍按上游许可在本地构建。
 
 ### 不直接公开

@@ -1,6 +1,6 @@
 # Mod adaptation and open-source inventory
 
-Snapshot date: 2026-09-05. This is the collaboration entry point for the
+Snapshot date: 2026-09-06. This is the collaboration entry point for the
 server migration work: what was adapted, where the source lives, and what is
 public versus still requiring licensing or redaction review. Use
 `MODULE-FILE-INDEX.md` for file-level entry points and the catalog/refactor map
@@ -27,7 +27,7 @@ is client-only and does not belong on the server.
 
 | Project | Local project files | Public status |
 | --- | --- | --- |
-| MCSync | `projects/ports/mcsync-2.0.0/`; full working tree under the publication workspace | Public at `YU322142/MCSync`, current public version `v2.0.3` |
+| MCSync (historical) | `projects/ports/mcsync-2.0.0/`; full working tree under the publication workspace | Public at `YU322142/MCSync`, development stopped and repository archived; `v2.0.3` is historical only |
 | MineAstr NeoForge | Publication workspace `MineAstr` | Public at `YU322142/MineAstr`, current public version `v0.6.30` |
 | MineAstr AstrBot plugin | Publication workspace `MineAstr-astrbot-plugin` | Public `astrbot-plugin` branch in `YU322142/MineAstr`, current public version `astrbot-v0.6.30` |
 | Immersive Paintings × MineAstr | `projects/patches/immersive-paintings-mineastr-compat/` | Public at `YU322142/ImmersivePaintings`, current public version `0.7.15+1.21.1` |
@@ -123,8 +123,9 @@ they are not live server copies.
 - KubeJS/datapack/config templates, build scripts, tests, and synthetic audit
   fixtures.
 - Architecture notes, module indexes, changelogs, and compatible license text.
-- The already published MineAstr, MCSync, ImmersivePaintings, Tom's Storage,
-  and Chest Colorizer repositories/releases.
+- The maintained MineAstr, ImmersivePaintings, Tom's Storage, and Chest Colorizer
+  repositories/releases, plus archived historical repositories such as MCSync;
+  archived projects are reference-only and are not current client solutions.
 - The standalone compatibility mods, diagnostics, and patch repositories listed
   above; projects without a binary release publish source only and are built
   locally under the applicable upstream terms.
